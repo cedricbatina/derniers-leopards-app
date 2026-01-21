@@ -1,0 +1,230 @@
+{
+  "app": {
+    "name": "Sonekeno",
+    "tagline": "Espaço de criação e organização",
+    "logoAlt": "Logótipo da aplicação",
+    "meta": {
+      "title": "{name} — Estúdio de Escrita",
+      "description": "Organize as suas personagens, cenas, cronologia e glossário num só lugar, para manter a consistência do início ao fim.",
+      "ogTitle": "{name} — Estúdio de Escrita",
+      "ogDescription": "Um espaço de trabalho claro para estruturar personagens, cenas, cronologia e o léxico do projeto.",
+      "ogImageAlt": "Pré-visualização da aplicação",
+      "keywords": "estúdio de escrita, organização, personagens, cenas, cronologia, glossário, worldbuilding",
+      "themeColorLight": "#FBF8F1",
+      "themeColorDark": "#0C0C10"
+    }
+  },
+
+  "a11y": {
+    "skipToContent": "Saltar para o conteúdo",
+    "mainNav": "Navegação principal"
+  },
+
+  "lang": {
+    "label": "Idioma",
+    "fr": "FR",
+    "en": "EN",
+    "pt": "PT"
+  },
+
+  "theme": {
+    "aria": "Tema: {mode}. {action}",
+    "modes": {
+      "system": "Sistema",
+      "dark": "Escuro",
+      "light": "Claro"
+    },
+    "toDark": "Mudar para modo escuro",
+    "toLight": "Mudar para modo claro",
+    "toSystem": "Usar definição do sistema"
+  },
+
+  "common": {
+    "loading": "A carregar…",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Fechar",
+    "back": "Voltar",
+    "continue": "Continuar",
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "clear": "Limpar",
+    "confirm": "Confirmar"
+  },
+
+  "nav": {
+    "aria": "Navegação principal",
+    "home": "Início",
+    "dashboard": "Painel",
+    "characters": "Personagens",
+    "scenes": "Cenas",
+    "timeline": "Cronologia",
+    "glossary": "Glossário",
+    "tags": "Etiquetas",
+    "profile": "Perfil",
+    "settings": "Definições",
+    "login": "Iniciar sessão",
+    "register": "Criar conta",
+    "logout": "Terminar sessão"
+  },
+
+  "auth": {
+    "login": "Iniciar sessão",
+    "register": "Criar conta",
+
+    "email": "Email",
+    "password": "Palavra-passe",
+    "passwordConfirm": "Confirmar palavra-passe",
+    "newPassword": "Nova palavra-passe",
+    "currentPassword": "Palavra-passe atual",
+
+    "loginTitle": "Iniciar sessão",
+    "registerTitle": "Criar uma conta",
+    "forgotTitle": "Esqueci-me da palavra-passe",
+    "resetTitle": "Repor palavra-passe",
+    "verifyTitle": "Verificação de email",
+
+    "loginCta": "Entrar",
+    "registerCta": "Criar conta",
+    "forgotCta": "Enviar link",
+    "resetCta": "Atualizar palavra-passe",
+
+    "forgotLink": "Esqueceu-se da palavra-passe?",
+    "noAccount": "Ainda não tem conta?",
+    "haveAccount": "Já tem conta?",
+
+    "verify": {
+      "sent": "Foi enviado um email de confirmação.",
+      "success": "Email confirmado. Pode iniciar sessão.",
+      "invalid": "Link inválido ou expirado."
+    },
+
+    "reset": {
+      "sent": "Se o endereço existir, foi enviado um email de reposição.",
+      "success": "Palavra-passe atualizada. Pode iniciar sessão.",
+      "invalid": "Link inválido ou expirado."
+    }
+  },
+
+  "forms": {
+    "required": "Este campo é obrigatório.",
+    "invalidEmail": "Endereço de email inválido.",
+    "minChars": "Mínimo de {n} caracteres.",
+    "passwordMismatch": "As palavras-passe não coincidem."
+  },
+
+  "errors": {
+    "generic": "Ocorreu um erro.",
+    "unauthorized": "Acesso não autorizado.",
+    "forbidden": "Acesso proibido.",
+    "notFound": "Recurso não encontrado.",
+    "validation": "Dados inválidos.",
+    "network": "Erro de rede. Tente novamente."
+  },
+
+  "home": {
+    "hero": {
+      "kicker": "Estúdio de Escrita",
+      "title": "Um espaço claro para estruturar o seu universo",
+      "subtitle": "Centralize personagens, cenas, cronologia e glossário para manter a continuidade sólida e encontrar informação em segundos.",
+      "ctaPrimary": "Explorar personagens",
+      "ctaSecondary": "Ver cronologia"
+    },
+
+    "tiles": {
+      "characters": {
+        "label": "Personagens",
+        "title": "Dossiês",
+        "desc": "Perfil, arcos, relações"
+      },
+      "scenes": {
+        "label": "Cenas",
+        "title": "Elenco",
+        "desc": "POV, presença, menções"
+      },
+      "timeline": {
+        "label": "Cronologia",
+        "title": "Marcos",
+        "desc": "Eventos + etiquetas"
+      },
+      "glossary": {
+        "label": "Glossário",
+        "title": "Léxico",
+        "desc": "Termos, regras, notas"
+      }
+    },
+
+    "modules": {
+      "characters": {
+        "badge": "Personagens",
+        "title": "Dossiês estruturados",
+        "desc": "Logline, segredos, objetos, relações, estados."
+      },
+      "scenes": {
+        "badge": "Cenas",
+        "title": "Estrutura e elenco",
+        "desc": "Organização por capítulos, ligações cena–personagem."
+      },
+      "timeline": {
+        "badge": "Cronologia",
+        "title": "Eventos",
+        "desc": "Datas, etiquetas e ligações às cenas."
+      },
+      "glossary": {
+        "badge": "Glossário",
+        "title": "Léxico do projeto",
+        "desc": "Vocabulário, ritos, consistência terminológica."
+      }
+    },
+
+    "trust": {
+      "text": "Pensada para se manter rápida, legível e fiável à medida que o projeto cresce.",
+      "cta": "Iniciar sessão"
+    }
+  },
+
+  "domain": {
+    "character": {
+      "singular": "Personagem",
+      "plural": "Personagens",
+      "create": "Criar personagem",
+      "edit": "Editar personagem",
+      "profile": "Perfil",
+      "clans": "Clãs",
+      "kinships": "Relações",
+      "roles": {
+        "pov": "Ponto de vista",
+        "present": "Presente",
+        "mentioned": "Mencionado"
+      }
+    },
+    "scene": {
+      "singular": "Cena",
+      "plural": "Cenas",
+      "create": "Criar cena",
+      "edit": "Editar cena",
+      "pov": "Ponto de vista",
+      "objective": "Objetivo",
+      "conflict": "Conflito",
+      "outcome": "Desfecho"
+    },
+    "timeline": {
+      "singular": "Evento",
+      "plural": "Cronologia",
+      "date": "Data",
+      "tags": "Etiquetas"
+    }
+  },
+
+  "footer": {
+    "rights": "© {year} {name}",
+    "tags": {
+      "mobile": "Mobile-first",
+      "multilang": "Multilíngue",
+      "offline": "Offline",
+      "search": "Pesquisa"
+    }
+  }
+}

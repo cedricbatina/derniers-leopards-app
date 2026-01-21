@@ -1,0 +1,776 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Tous droits réservés.
+
+Installez la dernière version de PowerShell pour de nouvelles fonctionnalités et améliorations ! https://aka.ms/PSWindows
+
+PS C:\WINDOWS\system32> Start-Service MySQL80
+PS C:\WINDOWS\system32> Get-Service MySQL80
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  MySQL80            MySQL80
+
+
+PS C:\WINDOWS\system32> mysql -h 127.0.0.1 -u cedricbatina -p
+Enter password: ****************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++-----------------------+
+| Database              |
++-----------------------+
+| abcstudios            |
+| bdbi                  |
+| blagues               |
+| dbsymphony            |
+| goseneye              |
+| information_schema    |
+| kemetic               |
+| kilombo               |
+| les_derniers_leopards |
+| lexikongo             |
+| monicalabonia         |
+| mysql                 |
+| natishopping          |
+| performance_schema    |
+| sys                   |
++-----------------------+
+15 rows in set (0.02 sec)
+
+mysql> USE les_derniers_leopards;
+Database changed
+mysql> START TRANSACTION;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>
+mysql> -- 0) Vérifier s’il existe des références (normalement tu devrais avoir 0 ligne)
+mysql> SELECT
+    ->   c.slug AS character_slug,
+    ->   cc.clan_role,
+    ->   kc.slug AS clan_slug,
+    ->   kc.name AS clan_name
+    -> FROM character_clans_v2 cc
+    -> JOIN characters c   ON c.id = cc.character_id
+    -> JOIN kongo_clans_v2 kc ON kc.id = cc.clan_id
+    -> WHERE kc.slug IN ('mbanda','mbembe');
+Empty set (0.04 sec)
+
+mysql>
+mysql> -- 1) Si jamais il y avait des références, on les supprime (sinon ça ne fait rien)
+mysql> DELETE cc
+    -> FROM character_clans_v2 cc
+    -> JOIN kongo_clans_v2 kc ON kc.id = cc.clan_id
+    -> WHERE kc.slug IN ('mbanda','mbembe');
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>
+mysql> -- 2) Si tu as une table de mapping piliers↔clans, supprimer aussi là-bas
+mysql> -- (si la table n’existe pas chez toi, ignore ce bloc)
+mysql> DELETE kpc
+    -> FROM kongo_pillar_clans_v2 kpc
+    -> JOIN kongo_clans_v2 kc ON kc.id = kpc.clan_id
+    -> WHERE kc.slug IN ('mbanda','mbembe');
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>
+mysql> -- 3) Supprimer les clans
+mysql> DELETE FROM kongo_clans_v2
+    -> WHERE slug IN ('mbanda','mbembe');
+Query OK, 2 rows affected (0.00 sec)
+
+mysql>
+mysql> -- 4) Option "mémoire" : on garde juste en glossaire (facultatif mais utile)
+mysql> INSERT INTO glossary_terms (slug, term, language, definition, usage_notes) VALUES
+    -> ('mbanda', 'Mbanda', 'kikongo',
+    ->  'Nom de clan (retiré de la liste des 12 clans dans ce projet).', NULL),
+    -> ('mbembe', 'Mbembe', 'kikongo',
+    ->  'Nom de clan (retiré de la liste des 12 clans dans ce projet).',
+    ->  'À ne pas confondre avec mpembe = blanc/couleur.')
+    -> ON DUPLICATE KEY UPDATE
+    ->   definition=VALUES(definition),
+    ->   usage_notes=VALUES(usage_notes);
+Query OK, 2 rows affected, 2 warnings (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 2
+
+mysql>
+mysql> COMMIT;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>
+mysql> -- Contrôle : tu dois retomber à 12
+mysql> SELECT COUNT(*) AS n_clans FROM kongo_clans_v2;
++---------+
+| n_clans |
++---------+
+|      12 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> SELECT slug, name FROM kongo_clans_v2 ORDER BY name;
++---------+-----------+
+| slug    | name      |
++---------+-----------+
+| kahunga | Kahunga   |
+| kuimba  | Kuimba    |
+| mbenza  | Mbenza    |
+| ndamba  | Ndamba    |
+| ngandu  | Ngandu    |
+| nimbi   | Nimbi     |
+| nlaza   | Nlaza     |
+| nsembo  | Nsembo    |
+| sengele | Sengélé   |
+| sundi   | Sundi     |
+| vimba   | Vimba     |
+| yinda   | Yinda     |
++---------+-----------+
+12 rows in set (0.00 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS kongo_pillar_clans_v2 (
+    ->   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    ->   pillar_id INT UNSIGNED NOT NULL,
+    ->   clan_id INT UNSIGNED NOT NULL,
+    ->   confidence ENUM('certain','probable','hypothesis') NOT NULL DEFAULT 'hypothesis',
+    ->   source_note VARCHAR(255) NULL,
+    ->   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ->   updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    ->   PRIMARY KEY (id),
+    ->   UNIQUE KEY uq_kongo_pillar_clan (pillar_id, clan_id),
+    ->   KEY idx_kpc_pillar (pillar_id),
+    ->   KEY idx_kpc_clan (clan_id),
+    ->   CONSTRAINT fk_kpc_pillar FOREIGN KEY (pillar_id) REFERENCES kongo_pillars_v2(id) ON DELETE CASCADE,
+    ->   CONSTRAINT fk_kpc_clan   FOREIGN KEY (clan_id)   REFERENCES kongo_clans_v2(id)   ON DELETE CASCADE
+    -> ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+mysql> CREATE OR REPLACE VIEW v_kongo_clans_with_pillar_v2 AS
+    -> SELECT
+    ->   kc.id,
+    ->   kc.slug,
+    ->   kc.name,
+    ->   kp.slug AS pillar_slug,
+    ->   kp.name AS pillar_name,
+    ->   kpc.confidence,
+    ->   kpc.source_note
+    -> FROM kongo_clans_v2 kc
+    -> LEFT JOIN kongo_pillar_clans_v2 kpc ON kpc.clan_id = kc.id
+    -> LEFT JOIN kongo_pillars_v2 kp ON kp.id = kpc.pillar_id;
+ERROR 1054 (42S22): Unknown column 'kpc.confidence' in 'field list'
+mysql> SELECT slug, name, pillar_name, confidence
+    -> FROM v_kongo_clans_with_pillar_v2
+    -> ORDER BY name;
+ERROR 1146 (42S02): Table 'les_derniers_leopards.v_kongo_clans_with_pillar_v2' doesn't exist
+mysql> -- Vérif (optionnel)
+mysql> SHOW COLUMNS FROM kongo_pillar_clans_v2;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| pillar_id | int unsigned | NO   | PRI | NULL    |       |
+| clan_id   | int unsigned | NO   | PRI | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql>
+mysql> -- Ajout des colonnes si elles n’existent pas
+mysql> ALTER TABLE kongo_pillar_clans_v2
+    ->   ADD COLUMN confidence ENUM('certain','probable','hypothesis')
+    ->     NOT NULL DEFAULT 'hypothesis' AFTER clan_id,
+    ->   ADD COLUMN source_note VARCHAR(255) NULL AFTER confidence;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> CREATE OR REPLACE VIEW v_kongo_clans_with_pillar_v2 AS
+    -> SELECT
+    ->   kc.id,
+    ->   kc.slug,
+    ->   kc.name,
+    ->   kp.slug AS pillar_slug,
+    ->   kp.name AS pillar_name,
+    ->   kpc.confidence,
+    ->   kpc.source_note
+    -> FROM kongo_clans_v2 kc
+    -> LEFT JOIN kongo_pillar_clans_v2 kpc ON kpc.clan_id = kc.id
+    -> LEFT JOIN kongo_pillars_v2 kp ON kp.id = kpc.pillar_id;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SELECT slug, name, pillar_name, confidence
+    -> FROM v_kongo_clans_with_pillar_v2
+    -> ORDER BY name;
++---------+-----------+-------------+------------+
+| slug    | name      | pillar_name | confidence |
++---------+-----------+-------------+------------+
+| kahunga | Kahunga   | NULL        | NULL       |
+| kuimba  | Kuimba    | NULL        | NULL       |
+| mbenza  | Mbenza    | NULL        | NULL       |
+| ndamba  | Ndamba    | NULL        | NULL       |
+| ngandu  | Ngandu    | NULL        | NULL       |
+| nimbi   | Nimbi     | NULL        | NULL       |
+| nlaza   | Nlaza     | NULL        | NULL       |
+| nsembo  | Nsembo    | NULL        | NULL       |
+| sengele | Sengélé   | NULL        | NULL       |
+| sundi   | Sundi     | NULL        | NULL       |
+| vimba   | Vimba     | NULL        | NULL       |
+| yinda   | Yinda     | NULL        | NULL       |
++---------+-----------+-------------+------------+
+12 rows in set (0.00 sec)
+
+mysql> INSERT INTO tags (slug, name, description) VALUES
+    -> ('couvent','Couvent-temple','Initiation, discipline, savoirs, règles du temple.'),
+    -> ('mpika','Mpika','Jour de marché / rendez-vous.'),
+    -> ('exil','Exil','Départ forcé, fuite, survie loin du fief.'),
+    -> ('mayombe','Mayombe','Forêt, pharmacopée, chasse, dette morale.'),
+    -> ('trahison','Trahison','Manipulation, dénonciation, perfidie interne.'),
+    -> ('embuscade','Embuscade','Attaque surprise / action armée.'),
+    -> ('nkasa','Nkasa','Poison/épreuve de vérité dans la justice.'),
+    -> ('mukongudidi','Mukongudidi','Justice, juge, institution et formation.'),
+    -> ('funerailles','Funérailles','Mort, veillées, rites, retrait de deuil.'),
+    -> ('retrait-de-deuil','Retrait de deuil','Fin de deuil, fête, tensions, bascule.'),
+    -> ('poignard','Poignard','Attentat au poignard contre Kinuani.'),
+    -> ('intronisation','Intronisation','Accession au pouvoir / sacre politique.'),
+    -> ('propagande','Parole politique','École des paroliers, débats, mobilisation.'),
+    -> ('mbuila','Mbuila','Bataille finale (1665).'),
+    -> ('sacrifice','Sacrifice','Choix de mourir pour le nom / mémoire.')
+    -> ON DUPLICATE KEY UPDATE
+    ->   name=VALUES(name),
+    ->   description=VALUES(description);
+ERROR 1054 (42S22): Unknown column 'description' in 'field list'
+mysql> INSERT INTO scene_tags (scene_id, tag_id)
+    -> SELECT s.id, t.id
+    -> FROM scenes s
+    -> JOIN chapters c ON c.id=s.chapter_id
+    -> JOIN parts p ON p.id=c.part_id
+    -> JOIN tags t
+    -> WHERE p.slug='vers-mbuila'
+    ->   AND c.chapter_no=1
+    ->   AND t.slug IN ('intronisation','mukongudidi','propagande')
+    -> ON DUPLICATE KEY UPDATE scene_id=scene_id;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO scene_tags (scene_id, tag_id)
+    -> SELECT s.id, t.id
+    -> FROM scenes s
+    -> JOIN chapters c ON c.id=s.chapter_id
+    -> JOIN parts p ON p.id=c.part_id
+    -> JOIN tags t
+    -> WHERE p.slug='vers-mbuila'
+    ->   AND c.chapter_no=3
+    ->   AND t.slug IN ('trahison','embuscade')
+    -> ON DUPLICATE KEY UPDATE scene_id=scene_id;
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO scene_tags (scene_id, tag_id)
+    -> SELECT s.id, t.id
+    -> FROM scenes s
+    -> JOIN chapters c ON c.id=s.chapter_id
+    -> JOIN parts p ON p.id=c.part_id
+    -> JOIN tags t
+    -> WHERE p.slug='vers-mbuila'
+    ->   AND c.chapter_no=2
+    ->   AND t.slug IN ('propagande','trahison')
+    -> ON DUPLICATE KEY UPDATE scene_id=scene_id;
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO scene_tags (scene_id, tag_id)
+    -> SELECT s.id, t.id
+    -> FROM scenes s
+    -> JOIN chapters c ON c.id=s.chapter_id
+    -> JOIN parts p ON p.id=c.part_id
+    -> JOIN tags t
+    -> WHERE p.slug='vers-mbuila'
+    ->   AND c.chapter_no IN (4,5)
+    ->   AND t.slug IN ('mbuila','sacrifice')
+    -> ON DUPLICATE KEY UPDATE scene_id=scene_id;
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT
+    ->   s.slug,
+    ->   s.title,
+    ->   GROUP_CONCAT(t.slug ORDER BY t.slug SEPARATOR ', ') AS tags
+    -> FROM scenes s
+    -> JOIN chapters c ON c.id=s.chapter_id
+    -> JOIN parts p ON p.id=c.part_id
+    -> LEFT JOIN scene_tags st ON st.scene_id=s.id
+    -> LEFT JOIN tags t ON t.id=st.tag_id
+    -> WHERE p.slug='vers-mbuila'
+    -> GROUP BY s.id
+    -> ORDER BY c.chapter_no, s.scene_no;
++-----------------------+-----------------------------------+------+
+| slug                  | title                             | tags |
++-----------------------+-----------------------------------+------+
+| p5c1-s1-intronisation | Le roi debout                     | NULL |
+| p5c1-s2-nomination    | Kinuani rappelé                   | NULL |
+| p5c1-s3-nkusu-ville   | Nkusu, dame noble                 | NULL |
+| p5c2-s1-ouverture     | L’école de la parole              | NULL |
+| p5c2-s2-discours      | Le roi galvanise                  | NULL |
+| p5c2-s3-faille        | La faille                         | NULL |
+| p5c3-s1-aveu          | Le sbire lâche le morceau         | NULL |
+| p5c3-s2-embuscade     | Matondo règle sa dette            | NULL |
+| p5c3-s3-pardon        | Allégeance                        | NULL |
+| p5c4-s1-veille        | La veille de Mbuila               | NULL |
+| p5c4-s2-decapitation  | Le roi tombe                      | NULL |
+| p5c4-s3-choix         | Choisir quand tout est perdu      | NULL |
+| p5c5-s1-sacrifice     | Le sacrifice                      | NULL |
+| p5c5-s2-fuite         | Protéger Nkusu et les enfants     | NULL |
+| p5c5-s3-epilogue      | Épilogue - La mémoire et le nom   | NULL |
++-----------------------+-----------------------------------+------+
+15 rows in set (0.01 sec)
+
+mysql> SELECT COUNT(*) AS n FROM tags;
++---+
+| n |
++---+
+| 0 |
++---+
+1 row in set (0.00 sec)
+
+mysql> SELECT id, slug, name FROM tags ORDER BY id LIMIT 30;
+Empty set (0.00 sec)
+
+mysql> SELECT COUNT(*) AS n FROM tags;
++---+
+| n |
++---+
+| 0 |
++---+
+1 row in set (0.00 sec)
+
+mysql> SELECT id, slug, name FROM tags ORDER BY id LIMIT 30;
+Empty set (0.00 sec)
+
+mysql> SELECT COUNT(*) AS n FROM tags;
++---+
+| n |
++---+
+| 0 |
++---+
+1 row in set (0.00 sec)
+
+mysql> SELECT id, slug, name FROM tags ORDER BY id LIMIT 30;
+Empty set (0.00 sec)
+
+mysql> INSERT INTO tags (slug, name, description) VALUES
+    -> ('couvent','Couvent-temple','Initiation, discipline, savoirs, règles du temple.'),
+    -> ('initiation','Initiation','Transmission, épreuves, grades, secrets.'),
+    -> ('discipline','Discipline','Rigueur, règles, entraînement, hiérarchie.'),
+    -> ('agriculture','Agriculture','Champs, production, vente, autonomie du temple.'),
+    -> ('mpika','Mpika','Jour de marché / rendez-vous.'),
+    -> ('amour','Amour','Lien amoureux, manque, tension intime.'),
+    -> ('longo','Longo','Mariage traditionnel, interdits avant union.'),
+    -> ('modernite','Modernité','Fascination pour les étrangers, compromis.'),
+    -> ('rappel','Rappel','Convocation par l’autorité familiale.'),
+    -> ('voyage','Voyage','Route, étapes, règles d’accueil, traversée.'),
+    -> ('clan','Clan','Matrilinéaire/patrilinéaire, entraide, solidarité.'),
+    -> ('conflit-interne','Conflit interne','Rivalités, jalousies, tensions dans le clan.')
+    -> ON DUPLICATE KEY UPDATE
+    ->   name=VALUES(name),
+    ->   description=VALUES(description);
+ERROR 1054 (42S22): Unknown column 'description' in 'field list'
+mysql> pty set (0.00 sec)
+    ->
+    -> mysql> SELECT COUNT(*) AS n FROM tags;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'pty set (0.00 sec)
+
+mysql> SELECT COUNT(*) AS n FROM tags' at line 1
+mysql> +---+
+    -> | n |
+    -> +---+
+    -> | 0 |
+    -> +---+
+    -> 1 row in set (0.00 sec)
+    ->
+    -> mysql> SELECT id, slug, name FROM tags ORDER BY id LIMIT 30;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+---+
+| n |
++---+
+| 0 |
++---+
+1 row in set (0.00 sec)
+
+mysql> SELECT id, slug, n' at line 1
+mysql> Empty set (0.00 sec)
+    ->
+    -> mysql> SELECT COUNT(*) AS n FROM tags;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Empty set (0.00 sec)
+
+mysql> SELECT COUNT(*) AS n FROM tags' at line 1
+mysql> +---+
+    -> | n |
+    -> +---+
+    -> | 0 |
+    -> +---+
+    -> 1 row in set (0.00 sec)
+    ->
+    -> mysql> SELECT id, slug, name FROM tags ORDER BY id LIMIT 30;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+---+
+| n |
++---+
+| 0 |
++---+
+1 row in set (0.00 sec)
+
+mysql> SELECT id, slug, n' at line 1
+mysql> Empty set (0.00 sec)
+    ->
+    -> mysql> INSERT INTO tags (slug, name, description) VALUES
+    ->     -> ('couvent','Couvent-temple','Initiation, discipline, savoirs, règles du temple.'),
+    ->     -> ('initiation','Initiation','Transmission, épreuves, grades, secrets.'),
+    ->     -> ('discipline','Discipline','Rigueur, règles, entraînement, hiérarchie.'),
+    ->     -> ('agriculture','Agriculture','Champs, production, vente, autonomie du temple.'),
+    ->     -> ('mpika','Mpika','Jour de marché / rendez-vous.'),
+    ->     -> ('amour','Amour','Lien amoureux, manque, tension intime.'),
+    ->     -> ('longo','Longo','Mariage traditionnel, interdits avant union.'),
+    ->     -> ('modernite','Modernité','Fascination pour les étrangers, compromis.'),
+    ->     -> ('rappel','Rappel','Convocation par l’autorité familiale.'),
+    ->     -> ('voyage','Voyage','Route, étapes, règles d’accueil, traversée.'),
+    ->     -> ('clan','Clan','Matrilinéaire/patrilinéaire, entraide, solidarité.'),
+    ->     -> ('conflit-interne','Conflit interne','Rivalités, jalousies, tensions dans le clan.')
+    ->     -> ON DUPLICATE KEY UPDATE
+    ->     ->   name=VALUES(name),
+    ->     ->   description=VALUES(description);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Empty set (0.00 sec)
+
+mysql> INSERT INTO tags (slug, name, description) VALUES
+ ' at line 1
+mysql> ERROR 1054 (42S22): Unknown column 'description' in 'field list'
+    -> mysql>
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1054 (42S22): Unknown column 'description' in 'field list'
+mysql>' at line 1
+mysql> SHOW CREATE TABLE tags\G
+*************************** 1. row ***************************
+       Table: tags
+Create Table: CREATE TABLE `tags` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_tags_name` (`name`),
+  UNIQUE KEY `uq_tags_slug` (`slug`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+1 row in set (0.00 sec)
+
+mysql> SHOW COLUMNS FROM tags;
++------------+--------------+------+-----+-------------------+-----------------------------------------------+
+| Field      | Type         | Null | Key | Default           | Extra                                         |
++------------+--------------+------+-----+-------------------+-----------------------------------------------+
+| id         | int unsigned | NO   | PRI | NULL              | auto_increment                                |
+| slug       | varchar(191) | YES  | UNI | NULL              |                                               |
+| name       | varchar(64)  | NO   | UNI | NULL              |                                               |
+| created_at | timestamp    | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED                             |
+| updated_at | timestamp    | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
++------------+--------------+------+-----+-------------------+-----------------------------------------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT
+    ->   column_name, column_type, is_nullable, column_key
+    -> FROM information_schema.columns
+    -> WHERE table_schema = DATABASE()
+    ->   AND table_name = 'tags'
+    -> ORDER BY ordinal_position;
++-------------+--------------+-------------+------------+
+| COLUMN_NAME | COLUMN_TYPE  | IS_NULLABLE | COLUMN_KEY |
++-------------+--------------+-------------+------------+
+| id          | int unsigned | NO          | PRI        |
+| slug        | varchar(191) | YES         | UNI        |
+| name        | varchar(64)  | NO          | UNI        |
+| created_at  | timestamp    | NO          |            |
+| updated_at  | timestamp    | NO          |            |
++-------------+--------------+-------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> INSERT INTO tags (slug, name) VALUES
+    -> ('couvent','Couvent-temple'),
+    -> ('initiation','Initiation'),
+    -> ('discipline','Discipline'),
+    -> ('agriculture','Agriculture'),
+    -> ('mpika','Mpika'),
+    -> ('amour','Amour'),
+    -> ('longo','Longo'),
+    -> ('modernite','Modernité'),
+    -> ('rappel','Rappel'),
+    -> ('voyage','Voyage'),
+    -> ('clan','Clan'),
+    -> ('conflit-interne','Conflit interne')
+    -> ON DUPLICATE KEY UPDATE
+    ->   name=VALUES(name);
+Query OK, 12 rows affected, 1 warning (0.00 sec)
+Records: 12  Duplicates: 0  Warnings: 1
+
+mysql> SELECT
+    ->   table_name,
+    ->   table_rows
+    -> FROM information_schema.tables
+    -> WHERE table_schema = DATABASE()
+    -> ORDER BY table_name;
++------------------------------+------------+
+| TABLE_NAME                   | TABLE_ROWS |
++------------------------------+------------+
+| artifact_mentions            |          0 |
+| artifacts                    |         16 |
+| book_narrators               |          2 |
+| books                        |          0 |
+| chapter_characters           |          0 |
+| chapters                     |         25 |
+| character_clans              |         12 |
+| character_clans_v2           |         12 |
+| character_factions           |          0 |
+| characters                   |         17 |
+| factions                     |          0 |
+| glossary_terms               |         12 |
+| kongo_clans                  |          5 |
+| kongo_clans_v2               |         12 |
+| kongo_matriarchies           |          0 |
+| kongo_matriarchy_clans       |          0 |
+| kongo_pillar_clans_v2        |          0 |
+| kongo_pillars                |          3 |
+| kongo_pillars_v2             |          3 |
+| locations                    |         10 |
+| parts                        |          5 |
+| relationships                |          0 |
+| scene_blocks                 |          0 |
+| scene_characters             |          0 |
+| scene_tags                   |          0 |
+| scenes                       |         45 |
+| tags                         |         12 |
+| timeline_events              |          0 |
+| v_character_clan_summary     |       NULL |
+| v_character_clan_summary_v2  |       NULL |
+| v_kongo_clans_with_pillar_v2 |       NULL |
++------------------------------+------------+
+31 rows in set (0.02 sec)
+
+mysql> SELECT 'books' t, COUNT(*) n FROM books
+    -> UNION ALL SELECT 'book_narrators', COUNT(*) FROM book_narrators
+    -> UNION ALL SELECT 'parts', COUNT(*) FROM parts
+    -> UNION ALL SELECT 'chapters', COUNT(*) FROM chapters
+    -> UNION ALL SELECT 'scenes', COUNT(*) FROM scenes
+    -> UNION ALL SELECT 'scene_blocks', COUNT(*) FROM scene_blocks
+    -> UNION ALL SELECT 'characters', COUNT(*) FROM characters
+    -> UNION ALL SELECT 'locations', COUNT(*) FROM locations
+    -> UNION ALL SELECT 'glossary_terms', COUNT(*) FROM glossary_terms
+    -> UNION ALL SELECT 'tags', COUNT(*) FROM tags
+    -> UNION ALL SELECT 'scene_tags', COUNT(*) FROM scene_tags
+    -> UNION ALL SELECT 'kongo_pillars_v2', COUNT(*) FROM kongo_pillars_v2
+    -> UNION ALL SELECT 'kongo_clans_v2', COUNT(*) FROM kongo_clans_v2
+    -> UNION ALL SELECT 'character_clans_v2', COUNT(*) FROM character_clans_v2
+    -> UNION ALL SELECT 'kongo_pillar_clans_v2', COUNT(*) FROM kongo_pillar_clans_v2;
++-----------------------+----+
+| t                     | n  |
++-----------------------+----+
+| books                 |  1 |
+| book_narrators        |  2 |
+| parts                 |  5 |
+| chapters              | 25 |
+| scenes                | 45 |
+| scene_blocks          |  0 |
+| characters            | 17 |
+| locations             | 10 |
+| glossary_terms        | 13 |
+| tags                  | 12 |
+| scene_tags            |  0 |
+| kongo_pillars_v2      |  3 |
+| kongo_clans_v2        | 12 |
+| character_clans_v2    | 12 |
+| kongo_pillar_clans_v2 |  0 |
++-----------------------+----+
+15 rows in set (0.03 sec)
+
+mysql> SELECT
+    ->   b.slug AS book,
+    ->   p.part_no,
+    ->   p.slug AS part_slug,
+    ->   p.title AS part_title,
+    ->   c.chapter_no,
+    ->   c.slug AS chapter_slug,
+    ->   c.title AS chapter_title,
+    ->   s.scene_no,
+    ->   s.slug AS scene_slug,
+    ->   s.title AS scene_title,
+    ->   cp.name AS pov,
+    ->   l.name AS location
+    -> FROM books b
+    -> JOIN parts p ON p.book_id = b.id
+    -> JOIN chapters c ON c.part_id = p.id
+    -> LEFT JOIN scenes s ON s.chapter_id = c.id
+    -> LEFT JOIN characters cp ON cp.id = s.pov_character_id
+    -> LEFT JOIN locations l ON l.id = s.location_id
+    -> WHERE b.slug = 'les-derniers-leopards'
+    -> ORDER BY p.part_no, c.chapter_no, s.scene_no;
++-----------------------+---------+-----------------------+--------------------------------------+------------+-----------------------+--------------------------------------+----------+-----------------------+-----------------------------------+-------------+-------------------+
+| book                  | part_no | part_slug             | part_title                           | chapter_no | chapter_slug          | chapter_title                        | scene_no | scene_slug            | scene_title                       | pov         | location          |
++-----------------------+---------+-----------------------+--------------------------------------+------------+-----------------------+--------------------------------------+----------+-----------------------+-----------------------------------+-------------+-------------------+
+| les-derniers-leopards |       1 | temple-et-rappel      | Partie I - Le temple et le rappel    |          1 | prologue-jumeaux      | Prologue - Les jumeaux et la mission |     NULL | NULL                  | NULL                              | NULL        | NULL              |
+| les-derniers-leopards |       1 | temple-et-rappel      | Partie I - Le temple et le rappel    |          2 | couvent-temple        | Le couvent-temple                    |     NULL | NULL                  | NULL                              | NULL        | NULL              |
+| les-derniers-leopards |       1 | temple-et-rappel      | Partie I - Le temple et le rappel    |          3 | mpika-nkusu           | Mpika - Nkusu                        |     NULL | NULL                  | NULL                              | NULL        | NULL              |
+| les-derniers-leopards |       1 | temple-et-rappel      | Partie I - Le temple et le rappel    |          4 | le-rappel             | Le rappel de Nzongo                  |     NULL | NULL                  | NULL                              | NULL        | NULL              |
+| les-derniers-leopards |       1 | temple-et-rappel      | Partie I - Le temple et le rappel    |          5 | sept-jours-de-route   | Sept jours de route                  |     NULL | NULL                  | NULL                              | NULL        | NULL              |
+| les-derniers-leopards |       2 | luwozi-et-profanation | Partie II - Luwozi et la profanation |          1 | nzongo-leopards       | Nzongo - L’homme-léopard             |     NULL | NULL                  | NULL                              | NULL        | NULL              |
+| les-derniers-leopards |       2 | luwozi-et-profanation | Partie II - Luwozi et la profanation |          2 | ta-mukono-meurt       | La mort de Ta Mukono                 |     NULL | NULL                  | NULL                              | NULL        | NULL              |
+| les-derniers-leopards |       2 | luwozi-et-profanation | Partie II - Luwozi et la profanation |          3 | route-luwozi          | Vers Luwozi                          |     NULL | NULL                  | NULL                              | NULL        | NULL              |
+| les-derniers-leopards |       2 | luwozi-et-profanation | Partie II - Luwozi et la profanation |          4 | les-flammes           | Les flammes de Luwozi                |     NULL | NULL                  | NULL                              | NULL        | NULL              |
+| les-derniers-leopards |       2 | luwozi-et-profanation | Partie II - Luwozi et la profanation |          5 | mvita-kanga           | Mvita Kanga écoute                   |     NULL | NULL                  | NULL                              | NULL        | NULL              |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          1 | makesa-et-embuscades  | Makesa ma Kongo                      |        1 | p3c1-s1-razzia        | Une razzia au bord du pays        | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          1 | makesa-et-embuscades  | Makesa ma Kongo                      |        2 | p3c1-s2-embuscade     | L’embuscade                       | Kinuani     | NULL              |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          1 | makesa-et-embuscades  | Makesa ma Kongo                      |        3 | p3c1-s3-enterrement   | Sans strass ni paillettes         | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          2 | nganga-mungua         | Nganga Mungua                        |        1 | p3c2-s1-cour          | À la cour de Mbanza Kongo         | Matondo     | Mbanza Kongo      |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          2 | nganga-mungua         | Nganga Mungua                        |        2 | p3c2-s2-haine         | La haine de Nzongo                | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          2 | nganga-mungua         | Nganga Mungua                        |        3 | p3c2-s3-ordre         | Ordre de mission                  | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          3 | le-coup-monte         | Le coup monté                        |        1 | p3c3-s1-bois          | Dans le bois, l’ombre             | Kinuani     | NULL              |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          3 | le-coup-monte         | Le coup monté                        |        2 | p3c3-s2-fleche        | La flèche qui change tout         | Ndebeka     | NULL              |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          3 | le-coup-monte         | Le coup monté                        |        3 | p3c3-s3-retour        | Retour empoisonné                 | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          4 | exil                  | L’exil                               |        1 | p3c4-s1-decision      | La décision de Nzongo             | Nzongo      | Pays Kuimba       |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          4 | exil                  | L’exil                               |        2 | p3c4-s2-leurre        | Le leurre                         | Kinuani     | NULL              |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          4 | exil                  | L’exil                               |        3 | p3c4-s3-fleuve        | Mayi Ndombe                       | Kinuani     | Mayi Ndombe       |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          5 | mayombe               | Mayombe                              |        1 | p3c5-s1-accueil       | Accueil en forêt                  | Kinuani     | Massif du Mayombe |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          5 | mayombe               | Mayombe                              |        2 | p3c5-s2-naissance     | Naissance dans l’épreuve          | Kinuani     | Massif du Mayombe |
+| les-derniers-leopards |       3 | piege-et-exil         | Partie III - Le piège et l’exil      |          5 | mayombe               | Mayombe                              |        3 | p3c5-s3-message       | Le message: Nzongo est malade     | Kinuani     | Massif du Mayombe |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          1 | retour-trop-tard      | Le retour trop tard                  |        1 | p4c1-s1-route         | Cinq jours de petite foulée       | Kinuani     | NULL              |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          1 | retour-trop-tard      | Le retour trop tard                  |        2 | p4c1-s2-signal        | Fumée et ngoma                    | Kinuani     | NULL              |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          1 | retour-trop-tard      | Le retour trop tard                  |        3 | p4c1-s3-mort          | La nuit où Nzongo part            | Nzongo      | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          2 | trois-veillees        | Trois veillées                       |        1 | p4c2-s1-arrivee       | Arriver trop tard                 | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          2 | trois-veillees        | Trois veillées                       |        2 | p4c2-s2-afflux        | Le pays se remplit                | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          2 | trois-veillees        | Trois veillées                       |        3 | p4c2-s3-mamans        | Les mamans parlent                | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          3 | succession-nkunku     | La succession (Nkunku)               |        1 | p4c3-s1-choix         | Le choix du chef                  | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          3 | succession-nkunku     | La succession (Nkunku)               |        2 | p4c3-s2-sceptre       | Le sceptre introuvable            | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          3 | succession-nkunku     | La succession (Nkunku)               |        3 | p4c3-s3-ivresse       | Agene et nuit de fête             | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          4 | le-couteau            | Le couteau dans la nuit              |        1 | p4c4-s1-chute         | La chute                          | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          4 | le-couteau            | Le couteau dans la nuit              |        2 | p4c4-s2-guerison      | Maison de Kisita                  | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          4 | le-couteau            | Le couteau dans la nuit              |        3 | p4c4-s3-ombres        | Les ombres du clan                | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          5 | retrait-au-nord       | Le compromis et le retrait           |        1 | p4c5-s1-compromis     | Le compromis                      | Kinuani     | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          5 | retrait-au-nord       | Le compromis et le retrait           |        2 | p4c5-s2-nkusu         | Le mariage qui se fissure         | Nkusu       | Pays Kuimba       |
+| les-derniers-leopards |       4 | mort-de-nzongo        | Partie IV - Le clan sans Nzongo      |          5 | retrait-au-nord       | Le compromis et le retrait           |        3 | p4c5-s3-basculer      | La bascule                        | Kinuani     | NULL              |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          1 | mbanza-kongo          | Mbanza Kongo retrouvée               |        1 | p5c1-s1-intronisation | Le roi debout                     | Kinuani     | Mbanza Kongo      |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          1 | mbanza-kongo          | Mbanza Kongo retrouvée               |        2 | p5c1-s2-nomination    | Kinuani rappelé                   | Kinuani     | Mbanza Kongo      |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          1 | mbanza-kongo          | Mbanza Kongo retrouvée               |        3 | p5c1-s3-nkusu-ville   | Nkusu, dame noble                 | Nkusu       | Mbanza Kongo      |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          2 | ecole-des-paroles     | L’école des paroles                  |        1 | p5c2-s1-ouverture     | L’école de la parole              | Kinuani     | Mbanza Kongo      |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          2 | ecole-des-paroles     | L’école des paroles                  |        2 | p5c2-s2-discours      | Le roi galvanise                  | Mvita Kanga | Mbanza Kongo      |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          2 | ecole-des-paroles     | L’école des paroles                  |        3 | p5c2-s3-faille        | La faille                         | Kinuani     | Mbanza Kongo      |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          3 | verite-ndebeka        | La vérité sur Ndebeka                |        1 | p5c3-s1-aveu          | Le sbire lâche le morceau         | Nzungani    | Pays Kuimba       |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          3 | verite-ndebeka        | La vérité sur Ndebeka                |        2 | p5c3-s2-embuscade     | Matondo règle sa dette            | Matondo     | NULL              |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          3 | verite-ndebeka        | La vérité sur Ndebeka                |        3 | p5c3-s3-pardon        | Allégeance                        | Kinuani     | Mbanza Kongo      |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          4 | mbuila                | Mbuila - 29 octobre 1665             |        1 | p5c4-s1-veille        | La veille de Mbuila               | Kinuani     | Mbuila            |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          4 | mbuila                | Mbuila - 29 octobre 1665             |        2 | p5c4-s2-decapitation  | Le roi tombe                      | Matondo     | Mbuila            |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          4 | mbuila                | Mbuila - 29 octobre 1665             |        3 | p5c4-s3-choix         | Choisir quand tout est perdu      | Kinuani     | Mbuila            |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          5 | les-derniers-leopards | Les derniers léopards                |        1 | p5c5-s1-sacrifice     | Le sacrifice                      | Kinuani     | Mbuila            |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          5 | les-derniers-leopards | Les derniers léopards                |        2 | p5c5-s2-fuite         | Protéger Nkusu et les enfants     | Nsimba      | NULL              |
+| les-derniers-leopards |       5 | vers-mbuila           | Partie V - Vers Mbuila               |          5 | les-derniers-leopards | Les derniers léopards                |        3 | p5c5-s3-epilogue      | Épilogue - La mémoire et le nom   | Nzuzi       | Pays Kuimba       |
++-----------------------+---------+-----------------------+--------------------------------------+------------+-----------------------+--------------------------------------+----------+-----------------------+-----------------------------------+-------------+-------------------+
+55 rows in set (0.00 sec)
+
+mysql> SELECT
+    ->   p.part_no, c.chapter_no, s.scene_no,
+    ->   s.slug, s.title,
+    ->   cp.name AS pov, l.name AS location
+    -> FROM parts p
+    -> JOIN chapters c ON c.part_id=p.id
+    -> JOIN scenes s ON s.chapter_id=c.id
+    -> LEFT JOIN characters cp ON cp.id=s.pov_character_id
+    -> LEFT JOIN locations l ON l.id=s.location_id
+    -> WHERE p.slug='au-couvent'
+    -> ORDER BY c.chapter_no, s.scene_no;
+Empty set (0.00 sec)
+
+mysql> SELECT *
+    -> FROM v_character_clan_summary_v2
+    -> ORDER BY id;
++----+----------------------+----------------------+---------------------+---------------------+
+| id | slug                 | name                 | clan_maternel_muisi | clan_paternel_muana |
++----+----------------------+----------------------+---------------------+---------------------+
+|  1 | mvita-kanga          | Mvita Kanga          | NULL                | NULL                |
+|  2 | kinuani              | Kinuani              | Kuimba              | Sundi               |
+|  3 | nkusu                | Nkusu                | Ndamba              | Kahunga             |
+|  4 | nzongo               | Nzongo               | Kuimba              | NULL                |
+|  5 | ma-tusikila          | Ma Tusikila          | NULL                | NULL                |
+|  6 | kisita               | Kisita               | Kuimba              | NULL                |
+|  7 | nzungani             | Nzungani             | Nsembo              | Kahunga             |
+|  8 | nsimba               | Nsimba               | Kuimba              | NULL                |
+|  9 | nzuzi                | Nzuzi                | Kuimba              | NULL                |
+| 10 | matondo              | Matondo              | NULL                | NULL                |
+| 11 | ndebeka              | Ndebeka              | Kuimba              | NULL                |
+| 12 | nkunku               | Nkunku               | Kuimba              | NULL                |
+| 13 | ndona-linda          | Ndona Linda          | NULL                | NULL                |
+| 14 | reverend-baumgartner | Reverend Baumgartner | NULL                | NULL                |
+| 15 | pere-lorenzo         | Père Lorenzo         | NULL                | NULL                |
+| 16 | ta-mukono            | Ta Mukono            | NULL                | NULL                |
+| 17 | nganga-mungua        | Tata Nganga Mungua   | NULL                | NULL                |
++----+----------------------+----------------------+---------------------+---------------------+
+17 rows in set (0.01 sec)
+
+mysql> SHOW COLUMNS FROM parts;
++------------+--------------+------+-----+-------------------+-----------------------------------------------+
+| Field      | Type         | Null | Key | Default           | Extra                                         |
++------------+--------------+------+-----+-------------------+-----------------------------------------------+
+| id         | int unsigned | NO   | PRI | NULL              | auto_increment                                |
+| slug       | varchar(191) | YES  |     | NULL              |                                               |
+| book_id    | int unsigned | NO   | MUL | NULL              |                                               |
+| part_no    | int unsigned | NO   |     | NULL              |                                               |
+| title      | varchar(255) | NO   |     | NULL              |                                               |
+| summary    | text         | YES  |     | NULL              |                                               |
+| created_at | timestamp    | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED                             |
+| updated_at | timestamp    | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
++------------+--------------+------+-----+-------------------+-----------------------------------------------+
+8 rows in set (0.00 sec)
+
+mysql> SHOW COLUMNS FROM chapters;
++---------------------+--------------+------+-----+-------------------+-----------------------------------------------+
+| Field               | Type         | Null | Key | Default           | Extra                                         |
++---------------------+--------------+------+-----+-------------------+-----------------------------------------------+
+| id                  | int unsigned | NO   | PRI | NULL              | auto_increment                                |
+| slug                | varchar(191) | YES  |     | NULL              |                                               |
+| part_id             | int unsigned | NO   | MUL | NULL              |                                               |
+| chapter_no          | int unsigned | NO   |     | NULL              |                                               |
+| title               | varchar(255) | NO   |     | NULL              |                                               |
+| pov_character_id    | int unsigned | YES  | MUL | NULL              |                                               |
+| location_id         | int unsigned | YES  | MUL | NULL              |                                               |
+| in_story_date_start | date         | YES  |     | NULL              |                                               |
+| in_story_date_end   | date         | YES  |     | NULL              |                                               |
+| objective           | text         | YES  |     | NULL              |                                               |
+| summary             | text         | YES  |     | NULL              |                                               |
+| cliffhanger         | text         | YES  |     | NULL              |                                               |
+| word_target         | int unsigned | YES  |     | NULL              |                                               |
+| indesign_master     | varchar(64)  | YES  |     | NULL              |                                               |
+| created_at          | timestamp    | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED                             |
+| updated_at          | timestamp    | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
++---------------------+--------------+------+-----+-------------------+-----------------------------------------------+
+16 rows in set (0.00 sec)
+
+mysql> SHOW COLUMNS FROM scenes;
++------------------+--------------+------+-----+-------------------+-----------------------------------------------+
+| Field            | Type         | Null | Key | Default           | Extra                                         |
++------------------+--------------+------+-----+-------------------+-----------------------------------------------+
+| id               | int unsigned | NO   | PRI | NULL              | auto_increment                                |
+| slug             | varchar(191) | YES  |     | NULL              |                                               |
+| chapter_id       | int unsigned | NO   | MUL | NULL              |                                               |
+| scene_no         | int unsigned | NO   |     | NULL              |                                               |
+| title            | varchar(255) | YES  |     | NULL              |                                               |
+| pov_character_id | int unsigned | YES  | MUL | NULL              |                                               |
+| location_id      | int unsigned | YES  | MUL | NULL              |                                               |
+| objective        | text         | YES  |     | NULL              |                                               |
+| time_of_day      | varchar(32)  | YES  |     | NULL              |                                               |
+| summary          | text         | NO   |     | NULL              |                                               |
+| conflict         | text         | YES  |     | NULL              |                                               |
+| turning_point    | text         | YES  |     | NULL              |                                               |
+| outcome          | text         | YES  |     | NULL              |                                               |
+| hook             | text         | YES  |     | NULL              |                                               |
+| indesign_style   | varchar(64)  | YES  |     | NULL              |                                               |
+| created_at       | timestamp    | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED                             |
+| updated_at       | timestamp    | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
++------------------+--------------+------+-----+-------------------+-----------------------------------------------+
+17 rows in set (0.00 sec)
+
+mysql>

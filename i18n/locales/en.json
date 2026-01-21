@@ -1,0 +1,231 @@
+{
+  "app": {
+    "name": "Sonekeno",
+    "tagline": "A space to create and organize",
+    "logoAlt": "App logo",
+    "meta": {
+      "title": "{name} — Writing Studio",
+      "description": "Organize your characters, scenes, timeline, and glossary in one place to keep your story consistent from start to finish.",
+      "ogTitle": "{name} — Writing Studio",
+      "ogDescription": "A clean workspace to structure your characters, scenes, timeline, and project lexicon.",
+      "ogImageAlt": "App preview",
+      "keywords": "writing studio, writing organization, characters, scenes, timeline, glossary, worldbuilding",
+      "themeColorLight": "#FBF8F1",
+      "themeColorDark": "#0C0C10"
+    }
+  },
+
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "mainNav": "Main navigation"
+  },
+
+  "lang": {
+    "label": "Language",
+    "fr": "FR",
+    "pt": "PT",
+
+    "en": "EN"
+  },
+
+  "theme": {
+    "aria": "Theme: {mode}. {action}",
+    "modes": {
+      "system": "System",
+      "dark": "Dark",
+      "light": "Light"
+    },
+    "toDark": "Switch to dark mode",
+    "toLight": "Switch to light mode",
+    "toSystem": "Use system setting"
+  },
+
+  "common": {
+    "loading": "Loading…",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "continue": "Continue",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "confirm": "Confirm"
+  },
+
+  "nav": {
+    "aria": "Main navigation",
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "characters": "Characters",
+    "scenes": "Scenes",
+    "timeline": "Timeline",
+    "glossary": "Glossary",
+    "tags": "Tags",
+    "profile": "Profile",
+    "settings": "Settings",
+    "login": "Sign in",
+    "register": "Sign up",
+    "logout": "Sign out"
+  },
+
+  "auth": {
+    "login": "Sign in",
+    "register": "Sign up",
+
+    "email": "Email",
+    "password": "Password",
+    "passwordConfirm": "Confirm password",
+    "newPassword": "New password",
+    "currentPassword": "Current password",
+
+    "loginTitle": "Sign in",
+    "registerTitle": "Create an account",
+    "forgotTitle": "Forgot password",
+    "resetTitle": "Reset password",
+    "verifyTitle": "Email verification",
+
+    "loginCta": "Sign in",
+    "registerCta": "Create account",
+    "forgotCta": "Send link",
+    "resetCta": "Update password",
+
+    "forgotLink": "Forgot your password?",
+    "noAccount": "Don’t have an account?",
+    "haveAccount": "Already have an account?",
+
+    "verify": {
+      "sent": "A confirmation email has been sent.",
+      "success": "Email confirmed. You can now sign in.",
+      "invalid": "Invalid or expired link."
+    },
+
+    "reset": {
+      "sent": "If the address exists, a reset email has been sent.",
+      "success": "Password updated. You can now sign in.",
+      "invalid": "Invalid or expired link."
+    }
+  },
+
+  "forms": {
+    "required": "This field is required.",
+    "invalidEmail": "Invalid email address.",
+    "minChars": "At least {n} characters.",
+    "passwordMismatch": "Passwords do not match."
+  },
+
+  "errors": {
+    "generic": "Something went wrong.",
+    "unauthorized": "Unauthorized access.",
+    "forbidden": "Access denied.",
+    "notFound": "Resource not found.",
+    "validation": "Invalid data.",
+    "network": "Network error. Please try again."
+  },
+
+  "home": {
+    "hero": {
+      "kicker": "Writing Studio",
+      "title": "A clear workspace to structure your story world",
+      "subtitle": "Centralize your characters, scenes, timeline, and glossary to keep continuity solid and find information in seconds.",
+      "ctaPrimary": "Explore characters",
+      "ctaSecondary": "View timeline"
+    },
+
+    "tiles": {
+      "characters": {
+        "label": "Characters",
+        "title": "Files",
+        "desc": "Profile, arcs, relationships"
+      },
+      "scenes": {
+        "label": "Scenes",
+        "title": "Casting",
+        "desc": "POV, presence, mentions"
+      },
+      "timeline": {
+        "label": "Timeline",
+        "title": "Milestones",
+        "desc": "Events + tags"
+      },
+      "glossary": {
+        "label": "Glossary",
+        "title": "Lexicon",
+        "desc": "Terms, rules, notes"
+      }
+    },
+
+    "modules": {
+      "characters": {
+        "badge": "Characters",
+        "title": "Structured character files",
+        "desc": "Logline, secrets, objects, relationships, statuses."
+      },
+      "scenes": {
+        "badge": "Scenes",
+        "title": "Structure & casting",
+        "desc": "Chapter-based organization, scene–character links."
+      },
+      "timeline": {
+        "badge": "Timeline",
+        "title": "Events",
+        "desc": "Dates, tags, and connections to scenes."
+      },
+      "glossary": {
+        "badge": "Glossary",
+        "title": "Project lexicon",
+        "desc": "Vocabulary, rituals, terminology consistency."
+      }
+    },
+
+    "trust": {
+      "text": "Designed to stay fast, readable, and reliable as your project grows.",
+      "cta": "Sign in"
+    }
+  },
+
+  "domain": {
+    "character": {
+      "singular": "Character",
+      "plural": "Characters",
+      "create": "Create a character",
+      "edit": "Edit character",
+      "profile": "Profile",
+      "clans": "Clans",
+      "kinships": "Relationships",
+      "roles": {
+        "pov": "Point of view",
+        "present": "Present",
+        "mentioned": "Mentioned"
+      }
+    },
+    "scene": {
+      "singular": "Scene",
+      "plural": "Scenes",
+      "create": "Create a scene",
+      "edit": "Edit scene",
+      "pov": "Point of view",
+      "objective": "Objective",
+      "conflict": "Conflict",
+      "outcome": "Outcome"
+    },
+    "timeline": {
+      "singular": "Event",
+      "plural": "Timeline",
+      "date": "Date",
+      "tags": "Tags"
+    }
+  },
+
+  "footer": {
+    "rights": "© {year} {name}",
+    "tags": {
+      "mobile": "Mobile-first",
+      "multilang": "Multilingual",
+      "offline": "Offline",
+      "search": "Search"
+    }
+  }
+}

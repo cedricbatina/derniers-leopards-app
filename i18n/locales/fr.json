@@ -1,0 +1,230 @@
+{
+  "app": {
+    "name": "Sonekeno",
+    "tagline": "Espace de création et d’organisation",
+    "logoAlt": "Logo de l’application",
+ "meta": {
+      "title": "{name} — Atelier d’écriture",
+      "description": "Organisez vos personnages, scènes, chronologie et glossaire au même endroit, pour garder une cohérence solide du début à la fin.",
+      "ogTitle": "{name} — Atelier d’écriture",
+      "ogDescription": "Un espace de travail pour structurer vos personnages, vos scènes, votre chronologie et votre lexique.",
+      "ogImageAlt": "Aperçu de l’application",
+      "keywords": "atelier d’écriture, organisation, personnages, scènes, chronologie, glossaire",
+      "themeColorLight": "#FBF8F1",
+      "themeColorDark": "#0C0C10"
+    }
+  },
+
+  "a11y": {
+    "skipToContent": "Aller au contenu",
+    "mainNav": "Navigation principale"
+  },
+
+  "lang": {
+    "label": "Langue",
+    "fr": "FR",
+    "pt": "PT",
+    "en": "EN"
+  },
+
+  "theme": {
+    "aria": "Thème : {mode}. {action}",
+    "modes": {
+      "system": "Système",
+      "dark": "Sombre",
+      "light": "Clair"
+    },
+    "toDark": "Passer en sombre",
+    "toLight": "Passer en clair",
+    "toSystem": "Passer en système"
+  },
+
+  "common": {
+    "loading": "Chargement…",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour",
+    "continue": "Continuer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "clear": "Effacer",
+    "confirm": "Confirmer"
+  },
+
+  "nav": {
+    "aria": "Navigation principale",
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "characters": "Personnages",
+    "scenes": "Scènes",
+    "timeline": "Chronologie",
+    "glossary": "Glossaire",
+    "tags": "Tags",
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "login": "Connexion",
+    "register": "Inscription",
+    "logout": "Déconnexion"
+  },
+
+  "auth": {
+    "login": "Connexion",
+    "register": "Inscription",
+
+    "email": "Email",
+    "password": "Mot de passe",
+    "passwordConfirm": "Confirmer le mot de passe",
+    "newPassword": "Nouveau mot de passe",
+    "currentPassword": "Mot de passe actuel",
+
+    "loginTitle": "Connexion",
+    "registerTitle": "Créer un compte",
+    "forgotTitle": "Mot de passe oublié",
+    "resetTitle": "Réinitialiser le mot de passe",
+    "verifyTitle": "Vérification email",
+
+    "loginCta": "Se connecter",
+    "registerCta": "S’inscrire",
+    "forgotCta": "Envoyer le lien",
+    "resetCta": "Mettre à jour le mot de passe",
+
+    "forgotLink": "Mot de passe oublié ?",
+    "noAccount": "Pas encore de compte ?",
+    "haveAccount": "Déjà un compte ?",
+
+    "verify": {
+      "sent": "Un email de confirmation a été envoyé.",
+      "success": "Email confirmé. Vous pouvez vous connecter.",
+      "invalid": "Lien invalide ou expiré."
+    },
+
+    "reset": {
+      "sent": "Si l’adresse existe, un email de réinitialisation a été envoyé.",
+      "success": "Mot de passe mis à jour. Vous pouvez vous connecter.",
+      "invalid": "Lien invalide ou expiré."
+    }
+  },
+
+  "forms": {
+    "required": "Ce champ est requis.",
+    "invalidEmail": "Adresse email invalide.",
+    "minChars": "Minimum {n} caractères.",
+    "passwordMismatch": "Les mots de passe ne correspondent pas."
+  },
+
+  "errors": {
+    "generic": "Une erreur est survenue.",
+    "unauthorized": "Accès non autorisé.",
+    "forbidden": "Accès interdit.",
+    "notFound": "Ressource introuvable.",
+    "validation": "Données invalides.",
+    "network": "Erreur réseau. Réessayez."
+  },
+
+  "home": {
+    "hero": {
+      "kicker": "Atelier d’écriture",
+      "title": "Un espace clair pour structurer votre univers",
+      "subtitle": "Centralisez vos personnages, scènes, chronologie et glossaire pour garder une continuité solide et retrouver l’information en quelques secondes.",
+      "ctaPrimary": "Explorer les personnages",
+      "ctaSecondary": "Voir la chronologie"
+    },
+
+    "tiles": {
+      "characters": {
+        "label": "Personnages",
+        "title": "Dossiers",
+        "desc": "Profil, arcs, relations"
+      },
+      "scenes": {
+        "label": "Scènes",
+        "title": "Casting",
+        "desc": "POV, présents, mentions"
+      },
+      "timeline": {
+        "label": "Chronologie",
+        "title": "Repères",
+        "desc": "Événements + tags"
+      },
+      "glossary": {
+        "label": "Glossaire",
+        "title": "Lexique",
+        "desc": "Termes, règles, notes"
+      }
+    },
+
+    "modules": {
+      "characters": {
+        "badge": "Personnages",
+        "title": "Dossiers structurés",
+        "desc": "Logline, secrets, objets, parentés, statuts."
+      },
+      "scenes": {
+        "badge": "Scènes",
+        "title": "Structure & casting",
+        "desc": "Organisation par chapitres, liens scène-personnage."
+      },
+      "timeline": {
+        "badge": "Chronologie",
+        "title": "Événements",
+        "desc": "Dates, tags et rattachements aux scènes."
+      },
+      "glossary": {
+        "badge": "Glossaire",
+        "title": "Lexique de projet",
+        "desc": "Vocabulaire, rites, cohérence terminologique."
+      }
+    },
+
+    "trust": {
+      "text": "Pensée pour rester rapide, lisible et fiable, même quand le projet grossit.",
+      "cta": "Se connecter"
+    }
+  },
+
+  "domain": {
+    "character": {
+      "singular": "Personnage",
+      "plural": "Personnages",
+      "create": "Créer un personnage",
+      "edit": "Modifier le personnage",
+      "profile": "Profil",
+      "clans": "Clans",
+      "kinships": "Parenté",
+      "roles": {
+        "pov": "Point de vue",
+        "present": "Présent",
+        "mentioned": "Mentionné"
+      }
+    },
+    "scene": {
+      "singular": "Scène",
+      "plural": "Scènes",
+      "create": "Créer une scène",
+      "edit": "Modifier la scène",
+      "pov": "Point de vue",
+      "objective": "Objectif",
+      "conflict": "Conflit",
+      "outcome": "Issue"
+    },
+    "timeline": {
+      "singular": "Événement",
+      "plural": "Chronologie",
+      "date": "Date",
+      "tags": "Tags"
+    }
+  },
+
+  "footer": {
+    "rights": "© {year} {name}",
+    "tags": {
+      "mobile": "Mobile-first",
+      "multilang": "Multilingue",
+      "offline": "Hors-ligne",
+      "search": "Recherche"
+    }
+  }
+}

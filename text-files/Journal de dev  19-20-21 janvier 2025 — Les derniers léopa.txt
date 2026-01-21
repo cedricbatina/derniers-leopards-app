@@ -1,0 +1,72 @@
+Journal de dev — Les derniers léopards app
+2026-01-19 — i18n (Nuxt i18n) : résolution des chemins “i18n/i18n”
+
+Symptôme
+
+Nitro/Vite échouait à charger les locales avec des chemins du type .../i18n/locales/locales/fr.json ou .../i18n/i18n/locales/fr.json.
+
+Cause
+
+langDir + file (ou structure de dossiers) aboutissaient à une concaténation involontaire (dossier locales “doublé”).
+
+Décision / Fix
+
+Standardisation : les traductions sont dans un dossier racine ./locales/.
+
+Config i18n ramenée à :
+
+langDir: 'locales/'
+
+locales: [{ file: 'fr.json' }, { file: 'en.json' }]
+
+lazy: true
+
+vueI18n: './i18n.config.ts' (chemin explicite)
+
+nuxt.config
+
+Résultat
+
+Disparition des erreurs ENOENT sur fr.json / en.json.
+
+2026-01-20 — CSS / Design system : intégration Tailwind v4 + Nuxt UI
+
+Objectif
+
+Avoir un design system stable, cohérent et maintenable (tokens + composants utilitaires).
+
+Actions
+
+Mise en place d’un assets/css/main.css basé sur :
+
+tokens RGB (light/dark),
+
+@theme pour exposer les couleurs à Tailwind,
+
+composants (card, btn, input, table, topbar, etc.).
+
+Résultat
+
+Style cohérent + base “app” prête pour les écrans suivants.
+
+2026-01-21 — Correction runtime Tailwind : Cannot apply unknown utility class container-app
+
+Symptôme
+
+Erreur serveur : Cannot apply unknown utility class container-app.
+
+Cause
+
+Tailwind ne permet pas (dans ce contexte) @apply sur une classe custom comme si c’était une utility (@apply container-app ...)
+
+main
+
+.
+
+Fix
+
+Remplacer @apply container-app ... par les utilities réelles directement dans .page.
+
+Résultat
+
+La page s’affiche correctement (fin du crash CSS) et on peut reprendre l’UI.
