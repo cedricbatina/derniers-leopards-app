@@ -227,5 +227,21 @@
       "offline": "Offline",
       "search": "Search"
     }
+  },
+   "emails": {
+    "common": {
+      "greeting": "Hello,",
+      "ignore": "If you did not request this, you can safely ignore this message.",
+      "closing": "Sincerely,",
+      "signature": "Les derniers léopards"
+    },
+    "verify": {
+      "subject": "Please confirm your email address — Les derniers léopards",
+      "intro": "Please confirm your email address by clicking the link below:"
+    },
+    "reset": {
+      "subject": "Password reset — Les derniers léopards",
+      "intro": "To reset your password, click the link below:"
+    }
   }
 }

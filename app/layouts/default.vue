@@ -9,10 +9,10 @@
 <NuxtLink :to="localePath('/')" class="flex items-center gap-3 focus-ring rounded-xl">
   <!-- Logo (PNG dans /public/images/...) -->
   <NuxtImg
-    src="/images/logo-leo.png"
+    src="/images/logo-sonekeno.png"
     width="40"
     height="40"
-    class="h-10 w-10 rounded-2xl border border-border bg-surface object-contain shadow-soft"
+    class="h-20 w-20 rounded-2xl border border-border bg-surface object-contain shadow-soft"
     :alt="t('app.logoAlt')"
   />
 

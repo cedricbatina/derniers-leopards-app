@@ -226,5 +226,21 @@
       "offline": "Offline",
       "search": "Pesquisa"
     }
+  },
+  "emails": {
+    "common": {
+      "greeting": "Olá,",
+      "ignore": "Se não solicitou este pedido, pode ignorar esta mensagem com segurança.",
+      "closing": "Com os melhores cumprimentos,",
+      "signature": "Les derniers léopards"
+    },
+    "verify": {
+      "subject": "Por favor, confirme o seu endereço de email — Les derniers léopards",
+      "intro": "Por favor, confirme o seu endereço de email clicando na ligação abaixo:"
+    },
+    "reset": {
+      "subject": "Redefinição da sua palavra-passe — Les derniers léopards",
+      "intro": "Para redefinir a sua palavra-passe, clique na ligação abaixo:"
+    }
   }
 }

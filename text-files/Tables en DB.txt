@@ -1,0 +1,32 @@
+how tables
+Profilage [Éditer en ligne] [ Éditer ] [ Créer le code source PHP ] [ Actualiser]
++ Options
+Tables_in_6i695q_lesDerniersLeopards
+Tables_in_6i695q_lesDerniersLeopards
+book_narrators
+books
+chapters
+character_aliases
+character_clans_v2
+character_dossiers
+character_kinships_v2
+character_profiles
+characters
+glossary_terms
+kongo_clans_v2
+kongo_pillar_clans_v2
+kongo_pillars_v2
+locations
+parts
+roles
+scene_characters
+scene_tags
+scenes
+tags
+timeline_events
+user_roles
+user_sessions
+users
+v_character_clan_summary_v2
+v_kongo_clans_with_pillar_v2
+

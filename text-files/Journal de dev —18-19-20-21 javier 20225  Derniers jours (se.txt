@@ -1,0 +1,372 @@
+Journal de dev — Derniers jours (setup → build → deploy)
+Période
+
+20 → 22 janvier 2026 (avant-hier / hier / aujourd’hui)
+
+Objectif
+
+Relancer proprement l’app Nuxt (SSR) + i18n + UI, stabiliser Tailwind v4 / Nuxt UI, résoudre les erreurs bloquantes (i18n + CSS utilities), remettre Git au clair et déployer sur Vercel.
+
+Jour 1 — Initialisation projet + modules Nuxt + base config
+Actions
+
+Création/relance du projet Nuxt et choix des modules officiels.
+
+Installation et activation des modules utilisés dans l’app :
+
+@nuxt/ui
+
+@nuxt/icon
+
+@nuxt/image
+
+@nuxt/scripts
+
+@nuxt/eslint
+
+Ajout des modules applicatifs :
+
+@pinia/nuxt
+
+@nuxtjs/i18n
+
+@vite-pwa/nuxt
+
+@nuxtjs/sitemap
+
+@nuxtjs/color-mode
+
+Config Nuxt (points clés)
+
+Passage en SSR.
+
+Réglage du devServer (port 3009, host 0.0.0.0).
+
+Mise en place d’une config Nitro compatible Vercel (preset: 'vercel').
+
+Activation color-mode (préférence système, classe .dark).
+
+Jour 2 — Debug i18n + Debug Tailwind v4 / Nuxt UI + layout
+Problème 1 : i18n — chemins de locales introuvables (ENOENT)
+
+Symptôme :
+
+Nuxt i18n tentait de charger des chemins du type :
+
+i18n/locales/locales/fr.json
+
+i18n/i18n/locales/fr.json
+
+Cause la plus probable :
+
+Déphasage entre :
+
+langDir dans nuxt.config.js
+
+l’emplacement réel des fichiers de traduction
+
+et/ou un chemin vueI18n pointant vers un mauvais fichier (ou déplacé)
+
+Fix appliqué
+
+Stabilisation de la convention (une seule) :
+
+Option A (recommandée et simple) : langDir: 'locales/' avec ./locales/fr.json, ./locales/en.json, etc.
+
+et vueI18n: './i18n.config.js' (chemin exact, unique, sans doublons)
+
+Résultat : plus d’erreur ENOENT, les traductions se chargent correctement.
+
+Problème 2 : Tailwind — Cannot apply unknown utility class bg-bg / text-brand / container-app
+
+Symptôme :
+
+Erreurs runtime Nitro/Vite :
+
+Cannot apply unknown utility class bg-bg
+
+Cannot apply unknown utility class text-brand
+
+Cannot apply unknown utility class container-app
+
+Cause
+
+Migration / mélange entre directives Tailwind v3 (@tailwind base/components/utilities) et Tailwind v4 (via Nuxt UI).
+
+Les tokens custom (bg, brand, etc.) n’étaient pas exposés correctement à Tailwind v4.
+
+Certains @apply faisaient référence à des classes non générées car la couche theme n’était pas déclarée via @theme.
+
+Fix appliqué (main.css)
+
+Passage à l’en-tête compatible Tailwind v4 / Nuxt UI :
+
+@import "tailwindcss" ...
+
+@import "@nuxt/ui"
+
+Déclaration de tokens RGB (--bg, --brand, etc.) puis exposition Tailwind v4 via @theme :
+
+génération des utilitaires bg-bg, text-brand, border-border, etc.
+
+Réorganisation des styles en @layer base, @layer components, @layer utilities.
+
+Résultat :
+
+Les pages s’affichent, plus d’erreurs bloquantes Tailwind.
+
+Layout
+
+Création/recopie d’un layouts/default.vue propre :
+
+Switch langue FR/EN via i18n
+
+Toggle thème via color-mode
+
+Header + navigation
+
+Footer
+
+Migration des textes “en dur” vers des clés i18n.
+
+Note VSCode
+
+Les “soulignements” Unknown at rule @apply sont souvent dus au linter CSS de VSCode (pas à Tailwind).
+
+Le build fonctionne dès lors que Tailwind compile correctement.
+
+Jour 3 — Git remotes + push propre + Vercel deploy
+Problème : mauvais repo / mauvais remote
+
+Le projet local pointait vers un ancien repo (les-derniers-leopards.git) alors que le repo voulu est :
+
+derniers-leopards-app
+
+Fix : rebrancher le remote origin sur le bon dépôt
+
+Commandes utilisées (résumé) :
+
+git remote -v
+git remote set-url origin https://github.com/cedricbatina/derniers-leopards-app.git
+git push -u origin main
+
+
+Résultat :
+
+Push réussi
+
+main tracke origin/main
+
+Problème Vercel : Root Directory = playground
+
+Erreur :
+
+“The specified Root Directory playground does not exist”
+
+Fix :
+
+Dans Vercel → Settings du projet → Root Directory mis à . (ou vide)
+
+Résultat :
+
+Déploiement OK sur Vercel
+
+État actuel (ce qui fonctionne)
+
+App visible en dev
+
+i18n chargé
+
+CSS stable (Tailwind v4 + Nuxt UI)
+
+Repo GitHub propre (derniers-leopards-app)
+
+Vercel déployé (root dir corrigé)
+
+Warnings restants (non bloquants)
+
+No match found for location with path "/login", /characters, /scenes, etc.
+
+Cause : pages pas encore créées dans /pages/…
+
+Action : créer les pages minimales pour supprimer ces warnings.
+
+Icônes MDI :
+
+Warning “Collection mdi is not found locally”
+
+Action : installer le pack local (recommandé) :
+
+npm i -D @iconify-json/mdi
+
+
+HMR :
+
+Port 24678 already in use
+
+Action : garder un port HMR fixe différent (ex: 24679) ou libérer le port occupé.
+
+Décisions produit / UX (actées)
+
+On évite les labels trop techniques pour l’utilisateur (SSR/PWA/Sitemap).
+
+On prépare l’app pour être générique (ex : “Sonekeno”) :
+
+textes via i18n
+
+et à terme : paramètres (nom, branding, meta) chargés depuis DB plutôt que codés en dur.
+
+Prochaines étapes (prochain chat / prochain lot)
+
+Créer les pages minimales :
+
+/pages/login.vue
+
+/pages/characters/index.vue
+
+/pages/scenes/index.vue
+
+/pages/timeline/index.vue
+
+/pages/glossary/index.vue
+
+Améliorer les traductions (FR/EN) + ajouter PT (portugais).
+
+Mettre le SEO par page via useSeoMeta() avec clés i18n dédiées (par page).
+
+Ajuster la mise en page (centrage, spacing, responsive).
+
+Démarrer le CRUD (nouveau chat dédié : schéma DB, endpoints, UI).
+Mémo — Derniers léopards app (état + prochaines étapes)
+1) État actuel
+
+Projet Nuxt SSR démarre et la page d’accueil s’affiche.
+
+Tailwind v4 + Nuxt UI : problèmes @apply / utilitaires résolus en passant par @theme (tokens) + @layer.
+
+i18n : le chargement des fichiers locales est fonctionnel (les erreurs de chemins i18n/.../locales ont été corrigées).
+
+Repo GitHub OK :
+
+Remote origin pointe maintenant vers https://github.com/cedricbatina/derniers-leopards-app.git
+
+git push -u origin main réussi.
+
+Déploiement Vercel OK (build OK après réglage du root directory côté Vercel).
+
+2) Ce qui reste “bruyant” (warnings)
+
+Vue Router : No match found for location sur :
+
+/login, /characters, /scenes, /timeline, /glossary
+→ Ces pages n’existent pas encore (à créer sous pages/).
+
+Icons : mdi:leopard non trouvé localement
+→ Installer le pack @iconify-json/mdi en dev.
+
+Image : warning sur /images/logo-les-derniers-leopards
+→ Utiliser un fichier réel dans /public/images/... et référencer sans localePath.
+
+i18n : certaines clés manquantes selon locale (à compléter dans en.json, et ajouter pt.json).
+
+3) Décisions de produit / wording
+
+On évite les textes trop techniques visibles utilisateur (SSR/PWA/etc.).
+
+On évite de hardcoder “roman/bible” dans l’UI : l’app doit rester générique (“atelier d’écriture / espace de création”).
+
+Le nom peut rester paramétrable via i18n (et plus tard via DB/config).
+
+4) Layout (déjà en place)
+
+layouts/default.vue :
+
+Logo PNG via NuxtImg (/public/images/logo-leo.png)
+
+alt basé sur i18n : t('app.logoAlt')
+
+Switch langue en header (FR/EN) via switchLocalePath('fr'|'en')
+
+Bouton thème via useColorMode()
+
+Nav vers pages à créer : characters, scenes, timeline, glossary
+
+Footer : t("footer.rights", { year, name }) + tags
+
+5) SEO (objectif)
+
+Chaque page aura un useSeoMeta “poussé” basé i18n :
+
+title, description, ogTitle, ogDescription, ogImageAlt, keywords
+
+themeColor light/dark si utile.
+
+Accueil : remplacer le SEO hardcodé par des clés app.meta.* et/ou home.meta.*.
+
+6) i18n (objectif immédiat)
+
+fr.json : structuré proprement (app/meta, a11y, lang, theme, common, nav, auth, home, domain, footer).
+
+À faire maintenant :
+
+Générer en.json complet (mêmes clés que fr.json)
+
+Ajouter pt.json (portugais) (mêmes clés)
+
+Ajouter le locale pt dans nuxt.config.js :
+
+{ code: 'pt', iso: 'pt-PT', name: 'Português', file: 'pt.json' }
+
+Mettre à jour le switch langue (FR/EN/PT) dans le layout.
+
+7) Priorité technique prochaine session (auth avant CRUD)
+
+Objectif : avoir des users en DB et un login fonctionnel.
+
+À faire :
+
+Créer les pages minimales (pour supprimer les warnings router) :
+
+pages/login.vue
+
+pages/register.vue
+
+pages/characters/index.vue
+
+pages/scenes/index.vue
+
+pages/timeline/index.vue
+
+pages/glossary/index.vue
+
+Côté API (Nuxt server routes) — dépend du schéma existant :
+
+POST /api/auth/register
+
+POST /api/auth/login
+
+POST /api/auth/logout
+
+GET /api/auth/me
+
+Hash password + session/JWT cookie (aligné sur ton modèle cible)
+
+DB : récupérer les structures exactes :
+
+SHOW CREATE TABLE users;
+
+SHOW CREATE TABLE user_sessions;
+
+SHOW CREATE TABLE user_roles;
+
+(et tout ce qui touche auth)
+
+8) Notes Git / Vercel
+
+GitHub “nouveau repo app” = OK.
+
+Sur Vercel, vérifier :
+
+Root Directory = . (ou le dossier exact si mono-repo).
+
+Build command standard Nuxt (nuxi build) et output auto.

@@ -125,7 +125,7 @@ i18n: {
     EMAIL_FROM_NAME: process.env.EMAIL_FROM_NAME || 'Les derniers léopards',
     EMAIL_TO: process.env.EMAIL_TO || '',
 
-    APP_URL: process.env.APP_URL || 'http://localhost:3010',
+    APP_URL: process.env.APP_URL || 'http://localhost:3009',
 
     // Client-exposed
     public: {

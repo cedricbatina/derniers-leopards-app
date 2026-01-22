@@ -226,5 +226,58 @@
       "offline": "Hors-ligne",
       "search": "Recherche"
     }
+  },
+      "registerSuccess": {
+      "title": "Compte créé",
+      "subtitle": "Un email de confirmation a été envoyé.",
+      "next": "Étape suivante",
+      "instructions": "Ouvre ton email et clique sur le lien de confirmation.",
+      "tip": "Pense à vérifier les spams si tu ne vois rien.",
+      "toLogin": "Aller à la connexion",
+      "resend": {
+        "loading": "Envoi…",
+        "cta": "Renvoyer l’email de confirmation",
+        "sent": "Email envoyé. Vérifie ta boîte de réception.",
+        "noEmail": "Email manquant (reviens à la page inscription)."
+      }
+    },
+    "verify": {
+      "title": "Confirmation email",
+      "subtitle": "Nous vérifions ton lien…",
+      "loadingTitle": "Validation en cours",
+      "loadingBody": "Merci de patienter quelques secondes.",
+      "errorTitle": "Lien invalide ou expiré",
+      "missingToken": "Token manquant.",
+      "note": "Si rien ne se passe, reviens à la connexion.",
+      "doneTitle": "Terminé",
+      "doneBody": "Redirection…",
+      "toLogin": "Aller à la connexion",
+      "resend": {
+        "help": "Si le lien a expiré, renvoie un nouvel email de confirmation.",
+        "loading": "Envoi…",
+        "cta": "Renvoyer l’email de confirmation",
+        "sent": "Email envoyé. Vérifie ta boîte de réception."
+      }
+    },
+    "verifySuccess": {
+      "title": "Email confirmé",
+      "subtitle": "Ton compte est maintenant activé. Tu peux te connecter.",
+      "toLogin": "Se connecter"
+    },
+      "emails": {
+    "common": {
+      "greeting": "Bonjour,",
+      "ignore": "Si vous n’êtes pas à l’origine de cette demande, vous pouvez ignorer ce message.",
+      "closing": "Cordialement,",
+      "signature": "Les derniers léopards"
+    },
+    "verify": {
+      "subject": "Veuillez confirmer votre adresse e-mail — Les derniers léopards",
+      "intro": "Veuillez confirmer votre adresse e-mail en cliquant sur le lien ci-dessous :"
+    },
+    "reset": {
+      "subject": "Réinitialisation de votre mot de passe — Les derniers léopards",
+      "intro": "Pour réinitialiser votre mot de passe, cliquez sur le lien ci-dessous :"
+    }
   }
 }
