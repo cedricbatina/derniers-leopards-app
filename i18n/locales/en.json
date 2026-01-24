@@ -252,7 +252,7 @@
     "logout": "Sign out",
     "login": "Sign in",
     "register": "Create account",
-    "todayLabel": "Today: {{date}}",
+    "todayLabel": "Today: {date}",
     "status": { "online": "Signed in", "offline": "Signed out" },
     "role": {
       "standard": "Standard account",
