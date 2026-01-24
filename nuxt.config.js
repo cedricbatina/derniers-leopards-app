@@ -1,4 +1,5 @@
 // nuxt.config.js
+import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
    compatibilityDate: '2026-01-20',
   ssr: true,
@@ -7,6 +8,7 @@ export default defineNuxtConfig({
     server: {
       hmr: { port: 24679 },
     },
+     plugins: [tailwindcss()],
   },
   devServer: {
     port: 3009,

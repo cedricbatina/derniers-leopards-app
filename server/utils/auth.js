@@ -56,12 +56,26 @@ export async function verifyRefreshToken(token) {
   return payload
 }
 
+
+// ... le reste inchangé
+
+function cookieShouldBeSecure(event) {
+  // Vercel / reverse proxies
+  const xfProto = event?.node?.req?.headers?.['x-forwarded-proto']
+  const proto = Array.isArray(xfProto) ? xfProto[0] : xfProto
+  if (proto) return String(proto).toLowerCase().includes('https')
+
+  // Fallback node
+  const encrypted = event?.node?.req?.socket?.encrypted
+  return !!encrypted
+}
+
 export function setAuthCookies(event, { accessToken, refreshToken }) {
-  const isProd = process.env.NODE_ENV === 'production'
+  const secure = cookieShouldBeSecure(event)
 
   setCookie(event, 'access_token', accessToken, {
     httpOnly: true,
-    secure: isProd,
+    secure,
     sameSite: 'lax',
     path: '/',
     maxAge: 60 * 15,
@@ -69,18 +83,33 @@ export function setAuthCookies(event, { accessToken, refreshToken }) {
 
   setCookie(event, 'refresh_token', refreshToken, {
     httpOnly: true,
-    secure: isProd,
+    secure,
     sameSite: 'lax',
-    path: '/api/auth', // restreint
+    path: '/api/auth',
     maxAge: 60 * 60 * 24 * 30,
   })
 }
 
 export function clearAuthCookies(event) {
-  const isProd = process.env.NODE_ENV === 'production'
-  setCookie(event, 'access_token', '', { httpOnly: true, secure: isProd, sameSite: 'lax', path: '/', maxAge: 0 })
-  setCookie(event, 'refresh_token', '', { httpOnly: true, secure: isProd, sameSite: 'lax', path: '/api/auth', maxAge: 0 })
+  const secure = cookieShouldBeSecure(event)
+
+  setCookie(event, 'access_token', '', {
+    httpOnly: true,
+    secure,
+    sameSite: 'lax',
+    path: '/',
+    maxAge: 0,
+  })
+
+  setCookie(event, 'refresh_token', '', {
+    httpOnly: true,
+    secure,
+    sameSite: 'lax',
+    path: '/api/auth',
+    maxAge: 0,
+  })
 }
+
 
 export function readAccessCookie(event) {
   return getCookie(event, 'access_token')

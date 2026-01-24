@@ -243,5 +243,23 @@
       "subject": "Password reset — Les derniers léopards",
       "intro": "To reset your password, click the link below:"
     }
+  },
+  "userInline": {
+    "guestLabel": "Guest",
+    "guestHelper": "Sign in to access your workspace.",
+    "fallbackUser": "User",
+    "dashboard": "Dashboard",
+    "logout": "Sign out",
+    "login": "Sign in",
+    "register": "Create account",
+    "todayLabel": "Today: {{date}}",
+    "status": { "online": "Signed in", "offline": "Signed out" },
+    "role": {
+      "standard": "Standard account",
+      "admin": "Administrator",
+      "editor": "Editor",
+      "moderator": "Moderator",
+      "generic": "User"
+    }
   }
 }

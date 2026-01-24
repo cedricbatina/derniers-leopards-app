@@ -279,5 +279,62 @@
       "subject": "Réinitialisation de votre mot de passe — Les derniers léopards",
       "intro": "Pour réinitialiser votre mot de passe, cliquez sur le lien ci-dessous :"
     }
+  },
+  
+  "userInline": {
+    "guestLabel": "Invité",
+    "guestHelper": "Connectez-vous pour accéder à votre espace.",
+    "fallbackUser": "Utilisateur",
+    "dashboard": "Tableau de bord",
+    "logout": "Déconnexion",
+    "login": "Connexion",
+    "register": "Créer un compte",
+    "todayLabel": "Aujourd’hui : {date}",
+    "status": { "online": "Connecté", "offline": "Hors ligne" },
+    "role": {
+      "standard": "Compte standard",
+      "admin": "Administrateur",
+      "editor": "Éditeur",
+      "moderator": "Modérateur",
+      "generic": "Utilisateur"
+    }
+  },
+   "landing": {
+    "hero": {
+      "kicker": "Plateforme de création",
+      "title": "Centralisez vos univers : livres, sagas, jeux, cartes, scripts",
+      "subtitle": "Construisez une bible de production, structurez vos scènes, maîtrisez vos personnages et partagez votre travail de façon professionnelle.",
+      "ctaPrimary": "Créer un compte",
+      "ctaSecondary": "Connexion",
+      "ctaAuthed": "Accéder à l’espace de travail"
+    },
+    "tiles": {
+      "authors": { "label": "Auteurs", "title": "Écriture", "desc": "Personnages, scènes, chronologies, notes." },
+      "editors": { "label": "Éditeurs", "title": "Production", "desc": "Suivi, cohérence, révisions, livrables." },
+      "studios": { "label": "Studios", "title": "Adaptations", "desc": "Série, film, jeu : bible + pipeline." },
+      "creators": { "label": "Créateurs", "title": "Arts & média", "desc": "Poésie, musique, lore, cartes." }
+    },
+    "value": {
+      "one": { "badge": "Structuration", "title": "Une base de connaissances claire", "desc": "Organisez vos contenus sans perdre la cohérence." },
+      "two": { "badge": "Chronologie", "title": "Pilotez le temps et les arcs narratifs", "desc": "Gérez événements, périodes, versions et révisions." },
+      "three": { "badge": "Accès", "title": "Accès sécurisé et rôles", "desc": "Travail individuel ou équipe (évolutif)." }
+    },
+    "how": {
+      "badge": "Workflow",
+      "title": "Comment ça fonctionne",
+      "subtitle": "Une approche simple, extensible, prête pour la production.",
+      "steps": {
+        "one": { "kicker": "Étape 1", "title": "Créez un projet", "desc": "Livre, saga, jeu, carte, script." },
+        "two": { "kicker": "Étape 2", "title": "Structurez", "desc": "Personnages, scènes, chronologie, glossaire." },
+        "three": { "kicker": "Étape 3", "title": "Publiez / partagez", "desc": "Export, collaboration, adaptation (progressif)." }
+      }
+    },
+    "bottomCta": {
+      "primary": "Commencer",
+      "secondary": "Se connecter",
+      "authed": "Aller au workspace"
+    }
   }
+
+
 }

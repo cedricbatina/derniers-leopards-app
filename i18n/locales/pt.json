@@ -242,5 +242,23 @@
       "subject": "Redefinição da sua palavra-passe — Les derniers léopards",
       "intro": "Para redefinir a sua palavra-passe, clique na ligação abaixo:"
     }
+  },
+   "userInline": {
+    "guestLabel": "Visitante",
+    "guestHelper": "Inicie sessão para aceder ao seu espaço.",
+    "fallbackUser": "Utilizador",
+    "dashboard": "Painel",
+    "logout": "Terminar sessão",
+    "login": "Iniciar sessão",
+    "register": "Criar conta",
+    "todayLabel": "Hoje: {{date}}",
+    "status": { "online": "Ligado", "offline": "Desligado" },
+    "role": {
+      "standard": "Conta padrão",
+      "admin": "Administrador",
+      "editor": "Editor",
+      "moderator": "Moderador",
+      "generic": "Utilizador"
+    }
   }
 }
