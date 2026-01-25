@@ -251,7 +251,7 @@
     "logout": "Terminar sessão",
     "login": "Iniciar sessão",
     "register": "Criar conta",
-    "todayLabel": "Hoje: {{date}}",
+    "todayLabel": "Hoje: {date}",
     "status": { "online": "Ligado", "offline": "Desligado" },
     "role": {
       "standard": "Conta padrão",
