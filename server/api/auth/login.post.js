@@ -1,35 +1,53 @@
-import { defineEventHandler, readBody, createError } from 'h3'
+// server/api/auth/login.post.js
+import { defineEventHandler, readBody, createError, getHeader } from 'h3'
 import { dbQuery } from '../../utils/db.js'
-import {
-  normalizeEmail, verifyPassword,
-  signAccessToken, signRefreshToken,
-  setAuthCookies, createSession
-} from '../../utils/auth.js'
+import { normalizeEmail, setAuthCookies, createSession } from '../../utils/auth.js'
+import { verifyPassword } from '../../utils/password.js'
+import { signAccessToken, signRefreshToken } from '../../utils/jwt.js'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  const email = normalizeEmail(body?.email)
+  const emailNorm = normalizeEmail(body?.email)
   const password = String(body?.password || '')
 
-  const users = await dbQuery(
-    `SELECT id, email_normalized, password_hash, status, role
-     FROM users WHERE email_normalized=? LIMIT 1`,
-    [email]
+  if (!emailNorm || !password) {
+    throw createError({ statusCode: 400, message: 'Email ou mot de passe invalide.' })
+  }
+
+  const rows = await dbQuery(
+    `SELECT id, email, password_hash, status, role, email_verified_at
+     FROM users
+     WHERE email_normalized = ?
+       AND deleted_at IS NULL
+     LIMIT 1`,
+    [emailNorm]
   )
-  const u = users[0]
-  if (!u) throw createError({ statusCode: 401, statusMessage: 'Identifiants invalides.' })
-  if (u.status !== 'active') throw createError({ statusCode: 403, statusMessage: 'Compte non activé.' })
+
+  const u = rows[0]
+  if (!u) throw createError({ statusCode: 401, message: 'Identifiants invalides.' })
+
+  // Flux pro : on exige active ET email vérifié (sinon incohérences)
+  if (u.status !== 'active' || !u.email_verified_at) {
+    throw createError({ statusCode: 403, message: 'Compte non activé.' })
+  }
 
   const ok = await verifyPassword(u.password_hash, password)
-  if (!ok) throw createError({ statusCode: 401, statusMessage: 'Identifiants invalides.' })
+  if (!ok) throw createError({ statusCode: 401, message: 'Identifiants invalides.' })
 
-  const accessToken = await signAccessToken({ sub: String(u.id), role: u.role })
-  const refreshToken = await signRefreshToken({ sub: String(u.id) })
+  const userAgent = getHeader(event, 'user-agent') || null
+  const ip =
+    (getHeader(event, 'x-forwarded-for') || '').split(',')[0].trim() ||
+    event.node.req.socket?.remoteAddress ||
+    null
 
-  await createSession(u.id, refreshToken)
-  await dbQuery(`UPDATE users SET last_login_at=NOW() WHERE id=?`, [u.id])
+  const refreshToken = await signRefreshToken({ userId: u.id })
+  await createSession({ userId: u.id, refreshToken, userAgent, ip })
+
+  const accessToken = await signAccessToken({ userId: u.id, role: u.role })
 
   setAuthCookies(event, { accessToken, refreshToken })
+
+  await dbQuery(`UPDATE users SET last_login_at=NOW(), updated_at=NOW() WHERE id=?`, [u.id])
 
   return { ok: true }
 })

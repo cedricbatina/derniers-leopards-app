@@ -7,7 +7,7 @@
             {{ tr('auth.login.title', 'Connexion') }}
           </h1>
           <p class="text-sm text-muted">
-            {{ tr('auth.login.subtitle', 'Connecte-toi pour accéder au tableau de bord.') }}
+            {{ tr('auth.login.subtitle', 'Connectez-vous pour accéder à votre espace de travail.') }}
           </p>
         </div>
 
@@ -99,13 +99,13 @@
     </div>
 
     <div class="text-xs text-muted text-center">
-      {{ tr('auth.login.note', 'Astuce : ton navigateur doit accepter les cookies pour la session.') }}
+      {{ tr('auth.login.note', 'Astuce : votre navigateur doit accepter les cookies pour la session.') }}
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter, useI18n, useLocalePath } from '#imports'
 import { useAuthStore } from '~/stores/auth.store'
 
@@ -113,8 +113,6 @@ const auth = useAuthStore()
 const route = useRoute()
 const router = useRouter()
 const { t, te } = useI18n()
-
-
 const localePath = useLocalePath()
 
 const email = ref('')
@@ -130,25 +128,35 @@ const resendMsg = ref('')
 function tr(key, fallback) {
   return te(key) ? t(key) : fallback
 }
+
+// Redirect: query ?redirect=/... (refuse //) sinon /workspace
 const redirectTo = computed(() => {
   const q = route.query?.redirect
-  if (typeof q === 'string' && q.startsWith('/')) return q
-  return localePath('/characters')
+  if (typeof q === 'string' && q.startsWith('/') && !q.startsWith('//')) return q
+  return localePath('/workspace')
 })
 
 function normalizeError(err) {
-  // Nuxt $fetch: err.data / err.response?._data peuvent exister selon version
   const data = err?.data || err?.response?._data || null
   const status = err?.statusCode || err?.response?.status || data?.statusCode
-
   const msg =
     data?.statusMessage ||
     data?.message ||
     err?.message ||
     tr('auth.errors.generic', 'Erreur inattendue.')
-
   return { status, msg, data }
 }
+
+// Si déjà connecté et on arrive sur /login => on renvoie vers workspace
+onMounted(async () => {
+  if (!auth.user) {
+    // au cas où le plugin auth-init n’a pas encore hydraté
+    await auth.fetchMe().catch(() => {})
+  }
+  if (auth.user?.id) {
+    await router.replace(redirectTo.value)
+  }
+})
 
 async function onSubmit() {
   errorMsg.value = ''
@@ -162,7 +170,6 @@ async function onSubmit() {
   } catch (err) {
     const { status, msg, data } = normalizeError(err)
 
-    // cas typique: email non vérifié (selon votre backend, ça peut être 403/409)
     const raw = (data?.code || data?.error || '').toString().toLowerCase()
     const maybeUnverified =
       status === 403 ||
@@ -183,14 +190,12 @@ async function resendVerify() {
   resendMsg.value = ''
   resendLoading.value = true
   try {
-    // Si vous avez un endpoint dédié, gardez-le.
-    // Sinon, remplacez par celui qui existe (ex: /api/auth/resend-verify).
     await $fetch('/api/auth/resend-verify', {
       method: 'POST',
       body: { email: email.value },
       credentials: 'include',
     })
-    resendMsg.value = tr('auth.login.resend.sent', 'Email envoyé. Vérifie ta boîte de réception.')
+    resendMsg.value = tr('auth.login.resend.sent', 'Email envoyé. Veuillez vérifier votre boîte de réception.')
   } catch (err) {
     const { msg } = normalizeError(err)
     resendMsg.value = msg

@@ -1,73 +1,19 @@
-import crypto from 'crypto'
-import argon2 from 'argon2'
-import { SignJWT, jwtVerify } from 'jose'
+// server/utils/auth.js
 import { setCookie, getCookie } from 'h3'
 import { dbQuery } from './db.js'
-
-const enc = new TextEncoder()
+import { sha256Hex } from './tokens.js'
 
 export function normalizeEmail(email) {
-  return String(email || '').trim().toLowerCase()
+  const e = String(email || '').trim().toLowerCase()
+  if (!e || !e.includes('@')) return null
+  return e
 }
-
-export async function hashPassword(password) {
-  return argon2.hash(password, { type: argon2.argon2id })
-}
-
-export async function verifyPassword(hash, password) {
-  return argon2.verify(hash, password)
-}
-
-export function sha256Hex(input) {
-  return crypto.createHash('sha256').update(input).digest('hex')
-}
-
-export function randomTokenHex(bytes = 32) {
-  return crypto.randomBytes(bytes).toString('hex')
-}
-
-export async function signAccessToken(payload) {
-  const config = useRuntimeConfig()
-  return new SignJWT(payload)
-    .setProtectedHeader({ alg: 'HS256' })
-    .setIssuedAt()
-    .setExpirationTime('15m')
-    .sign(enc.encode(config.JWT_ACCESS_SECRET))
-}
-
-export async function signRefreshToken(payload) {
-  const config = useRuntimeConfig()
-  return new SignJWT(payload)
-    .setProtectedHeader({ alg: 'HS256' })
-    .setIssuedAt()
-    .setExpirationTime('30d')
-    .sign(enc.encode(config.JWT_REFRESH_SECRET))
-}
-
-export async function verifyAccessToken(token) {
-  const config = useRuntimeConfig()
-  const { payload } = await jwtVerify(token, enc.encode(config.JWT_ACCESS_SECRET))
-  return payload
-}
-
-export async function verifyRefreshToken(token) {
-  const config = useRuntimeConfig()
-  const { payload } = await jwtVerify(token, enc.encode(config.JWT_REFRESH_SECRET))
-  return payload
-}
-
-
-// ... le reste inchangé
 
 function cookieShouldBeSecure(event) {
-  // Vercel / reverse proxies
-  const xfProto = event?.node?.req?.headers?.['x-forwarded-proto']
-  const proto = Array.isArray(xfProto) ? xfProto[0] : xfProto
-  if (proto) return String(proto).toLowerCase().includes('https')
-
-  // Fallback node
-  const encrypted = event?.node?.req?.socket?.encrypted
-  return !!encrypted
+  const proto =
+    event?.node?.req?.headers?.['x-forwarded-proto'] ||
+    (event?.node?.req?.socket?.encrypted ? 'https' : 'http')
+  return String(proto).includes('https')
 }
 
 export function setAuthCookies(event, { accessToken, refreshToken }) {
@@ -78,62 +24,52 @@ export function setAuthCookies(event, { accessToken, refreshToken }) {
     secure,
     sameSite: 'lax',
     path: '/',
-    maxAge: 60 * 15,
+    maxAge: 60 * 15, // 15 min
   })
 
   setCookie(event, 'refresh_token', refreshToken, {
     httpOnly: true,
     secure,
     sameSite: 'lax',
-    path: '/api/auth',
-    maxAge: 60 * 60 * 24 * 30,
+    path: '/',
+    maxAge: 60 * 60 * 24 * 30, // 30 jours
   })
 }
 
 export function clearAuthCookies(event) {
   const secure = cookieShouldBeSecure(event)
-
-  setCookie(event, 'access_token', '', {
-    httpOnly: true,
-    secure,
-    sameSite: 'lax',
-    path: '/',
-    maxAge: 0,
-  })
-
-  setCookie(event, 'refresh_token', '', {
-    httpOnly: true,
-    secure,
-    sameSite: 'lax',
-    path: '/api/auth',
-    maxAge: 0,
-  })
+  setCookie(event, 'access_token', '', { httpOnly: true, secure, sameSite: 'lax', path: '/', maxAge: 0 })
+  setCookie(event, 'refresh_token', '', { httpOnly: true, secure, sameSite: 'lax', path: '/', maxAge: 0 })
 }
 
-
 export function readAccessCookie(event) {
-  return getCookie(event, 'access_token')
+  return getCookie(event, 'access_token') || null
 }
 
 export function readRefreshCookie(event) {
-  return getCookie(event, 'refresh_token')
+  return getCookie(event, 'refresh_token') || null
 }
 
-// DB helpers
 export async function findUserByEmail(emailNorm) {
   const rows = await dbQuery(
-    `SELECT id, email, email_normalized, password_hash, status, role, email_verified_at
-     FROM users WHERE email_normalized=? LIMIT 1`,
+    `SELECT id, email, password_hash, status, role, email_verified_at
+     FROM users
+     WHERE email_normalized = ?
+       AND deleted_at IS NULL
+     LIMIT 1`,
     [emailNorm]
   )
   return rows[0] || null
 }
 
-export async function createSession(userId, refreshToken) {
-  const refreshHash = sha256Hex(refreshToken)
-  await dbQuery(
-    `INSERT INTO user_sessions (user_id, refresh_token_hash, expires_at)
-     VALUES (?, ?, DATE_ADD(NOW(), INTERVAL 30 DAY))`,
-    [userId, refreshHash]
+export async function createSession({ userId, refreshToken, userAgent, ip }) {
+  const tokenHash = sha256Hex(refreshToken)
+
+  const res = await dbQuery(
+    `INSERT INTO user_sessions (user_id, refresh_token_hash, user_agent, ip, expires_at)
+     VALUES (?, ?, ?, ?, DATE_ADD(NOW(), INTERVAL 30 DAY))`,
+    [userId, tokenHash, userAgent || null, ip || null]
   )
+
+  return res?.insertId || null
 }
