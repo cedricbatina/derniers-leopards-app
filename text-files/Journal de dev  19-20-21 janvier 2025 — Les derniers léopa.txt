@@ -70,3 +70,273 @@ Remplacer @apply container-app ... par les utilities réelles directement dans .
 Résultat
 
 La page s’affiche correctement (fin du crash CSS) et on peut reprendre l’UI.
+
+
+
+🧭 Journal de développement — Auth & User System
+
+Projet : derniers-leopards-app
+Période : ~3 jours
+
+1) Stabilisation de l’authentification (fondations)
+Stack
+
+Nuxt 4 (SSR, Nitro preset Vercel)
+
+Auth par JWT :
+
+access_token (court, cookie HttpOnly)
+
+refresh_token (long, cookie HttpOnly)
+
+Sessions persistées en DB (user_sessions)
+
+Emails transactionnels (Brevo / SMTP à finaliser)
+
+Tables clés
+
+users
+
+roles
+
+user_roles (RBAC multi-rôles)
+
+user_sessions
+
+auth_tokens (verify_email, reset_password)
+
+2) Refonte complète de la table users
+Nouveaux champs ajoutés (base “pro” dès le départ)
+
+account_type : individual | pro
+
+Identité :
+
+first_name, last_name
+
+organization_name
+
+display_name
+
+username
+
+Profil :
+
+profession
+
+avatar_url
+
+bio
+
+website
+
+Préférences :
+
+locale
+
+timezone
+
+Sécurité / conformité :
+
+terms_accepted_at
+
+marketing_opt_in
+
+Statut :
+
+status (pending, active, suspended, deleted)
+
+email_verified_at
+
+👉 Objectif : éviter toute migration lourde plus tard, supporter comptes particuliers & pros dès maintenant.
+
+3) RBAC propre (abandon du mono-rôle)
+Décision
+
+Source de vérité = user_roles
+
+users.role conservé uniquement comme fallback legacy
+
+Tables
+
+roles : user, editor, admin
+
+user_roles : N–N (assignation propre, extensible)
+
+4) Flux Auth complets et verrouillés
+Register
+
+POST /api/auth/register
+
+Création utilisateur en pending
+
+Insertion profil complet (si fourni)
+
+Assignation du rôle user via user_roles
+
+Génération token verify_email
+
+Envoi email après COMMIT
+
+Verify email
+
+GET /api/auth/verify-email?token=…
+
+Marque :
+
+auth_tokens.used_at
+
+users.email_verified_at
+
+users.status = active
+
+Redirection front :
+
+/verify-email → /verify-email/success
+
+Login
+
+Refus si :
+
+status ≠ active
+
+email non vérifié
+
+Création session persistée (user_sessions)
+
+Rotation propre refresh token
+
+Cookies HttpOnly posés
+
+Refresh
+
+Vérification session valide
+
+Rotation refresh token
+
+Révocation ancienne session
+
+Nouveau access token
+
+Logout
+
+Suppression cookies
+
+Pas de dépendance côté front
+
+Forgot / Reset password
+
+Token reset_password stocké en DB (hashé)
+
+Révocation des sessions actives après reset
+
+5) Nettoyage des utilitaires (server/utils)
+Clarification stricte des responsabilités
+
+utils/jwt.js
+→ signAccessToken, verifyAccessToken, signRefreshToken, verifyRefreshToken
+
+utils/password.js
+→ hashPassword, verifyPassword
+
+utils/tokens.js
+→ randomTokenHex, sha256Hex, safeEqualHex
+
+utils/auth.js
+→ cookies, helpers DB (createSession, findUserByEmail, etc.)
+
+👉 Suppression des imports ambigus (verifyAccessToken / sha256Hex mal placés).
+
+6) /api/auth/me = source de vérité front
+Données retournées
+
+Identité complète
+
+Profil enrichi
+
+roles (array)
+
+role primaire déduit (admin > editor > user)
+
+account_type
+
+👉 Le front ne devine rien, il consomme.
+
+7) Store Pinia (auth.store.js)
+
+fetchMe() au démarrage navigateur
+
+isAuthed dérivé de user.id
+
+Getters :
+
+roles
+
+isAdmin
+
+isEditor
+
+Actions :
+
+login, logout, register
+
+forgotPassword, resetPassword
+
+SSR prêt (headers injectables plus tard).
+
+8) Refonte du composant UserInlineCard
+Règles finales (validées)
+Titre principal
+
+Compte Pro → organization_name
+
+Particulier → first_name + last_name
+
+Fallback → display_name → username → email
+
+Sous-titre
+
+Pro → display_name (ou email)
+
+Individual → display_name / username
+
+UI
+
+Avatar (image ou initiales)
+
+Badges :
+
+rôle (admin / editor / user)
+
+type de compte (Pro / Particulier)
+
+Aucun champ “brut” affiché (tout passe par i18n)
+
+9) Décisions UX / Produit
+
+Les infos profession / bio / site iront dans une page profil dédiée
+
+La home deviendra une landing page générique (multi-livres, auteurs, créateurs)
+
+Le livre Les derniers léopards n’est plus codé en dur
+
+10) État actuel
+✔️ Ce qui est stable
+
+Auth complète et cohérente
+
+DB prête pour montée en charge
+
+RBAC propre
+
+UI auth lisible et pro
+
+⏭️ Prochaines étapes (nouveau chat)
+
+Page Profil utilisateur (lecture / édition)
+
+Page Account settings (email, password, sessions)
+
+Landing page publique
+
+ACL fine sur contenus (livres, scènes, etc.)

@@ -1,5 +1,5 @@
-import { dbQuery } from './db.js'
-import { getProjectByOwnerSlug } from './projects.js'
+import { dbQuery } from '../../../../utils/db.js'
+import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
 
 function toSlug(input) {
   return String(input || '')
@@ -54,12 +54,3 @@ export default defineEventHandler(async (event) => {
 
   return { character: rows[0] || null }
 })
-import argon2 from 'argon2'
-
-export async function hashPassword(password) {
-  return argon2.hash(password, { type: argon2.argon2id })
-}
-
-export async function verifyPassword(hash, password) {
-  return argon2.verify(hash, password)
-}

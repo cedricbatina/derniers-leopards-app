@@ -3,32 +3,28 @@ import { defineStore } from 'pinia'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
-    user: null,       // objet retourné par /api/auth/me
+    user: null, // { id, email, ... , roles: [] }
     isLoading: false,
   }),
 
   getters: {
-    isAuthed: (s) => !!s.user,
+    // robuste: dépend d'un identifiant réel
+    isAuthed: (s) => !!s.user?.id,
 
-    // Supporte user.roles (array) OU user.role (string)
     roles: (s) => {
       const u = s.user
       if (!u) return []
       if (Array.isArray(u.roles)) return u.roles
-      if (u.role) return [u.role]
+      if (u.role) return [u.role] // fallback legacy
       return []
     },
 
-    isAdmin: (s) => {
-      const u = s.user
-      const roles = Array.isArray(u?.roles) ? u.roles : (u?.role ? [u.role] : [])
-      return roles.includes('admin')
+    isAdmin() {
+      return this.roles.includes('admin')
     },
 
-    isEditor: (s) => {
-      const u = s.user
-      const roles = Array.isArray(u?.roles) ? u.roles : (u?.role ? [u.role] : [])
-      return roles.includes('editor')
+    isEditor() {
+      return this.roles.includes('editor')
     },
   },
 
@@ -38,10 +34,10 @@ export const useAuthStore = defineStore('auth', {
       try {
         const res = await $fetch('/api/auth/me', {
           credentials: 'include',
-          ...options, // permet headers SSR
+          ...options, // utile SSR: headers/cookies
         })
-        this.user = res?.user || res || null
-      } catch (e) {
+        this.user = res?.user ?? null
+      } catch {
         this.user = null
       } finally {
         this.isLoading = false

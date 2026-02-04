@@ -299,42 +299,70 @@
       "generic": "Utilisateur"
     }
   },
-   "landing": {
-    "hero": {
-      "kicker": "Plateforme de création",
-      "title": "Centralisez vos univers : livres, sagas, jeux, cartes, scripts",
-      "subtitle": "Construisez une bible de production, structurez vos scènes, maîtrisez vos personnages et partagez votre travail de façon professionnelle.",
-      "ctaPrimary": "Créer un compte",
-      "ctaSecondary": "Connexion",
-      "ctaAuthed": "Accéder à l’espace de travail"
-    },
-    "tiles": {
-      "authors": { "label": "Auteurs", "title": "Écriture", "desc": "Personnages, scènes, chronologies, notes." },
-      "editors": { "label": "Éditeurs", "title": "Production", "desc": "Suivi, cohérence, révisions, livrables." },
-      "studios": { "label": "Studios", "title": "Adaptations", "desc": "Série, film, jeu : bible + pipeline." },
-      "creators": { "label": "Créateurs", "title": "Arts & média", "desc": "Poésie, musique, lore, cartes." }
-    },
-    "value": {
-      "one": { "badge": "Structuration", "title": "Une base de connaissances claire", "desc": "Organisez vos contenus sans perdre la cohérence." },
-      "two": { "badge": "Chronologie", "title": "Pilotez le temps et les arcs narratifs", "desc": "Gérez événements, périodes, versions et révisions." },
-      "three": { "badge": "Accès", "title": "Accès sécurisé et rôles", "desc": "Travail individuel ou équipe (évolutif)." }
-    },
-    "how": {
-      "badge": "Workflow",
-      "title": "Comment ça fonctionne",
-      "subtitle": "Une approche simple, extensible, prête pour la production.",
-      "steps": {
-        "one": { "kicker": "Étape 1", "title": "Créez un projet", "desc": "Livre, saga, jeu, carte, script." },
-        "two": { "kicker": "Étape 2", "title": "Structurez", "desc": "Personnages, scènes, chronologie, glossaire." },
-        "three": { "kicker": "Étape 3", "title": "Publiez / partagez", "desc": "Export, collaboration, adaptation (progressif)." }
-      }
-    },
-    "bottomCta": {
-      "primary": "Commencer",
-      "secondary": "Se connecter",
-      "authed": "Aller au workspace"
+  
+   "seo": {
+    "home": {
+      "title": "{app} — Atelier d’écriture & studio de création",
+      "description": "Sonekeno est un espace culturel pour construire des univers, écrire des romans et séries, structurer scènes/personnages, et préparer des œuvres transmédia."
     }
   }
+,
+"landing": {
+  "hero": {
+    "kicker": "Plateforme de création",
+    "title": "Centralisez vos univers : livres, sagas, jeux, cartes, scripts",
+    "subtitle": "Construisez une bible de production, structurez vos scènes, maîtrisez vos personnages et partagez votre travail de façon professionnelle.",
+    "ctaPrimary": "Créer un compte",
+    "ctaSecondary": "Connexion",
+    "ctaAuthed": "Accéder à l’espace de travail",
+    "ctaExplore": "Explorer",
+    "trustLine": "SSR • i18n • comptes pro/particuliers • sessions sécurisées"
+  },
+
+  "micro": {
+    "kicker": "Espace culturel",
+    "title": "Du manuscrit à la franchise",
+    "desc": "Organise ton univers, puis décline en roman, série, jeu, film."
+  },
+
+  "tiles": {
+    "authors": { "label": "Auteurs", "title": "Écriture", "desc": "Personnages, scènes, chronologies, notes." },
+    "editors": { "label": "Éditeurs", "title": "Production", "desc": "Suivi, cohérence, révisions, livrables." },
+    "studios": { "label": "Studios", "title": "Adaptations", "desc": "Série, film, jeu : bible + pipeline." },
+    "creators": { "label": "Créateurs", "title": "Arts & média", "desc": "Poésie, musique, lore, cartes." }
+  },
+
+  "value": {
+    "one": { "badge": "Structuration", "title": "Une base de connaissances claire", "desc": "Organisez vos contenus sans perdre la cohérence." },
+    "two": { "badge": "Chronologie", "title": "Pilotez le temps et les arcs narratifs", "desc": "Gérez événements, périodes, versions et révisions." },
+    "three": { "badge": "Accès", "title": "Accès sécurisé et rôles", "desc": "Travail individuel ou équipe (évolutif)." }
+  },
+
+  "how": {
+    "badge": "Workflow",
+    "title": "Comment ça fonctionne",
+    "subtitle": "Une approche simple, extensible, prête pour la production.",
+    "steps": {
+      "one": { "kicker": "Étape 1", "title": "Créez un projet", "desc": "Livre, saga, jeu, carte, script." },
+      "two": { "kicker": "Étape 2", "title": "Structurez", "desc": "Personnages, scènes, chronologie, glossaire." },
+      "three": { "kicker": "Étape 3", "title": "Publiez / partagez", "desc": "Export, collaboration, adaptation (progressif)." }
+    }
+  },
+
+  "bottomCta": {
+    "primary": "Commencer",
+    "secondary": "Se connecter",
+    "authed": "Aller au workspace",
+    "features": "Fonctionnalités"
+  },
+
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": { "q": "Sonekeno, c’est pour qui ?", "a": "Auteurs, studios, éditeurs et créateurs qui veulent structurer et produire des œuvres." },
+    "q2": { "q": "Est-ce que je peux gérer plusieurs projets ?", "a": "Oui. Chaque univers vit dans un projet séparé (scènes, personnages, chronologie, glossaire…)."},
+    "q3": { "q": "Et si je veux publier ?", "a": "Tu pourras rendre un projet public plus tard via Explore, sans mélanger ton travail privé." }
+  }
+}
 
 
 }

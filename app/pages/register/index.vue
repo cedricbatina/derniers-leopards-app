@@ -23,6 +23,133 @@
         </div>
 
         <form class="space-y-3" @submit.prevent="onSubmit">
+          <!-- Type de compte -->
+          <div class="space-y-1">
+            <label class="text-sm font-semibold">
+              {{ tr('auth.register.accountType', 'Type de compte') }}
+            </label>
+
+            <div class="grid grid-cols-2 gap-2">
+              <button
+                type="button"
+                class="btn btn-sm"
+                :class="accountType === 'individual' ? 'btn-primary' : 'btn-ghost'"
+                @click="accountType = 'individual'"
+              >
+                <Icon name="mdi:account" aria-hidden="true" />
+                <span>{{ tr('auth.register.accountTypeIndividual', 'Particulier') }}</span>
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-sm"
+                :class="accountType === 'pro' ? 'btn-primary' : 'btn-ghost'"
+                @click="accountType = 'pro'"
+              >
+                <Icon name="mdi:office-building" aria-hidden="true" />
+                <span>{{ tr('auth.register.accountTypePro', 'Pro') }}</span>
+              </button>
+            </div>
+
+            <p class="text-xs text-muted">
+              {{
+                accountType === 'pro'
+                  ? tr('auth.register.accountTypeProHelp', 'Pour éditeurs, studios, collectifs, créateurs.')
+                  : tr('auth.register.accountTypeIndividualHelp', 'Pour auteurs, scénaristes, poètes, créateurs indépendants.')
+              }}
+            </p>
+          </div>
+
+          <!-- Champs profil (individual/pro) -->
+          <div v-if="accountType === 'individual'" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="text-sm font-semibold" for="firstName">
+                {{ tr('auth.fields.firstName', 'Prénom') }}
+              </label>
+              <input
+                id="firstName"
+                v-model.trim="firstName"
+                type="text"
+                class="input"
+                autocomplete="given-name"
+                :placeholder="tr('auth.placeholders.firstName', 'Ex: Cédric')"
+              />
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-sm font-semibold" for="lastName">
+                {{ tr('auth.fields.lastName', 'Nom') }}
+              </label>
+              <input
+                id="lastName"
+                v-model.trim="lastName"
+                type="text"
+                class="input"
+                autocomplete="family-name"
+                :placeholder="tr('auth.placeholders.lastName', 'Ex: Batina')"
+              />
+            </div>
+          </div>
+
+          <div v-else class="space-y-1">
+            <label class="text-sm font-semibold" for="organizationName">
+              {{ tr('auth.fields.organizationName', 'Organisation') }}
+              <span class="text-muted">*</span>
+            </label>
+            <input
+              id="organizationName"
+              v-model.trim="organizationName"
+              type="text"
+              class="input"
+              autocomplete="organization"
+              required
+              :placeholder="tr('auth.placeholders.organizationName', 'Ex: Éditions … / Studio …')"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="text-sm font-semibold" for="displayName">
+                {{ tr('auth.fields.displayName', 'Nom public') }}
+              </label>
+              <input
+                id="displayName"
+                v-model.trim="displayName"
+                type="text"
+                class="input"
+                :placeholder="tr('auth.placeholders.displayName', 'Ex: Auteur / Studio / Pseudo')"
+              />
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-sm font-semibold" for="profession">
+                {{ tr('auth.fields.profession', 'Profession') }}
+              </label>
+              <input
+                id="profession"
+                v-model.trim="profession"
+                type="text"
+                class="input"
+                :placeholder="tr('auth.placeholders.profession', 'Ex: écrivain, éditeur, scénariste…')"
+              />
+            </div>
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-sm font-semibold" for="website">
+              {{ tr('auth.fields.website', 'Site web') }}
+            </label>
+            <input
+              id="website"
+              v-model.trim="website"
+              type="url"
+              class="input"
+              autocomplete="url"
+              :placeholder="tr('auth.placeholders.website', 'https://…')"
+            />
+          </div>
+
+          <!-- Email -->
           <div class="space-y-1">
             <label class="text-sm font-semibold" for="email">
               {{ tr('auth.fields.email', 'Email') }}
@@ -38,6 +165,7 @@
             />
           </div>
 
+          <!-- Password -->
           <div class="space-y-1">
             <label class="text-sm font-semibold" for="password">
               {{ tr('auth.fields.password', 'Mot de passe') }}
@@ -64,6 +192,7 @@
             </div>
           </div>
 
+          <!-- Password confirm -->
           <div class="space-y-1">
             <label class="text-sm font-semibold" for="password2">
               {{ tr('auth.fields.passwordConfirm', 'Confirmer le mot de passe') }}
@@ -82,6 +211,21 @@
 
           <div v-if="passwordHint" class="text-xs text-muted">
             {{ passwordHint }}
+          </div>
+
+          <!-- Options (facultatif) -->
+          <div class="flex items-start gap-2 pt-1">
+            <input id="marketing" v-model="marketingOptIn" type="checkbox" class="mt-1" />
+            <label for="marketing" class="text-xs text-muted">
+              {{ tr('auth.register.marketingOptIn', 'Recevoir des mises à jour produit (optionnel).') }}
+            </label>
+          </div>
+
+          <div class="flex items-start gap-2">
+            <input id="terms" v-model="termsAccepted" type="checkbox" class="mt-1" required />
+            <label for="terms" class="text-xs text-muted">
+              {{ tr('auth.register.terms', 'J’accepte les conditions d’utilisation.') }}
+            </label>
           </div>
 
           <button class="btn btn-primary w-full" type="submit" :disabled="loading">
@@ -115,22 +259,30 @@ import { useAuthStore } from '~/stores/auth.store'
 const auth = useAuthStore()
 const router = useRouter()
 const { t, te } = useI18n()
-
-
-
 const localePath = useLocalePath()
+
+function tr(key, fallback) {
+  return te(key) ? t(key) : fallback
+}
+
+const accountType = ref('individual') // 'individual' | 'pro'
+const firstName = ref('')
+const lastName = ref('')
+const organizationName = ref('')
+const displayName = ref('')
+const profession = ref('')
+const website = ref('')
 
 const email = ref('')
 const password = ref('')
 const password2 = ref('')
 const showPassword = ref(false)
 
+const marketingOptIn = ref(false)
+const termsAccepted = ref(false)
+
 const loading = ref(false)
 const errorMsg = ref('')
-
-function tr(key, fallback) {
-  return te(key) ? t(key) : fallback
-}
 
 const passwordHint = computed(() => {
   if (!password.value) return ''
@@ -141,12 +293,7 @@ const passwordHint = computed(() => {
 
 function normalizeError(err) {
   const data = err?.data || err?.response?._data || null
-  const msg =
-    data?.statusMessage ||
-    data?.message ||
-    err?.message ||
-    tr('auth.errors.generic', 'Erreur inattendue.')
-  return msg
+  return data?.statusMessage || data?.message || err?.message || tr('auth.errors.generic', 'Erreur inattendue.')
 }
 
 async function onSubmit() {
@@ -164,10 +311,34 @@ async function onSubmit() {
     errorMsg.value = tr('auth.errors.passwordMismatch', 'Les mots de passe ne correspondent pas.')
     return
   }
+  if (accountType.value === 'pro' && !organizationName.value) {
+    errorMsg.value = tr('auth.errors.organizationRequired', 'Organisation requise pour un compte pro.')
+    return
+  }
+  if (!termsAccepted.value) {
+    errorMsg.value = tr('auth.errors.termsRequired', 'Veuillez accepter les conditions.')
+    return
+  }
 
   loading.value = true
   try {
-    await auth.register({ email: email.value, password: password.value })
+    await auth.register({
+      email: email.value,
+      password: password.value,
+
+      // nouveaux champs vers ton register.post.js
+      accountType: accountType.value,
+      firstName: firstName.value || null,
+      lastName: lastName.value || null,
+      organizationName: organizationName.value || null,
+      displayName: displayName.value || null,
+      profession: profession.value || null,
+      website: website.value || null,
+
+      marketingOptIn: marketingOptIn.value,
+      termsAccepted: termsAccepted.value,
+    })
+
     await router.push({
       path: localePath('/register/success'),
       query: { email: email.value },
