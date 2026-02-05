@@ -3,7 +3,7 @@
     "name": "Sonekeno",
     "tagline": "Espace de création et d’organisation",
     "logoAlt": "Logo de l’application",
- "meta": {
+    "meta": {
       "title": "{name} — Atelier d’écriture",
       "description": "Organisez vos personnages, scènes, chronologie et glossaire au même endroit, pour garder une cohérence solide du début à la fin.",
       "ogTitle": "{name} — Atelier d’écriture",
@@ -24,6 +24,7 @@
     "label": "Langue",
     "fr": "FR",
     "pt": "PT",
+    "es": "ES",
     "en": "EN"
   },
 
@@ -41,6 +42,7 @@
 
   "common": {
     "loading": "Chargement…",
+      "learnMore": "En savoir plus",
     "save": "Enregistrer",
     "cancel": "Annuler",
     "delete": "Supprimer",
@@ -269,14 +271,14 @@
       "greeting": "Bonjour,",
       "ignore": "Si vous n’êtes pas à l’origine de cette demande, vous pouvez ignorer ce message.",
       "closing": "Cordialement,",
-      "signature": "Les derniers léopards"
+      "signature": "Sonekeno"
     },
     "verify": {
-      "subject": "Veuillez confirmer votre adresse e-mail — Les derniers léopards",
+      "subject": "Veuillez confirmer votre adresse e-mail — Sonekeno",
       "intro": "Veuillez confirmer votre adresse e-mail en cliquant sur le lien ci-dessous :"
     },
     "reset": {
-      "subject": "Réinitialisation de votre mot de passe — Les derniers léopards",
+      "subject": "Réinitialisation de votre mot de passe — Sonekeno",
       "intro": "Pour réinitialiser votre mot de passe, cliquez sur le lien ci-dessous :"
     }
   },
@@ -299,14 +301,247 @@
       "generic": "Utilisateur"
     }
   },
+
   
-   "seo": {
+  "seo": {
     "home": {
       "title": "{app} — Atelier d’écriture & studio de création",
       "description": "Sonekeno est un espace culturel pour construire des univers, écrire des romans et séries, structurer scènes/personnages, et préparer des œuvres transmédia."
+    },
+    "explore": {
+      "index": {
+        "title": "Sonekeno — Explorer",
+        "description": "Découvrir les fonctionnalités : écriture, édition, adaptations, structuration, chronologie, accès et workflow."
+      },
+      "workflow": {
+        "title": "Sonekeno — Workflow",
+        "description": "Créer → structurer → publier/partager : une approche simple, extensible, prête production."
+      },
+      "access": {
+        "title": "Sonekeno — Accès & rôles",
+        "description": "Sécuriser un univers narratif : comptes, permissions, rôles et collaboration (évolutif)."
+      },
+      "structuring": {
+        "title": "Sonekeno — Structuration",
+        "description": "Organiser un univers narratif : projet, entités, liens et cohérence (personnages, lieux, objets, règles, notes)."
+      },
+      "timeline": {
+        "title": "Sonekeno — Chronologie",
+        "description": "Piloter le temps d’un univers : événements, périodes, arcs narratifs, versions et révisions."
+      },
+      "characters": {
+        "title": "Sonekeno — Personnages",
+        "description": "Fiches personnages, relations, rôles, narrateurs : stabiliser le canon et la cohérence."
+      },
+      "scenes": {
+        "title": "Sonekeno — Scènes",
+        "description": "Structurer les scènes : objectifs, lieux, temps, liens au canon, versions et révisions."
+      },
+      "glossary": {
+        "title": "Sonekeno — Glossaire",
+        "description": "Glossaire de l’univers : termes, définitions, notes de canon, variantes et traductions."
+      },
+      "scenesPage": {
+  "title": "Sonekeno — Scènes",
+  "description": "Structurer les scènes : objectifs, lieux, temps, liens au canon, versions et révisions."
+}
+
     }
+  },
+  "explore": {
+    "access": {
+  "hero": {
+    "badge": "Accès",
+    "title": "Sécurité, rôles, collaboration",
+    "lead": "Un univers narratif, c’est un corpus : on protège, on trace, et on prépare le travail en équipe (progressif).",
+    "ctaWorkflow": "Voir le workflow"
+  },
+  "cards": {
+    "auth": {
+      "badge": "Authentification",
+      "title": "Sessions sécurisées",
+      "desc": "Connexion et session robustes (cookies sécurisés, protections de base) pour éviter les fuites et accès non voulus."
+    },
+    "roles": {
+      "badge": "Permissions",
+      "title": "Rôles par projet",
+      "desc": "Un même espace, plusieurs usages : lecture, édition, validation. Les droits s’appliquent au bon niveau (projet / contenu)."
+    },
+    "audit": {
+      "badge": "Traçabilité",
+      "title": "Historique & cohérence",
+      "desc": "On prépare le terrain : versions, révisions, décisions éditoriales. Tout ce qui évite les conflits et pertes."
+    }
+  },
+  "levels": {
+    "title": "Niveaux d’accès",
+    "subtitle": "Simple à comprendre, extensible quand tu passes en équipe.",
+    "badge": "Rôles",
+    "viewer": {
+      "badge": "Correcteur",
+      "title": "Lecture",
+      "desc": "Consulter, explorer, vérifier. Idéal pour relecteurs, conseillers, partenaires."
+    },
+    "editor": {
+      "badge": "Éditeur",
+      "title": "Édition",
+      "desc": "Créer et modifier : personnages, scènes, notes, chronologie. Reste cadré par le projet."
+    },
+    "owner": {
+      "badge": "Propriétaire",
+      "title": "Pilotage",
+      "desc": "Valider, organiser, gérer l’équipe et les règles du projet. Le gardien du canon."
+    }
+  },
+  "bottom": {
+    "badge": "Prochain pas",
+    "title": "Passe en mode production",
+    "desc": "Commence solo, puis ajoute des rôles quand ton projet devient une saga, une équipe, ou un studio.",
+    "ctaWorkflow": "Voir les étapes"
   }
+}
 ,
+    "scenesPage": {
+  "hero": {
+    "badge": "Scènes",
+    "title": "Structurer les scènes sans perdre le fil",
+    "lead": "Chaque scène devient une unité claire : objectif, conflit, lieu/temps, personnages présents, et liens au canon. Tu peux réviser sans casser la cohérence.",
+    "ctaOpen": "Ouvrir les scènes",
+    "ctaNext": "Voir la chronologie"
+  },
+  "pillars": {
+    "card": {
+      "badge": "Structure",
+      "title": "Une fiche de scène solide",
+      "desc": "Objectif, conflit, issue, POV, lieu/temps : tu sais exactement ce que la scène apporte."
+    },
+    "links": {
+      "badge": "Liens",
+      "title": "Connectée au canon",
+      "desc": "Relie la scène aux personnages, lieux, événements, objets, règles et notes de l’univers."
+    },
+    "versions": {
+      "badge": "Versions",
+      "title": "Révisions maîtrisées",
+      "desc": "Réécris, coupe, fusionne, déplace : garde l’historique et évite les contradictions."
+    }
+  },
+  "outputs": {
+    "title": "Ce que tu gagnes",
+    "subtitle": "Plus de clarté, moins de flou, et un univers plus facile à produire.",
+    "badge": "Résultat",
+    "one": {
+      "badge": "Clarté",
+      "title": "Une scène = une fonction",
+      "desc": "Tu vois ce que la scène fait (révélation, bascule, tension) et pourquoi elle existe."
+    },
+    "two": {
+      "badge": "Cohérence",
+      "title": "Moins de contradictions",
+      "desc": "Personnages, dates, lieux, règles : les incohérences apparaissent plus vite."
+    },
+    "three": {
+      "badge": "Production",
+      "title": "Sorties plus simples",
+      "desc": "Chapitrage, exports, bible, adaptation : une structure prête pour l’édition/studio."
+    }
+  },
+  "bottom": {
+    "badge": "Suite logique",
+    "title": "Place les scènes dans le temps",
+    "desc": "Quand tes scènes sont structurées, la chronologie devient un outil de contrôle : arcs, événements, versions.",
+    "ctaNext": "Aller à Chronologie"
+  }
+}
+,
+    "common": {
+      "start": "Commencer",
+      "backExplore": "Retour explorer",
+      "backGuide": "Retour guide",
+      "home": "Accueil",
+      "backHome": "Retour accueil",
+      "structuring": "Structuration",
+      "timeline": "Chronologie",
+      "accessRoles": "Accès & rôles",
+      "studios": "Studios"
+    },
+    "index": {
+      "hero": {
+        "badge": "Explorer",
+        "title": "Le guide Sonekeno",
+        "lead": "Des pages courtes, concrètes, pour organiser un univers narratif (roman, saga, série, jeu, film) avec une base cohérente."
+      },
+      "forWho": {
+        "title": "Pour qui ?",
+        "subtitle": "Quatre entrées selon ton profil.",
+        "badge": "Profils"
+      },
+      "cards": {
+        "writing": {
+          "title": "Écriture",
+          "desc": "Personnages, scènes, notes, versions."
+        },
+        "editors": {
+          "title": "Éditeurs",
+          "desc": "Cohérence, révisions, livrables."
+        },
+        "studios": {
+          "title": "Studios",
+          "desc": "Adaptations : bible + pipeline."
+        },
+        "creators": {
+          "title": "Créateurs",
+          "desc": "Arts & média : lore, cartes, etc."
+        }
+      },
+      "features": {
+        "structuring": {
+          "badge": "Structuration",
+          "title": "Une base claire",
+          "desc": "Organisez vos contenus sans perdre la cohérence."
+        },
+        "timeline": {
+          "badge": "Chronologie",
+          "title": "Piloter le temps",
+          "desc": "Gérez événements, périodes, versions et révisions."
+        },
+        "access": {
+          "badge": "Accès",
+          "title": "Sécurité & rôles",
+          "desc": "Travail individuel ou équipe (évolutif)."
+        }
+      },
+      "modules": {
+        "title": "Modules",
+        "subtitle": "Les briques de base pour organiser un univers narratif.",
+        "badge": "Outils",
+        "cards": {
+          "characters": {
+            "title": "Personnages",
+            "desc": "Fiches, relations, rôles, narrateurs."
+          },
+          "scenes": {
+            "title": "Scènes",
+            "desc": "Structure, objectifs, versions, liens au canon."
+          },
+          "timeline": {
+            "title": "Chronologie",
+            "desc": "Arcs, périodes, événements, révisions."
+          },
+          "glossary": {
+            "title": "Glossaire",
+            "desc": "Termes, définitions, canon, variantes."
+          }
+        }
+      },
+      "workflow": {
+        "badge": "Workflow",
+        "title": "Créer → Structurer → Publier",
+        "desc": "Une approche simple, extensible, prête pour la production.",
+        "cta": "Voir les étapes"
+      }
+    }
+  },
 "landing": {
   "hero": {
     "kicker": "Plateforme de création",
@@ -318,6 +553,7 @@
     "ctaExplore": "Explorer",
     "trustLine": "SSR • i18n • comptes pro/particuliers • sessions sécurisées"
   },
+  
 
   "micro": {
     "kicker": "Espace culturel",

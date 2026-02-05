@@ -1,3 +1,4 @@
+//server\api\projects\[projectSlug]\scenes\restore.post.js
 import { dbQuery } from '../../../../utils/db.js'
 import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
 
@@ -15,8 +16,8 @@ export default defineEventHandler(async (event) => {
   const res = await dbQuery(
     `
     UPDATE scenes
-    SET deleted_at = NOW()
-    WHERE project_id=? AND slug=? AND deleted_at IS NULL
+    SET deleted_at = NULL
+    WHERE project_id=? AND slug=? AND deleted_at IS NOT NULL
     `,
     [project.id, sceneSlug]
   )

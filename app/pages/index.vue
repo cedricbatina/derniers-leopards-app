@@ -1,23 +1,34 @@
 <script setup>
-import { computed } from 'vue'
-import { useI18n, useLocalePath } from '#imports'
+import { computed, onMounted, onBeforeUnmount } from 'vue'
+import { useI18n, useLocalePath, useRuntimeConfig, useSeoMeta, useHead } from '#imports'
 import { useAuthStore } from '~/stores/auth.store'
 
-const { t, locale } = useI18n()
+const { t, locale, te } = useI18n()
+
 const localePath = useLocalePath()
+const config = useRuntimeConfig()
 
 const auth = useAuthStore()
 const isAuthed = computed(() => !!auth.user?.id)
 
-// ✅ SEO (i18n)
+/**
+ * SEO (i18n)
+ */
 const siteName = 'Sonekeno'
 const canonicalPath = computed(() => localePath('/'))
-const baseUrl = useRuntimeConfig().public?.SITE_URL || '' // mets ça dans nuxt.config runtimeConfig.public
-const canonicalUrl = computed(() => (baseUrl ? new URL(canonicalPath.value, baseUrl).toString() : canonicalPath.value))
+const baseUrl = config.public?.SITE_URL || ''
+const canonicalUrl = computed(() => (
+  baseUrl ? new URL(canonicalPath.value, baseUrl).toString() : canonicalPath.value
+))
+const learnMore = computed(() =>
+  te('landing.common.learnMore') ? t('landing.common.learnMore') : 'En savoir plus'
+)
 
 const title = computed(() => t('seo.home.title', { app: siteName }))
 const description = computed(() => t('seo.home.description', { app: siteName }))
-const ogImage = computed(() => (baseUrl ? new URL('/images/og-home.png', baseUrl).toString() : '/images/og-home.png'))
+const ogImage = computed(() => (
+  baseUrl ? new URL('/images/og-home.png', baseUrl).toString() : '/images/og-home.png'
+))
 
 useSeoMeta({
   title,
@@ -34,12 +45,12 @@ useSeoMeta({
 })
 
 useHead({
-  link: [
-    { rel: 'canonical', href: canonicalUrl.value },
-  ],
+  link: [{ rel: 'canonical', href: canonicalUrl.value }],
 })
 
-// ✅ JSON-LD (Schema.org)
+/**
+ * JSON-LD (Schema.org)
+ */
 const jsonLd = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -55,29 +66,64 @@ const jsonLd = computed(() => ({
 }))
 
 useHead({
-  script: [
-    { type: 'application/ld+json', children: JSON.stringify(jsonLd.value) },
-  ],
+  script: [{ type: 'application/ld+json', children: JSON.stringify(jsonLd.value) }],
+})
+
+/**
+ * Reveal on scroll (opt-in via .js-reveal)
+ */
+let io
+onMounted(() => {
+  if (!import.meta.client) return
+
+  const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
+  const els = Array.from(document.querySelectorAll('.js-reveal'))
+
+  if (reduce) {
+    els.forEach((el) => el.classList.add('is-revealed'))
+    return
+  }
+
+  io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          io.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+  )
+
+  els.forEach((el, idx) => {
+    el.style.setProperty('--reveal-delay', `${Math.min(idx * 55, 320)}ms`)
+    io.observe(el)
+  })
+})
+
+onBeforeUnmount(() => {
+  if (io) io.disconnect()
 })
 </script>
 
 <template>
   <section class="space-y-6 sm:space-y-10">
-    <!-- HERO -->
-    <div class="card overflow-hidden">
+    <!-- HERO (pas cliquable: contient déjà des liens) -->
+    <div class="card card-hover card-accent accent-leopard overflow-hidden js-reveal">
       <div class="card-body">
         <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div class="space-y-4 max-w-2xl">
-            <p class="badge">
+            <p class="badge badge-accent">
               <Icon name="mdi:creation" aria-hidden="true" />
               {{ t('landing.hero.kicker') }}
             </p>
 
-            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight title-gradient title-underline">
               {{ t('landing.hero.title') }}
             </h1>
 
-            <p class="text-base sm:text-lg text-muted">
+            <p class="text-base sm:text-lg text-subtle">
               {{ t('landing.hero.subtitle') }}
             </p>
 
@@ -118,137 +164,222 @@ useHead({
               </NuxtLink>
             </div>
 
-            <!-- Trust line -->
             <div class="pt-3 text-xs text-muted">
               {{ t('landing.hero.trustLine') }}
             </div>
           </div>
 
-          <!-- Audience + quick highlights -->
+          <!-- Audience + quick highlights (cards cliquables) -->
           <div class="w-full lg:w-md">
             <div class="grid grid-cols-2 gap-3">
-              <div class="card bg-surface2">
-                <div class="card-body">
-                  <div class="text-xs text-muted">{{ t('landing.tiles.authors.label') }}</div>
-                  <div class="text-lg font-extrabold">{{ t('landing.tiles.authors.title') }}</div>
-                  <div class="text-xs text-muted mt-1">{{ t('landing.tiles.authors.desc') }}</div>
+              <!-- Écriture -->
+              <NuxtLink
+                :to="localePath('/explore/writing')"
+                class="card-link js-reveal"
+                :aria-label="t('landing.tiles.authors.title')"
+              >
+                <div class="card card-hover bg-surface2 accent-earth">
+                  <div class="card-body">
+                    <div class="text-xs text-muted">{{ t('landing.tiles.authors.label') }}</div>
+                    <div class="text-lg font-extrabold title-gradient">{{ t('landing.tiles.authors.title') }}</div>
+                    <div class="text-xs text-muted mt-1">{{ t('landing.tiles.authors.desc') }}</div>
+                    <div class="mt-2 text-xs text-muted">→ {{ learnMore }}</div>
+                  </div>
                 </div>
-              </div>
+              </NuxtLink>
 
-              <div class="card bg-surface2">
-                <div class="card-body">
-                  <div class="text-xs text-muted">{{ t('landing.tiles.editors.label') }}</div>
-                  <div class="text-lg font-extrabold">{{ t('landing.tiles.editors.title') }}</div>
-                  <div class="text-xs text-muted mt-1">{{ t('landing.tiles.editors.desc') }}</div>
+              <!-- Éditeurs -->
+              <NuxtLink
+                :to="localePath('/explore/editors')"
+                class="card-link js-reveal"
+                :aria-label="t('landing.tiles.editors.title')"
+              >
+                <div class="card card-hover bg-surface2 accent-forest">
+                  <div class="card-body">
+                    <div class="text-xs text-muted">{{ t('landing.tiles.editors.label') }}</div>
+                    <div class="text-lg font-extrabold title-gradient">{{ t('landing.tiles.editors.title') }}</div>
+                    <div class="text-xs text-muted mt-1">{{ t('landing.tiles.editors.desc') }}</div>
+                    <div class="mt-2 text-xs text-muted">→ {{ learnMore }}</div>
+                  </div>
                 </div>
-              </div>
+              </NuxtLink>
 
-              <div class="card bg-surface2">
-                <div class="card-body">
-                  <div class="text-xs text-muted">{{ t('landing.tiles.studios.label') }}</div>
-                  <div class="text-lg font-extrabold">{{ t('landing.tiles.studios.title') }}</div>
-                  <div class="text-xs text-muted mt-1">{{ t('landing.tiles.studios.desc') }}</div>
+              <!-- Studios -->
+              <NuxtLink
+                :to="localePath('/explore/studios')"
+                class="card-link js-reveal"
+                :aria-label="t('landing.tiles.studios.title')"
+              >
+                <div class="card card-hover bg-surface2 accent-river">
+                  <div class="card-body">
+                    <div class="text-xs text-muted">{{ t('landing.tiles.studios.label') }}</div>
+                    <div class="text-lg font-extrabold title-gradient">{{ t('landing.tiles.studios.title') }}</div>
+                    <div class="text-xs text-muted mt-1">{{ t('landing.tiles.studios.desc') }}</div>
+                    <div class="mt-2 text-xs text-muted">→ {{ learnMore }}</div>
+                  </div>
                 </div>
-              </div>
+              </NuxtLink>
 
-              <div class="card bg-surface2">
-                <div class="card-body">
-                  <div class="text-xs text-muted">{{ t('landing.tiles.creators.label') }}</div>
-                  <div class="text-lg font-extrabold">{{ t('landing.tiles.creators.title') }}</div>
-                  <div class="text-xs text-muted mt-1">{{ t('landing.tiles.creators.desc') }}</div>
+              <!-- Créateurs -->
+              <NuxtLink
+                :to="localePath('/explore/creators')"
+                class="card-link js-reveal"
+                :aria-label="t('landing.tiles.creators.title')"
+              >
+                <div class="card card-hover bg-surface2 accent-copper">
+                  <div class="card-body">
+                    <div class="text-xs text-muted">{{ t('landing.tiles.creators.label') }}</div>
+                    <div class="text-lg font-extrabold title-gradient">{{ t('landing.tiles.creators.title') }}</div>
+                    <div class="text-xs text-muted mt-1">{{ t('landing.tiles.creators.desc') }}</div>
+                    <div class="mt-2 text-xs text-muted">→ {{ learnMore }}</div>
+                  </div>
                 </div>
-              </div>
+              </NuxtLink>
             </div>
 
-            <div class="mt-3 card bg-surface2">
-              <div class="card-body flex items-center justify-between gap-3">
-                <div>
-                  <div class="text-xs text-muted">{{ t('landing.micro.kicker') }}</div>
-                  <div class="font-extrabold">{{ t('landing.micro.title') }}</div>
-                  <div class="text-xs text-muted mt-1">{{ t('landing.micro.desc') }}</div>
+            <!-- Micro (sécurité / accès) -->
+            <NuxtLink
+              :to="localePath('/explore/access')"
+              class="card-link js-reveal"
+              :aria-label="t('landing.micro.title')"
+            >
+              <div class="mt-3 card card-hover bg-surface2 card-accent accent-leopard">
+                <div class="card-body flex items-center justify-between gap-3">
+                  <div>
+                    <div class="text-xs text-muted">{{ t('landing.micro.kicker') }}</div>
+                    <div class="font-extrabold title-gradient">{{ t('landing.micro.title') }}</div>
+                    <div class="text-xs text-muted mt-1">{{ t('landing.micro.desc') }}</div>
+                    <div class="mt-2 text-xs text-muted">→ {{ learnMore }}</div>
+                  </div>
+                  <Icon name="mdi:shield-lock-outline" class="text-2xl" aria-hidden="true" />
                 </div>
-                <Icon name="mdi:shield-lock-outline" class="text-2xl" aria-hidden="true" />
               </div>
-            </div>
+            </NuxtLink>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- VALUE PROPS -->
+    <!-- VALUE PROPS (cliquables) -->
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <div class="card">
-        <div class="card-body space-y-2">
-          <div class="badge">
-            <Icon name="mdi:layers-triple" aria-hidden="true" />
-            {{ t('landing.value.one.badge') }}
+      <!-- Structuration -->
+      <NuxtLink
+        :to="localePath('/explore/structuring')"
+        class="card-link js-reveal"
+        :aria-label="t('landing.value.one.title')"
+      >
+        <div class="card card-hover card-accent accent-earth">
+          <div class="card-body space-y-2">
+            <div class="badge badge-accent">
+              <Icon name="mdi:layers-triple" aria-hidden="true" />
+              {{ t('landing.value.one.badge') }}
+            </div>
+            <div class="font-extrabold text-lg title-gradient">{{ t('landing.value.one.title') }}</div>
+            <p class="text-sm text-muted">{{ t('landing.value.one.desc') }}</p>
+            <div class="text-xs text-muted">→ {{ learnMore }}</div>
           </div>
-          <div class="font-extrabold text-lg">{{ t('landing.value.one.title') }}</div>
-          <p class="text-sm text-muted">{{ t('landing.value.one.desc') }}</p>
         </div>
-      </div>
+      </NuxtLink>
 
-      <div class="card">
-        <div class="card-body space-y-2">
-          <div class="badge">
-            <Icon name="mdi:timeline" aria-hidden="true" />
-            {{ t('landing.value.two.badge') }}
+      <!-- Chronologie -->
+      <NuxtLink
+        :to="localePath('/explore/timeline')"
+        class="card-link js-reveal"
+        :aria-label="t('landing.value.two.title')"
+      >
+        <div class="card card-hover card-accent accent-river">
+          <div class="card-body space-y-2">
+            <div class="badge badge-accent">
+              <Icon name="mdi:timeline" aria-hidden="true" />
+              {{ t('landing.value.two.badge') }}
+            </div>
+            <div class="font-extrabold text-lg title-gradient">{{ t('landing.value.two.title') }}</div>
+            <p class="text-sm text-muted">{{ t('landing.value.two.desc') }}</p>
+            <div class="text-xs text-muted">→ {{ learnMore }}</div>
           </div>
-          <div class="font-extrabold text-lg">{{ t('landing.value.two.title') }}</div>
-          <p class="text-sm text-muted">{{ t('landing.value.two.desc') }}</p>
         </div>
-      </div>
+      </NuxtLink>
 
-      <div class="card">
-        <div class="card-body space-y-2">
-          <div class="badge">
-            <Icon name="mdi:book-open-page-variant" aria-hidden="true" />
-            {{ t('landing.value.three.badge') }}
+      <!-- Accès -->
+      <NuxtLink
+        :to="localePath('/explore/access')"
+        class="card-link js-reveal"
+        :aria-label="t('landing.value.three.title')"
+      >
+        <div class="card card-hover card-accent accent-copper">
+          <div class="card-body space-y-2">
+            <div class="badge badge-accent">
+              <Icon name="mdi:book-open-page-variant" aria-hidden="true" />
+              {{ t('landing.value.three.badge') }}
+            </div>
+            <div class="font-extrabold text-lg title-gradient">{{ t('landing.value.three.title') }}</div>
+            <p class="text-sm text-muted">{{ t('landing.value.three.desc') }}</p>
+            <div class="text-xs text-muted">→ {{ learnMore }}</div>
           </div>
-          <div class="font-extrabold text-lg">{{ t('landing.value.three.title') }}</div>
-          <p class="text-sm text-muted">{{ t('landing.value.three.desc') }}</p>
         </div>
-      </div>
+      </NuxtLink>
     </div>
 
     <!-- HOW IT WORKS -->
-    <div class="card">
+    <div class="card card-hover card-accent accent-forest js-reveal">
       <div class="card-body">
         <div class="flex items-center justify-between gap-3">
           <div>
-            <div class="font-extrabold text-lg">{{ t('landing.how.title') }}</div>
+            <div class="font-extrabold text-lg title-gradient title-underline">{{ t('landing.how.title') }}</div>
             <div class="text-sm text-muted">{{ t('landing.how.subtitle') }}</div>
           </div>
-          <div class="badge">
+          <div class="badge badge-accent">
             <Icon name="mdi:rocket-launch-outline" aria-hidden="true" />
             {{ t('landing.how.badge') }}
           </div>
         </div>
 
+        <!-- Steps (cliquables vers /explore/workflow#step-x) -->
         <div class="grid gap-3 sm:grid-cols-3 mt-4">
-          <div class="card bg-surface2">
-            <div class="card-body">
-              <div class="text-xs text-muted">{{ t('landing.how.steps.one.kicker') }}</div>
-              <div class="font-extrabold">{{ t('landing.how.steps.one.title') }}</div>
-              <div class="text-sm text-muted mt-1">{{ t('landing.how.steps.one.desc') }}</div>
+          <NuxtLink
+            :to="localePath('/explore/workflow') + '#step-1'"
+            class="card-link js-reveal"
+            :aria-label="t('landing.how.steps.one.title')"
+          >
+            <div class="card card-hover bg-surface2 accent-earth">
+              <div class="card-body">
+                <div class="text-xs text-muted">{{ t('landing.how.steps.one.kicker') }}</div>
+                <div class="font-extrabold title-gradient">{{ t('landing.how.steps.one.title') }}</div>
+                <div class="text-sm text-muted mt-1">{{ t('landing.how.steps.one.desc') }}</div>
+                <div class="mt-2 text-xs text-muted">→ {{ learnMore }}</div>
+              </div>
             </div>
-          </div>
+          </NuxtLink>
 
-          <div class="card bg-surface2">
-            <div class="card-body">
-              <div class="text-xs text-muted">{{ t('landing.how.steps.two.kicker') }}</div>
-              <div class="font-extrabold">{{ t('landing.how.steps.two.title') }}</div>
-              <div class="text-sm text-muted mt-1">{{ t('landing.how.steps.two.desc') }}</div>
+          <NuxtLink
+            :to="localePath('/explore/workflow') + '#step-2'"
+            class="card-link js-reveal"
+            :aria-label="t('landing.how.steps.two.title')"
+          >
+            <div class="card card-hover bg-surface2 accent-river">
+              <div class="card-body">
+                <div class="text-xs text-muted">{{ t('landing.how.steps.two.kicker') }}</div>
+                <div class="font-extrabold title-gradient">{{ t('landing.how.steps.two.title') }}</div>
+                <div class="text-sm text-muted mt-1">{{ t('landing.how.steps.two.desc') }}</div>
+                <div class="mt-2 text-xs text-muted">→ {{ learnMore }}</div>
+              </div>
             </div>
-          </div>
+          </NuxtLink>
 
-          <div class="card bg-surface2">
-            <div class="card-body">
-              <div class="text-xs text-muted">{{ t('landing.how.steps.three.kicker') }}</div>
-              <div class="font-extrabold">{{ t('landing.how.steps.three.title') }}</div>
-              <div class="text-sm text-muted mt-1">{{ t('landing.how.steps.three.desc') }}</div>
+          <NuxtLink
+            :to="localePath('/explore/workflow') + '#step-3'"
+            class="card-link js-reveal"
+            :aria-label="t('landing.how.steps.three.title')"
+          >
+            <div class="card card-hover bg-surface2 accent-copper">
+              <div class="card-body">
+                <div class="text-xs text-muted">{{ t('landing.how.steps.three.kicker') }}</div>
+                <div class="font-extrabold title-gradient">{{ t('landing.how.steps.three.title') }}</div>
+                <div class="text-sm text-muted mt-1">{{ t('landing.how.steps.three.desc') }}</div>
+                <div class="mt-2 text-xs text-muted">→ {{ learnMore }}</div>
+              </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
 
         <div class="flex flex-wrap gap-2 mt-5">
@@ -275,12 +406,12 @@ useHead({
       </div>
     </div>
 
-    <!-- FAQ (SEO rich results-friendly) -->
-    <div class="card">
+    <!-- FAQ (pas cliquable) -->
+    <div class="card card-hover card-accent accent-river js-reveal">
       <div class="card-body">
-        <div class="font-extrabold text-lg">{{ t('landing.faq.title') }}</div>
+        <div class="font-extrabold text-lg title-gradient title-underline">{{ t('landing.faq.title') }}</div>
         <div class="mt-4 grid gap-3">
-          <details class="card bg-surface2">
+          <details class="card card-hover bg-surface2 js-reveal">
             <summary class="card-body cursor-pointer font-bold">
               {{ t('landing.faq.q1.q') }}
             </summary>
@@ -289,7 +420,7 @@ useHead({
             </div>
           </details>
 
-          <details class="card bg-surface2">
+          <details class="card card-hover bg-surface2 js-reveal">
             <summary class="card-body cursor-pointer font-bold">
               {{ t('landing.faq.q2.q') }}
             </summary>
@@ -298,7 +429,7 @@ useHead({
             </div>
           </details>
 
-          <details class="card bg-surface2">
+          <details class="card card-hover bg-surface2 js-reveal">
             <summary class="card-body cursor-pointer font-bold">
               {{ t('landing.faq.q3.q') }}
             </summary>

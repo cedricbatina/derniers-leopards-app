@@ -6,19 +6,19 @@ export default defineEventHandler(async (event) => {
   if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
   const projectSlug = String(event.context.params.projectSlug || '').trim()
-  const sceneSlug = String(event.context.params.sceneSlug || '').trim()
-  if (!projectSlug || !sceneSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
+  const bookSlug = String(event.context.params.bookSlug || '').trim()
+  if (!projectSlug || !bookSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
 
   const project = await getProjectByOwnerSlug(user.id, projectSlug)
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const res = await dbQuery(
     `
-    UPDATE scenes
+    UPDATE books
     SET deleted_at = NOW()
     WHERE project_id=? AND slug=? AND deleted_at IS NULL
     `,
-    [project.id, sceneSlug]
+    [project.id, bookSlug]
   )
 
   if (!res?.affectedRows) throw createError({ statusCode: 404, statusMessage: 'Not found' })

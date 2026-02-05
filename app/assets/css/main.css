@@ -11,8 +11,10 @@
   --bg: 251 248 241;       /* #FBF8F1 */
   --surface: 255 255 255;
   --surface2: 246 243 234;
+
   --text: 20 18 16;        /* #141210 */
-  --muted: 97 92 86;
+  --text-2: 55 51 46;      /* secondaire lisible */
+  --muted: 97 92 86;       /* tertiaire */
   --border: 229 223 210;
 
   --brand: 124 58 237;
@@ -22,7 +24,43 @@
   --warn: 234 179 8;
   --danger: 239 68 68;
 
+  /* Motion */
+  --ease: cubic-bezier(.2,.9,.2,1);
+  --t-fast: 140ms;
+  --t: 220ms;
+
+  /* Radius */
+  --r-sm: .6rem;
+  --r-md: .75rem;
+  --r-lg: 1rem;
+
+  /* Shadows */
   --shadow-soft: 0 12px 30px rgb(0 0 0 / 0.08), 0 2px 10px rgb(0 0 0 / 0.06);
+  --shadow-2: 0 18px 50px rgb(0 0 0 / 0.12), 0 4px 16px rgb(0 0 0 / 0.08);
+
+  /* Ring */
+  --ring: var(--brand);
+
+  /* --------------------------
+     KONGO PALETTE (light)
+     (terre / cuivre / forêt / fleuve / léopard)
+     -------------------------- */
+  --k-earth-1: 139 94 60;    /* terre */
+  --k-earth-2: 166 116 78;
+
+  --k-copper-1: 180 83 9;    /* cuivre */
+  --k-copper-2: 217 119 6;
+
+  --k-forest-1: 22 101 52;   /* forêt */
+  --k-forest-2: 34 139 84;
+
+  --k-river-1: 3 105 161;    /* fleuve */
+  --k-river-2: 14 165 233;
+
+ /* Light — LÉOPARD (moins fluo) */
+--k-leopard-1: 146 64 14;   /* brun léopard (#92400e) */
+--k-leopard-2: 217 119 6;   /* ambre-cuivre (#d97706) */
+
 }
 
 /* Dark */
@@ -30,7 +68,9 @@
   --bg: 12 12 16;
   --surface: 18 18 26;
   --surface2: 24 24 36;
+
   --text: 245 244 250;
+  --text-2: 208 206 222;
   --muted: 170 168 184;
   --border: 50 50 70;
 
@@ -40,7 +80,31 @@
   --ok: 52 211 153;
   --warn: 250 204 21;
   --danger: 248 113 113;
+
+  --ring: var(--brand);
+
+  --shadow-soft: 0 14px 36px rgb(0 0 0 / 0.35), 0 6px 16px rgb(0 0 0 / 0.25);
+  --shadow-2: 0 22px 70px rgb(0 0 0 / 0.45), 0 10px 22px rgb(0 0 0 / 0.30);
+
+  /* KONGO PALETTE (dark) – un peu plus lumineuse */
+  --k-earth-1: 193 132 92;
+  --k-earth-2: 219 170 128;
+
+  --k-copper-1: 240 142 62;
+  --k-copper-2: 251 191 36;
+
+  --k-forest-1: 52 211 153;
+  --k-forest-2: 110 231 183;
+
+  --k-river-1: 56 189 248;
+  --k-river-2: 125 211 252;
+
+/* Dark — LÉOPARD (chaud, pas néon) */
+--k-leopard-1: 253 186 116; /* sable chaud (#fdba74) */
+--k-leopard-2: 251 146 60;  /* cuivre clair (#fb923c) */
+
 }
+
 
 html, body { height: 100%; }
 body {
@@ -51,8 +115,9 @@ body {
 }
 
 ::selection { background: rgb(var(--brand) / 0.25); }
-a { color: rgb(var(--brand)); }
-a:hover { opacity: 0.9; }
+a { color: rgb(var(--brand)); text-underline-offset: 3px; }
+a:hover { opacity: .92; }
+
 
 /* -------------------------------------------------
    2) Mini “utilities” (remplacent bg-bg, text-text, border-border, etc.)
@@ -63,7 +128,12 @@ a:hover { opacity: 0.9; }
 .bg-surface2 { background-color: rgb(var(--surface2)); }
 
 .text-text { color: rgb(var(--text)); }
+.text-subtle { color: rgb(var(--text-2)); }
 .text-muted { color: rgb(var(--muted)); }
+
+p { color: rgb(var(--text-2)); }
+strong { color: rgb(var(--text)); }
+
 
 .border-border { border-color: rgb(var(--border)); }
 
@@ -126,6 +196,42 @@ a:hover { opacity: 0.9; }
   background: rgb(var(--surface));
   box-shadow: var(--shadow-soft);
 }
+.card {
+  border-radius: var(--r-lg);
+  border: 1px solid rgb(var(--border));
+  background: rgb(var(--surface));
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform var(--t-fast) var(--ease),
+    box-shadow var(--t) var(--ease),
+    border-color var(--t) var(--ease),
+    background-color var(--t) var(--ease);
+}
+
+@media (hover: hover) {
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+    border-color: rgb(var(--border) / .85);
+  }
+}
+
+.btn {
+  transition:
+    transform var(--t-fast) var(--ease),
+    background-color var(--t) var(--ease),
+    opacity var(--t-fast) var(--ease),
+    box-shadow var(--t) var(--ease);
+}
+.btn:active { transform: translateY(1px) scale(0.99); }
+
+.pill {
+  transition:
+    background-color var(--t) var(--ease),
+    transform var(--t-fast) var(--ease),
+    opacity var(--t-fast) var(--ease);
+}
+.pill:active { transform: translateY(1px); }
 
 .btn {
   display: inline-flex;
@@ -305,4 +411,186 @@ a:hover { opacity: 0.9; }
 }
 /* Compense la topbar sticky lors d’un scroll vers #main */
 #main { scroll-margin-top: 88px; } /* ajustez 72-96 selon hauteur réelle */
-.page { padding-top: 1.25rem; } /* ou 1.5rem si vous préférez */
+/*.page { padding-top: 1.25rem; } */
+/* ou 1.5rem si vous préférez */
+
+/* -----------------------------
+   ACCENTS (context via classes)
+   ----------------------------- */
+.accent-earth   { --accent-1: rgb(var(--k-earth-1));   --accent-2: rgb(var(--k-earth-2)); }
+.accent-copper  { --accent-1: rgb(var(--k-copper-1));  --accent-2: rgb(var(--k-copper-2)); }
+.accent-forest  { --accent-1: rgb(var(--k-forest-1));  --accent-2: rgb(var(--k-forest-2)); }
+.accent-river   { --accent-1: rgb(var(--k-river-1));   --accent-2: rgb(var(--k-river-2)); }
+.accent-leopard { --accent-1: rgb(var(--k-leopard-1)); --accent-2: rgb(var(--k-leopard-2)); }
+
+/* fallback si pas d’accent défini */
+:root { --accent-1: rgb(var(--brand)); --accent-2: rgb(var(--brand2)); }
+
+/* -----------------------------
+   TITLES: gradient + underline
+   ----------------------------- */
+.title-gradient {
+  background-image: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title-underline {
+  position: relative;
+  display: inline-block;
+}
+.title-underline::after {
+  content: "";
+  display: block;
+  width: clamp(56px, 18%, 92px);
+  height: 3px;
+  margin-top: .55rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  opacity: .95;
+}
+
+/* -----------------------------
+   BADGE accent (opt-in)
+   ----------------------------- */
+.badge-accent {
+  border-color: rgb(var(--border));
+}
+@supports (color: color-mix(in oklab, white, black)) {
+  .badge-accent {
+    border-color: color-mix(in oklab, var(--accent-1) 32%, rgb(var(--border)));
+    background: color-mix(in oklab, var(--accent-1) 10%, rgb(var(--surface2)));
+  }
+}
+
+/* -----------------------------
+   CARD accent (opt-in)
+   ----------------------------- */
+.card-accent {
+  position: relative;
+  overflow: hidden;
+}
+.card-accent::before {
+  content: "";
+  position: absolute;
+  inset: -80px;
+  pointer-events: none;
+  opacity: .18;
+  filter: blur(32px);
+  background:
+    radial-gradient(520px 360px at 15% 15%, var(--accent-1), transparent 60%),
+    radial-gradient(520px 360px at 85% 25%, var(--accent-2), transparent 62%);
+}
+
+/* -----------------------------
+   REVEAL (scroll + load)
+   - js-reveal + is-revealed via IntersectionObserver
+   ----------------------------- */
+.js-reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 420ms ease, transform 420ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: transform, opacity;
+}
+.js-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* simple anim on-load (opt-in) */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 560ms var(--ease) both;
+  animation-delay: var(--d, 0ms);
+  will-change: transform, opacity;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal, .anim-fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+/* Lang chips (header) */
+.lang-chip{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  padding: .25rem .6rem;
+  font-size: .75rem;
+  font-weight: 800;
+  border-radius: 999px;
+
+  color: rgb(var(--text-2));          /* IMPORTANT: pas muted */
+  border: 1px solid transparent;
+  background: transparent;
+
+  transition: background-color var(--t) var(--ease),
+              color var(--t) var(--ease),
+              border-color var(--t) var(--ease),
+              transform var(--t-fast) var(--ease);
+}
+
+.lang-chip:hover{
+  color: rgb(var(--text));
+  background: rgb(var(--surface));
+  border-color: rgb(var(--border));
+}
+
+.lang-chip--active{
+  color: rgb(var(--text));
+  background: rgb(var(--surface));
+  border-color: rgb(var(--border));
+  box-shadow: 0 10px 24px rgb(0 0 0 / 0.06);
+}
+
+.lang-chip:active{ transform: translateY(1px); }
+
+.lang-chip:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(var(--ring) / .22);
+}
+/* Interactions : curseur cohérent */
+button,
+[role="button"],
+.btn,
+.pill,
+.lang-chip {
+  cursor: pointer;
+}
+
+button:disabled,
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: .6;
+}
+/* Clickable cards (NuxtLink wrapper) */
+.card-link{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.card-link:hover{ text-decoration: none; }
+
+.card-link:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(var(--ring) / .22);
+  border-radius: var(--r-lg);
+}
+
+/* option: léger highlight sur hover du wrapper */
+@media (hover: hover) {
+  .card-link:hover .card { border-color: rgb(var(--border) / .85); }
+}

@@ -1,0 +1,317 @@
+🧭 Journal de développement — Sonekeno
+
+Période : ~48h (hier → aujourd’hui)
+État : fondations techniques + produit solidifiées
+
+1. Clarification produit & vision
+Nom & positionnement
+
+Application : Sonekeno
+
+Nature :
+Plateforme / espace culturel de création
+→ écriture, structuration d’univers, préparation transmédia (roman, saga, série, jeu, essais…)
+
+Principe clé validé
+
+Project = univers / entité éditoriale
+
+Book = œuvre dans un projet
+(ex : tome, essai, recueil, livret, etc.)
+
+Characters / Scenes / Timeline / Glossary
+→ toujours rattachés à un project
+
+➡️ Cette modélisation permet :
+
+une franchise (plusieurs livres, formats, périodes)
+
+des projets non-livres (jeu vidéo, essais, cartes, bible de prod…)
+
+2. Base de données — stabilisation majeure
+2.1 Projects
+
+Table projects créée et stabilisée
+
+Champs :
+
+slug, title, title_en, title_pt
+
+logline, pitch
+
+status
+
+deleted_at (soft delete)
+
+Index et contraintes OK
+
+Accès propriétaire strict (owner_id)
+
+2.2 Books
+
+Table books conservée
+
+Relation : books.project_id
+
+Un projet peut avoir plusieurs books
+
+Premier book existant :
+
+Les derniers léopards — Tome 1
+
+👉 Décision importante :
+
+les sous-titres (Kikongo / FR / EN) seront portés par books
+
+ajout prévu : subtitle, subtitle_fr, subtitle_kg, etc. (à faire plus tard, via migration propre)
+
+3. Contenus narratifs — cohérence & performance
+3.1 Scenes
+
+Ajout du champ :
+
+content LONGTEXT → texte d’écriture réel
+
+Soft delete :
+
+deleted_at
+
+Indexation améliorée :
+
+(project_id, chapter_id, scene_no)
+
+Unicité corrigée :
+
+UNIQUE (project_id, slug)
+
+suppression des uniques globaux dangereux
+
+3.2 Characters
+
+Soft delete ajouté (deleted_at)
+
+Unicité par projet :
+
+UNIQUE (project_id, slug)
+
+3.3 Alignement général
+
+Tous les SELECT sensibles filtrent désormais :
+
+deleted_at IS NULL
+
+
+Les routes API gèrent :
+
+listing normal
+
+listing “trash”
+
+restore depuis la corbeille
+
+4. API — structuration propre (CRUD-first)
+4.1 Projects API
+
+GET /api/projects
+
+ignore les projets supprimés
+
+GET /api/projects/:slug
+
+DELETE /api/projects/:slug
+
+remplacé par soft delete
+
+Prévu :
+
+restore
+
+?trashed=1
+
+4.2 Scenes API
+
+CRUD complet
+
+Soft delete + restore
+
+Listing avec :
+
+?trashed=1
+
+?chapter_id=
+
+?q=
+
+Sécurité :
+
+vérification project → chapter → scene
+
+slug immuable
+
+4.3 Characters API
+
+Même logique que scenes
+
+Route restore.post.js validée
+
+➡️ Principe posé :
+
+aucune vue avant un CRUD API propre et sécurisé
+
+5. Auth & sécurité (rappel)
+
+JWT access + refresh (cookies HttpOnly)
+
+Sessions persistées (user_sessions)
+
+RBAC prêt (user / editor / admin)
+
+/api/auth/me = source de vérité front
+
+Soft delete compatible avec l’auth (users.deleted_at)
+
+6. UI / Layout — refonte sérieuse
+6.1 Header & navigation
+
+Suppression du hamburger inutile
+
+Navigation toujours visible (pills)
+
+Suppression des doublons login/register (centralisé dans UserInlineCard)
+
+Lang switch :
+
+composant cohérent (lang-chip)
+
+état actif lisible
+
+Theme toggle :
+
+corrigé → vrai bouton
+
+cursor pointer
+
+hover / focus / active OK
+
+6.2 Design system (main.css)
+
+Tokens couleur light/dark stabilisés
+
+Hiérarchie visuelle claire :
+
+surfaces
+
+cards
+
+badges
+
+pills
+
+Composants :
+
+.card, .card-header, .card-body, .card-footer
+
+.btn, .btn-primary, .btn-ghost, .btn-icon
+
+A11y :
+
+focus-ring
+
+skip-link
+
+Animations légères (transitions, hover)
+
+7. Landing page — niveau expert (SEO-ready)
+
+Hero clair + CTA différenciés (guest / authed)
+
+Valeur produit explicite
+
+FAQ structurée (SEO rich results friendly)
+
+JSON-LD WebSite
+
+Meta dynamiques i18n
+
+Canonical propre
+
+Préparation /explore (public)
+
+8. Contenu éditorial — décisions structurantes
+Franchise Les derniers léopards
+
+Un seul projet = la franchise
+
+Plusieurs books possibles :
+
+Tome 1 : Kongo Dibuidi / La Désolation
+
+Tome 2 : Kongo dia Mpa
+
+Tome 3 : Mama i Mama — La culture d’une reine
+
+Autres : La Confrontation, etc.
+
+Autres projets possibles
+
+Pensées & Essais
+
+Proverbes, maximes, abécédaires
+
+Jeu vidéo / cartes / lore
+➡️ Le modèle actuel supporte tout ça sans changement
+
+9. État actuel (résumé)
+✅ Ce qui est solide
+
+Modèle de données
+
+Sécurité
+
+API CRUD
+
+Soft delete partout où nécessaire
+
+Design system cohérent
+
+Layout stable
+
+Vision produit claire
+
+⚠️ Ce qui reste volontairement en attente
+
+CRUD Books (à venir)
+
+Vues Characters / Scenes
+
+Explore public
+
+Collaboration multi-utilisateurs
+
+Export / publication
+
+10. Prochaines étapes (ordre recommandé)
+
+CRUD Books
+
+ajout subtitle
+
+soft delete
+
+Pages Studio
+
+/studio/projects
+
+/studio/projects/:slug
+
+Vues Characters / Scenes
+
+branchées sur API existante
+
+Explore (lecture seule)
+
+Collaboration / rôles
+
+Exports (PDF / MD / JSON)
+
+Conclusion
