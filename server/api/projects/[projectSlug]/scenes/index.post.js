@@ -80,7 +80,8 @@ const content = body?.content !== undefined ? String(body.content || '') : null
         objective, time_of_day, summary, content, conflict, turning_point, outcome, hook,
         indesign_style
       )
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+
       `,
       [
         project.id, slug, chapterId, sceneNo, title,

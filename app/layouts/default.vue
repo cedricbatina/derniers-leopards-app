@@ -11,8 +11,8 @@
           <NuxtLink :to="localePath('/')" class="flex items-center gap-3 focus-ring rounded-xl">
             <NuxtImg
               src="/images/logo-sonekeno.png"
-              width="40"
-              height="40"
+              width="80"
+              height="80"
               decoding="async"
               class="h-20 w-20 rounded-2xl border border-border bg-transparent object-contain shadow-soft"
               :alt="t('app.logoAlt')"

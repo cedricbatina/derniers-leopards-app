@@ -1,4 +1,4 @@
-//server\api\projects\[projectSlug]\scenes\[sceneSlug].get.js
+// server/api/projects/[projectSlug]/chapters/index.get.js
 import { dbQuery } from '../../../../utils/db.js'
 import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
 
@@ -7,24 +7,22 @@ export default defineEventHandler(async (event) => {
   if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
   const projectSlug = String(event.context.params.projectSlug || '').trim()
-  const sceneSlug = String(event.context.params.sceneSlug || '').trim()
-  if (!projectSlug || !sceneSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
+  if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
 
   const project = await getProjectByOwnerSlug(user.id, projectSlug)
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
+  // Minimal fields only (avoid coupling to optional columns like title/deleted_at).
   const rows = await dbQuery(
     `
-    SELECT s.*
-    FROM scenes s
-    JOIN chapters c ON c.id = s.chapter_id
-    WHERE s.project_id=? AND s.slug=? AND s.deleted_at IS NULL
-
-    LIMIT 1
+    SELECT id, project_id, chapter_no
+    FROM chapters
+    WHERE project_id=?
+    ORDER BY chapter_no ASC, id ASC
+    LIMIT 2000
     `,
-    [project.id, sceneSlug, project.id]
+    [project.id]
   )
 
-  if (!rows?.length) throw createError({ statusCode: 404, statusMessage: 'Not found' })
-  return { scene: rows[0] }
+  return { project: { slug: project.slug, id: project.id }, chapters: rows }
 })

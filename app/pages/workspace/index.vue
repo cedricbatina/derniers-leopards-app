@@ -143,7 +143,14 @@
 </template>
 
 <script setup>
+definePageMeta({ middleware: 'auth' })
+
+
   import { computed, useColorMode, useI18n, useLocalePath, useSwitchLocalePath } from '#imports'
+import { useAuthStore } from '~/stores/auth.store'
+
+
+
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()

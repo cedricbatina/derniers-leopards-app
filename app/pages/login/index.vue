@@ -105,9 +105,16 @@
 </template>
 
 <script setup>
+
+definePageMeta({ middleware: 'guest' })
+
 import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter, useI18n, useLocalePath } from '#imports'
 import { useAuthStore } from '~/stores/auth.store'
+
+
+
+
 
 const auth = useAuthStore()
 const route = useRoute()

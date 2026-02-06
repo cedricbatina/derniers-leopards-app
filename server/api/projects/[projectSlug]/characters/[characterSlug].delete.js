@@ -13,7 +13,11 @@ export default defineEventHandler(async (event) => {
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const res = await dbQuery(
-    `DELETE FROM characters WHERE project_id=? AND slug=?`,
+    `
+    UPDATE characters
+    SET deleted_at = NOW()
+    WHERE project_id=? AND slug=? AND deleted_at IS NULL
+    `,
     [project.id, characterSlug]
   )
 

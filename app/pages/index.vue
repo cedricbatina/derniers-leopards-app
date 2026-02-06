@@ -319,6 +319,95 @@ onBeforeUnmount(() => {
         </div>
       </NuxtLink>
     </div>
+<!-- MODULES -->
+<div class="card js-reveal">
+  <div class="card-body">
+    <div class="flex items-center justify-between gap-3">
+      <div class="space-y-1">
+        <div class="font-extrabold title-gradient">{{ t('explore.index.modules.title') }}</div>
+        <div class="text-sm text-muted">{{ t('explore.index.modules.subtitle') }}</div>
+      </div>
+      <div class="badge">
+        <Icon name="mdi:apps" aria-hidden="true" />
+        {{ t('explore.index.modules.badge') }}
+      </div>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-4">
+      <!-- Characters -->
+      <NuxtLink :to="localePath('/explore/characters')" class="card-link js-reveal">
+        <div class="card card-hover bg-surface2 card-accent accent-earth h-full">
+          <div class="card-body space-y-2">
+            <div class="flex items-start justify-between gap-3">
+              <div class="badge badge-accent w-fit">
+                <Icon name="mdi:account-group-outline" aria-hidden="true" />
+                {{ t('explore.index.modules.cards.characters.title') }}
+              </div>
+              <Icon name="mdi:arrow-right" class="text-xl opacity-60" aria-hidden="true" />
+            </div>
+            <div class="text-sm text-muted">
+              {{ t('explore.index.modules.cards.characters.desc') }}
+            </div>
+          </div>
+        </div>
+      </NuxtLink>
+
+      <!-- Scenes -->
+      <NuxtLink :to="localePath('/explore/scenes')" class="card-link js-reveal">
+        <div class="card card-hover bg-surface2 card-accent accent-forest h-full">
+          <div class="card-body space-y-2">
+            <div class="flex items-start justify-between gap-3">
+              <div class="badge badge-accent w-fit">
+                <Icon name="mdi:movie-open" aria-hidden="true" />
+                {{ t('explore.index.modules.cards.scenes.title') }}
+              </div>
+              <Icon name="mdi:arrow-right" class="text-xl opacity-60" aria-hidden="true" />
+            </div>
+            <div class="text-sm text-muted">
+              {{ t('explore.index.modules.cards.scenes.desc') }}
+            </div>
+          </div>
+        </div>
+      </NuxtLink>
+
+      <!-- Timeline -->
+      <NuxtLink :to="localePath('/explore/timeline')" class="card-link js-reveal">
+        <div class="card card-hover bg-surface2 card-accent accent-river h-full">
+          <div class="card-body space-y-2">
+            <div class="flex items-start justify-between gap-3">
+              <div class="badge badge-accent w-fit">
+                <Icon name="mdi:timeline" aria-hidden="true" />
+                {{ t('explore.index.modules.cards.timeline.title') }}
+              </div>
+              <Icon name="mdi:arrow-right" class="text-xl opacity-60" aria-hidden="true" />
+            </div>
+            <div class="text-sm text-muted">
+              {{ t('explore.index.modules.cards.timeline.desc') }}
+            </div>
+          </div>
+        </div>
+      </NuxtLink>
+
+      <!-- Glossary -->
+      <NuxtLink :to="localePath('/explore/glossary')" class="card-link js-reveal">
+        <div class="card card-hover bg-surface2 card-accent accent-copper h-full">
+          <div class="card-body space-y-2">
+            <div class="flex items-start justify-between gap-3">
+              <div class="badge badge-accent w-fit">
+                <Icon name="mdi:book-open-page-variant-outline" aria-hidden="true" />
+                {{ t('explore.index.modules.cards.glossary.title') }}
+              </div>
+              <Icon name="mdi:arrow-right" class="text-xl opacity-60" aria-hidden="true" />
+            </div>
+            <div class="text-sm text-muted">
+              {{ t('explore.index.modules.cards.glossary.desc') }}
+            </div>
+          </div>
+        </div>
+      </NuxtLink>
+    </div>
+  </div>
+</div>
 
     <!-- HOW IT WORKS -->
     <div class="card card-hover card-accent accent-forest js-reveal">

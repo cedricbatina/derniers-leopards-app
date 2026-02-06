@@ -17,10 +17,11 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'slug is immutable' })
   }
 
-  const rows0 = await dbQuery(
-    `SELECT id FROM characters WHERE project_id=? AND slug=? LIMIT 1`,
-    [project.id, characterSlug]
-  )
+const rows0 = await dbQuery(
+  `SELECT id FROM characters WHERE project_id=? AND slug=? AND deleted_at IS NULL LIMIT 1`,
+  [project.id, characterSlug]
+)
+
   if (!rows0?.length) throw createError({ statusCode: 404, statusMessage: 'Not found' })
   const characterId = rows0[0].id
 

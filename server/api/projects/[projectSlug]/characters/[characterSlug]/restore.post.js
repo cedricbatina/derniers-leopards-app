@@ -1,6 +1,6 @@
-// server/api/projects/[projectSlug]/characters/restore.post.js
-import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+// server/api/projects/[projectSlug]/characters/[characterSlug]/restore.post.js
+import { dbQuery } from '../../../../../utils/db.js'
+import { getProjectByOwnerSlug } from '../../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -9,14 +9,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const projectSlug = String(event.context.params.projectSlug || '').trim()
-  const body = await readBody(event).catch(() => ({}))
-
-  // Backward-compat: this endpoint is /characters/restore (no :characterSlug)
-  // so we accept slug from body.
-  const characterSlug = String(
-    event.context.params.characterSlug || body?.characterSlug || body?.character_slug || body?.slug || ''
-  ).trim()
-
+  const characterSlug = String(event.context.params.characterSlug || '').trim()
   if (!projectSlug || !characterSlug) {
     throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
   }

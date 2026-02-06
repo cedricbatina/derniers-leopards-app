@@ -59,6 +59,23 @@ useHead(() => ({
 }))
 
 /**
+ * ROUTING (pro): 1 card = 1 lien, centralisé ici.
+ * => facile à maintenir / changer sans toucher le template.
+ */
+const linkMap = {
+  principles: {
+    auth: '/register',
+    roles: '/explore/workflow',
+    audit: '/explore/timeline',
+  },
+  levels: {
+    viewer: '/explore/editors',
+    editor: '/explore/writing',
+    owner: '/register',
+  },
+}
+
+/**
  * Reveal on scroll
  */
 let io
@@ -135,52 +152,70 @@ onBeforeUnmount(() => {
       </div>
     </div>
 
-    <!-- PRINCIPLES -->
+    <!-- PRINCIPLES (cards cliquables individuellement) -->
     <div class="grid gap-4 lg:grid-cols-3">
-      <div class="card card-hover card-accent accent-earth js-reveal">
-        <div class="card-body space-y-2">
-          <div class="badge badge-accent w-fit">
-            <Icon name="mdi:cookie-lock" aria-hidden="true" />
-            {{ t('explore.access.cards.auth.badge') }}
+      <NuxtLink
+        :to="localePath(linkMap.principles.auth)"
+        class="card-link focus-ring js-reveal"
+        aria-label="Accès — Authentification"
+      >
+        <div class="card card-hover card-accent accent-earth bg-surface2 h-full">
+          <div class="card-body space-y-2">
+            <div class="badge badge-accent w-fit">
+              <Icon name="mdi:cookie-lock" aria-hidden="true" />
+              {{ t('explore.access.cards.auth.badge') }}
+            </div>
+            <div class="font-extrabold text-lg title-gradient">
+              {{ t('explore.access.cards.auth.title') }}
+            </div>
+            <p class="text-sm text-muted">
+              {{ t('explore.access.cards.auth.desc') }}
+            </p>
           </div>
-          <div class="font-extrabold text-lg title-gradient">
-            {{ t('explore.access.cards.auth.title') }}
-          </div>
-          <p class="text-sm text-muted">
-            {{ t('explore.access.cards.auth.desc') }}
-          </p>
         </div>
-      </div>
+      </NuxtLink>
 
-      <div class="card card-hover card-accent accent-river js-reveal">
-        <div class="card-body space-y-2">
-          <div class="badge badge-accent w-fit">
-            <Icon name="mdi:shield-account-outline" aria-hidden="true" />
-            {{ t('explore.access.cards.roles.badge') }}
+      <NuxtLink
+        :to="localePath(linkMap.principles.roles)"
+        class="card-link focus-ring js-reveal"
+        aria-label="Accès — Permissions"
+      >
+        <div class="card card-hover card-accent accent-river bg-surface2 h-full">
+          <div class="card-body space-y-2">
+            <div class="badge badge-accent w-fit">
+              <Icon name="mdi:shield-account-outline" aria-hidden="true" />
+              {{ t('explore.access.cards.roles.badge') }}
+            </div>
+            <div class="font-extrabold text-lg title-gradient">
+              {{ t('explore.access.cards.roles.title') }}
+            </div>
+            <p class="text-sm text-muted">
+              {{ t('explore.access.cards.roles.desc') }}
+            </p>
           </div>
-          <div class="font-extrabold text-lg title-gradient">
-            {{ t('explore.access.cards.roles.title') }}
-          </div>
-          <p class="text-sm text-muted">
-            {{ t('explore.access.cards.roles.desc') }}
-          </p>
         </div>
-      </div>
+      </NuxtLink>
 
-      <div class="card card-hover card-accent accent-forest js-reveal">
-        <div class="card-body space-y-2">
-          <div class="badge badge-accent w-fit">
-            <Icon name="mdi:lock-check-outline" aria-hidden="true" />
-            {{ t('explore.access.cards.audit.badge') }}
+      <NuxtLink
+        :to="localePath(linkMap.principles.audit)"
+        class="card-link focus-ring js-reveal"
+        aria-label="Accès — Traçabilité"
+      >
+        <div class="card card-hover card-accent accent-forest bg-surface2 h-full">
+          <div class="card-body space-y-2">
+            <div class="badge badge-accent w-fit">
+              <Icon name="mdi:lock-check-outline" aria-hidden="true" />
+              {{ t('explore.access.cards.audit.badge') }}
+            </div>
+            <div class="font-extrabold text-lg title-gradient">
+              {{ t('explore.access.cards.audit.title') }}
+            </div>
+            <p class="text-sm text-muted">
+              {{ t('explore.access.cards.audit.desc') }}
+            </p>
           </div>
-          <div class="font-extrabold text-lg title-gradient">
-            {{ t('explore.access.cards.audit.title') }}
-          </div>
-          <p class="text-sm text-muted">
-            {{ t('explore.access.cards.audit.desc') }}
-          </p>
         </div>
-      </div>
+      </NuxtLink>
     </div>
 
     <!-- LEVELS -->
@@ -202,50 +237,68 @@ onBeforeUnmount(() => {
         </div>
 
         <div class="grid gap-3 sm:grid-cols-3 mt-4">
-          <div class="card card-hover bg-surface2 card-accent accent-earth js-reveal">
-            <div class="card-body space-y-2">
-              <div class="badge badge-accent w-fit">
-                <Icon name="mdi:eye-outline" aria-hidden="true" />
-                {{ t('explore.access.levels.viewer.badge') }}
+          <NuxtLink
+            :to="localePath(linkMap.levels.viewer)"
+            class="card-link focus-ring js-reveal"
+            aria-label="Niveau d’accès — Lecture"
+          >
+            <div class="card card-hover bg-surface2 card-accent accent-earth h-full">
+              <div class="card-body space-y-2">
+                <div class="badge badge-accent w-fit">
+                  <Icon name="mdi:eye-outline" aria-hidden="true" />
+                  {{ t('explore.access.levels.viewer.badge') }}
+                </div>
+                <div class="font-extrabold title-gradient">
+                  {{ t('explore.access.levels.viewer.title') }}
+                </div>
+                <p class="text-sm text-muted">
+                  {{ t('explore.access.levels.viewer.desc') }}
+                </p>
               </div>
-              <div class="font-extrabold title-gradient">
-                {{ t('explore.access.levels.viewer.title') }}
-              </div>
-              <p class="text-sm text-muted">
-                {{ t('explore.access.levels.viewer.desc') }}
-              </p>
             </div>
-          </div>
+          </NuxtLink>
 
-          <div class="card card-hover bg-surface2 card-accent accent-river js-reveal">
-            <div class="card-body space-y-2">
-              <div class="badge badge-accent w-fit">
-                <Icon name="mdi:pencil-outline" aria-hidden="true" />
-                {{ t('explore.access.levels.editor.badge') }}
+          <NuxtLink
+            :to="localePath(linkMap.levels.editor)"
+            class="card-link focus-ring js-reveal"
+            aria-label="Niveau d’accès — Édition"
+          >
+            <div class="card card-hover bg-surface2 card-accent accent-river h-full">
+              <div class="card-body space-y-2">
+                <div class="badge badge-accent w-fit">
+                  <Icon name="mdi:pencil-outline" aria-hidden="true" />
+                  {{ t('explore.access.levels.editor.badge') }}
+                </div>
+                <div class="font-extrabold title-gradient">
+                  {{ t('explore.access.levels.editor.title') }}
+                </div>
+                <p class="text-sm text-muted">
+                  {{ t('explore.access.levels.editor.desc') }}
+                </p>
               </div>
-              <div class="font-extrabold title-gradient">
-                {{ t('explore.access.levels.editor.title') }}
-              </div>
-              <p class="text-sm text-muted">
-                {{ t('explore.access.levels.editor.desc') }}
-              </p>
             </div>
-          </div>
+          </NuxtLink>
 
-          <div class="card card-hover bg-surface2 card-accent accent-copper js-reveal">
-            <div class="card-body space-y-2">
-              <div class="badge badge-accent w-fit">
-                <Icon name="mdi:crown-outline" aria-hidden="true" />
-                {{ t('explore.access.levels.owner.badge') }}
+          <NuxtLink
+            :to="localePath(linkMap.levels.owner)"
+            class="card-link focus-ring js-reveal"
+            aria-label="Niveau d’accès — Pilotage"
+          >
+            <div class="card card-hover bg-surface2 card-accent accent-copper h-full">
+              <div class="card-body space-y-2">
+                <div class="badge badge-accent w-fit">
+                  <Icon name="mdi:crown-outline" aria-hidden="true" />
+                  {{ t('explore.access.levels.owner.badge') }}
+                </div>
+                <div class="font-extrabold title-gradient">
+                  {{ t('explore.access.levels.owner.title') }}
+                </div>
+                <p class="text-sm text-muted">
+                  {{ t('explore.access.levels.owner.desc') }}
+                </p>
               </div>
-              <div class="font-extrabold title-gradient">
-                {{ t('explore.access.levels.owner.title') }}
-              </div>
-              <p class="text-sm text-muted">
-                {{ t('explore.access.levels.owner.desc') }}
-              </p>
             </div>
-          </div>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -291,5 +344,12 @@ onBeforeUnmount(() => {
 .js-reveal.is-revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* “card link” clean + accessible */
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 </style>

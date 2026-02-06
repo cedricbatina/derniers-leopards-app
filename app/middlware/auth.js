@@ -1,17 +1,21 @@
-import { dbQuery } from '../../../server/utils/db.js'
+// app/middleware/auth.js
+import { useAuthStore } from '~/stores/auth.store'
 
-export default defineEventHandler(async (event) => {
-  const user = event.context.user
-  if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
+export default defineNuxtRouteMiddleware(async (to) => {
+  const auth = useAuthStore()
 
-  const slug = String(event.context.params.slug || '').trim()
-  if (!slug) throw createError({ statusCode: 400, statusMessage: 'Invalid slug' })
+  if (process.client && !auth.user?.id && !auth.isLoading && typeof auth.fetchMe === 'function') {
+    await auth.fetchMe().catch(() => {})
+  }
 
-  const res = await dbQuery(
-    `DELETE FROM projects WHERE owner_id=? AND slug=?`,
-    [user.id, slug]
-  )
+  if (auth.user?.id) return
 
-  if (!res?.affectedRows) throw createError({ statusCode: 404, statusMessage: 'Not found' })
-  return { ok: true }
+  const redirect = typeof to.fullPath === 'string' ? to.fullPath : '/'
+  let loginPath = '/login'
+  try {
+    const localePath = useLocalePath()
+    loginPath = localePath('/login')
+  } catch {}
+
+  return navigateTo({ path: loginPath, query: { redirect } })
 })

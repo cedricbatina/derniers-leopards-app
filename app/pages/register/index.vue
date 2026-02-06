@@ -252,9 +252,15 @@
 </template>
 
 <script setup>
+definePageMeta({ middleware: 'guest' })
+
+
 import { ref, computed } from 'vue'
 import { useRouter, useI18n, useLocalePath } from '#imports'
 import { useAuthStore } from '~/stores/auth.store'
+
+
+
 
 const auth = useAuthStore()
 const router = useRouter()

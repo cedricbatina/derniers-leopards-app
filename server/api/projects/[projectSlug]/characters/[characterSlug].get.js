@@ -12,12 +12,17 @@ export default defineEventHandler(async (event) => {
   const project = await getProjectByOwnerSlug(user.id, projectSlug)
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
+  const { trashed } = getQuery(event)
+  const allowTrashed = String(trashed || '') === '1' ? 1 : 0
+
   const rows = await dbQuery(
-    `SELECT id, project_id, slug, name, description, created_at, updated_at
+    `
+     SELECT id, project_id, slug, name, description, created_at, updated_at, deleted_at
      FROM characters
-     WHERE project_id=? AND slug=?
-     LIMIT 1`,
-    [project.id, characterSlug]
+     WHERE project_id=? AND slug=? AND (? = 1 OR deleted_at IS NULL)
+     LIMIT 1
+     `,
+    [project.id, characterSlug, allowTrashed]
   )
 
   if (!rows?.length) throw createError({ statusCode: 404, statusMessage: 'Not found' })

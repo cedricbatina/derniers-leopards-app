@@ -1,20 +1,13 @@
-//server\api\projects\[projectSlug]\scenes\restore.post.js
-import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+// server/api/projects/[projectSlug]/scenes/[sceneSlug]/restore.post.js
+import { dbQuery } from '../../../../../utils/db.js'
+import { getProjectByOwnerSlug } from '../../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
   if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
   const projectSlug = String(event.context.params.projectSlug || '').trim()
-  const body = await readBody(event).catch(() => ({}))
-
-  // Backward-compat: this endpoint is /scenes/restore (no :sceneSlug)
-  // so we accept slug from body.
-  const sceneSlug = String(
-    event.context.params.sceneSlug || body?.sceneSlug || body?.scene_slug || body?.slug || ''
-  ).trim()
-
+  const sceneSlug = String(event.context.params.sceneSlug || '').trim()
   if (!projectSlug || !sceneSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
 
   const project = await getProjectByOwnerSlug(user.id, projectSlug)
@@ -30,5 +23,15 @@ export default defineEventHandler(async (event) => {
   )
 
   if (!res?.affectedRows) throw createError({ statusCode: 404, statusMessage: 'Not found' })
-  return { ok: true }
+
+  const rows = await dbQuery(
+    `
+    SELECT * FROM scenes
+    WHERE project_id=? AND slug=?
+    LIMIT 1
+    `,
+    [project.id, sceneSlug]
+  )
+
+  return { ok: true, scene: rows[0] || null }
 })

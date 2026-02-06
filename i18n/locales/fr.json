@@ -53,7 +53,16 @@
     "search": "Rechercher",
     "filter": "Filtrer",
     "clear": "Effacer",
-    "confirm": "Confirmer"
+    "confirm": "Confirmer",
+       "start": "Commencer",
+      "backExplore": "Retour explorer",
+      "backGuide": "Retour guide",
+      "home": "Accueil",
+      "backHome": "Retour accueil",
+      "structuring": "Structuration",
+      "timeline": "Chronologie",
+      "accessRoles": "Accès & rôles",
+      "studios": "Studios"
   },
 
   "nav": {
@@ -99,13 +108,13 @@
 
     "verify": {
       "sent": "Un email de confirmation a été envoyé.",
-      "success": "Email confirmé. Vous pouvez vous connecter.",
+      "success": "Email confirmé. Tu peux te connecter.",
       "invalid": "Lien invalide ou expiré."
     },
 
     "reset": {
       "sent": "Si l’adresse existe, un email de réinitialisation a été envoyé.",
-      "success": "Mot de passe mis à jour. Vous pouvez vous connecter.",
+      "success": "Mot de passe mis à jour. Tu peux te connecter.",
       "invalid": "Lien invalide ou expiré."
     }
   },
@@ -285,7 +294,7 @@
   
   "userInline": {
     "guestLabel": "Invité",
-    "guestHelper": "Connectez-vous pour accéder à votre espace.",
+    "guestHelper": "Connecte-toi pour accéder à ton espace.",
     "fallbackUser": "Utilisateur",
     "dashboard": "Tableau de bord",
     "logout": "Déconnexion",
@@ -348,7 +357,270 @@
 
     }
   },
+
   "explore": {
+     "index": {
+      "hero": {
+        "badge": "Explorer",
+        "title": "Le guide Sonekeno",
+        "lead": "Des pages courtes, concrètes, pour organiser un univers narratif (roman, saga, série, jeu, film) avec une base cohérente."
+      },
+      "forWho": {
+        "title": "Pour qui ?",
+        "subtitle": "Quatre entrées selon ton profil.",
+        "badge": "Profils"
+      },
+      "cards": {
+        "writing": {
+          "title": "Écriture",
+          "desc": "Personnages, scènes, notes, versions."
+        },
+        "editors": {
+          "title": "Éditeurs",
+          "desc": "Cohérence, révisions, livrables."
+        },
+        "studios": {
+          "title": "Studios",
+          "desc": "Adaptations : bible + pipeline."
+        },
+        "creators": {
+          "title": "Créateurs",
+          "desc": "Arts & média : lore, cartes, etc."
+        }
+      },
+      "features": {
+        "structuring": {
+          "badge": "Structuration",
+          "title": "Une base claire",
+          "desc": "Organisez vos contenus sans perdre la cohérence."
+        },
+        "timeline": {
+          "badge": "Chronologie",
+          "title": "Piloter le temps",
+          "desc": "Gérez événements, périodes, versions et révisions."
+        },
+        "access": {
+          "badge": "Accès",
+          "title": "Sécurité & rôles",
+          "desc": "Travail individuel ou équipe (évolutif)."
+        }
+      },
+      "modules": {
+        "title": "Modules",
+        "subtitle": "Les briques de base pour organiser un univers narratif.",
+        "badge": "Outils",
+        "cards": {
+          "characters": {
+            "title": "Personnages",
+            "desc": "Fiches, relations, rôles, narrateurs."
+          },
+          "scenes": {
+            "title": "Scènes",
+            "desc": "Structure, objectifs, versions, liens au canon."
+          },
+          "timeline": {
+            "title": "Chronologie",
+            "desc": "Arcs, périodes, événements, révisions."
+          },
+          "glossary": {
+            "title": "Glossaire",
+            "desc": "Termes, définitions, canon, variantes."
+          }
+        }
+      },
+      "workflow": {
+        "badge": "Workflow",
+        "title": "Créer → Structurer → Publier",
+        "desc": "Une approche simple, extensible, prête pour la production.",
+        "cta": "Voir les étapes"
+      }
+    },
+      "common": {
+    "loading": "Chargement…",
+      "learnMore": "En savoir plus",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour",
+    "continue": "Continuer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "clear": "Effacer",
+    "confirm": "Confirmer",
+       "start": "Commencer",
+      "backExplore": "Retour explorer",
+      "backGuide": "Retour guide",
+      "home": "Accueil",
+      "backHome": "Retour accueil",
+      "structuring": "Structuration",
+      "timeline": "Chronologie",
+      "accessRoles": "Accès & rôles",
+      "studios": "Studios"
+  },
+     "charactersPage": {
+    "hero": {
+      "badge": "Personnages",
+      "title": "Stabiliser le canon des personnages",
+      "lead": "Crée des fiches réutilisables, relie les relations et garde un historique propre (arcs, versions, décisions).",
+      "ctaOpen": "Ouvrir le module"
+    },
+    "pillars": {
+      "profile": { "badge": "Fiche", "title": "Profil structuré", "desc": "Identité, logline, motivations, secrets, statuts — tout au même endroit." },
+      "relations": { "badge": "Relations", "title": "Liens explicites", "desc": "Filiation, alliances, conflits, dettes : tes relations deviennent navigables et vérifiables." },
+      "roles": { "badge": "Rôles", "title": "Rôle narratif", "desc": "POV, présents, mentions : connecte aux scènes et à la chronologie sans perdre la cohérence." }
+    },
+    "outputs": {
+      "title": "Ce que tu gagnes",
+      "subtitle": "Moins de contradictions, plus de réutilisation.",
+      "badge": "Résultat",
+      "one": { "badge": "Cohérence", "title": "Un canon stable", "desc": "Les mêmes infos partout, même après réécriture." },
+      "two": { "badge": "Réutilisation", "title": "Fiches recombinables", "desc": "Un personnage sert dans plusieurs scènes, arcs, exports." },
+      "three": { "badge": "Équipe", "title": "Lisible en production", "desc": "Éditeurs et studios comprennent vite le “qui fait quoi”." }
+    },
+    "bottom": {
+      "badge": "Suite logique",
+      "title": "Et les scènes ?",
+      "desc": "Une bonne fiche personnage devient puissante quand elle est reliée aux scènes (objectifs, lieux, temps).",
+      "ctaNext": "Aller à Scènes"
+    }
+  },
+
+  "scenesPage": {
+    "hero": {
+      "badge": "Scènes",
+      "title": "Structurer les scènes sans perdre le fil",
+      "lead": "Objectifs, conflit, issue, lieux, temps, liens au canon : une scène devient un bloc clair, révisable, partageable.",
+      "ctaOpen": "Ouvrir le module"
+    },
+    "pillars": {
+      "card": { "badge": "Structure", "title": "Une scène lisible", "desc": "Objectif, tension, issue : ce qui se passe, pourquoi, et ce qui change." },
+      "links": { "badge": "Liens", "title": "Connectée au canon", "desc": "Relie personnages, lieux, objets, glossaire et notes de cohérence." },
+       "structure": {
+          "badge": "Structure",
+          "title": "Objectif → conflit → issue",
+          "desc": "Une scène avance quelque chose. On pose l’intention, la tension, puis le résultat — sans flou."
+        },
+        "casting": {
+          "badge": "Casting & contexte",
+          "title": "Qui est là, où, quand",
+          "desc": "Présents, mentions, POV, lieu, temps : les scènes deviennent des nœuds reliés aux personnages et au monde."
+        },
+        "versions": {
+          "badge": "Versions",
+          "title": "Réécrire sans casser",
+          "desc": "Tu changes l’ordre, tu fusionnes, tu découpes — tout reste traçable et cohérent grâce aux liens."
+        }
+    },
+   "outputs": {
+        "title": "Ce que tu gagnes",
+        "subtitle": "Des scènes lisibles, reliées, et exploitables en production.",
+        "badge": "Résultat",
+        "one": {
+          "badge": "Lisibilité",
+          "title": "Une scène = une intention",
+          "desc": "Moins de scènes “brouillon” : tu sais pourquoi elle existe et ce qu’elle change."
+        },
+        "two": {
+          "badge": "Cohérence",
+          "title": "Liens au canon",
+          "desc": "Personnages, lieux, objets, événements : la scène est connectée, donc vérifiable."
+        },
+        "three": {
+          "badge": "Production",
+          "title": "Exports plus propres",
+          "desc": "Script, bible, dossier d’édition : une structure qui se convertit mieux en livrables."
+        }
+      },
+      "bottom": {
+        "badge": "Suite logique",
+        "title": "Place les scènes dans le temps",
+        "desc": "Une scène devient vraiment utile quand tu l’ancre dans une timeline : événements, périodes, arcs, versions.",
+        "ctaNext": "Aller à Chronologie"
+      }
+  },
+
+  "glossaryPage": {
+    "hero": {
+      "badge": "Glossaire",
+      "title": "Un lexique qui protège la cohérence",
+      "lead": "Termes, définitions, canon, variantes : ton univers garde le même vocabulaire, même en équipe et en révision.",
+      "ctaOpen": "Ouvrir le module"
+    },
+    "pillars": {
+      "terms": { "badge": "Termes", "title": "Définitions claires", "desc": "Un terme = une définition, des exemples, et des notes de canon." },
+      "canon": { "badge": "Canon", "title": "Règles stables", "desc": "Ce qui est vrai dans l’univers reste documenté (et daté si besoin)." },
+      "variants": { "badge": "Variantes", "title": "Variantes & traductions", "desc": "Orthographes, synonymes, langues : tout est maîtrisé et retrouvable." }
+    },
+    "outputs": {
+      "title": "Ce que tu gagnes",
+      "subtitle": "Moins d’ambiguïtés, plus de continuité.",
+      "badge": "Résultat",
+      "one": { "badge": "Cohérence", "title": "Terminologie solide", "desc": "Le même mot, le même sens, partout." },
+      "two": { "badge": "Équipe", "title": "Transmission immédiate", "desc": "Les collaborateurs comprennent vite les termes du monde." },
+      "three": { "badge": "Production", "title": "Sorties clean", "desc": "Bibles, annexes, dossiers : le glossaire alimente les livrables." }
+    },
+    "bottom": {
+      "badge": "Suite logique",
+      "title": "Structurer pour relier",
+      "desc": "Le glossaire devient vraiment utile quand l’univers est structuré en entités et liens.",
+      "ctaNext": "Aller à Structuration"
+    }
+  }
+,
+    "timelinePage": {
+  "hero": {
+    "badge": "Chronologie",
+    "title": "Piloter le temps et les arcs narratifs",
+    "lead": "Pose des événements, regroupe en périodes, relie aux scènes/personnages, et garde des versions sans te contredire.",
+    "ctaWorkflow": "Voir le workflow"
+  },
+  "pillars": {
+    "events": {
+      "badge": "Événements",
+      "title": "Ce qui arrive",
+      "desc": "Chaque événement a une date/période, un lieu, des personnages, et un impact dans l’univers."
+    },
+    "arcs": {
+      "badge": "Arcs & périodes",
+      "title": "Le rythme du récit",
+      "desc": "Segmente : arcs, saisons, campagnes, règnes, âges… et comprends la progression globale."
+    },
+    "versions": {
+      "badge": "Versions",
+      "title": "Révisions sans chaos",
+      "desc": "On corrige, on déplace, on renomme — sans casser les liens (scènes, fiches, références)."
+    }
+  },
+  "practice": {
+    "title": "Concrètement",
+    "subtitle": "Trois usages qui rendent la timeline immédiatement utile.",
+    "badge": "Pratique",
+    "one": {
+      "badge": "Vision",
+      "title": "Voir les contradictions",
+      "desc": "Dates impossibles, âges incohérents, déplacements trop rapides : la timeline expose les erreurs."
+    },
+    "two": {
+      "badge": "Liens",
+      "title": "Relier au contenu",
+      "desc": "Un événement peut pointer vers des scènes, des personnages, des lieux, et des notes de canon."
+    },
+    "three": {
+      "badge": "Pilotage",
+      "title": "Garder le contrôle",
+      "desc": "Quand tu réécris, tu sais exactement ce qui change et ce qui reste vrai."
+    }
+  },
+  "bottom": {
+    "badge": "Suite logique",
+    "title": "Et si vous travaillez à plusieurs ?",
+    "desc": "Avec des rôles et une sécurité claire, la cohérence reste intacte même en mode équipe/studio.",
+    "ctaAccess": "Aller à Accès"
+  }
+}
+,
     "access": {
   "hero": {
     "badge": "Accès",
@@ -399,72 +671,65 @@
     "desc": "Commence solo, puis ajoute des rôles quand ton projet devient une saga, une équipe, ou un studio.",
     "ctaWorkflow": "Voir les étapes"
   }
-}
-,
-    "scenesPage": {
-  "hero": {
-    "badge": "Scènes",
-    "title": "Structurer les scènes sans perdre le fil",
-    "lead": "Chaque scène devient une unité claire : objectif, conflit, lieu/temps, personnages présents, et liens au canon. Tu peux réviser sans casser la cohérence.",
-    "ctaOpen": "Ouvrir les scènes",
-    "ctaNext": "Voir la chronologie"
-  },
-  "pillars": {
-    "card": {
-      "badge": "Structure",
-      "title": "Une fiche de scène solide",
-      "desc": "Objectif, conflit, issue, POV, lieu/temps : tu sais exactement ce que la scène apporte."
-    },
-    "links": {
-      "badge": "Liens",
-      "title": "Connectée au canon",
-      "desc": "Relie la scène aux personnages, lieux, événements, objets, règles et notes de l’univers."
-    },
-    "versions": {
-      "badge": "Versions",
-      "title": "Révisions maîtrisées",
-      "desc": "Réécris, coupe, fusionne, déplace : garde l’historique et évite les contradictions."
+},
+  "workflow": {
+      "badge": "Workflow",
+      "title": "Une approche simple, prête production",
+      "lead": "L’idée : partir d’un projet, structurer les éléments, puis exporter/partager sans perdre la cohérence (versions, chronologie, liens).",
+      "quickNav": {
+        "step1": "Étape 1",
+        "step2": "Étape 2",
+        "step3": "Étape 3"
+      },
+      "steps": {
+        "one": {
+          "badge": "Étape 1",
+          "kicker": "Workflow",
+          "title": "Créez un projet",
+          "desc": "Livre, saga, jeu, carte, script : un conteneur unique (titre, résumé, narrateurs…) pour stabiliser le canon.",
+          "sectionTitle": "Inclut",
+          "bullets": {
+            "0": "Identité du projet (titre / slug)",
+            "1": "Résumé + variantes (progressif)",
+            "2": "Narrateurs / points de vue (si utile)"
+          },
+          "cta": "Voir les projets"
+        },
+        "two": {
+          "badge": "Étape 2",
+          "kicker": "Workflow",
+          "title": "Structurez",
+          "desc": "Personnages, scènes, chronologie, glossaire : entités + liens pour garder la cohérence quand l’univers grossit.",
+          "sectionTitle": "Pilier",
+          "bullets": {
+            "0": "Entités (personnages, lieux, concepts)",
+            "1": "Relations et dépendances",
+            "2": "Chronologie (arcs, périodes, versions)"
+          }
+        },
+        "three": {
+          "badge": "Étape 3",
+          "kicker": "Workflow",
+          "title": "Publiez / partagez",
+          "desc": "Export, collaboration, adaptation : préparer les sorties sans casser les liens entre les données.",
+          "sectionTitle": "Sorties typiques",
+          "bullets": {
+            "0": "Exports / éditions",
+            "1": "Partage contrôlé (rôles)",
+            "2": "Pipeline adaptation (studio)"
+          }
+        }
+      },
+      "bottom": {
+        "badge": "Prochaine étape",
+        "title": "Passer à l’action",
+        "desc": "Crée un projet, structure un personnage + une scène, puis pose 3 événements dans la timeline."
+      }
     }
-  },
-  "outputs": {
-    "title": "Ce que tu gagnes",
-    "subtitle": "Plus de clarté, moins de flou, et un univers plus facile à produire.",
-    "badge": "Résultat",
-    "one": {
-      "badge": "Clarté",
-      "title": "Une scène = une fonction",
-      "desc": "Tu vois ce que la scène fait (révélation, bascule, tension) et pourquoi elle existe."
-    },
-    "two": {
-      "badge": "Cohérence",
-      "title": "Moins de contradictions",
-      "desc": "Personnages, dates, lieux, règles : les incohérences apparaissent plus vite."
-    },
-    "three": {
-      "badge": "Production",
-      "title": "Sorties plus simples",
-      "desc": "Chapitrage, exports, bible, adaptation : une structure prête pour l’édition/studio."
-    }
-  },
-  "bottom": {
-    "badge": "Suite logique",
-    "title": "Place les scènes dans le temps",
-    "desc": "Quand tes scènes sont structurées, la chronologie devient un outil de contrôle : arcs, événements, versions.",
-    "ctaNext": "Aller à Chronologie"
   }
-}
+
 ,
-    "common": {
-      "start": "Commencer",
-      "backExplore": "Retour explorer",
-      "backGuide": "Retour guide",
-      "home": "Accueil",
-      "backHome": "Retour accueil",
-      "structuring": "Structuration",
-      "timeline": "Chronologie",
-      "accessRoles": "Accès & rôles",
-      "studios": "Studios"
-    },
+  
     "index": {
       "hero": {
         "badge": "Explorer",
@@ -541,7 +806,7 @@
         "cta": "Voir les étapes"
       }
     }
-  },
+  ,
 "landing": {
   "hero": {
     "kicker": "Plateforme de création",
@@ -599,6 +864,5 @@
     "q3": { "q": "Et si je veux publier ?", "a": "Tu pourras rendre un projet public plus tard via Explore, sans mélanger ton travail privé." }
   }
 }
-
 
 }
