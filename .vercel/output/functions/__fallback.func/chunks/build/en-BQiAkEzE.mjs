@@ -1,0 +1,250 @@
+const resource = {
+  "app": {
+    "name": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sonekeno" } },
+    "tagline": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "A space to create and organize" } },
+    "logoAlt": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "App logo" } },
+    "meta": {
+      "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 4, "k": "name" }, { "t": 3, "v": " — Writing Studio" }] } },
+      "description": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Organize your characters, scenes, timeline, and glossary in one place to keep your story consistent from start to finish." } },
+      "ogTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 4, "k": "name" }, { "t": 3, "v": " — Writing Studio" }] } },
+      "ogDescription": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "A clean workspace to structure your characters, scenes, timeline, and project lexicon." } },
+      "ogImageAlt": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "App preview" } },
+      "keywords": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "writing studio, writing organization, characters, scenes, timeline, glossary, worldbuilding" } },
+      "themeColorLight": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "#FBF8F1" } },
+      "themeColorDark": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "#0C0C10" } }
+    }
+  },
+  "a11y": {
+    "skipToContent": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Skip to content" } },
+    "mainNav": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Main navigation" } }
+  },
+  "lang": {
+    "label": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Language" } },
+    "fr": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "FR" } },
+    "pt": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "PT" } },
+    "en": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "EN" } }
+  },
+  "theme": {
+    "aria": { "t": 0, "b": { "t": 2, "i": [{ "t": 3, "v": "Theme: " }, { "t": 4, "k": "mode" }, { "t": 3, "v": ". " }, { "t": 4, "k": "action" }] } },
+    "modes": {
+      "system": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "System" } },
+      "dark": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Dark" } },
+      "light": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Light" } }
+    },
+    "toDark": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Switch to dark mode" } },
+    "toLight": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Switch to light mode" } },
+    "toSystem": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Use system setting" } }
+  },
+  "common": {
+    "loading": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Loading…" } },
+    "save": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Save" } },
+    "cancel": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Cancel" } },
+    "delete": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Delete" } },
+    "edit": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Edit" } },
+    "close": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Close" } },
+    "back": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Back" } },
+    "continue": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Continue" } },
+    "search": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Search" } },
+    "filter": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Filter" } },
+    "clear": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Clear" } },
+    "confirm": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Confirm" } }
+  },
+  "nav": {
+    "aria": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Main navigation" } },
+    "home": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Home" } },
+    "dashboard": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Dashboard" } },
+    "characters": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Characters" } },
+    "scenes": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Scenes" } },
+    "timeline": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Timeline" } },
+    "glossary": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Glossary" } },
+    "tags": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Tags" } },
+    "profile": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Profile" } },
+    "settings": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Settings" } },
+    "login": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign in" } },
+    "register": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign up" } },
+    "logout": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign out" } }
+  },
+  "auth": {
+    "login": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign in" } },
+    "register": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign up" } },
+    "email": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Email" } },
+    "password": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Password" } },
+    "passwordConfirm": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Confirm password" } },
+    "newPassword": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "New password" } },
+    "currentPassword": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Current password" } },
+    "loginTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign in" } },
+    "registerTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Create an account" } },
+    "forgotTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Forgot password" } },
+    "resetTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Reset password" } },
+    "verifyTitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Email verification" } },
+    "loginCta": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign in" } },
+    "registerCta": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Create account" } },
+    "forgotCta": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Send link" } },
+    "resetCta": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Update password" } },
+    "forgotLink": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Forgot your password?" } },
+    "noAccount": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Don’t have an account?" } },
+    "haveAccount": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Already have an account?" } },
+    "verify": {
+      "sent": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "A confirmation email has been sent." } },
+      "success": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Email confirmed. You can now sign in." } },
+      "invalid": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Invalid or expired link." } }
+    },
+    "reset": {
+      "sent": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "If the address exists, a reset email has been sent." } },
+      "success": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Password updated. You can now sign in." } },
+      "invalid": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Invalid or expired link." } }
+    }
+  },
+  "forms": {
+    "required": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "This field is required." } },
+    "invalidEmail": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Invalid email address." } },
+    "minChars": { "t": 0, "b": { "t": 2, "i": [{ "t": 3, "v": "At least " }, { "t": 4, "k": "n" }, { "t": 3, "v": " characters." }] } },
+    "passwordMismatch": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Passwords do not match." } }
+  },
+  "errors": {
+    "generic": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Something went wrong." } },
+    "unauthorized": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Unauthorized access." } },
+    "forbidden": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Access denied." } },
+    "notFound": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Resource not found." } },
+    "validation": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Invalid data." } },
+    "network": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Network error. Please try again." } }
+  },
+  "home": {
+    "hero": {
+      "kicker": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Writing Studio" } },
+      "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "A clear workspace to structure your story world" } },
+      "subtitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Centralize your characters, scenes, timeline, and glossary to keep continuity solid and find information in seconds." } },
+      "ctaPrimary": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Explore characters" } },
+      "ctaSecondary": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "View timeline" } }
+    },
+    "tiles": {
+      "characters": {
+        "label": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Characters" } },
+        "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Files" } },
+        "desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Profile, arcs, relationships" } }
+      },
+      "scenes": {
+        "label": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Scenes" } },
+        "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Casting" } },
+        "desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "POV, presence, mentions" } }
+      },
+      "timeline": {
+        "label": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Timeline" } },
+        "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Milestones" } },
+        "desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Events + tags" } }
+      },
+      "glossary": {
+        "label": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Glossary" } },
+        "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Lexicon" } },
+        "desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Terms, rules, notes" } }
+      }
+    },
+    "modules": {
+      "characters": {
+        "badge": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Characters" } },
+        "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Structured character files" } },
+        "desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Logline, secrets, objects, relationships, statuses." } }
+      },
+      "scenes": {
+        "badge": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Scenes" } },
+        "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Structure & casting" } },
+        "desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Chapter-based organization, scene–character links." } }
+      },
+      "timeline": {
+        "badge": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Timeline" } },
+        "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Events" } },
+        "desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Dates, tags, and connections to scenes." } }
+      },
+      "glossary": {
+        "badge": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Glossary" } },
+        "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Project lexicon" } },
+        "desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Vocabulary, rituals, terminology consistency." } }
+      }
+    },
+    "trust": {
+      "text": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Designed to stay fast, readable, and reliable as your project grows." } },
+      "cta": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign in" } }
+    }
+  },
+  "domain": {
+    "character": {
+      "singular": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Character" } },
+      "plural": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Characters" } },
+      "create": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Create a character" } },
+      "edit": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Edit character" } },
+      "profile": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Profile" } },
+      "clans": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Clans" } },
+      "kinships": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Relationships" } },
+      "roles": {
+        "pov": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Point of view" } },
+        "present": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Present" } },
+        "mentioned": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Mentioned" } }
+      }
+    },
+    "scene": {
+      "singular": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Scene" } },
+      "plural": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Scenes" } },
+      "create": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Create a scene" } },
+      "edit": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Edit scene" } },
+      "pov": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Point of view" } },
+      "objective": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Objective" } },
+      "conflict": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Conflict" } },
+      "outcome": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Outcome" } }
+    },
+    "timeline": {
+      "singular": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Event" } },
+      "plural": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Timeline" } },
+      "date": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Date" } },
+      "tags": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Tags" } }
+    }
+  },
+  "footer": {
+    "rights": { "t": 0, "b": { "t": 2, "i": [{ "t": 3, "v": "© " }, { "t": 4, "k": "year" }, { "t": 3, "v": " " }, { "t": 4, "k": "name" }] } },
+    "tags": {
+      "mobile": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Mobile-first" } },
+      "multilang": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Multilingual" } },
+      "offline": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Offline" } },
+      "search": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Search" } }
+    }
+  },
+  "emails": {
+    "common": {
+      "greeting": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Hello," } },
+      "ignore": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "If you did not request this, you can safely ignore this message." } },
+      "closing": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sincerely," } },
+      "signature": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Les derniers léopards" } }
+    },
+    "verify": {
+      "subject": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Please confirm your email address — Les derniers léopards" } },
+      "intro": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Please confirm your email address by clicking the link below:" } }
+    },
+    "reset": {
+      "subject": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Password reset — Les derniers léopards" } },
+      "intro": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "To reset your password, click the link below:" } }
+    }
+  },
+  "userInline": {
+    "guestLabel": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Guest" } },
+    "guestHelper": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign in to access your workspace." } },
+    "fallbackUser": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "User" } },
+    "dashboard": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Dashboard" } },
+    "logout": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign out" } },
+    "login": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sign in" } },
+    "register": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Create account" } },
+    "todayLabel": { "t": 0, "b": { "t": 2, "i": [{ "t": 3, "v": "Today: " }, { "t": 4, "k": "date" }] } },
+    "status": {
+      "online": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Signed in" } },
+      "offline": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Signed out" } }
+    },
+    "role": {
+      "standard": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Standard account" } },
+      "admin": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Administrator" } },
+      "editor": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Editor" } },
+      "moderator": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Moderator" } },
+      "generic": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "User" } }
+    }
+  }
+};
+
+export { resource as default };
+//# sourceMappingURL=en-BQiAkEzE.mjs.map
