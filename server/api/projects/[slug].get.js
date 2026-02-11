@@ -14,7 +14,14 @@ export default defineEventHandler(async (event) => {
 
   const rows = await dbQuery(
     `
-    SELECT id, owner_id, slug, title, title_en, title_pt, logline, pitch, status, created_at, updated_at, deleted_at
+    SELECT
+      id, owner_id,
+      slug, public_slug,
+      title, title_en, title_pt,
+      logline, pitch, cover_url,
+      status, visibility,
+      published_at,
+      created_at, updated_at, deleted_at
     FROM projects
     WHERE owner_id=? AND slug=? AND deleted_at IS NULL
     LIMIT 1

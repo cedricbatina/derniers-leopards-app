@@ -1,3 +1,4 @@
+/*STRUCTURE DES TABLES LE 15-01-2025 . Mais depuis on a rajouté quelques tables, et fait aussi le ALTER users 
 how tables
 Profilage [Éditer en ligne] [ Éditer ] [ Créer le code source PHP ] [ Actualiser]
 + Options

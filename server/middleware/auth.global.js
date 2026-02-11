@@ -6,6 +6,9 @@ import { verifyAccessToken } from '../utils/jwt.js'
 const PUBLIC_PREFIXES = [
   '/api/health',
 
+  // Public read API
+  '/api/public',
+
   // Auth public
   '/api/auth/register',
   '/api/auth/login',

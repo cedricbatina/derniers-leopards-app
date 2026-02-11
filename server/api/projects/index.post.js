@@ -25,20 +25,28 @@ export default defineEventHandler(async (event) => {
   const titlePt = body?.title_pt ? String(body.title_pt).trim() : null
   const logline = body?.logline ? String(body.logline).trim() : null
   const pitch = body?.pitch ? String(body.pitch).trim() : null
+  const coverUrl = body?.cover_url ? String(body.cover_url).trim().slice(0, 512) : null
   const status = ['draft', 'active', 'archived'].includes(body?.status) ? body.status : 'active'
 
   try {
     await dbQuery(
       `
-      INSERT INTO projects (owner_id, slug, title, title_en, title_pt, logline, pitch, status)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO projects (owner_id, slug, title, title_en, title_pt, logline, pitch, cover_url, status)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
       `,
-      [user.id, slug, title, titleEn, titlePt, logline, pitch, status]
+      [user.id, slug, title, titleEn, titlePt, logline, pitch, coverUrl, status]
     )
 
     const rows = await dbQuery(
       `
-      SELECT id, owner_id, slug, title, title_en, title_pt, logline, pitch, status, created_at, updated_at
+      SELECT
+        id, owner_id,
+        slug, public_slug,
+        title, title_en, title_pt,
+        logline, pitch, cover_url,
+        status, visibility,
+        published_at,
+        created_at, updated_at
       FROM projects
       WHERE owner_id=? AND slug=?
       LIMIT 1

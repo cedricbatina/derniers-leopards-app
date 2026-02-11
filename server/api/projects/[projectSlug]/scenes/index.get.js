@@ -65,7 +65,6 @@ export default defineEventHandler(async (event) => {
       query,
       query,
       query,
-      query,
     ]
   )
 

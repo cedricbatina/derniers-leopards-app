@@ -315,3 +315,110 @@ Collaboration / rôles
 Exports (PDF / MD / JSON)
 
 Conclusion
+
+
+
+
+
+Journal de dev — 2026-02-06 (Sonekeno / Derniers léopards app)
+Objectif de la séance
+
+Stabiliser l’auth front (Nuxt) et remettre de l’ordre dans la structure des routes/pages “Studio / Projet”, afin que l’UX et les endpoints API soient cohérents et qu’on puisse reprendre le CRUD/édition (scènes, personnages, etc.) sans friction.
+
+Problèmes rencontrés
+
+Unknown route middleware: 'guest'
+
+Le router Nuxt indiquait “Valid middleware: .” (liste vide), donc aucun route middleware nommé n’était détecté.
+
+Contribue au blocage des pages /login et /register dès qu’on ajoutait definePageMeta({ middleware: 'guest' }).
+
+Erreur Pinia
+
+Crash type : getActivePinia() was called but there was no active Pinia
+
+Cause : tentative d’utiliser un store (useAuthStore()) trop tôt (au moment de l’évaluation/hoisting de definePageMeta quand on passait par composables/fonctions au mauvais endroit).
+
+Conclusion : éviter d’appeler les stores “hors runtime navigation” dans les méta.
+
+Doute sur server/middleware/auth.global.js
+
+Vérification : ce middleware est Nitro/server-only et ne concerne que /api/*. Il n’est pas responsable des erreurs de router Nuxt.
+
+Résolution / décisions techniques
+
+✅ Solution “propre” adoptée : enregistrement des middlewares de route via plugin
+
+Plutôt que de dépendre de l’auto-discovery app/middleware/* (qui ne remonte rien chez nous), on a créé un plugin qui enregistre :
+
+guest : redirige vers /workspace si déjà connecté
+
+auth : redirige vers /login si non connecté (+ redirect)
+
+Avantage : plus de “Unknown route middleware”, et on garde des pages propres via :
+
+definePageMeta({ middleware: 'auth' })
+
+definePageMeta({ middleware: 'guest' })
+
+✅ Normalisation des routes/pages
+
+Constat arborescence réelle : les pages projet sont maintenant sous :
+
+app/pages/projects/[slug]/characters
+
+app/pages/projects/[slug]/scenes
+
+app/pages/projects/[slug]/timeline
+
+app/pages/projects/[slug]/glossary
+
+Décision : assumer ce choix et aligner la navigation (au lieu de mélanger /studio/projects/... et /projects/...).
+
+✅ Correctifs de navigation à faire (ou déjà lancés)
+
+Dans la page liste des projets, remplacer les liens :
+
+/studio/projects/${slug} → /projects/${slug}
+
+Ajouter un hub projet : app/pages/projects/[slug]/index.vue
+
+Page “menu” vers Characters / Scenes / Timeline / Glossary (et Books si présent).
+
+Nettoyage structure : clarifier/supprimer doublons (ex: studios/ si c’est un reste test, glossary.vue si conflit avec dossier glossary/).
+
+État actuel (fin de séance)
+
+Auth front : fonctionnel grâce au plugin middleware (plus de blocage router).
+
+Routes projet : structure principale confirmée sous /projects/[slug]/....
+
+Prochaine étape : finaliser le “hub projet” + vérifier que chaque sous-page utilise bien route.params.slug pour appeler /api/projects/${slug}/....
+
+Perspectives / TODO pour demain
+
+Créer/valider app/pages/projects/[slug]/index.vue (hub) avec useLocalePath()
+
+Tiles vers : Scenes / Characters / Timeline / Glossary (+ Books si dispo)
+
+Mettre à jour la page liste projets (app/pages/projects/index.vue)
+
+Lien de chaque projet vers /projects/${slug}
+
+Audit des pages sous /projects/[slug]/...
+
+Vérifier “Back links”, useFetch → endpoints /api/projects/${slug}/...
+
+Ajouter systématiquement definePageMeta({ middleware: 'auth' }) sur les pages privées
+
+Nettoyage routes parasites
+
+Retirer/supprimer doublons : studios/ vs studio/, glossary.vue vs glossary/, etc.
+
+Reprise fonctionnelle
+
+Une fois la navigation stable : reprendre l’UX “écriture réelle” (Scenes editor), puis relation Scenes↔Characters, puis Timeline.
+
+Si tu veux, demain on démarre directement par :
+
+hub /projects/[slug] + correction des liens dans la liste projets, puis on test une boucle complète : login → projects → projet → scenes/characters.
