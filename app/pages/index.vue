@@ -206,7 +206,7 @@ onBeforeUnmount(() => {
 
               <!-- Studios -->
               <NuxtLink
-                :to="localePath('/explore/studios')"
+                :to="localePath('/explore/studio')"
                 class="card-link js-reveal"
                 :aria-label="t('landing.tiles.studios.title')"
               >
