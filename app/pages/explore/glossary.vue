@@ -6,15 +6,15 @@ const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
 
-const canonicalPath = computed(() => localePath('/explore/scenes'))
+const canonicalPath = computed(() => localePath('/explore/glossary'))
 const baseUrl = config.public?.SITE_URL || ''
 const canonicalUrl = computed(() => (baseUrl ? new URL(canonicalPath.value, baseUrl).toString() : canonicalPath.value))
 
 useSeoMeta({
-  title: () => t('seo.explore.scenesPage.title'),
-  description: () => t('seo.explore.scenesPage.description'),
-  ogTitle: () => t('seo.explore.scenesPage.title'),
-  ogDescription: () => t('seo.explore.scenesPage.description'),
+  title: () => t('seo.explore.glossary.title'),
+  description: () => t('seo.explore.glossary.description'),
+  ogTitle: () => t('seo.explore.glossary.title'),
+  ogDescription: () => t('seo.explore.glossary.description'),
   ogType: 'website',
   ogUrl: canonicalUrl,
 })
@@ -24,8 +24,8 @@ useHead({ link: [{ rel: 'canonical', href: canonicalUrl.value }] })
 const jsonLd = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: t('seo.explore.scenesPage.title'),
-  description: t('seo.explore.scenesPage.description'),
+  name: t('seo.explore.glossary.title'),
+  description: t('seo.explore.glossary.description'),
   inLanguage: locale.value,
   url: baseUrl || canonicalUrl.value,
 }))

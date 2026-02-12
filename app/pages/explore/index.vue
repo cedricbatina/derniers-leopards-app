@@ -130,7 +130,7 @@ onBeforeUnmount(() => {
             </div>
           </NuxtLink>
 
-          <NuxtLink :to="localePath('/explore/studios')" class="card-link js-reveal">
+          <NuxtLink :to="localePath('/explore/studio')" class="card-link js-reveal">
             <div class="card card-hover bg-surface2 card-accent accent-river">
               <div class="card-body space-y-2">
                 <div class="flex items-start justify-between gap-3">
