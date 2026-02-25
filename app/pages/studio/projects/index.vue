@@ -1,57 +1,149 @@
 <script setup>
 definePageMeta({ middleware: 'auth' })
 
-import { computed } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import { useLocalePath } from '#imports'
 
-const route = useRoute()
 const localePath = useLocalePath()
 
-const projectSlug = computed(() => String(route.params.slug || '').trim())
+const q = ref('')
+const trashed = ref(false)
+const creating = ref(false)
 
-const tiles = computed(() => ([
-  { label: 'Books',       icon: 'mdi:book-open-page-variant-outline', to: `/studio/projects/${projectSlug.value}/books`,       desc: 'Tomes, chapitres, structure.' },
-  { label: 'Scenes',      icon: 'mdi:movie-open-outline',             to: `/studio/projects/${projectSlug.value}/scenes`,      desc: 'Écriture, enjeux, arcs.' },
-  { label: 'Characters',  icon: 'mdi:account-group-outline',          to: `/studio/projects/${projectSlug.value}/characters`,  desc: 'Personnages, liens, fiches.' },
-  { label: 'Timeline',    icon: 'mdi:timeline-outline',               to: `/studio/projects/${projectSlug.value}/timeline`,    desc: 'Chronologie & événements.' },
-  { label: 'Glossary',    icon: 'mdi:book-alphabet',                  to: `/studio/projects/${projectSlug.value}/glossary`,    desc: 'Lexique, lieux, concepts.' },
-]))
+const form = reactive({
+  title: '',
+  slug: '',
+  logline: '',
+  status: 'active',
+})
+
+const queryObj = computed(() => ({
+  q: q.value?.trim() || undefined,
+  trashed: trashed.value ? 1 : undefined,
+}))
+
+const { data, pending, refresh, error } = await useFetch(
+  () => '/api/projects',
+  { query: queryObj, credentials: 'include' }
+)
+
+async function createProject() {
+  if (!form.title.trim()) return
+  creating.value = true
+  try {
+    await $fetch('/api/projects', {
+      method: 'POST',
+      credentials: 'include',
+      body: {
+        title: form.title,
+        slug: form.slug || undefined,
+        logline: form.logline || undefined,
+        status: form.status || 'active',
+      },
+    })
+    form.title = ''
+    form.slug = ''
+    form.logline = ''
+    form.status = 'active'
+    await refresh()
+  } finally {
+    creating.value = false
+  }
+}
+
+function projectTo(p) {
+  return localePath(`/studio/projects/${p.slug}`)
+}
 </script>
 
 <template>
   <div class="page space-y-4">
     <div class="flex items-start justify-between gap-3">
       <div>
-        <h1 class="text-xl font-semibold">Studio</h1>
-        <p class="text-sm text-muted">
-          Projet : <span class="font-semibold">{{ projectSlug }}</span>
-        </p>
+        <h1 class="text-xl font-semibold">Projects</h1>
+        <p class="text-sm text-muted">Crée et organise tes projets.</p>
       </div>
-
-      <NuxtLink :to="localePath('/studio')" class="btn btn-ghost focus-ring">
-        <Icon name="mdi:arrow-left" aria-hidden="true" />
-        Projects
-      </NuxtLink>
     </div>
 
-    <div class="grid gap-3 md:grid-cols-2">
-      <NuxtLink
-        v-for="t in tiles"
-        :key="t.label"
-        :to="localePath(t.to)"
-        class="card hover:bg-surface2 transition"
-      >
-        <div class="card-body flex items-start gap-3">
-          <div class="badge">
-            <Icon :name="t.icon" aria-hidden="true" />
-          </div>
-
-          <div class="min-w-0">
-            <div class="font-extrabold">{{ t.label }}</div>
-            <div class="text-sm text-muted mt-1">{{ t.desc }}</div>
-          </div>
+    <div class="card">
+      <div class="card-body grid gap-3 md:grid-cols-5">
+        <div class="md:col-span-2">
+          <label class="text-xs text-muted">Search</label>
+          <input v-model="q" class="input w-full" placeholder="title / slug…" />
         </div>
-      </NuxtLink>
+
+        <div class="md:col-span-1">
+          <label class="text-xs text-muted">Status</label>
+          <select v-model="form.status" class="input w-full">
+            <option value="draft">draft</option>
+            <option value="active">active</option>
+            <option value="archived">archived</option>
+          </select>
+        </div>
+
+        <div class="md:col-span-1">
+          <label class="text-xs text-muted">New title</label>
+          <input v-model="form.title" class="input w-full" placeholder="e.g. Les derniers léopards" />
+        </div>
+
+        <div class="md:col-span-1">
+          <label class="text-xs text-muted">Slug (optional)</label>
+          <input v-model="form.slug" class="input w-full" placeholder="les-derniers-leopards" />
+        </div>
+
+        <div class="md:col-span-5">
+          <label class="text-xs text-muted">Logline (optional)</label>
+          <input v-model="form.logline" class="input w-full" placeholder="Une logline courte…" />
+        </div>
+
+        <div class="md:col-span-5 flex items-center justify-between">
+          <label class="text-sm text-muted flex items-center gap-2 select-none">
+            <input type="checkbox" v-model="trashed" />
+            Trashed
+          </label>
+
+          <button class="btn btn-primary focus-ring" :disabled="creating" @click="createProject">
+            <Icon name="mdi:plus" aria-hidden="true" />
+            Create
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="error" class="card">
+      <div class="card-body text-sm">Error: {{ error?.statusMessage || error }}</div>
+    </div>
+
+    <div class="card overflow-hidden">
+      <div class="card-body flex items-center justify-between">
+        <div class="text-sm text-muted">
+          <span v-if="pending">Loading…</span>
+          <span v-else>{{ data?.projects?.length || 0 }} project(s)</span>
+        </div>
+      </div>
+
+      <div class="divide-y divide-border">
+        <NuxtLink
+          v-for="p in (data?.projects || [])"
+          :key="p.slug"
+          class="block p-4 hover:bg-surface2"
+          :to="projectTo(p)"
+          :class="p.deleted_at ? 'pointer-events-none opacity-60' : ''"
+        >
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="font-extrabold">{{ p.title }}</div>
+              <div class="text-xs text-muted mt-1">{{ p.slug }}</div>
+              <div v-if="p.logline" class="text-sm text-muted mt-1">{{ p.logline }}</div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="badge">{{ p.status }}</span>
+              <span v-if="p.deleted_at" class="badge">trashed</span>
+            </div>
+          </div>
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>

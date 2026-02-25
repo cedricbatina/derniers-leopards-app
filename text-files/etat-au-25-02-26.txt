@@ -1,0 +1,427 @@
+mboté. est ce que tu peux maider a finalier le projet : D:\works\lectures\Les derniers léopards\derniers-leopards-app  .pour finaliser les trucs generaux et passer a la creation . livres , scenarios, scenes, personnages, etc etc. veux tu? analyse avec moi poiur avancer prpoprmeent
+
+Mboté. Oui, je veux bien. J’ai fait un premier tour rapide du projet et voilà ce que j’ai trouvé (utile pour “finaliser les trucs généraux” et préparer la création).
+
+Constats clés
+
+L’API existe déjà pour projects, books, characters, scenes et chapters (chapters = GET uniquement).
+L’UI est déjà là pour:
+Livres: app/pages/studio/projects/[slug]/books
+Personnages et scènes: app/pages/projects/[slug]/characters et app/pages/projects/[slug]/scenes
+Il y a un décalage de routes: le studio pointe vers /studio/projects/[slug]/scenes et /studio/projects/[slug]/characters, mais ces pages sont dans /projects/[slug]/... → navigation cassée.
+La page index.vue est incorrecte (utilise route.params.slug alors qu’il n’y a pas de slug). Il manque la liste de projets et la création de projet.
+Des pages placeholder existent: index.vue, index.vue, index.vue, pricing.vue, features.vue.
+Il n’y a pas encore de module création pour chapters, timeline, glossary, ni “scénario” (pas de table “scenario” dans Tables en DB.txt).
+Proposition de chemin clair
+
+Trucs généraux (structure)
+Fixer les routes studio (ramener personnages/scènes sous /studio/projects/[slug]/... ou créer des alias).
+Construire la page “liste des projets” + création projet sur /studio/projects (API déjà prête).
+Nettoyer ou finaliser les pages placeholder.
+Passer à la création
+Livres: déjà OK, à brancher dans la nav studio.
+Chapitres: ajouter CRUD (API + UI).
+Scènes & personnages: migrer sous studio + compléter champs.
+Timeline + glossaire: créer endpoints + pages.
+“Scénario”: à définir (projet? part? autre?).
+Questions rapides pour avancer proprement
+
+Tu veux que toute la création vive sous /studio (oui/non) ?
+“Scénario”, c’est quoi pour toi dans le modèle: projet, livre, part, ou autre objet avec ses propres champs ?
+On priorise quoi en premier: projets, livres+chapitres, scènes, personnages, timeline, glossaire ?
+Si tu valides la direction, je peux commencer par corriger la structure des routes et créer la liste de projets studio, puis enchaîner sur le module “livres + chapitres”.
+
+
+discutons . 1 cest quoi le mieux? studio ou pas? , scenario, je ne sais pas trop, et on priorise dans lordre projets. livres , chapitres, parties, scenes etc. que me conseille tmus?
+
+Voici mon conseil clair, pragmatique, et aligné avec ce que tu veux construire.
+
+Studio ou pas ?
+
+Oui, Studio.
+Raison simple: tout ce qui est création/édition doit être protégé et séparé du contenu public.
+Donc:
+/studio/... = création, édition, gestion
+/projects/... (ou /explore/...) = lecture/présentation
+“Scénario”, c’est quoi ?
+
+Si tu n’es pas sûr, ne crée pas une nouvelle “entité” tout de suite.
+Pour un MVP propre, tu peux traiter “scénario” comme:
+Un pitch/logline au niveau projet
+Une structure au niveau livre: parties → chapitres → scènes
+Quand tu sentiras le besoin d’un vrai module “scénario” (synopsis, arcs, thèmes), on le crée comme une table dédiée.
+Priorité conseillée (ton ordre, mais optimisé)
+
+Projets (liste + création + édition)
+Livres
+Parties (si tu les utilises vraiment, sinon saute)
+Chapitres
+Personnages
+Scènes
+Timeline
+Glossaire
+Pourquoi personnages avant scènes ?
+Parce que les scènes ont souvent besoin d’un POV, de liens, de fiches.
+Si tu préfères écrire d’abord la structure brute, inverse 5 et 6.
+
+Si tu es d’accord, je commence par:
+
+Uniformiser le studio (routes + page /studio/projects bien propre)
+Enchaîner sur livres → parties → chapitres
+Dis-moi juste:
+
+On garde “Parties” oui ou non ?
+Tu veux scènes avant personnages ou l’inverse ?
+
+1-oui on garde partie et 2 persnnaes avant scenes . go
+
+on a  ete coupé go
+
+
+Worked for 1h 6m 26s
+C’est reparti. J’ai avancé sur projets → livres → parties → chapitres → personnages → scènes, et j’ai aligné le studio comme demandé.
+
+Ce que j’ai fait
+
+Studio prêt pour la création
+Nouvelle page liste projets avec création + recherche: index.vue
+Ordre “personnages avant scènes” dans les raccourcis projet, et ajout d’un raccourci Books: index.vue
+Pages studio characters + scenes (routes corrigées):
+index.vue
+[characterSlug].vue
+index.vue
+[sceneSlug].vue
+Parties + chapitres (API + UI)
+API complète:
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/*
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/[partId]/chapters/*
+UI:
+index.vue
+[partId].vue
+Lien “Parts & Chapters” ajouté sur la page d’un livre:
+[bookSlug].vue
+Scènes + chapitres robustes (schema)
+schema.js pour détecter les colonnes et gérer chapters.project_id si absent
+Scènes corrigées pour vérifier l’appartenance au projet même si chapters.project_id n’existe pas
+Nettoyage placeholders cassés
+index.vue
+index.vue
+Timeline & Glossary placeholders dans studio
+timeline.vue
+glossary.vue
+Points importants
+
+Le module chapitres est branché via parties, comme tu l’as demandé.
+Les scènes utilisent maintenant la liste des chapitres avec part_no pour un affichage plus clair.
+L’ordre d’édition est maintenant cohérent avec ta priorité.
+À valider côté toi
+
+Navigation: /studio/projects → projet → books → parts → chapters → characters → scenes
+Création:
+Projet
+Livre
+Partie
+Chapitre
+Personnage
+Scène
+À noter
+
+J’ai deux fichiers temporaires que je n’ai pas pu supprimer à cause des restrictions:
+_tmp.txt
+_test.txt
+Si tu veux, je peux les supprimer avec une commande en mode élevé.
+
+Prochaine étape
+
+Tu veux que je passe à Timeline ensuite ?
+Ou qu’on complète chapitres (POV, dates, objectifs, cliffhanger, etc.) dans l’UI ?
+Dis-moi par quoi tu veux enchaîner.
+
+
+32 files changed
++2295
+-112
+Undo
+
+Review
+app/pages/projects/[slug]/index.vue
+app/pages/projects/index.vue
+app/pages/studio/projects/[slug]/books/[bookSlug].vue
+app/pages/studio/projects/[slug]/books/[bookSlug]/parts/[partId].vue
+app/pages/studio/projects/[slug]/books/[bookSlug]/parts/index.vue
+app/pages/studio/projects/[slug]/characters/[characterSlug].vue
+app/pages/studio/projects/[slug]/characters/_test.txt
+app/pages/studio/projects/[slug]/characters/index.vue
+app/pages/studio/projects/[slug]/glossary.vue
+app/pages/studio/projects/[slug]/index.vue
+app/pages/studio/projects/[slug]/scenes/[sceneSlug].vue
+app/pages/studio/projects/[slug]/scenes/index.vue
+app/pages/studio/projects/[slug]/timeline.vue
+app/pages/studio/projects/index.vue
+server/api/projects/[projectSlug]/books/[bookSlug]/_tmp.txt
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/[partId].delete.js
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/[partId].get.js
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/[partId].put.js
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/[partId]/chapters/[chapterId].delete.js
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/[partId]/chapters/[chapterId].get.js
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/[partId]/chapters/[chapterId].put.js
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/[partId]/chapters/index.get.js
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/[partId]/chapters/index.post.js
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/index.get.js
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/index.post.js
+server/api/projects/[projectSlug]/chapters/index.get.js
+server/api/projects/[projectSlug]/scenes/[sceneSlug].get.js
+server/api/projects/[projectSlug]/scenes/[sceneSlug].put.js
+server/api/projects/[projectSlug]/scenes/index.get.js
+server/api/projects/[projectSlug]/scenes/index.post.js
+server/utils/books.js
+server/utils/schema.js
+resume le travail fait
+
+Voici un résumé clair et concret de ce qui a été fait dans le projet Les derniers léopards/derniers-leopards-app.
+
+1. Studio et navigation (base de travail)
+
+Nouvelle page liste des projets avec création + recherche:
+index.vue
+Ordre de création respecté (personnages avant scènes) + ajout d’accès direct aux livres:
+index.vue
+Pages studio pour personnages et scènes (désormais sous /studio):
+index.vue
+[characterSlug].vue
+index.vue
+[sceneSlug].vue
+2. Livres → Parties → Chapitres
+
+API complète pour parties:
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/*
+API complète pour chapitres:
+server/api/projects/[projectSlug]/books/[bookSlug]/parts/[partId]/chapters/*
+UI de gestion parties + chapitres:
+index.vue
+[partId].vue
+Lien “Parts & Chapters” ajouté dans la page d’un livre:
+[bookSlug].vue
+3. Robustesse DB (chapters/scenes)
+
+Ajout utilitaire pour détecter les colonnes de table:
+schema.js
+Les endpoints scènes/chapitres gèrent correctement:
+DB avec chapters.project_id
+DB sans chapters.project_id (fallback via parts → books)
+Scènes retournent maintenant chapter_no pour l’affichage côté UI:
+index.get.js
+4. Placeholders nettoyés
+
+Pages publiques “projects” sans HTML cassé:
+index.vue
+index.vue
+5. Studio placeholders
+
+Timeline:
+timeline.vue
+Glossary:
+glossary.vue
+6. Fichiers temporaires restés (à supprimer)
+
+_tmp.txt
+_test.txt
+Si tu veux, je peux les supprimer en mode élevé.
+
+Dis-moi si tu veux la suite sur timeline, glossary, ou l’enrichissement des champs chapitres/scènes.
+
+
+ok oui avancons
+
+Parfait. Tu veux avancer sur quoi en premier maintenant ?
+
+Timeline (API + UI)
+Glossary (API + UI)
+Enrichir Chapitres/Scènes (plus de champs + UI avancée)
+Et tu veux que je supprime les fichiers temporaires (ça nécessite une autorisation “mode élevé”) ?
+
+Réponds par: 1/2/3 + supprimer oui/non.
+
+
+c ontinuons sur 1 2 3
+
+
+Worked for 29m 15s
+J’ai avancé sur 1 + 2 + 3. Voici ce qui est en place.
+
+Ce qui est fait
+
+Timeline (API + UI)
+Glossary (API + UI)
+Enrichissement chapitres + scènes (UI + API déjà prête)
+Détails clés
+
+Timeline CRUD (API)
+
+index.get.js
+
+index.post.js
+
+[eventId].get.js
+
+[eventId].put.js
+
+[eventId].delete.js
+
+Timeline UI (studio)
+
+timeline.vue
+
+Page complète avec recherche, création, édition inline et suppression
+
+Glossary CRUD (API)
+
+index.get.js
+
+index.post.js
+
+[termId].get.js
+
+[termId].put.js
+
+[termId].delete.js
+
+Glossary UI (studio)
+
+glossary.vue
+
+Page complète avec recherche, filtre langue, création, édition inline et suppression
+
+Chapitres enrichis (UI dédiée)
+
+Nouvelle page détail chapitre avec champs avancés:
+
+[chapterId].vue
+
+Champs ajoutés: POV, dates in-story, objectif, cliffhanger, word target, InDesign master
+
+Partie → chapitres (navigation)
+
+Liste de chapitres dans la page de partie maintenant pointe vers la page détail:
+
+[partId].vue
+
+Scènes enrichies (timeline)
+
+Sélecteur d’événement timeline ajouté dans l’édition de scène:
+
+[sceneSlug].vue
+
+Notes techniques
+
+Les APIs timeline/glossary sont robustes aux colonnes manquantes (détection automatique via schema.js).
+Les listes chapitres renvoient maintenant part_no pour un affichage plus clair.
+Tests
+
+Tests non lancés.
+Fichiers temporaires encore présents
+
+_tmp.txt
+_test.txt
+Si tu veux, je les supprime en mode élevé.
+
+Prochaine étape proposée
+
+Ajouter la gestion locations (API + UI) pour lier chapitres/scènes à des lieux.
+Ajouter tags (chapitres/scènes).
+Brancher les événements timeline dans la création de scènes (pas seulement l’édition).
+Dis-moi si je continue sur 1, 2 ou 3.
+
+
+15 files changed
++1508
+-76
+Undo
+
+Review
+app/pages/studio/projects/[slug]/books/[bookSlug]/parts/[partId].vue
+app/pages/studio/projects/[slug]/books/[bookSlug]/parts/[partId]/chapters/[chapterId].vue
+app/pages/studio/projects/[slug]/glossary.vue
+app/pages/studio/projects/[slug]/scenes/[sceneSlug].vue
+app/pages/studio/projects/[slug]/timeline.vue
+server/api/projects/[projectSlug]/glossary/[termId].delete.js
+server/api/projects/[projectSlug]/glossary/[termId].get.js
+server/api/projects/[projectSlug]/glossary/[termId].put.js
+server/api/projects/[projectSlug]/glossary/index.get.js
+server/api/projects/[projectSlug]/glossary/index.post.js
+server/api/projects/[projectSlug]/timeline/[eventId].delete.js
+server/api/projects/[projectSlug]/timeline/[eventId].get.js
+server/api/projects/[projectSlug]/timeline/[eventId].put.js
+server/api/projects/[projectSlug]/timeline/index.get.js
+server/api/projects/[projectSlug]/timeline/index.post.js
+et maintenant. on fait quoi. puis je commencer a rediger  ou pas
+
+Tu peux commencer à rédiger. Le flux est déjà suffisant pour écrire personnages + parties + chapitres + scènes.
+
+Ce que tu peux faire maintenant
+
+Créer un projet
+Créer un livre
+Créer les parties
+Créer les chapitres
+Créer les personnages
+Commencer les scènes
+Ce qui reste à améliorer (non bloquant pour écrire)
+
+Locations (lieux)
+Tags (chapitres/scènes)
+Timeline plus riche (ok pour l’instant, on a déjà)
+Si tu veux, je continue l’amélioration pendant que tu rédiges.
+Dis-moi simplement ce que tu préfères:
+
+J’ajoute locations
+J’ajoute tags
+Je peaufine les écrans (UI/UX)
+Rien, tu rédiges maintenant
+
+je redige via quelle page ,  e aussi on a des pages comme dahsboird qui ne sont pas les vraies. ( juste du code pour ne pas bloquer nuxt ) , et aussi eje vois des incoherences. et comment je rentre dans studios/* ert zuddi le footer nest pas du tout UI ni UX  etc etc.n
+
+Voici le plus direct.
+
+Où rédiger
+
+Va sur /studio/projects
+Ouvre ton projet
+Ouvre Books → Parts & Chapters
+Crée une Partie, puis des Chapitres
+Va sur Scenes et ouvre une scène
+Tu rédiges dans le champ Content de la scène
+Comment entrer dans le studio
+
+Connecte-toi sur /login
+Ensuite va sur /studio/projects
+Si tu veux, je mets un bouton “Studio” visible dans la barre du haut quand tu es connecté
+Pages “dashboard” qui sont placeholders
+Il y a encore des pages “bouchons” (juste pour que Nuxt ne casse).
+Dis-moi si tu veux que je:
+
+Les supprime du menu
+Les redirige vers le vrai studio
+Les remplace par de vraies pages
+Incohérences
+Dis-moi lesquelles tu vois (ou fais-moi une liste rapide).
+Sinon je peux lancer un audit et te sortir une liste claire des incohérences à corriger.
+
+Footer UI/UX
+Oui, il est faible.
+Je peux le refondre complètement.
+Dis-moi juste si tu veux:
+
+Minimal et élégant
+Informatif (liens, stats, version, langue, support)
+Artistique / branding fort
+Si tu veux, je commence par:
+
+Ajouter un bouton Studio dans la nav quand on est connecté
+Nettoyer les placeholders
+Refaire le footer
+Tu me dis “go” et je le fais.
+
+
+A ce stade, on en ait ici, 
+On doit à present ecrire les studios/* , ecrire la vraie dashboard

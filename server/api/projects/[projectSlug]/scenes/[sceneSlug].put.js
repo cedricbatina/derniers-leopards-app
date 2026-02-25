@@ -1,5 +1,6 @@
 import { dbQuery } from '../../../../utils/db.js'
 import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+import { tableHasColumn } from '../../../../utils/schema.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -42,7 +43,20 @@ const rows0 = await dbQuery(
     const chapterId = Number(body.chapter_id)
     if (!Number.isFinite(chapterId) || chapterId <= 0) throw createError({ statusCode: 400, statusMessage: 'Invalid chapter_id' })
 
-    const chapRows = await dbQuery(`SELECT id, project_id FROM chapters WHERE id=? LIMIT 1`, [chapterId])
+    const hasProjectId = await tableHasColumn('chapters', 'project_id')
+    const chapRows = hasProjectId
+      ? await dbQuery(`SELECT id, project_id FROM chapters WHERE id=? LIMIT 1`, [chapterId])
+      : await dbQuery(
+        `
+        SELECT c.id, b.project_id
+        FROM chapters c
+        JOIN parts p ON p.id = c.part_id
+        JOIN books b ON b.id = p.book_id
+        WHERE c.id=?
+        LIMIT 1
+        `,
+        [chapterId]
+      )
     const chapter = chapRows[0]
     if (!chapter || Number(chapter.project_id) !== Number(project.id)) {
       throw createError({ statusCode: 400, statusMessage: 'chapter_id does not belong to this project' })

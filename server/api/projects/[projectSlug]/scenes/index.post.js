@@ -1,5 +1,6 @@
 import { dbQuery } from '../../../../utils/db.js'
 import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+import { tableHasColumn } from '../../../../utils/schema.js'
 
 function toSlug(input) {
   return String(input || '')
@@ -29,10 +30,20 @@ export default defineEventHandler(async (event) => {
   }
 
   // Vérifie que le chapter appartient au projet
-  const chapRows = await dbQuery(
-    `SELECT id, project_id FROM chapters WHERE id=? LIMIT 1`,
-    [chapterId]
-  )
+  const hasProjectId = await tableHasColumn('chapters', 'project_id')
+  const chapRows = hasProjectId
+    ? await dbQuery(`SELECT id, project_id FROM chapters WHERE id=? LIMIT 1`, [chapterId])
+    : await dbQuery(
+      `
+      SELECT c.id, b.project_id
+      FROM chapters c
+      JOIN parts p ON p.id = c.part_id
+      JOIN books b ON b.id = p.book_id
+      WHERE c.id=?
+      LIMIT 1
+      `,
+      [chapterId]
+    )
   const chapter = chapRows[0]
   if (!chapter || Number(chapter.project_id) !== Number(project.id)) {
     throw createError({ statusCode: 400, statusMessage: 'chapter_id does not belong to this project' })

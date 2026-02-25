@@ -1,6 +1,7 @@
 // server/api/projects/[projectSlug]/chapters/index.get.js
 import { dbQuery } from '../../../../utils/db.js'
 import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+import { tableHasColumn } from '../../../../utils/schema.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -12,17 +13,36 @@ export default defineEventHandler(async (event) => {
   const project = await getProjectByOwnerSlug(user.id, projectSlug)
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
-  // Minimal fields only (avoid coupling to optional columns like title/deleted_at).
-  const rows = await dbQuery(
-    `
-    SELECT id, project_id, chapter_no
-    FROM chapters
-    WHERE project_id=?
-    ORDER BY chapter_no ASC, id ASC
-    LIMIT 2000
-    `,
-    [project.id]
-  )
+  const hasProjectId = await tableHasColumn('chapters', 'project_id')
+
+  const rows = hasProjectId
+    ? await dbQuery(
+      `
+      SELECT
+        c.id, c.project_id, c.part_id, c.slug, c.chapter_no, c.title,
+        p.part_no, p.title AS part_title
+      FROM chapters c
+      LEFT JOIN parts p ON p.id = c.part_id
+      WHERE c.project_id=?
+      ORDER BY p.part_no ASC, c.chapter_no ASC, c.id ASC
+      LIMIT 2000
+      `,
+      [project.id]
+    )
+    : await dbQuery(
+      `
+      SELECT
+        c.id, b.project_id, c.part_id, c.slug, c.chapter_no, c.title,
+        p.part_no, p.title AS part_title
+      FROM chapters c
+      JOIN parts p ON p.id = c.part_id
+      JOIN books b ON b.id = p.book_id
+      WHERE b.project_id=?
+      ORDER BY p.part_no ASC, c.chapter_no ASC, c.id ASC
+      LIMIT 2000
+      `,
+      [project.id]
+    )
 
   return { project: { slug: project.slug, id: project.id }, chapters: rows }
 })

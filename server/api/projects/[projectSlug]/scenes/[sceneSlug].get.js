@@ -1,5 +1,6 @@
 import { dbQuery } from '../../../../utils/db.js'
 import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+import { tableHasColumn } from '../../../../utils/schema.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -21,13 +22,27 @@ export default defineEventHandler(async (event) => {
   const { trashed } = getQuery(event)
   const allowTrashed = String(trashed || '') === '1' ? 1 : 0
 
+  const hasChapterProjectId = await tableHasColumn('chapters', 'project_id')
+
+  const joinForProject = hasChapterProjectId
+    ? ``
+    : `
+    JOIN parts p ON p.id = c.part_id
+    JOIN books b ON b.id = p.book_id
+  `
+
+  const whereProject = hasChapterProjectId
+    ? `AND c.project_id=?`
+    : `AND b.project_id=?`
+
   const rows = await dbQuery(
     `
     SELECT s.*
     FROM scenes s
     JOIN chapters c ON c.id = s.chapter_id
+    ${joinForProject}
     WHERE s.project_id=?
-      AND c.project_id=?
+      ${whereProject}
       AND s.slug=?
       AND (? = 1 OR s.deleted_at IS NULL)
     LIMIT 1

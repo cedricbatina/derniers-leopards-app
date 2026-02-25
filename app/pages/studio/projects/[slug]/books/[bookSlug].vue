@@ -122,6 +122,14 @@ async function restoreBook () {
       </div>
 
       <div class="flex gap-2">
+        <NuxtLink
+          :to="localePath(`/studio/projects/${projectSlug}/books/${bookSlug}/parts`)"
+          class="btn btn-ghost focus-ring"
+        >
+          <Icon name="mdi:format-list-bulleted" aria-hidden="true" />
+          Parts & Chapters
+        </NuxtLink>
+
         <button class="btn btn-primary focus-ring" :disabled="saving || pending" @click="save">
           <Icon name="mdi:content-save-outline" aria-hidden="true" />
           Save

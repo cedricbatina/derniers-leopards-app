@@ -1,6 +1,7 @@
 // server/api/projects/[projectSlug]/scenes/index.get.js
 import { dbQuery } from '../../../../utils/db.js'
 import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+import { tableHasColumn } from '../../../../utils/schema.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -28,18 +29,37 @@ export default defineEventHandler(async (event) => {
 
   const trashedFlag = String(trashed || '') === '1' ? 1 : 0
 
-  const rows = await dbQuery(
-    `
+  const hasChapterProjectId = await tableHasColumn('chapters', 'project_id')
+
+  const baseSelect = `
     SELECT
       s.id, s.project_id, s.slug, s.chapter_id, s.scene_no, s.title,
+      c.chapter_no,
       s.pov_character_id, s.location_id, s.timeline_event_id,
       s.objective, s.time_of_day, s.summary, s.content, s.conflict, s.turning_point,
       s.outcome, s.hook, s.indesign_style,
       s.created_at, s.updated_at, s.deleted_at
     FROM scenes s
     JOIN chapters c ON c.id = s.chapter_id
+  `
+
+  const joinForProject = hasChapterProjectId
+    ? ``
+    : `
+    JOIN parts p ON p.id = c.part_id
+    JOIN books b ON b.id = p.book_id
+  `
+
+  const whereProject = hasChapterProjectId
+    ? `AND c.project_id = ?`
+    : `AND b.project_id = ?`
+
+  const rows = await dbQuery(
+    `
+    ${baseSelect}
+    ${joinForProject}
     WHERE s.project_id = ?
-      AND c.project_id = ?
+      ${whereProject}
       AND (? IS NULL OR s.chapter_id = ?)
       AND (
         (? = 1 AND s.deleted_at IS NOT NULL) OR

@@ -139,10 +139,10 @@ async function removeProject () {
 
     <!-- Next shortcuts -->
     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-      <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/scenes`)">
+      <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/books`)">
         <div class="card-body">
-          <div class="font-extrabold">Scenes</div>
-          <div class="text-xs text-muted mt-1">Write & structure.</div>
+          <div class="font-extrabold">Books</div>
+          <div class="text-xs text-muted mt-1">Parts & chapters.</div>
         </div>
       </NuxtLink>
 
@@ -150,6 +150,13 @@ async function removeProject () {
         <div class="card-body">
           <div class="font-extrabold">Characters</div>
           <div class="text-xs text-muted mt-1">Arcs & relations.</div>
+        </div>
+      </NuxtLink>
+
+      <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/scenes`)">
+        <div class="card-body">
+          <div class="font-extrabold">Scenes</div>
+          <div class="text-xs text-muted mt-1">Write & structure.</div>
         </div>
       </NuxtLink>
 
