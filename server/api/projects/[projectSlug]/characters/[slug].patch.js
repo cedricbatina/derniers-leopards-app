@@ -54,62 +54,9 @@ export default defineEventHandler(async (event) => {
     params.push(String(body.slug).trim())
   }
 
-  if (body.surname !== undefined) {
-    updates.push('surname = ?')
-    params.push(body.surname ? String(body.surname).trim() : null)
-  }
-
-  if (body.age !== undefined) {
-    updates.push('age = ?')
-    params.push(body.age ? Number(body.age) : null)
-  }
-
-  if (body.gender !== undefined) {
-    updates.push('gender = ?')
-    params.push(body.gender ? String(body.gender).trim() : null)
-  }
-
-  if (body.role !== undefined) {
-    updates.push('role = ?')
-    params.push(body.role ? String(body.role).trim() : null)
-  }
-
-  if (body.species !== undefined) {
-    updates.push('species = ?')
-    params.push(body.species ? String(body.species).trim() : null)
-  }
-
-  if (body.birthplace !== undefined) {
-    updates.push('birthplace = ?')
-    params.push(body.birthplace ? String(body.birthplace).trim() : null)
-  }
-
-  if (body.birthdate !== undefined) {
-    updates.push('birthdate = ?')
-    params.push(body.birthdate ? String(body.birthdate).trim() : null)
-  }
-
-  if (body.avatar_url !== undefined) {
-    updates.push('avatar_url = ?')
-    params.push(body.avatar_url ? String(body.avatar_url).trim() : null)
-  }
-
-  if (body.status !== undefined) {
-    updates.push('status = ?')
-    params.push(body.status ? String(body.status).trim() : null)
-  }
-
-  // Update fullname if name or surname changed
-  if (body.name !== undefined || body.surname !== undefined) {
-    const currentChar = await dbQuery(
-      'SELECT name, surname FROM characters WHERE id = ?',
-      [character.id]
-    )
-    const newName = body.name !== undefined ? String(body.name).trim() : currentChar[0].name
-    const newSurname = body.surname !== undefined ? (body.surname ? String(body.surname).trim() : '') : (currentChar[0].surname || '')
-    
-    updates.push('fullname = ?')
-    params.push(`${newName} ${newSurname}`.trim())
+  if (body.description !== undefined) {
+    updates.push('description = ?')
+    params.push(body.description ? String(body.description).trim() : null)
   }
 
   if (!updates.length) {

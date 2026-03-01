@@ -31,11 +31,7 @@ export default defineEventHandler(async (event) => {
   const characterRows = await dbQuery(
     `
     SELECT 
-      id, project_id, slug,
-      name, surname, fullname, nickname,
-      age, birthdate, birthplace,
-      role, species, gender,
-      avatar_url, status,
+      id, project_id, slug, name, description,
       created_at, updated_at, deleted_at
     FROM characters
     WHERE project_id = ? AND slug = ? AND deleted_at IS NULL
@@ -55,7 +51,8 @@ export default defineEventHandler(async (event) => {
     `
     SELECT 
       s.id, s.slug, s.scene_no, s.title, s.chapter_id,
-      sc.role as character_role
+      sc.role as character_role,
+      sc.notes as character_notes
     FROM scene_characters sc
     JOIN scenes s ON sc.scene_id = s.id
     WHERE sc.character_id = ? AND s.deleted_at IS NULL
@@ -70,20 +67,6 @@ export default defineEventHandler(async (event) => {
     `
     SELECT 
       cr.id, cr.type, cr.description, cr.status,
-      c.id as related_character_id,
-      c.slug as related_character_slug,
-      c.name as related_character_name,
-      c.surname as related_character_surname,
-      c.avatar_url as related_character_avatar
-    FROM character_relationships cr
-    JOIN characters c ON cr.character_id_b = c.id
-    WHERE cr.character_id_a = ? AND c.deleted_at IS NULL
-    ORDER BY cr.type ASC
-    LIMIT 50
-    `,
-    [character.id]
-  )
-
   return { 
     project: { 
       id: project.id, 
@@ -92,7 +75,6 @@ export default defineEventHandler(async (event) => {
       owner_id: project.owner_id
     }, 
     character,
-    scenes,
-    relationships
+    scenes
   }
 })
