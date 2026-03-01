@@ -31,14 +31,11 @@ export default defineEventHandler(async (event) => {
   const characterRows = await dbQuery(
     `
     SELECT 
-      id, project_id, book_id, slug,
+      id, project_id, slug,
       name, surname, fullname, nickname,
       age, birthdate, birthplace,
       role, species, gender,
-      avatar_url,
-      description, personality, background,
-      motivations, conflicts, secrets,
-      status,
+      avatar_url, status,
       created_at, updated_at, deleted_at
     FROM characters
     WHERE project_id = ? AND slug = ? AND deleted_at IS NULL
@@ -57,7 +54,7 @@ export default defineEventHandler(async (event) => {
   const scenes = await dbQuery(
     `
     SELECT 
-      s.id, s.slug, s.scene_no, s.title, s.chapter_title,
+      s.id, s.slug, s.scene_no, s.title, s.chapter_id,
       sc.role as character_role
     FROM scene_characters sc
     JOIN scenes s ON sc.scene_id = s.id

@@ -27,9 +27,10 @@ export default defineEventHandler(async (event) => {
     `
     SELECT 
       s.id, s.project_id, s.slug, s.chapter_id, s.scene_no, s.title,
-      s.pov_character_id, s.setting, s.time_of_day,
-      s.objective, s.conflict, s.outcome, s.notes,
-      s.description, s.content,
+      s.pov_character_id, s.location_id, s.timeline_event_id,
+      s.objective, s.time_of_day, s.summary,
+      s.content, s.conflict, s.turning_point, s.outcome, s.hook,
+      s.indesign_style,
       s.created_at, s.updated_at, s.deleted_at,
       c.name as pov_character_name,
       c.surname as pov_character_surname,
@@ -47,7 +48,7 @@ export default defineEventHandler(async (event) => {
         ? IS NULL
         OR s.title LIKE CONCAT('%', ?, '%')
         OR s.slug LIKE CONCAT('%', ?, '%')
-        OR s.description LIKE CONCAT('%', ?, '%')
+        OR s.summary LIKE CONCAT('%', ?, '%')
       )
     ORDER BY s.scene_no ASC, s.id ASC
     LIMIT 500

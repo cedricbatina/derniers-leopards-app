@@ -64,9 +64,39 @@ export default defineEventHandler(async (event) => {
     params.push(body.age ? Number(body.age) : null)
   }
 
-  if (body.description !== undefined) {
-    updates.push('description = ?')
-    params.push(body.description || null)
+  if (body.gender !== undefined) {
+    updates.push('gender = ?')
+    params.push(body.gender ? String(body.gender).trim() : null)
+  }
+
+  if (body.role !== undefined) {
+    updates.push('role = ?')
+    params.push(body.role ? String(body.role).trim() : null)
+  }
+
+  if (body.species !== undefined) {
+    updates.push('species = ?')
+    params.push(body.species ? String(body.species).trim() : null)
+  }
+
+  if (body.birthplace !== undefined) {
+    updates.push('birthplace = ?')
+    params.push(body.birthplace ? String(body.birthplace).trim() : null)
+  }
+
+  if (body.birthdate !== undefined) {
+    updates.push('birthdate = ?')
+    params.push(body.birthdate ? String(body.birthdate).trim() : null)
+  }
+
+  if (body.avatar_url !== undefined) {
+    updates.push('avatar_url = ?')
+    params.push(body.avatar_url ? String(body.avatar_url).trim() : null)
+  }
+
+  if (body.status !== undefined) {
+    updates.push('status = ?')
+    params.push(body.status ? String(body.status).trim() : null)
   }
 
   // Update fullname if name or surname changed

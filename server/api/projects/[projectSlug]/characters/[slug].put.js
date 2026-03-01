@@ -81,47 +81,22 @@ export default defineEventHandler(async (event) => {
 
   if (body.gender !== undefined) {
     updates.push('gender = ?')
-    params.push(body.gender || null)
-  }
-
-  if (body.description !== undefined) {
-    updates.push('description = ?')
-    params.push(body.description || null)
-  }
-
-  if (body.personality !== undefined) {
-    updates.push('personality = ?')
-    params.push(body.personality || null)
-  }
-
-  if (body.background !== undefined) {
-    updates.push('background = ?')
-    params.push(body.background || null)
-  }
-
-  if (body.motivations !== undefined) {
-    updates.push('motivations = ?')
-    params.push(body.motivations || null)
-  }
-
-  if (body.conflicts !== undefined) {
-    updates.push('conflicts = ?')
-    params.push(body.conflicts || null)
-  }
-
-  if (body.secrets !== undefined) {
-    updates.push('secrets = ?')
-    params.push(body.secrets || null)
+    params.push(body.gender ? String(body.gender).trim() : null)
   }
 
   if (body.avatar_url !== undefined) {
     updates.push('avatar_url = ?')
-    params.push(body.avatar_url || null)
+    params.push(body.avatar_url ? String(body.avatar_url).trim() : null)
   }
 
-  if (body.book_id !== undefined) {
-    updates.push('book_id = ?')
-    params.push(body.book_id ? Number(body.book_id) : null)
+  if (body.nickname !== undefined) {
+    updates.push('nickname = ?')
+    params.push(body.nickname ? String(body.nickname).trim() : null)
+  }
+
+  if (body.status !== undefined) {
+    updates.push('status = ?')
+    params.push(body.status ? String(body.status).trim() : null)
   }
 
   // Update fullname if name or surname changed
