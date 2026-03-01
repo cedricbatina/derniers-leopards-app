@@ -29,12 +29,15 @@ export default defineEventHandler(async (event) => {
   const status = ['draft', 'active', 'archived'].includes(body?.status) ? body.status : 'active'
 
   try {
+    // Support parent_id and type
+    const parentId = body?.parent_id !== undefined ? body.parent_id : null;
+    const type = body?.type ? String(body.type).trim() : 'livre';
     await dbQuery(
       `
-      INSERT INTO projects (owner_id, slug, title, title_en, title_pt, logline, pitch, cover_url, status)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO projects (owner_id, slug, title, title_en, title_pt, logline, pitch, cover_url, status, parent_id, type)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `,
-      [user.id, slug, title, titleEn, titlePt, logline, pitch, coverUrl, status]
+      [user.id, slug, title, titleEn, titlePt, logline, pitch, coverUrl, status, parentId, type]
     )
 
     const rows = await dbQuery(
@@ -46,7 +49,8 @@ export default defineEventHandler(async (event) => {
         logline, pitch, cover_url,
         status, visibility,
         published_at,
-        created_at, updated_at
+        created_at, updated_at,
+        parent_id, type
       FROM projects
       WHERE owner_id=? AND slug=?
       LIMIT 1

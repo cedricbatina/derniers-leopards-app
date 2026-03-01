@@ -1,6 +1,5 @@
-// server/api/projects/[projectSlug]/characters/restore.post.js
-import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+import { dbQuery } from '../../../../../../utils/db.js'
+import { getBookByAccess } from '../../../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -8,7 +7,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }
 
-  const projectSlug = String(event.context.params.projectSlug || '').trim()
+  const bookSlug = String(event.context.params.bookSlug || '').trim()
   const body = await readBody(event).catch(() => ({}))
 
   // Backward-compat: this endpoint is /characters/restore (no :characterSlug)
@@ -17,22 +16,22 @@ export default defineEventHandler(async (event) => {
     event.context.params.characterSlug || body?.characterSlug || body?.character_slug || body?.slug || ''
   ).trim()
 
-  if (!projectSlug || !characterSlug) {
+  if (!bookSlug || !characterSlug) {
     throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
   }
 
-  const project = await getProjectByOwnerSlug(user.id, projectSlug)
-  if (!project) {
-    throw createError({ statusCode: 404, statusMessage: 'Project not found' })
+  const book = await getBookByAccess(user, bookSlug)
+  if (!book) {
+    throw createError({ statusCode: 404, statusMessage: 'Book not found' })
   }
 
   const res = await dbQuery(
     `
     UPDATE characters
     SET deleted_at = NULL
-    WHERE project_id = ? AND slug = ? AND deleted_at IS NOT NULL
+    WHERE book_id = ? AND slug = ? AND deleted_at IS NOT NULL
     `,
-    [project.id, characterSlug]
+    [book.id, characterSlug]
   )
 
   if (!res?.affectedRows) {
@@ -41,12 +40,12 @@ export default defineEventHandler(async (event) => {
 
   const rows = await dbQuery(
     `
-    SELECT id, project_id, slug, name, description, created_at, updated_at, deleted_at
+    SELECT id, book_id, slug, name, description, created_at, updated_at, deleted_at
     FROM characters
-    WHERE project_id = ? AND slug = ?
+    WHERE book_id = ? AND slug = ?
     LIMIT 1
     `,
-    [project.id, characterSlug]
+    [book.id, characterSlug]
   )
 
   return { ok: true, character: rows[0] || null }

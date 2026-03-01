@@ -104,6 +104,11 @@
             <Icon name="mdi:book-open-page-variant" aria-hidden="true" />
             <span>{{ t('nav.glossary') }}</span>
           </NuxtLink>
+
+          <NuxtLink v-if="isAuthed" :to="localePath('/studio')" class="pill pill-primary" active-class="pill-active">
+            <Icon name="mdi:briefcase" aria-hidden="true" />
+            <span>Studio</span>
+          </NuxtLink>
         </nav>
       </div>
     </header>
@@ -113,19 +118,40 @@
       <slot />
     </main>
 
-    <footer class="container-app pb-10 text-sm text-muted">
+    <footer class="container-app pb-10 text-sm text-muted premium-footer">
       <div class="divider my-6" />
-      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div>{{ t('footer.rights', { year }) }}</div>
-
-        <div class="flex flex-wrap items-center gap-2">
-          <span class="badge">{{ t('footer.tags.mobile') }}</span>
-          <span class="badge">{{ t('footer.tags.multilang') }}</span>
-          <span class="badge">{{ t('footer.tags.offline') }}</span>
-          <span class="badge">{{ t('footer.tags.search') }}</span>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <NuxtImg
+            src="/images/logo-sonekeno.png"
+            width="48"
+            height="48"
+            decoding="async"
+            class="h-12 w-12 rounded-xl border border-border bg-transparent object-contain shadow-soft"
+            :alt="t('app.logoAlt')"
+          />
+          <div>
+            <div class="font-bold text-base text-primary">Sonekeno</div>
+            <div class="text-xs text-muted">© {{ year }} — {{ t('app.tagline') }}</div>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row md:items-center gap-3">
+          <NuxtLink :to="localePath('/mentions')" class="footer-link">Mentions légales</NuxtLink>
+          <NuxtLink :to="localePath('/cgu')" class="footer-link">CGU</NuxtLink>
+          <NuxtLink :to="localePath('/privacy')" class="footer-link">Confidentialité</NuxtLink>
+          <NuxtLink :to="localePath('/contact')" class="footer-link">Contact</NuxtLink>
+          <NuxtLink :to="localePath('/docs')" class="footer-link">Documentation</NuxtLink>
+          <NuxtLink :to="localePath('/services')" class="footer-link">Services & API</NuxtLink>
+          <a href="https://github.com/cedricbatina/derniers-leopards-app" target="_blank" rel="noopener" class="footer-link">
+            <Icon name="mdi:github" class="mr-1" /> GitHub
+          </a>
+          <a href="https://twitter.com/sonekeno" target="_blank" rel="noopener" class="footer-link">
+            <Icon name="mdi:twitter" class="mr-1" /> Twitter
+          </a>
         </div>
       </div>
     </footer>
+
   </div>
 </template>
 
@@ -180,3 +206,23 @@ function toggleTheme() {
   else colorMode.preference = 'system'
 }
 </script>
+
+  <style scoped>
+  .premium-footer {
+    background: linear-gradient(90deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e5e7eb;
+  }
+  .footer-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+  }
+  .footer-link:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+  </style>

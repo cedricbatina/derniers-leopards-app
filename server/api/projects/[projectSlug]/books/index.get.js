@@ -1,14 +1,15 @@
 import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+import { getProjectByAccess } from '../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
-  if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
+  const userId = user?.id || user?.sub
+  if (!userId) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
   const projectSlug = String(event.context.params.projectSlug || '').trim()
   if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
 
-  const project = await getProjectByOwnerSlug(user.id, projectSlug)
+  const project = await getProjectByAccess(user, projectSlug)
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const { q, trashed } = getQuery(event)

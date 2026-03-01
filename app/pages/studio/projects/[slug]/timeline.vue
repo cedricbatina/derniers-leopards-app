@@ -2,7 +2,7 @@
 definePageMeta({ middleware: ['auth'] })
 
 import { computed, reactive, ref } from 'vue'
-import { useLocalePath } from '#imports'
+import { useLocalePath, useRequestHeaders } from '#imports'
 
 const localePath = useLocalePath()
 const route = useRoute()
@@ -17,7 +17,7 @@ const queryObj = computed(() => ({
 
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/timeline`,
-  { query: queryObj, credentials: 'include' }
+  { query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 const form = reactive({

@@ -1,26 +1,26 @@
-import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+import { dbQuery } from '../../../../../../utils/db.js'
+import { getBookByAccess } from '../../../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
   if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
-  const projectSlug = String(event.context.params.projectSlug || '').trim()
+  const bookSlug = String(event.context.params.bookSlug || '').trim()
   const characterSlug = String(event.context.params.characterSlug || '').trim()
-  if (!projectSlug || !characterSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
+  if (!bookSlug || !characterSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
 
-  const project = await getProjectByOwnerSlug(user.id, projectSlug)
-  if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
+  const book = await getBookByAccess(user, bookSlug)
+  if (!book) throw createError({ statusCode: 404, statusMessage: 'Book not found' })
 
   const body = await readBody(event)
   if (body?.slug !== undefined) {
     throw createError({ statusCode: 400, statusMessage: 'slug is immutable' })
   }
 
-const rows0 = await dbQuery(
-  `SELECT id FROM characters WHERE project_id=? AND slug=? AND deleted_at IS NULL LIMIT 1`,
-  [project.id, characterSlug]
-)
+  const rows0 = await dbQuery(
+    `SELECT id FROM characters WHERE book_id=? AND slug=? AND deleted_at IS NULL LIMIT 1`,
+    [book.id, characterSlug]
+  )
 
   if (!rows0?.length) throw createError({ statusCode: 404, statusMessage: 'Not found' })
   const characterId = rows0[0].id
@@ -37,22 +37,21 @@ const rows0 = await dbQuery(
     if (!name) throw createError({ statusCode: 400, statusMessage: 'name cannot be empty' })
     sets.push('name=?'); params.push(name)
   }
-
   if (body.description !== undefined) {
     sets.push('description=?')
     params.push(body.description ? String(body.description).trim() : null)
   }
 
   await dbQuery(
-    `UPDATE characters SET ${sets.join(', ')} WHERE id=? AND project_id=?`,
-    [...params, characterId, project.id]
+    `UPDATE characters SET ${sets.join(', ')} WHERE id=? AND book_id=?`,
+    [...params, characterId, book.id]
   )
 
   const rows = await dbQuery(
-    `SELECT id, project_id, slug, name, description, created_at, updated_at
+    `SELECT id, book_id, slug, name, description, created_at, updated_at
      FROM characters
-     WHERE id=? AND project_id=? LIMIT 1`,
-    [characterId, project.id]
+     WHERE id=? AND book_id=? LIMIT 1`,
+    [characterId, book.id]
   )
 
   return { character: rows[0] }

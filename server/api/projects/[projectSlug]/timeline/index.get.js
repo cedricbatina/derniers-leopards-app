@@ -1,6 +1,4 @@
 import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
-import { getTableColumns } from '../../../../utils/schema.js'
 
 function pickColumn(cols, candidates) {
   return candidates.find((c) => cols.has(c)) || null
@@ -10,14 +8,13 @@ export default defineEventHandler(async (event) => {
   const user = event.context.user
   if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
-  const projectSlug = String(event.context.params.projectSlug || '').trim()
-  if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
+  const bookSlug = String(event.context.params.bookSlug || '').trim()
+  if (!bookSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid bookSlug' })
 
-  const project = await getProjectByOwnerSlug(user.id, projectSlug)
-  if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
-
-  const cols = await getTableColumns('timeline_events')
-  const hasProjectId = cols.has('project_id')
+  // Récupère le livre
+  const bookRows = await dbQuery('SELECT * FROM books WHERE slug = ?', [bookSlug])
+  const book = bookRows[0]
+  if (!book) throw createError({ statusCode: 404, statusMessage: 'Book not found' })
 
   const { q } = getQuery(event)
   const query = (q ? String(q).trim() : '') || null
@@ -25,36 +22,16 @@ export default defineEventHandler(async (event) => {
   const where = []
   const params = []
 
-  if (hasProjectId) {
-    where.push('project_id=?')
-    params.push(project.id)
-  }
+  where.push('book_id=?')
+  params.push(book.id)
 
   if (query) {
-    const likeParts = []
-    const titleCol = pickColumn(cols, ['title', 'name', 'label', 'event'])
-    const descCol = pickColumn(cols, ['description', 'summary', 'note'])
-    if (titleCol) {
-      likeParts.push(`${titleCol} LIKE CONCAT('%', ?, '%')`)
-      params.push(query)
-    }
-    if (cols.has('slug')) {
-      likeParts.push(`slug LIKE CONCAT('%', ?, '%')`)
-      params.push(query)
-    }
-    if (descCol) {
-      likeParts.push(`${descCol} LIKE CONCAT('%', ?, '%')`)
-      params.push(query)
-    }
-    if (likeParts.length) where.push(`(${likeParts.join(' OR ')})`)
+    where.push('(title LIKE CONCAT("%", ?, "%") OR slug LIKE CONCAT("%", ?, "%") OR summary LIKE CONCAT("%", ?, "%"))')
+    params.push(query, query, query)
   }
 
   const whereSql = where.length ? `WHERE ${where.join(' AND ')}` : ''
-
-  const dateCol = pickColumn(cols, ['date_start', 'start_date', 'in_story_date_start', 'event_date', 'date'])
-  const orderSql = dateCol
-    ? `ORDER BY ${dateCol} ASC${cols.has('id') ? ', id ASC' : ''}`
-    : (cols.has('id') ? 'ORDER BY id DESC' : '')
+  const orderSql = 'ORDER BY event_date ASC, id ASC'
 
   const rows = await dbQuery(
     `
@@ -66,5 +43,5 @@ export default defineEventHandler(async (event) => {
     params
   )
 
-  return { events: rows }
+  return { book: { slug: book.slug, id: book.id }, events: rows }
 })

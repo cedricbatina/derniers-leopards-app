@@ -1,5 +1,5 @@
 import { dbQuery } from './db.js'
-import { getProjectByOwnerSlug } from './projects.js'
+import { getProjectByAccess } from './projects.js'
 
 function toSlug(input) {
   return String(input || '')
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
   const projectSlug = String(event.context.params.projectSlug || '').trim()
   if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
 
-  const project = await getProjectByOwnerSlug(user.id, projectSlug)
+  const project = await getProjectByAccess(user, projectSlug)
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const body = await readBody(event)

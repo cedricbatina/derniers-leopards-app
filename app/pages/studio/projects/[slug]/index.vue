@@ -2,7 +2,7 @@
 definePageMeta({ middleware: ['auth'] })
 
 import { computed, reactive, ref, watchEffect } from 'vue'
-import { useLocalePath } from '#imports'
+import { useLocalePath, useRequestHeaders } from '#imports'
 
 const localePath = useLocalePath()
 const route = useRoute()
@@ -10,7 +10,15 @@ const slug = computed(() => String(route.params.slug || ''))
 
 const { data, pending, refresh, error } = await useFetch(() => `/api/projects/${slug.value}`, {
   credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
 })
+
+const { data: booksData } = await useFetch(() => `/api/projects/${slug.value}/books`, {
+  credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
+})
+
+const booksCount = computed(() => booksData.value?.books?.length || 0)
 
 const saving = ref(false)
 const deleting = ref(false)
@@ -139,12 +147,14 @@ async function removeProject () {
 
     <!-- Next shortcuts -->
     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-      <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/books`)">
-        <div class="card-body">
-          <div class="font-extrabold">Books</div>
-          <div class="text-xs text-muted mt-1">Parts & chapters.</div>
-        </div>
-      </NuxtLink>
+      <template v-if="booksCount > 0">
+        <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/books`)">
+          <div class="card-body">
+            <div class="font-extrabold">Books</div>
+            <div class="text-xs text-muted mt-1">Parts & chapters.</div>
+          </div>
+        </NuxtLink>
+      </template>
 
       <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/characters`)">
         <div class="card-body">

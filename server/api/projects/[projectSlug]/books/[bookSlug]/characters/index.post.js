@@ -1,5 +1,5 @@
-import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
+import { dbQuery } from '../../../../../../utils/db.js'
+import { getBookByAccess } from '../../../../../../utils/projects.js'
 
 function toSlug(input) {
   return String(input || '')
@@ -15,11 +15,11 @@ export default defineEventHandler(async (event) => {
   const user = event.context.user
   if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
-  const projectSlug = String(event.context.params.projectSlug || '').trim()
-  if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
+  const bookSlug = String(event.context.params.bookSlug || '').trim()
+  if (!bookSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid bookSlug' })
 
-  const project = await getProjectByOwnerSlug(user.id, projectSlug)
-  if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
+  const book = await getBookByAccess(user, bookSlug)
+  if (!book) throw createError({ statusCode: 404, statusMessage: 'Book not found' })
 
   const body = await readBody(event)
 
@@ -32,24 +32,24 @@ export default defineEventHandler(async (event) => {
   try {
     await dbQuery(
       `
-      INSERT INTO characters (project_id, slug, name, description)
+      INSERT INTO characters (book_id, slug, name, description)
       VALUES (?, ?, ?, ?)
       `,
-      [project.id, slug, name, description]
+      [book.id, slug, name, description]
     )
   } catch (err) {
     if (String(err?.code) === 'ER_DUP_ENTRY') {
-      throw createError({ statusCode: 409, statusMessage: 'Character slug already exists in this project' })
+      throw createError({ statusCode: 409, statusMessage: 'Character slug already exists in this book' })
     }
     throw err
   }
 
   const rows = await dbQuery(
-    `SELECT id, project_id, slug, name, description, created_at, updated_at
+    `SELECT id, book_id, slug, name, description, created_at, updated_at
      FROM characters
-     WHERE project_id=? AND slug=?
+     WHERE book_id=? AND slug=?
      LIMIT 1`,
-    [project.id, slug]
+    [book.id, slug]
   )
 
   return { character: rows[0] || null }

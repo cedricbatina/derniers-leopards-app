@@ -2,7 +2,7 @@
 definePageMeta({ middleware: ['auth'] })
 
 import { computed, reactive, ref, watchEffect } from 'vue'
-import { useLocalePath } from '#imports'
+import { useLocalePath, useRequestHeaders } from '#imports'
 
 const localePath = useLocalePath()
 const route = useRoute()
@@ -16,12 +16,13 @@ const { data, pending, refresh, error } = await useFetch(
   {
     query: computed(() => ({ trashed: allowTrashed.value ? 1 : undefined })),
     credentials: 'include',
+    headers: useRequestHeaders(['cookie']),
   }
 )
 
 const { data: charsData } = await useFetch(
   () => `/api/projects/${projectSlug.value}/characters`,
-  { credentials: 'include' }
+  { credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 const saving = ref(false)

@@ -54,6 +54,15 @@
     "confirm": "Confirmar"
   },
 
+  "dashboard": {
+    "welcome": "Bem-vindo, {name}",
+    "projects": "projeto{s}",
+    "newProject": "Novo projeto",
+    "subtitle": "Centraliza todos os módulos de criação e gestão."
+  },
+  "profile": {
+    "avatarAlt": "Avatar de {name}"
+  },
   "nav": {
     "aria": "Navegação principal",
     "home": "Início",

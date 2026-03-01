@@ -65,6 +65,15 @@
       "studios": "Studios"
   },
 
+  "dashboard": {
+    "welcome": "Bienvenue, {name}",
+    "projects": "projet{s}",
+    "newProject": "Nouveau projet",
+    "subtitle": "Centralise tous les modules de création et gestion."
+  },
+  "profile": {
+    "avatarAlt": "Avatar de {name}"
+  },
   "nav": {
     "aria": "Navigation principale",
     "home": "Accueil",

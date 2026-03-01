@@ -1,5 +1,5 @@
 import { dbQuery } from '../../../../../utils/db.js'
-import { getProjectByOwnerSlug } from '../../../../../utils/projects.js'
+import { getProjectByAccess } from '../../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
   const bookSlug = String(event.context.params.bookSlug || '').trim()
   if (!projectSlug || !bookSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
 
-  const project = await getProjectByOwnerSlug(user.id, projectSlug)
+  const project = await getProjectByAccess(user, projectSlug)
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const res = await dbQuery(

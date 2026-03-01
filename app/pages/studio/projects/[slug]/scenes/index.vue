@@ -2,7 +2,7 @@
 definePageMeta({ middleware: ['auth'] })
 
 import { computed, reactive, ref } from 'vue'
-import { useLocalePath } from '#imports'
+import { useLocalePath, useRequestHeaders } from '#imports'
 
 const localePath = useLocalePath()
 const route = useRoute()
@@ -16,7 +16,7 @@ const creating = ref(false)
 
 const { data: chaptersData } = await useFetch(
   () => `/api/projects/${projectSlug.value}/chapters`,
-  { credentials: 'include' }
+  { credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 const chapterOptions = computed(() => chaptersData.value?.chapters || [])
@@ -29,7 +29,7 @@ const queryObj = computed(() => ({
 
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/scenes`,
-  { query: queryObj, credentials: 'include' }
+  { query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 const form = reactive({

@@ -1,6 +1,6 @@
 // server/api/projects/[projectSlug]/scenes/[sceneSlug]/restore.post.js
 import { dbQuery } from '../../../../../utils/db.js'
-import { getProjectByOwnerSlug } from '../../../../../utils/projects.js'
+import { getProjectByAccess } from '../../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
   const sceneSlug = String(event.context.params.sceneSlug || '').trim()
   if (!projectSlug || !sceneSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
 
-  const project = await getProjectByOwnerSlug(user.id, projectSlug)
+  const project = await getProjectByAccess(user, projectSlug)
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const res = await dbQuery(

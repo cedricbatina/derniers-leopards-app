@@ -1,7 +1,3 @@
-import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByOwnerSlug } from '../../../../utils/projects.js'
-import { getTableColumns } from '../../../../utils/schema.js'
-
 function pickColumn(cols, candidates) {
   return candidates.find((c) => cols.has(c)) || null
 }
@@ -10,17 +6,13 @@ export default defineEventHandler(async (event) => {
   const user = event.context.user
   if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
-  const projectSlug = String(event.context.params.projectSlug || '').trim()
-  if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
+  const bookSlug = String(event.context.params.bookSlug || '').trim()
+  if (!bookSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid bookSlug' })
 
-  const project = await getProjectByOwnerSlug(user.id, projectSlug)
-  if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
-
-  const cols = await getTableColumns('glossary_terms')
-  const hasProjectId = cols.has('project_id')
-  const termCol = pickColumn(cols, ['term', 'name', 'title'])
-  const defCol = pickColumn(cols, ['definition', 'description', 'meaning'])
-  const langCol = pickColumn(cols, ['language', 'lang', 'locale'])
+  // Récupère le livre
+  const bookRows = await dbQuery('SELECT * FROM books WHERE slug = ?', [bookSlug])
+  const book = bookRows[0]
+  if (!book) throw createError({ statusCode: 404, statusMessage: 'Book not found' })
 
   const { q, lang } = getQuery(event)
   const query = (q ? String(q).trim() : '') || null
@@ -29,15 +21,18 @@ export default defineEventHandler(async (event) => {
   const where = []
   const params = []
 
-  if (hasProjectId) {
-    where.push('project_id=?')
-    params.push(project.id)
-  }
+  where.push('book_id=?')
+  params.push(book.id)
 
-  if (langQuery && langCol) {
-    where.push(`${langCol}=?`)
+  if (langQuery) {
+    where.push('language=?')
     params.push(langQuery)
   }
+
+  // Glossary columns
+  const cols = new Set(['id', 'slug', 'term', 'definition', 'language'])
+  const termCol = pickColumn(cols, ['term', 'mot', 'mot_fr', 'mot_en'])
+  const defCol = pickColumn(cols, ['definition', 'def', 'def_fr', 'def_en'])
 
   if (query) {
     const likeParts = []

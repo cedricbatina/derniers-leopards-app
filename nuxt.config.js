@@ -39,7 +39,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'vercel',
+     // preset: 'vercel', // désactivé temporairement pour test local
     compressPublicAssets: true,
   },
 
@@ -115,7 +115,11 @@ i18n: {
     DB_USER: process.env.DB_USER || '',
     DB_PASSWORD: process.env.DB_PASSWORD || '',
     DB_NAME: process.env.DB_NAME || '',
-
+     DB_HOST_LOCAL: process.env.DB_HOST_LOCAL,
+  DB_PORT_LOCAL: process.env.DB_PORT_LOCAL,
+  DB_USER_LOCAL: process.env.DB_USER_LOCAL,
+  DB_PASSWORD_LOCAL: process.env.DB_PASSWORD_LOCAL,
+  DB_NAME_LOCAL: process.env.DB_NAME_LOCAL,
     JWT_ACCESS_SECRET: process.env.JWT_ACCESS_SECRET || '',
     JWT_REFRESH_SECRET: process.env.JWT_REFRESH_SECRET || '',
 

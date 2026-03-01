@@ -52,7 +52,17 @@ export default defineEventHandler(async (event) => {
     'status',
     'visibility',
     'public_slug',
+    'parent_id',
+    'type',
   ]
+    if (body.parent_id !== undefined) {
+      sets.push('parent_id=?')
+      params.push(body.parent_id)
+    }
+    if (body.type !== undefined) {
+      sets.push('type=?')
+      params.push(String(body.type).trim())
+    }
   const hasAny = allowed.some((k) => body?.[k] !== undefined)
   if (!hasAny) throw createError({ statusCode: 400, statusMessage: 'No fields to update' })
 
@@ -190,7 +200,8 @@ export default defineEventHandler(async (event) => {
       logline, pitch, cover_url,
       status, visibility,
       published_at,
-      created_at, updated_at, deleted_at
+      created_at, updated_at, deleted_at,
+      parent_id, type
     FROM projects
     WHERE id=? AND owner_id=?
     LIMIT 1

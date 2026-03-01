@@ -2,7 +2,7 @@
 definePageMeta({ middleware: ['auth'] })
 
 import { computed, reactive, ref } from 'vue'
-import { useLocalePath } from '#imports'
+import { useLocalePath, useRequestHeaders } from '#imports'
 
 const localePath = useLocalePath()
 const route = useRoute()
@@ -26,7 +26,7 @@ const queryObj = computed(() => ({
 
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/books`,
-  { query: queryObj, credentials: 'include' }
+  { query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 async function createBook () {
@@ -68,7 +68,13 @@ async function restore (b) {
   await refresh()
 }
 
+// Route to book page, not API
 function bookTo (b) {
+  if (!b.slug) {
+    // Empêche la navigation si le slug est vide
+    alert('Erreur : ce livre n\'a pas de slug. Impossible d\'ouvrir la fiche.');
+    return '#';
+  }
   const base = `/studio/projects/${projectSlug.value}/books/${b.slug}`
   if (trashed.value) return localePath(`${base}?trashed=1`)
   return localePath(base)
@@ -136,22 +142,24 @@ function bookTo (b) {
       <div class="card-body flex items-center justify-between">
         <div class="text-sm text-muted">
           <span v-if="pending">Loading…</span>
-          <span v-else>{{ data?.books?.length || 0 }} book(s)</span>
+          <span v-else>{{ data?.books?.length || 0 }} livre(s)</span>
         </div>
       </div>
 
       <div class="divide-y divide-border">
         <NuxtLink
           v-for="b in (data?.books || [])"
-          :key="b.slug"
+          :key="b.slug || b.id || Math.random()"
           class="block p-4 hover:bg-surface2"
           :to="bookTo(b)"
+          :aria-disabled="!b.slug"
         >
           <div class="flex items-start justify-between gap-3">
             <div>
-              <div class="font-extrabold">{{ b.title }}</div>
-              <div v-if="b.subtitle" class="text-sm text-muted mt-1">{{ b.subtitle }}</div>
-              <div class="text-xs text-muted mt-1">{{ b.slug }}</div>
+              <div class="font-extrabold">{{ $t(`books.titles.${b.slug}`, b.title) }}<span v-if="b.subtitle" class="text-muted"> — {{ $t(`books.subtitles.${b.slug}`, b.subtitle) }}</span></div>
+              <div v-if="b.subtitle_en" class="text-xs text-muted mt-1">{{ $t(`books.subtitles_en.${b.slug}`, b.subtitle_en) }}</div>
+              <div v-if="b.subtitle_pt" class="text-xs text-muted mt-1">{{ $t(`books.subtitles_pt.${b.slug}`, b.subtitle_pt) }}</div>
+              <div class="text-xs text-muted mt-1">Slug: {{ b.slug }}</div>
             </div>
 
             <div class="flex items-center gap-2">

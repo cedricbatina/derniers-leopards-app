@@ -55,6 +55,15 @@
     "confirm": "Confirm"
   },
 
+  "dashboard": {
+    "welcome": "Welcome, {name}",
+    "projects": "project{s}",
+    "newProject": "New project",
+    "subtitle": "Centralizes all creation and management modules."
+  },
+  "profile": {
+    "avatarAlt": "Avatar of {name}"
+  },
   "nav": {
     "aria": "Main navigation",
     "home": "Home",

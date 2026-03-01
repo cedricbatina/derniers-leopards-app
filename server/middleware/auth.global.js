@@ -21,6 +21,9 @@ const PUBLIC_PREFIXES = [
   // me/logout publics (me: pratique pour front, logout: efface cookies)
   '/api/auth/me',
   '/api/auth/logout',
+
+  // TEMP : autoriser lecture books/characters pour test local
+  '/api/projects/', // autorise tout sous /api/projects/ (attention prod)
 ]
 
 export default defineEventHandler(async (event) => {

@@ -21,7 +21,8 @@ export default defineEventHandler(async (event) => {
       logline, pitch, cover_url,
       status, visibility,
       published_at,
-      created_at, updated_at, deleted_at
+      created_at, updated_at, deleted_at,
+      parent_id, type
     FROM projects
     WHERE owner_id=? AND slug=? AND deleted_at IS NULL
     LIMIT 1

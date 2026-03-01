@@ -2,7 +2,7 @@
 definePageMeta({ middleware: 'auth' })
 
 import { computed, reactive, ref } from 'vue'
-import { useLocalePath } from '#imports'
+import { useLocalePath, useRequestHeaders } from '#imports'
 
 const localePath = useLocalePath()
 
@@ -22,10 +22,32 @@ const queryObj = computed(() => ({
   trashed: trashed.value ? 1 : undefined,
 }))
 
+
 const { data, pending, refresh, error } = await useFetch(
   () => '/api/projects',
-  { query: queryObj, credentials: 'include' }
+  { query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
+
+// Only show deleted projects if 'trashed' is checked
+const filteredProjects = computed(() => {
+  if (!data?.projects) return []
+  return trashed.value ? data.projects : data.projects.filter(p => !p.deleted_at)
+})
+
+// Group filtered projects by saga_slug (or fallback to project slug if not present)
+const groupedProjects = computed(() => {
+  const projects = filteredProjects.value
+  const groups = {}
+  for (const p of projects) {
+    const saga = p.saga_slug || p.saga || p.sagaSlug || p.slug || 'Autres'
+    if (!groups[saga]) groups[saga] = []
+    groups[saga].push(p)
+  }
+  // Only return groups with at least one project
+  return Object.entries(groups)
+    .filter(([_, arr]) => arr.length)
+    .reduce((acc, [saga, arr]) => { acc[saga] = arr; return acc }, {})
+})
 
 async function createProject() {
   if (!form.title.trim()) return
@@ -51,6 +73,7 @@ async function createProject() {
   }
 }
 
+// Route to project page, not API
 function projectTo(p) {
   return localePath(`/studio/projects/${p.slug}`)
 }
@@ -118,31 +141,36 @@ function projectTo(p) {
       <div class="card-body flex items-center justify-between">
         <div class="text-sm text-muted">
           <span v-if="pending">Loading…</span>
-          <span v-else>{{ data?.projects?.length || 0 }} project(s)</span>
+          <span v-else>{{ ((filteredProjects.value && filteredProjects.value.length) || 0) + (trashed ? ' (incl. corbeille)' : '') }} projet(s)</span>
         </div>
       </div>
 
-      <div class="divide-y divide-border">
-        <NuxtLink
-          v-for="p in (data?.projects || [])"
-          :key="p.slug"
-          class="block p-4 hover:bg-surface2"
-          :to="projectTo(p)"
-          :class="p.deleted_at ? 'pointer-events-none opacity-60' : ''"
-        >
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <div class="font-extrabold">{{ p.title }}</div>
-              <div class="text-xs text-muted mt-1">{{ p.slug }}</div>
-              <div v-if="p.logline" class="text-sm text-muted mt-1">{{ p.logline }}</div>
-            </div>
-
-            <div class="flex items-center gap-2">
-              <span class="badge">{{ p.status }}</span>
-              <span v-if="p.deleted_at" class="badge">trashed</span>
-            </div>
+      <div>
+        <div v-for="(projects, saga) in groupedProjects" :key="saga" class="mb-6">
+          <div class="bg-gray-100 px-4 py-2 font-bold text-lg rounded-t">{{ saga }}</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
+            <NuxtLink
+              v-for="p in projects"
+              :key="p.slug"
+              class="card hover:bg-surface2 focus-ring"
+              :to="projectTo(p)"
+              :class="p.deleted_at ? 'pointer-events-none opacity-60' : ''"
+            >
+              <div class="card-body">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-primary">{{ p.type || 'Projet' }}</span>
+                  <span class="badge">{{ p.status }}</span>
+                  <span v-if="p.deleted_at" class="badge">Corbeille</span>
+                </div>
+                <div class="font-extrabold text-lg">{{ $t(`projects.titles.${p.slug}`, p.title) }}</div>
+                <div v-if="p.title_en" class="text-xs text-muted mt-1">{{ $t(`projects.titles_en.${p.slug}`, p.title_en) }}</div>
+                <div v-if="p.title_pt" class="text-xs text-muted mt-1">{{ $t(`projects.titles_pt.${p.slug}`, p.title_pt) }}</div>
+                <div class="text-xs text-muted mt-1">Slug: {{ p.slug }}</div>
+                <div v-if="p.logline" class="text-sm text-muted mt-1">{{ $t(`projects.loglines.${p.slug}`, p.logline) }}</div>
+              </div>
+            </NuxtLink>
           </div>
-        </NuxtLink>
+        </div>
       </div>
     </div>
   </div>

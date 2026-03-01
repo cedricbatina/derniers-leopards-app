@@ -11,7 +11,8 @@ export default defineEventHandler(async (event) => {
       title, title_en, title_pt,
       logline,
       cover_url,
-      published_at
+      published_at,
+      parent_id, type
     FROM projects
     WHERE deleted_at IS NULL
       AND status='active'

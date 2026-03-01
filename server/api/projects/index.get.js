@@ -3,7 +3,9 @@ import { dbQuery } from '../../utils/db.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
-  if (!user?.id) {
+  const userId = user?.id || user?.sub
+  console.log('API /api/projects context.user:', user)
+  if (!userId) {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }
 
@@ -20,7 +22,8 @@ export default defineEventHandler(async (event) => {
       logline, cover_url,
       status, visibility,
       published_at,
-      created_at, updated_at, deleted_at
+      created_at, updated_at, deleted_at,
+      parent_id, type
     FROM projects
     WHERE owner_id = ?
       AND (
@@ -36,7 +39,7 @@ export default defineEventHandler(async (event) => {
     ORDER BY updated_at DESC, id DESC
     LIMIT 200
     `,
-    [user.id, trashedFlag, trashedFlag, query, query, query, query]
+    [userId, trashedFlag, trashedFlag, query, query, query, query]
   )
 
   return { projects: rows }
