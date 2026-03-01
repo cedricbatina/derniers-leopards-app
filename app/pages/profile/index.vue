@@ -31,7 +31,7 @@
         <div class="card-body">
           <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
             <!-- Avatar -->
-            <div class="flex-shrink-0">
+            <div class="shrink-0">
               <div class="w-24 h-24 rounded-full bg-linear-to-br from-primary to-primary/50 flex items-center justify-center overflow-hidden">
                 <img
                   v-if="user.avatar_url"

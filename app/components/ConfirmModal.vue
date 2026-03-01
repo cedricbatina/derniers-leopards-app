@@ -11,7 +11,7 @@
 
             <!-- Title & Icon -->
             <div class="flex items-start gap-4 mb-6">
-              <div v-if="icon" :class="`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${iconBgClass}`">
+              <div v-if="icon" :class="`shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${iconBgClass}`">
                 <Icon :name="icon" :class="iconClass" />
               </div>
               <div class="flex-1">
@@ -96,8 +96,7 @@ const iconClass = computed(() => {
 const handleConfirm = () => {
   emit('confirm')
 }
-</script>
-</script>
+
 </script>
 
 <style scoped>

@@ -55,7 +55,11 @@
     "clear": "Clear",
     "confirm": "Confirm",
     "deactivate": "Deactivate",
-    "login": "Sign in"
+    "login": "Sign in",
+    "manage": "Manage",
+    "backToList": "Back to list",
+    "notFound": "Not found",
+    "noData": "No data"
   },
 
   "dashboard": {
@@ -229,6 +233,10 @@
   },
 
   "domain": {
+    "project": {
+      "singular": "Project",
+      "plural": "Projects"
+    },
     "character": {
       "singular": "Character",
       "plural": "Characters",
@@ -237,6 +245,18 @@
       "profile": "Profile",
       "clans": "Clans",
       "kinships": "Relationships",
+      "relations": "Relationships",
+      "name": "Name",
+      "surname": "Surname",
+      "age": "Age",
+      "birthplace": "Birthplace",
+      "role": "Role",
+      "description": "Description",
+      "personality": "Personality",
+      "background": "Background",
+      "motivations": "Motivations",
+      "conflicts": "Conflicts",
+      "empty": "No characters found for this project",
       "roles": {
         "pov": "Point of view",
         "present": "Present",
@@ -248,10 +268,16 @@
       "plural": "Scenes",
       "create": "Create a scene",
       "edit": "Edit scene",
+      "all": "All scenes",
+      "label": "Scene",
       "pov": "Point of view",
+      "povCharacter": "Point of View",
+      "description": "Description",
       "objective": "Objective",
       "conflict": "Conflict",
-      "outcome": "Outcome"
+      "outcome": "Outcome",
+      "notes": "Notes",
+      "empty": "No scenes found for this project"
     },
     "timeline": {
       "singular": "Event",

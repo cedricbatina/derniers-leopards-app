@@ -63,6 +63,11 @@
             <span>{{ tr('userInline.dashboard', 'Tableau de bord') }}</span>
           </button>
 
+          <button type="button" class="btn btn-ghost btn-sm user-inline-btn" @click="$emit('go-profile')">
+            <Icon name="mdi:account-circle" aria-hidden="true" />
+            <span>{{ tr('nav.profile', 'Profil') }}</span>
+          </button>
+
           <button type="button" class="btn btn-ghost btn-sm user-inline-btn" @click="$emit('logout')">
             <Icon name="mdi:logout" aria-hidden="true" />
             <span>{{ tr('userInline.logout', 'Déconnexion') }}</span>
@@ -103,7 +108,7 @@ const props = defineProps({
   user: { type: Object, default: null },
 })
 
-defineEmits(['go-dashboard', 'logout', 'login', 'register'])
+defineEmits(['go-dashboard', 'go-profile', 'logout', 'login', 'register'])
 
 const { t, te } = useI18n()
 const { formattedDateTimeWithSeconds } = useDateUtils()

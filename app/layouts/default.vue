@@ -75,6 +75,7 @@
           :user="auth.user"
           :is-authenticated="isAuthed"
           @go-dashboard="goDashboard"
+          @go-profile="() => router.push(localePath('/profile'))"
           @go-notifications="goNotifications"
           @logout="handleLogout"
           @login="goLogin"

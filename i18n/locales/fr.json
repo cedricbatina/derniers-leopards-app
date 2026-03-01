@@ -57,6 +57,10 @@
     "confirm": "Confirmer",
     "deactivate": "Désactiver",
     "login": "Se connecter",
+    "manage": "Gérer",
+    "backToList": "Retour à la liste",
+    "notFound": "Non trouvé",
+    "noData": "Aucune donnée",
        "start": "Commencer",
       "backExplore": "Retour explorer",
       "backGuide": "Retour guide",
@@ -75,7 +79,37 @@
     "subtitle": "Centralise tous les modules de création et gestion."
   },
   "profile": {
-    "avatarAlt": "Avatar de {name}"
+    "avatarAlt": "Avatar de {name}",
+    "title": "Paramètres du profil",
+    "subtitle": "Gérez votre compte et vos préférences",
+    "displayName": "Nom d'affichage",
+    "email": "Adresse e-mail",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "bio": "Biographie",
+    "website": "Site web",
+    "locale": "Langue",
+    "timezone": "Fuseau horaire",
+    "verified": "E-mail vérifié",
+    "unverified": "E-mail non vérifié",
+    "editProfile": "Modifier le profil",
+    "accountInfo": "Informations du compte",
+    "accountType": "Type de compte",
+    "role": "Rôle",
+    "organization": "Organisation",
+    "profession": "Profession",
+    "memberSince": "Membre depuis",
+    "dangerZone": "Zone dangereuse",
+    "softDelete": "Désactiver le compte",
+    "softDeleteDesc": "Désactivez votre compte temporairement. Vous pouvez le réactiver en vous reconnectant.",
+    "hardDelete": "Supprimer le compte définitivement",
+    "hardDeleteDesc": "Supprimez définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
+    "confirmSoftDelete": "Désactiver le compte ?",
+    "softDeleteConfirmMsg": "Votre compte sera désactivé. Vous pouvez le réactiver en vous reconnectant.",
+    "confirmHardDelete": "Supprimer le compte définitivement ?",
+    "hardDeleteConfirmMsg": "Cela supprimera définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
+    "noUser": "Vous devez être connecté pour voir votre profil.",
+    "deleteForever": "Supprimer définitivement"
   },
   "nav": {
     "aria": "Navigation principale",
@@ -209,6 +243,10 @@
   },
 
   "domain": {
+    "project": {
+      "singular": "Projet",
+      "plural": "Projets"
+    },
     "character": {
       "singular": "Personnage",
       "plural": "Personnages",
@@ -217,6 +255,18 @@
       "profile": "Profil",
       "clans": "Clans",
       "kinships": "Parenté",
+      "relations": "Relations",
+      "name": "Nom",
+      "surname": "Prénom",
+      "age": "Âge",
+      "birthplace": "Lieu de naissance",
+      "role": "Rôle",
+      "description": "Description",
+      "personality": "Personnalité",
+      "background": "Historique",
+      "motivations": "Motivations",
+      "conflicts": "Conflits",
+      "empty": "Aucun personnage trouvé pour ce projet",
       "roles": {
         "pov": "Point de vue",
         "present": "Présent",
@@ -228,10 +278,16 @@
       "plural": "Scènes",
       "create": "Créer une scène",
       "edit": "Modifier la scène",
+      "all": "Toutes les scènes",
+      "label": "Scène",
       "pov": "Point de vue",
+      "povCharacter": "Point de vue",
+      "description": "Description",
       "objective": "Objectif",
       "conflict": "Conflit",
-      "outcome": "Issue"
+      "outcome": "Issue",
+      "notes": "Notes",
+      "empty": "Aucune scène trouvée pour ce projet"
     },
     "timeline": {
       "singular": "Événement",
