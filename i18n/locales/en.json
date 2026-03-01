@@ -284,6 +284,30 @@
       "plural": "Timeline",
       "date": "Date",
       "tags": "Tags"
+    },
+    "todo": {
+      "singular": "Task",
+      "plural": "Tasks",
+      "create": "Create task",
+      "edit": "Edit task",
+      "title": "Title",
+      "description": "Description",
+      "priority": "Priority",
+      "status": "Status",
+      "dueDate": "Due date",
+      "completed": "Completed",
+      "pending": "Pending",
+      "inProgress": "In progress",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "showCompleted": "Show completed",
+      "all": "All tasks",
+      "empty": "No tasks found",
+      "complete": "Mark as complete",
+      "incomplete": "Mark as incomplete",
+      "projectTodos": "Project tasks",
+      "myTasks": "My tasks"
     }
   },
 

@@ -184,6 +184,13 @@ async function removeProject () {
           <div class="text-xs text-muted mt-1">Terms & vocabulary.</div>
         </div>
       </NuxtLink>
+
+      <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/todos`)">
+        <div class="card-body">
+          <div class="font-extrabold">{{ $t('domain.todo.plural') }}</div>
+          <div class="text-xs text-muted mt-1">{{ $t('domain.todo.projectTodos') }}</div>
+        </div>
+      </NuxtLink>
     </div>
   </div>
 </template>

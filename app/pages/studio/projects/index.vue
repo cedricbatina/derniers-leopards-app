@@ -90,6 +90,11 @@ function projectTo(p) {
         <h1 class="text-xl font-semibold">Projects</h1>
         <p class="text-sm text-muted">Crée et organise tes projets.</p>
       </div>
+      
+      <NuxtLink :to="localePath('/studio/todos')" class="btn btn-ghost focus-ring">
+        <Icon name="mdi:checkbox-marked-outline" aria-hidden="true" />
+        {{ $t('domain.todo.myTasks') }}
+      </NuxtLink>
     </div>
 
     <div class="card">

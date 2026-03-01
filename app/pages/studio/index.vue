@@ -19,7 +19,10 @@ const userDisplayName = computed(() => auth.user?.display_name || auth.user?.use
 
 <template>
   <div class="page space-y-8">
-    <div class="flex justify-end mb-2">
+    <div class="flex justify-end mb-2 gap-2">
+      <NuxtLink :to="localePath('/studio/todos')" class="btn btn-outline btn-sm">
+        <Icon name="mdi:checkbox-marked-outline" class="mr-1" /> {{ t('domain.todo.myTasks') }}
+      </NuxtLink>
       <NuxtLink :to="localePath('/studio/projects')" class="btn btn-outline btn-sm">
         <Icon name="mdi:view-dashboard-outline" class="mr-1" /> Tous les projets
       </NuxtLink>
@@ -78,6 +81,9 @@ const userDisplayName = computed(() => auth.user?.display_name || auth.user?.use
             </NuxtLink>
             <NuxtLink :to="localePath(`/studio/projects/${p.slug}/glossary`)" class="btn btn-xs btn-secondary">
               <Icon name="mdi:book" class="mr-1" /> Glossaire
+            </NuxtLink>
+            <NuxtLink :to="localePath(`/studio/projects/${p.slug}/todos`)" class="btn btn-xs btn-secondary">
+              <Icon name="mdi:checkbox-marked-outline" class="mr-1" /> {{ t('domain.todo.plural') }}
             </NuxtLink>
           </div>
         </div>

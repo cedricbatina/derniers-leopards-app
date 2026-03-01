@@ -282,8 +282,30 @@
       "singular": "Evento",
       "plural": "Cronologia",
       "date": "Data",
-      "tags": "Etiquetas"
-    }
+      "tags": "Etiquetas"    },
+    "todo": {
+      "singular": "Tarefa",
+      "plural": "Tarefas",
+      "create": "Criar tarefa",
+      "edit": "Editar tarefa",
+      "title": "Título",
+      "description": "Descrição",
+      "priority": "Prioridade",
+      "status": "Estado",
+      "dueDate": "Data de vencimento",
+      "completed": "Concluído",
+      "pending": "Pendente",
+      "inProgress": "Em andamento",
+      "high": "Alta",
+      "medium": "Média",
+      "low": "Baixa",
+      "showCompleted": "Mostrar concluídas",
+      "all": "Todas as tarefas",
+      "empty": "Nenhuma tarefa encontrada",
+      "complete": "Marcar como concluída",
+      "incomplete": "Marcar como pendente",
+      "projectTodos": "Tarefas do projeto",
+      "myTasks": "Minhas tarefas"    }
   },
 
   "footer": {

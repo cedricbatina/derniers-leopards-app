@@ -294,6 +294,30 @@
       "plural": "Chronologie",
       "date": "Date",
       "tags": "Tags"
+    },
+    "todo": {
+      "singular": "Tâche",
+      "plural": "Tâches",
+      "create": "Créer une tâche",
+      "edit": "Modifier la tâche",
+      "title": "Titre",
+      "description": "Description",
+      "priority": "Priorité",
+      "status": "Statut",
+      "dueDate": "Date d'échéance",
+      "completed": "Terminé",
+      "pending": "En attente",
+      "inProgress": "En cours",
+      "high": "Haute",
+      "medium": "Moyenne",
+      "low": "Basse",
+      "showCompleted": "Afficher terminées",
+      "all": "Toutes les tâches",
+      "empty": "Aucune tâche trouvée",
+      "complete": "Marquer comme terminé",
+      "incomplete": "Marquer comme à faire",
+      "projectTodos": "Tâches du projet",
+      "myTasks": "Mes tâches"
     }
   },
 

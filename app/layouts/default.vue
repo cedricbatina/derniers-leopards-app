@@ -110,6 +110,11 @@
             <Icon name="mdi:briefcase" aria-hidden="true" />
             <span>Studio</span>
           </NuxtLink>
+
+          <NuxtLink v-if="isAuthed" :to="localePath('/studio/todos')" class="pill" active-class="pill-active">
+            <Icon name="mdi:checkbox-marked-outline" aria-hidden="true" />
+            <span>{{ t('domain.todo.plural') }}</span>
+          </NuxtLink>
         </nav>
       </div>
     </header>
