@@ -88,7 +88,13 @@ async function restore(c) {
 }
 
 function characterTo(c) {
-  const base = `${props.toB6">
+  const base = `${props.toBase}/${c.slug}`
+  return trashed.value ? localePath(`${base}?trashed=1`) : localePath(base)
+}
+</script>
+
+<template>
+  <div class="page space-y-6">
     <NuxtLink v-if="props.backTo" class="text-sm text-muted hover:opacity-100" :to="localePath(props.backTo)">
       ← {{ props.backLabel }}
     </NuxtLink>
@@ -159,17 +165,12 @@ function characterTo(c) {
             :disabled="creating" 
             @click="showCreateForm = false"
           >
-            {{ t('common.cancel', 'Cancel') }}lass="text-xs text-muted">Description (optional)</label>
-          <input v-model="form.description" class="input w-full" placeholder="2-3 mots, ou laisse vide…" />
-        </div>
-        <div class="md:col-span-4">
-          <button class="btn btn-primary w-full focus-ring" :disabled="creating" @click="createCharacter">
-            <Icon name="mdi:plus" aria-hidden="true" />
-            Create
+            {{ t('common.cancel', 'Cancel') }}
           </button>
         </div>
       </div>
     </div>
+
     <div v-if="error" class="alert alert-error">
       {{ t('common.error', 'Error') }}: {{ error?.statusMessage || error }}
     </div>
