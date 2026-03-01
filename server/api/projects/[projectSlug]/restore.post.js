@@ -1,4 +1,4 @@
-// server/api/projects/[slug]/restore.post.js
+// server/api/projects/[projectSlug]/restore.post.js
 import { dbQuery } from '../../../utils/db.js'
 
 export default defineEventHandler(async (event) => {
@@ -7,9 +7,9 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }
 
-  const slug = String(event.context.params.slug || '').trim()
-  if (!slug) {
-    throw createError({ statusCode: 400, statusMessage: 'Invalid slug' })
+  const projectSlug = String(event.context.params.projectSlug || '').trim()
+  if (!projectSlug) {
+    throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
   }
 
   const res = await dbQuery(
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     SET deleted_at = NULL
     WHERE owner_id=? AND slug=? AND deleted_at IS NOT NULL
     `,
-    [user.id, slug]
+    [user.id, projectSlug]
   )
 
   if (!res?.affectedRows) throw createError({ statusCode: 404, statusMessage: 'Not found' })
