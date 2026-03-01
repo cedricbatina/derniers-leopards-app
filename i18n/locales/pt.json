@@ -58,7 +58,28 @@
     "manage": "Gerir",
     "backToList": "Voltar à lista",
     "notFound": "Não encontrado",
-    "noData": "Sem dados"
+    "noData": "Sem dados",
+    "error": "Erro",
+    "create": "Criar",
+    "trashed": "Lixeira",
+    "restore": "Restaurar"
+  },
+
+  "characters": {
+    "listSubtitle": "Gerencie seus personagens",
+    "search": "Pesquisar",
+    "searchPlaceholder": "Nome ou slug...",
+    "showTrashed": "Mostrar lixeira",
+    "newCharacter": "Novo Personagem",
+    "createNew": "Criar Novo Personagem",
+    "name": "Nome",
+    "slug": "Slug",
+    "description": "Descrição",
+    "descPlaceholder": "Descrição curta...",
+    "noCharacters": "Nenhum personagem encontrado",
+    "createFirst": "Crie seu primeiro personagem",
+    "noDescription": "Sem descrição ainda",
+    "viewDetails": "Ver detalhes"
   },
 
   "dashboard": {

@@ -69,7 +69,28 @@
       "structuring": "Structuration",
       "timeline": "Chronologie",
       "accessRoles": "Accès & rôles",
-      "studios": "Studios"
+      "studios": "Studios",
+    "error": "Erreur",
+    "create": "Créer",
+    "trashed": "Corbeille",
+    "restore": "Restaurer"
+  },
+
+  "characters": {
+    "listSubtitle": "Gérez vos personnages",
+    "search": "Rechercher",
+    "searchPlaceholder": "Nom ou slug...",
+    "showTrashed": "Afficher la corbeille",
+    "newCharacter": "Nouveau personnage",
+    "createNew": "Créer un nouveau personnage",
+    "name": "Nom",
+    "slug": "Slug",
+    "description": "Description",
+    "descPlaceholder": "Description courte...",
+    "noCharacters": "Aucun personnage trouvé",
+    "createFirst": "Créer votre premier personnage",
+    "noDescription": "Pas de description",
+    "viewDetails": "Voir les détails"
   },
 
   "dashboard": {

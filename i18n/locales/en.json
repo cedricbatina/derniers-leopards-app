@@ -59,7 +59,28 @@
     "manage": "Manage",
     "backToList": "Back to list",
     "notFound": "Not found",
-    "noData": "No data"
+    "noData": "No data",
+    "error": "Error",
+    "create": "Create",
+    "trashed": "Trashed",
+    "restore": "Restore"
+  },
+
+  "characters": {
+    "listSubtitle": "Manage your characters",
+    "search": "Search",
+    "searchPlaceholder": "Name or slug...",
+    "showTrashed": "Show trashed",
+    "newCharacter": "New Character",
+    "createNew": "Create New Character",
+    "name": "Name",
+    "slug": "Slug",
+    "description": "Description",
+    "descPlaceholder": "Short description...",
+    "noCharacters": "No characters found",
+    "createFirst": "Create your first character",
+    "noDescription": "No description yet",
+    "viewDetails": "View details"
   },
 
   "dashboard": {

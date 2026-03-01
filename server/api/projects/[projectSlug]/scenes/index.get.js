@@ -33,8 +33,6 @@ export default defineEventHandler(async (event) => {
       s.indesign_style,
       s.created_at, s.updated_at, s.deleted_at,
       c.name as pov_character_name,
-      c.surname as pov_character_surname,
-      c.avatar_url as pov_character_avatar,
       (SELECT COUNT(*) FROM scene_characters WHERE scene_id = s.id) as character_count
     FROM scenes s
     LEFT JOIN characters c ON s.pov_character_id = c.id
