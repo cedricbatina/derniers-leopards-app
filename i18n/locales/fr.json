@@ -417,11 +417,7 @@
       "glossary": {
         "title": "Sonekeno — Glossaire",
         "description": "Glossaire de l’univers : termes, définitions, notes de canon, variantes et traductions."
-      },
-      "scenesPage": {
-  "title": "Sonekeno — Scènes",
-  "description": "Structurer les scènes : objectifs, lieux, temps, liens au canon, versions et révisions."
-}
+      }
 
     }
   },
@@ -794,88 +790,9 @@
         "desc": "Crée un projet, structure un personnage + une scène, puis pose 3 événements dans la timeline."
       }
     }
-  }
+  },
 
-,
-  
-    "index": {
-      "hero": {
-        "badge": "Explorer",
-        "title": "Le guide Sonekeno",
-        "lead": "Des pages courtes, concrètes, pour organiser un univers narratif (roman, saga, série, jeu, film) avec une base cohérente."
-      },
-      "forWho": {
-        "title": "Pour qui ?",
-        "subtitle": "Quatre entrées selon ton profil.",
-        "badge": "Profils"
-      },
-      "cards": {
-        "writing": {
-          "title": "Écriture",
-          "desc": "Personnages, scènes, notes, versions."
-        },
-        "editors": {
-          "title": "Éditeurs",
-          "desc": "Cohérence, révisions, livrables."
-        },
-        "studios": {
-          "title": "Studios",
-          "desc": "Adaptations : bible + pipeline."
-        },
-        "creators": {
-          "title": "Créateurs",
-          "desc": "Arts & média : lore, cartes, etc."
-        }
-      },
-      "features": {
-        "structuring": {
-          "badge": "Structuration",
-          "title": "Une base claire",
-          "desc": "Organisez vos contenus sans perdre la cohérence."
-        },
-        "timeline": {
-          "badge": "Chronologie",
-          "title": "Piloter le temps",
-          "desc": "Gérez événements, périodes, versions et révisions."
-        },
-        "access": {
-          "badge": "Accès",
-          "title": "Sécurité & rôles",
-          "desc": "Travail individuel ou équipe (évolutif)."
-        }
-      },
-      "modules": {
-        "title": "Modules",
-        "subtitle": "Les briques de base pour organiser un univers narratif.",
-        "badge": "Outils",
-        "cards": {
-          "characters": {
-            "title": "Personnages",
-            "desc": "Fiches, relations, rôles, narrateurs."
-          },
-          "scenes": {
-            "title": "Scènes",
-            "desc": "Structure, objectifs, versions, liens au canon."
-          },
-          "timeline": {
-            "title": "Chronologie",
-            "desc": "Arcs, périodes, événements, révisions."
-          },
-          "glossary": {
-            "title": "Glossaire",
-            "desc": "Termes, définitions, canon, variantes."
-          }
-        }
-      },
-      "workflow": {
-        "badge": "Workflow",
-        "title": "Créer → Structurer → Publier",
-        "desc": "Une approche simple, extensible, prête pour la production.",
-        "cta": "Voir les étapes"
-      }
-    }
-  ,
-"landing": {
+  "landing": {
   "hero": {
     "kicker": "Plateforme de création",
     "title": "Centralisez vos univers : livres, sagas, jeux, cartes, scripts",
@@ -930,38 +847,5 @@
     "q1": { "q": "Sonekeno, c’est pour qui ?", "a": "Auteurs, studios, éditeurs et créateurs qui veulent structurer et produire des œuvres." },
     "q2": { "q": "Est-ce que je peux gérer plusieurs projets ?", "a": "Oui. Chaque univers vit dans un projet séparé (scènes, personnages, chronologie, glossaire…)."},
     "q3": { "q": "Et si je veux publier ?", "a": "Tu pourras rendre un projet public plus tard via Explore, sans mélanger ton travail privé." }
-  },
-
-  "profile": {
-    "title": "Paramètres du profil",
-    "subtitle": "Gérez votre compte et vos préférences",
-    "displayName": "Nom d'affichage",
-    "email": "Adresse e-mail",
-    "firstName": "Prénom",
-    "lastName": "Nom",
-    "bio": "Biographie",
-    "website": "Site web",
-    "locale": "Langue",
-    "timezone": "Fuseau horaire",
-    "verified": "E-mail vérifié",
-    "unverified": "E-mail non vérifié",
-    "editProfile": "Modifier le profil",
-    "accountInfo": "Informations du compte",
-    "accountType": "Type de compte",
-    "role": "Rôle",
-    "organization": "Organisation",
-    "profession": "Profession",
-    "memberSince": "Membre depuis",
-    "dangerZone": "Zone dangereuse",
-    "softDelete": "Désactiver le compte",
-    "softDeleteDesc": "Désactivez votre compte temporairement. Vous pouvez le réactiver en vous reconnectant.",
-    "hardDelete": "Supprimer le compte définitivement",
-    "hardDeleteDesc": "Supprimez définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
-    "confirmSoftDelete": "Désactiver le compte ?",
-    "softDeleteConfirmMsg": "Votre compte sera désactivé. Vous pouvez le réactiver en vous reconnectant.",
-    "confirmHardDelete": "Supprimer le compte définitivement ?",
-    "hardDeleteConfirmMsg": "Cela supprimera définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
-    "noUser": "Vous devez être connecté pour voir votre profil.",
-    "deleteForever": "Supprimer définitivement"
   }
-}
+}}
