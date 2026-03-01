@@ -62,11 +62,6 @@ export default defineEventHandler(async (event) => {
     [character.id]
   )
 
-  // Récupère les relations du personnage
-  const relationships = await dbQuery(
-    `
-    SELECT 
-      cr.id, cr.type, cr.description, cr.status,
   return { 
     project: { 
       id: project.id, 
