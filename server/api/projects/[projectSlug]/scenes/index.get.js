@@ -3,47 +3,59 @@ import { dbQuery } from '../../../../utils/db.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
-  if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
+  const userId = Number(user?.id || user?.sub)
+  if (!userId) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
-  const bookSlug = String(event.context.params.bookSlug || '').trim()
-  if (!bookSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid bookSlug' })
+  const projectSlug = String(event.context.params.projectSlug || '').trim()
+  if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
 
-  // Récupère le livre
-  const bookRows = await dbQuery('SELECT * FROM books WHERE slug = ?', [bookSlug])
-  const book = bookRows[0]
-  if (!book) throw createError({ statusCode: 404, statusMessage: 'Book not found' })
+  // Récupère le projet
+  const projectRows = await dbQuery(
+    'SELECT id, slug, title FROM projects WHERE owner_id = ? AND slug = ? AND deleted_at IS NULL LIMIT 1',
+    [userId, projectSlug]
+  )
+  const project = projectRows[0]
+  if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
-  const { q, chapter_id, trashed } = getQuery(event)
+  const { q, chapter, trashed } = getQuery(event)
   const query = (q ? String(q).trim() : '') || null
-  const chapterId = chapter_id ? Number(chapter_id) : null
-  if (chapter_id && !Number.isFinite(chapterId)) {
-    throw createError({ statusCode: 400, statusMessage: 'Invalid chapter_id' })
-  }
+  const chapterTitle = chapter ? String(chapter).trim() : null
   const trashedFlag = String(trashed || '') === '1' ? 1 : 0
 
+  // Récupère les scènes avec les personnages POV
   const rows = await dbQuery(
     `
-    SELECT id, book_id, slug, chapter_id, scene_no, title, pov_character_id, location_id, timeline_event_id, objective, time_of_day, summary, content, conflict, turning_point, outcome, hook, indesign_style, created_at, updated_at, deleted_at
-    FROM scenes
-    WHERE book_id = ?
-      AND (? IS NULL OR chapter_id = ?)
+    SELECT 
+      s.id, s.project_id, s.slug, s.chapter_title, s.scene_no, s.title,
+      s.pov_character_id, s.setting, s.time_of_day,
+      s.objective, s.conflict, s.outcome, s.notes,
+      s.description, s.content,
+      s.created_at, s.updated_at, s.deleted_at,
+      c.name as pov_character_name,
+      c.surname as pov_character_surname,
+      c.avatar_url as pov_character_avatar,
+      (SELECT COUNT(*) FROM scene_characters WHERE scene_id = s.id) as character_count
+    FROM scenes s
+    LEFT JOIN characters c ON s.pov_character_id = c.id
+    WHERE s.project_id = ?
+      AND (? IS NULL OR s.chapter_title = ?)
       AND (
-        (? = 1 AND deleted_at IS NOT NULL) OR
-        (? = 0 AND deleted_at IS NULL)
+        (? = 1 AND s.deleted_at IS NOT NULL) OR
+        (? = 0 AND s.deleted_at IS NULL)
       )
       AND (
         ? IS NULL
-        OR title LIKE CONCAT('%', ?, '%')
-        OR slug LIKE CONCAT('%', ?, '%')
-        OR summary LIKE CONCAT('%', ?, '%')
+        OR s.title LIKE CONCAT('%', ?, '%')
+        OR s.slug LIKE CONCAT('%', ?, '%')
+        OR s.description LIKE CONCAT('%', ?, '%')
       )
-    ORDER BY scene_no ASC, id ASC
+    ORDER BY s.scene_no ASC, s.id ASC
     LIMIT 500
     `,
     [
-      book.id,
-      chapterId,
-      chapterId,
+      project.id,
+      chapterTitle,
+      chapterTitle,
       trashedFlag,
       trashedFlag,
       query,
@@ -53,5 +65,5 @@ export default defineEventHandler(async (event) => {
     ]
   )
 
-  return { book: { slug: book.slug, id: book.id }, scenes: rows }
+  return { project: { slug: project.slug, id: project.id, title: project.title }, scenes: rows }
 })
