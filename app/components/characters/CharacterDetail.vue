@@ -17,7 +17,7 @@ const form = reactive({ name: '', slug: '', description: '' })
 
 const { data, pending, refresh } = await useFetch(
   () => `${props.apiBase}/${props.characterSlug}`,
-  { credentials: 'include', headers: useRequestHeaders(['cookie']) }
+  { $fetch: apiFetch, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 watch(
@@ -36,9 +36,8 @@ async function save() {
   saving.value = true
   error.value = null
   try {
-    await $fetch(`${props.apiBase}/${props.characterSlug}`, {
+    await apiFetch(`${props.apiBase}/${props.characterSlug}`, {
       method: 'PATCH',
-      credentials: 'include',
       body: {
         name: form.name,
         slug: form.slug,

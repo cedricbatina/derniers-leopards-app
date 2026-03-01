@@ -12,12 +12,12 @@ const bookSlug = computed(() => String(route.params.bookSlug || ''))
 
 const { data: bookData } = await useFetch(
   () => `/api/projects/${projectSlug.value}/books/${bookSlug.value}`,
-  { credentials: 'include' }
+  { $fetch: apiFetch, credentials: 'include' }
 )
 
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts`,
-  { credentials: 'include' }
+  { $fetch: apiFetch, credentials: 'include' }
 )
 
 const creating = ref(false)
@@ -32,9 +32,8 @@ async function createPart() {
   if (!form.title.trim()) return
   creating.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts`, {
       method: 'POST',
-      credentials: 'include',
       body: {
         part_no: form.part_no ? Number(form.part_no) : undefined,
         title: form.title,
@@ -54,9 +53,8 @@ async function createPart() {
 
 async function deletePart(p) {
   if (!confirm(`Delete part "${p.title}"?`)) return
-  await $fetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${p.id}`, {
+  await apiFetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${p.id}`, {
     method: 'DELETE',
-    credentials: 'include',
   })
   await refresh()
 }

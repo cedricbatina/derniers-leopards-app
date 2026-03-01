@@ -45,6 +45,7 @@
     "save": "Save",
     "cancel": "Cancel",
     "delete": "Delete",
+    "deleteForever": "Delete Permanently",
     "edit": "Edit",
     "close": "Close",
     "back": "Back",
@@ -52,7 +53,9 @@
     "search": "Search",
     "filter": "Filter",
     "clear": "Clear",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "deactivate": "Deactivate",
+    "login": "Sign in"
   },
 
   "dashboard": {
@@ -62,7 +65,37 @@
     "subtitle": "Centralizes all creation and management modules."
   },
   "profile": {
-    "avatarAlt": "Avatar of {name}"
+    "avatarAlt": "Avatar of {name}",
+    "title": "Profile Settings",
+    "subtitle": "Manage your account and preferences",
+    "displayName": "Display Name",
+    "email": "Email Address",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "bio": "Bio",
+    "website": "Website",
+    "locale": "Language",
+    "timezone": "Timezone",
+    "verified": "Email verified",
+    "unverified": "Email not verified",
+    "editProfile": "Edit Profile",
+    "accountInfo": "Account Information",
+    "accountType": "Account Type",
+    "role": "Role",
+    "organization": "Organization",
+    "profession": "Profession",
+    "memberSince": "Member Since",
+    "dangerZone": "Danger Zone",
+    "softDelete": "Deactivate Account",
+    "softDeleteDesc": "Deactivate your account temporarily. You can reactivate it anytime by logging in.",
+    "hardDelete": "Delete Account Permanently",
+    "hardDeleteDesc": "Permanently delete your account and all associated data. This action cannot be undone.",
+    "confirmSoftDelete": "Deactivate Account?",
+    "softDeleteConfirmMsg": "Your account will be deactivated. You can reactivate it by logging in again.",
+    "confirmHardDelete": "Delete Account Permanently?",
+    "hardDeleteConfirmMsg": "This will permanently delete your account and all associated data. This action cannot be undone.",
+    "noUser": "You need to be logged in to view your profile.",
+    "deleteForever": "Delete Permanently"
   },
   "nav": {
     "aria": "Main navigation",
@@ -272,3 +305,4 @@
     }
   }
 }
+

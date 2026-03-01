@@ -44,6 +44,7 @@
     "save": "Guardar",
     "cancel": "Cancelar",
     "delete": "Eliminar",
+    "deleteForever": "Eliminar Permanentemente",
     "edit": "Editar",
     "close": "Fechar",
     "back": "Voltar",
@@ -51,7 +52,9 @@
     "search": "Pesquisar",
     "filter": "Filtrar",
     "clear": "Limpar",
-    "confirm": "Confirmar"
+    "confirm": "Confirmar",
+    "deactivate": "Desativar",
+    "login": "Iniciar sessão"
   },
 
   "dashboard": {
@@ -266,8 +269,40 @@
       "standard": "Conta padrão",
       "admin": "Administrador",
       "editor": "Editor",
-      "moderator": "Moderador",
+      "moderador": "Moderador",
       "generic": "Utilizador"
     }
+  },
+  "profile": {
+    "title": "Definições do Perfil",
+    "subtitle": "Gerencie sua conta e preferências",
+    "displayName": "Nome de Exibição",
+    "email": "Endereço de E-mail",
+    "firstName": "Primeiro Nome",
+    "lastName": "Sobrenome",
+    "bio": "Biografia",
+    "website": "Site",
+    "locale": "Idioma",
+    "timezone": "Fuso Horário",
+    "verified": "E-mail verificado",
+    "unverified": "E-mail não verificado",
+    "editProfile": "Editar Perfil",
+    "accountInfo": "Informações da Conta",
+    "accountType": "Tipo de Conta",
+    "role": "Função",
+    "organization": "Organização",
+    "profession": "Profissão",
+    "memberSince": "Membro Desde",
+    "dangerZone": "Zona de Perigo",
+    "softDelete": "Desativar Conta",
+    "softDeleteDesc": "Desative sua conta temporariamente. Você pode reativá-la fazendo login novamente.",
+    "hardDelete": "Eliminar Conta Permanentemente",
+    "hardDeleteDesc": "Elimine permanentemente sua conta e todos os dados associados. Esta ação não pode ser desfeita.",
+    "confirmSoftDelete": "Desativar Conta?",
+    "softDeleteConfirmMsg": "Sua conta será desativada. Você pode reativá-la fazendo login novamente.",
+    "confirmHardDelete": "Eliminar Conta Permanentemente?",
+    "hardDeleteConfirmMsg": "Isso eliminará permanentemente sua conta e todos os dados associados. Esta ação não pode ser desfeita.",
+    "noUser": "Você precisa estar conectado para ver seu perfil.",
+    "deleteForever": "Eliminar Permanentemente"
   }
 }

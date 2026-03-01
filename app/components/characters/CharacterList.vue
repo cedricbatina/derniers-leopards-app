@@ -23,16 +23,15 @@ const queryObj = computed(() => ({
 
 const { data, pending, refresh, error } = await useFetch(
   () => `${props.apiBase}`,
-  { query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
+  { $fetch: apiFetch, query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 async function createCharacter() {
   if (!form.name.trim()) return
   creating.value = true
   try {
-    await $fetch(`${props.apiBase}`, {
+    await apiFetch(`${props.apiBase}`, {
       method: 'POST',
-      credentials: 'include',
       body: {
         name: form.name,
         slug: form.slug || undefined,
@@ -50,17 +49,15 @@ async function createCharacter() {
 
 async function softDelete(c) {
   if (!confirm(`Delete character "${c.name}"?`)) return
-  await $fetch(`${props.apiBase}/${c.slug}`, {
+  await apiFetch(`${props.apiBase}/${c.slug}`, {
     method: 'DELETE',
-    credentials: 'include',
   })
   await refresh()
 }
 
 async function restore(c) {
-  await $fetch(`${props.apiBase}/restore`, {
+  await apiFetch(`${props.apiBase}/restore`, {
     method: 'POST',
-    credentials: 'include',
     body: { slug: c.slug },
   })
   await refresh()

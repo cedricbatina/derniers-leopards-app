@@ -15,22 +15,22 @@ const sceneQuery = computed(() => ({ trashed: allowTrashed.value ? 1 : undefined
 
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/scenes/${sceneSlug.value}`,
-  { query: sceneQuery, credentials: 'include' }
+  { $fetch: apiFetch, query: sceneQuery, credentials: 'include' }
 )
 
 const { data: chaptersData } = await useFetch(
   () => `/api/projects/${projectSlug.value}/chapters`,
-  { credentials: 'include' }
+  { $fetch: apiFetch, credentials: 'include' }
 )
 
 const { data: charactersData } = await useFetch(
   () => `/api/projects/${projectSlug.value}/characters`,
-  { credentials: 'include' }
+  { $fetch: apiFetch, credentials: 'include' }
 )
 
 const { data: timelineData } = await useFetch(
   () => `/api/projects/${projectSlug.value}/timeline`,
-  { credentials: 'include' }
+  { $fetch: apiFetch, credentials: 'include' }
 )
 
 const chapters = computed(() => chaptersData.value?.chapters || [])
@@ -100,9 +100,8 @@ async function save() {
 
   saving.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/scenes/${sceneSlug.value}`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/scenes/${sceneSlug.value}`, {
       method: 'PUT',
-      credentials: 'include',
       body: {
         chapter_id: Number(form.chapter_id),
         scene_no: form.scene_no ? Number(form.scene_no) : null,
@@ -130,9 +129,8 @@ async function removeScene() {
   if (!confirm('Delete this scene?')) return
   deleting.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/scenes/${sceneSlug.value}`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/scenes/${sceneSlug.value}`, {
       method: 'DELETE',
-      credentials: 'include',
     })
     await navigateTo(localePath(`/studio/projects/${projectSlug.value}/scenes`))
   } finally {
@@ -143,9 +141,8 @@ async function removeScene() {
 async function restoreScene() {
   restoring.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/scenes/${sceneSlug.value}/restore`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/scenes/${sceneSlug.value}/restore`, {
       method: 'POST',
-      credentials: 'include',
     })
     await navigateTo(localePath(`/studio/projects/${projectSlug.value}/scenes/${sceneSlug.value}`))
   } finally {

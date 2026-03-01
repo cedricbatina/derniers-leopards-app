@@ -14,6 +14,7 @@ const allowTrashed = computed(() => String(route.query.trashed || '') === '1')
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/books/${bookSlug.value}`,
   {
+    $fetch: apiFetch,
     query: computed(() => ({ trashed: allowTrashed.value ? 1 : undefined })),
     credentials: 'include',
     headers: useRequestHeaders(['cookie']),
@@ -22,7 +23,7 @@ const { data, pending, refresh, error } = await useFetch(
 
 const { data: charsData } = await useFetch(
   () => `/api/projects/${projectSlug.value}/characters`,
-  { credentials: 'include', headers: useRequestHeaders(['cookie']) }
+  { $fetch: apiFetch, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 const saving = ref(false)
@@ -63,9 +64,8 @@ function toggleNarrator (id) {
 async function save () {
   saving.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}`, {
       method: 'PUT',
-      credentials: 'include',
       body: {
         title: form.title,
         subtitle: form.subtitle || null,
@@ -85,9 +85,8 @@ async function removeBook () {
   if (!confirm('Delete this book?')) return
   deleting.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}`, {
       method: 'DELETE',
-      credentials: 'include',
     })
     await navigateTo(localePath(`/studio/projects/${projectSlug.value}/books`))
   } finally {
@@ -98,9 +97,8 @@ async function removeBook () {
 async function restoreBook () {
   restoring.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/restore`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/restore`, {
       method: 'POST',
-      credentials: 'include',
     })
     // drop trashed param after restore
     await navigateTo(localePath(`/studio/projects/${projectSlug.value}/books/${bookSlug.value}`))

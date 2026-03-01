@@ -13,12 +13,12 @@ const partId = computed(() => Number(route.params.partId))
 
 const { data: partData, pending: partPending, refresh: refreshPart, error: partError } = await useFetch(
   () => `/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}`,
-  { credentials: 'include' }
+  { $fetch: apiFetch, credentials: 'include' }
 )
 
 const { data: chaptersData, pending: chaptersPending, refresh: refreshChapters, error: chaptersError } = await useFetch(
   () => `/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}/chapters`,
-  { credentials: 'include' }
+  { $fetch: apiFetch, credentials: 'include' }
 )
 
 const savingPart = ref(false)
@@ -42,9 +42,8 @@ async function savePart() {
   if (!partForm.title.trim()) return
   savingPart.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}`, {
       method: 'PUT',
-      credentials: 'include',
       body: {
         part_no: partForm.part_no ? Number(partForm.part_no) : undefined,
         title: partForm.title,
@@ -61,9 +60,8 @@ async function deletePart() {
   if (!confirm('Delete this part?')) return
   deletingPart.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}`, {
       method: 'DELETE',
-      credentials: 'include',
     })
     await navigateTo(localePath(`/studio/projects/${projectSlug.value}/books/${bookSlug.value}/parts`))
   } finally {
@@ -83,9 +81,8 @@ async function createChapter() {
   if (!chapterForm.title.trim()) return
   creatingChapter.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}/chapters`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}/chapters`, {
       method: 'POST',
-      credentials: 'include',
       body: {
         chapter_no: chapterForm.chapter_no ? Number(chapterForm.chapter_no) : undefined,
         title: chapterForm.title,
@@ -105,9 +102,8 @@ async function createChapter() {
 
 async function deleteChapter(ch) {
   if (!confirm(`Delete chapter "${ch.title}"?`)) return
-  await $fetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}/chapters/${ch.id}`, {
+  await apiFetch(`/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}/chapters/${ch.id}`, {
     method: 'DELETE',
-    credentials: 'include',
   })
   await refreshChapters()
 }

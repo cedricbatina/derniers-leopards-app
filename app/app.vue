@@ -5,6 +5,7 @@ import { useRoute } from '#imports'
 
 const config = useRuntimeConfig()
 const route = useRoute()
+const { isOpen, title, message, icon, danger, loading, confirmLabel, cancelLabel, confirm, close } = useConfirm()
 
 const appName = computed(() => config.public.APP_NAME || 'Les derniers léopards')
 const siteUrl = computed(() => (config.public.APP_URL || 'http://localhost:3010').replace(/\/$/, ''))
@@ -102,4 +103,18 @@ useHead(() => ({
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+
+  <!-- Global Confirmation Modal -->
+  <ConfirmModal
+    v-model="isOpen"
+    :title="title"
+    :message="message"
+    :icon="icon"
+    :danger="danger"
+    :loading="loading"
+    :confirmLabel="confirmLabel"
+    :cancelLabel="cancelLabel"
+    @confirm="confirm"
+    @update:modelValue="close"
+  />
 </template>

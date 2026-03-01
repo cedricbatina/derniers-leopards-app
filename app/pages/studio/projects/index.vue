@@ -25,13 +25,18 @@ const queryObj = computed(() => ({
 
 const { data, pending, refresh, error } = await useFetch(
   () => '/api/projects',
-  { query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
+  {
+    $fetch: apiFetch,
+    query: queryObj,
+    credentials: 'include',
+    headers: useRequestHeaders(['cookie']),
+  }
 )
 
 // Only show deleted projects if 'trashed' is checked
 const filteredProjects = computed(() => {
-  if (!data?.projects) return []
-  return trashed.value ? data.projects : data.projects.filter(p => !p.deleted_at)
+  const projects = data.value?.projects || []
+  return trashed.value ? projects : projects.filter((p) => !p.deleted_at)
 })
 
 // Group filtered projects by saga_slug (or fallback to project slug if not present)
@@ -53,9 +58,8 @@ async function createProject() {
   if (!form.title.trim()) return
   creating.value = true
   try {
-    await $fetch('/api/projects', {
+    await apiFetch('/api/projects', {
       method: 'POST',
-      credentials: 'include',
       body: {
         title: form.title,
         slug: form.slug || undefined,
@@ -141,13 +145,13 @@ function projectTo(p) {
       <div class="card-body flex items-center justify-between">
         <div class="text-sm text-muted">
           <span v-if="pending">Loading…</span>
-          <span v-else>{{ ((filteredProjects.value && filteredProjects.value.length) || 0) + (trashed ? ' (incl. corbeille)' : '') }} projet(s)</span>
+          <span v-else>{{ filteredProjects.length }} projet(s){{ trashed ? ' (incl. corbeille)' : '' }}</span>
         </div>
       </div>
 
       <div>
         <div v-for="(projects, saga) in groupedProjects" :key="saga" class="mb-6">
-          <div class="bg-gray-100 px-4 py-2 font-bold text-lg rounded-t">{{ saga }}</div>
+          <div class="px-4 py-2 font-bold text-lg rounded-t border border-border bg-surface2">{{ saga }}</div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
             <NuxtLink
               v-for="p in projects"

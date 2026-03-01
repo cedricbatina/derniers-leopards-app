@@ -19,7 +19,7 @@ const queryObj = computed(() => ({
 
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/glossary`,
-  { query: queryObj, credentials: 'include' }
+  { $fetch: apiFetch, query: queryObj, credentials: 'include' }
 )
 
 const form = reactive({
@@ -54,9 +54,8 @@ async function createTerm() {
   if (!form.term.trim()) return
   creating.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/glossary`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/glossary`, {
       method: 'POST',
-      credentials: 'include',
       body: {
         term: form.term,
         slug: form.slug || undefined,
@@ -105,9 +104,8 @@ function cancelEdit() {
 
 async function saveEdit() {
   if (!editingId.value || !editForm.term.trim()) return
-  await $fetch(`/api/projects/${projectSlug.value}/glossary/${editingId.value}`, {
+  await apiFetch(`/api/projects/${projectSlug.value}/glossary/${editingId.value}`, {
     method: 'PUT',
-    credentials: 'include',
     body: {
       term: editForm.term,
       slug: editForm.slug || undefined,
@@ -122,9 +120,8 @@ async function saveEdit() {
 
 async function deleteTerm(t) {
   if (!confirm(`Delete term "${termLabel(t)}"?`)) return
-  await $fetch(`/api/projects/${projectSlug.value}/glossary/${termKey(t)}`, {
+  await apiFetch(`/api/projects/${projectSlug.value}/glossary/${termKey(t)}`, {
     method: 'DELETE',
-    credentials: 'include',
   })
   await refresh()
 }

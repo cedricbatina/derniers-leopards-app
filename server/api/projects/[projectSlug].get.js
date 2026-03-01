@@ -3,13 +3,14 @@ import { dbQuery } from '../../utils/db.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
-  if (!user?.id) {
+  const userId = Number(user?.id || user?.sub)
+  if (!userId) {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }
 
-  const slug = String(event.context.params.slug || '').trim()
-  if (!slug) {
-    throw createError({ statusCode: 400, statusMessage: 'Invalid slug' })
+  const projectSlug = String(event.context.params.projectSlug || event.context.params.slug || '').trim()
+  if (!projectSlug) {
+    throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
   }
 
   const rows = await dbQuery(
@@ -27,7 +28,7 @@ export default defineEventHandler(async (event) => {
     WHERE owner_id=? AND slug=? AND deleted_at IS NULL
     LIMIT 1
     `,
-    [user.id, slug]
+    [userId, projectSlug]
   )
 
   if (!rows?.length) throw createError({ statusCode: 404, statusMessage: 'Not found' })

@@ -9,11 +9,13 @@ const route = useRoute()
 const slug = computed(() => String(route.params.slug || ''))
 
 const { data, pending, refresh, error } = await useFetch(() => `/api/projects/${slug.value}`, {
+  $fetch: apiFetch,
   credentials: 'include',
   headers: useRequestHeaders(['cookie']),
 })
 
 const { data: booksData } = await useFetch(() => `/api/projects/${slug.value}/books`, {
+  $fetch: apiFetch,
   credentials: 'include',
   headers: useRequestHeaders(['cookie']),
 })
@@ -46,9 +48,8 @@ watchEffect(() => {
 async function save () {
   saving.value = true
   try {
-    await $fetch(`/api/projects/${slug.value}`, {
+    await apiFetch(`/api/projects/${slug.value}`, {
       method: 'PUT',
-      credentials: 'include',
       body: {
         title: form.title,
         title_en: form.title_en || null,
@@ -68,7 +69,7 @@ async function removeProject () {
   if (!confirm('Delete this project?')) return
   deleting.value = true
   try {
-    await $fetch(`/api/projects/${slug.value}`, { method: 'DELETE', credentials: 'include' })
+    await apiFetch(`/api/projects/${slug.value}`, { method: 'DELETE' })
     await navigateTo(localePath('/studio/projects'))
   } finally {
     deleting.value = false

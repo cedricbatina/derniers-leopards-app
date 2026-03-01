@@ -4,7 +4,6 @@ import { dbQuery } from '../../utils/db.js'
 export default defineEventHandler(async (event) => {
   const user = event.context.user
   const userId = user?.id || user?.sub
-  console.log('API /api/projects context.user:', user)
   if (!userId) {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }

@@ -16,7 +16,7 @@ const creating = ref(false)
 
 const { data: chaptersData } = await useFetch(
   () => `/api/projects/${projectSlug.value}/chapters`,
-  { credentials: 'include', headers: useRequestHeaders(['cookie']) }
+  { $fetch: apiFetch, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 const chapterOptions = computed(() => chaptersData.value?.chapters || [])
@@ -29,7 +29,7 @@ const queryObj = computed(() => ({
 
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/scenes`,
-  { query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
+  { $fetch: apiFetch, query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 const form = reactive({
@@ -44,9 +44,8 @@ async function createScene() {
   if (!form.chapter_id) return
   creating.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/scenes`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/scenes`, {
       method: 'POST',
-      credentials: 'include',
       body: {
         chapter_id: Number(form.chapter_id),
         scene_no: form.scene_no ? Number(form.scene_no) : undefined,
@@ -68,17 +67,15 @@ async function createScene() {
 
 async function softDelete(s) {
   if (!confirm(`Delete scene "${s.title || s.slug}"?`)) return
-  await $fetch(`/api/projects/${projectSlug.value}/scenes/${s.slug}`, {
+  await apiFetch(`/api/projects/${projectSlug.value}/scenes/${s.slug}`, {
     method: 'DELETE',
-    credentials: 'include',
   })
   await refresh()
 }
 
 async function restore(s) {
-  await $fetch(`/api/projects/${projectSlug.value}/scenes/${s.slug}/restore`, {
+  await apiFetch(`/api/projects/${projectSlug.value}/scenes/${s.slug}/restore`, {
     method: 'POST',
-    credentials: 'include',
   })
   await refresh()
 }

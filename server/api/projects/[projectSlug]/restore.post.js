@@ -3,7 +3,8 @@ import { dbQuery } from '../../../utils/db.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
-  if (!user?.id) {
+  const userId = Number(user?.id || user?.sub)
+  if (!userId) {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }
 
@@ -18,7 +19,7 @@ export default defineEventHandler(async (event) => {
     SET deleted_at = NULL
     WHERE owner_id=? AND slug=? AND deleted_at IS NOT NULL
     `,
-    [user.id, projectSlug]
+    [userId, projectSlug]
   )
 
   if (!res?.affectedRows) throw createError({ statusCode: 404, statusMessage: 'Not found' })

@@ -26,16 +26,20 @@ const queryObj = computed(() => ({
 
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/books`,
-  { query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
+  {
+    $fetch: apiFetch,
+    query: queryObj,
+    credentials: 'include',
+    headers: useRequestHeaders(['cookie']),
+  }
 )
 
 async function createBook () {
   if (!form.title.trim()) return
   creating.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/books`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/books`, {
       method: 'POST',
-      credentials: 'include',
       body: {
         title: form.title,
         slug: form.slug || undefined,
@@ -53,17 +57,15 @@ async function createBook () {
 
 async function softDelete (b) {
   if (!confirm(`Delete book "${b.title}"?`)) return
-  await $fetch(`/api/projects/${projectSlug.value}/books/${b.slug}`, {
+  await apiFetch(`/api/projects/${projectSlug.value}/books/${b.slug}`, {
     method: 'DELETE',
-    credentials: 'include',
   })
   await refresh()
 }
 
 async function restore (b) {
-  await $fetch(`/api/projects/${projectSlug.value}/books/${b.slug}/restore`, {
+  await apiFetch(`/api/projects/${projectSlug.value}/books/${b.slug}/restore`, {
     method: 'POST',
-    credentials: 'include',
   })
   await refresh()
 }

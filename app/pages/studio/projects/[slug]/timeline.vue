@@ -17,7 +17,7 @@ const queryObj = computed(() => ({
 
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/timeline`,
-  { query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
+  { $fetch: apiFetch, query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
 const form = reactive({
@@ -52,9 +52,8 @@ async function createEvent() {
   if (!form.title.trim()) return
   creating.value = true
   try {
-    await $fetch(`/api/projects/${projectSlug.value}/timeline`, {
+    await apiFetch(`/api/projects/${projectSlug.value}/timeline`, {
       method: 'POST',
-      credentials: 'include',
       body: {
         title: form.title,
         slug: form.slug || undefined,
@@ -103,9 +102,8 @@ function cancelEdit() {
 
 async function saveEdit() {
   if (!editingId.value || !editForm.title.trim()) return
-  await $fetch(`/api/projects/${projectSlug.value}/timeline/${editingId.value}`, {
+  await apiFetch(`/api/projects/${projectSlug.value}/timeline/${editingId.value}`, {
     method: 'PUT',
-    credentials: 'include',
     body: {
       title: editForm.title,
       slug: editForm.slug || undefined,
@@ -120,9 +118,8 @@ async function saveEdit() {
 
 async function deleteEvent(e) {
   if (!confirm(`Delete event "${eventTitle(e)}"?`)) return
-  await $fetch(`/api/projects/${projectSlug.value}/timeline/${eventKey(e)}`, {
+  await apiFetch(`/api/projects/${projectSlug.value}/timeline/${eventKey(e)}`, {
     method: 'DELETE',
-    credentials: 'include',
   })
   await refresh()
 }

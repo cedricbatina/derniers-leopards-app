@@ -46,6 +46,7 @@
     "save": "Enregistrer",
     "cancel": "Annuler",
     "delete": "Supprimer",
+    "deleteForever": "Supprimer définitivement",
     "edit": "Modifier",
     "close": "Fermer",
     "back": "Retour",
@@ -54,6 +55,8 @@
     "filter": "Filtrer",
     "clear": "Effacer",
     "confirm": "Confirmer",
+    "deactivate": "Désactiver",
+    "login": "Se connecter",
        "start": "Commencer",
       "backExplore": "Retour explorer",
       "backGuide": "Retour guide",
@@ -871,7 +874,38 @@
     "q1": { "q": "Sonekeno, c’est pour qui ?", "a": "Auteurs, studios, éditeurs et créateurs qui veulent structurer et produire des œuvres." },
     "q2": { "q": "Est-ce que je peux gérer plusieurs projets ?", "a": "Oui. Chaque univers vit dans un projet séparé (scènes, personnages, chronologie, glossaire…)."},
     "q3": { "q": "Et si je veux publier ?", "a": "Tu pourras rendre un projet public plus tard via Explore, sans mélanger ton travail privé." }
-  }
-}
+  },
 
+  "profile": {
+    "title": "Paramètres du profil",
+    "subtitle": "Gérez votre compte et vos préférences",
+    "displayName": "Nom d'affichage",
+    "email": "Adresse e-mail",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "bio": "Biographie",
+    "website": "Site web",
+    "locale": "Langue",
+    "timezone": "Fuseau horaire",
+    "verified": "E-mail vérifié",
+    "unverified": "E-mail non vérifié",
+    "editProfile": "Modifier le profil",
+    "accountInfo": "Informations du compte",
+    "accountType": "Type de compte",
+    "role": "Rôle",
+    "organization": "Organisation",
+    "profession": "Profession",
+    "memberSince": "Membre depuis",
+    "dangerZone": "Zone dangereuse",
+    "softDelete": "Désactiver le compte",
+    "softDeleteDesc": "Désactivez votre compte temporairement. Vous pouvez le réactiver en vous reconnectant.",
+    "hardDelete": "Supprimer le compte définitivement",
+    "hardDeleteDesc": "Supprimez définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
+    "confirmSoftDelete": "Désactiver le compte ?",
+    "softDeleteConfirmMsg": "Votre compte sera désactivé. Vous pouvez le réactiver en vous reconnectant.",
+    "confirmHardDelete": "Supprimer le compte définitivement ?",
+    "hardDeleteConfirmMsg": "Cela supprimera définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
+    "noUser": "Vous devez être connecté pour voir votre profil.",
+    "deleteForever": "Supprimer définitivement"
+  }
 }

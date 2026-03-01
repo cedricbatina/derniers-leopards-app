@@ -14,12 +14,12 @@ const chapterId = computed(() => Number(route.params.chapterId))
 
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}/chapters/${chapterId.value}`,
-  { credentials: 'include' }
+  { $fetch: apiFetch, credentials: 'include' }
 )
 
 const { data: charactersData } = await useFetch(
   () => `/api/projects/${projectSlug.value}/characters`,
-  { credentials: 'include' }
+  { $fetch: apiFetch, credentials: 'include' }
 )
 
 const characters = computed(() => charactersData.value?.characters || [])
@@ -63,11 +63,10 @@ async function save() {
   if (!form.title.trim()) return
   saving.value = true
   try {
-    await $fetch(
+    await apiFetch(
       `/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}/chapters/${chapterId.value}`,
       {
         method: 'PUT',
-        credentials: 'include',
         body: {
           chapter_no: form.chapter_no ? Number(form.chapter_no) : undefined,
           title: form.title,
@@ -92,9 +91,9 @@ async function removeChapter() {
   if (!confirm('Delete this chapter?')) return
   deleting.value = true
   try {
-    await $fetch(
+    await apiFetch(
       `/api/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}/chapters/${chapterId.value}`,
-      { method: 'DELETE', credentials: 'include' }
+      { method: 'DELETE' }
     )
     await navigateTo(localePath(`/studio/projects/${projectSlug.value}/books/${bookSlug.value}/parts/${partId.value}`))
   } finally {
