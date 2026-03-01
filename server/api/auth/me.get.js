@@ -21,7 +21,8 @@ export default defineEventHandler(async (event) => {
          status, role,
          account_type, first_name, last_name, organization_name, profession,
          avatar_url, bio, website,
-         email_verified_at, locale, timezone
+         email_verified_at, locale, timezone,
+         created_at, updated_at
        FROM users
        WHERE id = ? AND deleted_at IS NULL
        LIMIT 1`,
@@ -73,9 +74,12 @@ export default defineEventHandler(async (event) => {
 
         locale: u.locale,
         timezone: u.timezone,
+        created_at: u.created_at,
+        updated_at: u.updated_at,
 
         // RBAC
-        primary_role: primaryRole, // <- plus clair
+        role: primaryRole,
+        primary_role: primaryRole,
         roles,
       },
     }

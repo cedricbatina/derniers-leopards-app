@@ -3,57 +3,58 @@ import { getProjectByAccess } from '../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
-  const userId = user?.id || user?.sub
-  if (!userId) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
+    const userId = user?.id || user?.sub
+      if (!userId) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
-  const projectSlug = String(event.context.params.projectSlug || '').trim()
-  if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
+        const projectSlug = String(event.context.params.projectSlug || '').trim()
+          if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
 
-  const project = await getProjectByAccess(user, projectSlug)
-  if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
+            const project = await getProjectByAccess(user, projectSlug)
+              if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
-  const { q, trashed } = getQuery(event)
-  const query = (q ? String(q).trim() : '') || null
-  const trashedFlag = String(trashed || '') === '1' ? 1 : 0
+                const { q, trashed } = getQuery(event)
+                  const query = (q ? String(q).trim() : '') || null
+                    const trashedFlag = String(trashed || '') === '1' ? 1 : 0
 
-  const rows = await dbQuery(
-    `
-    SELECT
-      id, project_id, slug, title,
-      subtitle, subtitle_en, subtitle_pt,
-      summary,
-      created_at, updated_at, deleted_at
-    FROM books
-    WHERE project_id = ?
-      AND (
-        (? = 1 AND deleted_at IS NOT NULL) OR
-        (? = 0 AND deleted_at IS NULL)
-      )
-      AND (
-        ? IS NULL
-        OR title LIKE CONCAT('%', ?, '%')
-        OR slug LIKE CONCAT('%', ?, '%')
-        OR subtitle LIKE CONCAT('%', ?, '%')
-        OR subtitle_en LIKE CONCAT('%', ?, '%')
-        OR subtitle_pt LIKE CONCAT('%', ?, '%')
-        OR summary LIKE CONCAT('%', ?, '%')
-      )
-    ORDER BY created_at DESC, id DESC
-    LIMIT 500
-    `,
-    [
-      project.id,
-      trashedFlag,
-      trashedFlag,
-      query,
-      query,
-      query,
-      query,
-      query,
-      query,
-      query,
-    ]
-  )
+                      const rows = await dbQuery(
+                          `
+                              SELECT
+                                    id, project_id, slug, title,
+                                          subtitle, subtitle_en, subtitle_pt,
+                                                summary,
+                                                      created_at, updated_at, deleted_at
+                                                          FROM books
+                                                              WHERE project_id = ?
+                                                                    AND (
+                                                                            (? = 1 AND deleted_at IS NOT NULL) OR
+                                                                                    (? = 0 AND deleted_at IS NULL)
+                                                                                          )
+                                                                                                AND (
+                                                                                                        ? IS NULL
+                                                                                                                OR title LIKE CONCAT('%', ?, '%')
+                                                                                                                        OR slug LIKE CONCAT('%', ?, '%')
+                                                                                                                                OR subtitle LIKE CONCAT('%', ?, '%')
+                                                                                                                                        OR subtitle_en LIKE CONCAT('%', ?, '%')
+                                                                                                                                                OR subtitle_pt LIKE CONCAT('%', ?, '%')
+                                                                                                                                                        OR summary LIKE CONCAT('%', ?, '%')
+                                                                                                                                                              )
+                                                                                                                                                                  ORDER BY created_at DESC, id DESC
+                                                                                                                                                                      LIMIT 500
+                                                                                                                                                                          `,
+                                                                                                                                                                              [
+                                                                                                                                                                                    project.id,
+                                                                                                                                                                                          trashedFlag,
+                                                                                                                                                                                                trashedFlag,
+                                                                                                                                                                                                      query,
+                                                                                                                                                                                                            query,
+                                                                                                                                                                                                                  query,
+                                                                                                                                                                                                                        query,
+                                                                                                                                                                                                                              query,
+                                                                                                                                                                                                                                    query,
+                                                                                                                                                                                                                                          query,
+                                                                                                                                                                                                                                              ]
+                                                                                                                                                                                                                                                )
 
-  return { project: { slug: project.slug, id: project.id }, books: rows }
-})
+                                                                                                                                                                                                                                                  return { project: { slug: project.slug, id: project.id }, books: rows }
+                                                                                                                                                                                                                                                  })
+                                                                                                                                                                                                                                                  

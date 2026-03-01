@@ -47,7 +47,7 @@
             <div class="flex-1 space-y-2">
               <div>
                 <p class="text-xs text-muted uppercase tracking-widest">{{ t('profile.displayName') }}</p>
-                <p class="text-xl font-bold">{{ user.display_name || user.username || 'Unnamed' }}</p>
+                <p class="text-xl font-bold">{{ displayName }}</p>
               </div>
               <div>
                 <p class="text-xs text-muted uppercase tracking-widest">{{ t('profile.email') }}</p>
@@ -214,7 +214,7 @@
             </div>
             <div>
               <p class="text-muted">{{ t('profile.role') }}</p>
-              <p class="font-medium capitalize">{{ user.role || 'User' }}</p>
+              <p class="font-medium capitalize">{{ resolvedRole }}</p>
             </div>
             <div v-if="user.organization_name">
               <p class="text-muted">{{ t('profile.organization') }}</p>
@@ -294,6 +294,22 @@ const { data, pending, refresh, error } = await useFetch(() => '/api/auth/me', {
 })
 
 const user = computed(() => data.value?.user)
+
+const displayName = computed(() => {
+  const u = user.value
+  if (!u) return 'Unnamed'
+  if (u.display_name) return u.display_name
+  if (u.username) return u.username
+  const full = [u.first_name, u.last_name].filter(Boolean).join(' ').trim()
+  if (full) return full
+  return u.email || 'Unnamed'
+})
+
+const resolvedRole = computed(() => {
+  const u = user.value
+  if (!u) return 'User'
+  return u.primary_role || u.role || (Array.isArray(u.roles) ? u.roles[0] : null) || 'User'
+})
 
 const isEditing = ref(false)
 const saving = ref(false)

@@ -86,22 +86,22 @@
       <!-- NAV toujours visible (pas de hamburger) -->
       <div class="container-app pb-3">
         <nav class="flex flex-wrap gap-2" :aria-label="t('nav.aria')">
-          <NuxtLink :to="localePath('/characters')" class="pill" active-class="pill-active">
+          <NuxtLink :to="localePath('/explore/characters')" class="pill" active-class="pill-active">
             <Icon name="mdi:account-group" aria-hidden="true" />
             <span>{{ t('nav.characters') }}</span>
           </NuxtLink>
 
-          <NuxtLink :to="localePath('/scenes')" class="pill" active-class="pill-active">
+          <NuxtLink :to="localePath('/explore/scenes')" class="pill" active-class="pill-active">
             <Icon name="mdi:movie-open" aria-hidden="true" />
             <span>{{ t('nav.scenes') }}</span>
           </NuxtLink>
 
-          <NuxtLink :to="localePath('/timeline')" class="pill" active-class="pill-active">
+          <NuxtLink :to="localePath('/explore/timeline')" class="pill" active-class="pill-active">
             <Icon name="mdi:timeline" aria-hidden="true" />
             <span>{{ t('nav.timeline') }}</span>
           </NuxtLink>
 
-          <NuxtLink :to="localePath('/glossary')" class="pill" active-class="pill-active">
+          <NuxtLink :to="localePath('/explore/glossary')" class="pill" active-class="pill-active">
             <Icon name="mdi:book-open-page-variant" aria-hidden="true" />
             <span>{{ t('nav.glossary') }}</span>
           </NuxtLink>
