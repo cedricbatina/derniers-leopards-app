@@ -1,0 +1,236 @@
+LES DERNIERS LEOPARDS — FICHES SCENES POUR INSERTION DB
+Version de travail generee le 2026-06-08
+
+OBJECTIF
+- Consolider ce qui a ete retenu pour les scenes : chronologie scenique validee + etat DB actuel + memoire de nos echanges.
+- Fournir un format pipe simple pour insertion / transformation SQL.
+- Distinguer les scenes EXISTING_DB des scenes A_CREER proposees pour les chapitres qui existent deja mais n ont pas encore de lignes scenes.
+
+NOTES CANON / DB
+- Mutinu uniquement — nkusu obsolète (migration nkusu → mutinu).
+- Mvita Kanga (slug mvita-kanga) — pas vita-kanga comme slug principal.
+- Mapasa = jumeaux ; nzuzi = premier-né (prénom Mpasi) ; nsimba = dernier-né (prénom Muanda).
+- Nkunku → bukono si placeholder chef faible.
+- Orthographe : Mbuila, pas Mbwila.
+- Table scenes ancienne : slug, chapter_id, scene_no, title, pov_character_id, location_id, objective, time_of_day, summary, conflict, turning_point, outcome, hook, indesign_style.
+- Version Sonekeno recente : scenes rattachees au project, content LONGTEXT pour le texte reel, soft delete deleted_at, unicite par project_id + slug.
+
+======================================================================================
+SECTION 1 — FORMAT PIPE POUR IMPORT SIMPLE
+Colonnes : status_notes|book_slug|part_no|part_slug|chapter_no|chapter_slug|scene_no|scene_slug|title|pov|location|period|summary|conflict|turning_point|outcome|tags
+======================================================================================
+
+# 1A — SCENES EXISTANTES EN DB (45)
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|1|makesa-et-embuscades|1|p3c1-s1-razzia|Une razzia au bord du pays|Kinuani|Pays Kuimba|1647|Une attaque exterieure frappe les frontieres de Kuimba et revele que le pays entre dans une phase de guerre ouverte.|Les assaillants testent les defenses et cherchent une faille dans le territoire.|Kinuani comprend que la guerre ne sera pas seulement frontale mais aussi faite de ruses et de signaux.|Kuimba se prepare a une reponse plus dure.|attaque,frontiere,kuimba,makesa
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|1|makesa-et-embuscades|2|p3c1-s2-embuscade|L embuscade|Kinuani||1647|Les defenses traditionnelles et les pieges de Kuimba se referment sur les assaillants.|Kinuani doit proteger le pays sans exposer ses secrets militaires.|Les assaillants sont pris dans la logique des pieges et perdent l initiative.|La reputation des makesa et des defenses de Kuimba grandit.|embuscade,pieges,makesa
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|1|makesa-et-embuscades|3|p3c1-s3-enterrement|Sans strass ni paillettes|Kinuani|Pays Kuimba|1647|Apres l attaque, les morts sont traites sans spectacle ; la guerre impose une sobriete lourde.|Il faut honorer les morts sans transformer la violence en gloire facile.|Le silence des rites pese davantage que les chants victorieux.|Le pays comprend que la crise est profonde.|deuil,guerre,kuimba
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|2|nganga-mungua|1|p3c2-s1-cour|A la cour de Mbanza Kongo|Matondo|Mbanza Kongo|1648|A Mbanza Kongo, Matondo circule dans les zones de pouvoir et d information ou l affaire Nganga Mungua va se nouer.|Les intrigues de cour menacent de contaminer Kuimba.|Les paroles politiques deviennent des armes.|Une mission ou un message se prepare autour de Nganga Mungua.|cour,mbanza-kongo,intrigue
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|2|nganga-mungua|2|p3c2-s2-haine|La haine de Nzongo|Kinuani|Pays Kuimba|1648|La rancoeur contre Nzongo et son autorite morale nourrit les tensions internes.|La figure de Nzongo divise : protecteur pour les uns, obstacle pour les autres.|La haine intime se transforme en danger politique.|Kinuani se retrouve au centre d une hostilite qui le depasse.|haine,nzongo,trahison
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|2|nganga-mungua|3|p3c2-s3-ordre|Ordre de mission|Kinuani|Pays Kuimba|1648|Kinuani recoit ou prend une mission liee a Nganga Mungua, dans un climat deja empoisonne.|Obeir expose Kinuani ; refuser l isolerait politiquement.|La mission devient un piege potentiel.|Le terrain est pret pour le coup monte.|mission,nganga-mungua,piege
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|3|le-coup-monte|1|p3c3-s1-bois|Dans le bois, l ombre|Kinuani||1648|Dans le bois, l ombre du complot se rapproche de Kinuani et de Nganga Mungua.|La nature devient lieu d embuscade et de manipulation.|Un detail invisible prepare l accusation.|Le piege se referme.|bois,ombre,complot
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|3|le-coup-monte|2|p3c3-s2-fleche|La fleche qui change tout|Ndebeka||1648|Ndebeka fait basculer l intrigue par une fleche ou une action decisive qui modifie toute la lecture des faits.|Il doit tuer ou faire tuer sans que l accusation remonte a lui.|Le geste transforme l incident en crime politique.|Kinuani devient l homme que l on peut accuser.|ndebeka,meurtre,fleche
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|3|le-coup-monte|3|p3c3-s3-retour|Retour empoisonne|Kinuani|Pays Kuimba|1648|Kinuani revient dans un climat empoisonne : les faits sont retournes contre lui.|Il doit s expliquer face a une accusation que ses ennemis ont deja preparee.|Le soupcon prend plus de force que la verite.|L exil devient une issue politique.|accusation,empoisonnement,trahison
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|4|exil|1|p3c4-s1-decision|La decision de Nzongo|Nzongo|Pays Kuimba|1648|Nzongo tranche : pour apaiser la crise et eviter l explosion interne, Kinuani doit partir.|Il protege Kinuani tout en semblant le sacrifier politiquement.|La justice familiale devient un exil.|Kinuani et Mutinu se preparent a quitter Kuimba.|exil,nzongo,decision
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|4|exil|2|p3c4-s2-leurre|Le leurre|Kinuani||1648|Kinuani organise son depart et/ou sa protection par diversion.|Les ennemis doivent croire qu ils maitrisent sa route.|Le leurre donne un temps d avance aux exilees.|La fuite vers le Mayombe devient possible.|leurre,fuite,exil
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|4|exil|3|p3c4-s3-fleuve|Mayi Ndombe|Kinuani|Mayi Ndombe|1648|Le passage par les eaux marque une coupure symbolique entre Kuimba et l exil.|La route impose fatigue, vigilance et abandon du monde connu.|Le fleuve devient seuil.|Kinuani et Mutinu entrent dans la sequence du Mayombe.|fleuve,mayi-ndombe,passage
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|5|mayombe|1|p3c5-s1-accueil|Accueil en foret|Kinuani|Massif du Mayombe|1648-1650|Le Mayombe accueille les exilees dans un monde de foret, de pharmacophee, de justice et d apprentissages nouveaux.|Kinuani doit survivre sans devenir simple fugitif.|L exil devient aussi espace d autorite et de transmission.|Une nouvelle vie commence sous couvert de foret.|mayombe,foret,accueil
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|5|mayombe|2|p3c5-s2-naissance|Naissance dans l epreuve|Kinuani|Massif du Mayombe|1648-1650|Mutinu accouche dans des conditions difficiles ; l enfant devient marqueur de survie et d initiation.|La vie familiale affronte l exil, le danger et la douleur.|La naissance transforme l exil en racine.|Mutinu renforce son statut de gardienne de vie et de savoir.|naissance,mutinu,mayombe
+EXISTING_DB|les-derniers-leopards|3|piege-et-exil|5|mayombe|3|p3c5-s3-message|Le message: Nzongo est malade|Kinuani|Massif du Mayombe|1649-1650|Un messager annonce que Nzongo est malade et aveugle ; Kinuani doit envisager un retour precipite.|Revenir expose Kinuani ; rester pourrait signifier manquer les derniers mots de Nzongo.|L urgence familiale l emporte sur la prudence.|Le retour vers Kuimba est lance.|message,nzongo,retour
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|1|retour-trop-tard|1|p4c1-s1-route|Cinq jours de petite foulee|Kinuani||1649-1650|Kinuani marche vite, trop vite, vers Kuimba pour rejoindre Nzongo avant la fin.|La distance lutte contre le temps.|Chaque etape fait sentir qu il arrive peut-etre trop tard.|Le pays de Kuimba se rapproche avec une menace de deuil.|route,urgence,retour
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|1|retour-trop-tard|2|p4c1-s2-signal|Fumee et ngoma|Kinuani||1649-1650|Les signaux de fumee et de ngoma annoncent que quelque chose d irreversible s est produit.|Kinuani veut encore croire qu il peut atteindre Nzongo vivant.|Les signes collectifs lui disent la mort avant les paroles.|La course devient entree dans le deuil.|signal,ngoma,deuil
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|1|retour-trop-tard|3|p4c1-s3-mort|La nuit ou Nzongo part|Nzongo|Pays Kuimba|1649-1650|Nzongo meurt avant l aube apres avoir transmis ses confidences et ses derniers poids.|Il doit quitter le monde sans avoir publiquement regle toutes les successions.|La mort ferme la bouche du patriarche et ouvre celle des ambitions.|Kuimba devient un clan sans son axe.|mort,nzongo,aube
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|2|trois-veillees|1|p4c2-s1-arrivee|Arriver trop tard|Kinuani|Pays Kuimba|1649-1650|Kinuani arrive apres la mort de Nzongo et doit absorber le choc sous les yeux du pays.|Il veut pleurer comme un fils mais doit deja etre observe comme chef potentiel.|Son retard devient matiere a interpretation politique.|La veillee commence sous tension.|arrivee,deuil,kinuani
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|2|trois-veillees|2|p4c2-s2-afflux|Le pays se remplit|Kinuani|Pays Kuimba|1649-1650|Familles, anciens, allies et opportunistes remplissent Kuimba pour les rites funebres.|La foule rend les alliances visibles et les haines dangereuses.|Le deuil devient assemblee politique.|Les camps commencent a se mesurer.|foule,veillees,politique
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|2|trois-veillees|3|p4c2-s3-mamans|Les mamans parlent|Kinuani|Pays Kuimba|1649-1650|Les femmes anciennes, meres et doyennes commentent la mort, les signes et la succession.|Leur parole peut apaiser ou orienter la decision collective.|Le dessous du pouvoir passe par la parole des mamans.|Kinuani comprend que la succession ne se jouera pas seulement entre hommes.|mamans,matriarches,succession
+EXISTING_DB ; A_HARMONISER_BUKONO|les-derniers-leopards|4|mort-de-nzongo|3|succession-nkunku|1|p4c3-s1-choix|Le choix du chef|Kinuani|Pays Kuimba|1649-1650|Le clan cherche un chef de compromis apres Nzongo ; le nom de Nkunku/Bukono circule selon l ancienne trame DB.|Choisir un faible preserve une paix apparente mais fragilise Kuimba.|Le compromis politique remplace la vision de Nzongo.|La crise de succession s installe.|succession,chef,compromis
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|3|succession-nkunku|2|p4c3-s2-sceptre|Le sceptre introuvable|Kinuani|Pays Kuimba|1649-1650|Le sceptre et/ou les savoirs de Nzongo deviennent introuvables, ce qui alimente l accusation et la lutte symbolique.|Sans sceptre, la legitimite devient attaquable.|Le manque d objet devient preuve politique contre les gardiens du secret.|Kisita et les proches de Nzongo sont menaces.|sceptre,secret,legitimite
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|3|succession-nkunku|3|p4c3-s3-ivresse|Agene et nuit de fete|Kinuani|Pays Kuimba|1649-1650|Une nuit d agene et de fete ouvre une faille dans la vigilance du clan.|L ivresse relache les langues et les protections.|Un aveu ou une negligence donne prise aux ennemis.|La nuit prepare le couteau.|agene,ivresse,fete
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|4|le-couteau|1|p4c4-s1-chute|La chute|Kinuani|Pays Kuimba|1649-1650|Kinuani est poignarde par un sbire de Ndebeka durant la periode de deuil.|Il est vulnerable au moment ou son statut se renforce.|Le corps de Kinuani tombe, mais le complot se devoile par exces de confiance.|La survie devient enjeu de legitimite.|poignard,attentat,ndebeka
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|4|le-couteau|2|p4c4-s2-guerison|Maison de Kisita|Kinuani|Pays Kuimba|1649-1650|Kisita, avec Mutinu, soigne Kinuani et protege son corps du poison ou de la mort.|Sauver Kinuani exige secret, science et confiance.|La maison de Kisita devient sanctuaire de survie.|Kinuani vit, mais l ombre de Ndebeka grandit.|guerison,kisita,mutinu
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|4|le-couteau|3|p4c4-s3-ombres|Les ombres du clan|Kinuani|Pays Kuimba|1649-1650|Le reseau d ombres, de soupcons et de mabembe se reactive pour comprendre qui a frappe.|Le danger vient de l interieur du clan.|Les confidences et aveux commencent a pointer vers Ndebeka.|Une purge discrete devient possible.|espionnage,mabembe,ombres
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|5|retrait-au-nord|1|p4c5-s1-compromis|Le compromis|Kinuani|Pays Kuimba|1650-1651|Un compromis politique permet d eviter une rupture immediate apres l attentat.|Kinuani doit accepter une solution imparfaite pour preserver Kuimba.|La paix apparente coute une part de verite.|Le clan tient, mais la fracture demeure.|compromis,kuimba,politique
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|5|retrait-au-nord|2|p4c5-s2-mutinu|Le mariage qui se fissure|Mutinu|Pays Kuimba|1650-1651|Mutinu subit la pression du compromis, de l exil et de la politique ; le couple doit porter plus que son foyer.|Le devoir public menace l intimite.|Mutinu voit ce que Kinuani ne peut pas toujours nommer.|La trajectoire vers Mbanza Kongo devient inevitable.|mutinu,couple,fissure
+EXISTING_DB|les-derniers-leopards|4|mort-de-nzongo|5|retrait-au-nord|3|p4c5-s3-basculer|La bascule|Kinuani||1650-1651|La decision de quitter ou de se rendre vers Mbanza Kongo fait basculer l arc de Kuimba vers la politique royale.|Rester, c est s enliser ; partir, c est exposer Kuimba a d autres chefs.|Le destin local devient destin du Kongo.|Kinuani et Mutinu prennent la route du pouvoir central.|bascule,mbanza-kongo,depart
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|1|mbanza-kongo|1|p5c1-s1-intronisation|Le roi debout|Kinuani|Mbanza Kongo|1651-1661|La cour de Mbanza Kongo est retrouvee dans son autorite royale et ses tensions.|Kinuani doit servir sans confondre service administratif et commandement militaire.|Le roi ou prince apparait comme pole d ordre.|L arc politique de Mbanza Kongo s ouvre.|mbanza-kongo,roi,intronisation
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|1|mbanza-kongo|2|p5c1-s2-nomination|Kinuani rappele|Kinuani|Mbanza Kongo|1651-1656|Kinuani est appele au service administratif et diplomatique de la cour.|Il doit mettre ses savoirs au service d un pouvoir plus large que Kuimba.|La cour reconnait son utilite sans encore le faire chef de Kuimba.|Sa stature politique grandit.|nomination,administration,cour
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|1|mbanza-kongo|3|p5c1-s3-mutinu-ville|Mutinu, dame noble|Mutinu|Mbanza Kongo|1651-1656|Mutinu apprend a tenir son rang dans la ville et a observer les jeux de cour.|La ville impose une noblesse codifiee et dangereuse.|Elle comprend que les salons et concessions valent parfois les champs de bataille.|Mutinu devient actrice politique en ville.|mutinu,ville,noblesse
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|2|ecole-des-paroles|1|p5c2-s1-ouverture|L ecole de la parole|Kinuani|Mbanza Kongo|1661-1665|Une ecole de la parole forme ou mobilise les voix capables de soutenir le royaume.|La parole devient discipline de guerre et de politique.|Kinuani voit que le combat commence par les mots.|L appareil de mobilisation se met en place.|parole,propagande,formation
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|2|ecole-des-paroles|2|p5c2-s2-discours|Le roi galvanise|Mvita Kanga|Mbanza Kongo|1661-1665|Mvita Kanga galvanise les siens et donne au combat une dimension de nom, d honneur et de survie.|Le royaume doit croire encore en sa force malgre les trahisons.|Le discours transforme la peur en elan.|Le chemin vers Mbuila devient irreversible.|mvita-kanga,discours,mobilisation
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|2|ecole-des-paroles|3|p5c2-s3-faille|La faille|Kinuani|Mbanza Kongo|1661-1665|Kinuani percoit une faille dans les communications, les alliances ou la securite du royaume.|Il sait que les ennemis n attaqueront pas seulement de face.|Une faiblesse invisible menace l armee avant meme la bataille.|Le sabotage de Mbuila se prepare.|faille,sabotage,trahison
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|3|verite-ndebeka|1|p5c3-s1-aveu|Le sbire lache le morceau|Nzungani|Pays Kuimba|1656-1665|Un sbire ivre ou pris dans le reseau finit par avouer l implication de Ndebeka.|La verite a besoin d etre arrachee aux ombres.|L aveu relie le meurtre de Nganga Mungua et l attentat contre Kinuani.|Ndebeka devient politiquement intenable.|aveu,ndebeka,nzungani
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|3|verite-ndebeka|2|p5c3-s2-embuscade|Matondo regle sa dette|Matondo||1656-1665|Matondo, se sentant trahi ou manipule, regle ses comptes sur la route ou dans une embuscade.|Il doit choisir entre complicite, vengeance et dette morale.|Il depouille ou retourne la violence contre Ndebeka.|La trajectoire de Ndebeka se degrade vers l exil.|matondo,embuscade,dette
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|3|verite-ndebeka|3|p5c3-s3-pardon|Allegeance|Kinuani|Mbanza Kongo|1656-1665|Apres l aveu et les reglements, une forme d allegeance ou de pardon politique reorganise les loyautes autour de Kinuani.|Pardonner peut renforcer l ordre mais laisser des plaies ouvertes.|Kinuani choisit la cohesion utile a la guerre.|Les derniers preparatifs vers Mbuila s engagent.|allegeance,pardon,cohesion
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|4|mbuila|1|p5c4-s1-veille|La veille de Mbuila|Kinuani|Mbuila|1665-10-28/29|La veille de Mbuila, Kinuani attend les signaux et mesure la fragilite des communications.|Les sabotages menacent de separer les forces au moment decisif.|L absence de signal devient signe de catastrophe.|La bataille s ouvre sous le poids de la trahison.|mbuila,veille,sabotage
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|4|mbuila|2|p5c4-s2-decapitation|Le roi tombe|Matondo|Mbuila|1665-10-29|Mvita Kanga tombe et est decapite, provoquant le kinkole et l effondrement moral du Kongo.|Les communications brisees empechent l appui attendu.|La mort du roi transforme la bataille en desolation historique.|Le Kongo entre dans la nuit de Mbuila.|mvita-kanga,decapitation,kinkole
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|4|mbuila|3|p5c4-s3-choix|Choisir quand tout est perdu|Kinuani|Mbuila|1665-10-29/30|Kinuani apprend ou comprend que tout est perdu, mais refuse la survie humiliee.|Sauver sa vie signifierait vivre a genoux.|Il formule le choix de mourir debout.|L attaque volontaire du lendemain est decidee.|choix,sacrifice,kinuani
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|5|les-derniers-leopards|1|p5c5-s1-sacrifice|Le sacrifice|Kinuani|Mbuila|1665-10-30|Avec environ cent volontaires, Kinuani attaque en pleine conscience et meurt avant midi.|L acte est militairement perdu mais symboliquement fondateur.|La mort choisie transforme les combattants en derniers leopards.|Le tome bascule vers la memoire et la resistance secrete.|sacrifice,derniers-leopards,mbuila
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|5|les-derniers-leopards|2|p5c5-s2-fuite|Proteger Mutinu et les enfants|Nsimba||1665|Apres le sacrifice, il faut faire fuir Mutinu et les enfants (mapasa Muanda/Mpasi) pour sauver la lignee et les savoirs.|Les vainqueurs et les traitres peuvent detruire ce qui reste.|La protection des vivants remplace la bataille.|La resistance devient clandestine.|fuite,enfants,mutinu,nsimba,muanda
+EXISTING_DB|les-derniers-leopards|5|vers-mbuila|5|les-derniers-leopards|3|p5c5-s3-epilogue|Epilogue - La memoire et le nom|Nzuzi|Pays Kuimba|1665-1702|La memoire du nom et du sacrifice est gardee a Kuimba et transmise aux survivants (mapasa Mpasi/nzuzi).|Le monde public est brise, mais la parole cachee resiste.|La memoire devient l arme qui survit a la defaite.|Le recit ouvre vers 1702 et le mbongi final.|memoire,nom,resistance,nzuzi,mpasi
+
+# 1B — SCENES A CREER / PROPOSEES POUR LES CHAPITRES EXISTANTS DES PARTIES I-II (30)
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|1|prologue-jumeaux|1|p1c1-s1-mbongi-1702|Mbanza Kongo se releve|Mutinu|Mbanza Kongo|1702|Kimpa Vita et les mampuya maa Kongo s installent a Mbanza Kongo pour guerir et rebâtir. La rumeur atteint Mutinu.|La capitale est blessee ; la memoire doit trouver une bouche.|Mutinu decide de venir.|Le cadre du mbongi de memoire s ouvre.|prologue,1702,kimpa-vita
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|1|prologue-jumeaux|2|p1c1-s2-arrivee-mutinu|L arrivee de Mutinu|Mutinu|Mbanza Kongo|1702|Mutinu arrive avec sa cour et les porteurs de memoire ; elle est recue avec honneur.|Elle porte un passe que beaucoup n ont pas connu.|Les regards reconnaissent en elle une survivante de Mbuila.|Le nzonzi peut ouvrir la parole.|mutinu,mbongi,memoire
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|1|prologue-jumeaux|3|p1c1-s3-nzonzi-ouvre|Le nzonzi ouvre le cercle|Nzonzi|Mbanza Kongo|1702|Un nzonzi hote presente les figures presentes et transforme la reunion en scene de transmission.|La parole doit etre juste pour ne pas trahir les morts.|Le nom des anciens appelle le passe.|Retour narratif vers Kuimba avant les ruines.|nzonzi,mbongi,cadre
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|2|couvent-temple|1|p1c2-s1-discipline|La discipline de Ta Mukono|Kinuani|Couvent de Ta Mukono|avant 1638|Kinuani est forme dans un couvent d elite ou chaque geste ordonne le corps, l esprit et le futur chef.|La rigueur du temple casse l enfance pour forger un homme.|Ta Mukono pousse Kinuani au-dela du simple combat.|Le lecteur decouvre le programme total du bukongo.|couvent,discipline,ta-mukono
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|2|couvent-temple|2|p1c2-s2-savoirs|Natikongo, etoiles et forge|Kinuani|Couvent de Ta Mukono|avant 1638|Kinuani apprend natikongo, cosmogonie, astronomie, sciences du corps, forge et techniques de pieges.|Le savoir est dangereux s il est separe de l ethique.|Un exercice lie symbole, metal et ciel.|Kinuani comprend que le chef doit lire plusieurs mondes.|natikongo,forge,astronomie
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|2|couvent-temple|3|p1c2-s3-milongoki|Les milongoki|Kinuani|Couvent de Ta Mukono|avant 1638|Les milongoki forment un groupe d excellence, mais aussi de rivalites et de fraternites.|Chacun veut etre vu par Ta Mukono.|Kinuani se distingue sans chercher a humilier.|Sa difference commence a l isoler et le preparer.|milongoki,formation,fraternite
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|3|mpika-mutinu|1|p1c3-s1-marche-mpika|Le jour de Mpika|Mutinu|Marche Mpika|1638|Mutinu entre en scene au marche Mpika tandis que Kinuani y circule avec les milongoki.|Le marche mele desir, commerce, rang et hasard.|Le regard de Kinuani et celui de Mutinu se croisent.|La rencontre commence sans se nommer encore.|mpika,rencontre,mutinu
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|3|mpika-mutinu|2|p1c3-s2-chez-tusikila|Chez Maa Tusikila|Maa Tusikila|Concession de Tusikila|1638|Mutinu accompagne Kinuani chez Maa Tusikila, qui mesure aussitot la valeur politique de la rencontre.|Une simple visite peut devenir alliance.|Tusikila decide d orienter les negotiations.|Le chemin vers Ta Mualu s ouvre.|tusikila,alliance,dot
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|3|mpika-mutinu|3|p1c3-s3-retour-ta-ndala|Le retour de Ta Ndala|Ta Ndala|Concession familiale|1638|Ta Ndala revient de voyage et soutient en coulisses l opportunite sociale et economique de l alliance.|Les interets familiaux se melent aux sentiments naissants.|Le retour de Ta Ndala donne du poids aux demarches.|Les negotiations peuvent commencer.|ta-ndala,negociation,famille
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|4|le-rappel|1|p1c4-s1-message-de-kuimba|Le message de Kuimba|Kinuani|Couvent de Ta Mukono|1640|Un message rappelle Kinuani vers Kuimba alors que sa formation et ses attaches changent.|Il doit quitter le monde du couvent pour celui des responsabilites familiales.|Le rappel prouve que Nzongo a un plan pour lui.|Kinuani se prepare au retour.|rappel,kuimba,nzongo
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|4|le-rappel|2|p1c4-s2-nzongo-observe|Nzongo observe l heritier|Nzongo|Pays Kuimba|1640|Nzongo attend Kinuani et pese ses forces, ses fragilites et son utilite future pour Kuimba.|Former un heritier revient aussi a le contraindre.|Nzongo voit que l enfant du couvent devient homme politique.|La transmission intime commence.|nzongo,heritier,transmission
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|4|le-rappel|3|p1c4-s3-devoirs-du-mari|Les devoirs selon le bukongo|Kinuani|Pays Kuimba|1640|Les oncles transmettent a Kinuani les devoirs d epoux, de pere et de membre du bukongo.|Le combat ne suffit pas a faire un homme complet.|Kinuani comprend que le foyer sera aussi champ politique.|La preparation au longo devient serieuse.|bukongo,mariage,devoir
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|5|sept-jours-de-route|1|p1c5-s1-route-vers-famille|Vers la famille de Mutinu|Kinuani|Route|1640-1641|La route vers la famille de Mutinu impose pauses, accueils, paroles codifiees et observation mutuelle.|Chaque etape peut confirmer ou fragiliser l alliance.|Kinuani apprend que la diplomatie commence au seuil des maisons.|La maison de Mutinu approche.|route,longo,diplomatie
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|5|sept-jours-de-route|2|p1c5-s2-apprentissages-mutinu|Les apprentissages de Mutinu|Mutinu|Famille de Mutinu|1640-1641|Mutinu approfondit ses savoirs domestiques selon sa lignee maternelle en vue du longo.|Elle doit devenir epouse sans perdre sa finesse propre.|Les femmes de sa lignee lui donnent les codes du foyer et du rang.|Mutinu entre dans une preparation active.|mutinu,apprentissage,femmes
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|1|temple-et-rappel|5|sept-jours-de-route|3|p1c5-s3-seuil-du-longo|Au seuil du longo|Mutinu|Maison paternelle et maternelle|1641|Les familles se preparent aux deux ceremonies du longo, chez le pere puis chez la mere de Mutinu.|L alliance doit satisfaire deux lignages.|Les paroles de dot transforment l amour en pacte social.|Le mariage peut avoir lieu.|longo,dot,alliance
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|1|nzongo-leopards|1|p2c1-s1-kuimba-avant-crise|Kuimba avant la fissure|Nzongo|Pays Kuimba|avant 1638-1647|Presentation de Kuimba structure, de ses espaces de justice, de forge, d irrigation et de conseil.|Le pays semble solide mais repose sur des equilibres fragiles.|La vie quotidienne revele la puissance de Nzongo.|Le lecteur comprend ce qui sera menace.|kuimba,nzongo,organisation
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|1|nzongo-leopards|2|p2c1-s2-humiliation-mabanza|L humiliation de Mabanza|Mabanza|Chantier des etangs|avant 1640|Nzongo humilie Mabanza par une cle de doigts/poignet au chantier des etangs avant de l envoyer en reparation.|Corriger sans briser est difficile ; l orgueil public aggrave la blessure.|Le rire des enfants transforme la correction en honte.|Mabanza part marque, Ndebeka gagne de l espace.|mabanza,honte,nzongo
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|1|nzongo-leopards|3|p2c1-s3-mikembi-prise|Mikembi prise au piege|Mikembi|Pays Kuimba|avant 1640|Ndebeka persuade Mikembi que Mabanza l a trahie et l amene dans son pacte.|Le mensonge sentimental devient alliance politique.|Mikembi cede et devient enceinte.|Une blessure privee entre dans la genealogie des crises.|mikembi,ndebeka,trahison
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|2|ta-mukono-meurt|1|p2c2-s1-dernier-enseignement|Le dernier enseignement|Ta Mukono|Couvent de Ta Mukono|avant 1648|Ta Mukono transmet une derniere lecon sur la discipline, la justice et le danger du savoir mal tenu.|Ses eleves veulent retenir une autorite qui s eteint.|La mort du maitre transforme la formation en responsabilite.|Kinuani porte le couvent en lui.|ta-mukono,mort,couvent
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|2|ta-mukono-meurt|2|p2c2-s2-deuil-du-temple|Le deuil du temple|Kinuani|Couvent de Ta Mukono|avant 1648|Les milongoki et les gardiens du couvent organisent les rites et mesurent le vide laisse par Ta Mukono.|Sans maitre, les rivalites peuvent s ouvrir.|Kinuani choisit de garder la ligne plutot que de chercher la gloire.|Le temple entre dans l heritage.|deuil,temple,milongoki
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|2|ta-mukono-meurt|3|p2c2-s3-serment-des-eleves|Le serment des milongoki|Kinuani|Couvent de Ta Mukono|avant 1648|Les anciens eleves se promettent d honorer la formation recue, chacun selon son chemin.|Le serment cache deja des divergences.|Kinuani mesure que la fraternite doit etre testee par l histoire.|Les anciens collegues pourront redevenir appuis plus tard.|serment,milongoki,alliance
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|3|route-luwozi|1|p2c3-s1-rumeurs-de-trahison|Rumeurs sur la route|Kinuani|Route de Luwozi|1647-1648|La route vers Luwozi fait circuler nouvelles de trahisons, attaques et profanations.|Distinguer rumeur et signal devient vital.|Kinuani reconnait des motifs qui ressemblent a une preparation ennemie.|Le danger de Luwozi se precise.|route,rumeurs,trahison
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|3|route-luwozi|2|p2c3-s2-ancien-collegue|Un ancien milongoki|Kinuani|Route de Luwozi|1647-1648|Kinuani retrouve un ancien collegue du couvent qui lui donne des informations et un appui discret.|La confiance ancienne doit etre pesee dans un temps de traitrise.|Une information change la lecture de l attaque.|Les mabembe pourront etre reactives.|milongoki,information,reseau
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|3|route-luwozi|3|p2c3-s3-approche-des-flammes|L approche des flammes|Kinuani|Abords de Luwozi|1647-1648|Les signes de feu et de desolation apparaissent avant meme l arrivee.|Il faut avancer alors que tout indique le piege.|La fumee confirme que l ennemi est passe ou attend.|Luwozi bascule dans l horreur.|flammes,luwozi,approche
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|4|les-flammes|1|p2c4-s1-village-brule|Le village brule|Kinuani|Luwozi|1647-1648|Kinuani decouvre Luwozi frappee par les flammes et la profanation.|Sauver les vivants oblige a marcher au milieu des morts.|Un survivant donne un indice sur les responsables.|La guerre devient personnelle et sacrilege.|luwozi,incendie,profanation
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|4|les-flammes|2|p2c4-s2-piege-de-nuit|Les dents du leopard|Kinuani|Luwozi / frontiere Kuimba|1647-1648|Les pieges nocturnes, dont les maeno ma ngo, rappellent la science defensive de Kuimba.|Utiliser les pieges exige de ne pas devenir monstre soi-meme.|Les ennemis tombent dans une defense preparee.|Kinuani sait que la riposte sera lue comme avertissement.|pieges,maeno-ma-ngo,nuit
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|4|les-flammes|3|p2c4-s3-nom-du-traitre|Le nom du traitre|Kinuani|Pays Kuimba|1647-1648|Des indices pointent vers Ta Babueta ou vers des relais internes ayant ouvert la voie a l ennemi.|Accuser sans preuve peut dechirer le clan ; attendre peut le tuer.|Kinuani choisit l enquete discrete.|Le reseau de surveillance devient necessaire.|traitre,ta-babueta,enquete
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|5|mvita-kanga|1|p2c5-s1-prince-ecoute|Le prince ecoute|Mvita Kanga|Mbanza Kongo|1651-1656|Le prince Mvita Kanga ecoute les rapports sur Kuimba, les attaques et la valeur de Kinuani.|La cour doit distinguer les hommes utiles des ambitieux.|Le nom de Kinuani gagne une portee royale.|Un lien politique s amorce.|mvita-kanga,cour,rapport
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|5|mvita-kanga|2|p2c5-s2-parole-contre-poison|Parole contre poison|Kinuani|Mbanza Kongo|1651-1656|Kinuani apprend a transformer les rapports de crise en parole administrative et diplomatique.|La verite doit survivre aux courtisans et aux agents doubles.|Mvita Kanga mesure sa clarte.|La mission administrative se dessine.|diplomatie,parole,administration
+A_CREER_CHAPITRE_EXISTANT|les-derniers-leopards|2|luwozi-et-profanation|5|mvita-kanga|3|p2c5-s3-ombre-de-mbuila|L ombre de Mbuila|Kinuani|Mbanza Kongo|1651-1656|Des signes annoncent deja que les crises locales prefigurent une catastrophe plus vaste.|La cour croit gerer des incidents ; Kinuani voit un systeme de sabotage.|Le futur de Mbuila apparait comme menace encore sans nom.|Le tome se tend vers la grande defaite.|presage,mbuila,sabotage
+
+======================================================================================
+SECTION 2 — CHRONOLOGIE MACRO / JALONS SCENIQUES VALIDES
+Colonnes : macro_slug|title|period|location|characters|summary
+======================================================================================
+m00-prologue-1702|Prologue 1702 - Mbongi de memoire|1702|Mbanza Kongo|Kimpa Vita, Mutinu, mapasa, Baleketa, Kialungu, anciens|Kimpa Vita et les mampuya maa Kongo rebâtissent Mbanza Kongo ; Mutinu arrive ; le mbongi de memoire s ouvre.
+m01-kuimba-avant-1638|Kuimba avant 1638|avant 1638|Kuimba|Conseil des anciens, Nzongo, Ta Matayi|Presentation de Kuimba structure, de ses rites, hierarchies et savoirs sociaux.
+m02-couvent-elite|Couvent d elite de Ta Mukono|avant 1638|Territoire du couvent|Kinuani, Ta Mukono, milongoki|Formation totale de Kinuani : arts martiaux, langues, natikongo, cosmogonie, forge, pieges et mediation.
+m03-autres-couvents|Autres couvents|avant 1638|Autour du Kongo|Eleves, maitres, femmes savantes|Espaces specialises pour sciences sociales, sciences feminines et autres formations.
+m04-conflit-mikembi|Conflit autour de Mikembi|avant 1640|Kuimba / chantier des etangs|Nzongo, Ndebeka, Mabanza, Fila, Mikembi, Ta Mberi|Humiliation de Mabanza, envoi en reparation et manipulation de Mikembi par Ndebeka.
+m05-jour-de-mpika|Jour de Mpika|1638|Marche Mpika|Mutinu, Kinuani, Maa Tusikila, Ta Ndala, Ta Mualu|Mutinu entre en scene ; rencontre avec Kinuani ; premier mouvement vers Tusikila.
+m06-chez-tusikila|Chez Maa Tusikila|1638|Concession de Tusikila|Kinuani, Mutinu, Maa Tusikila|Introduction de Kinuani et influence de Tusikila dans les negotiations de dot.
+m07-retour-ta-ndala|Retour de Ta Ndala|1638|Concession familiale|Ta Ndala, Maa Tusikila, Ta Mualu|Ta Ndala soutient les demarches sociales et economiques de l alliance.
+m08-negociations-domestiques|Negotiations et apprentissages domestiques|1638-1640|Famille de Mutinu|Mutinu, femmes de lignee, Ta Mualu|Mutinu approfondit les savoirs domestiques selon sa lignee maternelle.
+m09-retour-kinuani-kuimba|Retour de Kinuani a Kuimba|1640|Kuimba|Kinuani, oncles, Nzongo|Kinuani revient ; transmission des devoirs d epoux et de pere selon le bukongo.
+m10-longo|Longo - mariage|1641|Maison paternelle et maternelle de Mutinu|Mutinu, Kinuani, Tusikila, Ta Ndala, Ta Mualu, anciens|Alliance en deux ceremonies, chez le pere puis chez la mere de Mutinu.
+m11-naissance-nkodia|Naissance de Nkodia|1642|Kuimba|Mutinu, Kinuani, Nkodia|Premier enfant de Mutinu et Kinuani.
+m12-naissance-mapasa|Naissance des mapasa|1643|Kuimba|Mutinu, Kinuani, Muanda, Mpasi, doyennes|Naissance difficile des jumeaux ; debut de l initiation de Mutinu comme Maa Ngudi.
+m13-initiation-prolongee|Initiation prolongee|1644-1648|Kuimba / Mayombe|Mutinu, doyennes|Mutinu poursuit l initiation feminine jusqu a l exil.
+m14-naissance-lunungu|Naissance de Lunungu|1646 / a harmoniser|Mayombe|Mutinu, Kinuani, Lunungu|Naissance du quatrieme enfant, liee a l arc de l epreuve.
+m15-attaque-leopards|Attaque des Leopards|1647|Frontieres de Kuimba|Kinuani, assaillants, makesa|Attaque exterieure ; assaillants pris dans les pieges traditionnels.
+m16-assassinat-mungua|Assassinat de Nganga Mungua|1648|Kuimba / route / cour|Nganga Mungua, Ndebeka, Kinuani|Tension interne et meurtre instrumentalise contre Kinuani.
+m17-exil-mayombe|Exil au Mayombe|1648|Route du Mayombe|Kinuani, Mutinu|Kinuani et Mutinu partent en exil ensemble.
+m18-vie-mayombe|Vie au Mayombe|1648-1650|Massif du Mayombe|Kinuani, Mutinu|Kinuani forme des jeunes et rend justice ; Mutinu poursuit son initiation.
+m19-empoisonnement-mineur|Empoisonnement mineur|1649-1650|Mayombe|Kinuani, Mutinu, Lufuandi, Mandangi|Tentative d empoisonnement ; Mutinu impose une chaine alimentaire stricte.
+m20-mort-nzongo|Nzongo malade et mort|1649-1650|Kuimba|Nzongo, Kisita, Maa Miakubuku|Nzongo devient aveugle et meurt avant l aube.
+m21-poignarde-45e-jour|45e jour - Kinuani poignarde|1649-1650|Kuimba|Kinuani, Ndebeka, Nzungani, Mutinu|Kinuani est poignarde ; Nzungani intervient ; Mutinu soigne ; les mabembe se reactivenent.
+m22-route-mbanza-kongo|Route vers Mbanza Kongo|1650-1651|Route|Kinuani, Mutinu|Kinuani et Mutinu partent pour Mbanza Kongo.
+m23-service-administratif|Service administratif|1651-1656|Mbanza Kongo|Kinuani, Mutinu, Mvita Kanga, Garcia II|Kinuani sert comme conseiller / ambassadeur administratif, pas encore chef ni Mbuta Makesa.
+m24-retour-intronisation|Retour et intronisation a Kuimba|1656|Kuimba|Kinuani, Miakubuku, juges, soldats, tradipraticiens|Kinuani revient avec hommes fournis par le roi et le prince ; il est intronise chef de Kuimba.
+m25-gouvernance-kuimba|Gouvernance de Kuimba|1656-1665|Kuimba|Kinuani, Mutinu, anciens|Kuimba prospere sous la gouvernance de Kinuani.
+m26-sabotages-mbuila|Sabotages du 29 octobre 1665|1665-10-29|Mbuila / foret-savane|Kinuani, Mvita Kanga, traitres|Trahisons internes sabotent les communications ; Kinuani attend un signal qui ne vient pas ; Vita Kanga tombe.
+m27-sacrifice-30-octobre|Bataille / sacrifice du 30 octobre|1665-10-30|Mbuila|Kinuani, cent volontaires|Kinuani choisit de mourir debout et attaque avec environ cent volontaires ; mort avant midi.
+m28-desolation|Desolation|1665-1702|Kongo|Survivants, deportes, persecuteurs|Deportations, persecutions, villages detruits.
+m29-resistance-secrete|Resistance secrete|1665-1702|Kuimba / reseaux caches|Mutinu, mapasa, disciples|Mutinu, les mapasa et les disciples transmettent le bukongo en secret.
+m30-mbongi-final|Mbongi final|1702|Mbanza Kongo|Mutinu, Kimpa Vita, anciens|Retour narratif au mbongi de memoire.
+
+======================================================================================
+SECTION 3 — TAGS UTILES POUR scenes / scene_tags
+Note : la table tags actuelle n a pas de colonne description dans le snapshot ; utiliser seulement slug, name sauf migration.
+Colonnes : slug|name
+======================================================================================
+couvent|Couvent-temple
+initiation|Initiation
+discipline|Discipline
+agriculture|Agriculture
+mpika|Mpika
+amour|Amour
+longo|Longo
+modernite|Modernite
+rappel|Rappel
+voyage|Voyage
+clan|Clan
+conflit-interne|Conflit interne
+exil|Exil
+mayombe|Mayombe
+trahison|Trahison
+embuscade|Embuscade
+nkasa|Nkasa
+mukongudidi|Mukongudidi
+funerailles|Funerailles
+retrait-de-deuil|Retrait de deuil
+poignard|Poignard
+intronisation|Intronisation
+propagande|Parole politique
+mbuila|Mbuila
+sacrifice|Sacrifice
+memoire|Memoire
+mabembe|Mabembe / renseignement
+forge|Forge
+natikongo|Natikongo
+bukongo|Bukongo
+
+======================================================================================
+SECTION 4 — BROUILLON SQL GENERIQUE
+======================================================================================
+
+-- IMPORTANT : adapter @book_id, @project_id et les slugs au schema exact actuel.
+-- Le snapshot ancien a scenes.chapter_id ; le modele Sonekeno recent ajoute project_id et content LONGTEXT.
+
+START TRANSACTION;
+
+-- 1) Recuperer le livre/projet
+SET @book_slug := 'les-derniers-leopards';
+-- SET @project_slug := 'les-derniers-leopards';
+
+-- 2) Exemple d'insertion de scene dans le schema ancien
+-- Remplacer les valeurs par les lignes du format pipe.
+INSERT INTO scenes (
+  chapter_id, scene_no, slug, title,
+  pov_character_id, location_id,
+  summary, conflict, turning_point, outcome, hook, indesign_style
+)
+SELECT
+  c.id,
+  1,
+  'p1c1-s1-mbongi-1702',
+  'Mbanza Kongo se releve',
+  cp.id,
+  l.id,
+  'Kimpa Vita et les mampuya maa Kongo s installent a Mbanza Kongo pour guerir et rebâtir. La rumeur atteint Mutinu.',
+  'La capitale est blessee ; la memoire doit trouver une bouche.',
+  'Mutinu decide de venir.',
+  'Le cadre du mbongi de memoire s ouvre.',
+  'Le nzonzi prepare le retour vers le passe.',
+  'scene-standard'
+FROM chapters c
+JOIN parts p ON p.id = c.part_id
+JOIN books b ON b.id = p.book_id
+LEFT JOIN characters cp ON cp.slug = 'mutinu'
+LEFT JOIN locations l ON l.name = 'Mbanza Kongo'
+WHERE b.slug = @book_slug
+  AND p.slug = 'temple-et-rappel'
+  AND c.slug = 'prologue-jumeaux'
+ON DUPLICATE KEY UPDATE
+  title = VALUES(title),
+  summary = VALUES(summary),
+  conflict = VALUES(conflict),
+  turning_point = VALUES(turning_point),
+  outcome = VALUES(outcome),
+  hook = VALUES(hook),
+  indesign_style = VALUES(indesign_style);
+
+COMMIT;
+
+
+======================================================================================
+SECTION 5 — CHECKLIST D HARMONISATION AVANT INSERTION
+======================================================================================
+- Migrer nkusu -> mutinu (nkusu obsolète) avant de relier les nouvelles scènes au POV.
+- Conserver mvita-kanga / Mvita Kanga comme canon (ne pas renommer en vita-kanga).
+- Décider si les scènes p4c3 restent sous succession-nkunku ou deviennent succession-bukono.
+- Mapasa : Mpasi = premier-né (nzuzi) ; Muanda = dernier-né (nsimba). Lier nsimba/nzuzi en DB aux prénoms.
+- Ajouter/normaliser les lieux : Couvent de Ta Mukono, Marche Mpika, Concession de Tusikila, Mayi Ndombe, Massif du Mayombe, Mbuila, Luwozi, Pays Kuimba, Mbanza Kongo.
+- Ajouter les tags sans colonne description, ou migrer tags pour accueillir une description si besoin.
+- Une fois les scenes importees, remplir scene_characters pour les personnages presents mais non POV.

@@ -1,0 +1,588 @@
+LES DERNIERS LÉOPARDS — FICHES PERSONNAGES POUR INSERTION DB
+Version de travail générée le 2026-06-08
+
+OBJECTIF
+- Consolider les personnages retenus dans nos échanges + fichiers de travail.
+- Fournir un bloc simple pour insertion dans la table characters actuelle : slug, name, description.
+- Garder les éléments riches pour alimenter ensuite character_profiles, character_dossiers, character_kinships_v2 et character_aliases.
+
+NOTES CANON / DB
+- Canon : Mutinu uniquement — nkusu est obsolète (migration DB : nkusu → mutinu, nkusu en alias historique si besoin).
+- Canon : Mvita Kanga (slug mvita-kanga) — pas « Vita Kanga » comme slug principal.
+- Mapasa = jumeaux. Nzuzi = nom générique du premier-né ; Nsimba = nom générique du dernier-né.
+- Prénoms des mapasa : Mpasi (premier-né, nzuzi) ; Muanda (dernier-né, nsimba).
+- Bukono remplace Nkunku si Nkunku était le placeholder du chef faible.
+- Canon orthographique : Mbuila, pas Mbwila.
+- Les champs actuels de l’API characters semblent limités à slug, name, description ; les champs riches ci-dessous peuvent alimenter des tables dédiées plus tard.
+
+======================================================================
+SECTION 1 — FORMAT PIPE POUR IMPORT SIMPLE
+Colonnes : slug|name|status|rank|aliases|clans|period|description|relations
+======================================================================
+kinuani|Kinuani|EXISTANT_DB_CANON|principal|Mbuta Makesa plus tard ; chef de Kuimba|muisi Kuimba ; muana Sundi|1638-1665|Héros central du tome 1. Formé au couvent d’élite de Ta Mukono : arts martiaux, tir, diplomatie, natikongo, cosmogonie, sciences du bukongo, forge, pièges et médiation. Époux de Mutinu, père de Nkodia, des mapasa Muanda et Mpasi, puis de Lunungu. Exilé au Mayombe après le coup monté autour de Nganga Mungua. Conseiller/ambassadeur administratif à Mbanza Kongo auprès de Mvita Kanga et Garcia II entre 1651 et 1656, puis intronisé chef de Kuimba en 1656. Meurt volontairement à Mbuila le 30 octobre 1665 avec environ cent volontaires.|Époux Mutinu ; protégé/élève de Nzongo ; rival Ndebeka ; allié Suru, Nzungani, Kisita, Maa Miakubuku ; sert Vita Kanga et Garcia II.
+mutinu|Mutinu|EXISTANT_DB_CANON|principal|Maa Ngudi après la naissance des mapasa ; nkusu = ancien slug à migrer|muisi Ndamba ; muana Kahunga|1638-1702|Héroïne majeure. Cinquième des sept filles de Ta Mualu et Ma Yudisa. Elle rencontre Kinuani au jour de Mpika, approfondit les savoirs domestiques selon sa lignée maternelle, épouse Kinuani au longo de 1641 et devient mère de Nkodia, des mapasa Muanda/Mpasi et de Lunungu. Son initiation féminine commence pendant la grossesse des jumeaux et se prolonge jusqu’au Mayombe. Au Mayombe, elle impose une discipline alimentaire stricte pour protéger Kinuani. Après 1665, elle garde la mémoire, protège les enfants et transmet le bukongo jusqu’au mbongi de mémoire de 1702.|Épouse Kinuani ; fille de Ta Mualu et Ma Yudisa ; sœur de Lufauandi ; mère de Nkodia, Muanda, Mpasi, Lunungu ; alliée Kisita, Maa Miakubuku, Kilala.
+nzongo|Nkaka Nzongo|EXISTANT_DB_CANON|principal|Nzongo ; l’homme-léopard ; ancien notable de cour|muisi Kuimba|avant 1638-1650|Patriarche de Kuimba, ancien notable de cour retiré au début du règne d’Álvaro VI pour organiser la résistance, préserver le bukongo et préparer Kinuani. Forgeron, stratège, gardien de manuscrits en natikongo, il administre Kuimba entre espace privé de consultation et grand espace public de justice. Père spirituel/politique de Kinuani, sévère mais visionnaire. Il meurt aveugle avant l’aube après avoir transmis des confidences à Kisita et Maa Miakubuku.|Fils de Ta Nkibaluengele ; frère/parent de Ta Matayi et Ma Tusikila ; oncle/formateur de Kinuani ; adversaire moral de Ndebeka ; confie des savoirs à Kisita et Maa Miakubuku.
+mvita-kanga|Mvita Kanga|EXISTANT_DB_CANON|historique_principal|Antonio I ; roi du Kongo à partir de 1661||1651-1665|Prince puis roi du Kongo après Garcia II. Il reçoit le service administratif de Kinuani à Mbanza Kongo. Figure royale galvanisatrice avant Mbuila. Le 29 octobre 1665, les sabotages internes désorganisent les communications ; Mvita Kanga est décapité et la désolation s’abat sur le Kongo.|Succède à Garcia II ; protecteur politique de Kinuani ; figure centrale de Mbuila.
+garcia-ii|Garcia II|NOUVEAU_OU_HISTORIQUE|historique|Roi Garcia II||1651-1661|Roi du Kongo avant Vita Kanga. Kinuani sert comme conseiller/ambassadeur administratif auprès de lui et du prince Vita Kanga entre 1651 et 1656. Lors du retour de Kinuani à Kuimba, le roi fournit des juges, soldats et tradipraticiens sans l’accompagner physiquement.|Roi précédant Vita Kanga ; soutien institutionnel indirect de Kinuani.
+kimpa-vita|Kimpa Vita|NOUVEAU_TOME_LONG|cadre_1702|||1702|Figure du prologue/épilogue de 1702 à Mbanza Kongo. Elle s’installe avec les mampuya maa Kongo pour guérir et rebâtir la capitale. Sa présence attire Mutinu et ouvre le mbongi de mémoire qui encadre le récit.|Reçoit/attire Mutinu et sa cour ; liée à Baleketa, Kialungu, anciens et au mbongi final.
+ndebeka|Ndebeka|EXISTANT_DB_CANON|antagoniste||muisi Kuimba|avant 1640-1656+|Cousin rival de Kinuani et de Mabanza. Il séduit Mikembi par pactes secrets, l’amène à croire que Mabanza l’a trahie, puis devient l’un des foyers de la corruption interne. Il fait tuer l’ambassadeur/nganga Nganga Mungua et fait accuser Kinuani, provoquant l’exil au Mayombe. Plus tard, son sbire poignarde Kinuani lors du deuil ; Ndebeka finit exilé vers Niarangongo.|Rival Kinuani et Mabanza ; époux de Mikembi ; impliqué dans le meurtre de Nganga Mungua ; lié à Matondo par manipulation/trahison.
+mabanza|Mabanza|NOUVEAU|secondaire_majeur|||avant 1640|Cousin de Ndebeka et amoureux de Mikembi depuis la jeunesse. Parolier, imitateur comique au mbongi, vaillant aux champs et tisserand. Humilié publiquement par Nzongo au chantier des étangs, il est envoyé chez Ta Mberi en réparation. Il revient trop tard pour empêcher l’union de Mikembi avec Ndebeka.|Aime Mikembi ; rival sentimental de Ndebeka ; envoyé chez Ta Mberi avec Fila, Ntadi et Kualu.
+mikembi|Mikembi|NOUVEAU|secondaire_majeur|Ma Mikembi||avant 1640|Jeune femme aimée par Mabanza mais manipulée par Ndebeka. Elle croit que Mabanza l’a trahie, cède à Ndebeka, devient enceinte et entre dans une union qui cristallise une blessure intime et politique au sein du clan.|Aimée de Mabanza ; épouse/compagne de Ndebeka ; pivot du conflit sentimental et clanique.
+fila|Fila|NOUVEAU|secondaire|||avant 1640|Protégé envoyé par Nzongo chez Ta Mberi dans le cadre d’une réparation. Il accompagne Mabanza dans cette période d’apprentissage et de correction.|Compagnon de Mabanza, Ntadi et Kualu chez Ta Mberi.
+ntadi|Ntadi|NOUVEAU|secondaire|||avant 1640|L’un des quatre protégés envoyés deux ans chez Ta Mberi pour réparation et apprentissages. Sert de personnage de groupe autour de la discipline, des savoirs pratiques et de la réparation sociale.|Compagnon de Mabanza, Fila et Kualu.
+kualu|Kualu|NOUVEAU|secondaire|||avant 1640|L’un des quatre protégés envoyés chez Ta Mberi pour réparation. Associé aux apprentissages de terrain : apiculture, lecture des lignes, acupression et savoirs d’observation.|Compagnon de Mabanza, Fila et Ntadi.
+ta-mberi|Ta Mberi|NOUVEAU|mentor||pays Bembe / Muyonzi|avant 1640|Maître/ancien du pays Bembe, à Muyonzi, chez qui Nzongo envoie les protégés pour deux ans de réparation. Il transmet des savoirs pratiques et thérapeutiques : apiculture, lecture des lignes, acupression et discipline de vie.|Mentor de Mabanza, Fila, Ntadi et Kualu ; relais de Nzongo.
+ta-mukono|Ta Mukono|EXISTANT_DB_CANON|mentor|||avant 1638|Maître du couvent d’élite où Kinuani reçoit sa formation complète. Incarnation de la discipline, du temple et des savoirs de combat, d’astronomie, de natikongo, de médiation, de forge et de pièges.|Formateur de Kinuani et des milongoki.
+ma-tusikila|Maa Tusikila|EXISTANT_DB_CANON_A_NORMALISER_NOM|matriarche|Ma Tusikila ; ancien nom de travail : Ma Ndala||1638-1641|Figure maternelle/citadine majeure dans les négociations de dot. Après le jour de Mpika, elle reçoit Kinuani et Mutinu dans sa concession et influence les démarches auprès de Ta Mualu. Elle est aussi retenue comme sœur de Nzongo vivant en ville, mariée à Matadi Luanda.|Sœur de Nzongo ; épouse de Matadi Luanda ; intermédiaire auprès de Ta Mualu ; liée à Mutinu et Kinuani.
+ta-ndala|Ta Ndala|NOUVEAU_A_VERIFIER|secondaire|||1638-1641|Parent/allié qui revient de voyage et soutient les démarches sociales en coulisses, notamment auprès de Ta Mualu. L’opportunité sociale et économique de l’alliance l’intéresse.|Soutien des démarches autour de Mutinu, Kinuani, Maa Tusikila et Ta Mualu.
+ta-mualu|Ta Mualu|NOUVEAU|famille_mutinu|||1638-1641|Père de Mutinu. Commerçant malin et respectable, engagé dans l’aide aux associations locales. Personnage stratégique dans les négociations de dot et l’alliance avec Kinuani.|Époux de Ma Yudisa ; père de Mutinu et de ses sœurs ; interlocuteur de Maa Tusikila et Ta Ndala.
+ma-yudisa|Ma Yudisa|NOUVEAU|famille_mutinu|||1638-1641|Mère de Mutinu et épouse de Ta Mualu. Point d’ancrage familial et maternel de Mutinu dans les apprentissages domestiques et la préparation au longo.|Épouse de Ta Mualu ; mère de Mutinu.
+lufauandi|Lufauandi|NOUVEAU|famille_mutinu|Lufuandi dans certaines notes||1648-1650|Sœur de Mutinu et personne de confiance. Dans les règles alimentaires imposées pour protéger Kinuani, elle est l’une des seules autorisées à préparer les repas si Mutinu ne le fait pas elle-même.|Sœur de Mutinu ; relais de confiance auprès de Kinuani.
+mandangi|Mandangi|NOUVEAU|soldat_specialiste|||1648-1650|Soldat-cuisinier incorruptible. Troisième niveau de confiance dans le dispositif alimentaire de Mutinu pour empêcher un nouvel empoisonnement de Kinuani au Mayombe.|Protège Kinuani sous l’autorité domestique et sécuritaire de Mutinu.
+kisita|Kisita|EXISTANT_DB_CANON|alliee_majeure||muisi Kuimba|1649-1656|Gardienne de savoirs et soigneuse liée aux secrets de Nzongo. Après la mort de Nzongo, elle est accusée autour du sceptre et des manuscrits, condamnée au nkasa puis sauvée in extremis par un juge pro-Kongo. Elle soigne Kinuani avec Mutinu après le poignard empoisonné.|Confidente de Nzongo ; alliée Mutinu et Kinuani ; liée au sceptre, aux manuscrits et au procès.
+nzungani|Nzungani|EXISTANT_DB_CANON|allie_militaire||muisi Nsembo ; muana Kahunga|1649-1665|Chef d’une unité d’élite/renseignement après la mort de Nzongo. Il intervient lorsque Kinuani est poignardé, puis aide à réactiver le réseau d’espionnage et à établir la vérité sur Ndebeka. Dans la dernière partie, il porte le POV de l’aveu du sbire.|Allié de Kinuani ; travaille avec Dikesa ; opposé aux réseaux de Ndebeka.
+dikesa|Dikesa|NOUVEAU|renseignement|||1649-1665|Agent/compagnon de Nzungani dans l’unité d’élite et de renseignement mise en place après la consécration de Kinuani. Sert à l’enquête, aux surveillances et à la purge des traîtres.|Bras de Nzungani ; loyal à Kinuani.
+matondo|Matondo|EXISTANT_DB_CANON|secondaire_ambigu|||1648-1665|Personnage de cour et d’action, lié au dossier Nganga Mungua puis à la vérité sur Ndebeka. Il se sent manipulé/trahi par Ndebeka et le dépouille sur la route de l’exil. Il porte aussi un POV lors de la chute du roi à Mbuila.|Croise Kinuani, Ndebeka et Nganga Mungua ; acteur d’embuscade et témoin de Mbuila.
+nganga-mungua|Tata Nganga Mungua|EXISTANT_DB_CANON|victime_declencheur|Nganga Mungua||1648|Ambassadeur/nganga dont l’assassinat provoque la crise majeure. Ndebeka le fait tuer et fait accuser Kinuani, ouvrant l’arc du coup monté et de l’exil au Mayombe.|Victime de Ndebeka ; déclencheur de l’exil de Kinuani et Mutinu.
+maa-miakubuku-mia-mualu|Maa Miakubuku mia Mualu|NOUVEAU|matriarche_doyenne|Miakubuku||1649-1656|Doyenne à Yanga, frontière de Kuimba, autorité morale majeure. Elle reçoit les confidences finales de Nzongo, révèle avec les anciens la volonté du patriarche, consacre Kinuani chef de Kuimba après l’attentat, puis demande son retour en 1656 pour tenir le pays.|Confidente de Nzongo ; consacre Kinuani ; alliée des anciens et de Mutinu.
+ta-matayi|Ta Matayi|NOUVEAU|ancien_modele|||avant 1638|Aîné de Nzongo de six ans et modèle de vertus. Il sert de repère moral dans la présentation de Kuimba avant les crises.|Frère/aîné de Nzongo ; associé au conseil des anciens de Kuimba.
+ta-nkibaluengele|Ta Nkibaluengele|NOUVEAU_TOME_LONG|ancetre|Nkibaluengele||vers 1509+|Père de Nzongo. Prêtre kongo, justicier et combattant. Sa période ouvre l’arrière-plan long de l’épopée, à partir du règne d’Afonso Ier et de la naissance de Nkibaluengele autour de 1509.|Père de Nzongo ; ancêtre symbolique de la lignée résistante.
+ta-miantudila|Ta Miantudila|NOUVEAU|maitre_forge|||apres mort de Nzongo|Forgeron-maître de Kuimba après Nzongo. Il assure la continuité technique, rituelle et symbolique de la forge dans le pays Kuimba.|Successeur de Nzongo dans la forge ; gardien d’un savoir matériel et rituel.
+suru|Suru|NOUVEAU|allie_etranger|Sulu dans la bouche locale ; Kini kia Kinuani ; l’ombre de Kinuani|ngoyi / étranger|1650-1665|Étranger/ngoyi très proche de Kinuani mais non crédible comme chef officiel. Il agit dans l’ombre, parle peu sauf avec Kinuani, débat pendant les courses et entraînements, recrute et forme des makesa sans commander publiquement. Il a un grand chien et une épouse stérile marquée par des fausses couches. Sa devise : tout le monde est coupable jusqu’à preuve d’innocence.|Conseiller secret et ombre de Kinuani ; fasciné par les forgerons de Kuimba ; lié à la formation des makesa.
+kilala|Kilala|NOUVEAU|espion_social||vient de Mfuti|1650-1665|Homme venu de Mfuti, marqué par un traumatisme crânien après une chute contre une pierre. Il n’est pas violent et, selon le bukongo local, on ne frappe pas les handicapés. Mutinu l’amène en secret et l’utilise comme espion discret capable d’écouter et de rapporter.|Protégé et informateur de Mutinu.
+bukono|Bukono|A_MIGRER_DEPUIS_NKUNKU_OU_A_CREER|chef_faible|À vérifier avec ancien slug Nkunku||apres depart de Kinuani à Mbanza Kongo|Chef faible installé après Nzongo et après d’autres chefs malheureux, durant le départ de Kinuani vers la capitale. Il devient le symbole d’un affaiblissement politique : il prend une deuxième épouse mundele, Ndona/Dona Luciana Braga, et paraît ramolli, vivant son idylle tandis que les anciens soupçonnent la femme blanche d’être une espionne.|Époux de Ndona Luciana Braga ; contrepoint politique de Kinuani ; surveillé par les anciens.
+ndona-luciana-braga|Ndona Luciana Braga|NOUVEAU|intrigue_politique|Dona Luciana Braga ; Ndona|mundele / portugaise ou luso-kongo à préciser|apres depart de Kinuani à la capitale|Deuxième épouse mundele de Bukono. Elle marque une rupture culturelle et politique dans Kuimba. Les anciens la soupçonnent d’être une espionne ou un instrument d’influence, tandis que Bukono semble s’amollir dans cette union.|Deuxième épouse de Bukono ; suspecte aux yeux des anciens.
+ta-babueta|Ta Babueta|NOUVEAU|traitre|||1647|Traître lié à l’attaque nocturne contre le pays Kuimba. Sa trahison ouvre la nécessité d’une défense plus dure, de pièges et d’une surveillance renforcée.|Adversaire de Kuimba ; lié aux attaques et aux pièges maeno ma ngo.
+nkodia|Nkodia|NOUVEAU|enfant_kinuani_mutinu|||naissance 1642|Premier enfant de Kinuani et Mutinu, né en 1642. Sert d’ancrage familial avant la naissance des mapasa et les crises de l’exil.|Enfant de Kinuani et Mutinu ; aîné de Muanda, Mpasi et Lunungu.
+muanda|Muanda|NOUVEAU|mapasa|Mapasa ; nsimba (dernier-né des jumeaux)||naissance 1643 ; résistance 1665-1702|Dernier-né des mapasa (nom générique nsimba), prénom Muanda. Né lors d’une naissance difficile en 1643. Avec Mpasi, au cœur de l’initiation de Mutinu comme Maa Ngudi et de la transmission secrète du bukongo après 1665.|Jumeau de Mpasi (nzuzi) ; enfant de Kinuani et Mutinu ; frère/sœur de Nkodia et Lunungu.
+mpasi|Mpasi|NOUVEAU|mapasa|Mapasa ; nzuzi (premier-né des jumeaux)||naissance 1643 ; résistance 1665-1702|Premier-né des mapasa (nom générique nzuzi), prénom Mpasi. Né lors d’une naissance difficile en 1643. Avec Muanda (nsimba), prolonge la lignée de mémoire et la résistance secrète après Mbuila.|Jumeau de Muanda ; enfant de Kinuani et Mutinu ; frère/sœur de Nkodia et Lunungu.
+lunungu|Lunungu|NOUVEAU|enfant_kinuani_mutinu|||naissance 1646/1648 à harmoniser|Quatrième enfant de Kinuani et Mutinu, né au Mayombe selon la trame validée. Sa naissance dans l’épreuve renforce l’arc de l’exil, de l’initiation de Mutinu et de la survie familiale.|Enfant de Kinuani et Mutinu ; cadet de Nkodia et des mapasa.
+nsimba|Nsimba|EXISTANT_DB_CANON|mapasa_generique|Nom générique mapasa du dernier-né ; prénom Muanda|muisi Kuimba|1665|Nom générique du mapasa dernier-né (prénom Muanda). POV en DB pour la fuite post-Mbuila — lier au personnage muanda + alias nsimba.|Lié à Mutinu, Muanda/Mpasi et à la fuite après Mbuila.
+nzuzi|Nzuzi|EXISTANT_DB_CANON|mapasa_generique|Nom générique mapasa du premier-né ; prénom Mpasi|muisi Kuimba|1665-1702|Nom générique du mapasa premier-né (prénom Mpasi). POV en DB pour l’épilogue « La mémoire et le nom » — lier au personnage mpasi + alias nzuzi.|Lié à l’épilogue, à Kuimba et à la transmission de mémoire.
+baleketa|Baleketa|NOUVEAU_TOME_LONG|cadre_1702|||1702|Personnage présent dans le prologue de 1702 au mbongi de mémoire à Mbanza Kongo, auprès de Kimpa Vita, Kialungu, Mutinu et les anciens. Rôle précis à développer.|Lié à Kimpa Vita, Kialungu, Mutinu et aux anciens.
+kialungu|Kialungu|NOUVEAU_TOME_LONG|cadre_1702|||1702|Personnage présent dans le prologue de 1702 au mbongi de mémoire à Mbanza Kongo, auprès de Kimpa Vita, Baleketa, Mutinu et les anciens. Rôle précis à développer.|Lié à Kimpa Vita, Baleketa, Mutinu et aux anciens.
+matadi-luanda|Matadi Luanda|NOUVEAU|famille_tusikila|||1638-1641|Époux de Maa Tusikila, vivant en ville. Sert à ancrer Tusikila dans le monde citadin, diplomatique et social autour des négociations de Mutinu et Kinuani.|Époux de Maa Tusikila ; par alliance lié à Nzongo et Kinuani.
+ndona-linda|Ndona Linda|EXISTANT_DB_A_COMPLETER|europeenne_ou_luso_kongo|||à préciser|Personnage déjà présent en DB. Rôle narratif non suffisamment fixé dans les notes disponibles ; à compléter avant insertion enrichie. Peut servir à l’arc européen/luso-kongo si distincte de Ndona Luciana Braga.|À préciser ; ne pas confondre avec Ndona Luciana Braga sans décision canon.
+reverend-baumgartner|Reverend Baumgartner|EXISTANT_DB_A_COMPLETER|religieux_europeen|||à préciser|Religieux européen déjà présent en DB. Rôle précis à compléter selon l’arc missionnaire/religieux, la cour ou les tensions culturelles.|À préciser ; potentiellement lié aux Européens, missions ou débats religieux.
+pere-lorenzo|Père Lorenzo|EXISTANT_DB_A_COMPLETER|religieux_europeen|||à préciser|Prêtre déjà présent en DB. Rôle précis à compléter selon l’arc missionnaire, les tensions religieuses et la cour de Mbanza Kongo.|À préciser ; possible contrepoint religieux à la transmission du bukongo.
+alvaro-vi|Álvaro VI|NOUVEAU_HISTORIQUE|historique_contexte|Roi Álvaro VI||début règne, contexte de retrait de Nzongo|Roi dont le début de règne sert de repère politique au retrait de Nzongo de la cour. Figure de contexte pour expliquer le durcissement des troubles, des trahisons et de la résistance anti-portugaise.|Contexte politique du retrait de Nzongo.
+afonso-ier|Afonso Ier|NOUVEAU_HISTORIQUE_TOME_LONG|historique_contexte|Afonso I||vers 1509, arrière-plan|Roi historique servant de repère à la période de naissance de Nkibaluengele autour de 1509 dans l’arrière-plan long de la saga. À utiliser plutôt pour les tomes/lore de fond que pour le noyau du tome 1.|Repère chronologique de l’arc ancien autour de Ta Nkibaluengele.
+
+======================================================================
+SECTION 2 — SQL DRAFT POUR TABLE characters
+À adapter si votre table characters n’a pas project_id ou si le slug du projet diffère.
+======================================================================
+START TRANSACTION;
+SET @project_id = (SELECT id FROM projects WHERE slug = 'les-derniers-leopards' LIMIT 1);
+
+INSERT INTO characters (project_id, slug, name, description) VALUES
+(@project_id, 'kinuani', 'Kinuani', '[EXISTANT_DB_CANON / principal] Héros central du tome 1. Formé au couvent d’élite de Ta Mukono : arts martiaux, tir, diplomatie, natikongo, cosmogonie, sciences du bukongo, forge, pièges et médiation. Époux de Mutinu, père de Nkodia, des mapasa Muanda et Mpasi, puis de Lunungu. Exilé au Mayombe après le coup monté autour de Nganga Mungua. Conseiller/ambassadeur administratif à Mbanza Kongo auprès de Mvita Kanga et Garcia II entre 1651 et 1656, puis intronisé chef de Kuimba en 1656. Meurt volontairement à Mbuila le 30 octobre 1665 avec environ cent volontaires. Relations: Époux Mutinu ; protégé/élève de Nzongo ; rival Ndebeka ; allié Suru, Nzungani, Kisita, Maa Miakubuku ; sert Vita Kanga et Garcia II. Aliases: Mbuta Makesa plus tard ; chef de Kuimba Clans: muisi Kuimba ; muana Sundi Période: 1638-1665'),
+(@project_id, 'mutinu', 'Mutinu', '[EXISTANT_DB_CANON / principal] Héroïne majeure. Cinquième des sept filles de Ta Mualu et Ma Yudisa. Elle rencontre Kinuani au jour de Mpika, approfondit les savoirs domestiques selon sa lignée maternelle, épouse Kinuani au longo de 1641 et devient mère de Nkodia, des mapasa Muanda/Mpasi et de Lunungu. Son initiation féminine commence pendant la grossesse des jumeaux et se prolonge jusqu’au Mayombe. Au Mayombe, elle impose une discipline alimentaire stricte pour protéger Kinuani. Après 1665, elle garde la mémoire, protège les enfants et transmet le bukongo jusqu’au mbongi de mémoire de 1702. Relations: Épouse Kinuani ; fille de Ta Mualu et Ma Yudisa ; sœur de Lufauandi ; mère de Nkodia, Muanda, Mpasi, Lunungu ; alliée Kisita, Maa Miakubuku, Kilala. Aliases: Ancien nom de travail : Nkusu ; Maa Ngudi après la naissance des mapasa Clans: muisi Ndamba ; muana Kahunga (ancien en DB sous Nkusu) Période: 1638-1702'),
+(@project_id, 'nzongo', 'Nkaka Nzongo', '[EXISTANT_DB_CANON / principal] Patriarche de Kuimba, ancien notable de cour retiré au début du règne d’Álvaro VI pour organiser la résistance, préserver le bukongo et préparer Kinuani. Forgeron, stratège, gardien de manuscrits en natikongo, il administre Kuimba entre espace privé de consultation et grand espace public de justice. Père spirituel/politique de Kinuani, sévère mais visionnaire. Il meurt aveugle avant l’aube après avoir transmis des confidences à Kisita et Maa Miakubuku. Relations: Fils de Ta Nkibaluengele ; frère/parent de Ta Matayi et Ma Tusikila ; oncle/formateur de Kinuani ; adversaire moral de Ndebeka ; confie des savoirs à Kisita et Maa Miakubuku. Aliases: Nzongo ; l’homme-léopard ; ancien notable de cour Clans: muisi Kuimba Période: avant 1638-1650'),
+(@project_id, 'mvita-kanga', 'Mvita Kanga', '[EXISTANT_DB_CANON / historique_principal] Prince puis roi du Kongo après Garcia II. Il reçoit le service administratif de Kinuani à Mbanza Kongo. Figure royale galvanisatrice avant Mbuila. Le 29 octobre 1665, les sabotages internes désorganisent les communications ; Vita Kanga est décapité et la désolation s’abat sur le Kongo. Relations: Succède à Garcia II ; protecteur politique de Kinuani ; figure centrale de Mbuila. Aliases: Mvita Kanga en DB ; Antonio I ; roi du Kongo à partir de 1661 Clans:  Période: 1651-1665'),
+(@project_id, 'garcia-ii', 'Garcia II', '[NOUVEAU_OU_HISTORIQUE / historique] Roi du Kongo avant Vita Kanga. Kinuani sert comme conseiller/ambassadeur administratif auprès de lui et du prince Vita Kanga entre 1651 et 1656. Lors du retour de Kinuani à Kuimba, le roi fournit des juges, soldats et tradipraticiens sans l’accompagner physiquement. Relations: Roi précédant Vita Kanga ; soutien institutionnel indirect de Kinuani. Aliases: Roi Garcia II Clans:  Période: 1651-1661'),
+(@project_id, 'kimpa-vita', 'Kimpa Vita', '[NOUVEAU_TOME_LONG / cadre_1702] Figure du prologue/épilogue de 1702 à Mbanza Kongo. Elle s’installe avec les mampuya maa Kongo pour guérir et rebâtir la capitale. Sa présence attire Mutinu et ouvre le mbongi de mémoire qui encadre le récit. Relations: Reçoit/attire Mutinu et sa cour ; liée à Baleketa, Kialungu, anciens et au mbongi final. Aliases:  Clans:  Période: 1702'),
+(@project_id, 'ndebeka', 'Ndebeka', '[EXISTANT_DB_CANON / antagoniste] Cousin rival de Kinuani et de Mabanza. Il séduit Mikembi par pactes secrets, l’amène à croire que Mabanza l’a trahie, puis devient l’un des foyers de la corruption interne. Il fait tuer l’ambassadeur/nganga Nganga Mungua et fait accuser Kinuani, provoquant l’exil au Mayombe. Plus tard, son sbire poignarde Kinuani lors du deuil ; Ndebeka finit exilé vers Niarangongo. Relations: Rival Kinuani et Mabanza ; époux de Mikembi ; impliqué dans le meurtre de Nganga Mungua ; lié à Matondo par manipulation/trahison. Aliases:  Clans: muisi Kuimba Période: avant 1640-1656+'),
+(@project_id, 'mabanza', 'Mabanza', '[NOUVEAU / secondaire_majeur] Cousin de Ndebeka et amoureux de Mikembi depuis la jeunesse. Parolier, imitateur comique au mbongi, vaillant aux champs et tisserand. Humilié publiquement par Nzongo au chantier des étangs, il est envoyé chez Ta Mberi en réparation. Il revient trop tard pour empêcher l’union de Mikembi avec Ndebeka. Relations: Aime Mikembi ; rival sentimental de Ndebeka ; envoyé chez Ta Mberi avec Fila, Ntadi et Kualu. Aliases:  Clans:  Période: avant 1640'),
+(@project_id, 'mikembi', 'Mikembi', '[NOUVEAU / secondaire_majeur] Jeune femme aimée par Mabanza mais manipulée par Ndebeka. Elle croit que Mabanza l’a trahie, cède à Ndebeka, devient enceinte et entre dans une union qui cristallise une blessure intime et politique au sein du clan. Relations: Aimée de Mabanza ; épouse/compagne de Ndebeka ; pivot du conflit sentimental et clanique. Aliases: Ma Mikembi Clans:  Période: avant 1640'),
+(@project_id, 'fila', 'Fila', '[NOUVEAU / secondaire] Protégé envoyé par Nzongo chez Ta Mberi dans le cadre d’une réparation. Il accompagne Mabanza dans cette période d’apprentissage et de correction. Relations: Compagnon de Mabanza, Ntadi et Kualu chez Ta Mberi. Aliases:  Clans:  Période: avant 1640'),
+(@project_id, 'ntadi', 'Ntadi', '[NOUVEAU / secondaire] L’un des quatre protégés envoyés deux ans chez Ta Mberi pour réparation et apprentissages. Sert de personnage de groupe autour de la discipline, des savoirs pratiques et de la réparation sociale. Relations: Compagnon de Mabanza, Fila et Kualu. Aliases:  Clans:  Période: avant 1640'),
+(@project_id, 'kualu', 'Kualu', '[NOUVEAU / secondaire] L’un des quatre protégés envoyés chez Ta Mberi pour réparation. Associé aux apprentissages de terrain : apiculture, lecture des lignes, acupression et savoirs d’observation. Relations: Compagnon de Mabanza, Fila et Ntadi. Aliases:  Clans:  Période: avant 1640'),
+(@project_id, 'ta-mberi', 'Ta Mberi', '[NOUVEAU / mentor] Maître/ancien du pays Bembe, à Muyonzi, chez qui Nzongo envoie les protégés pour deux ans de réparation. Il transmet des savoirs pratiques et thérapeutiques : apiculture, lecture des lignes, acupression et discipline de vie. Relations: Mentor de Mabanza, Fila, Ntadi et Kualu ; relais de Nzongo. Aliases:  Clans: pays Bembe / Muyonzi Période: avant 1640'),
+(@project_id, 'ta-mukono', 'Ta Mukono', '[EXISTANT_DB_CANON / mentor] Maître du couvent d’élite où Kinuani reçoit sa formation complète. Incarnation de la discipline, du temple et des savoirs de combat, d’astronomie, de natikongo, de médiation, de forge et de pièges. Relations: Formateur de Kinuani et des milongoki. Aliases:  Clans:  Période: avant 1638'),
+(@project_id, 'ma-tusikila', 'Maa Tusikila', '[EXISTANT_DB_CANON_A_NORMALISER_NOM / matriarche] Figure maternelle/citadine majeure dans les négociations de dot. Après le jour de Mpika, elle reçoit Kinuani et Mutinu dans sa concession et influence les démarches auprès de Ta Mualu. Elle est aussi retenue comme sœur de Nzongo vivant en ville, mariée à Matadi Luanda. Relations: Sœur de Nzongo ; épouse de Matadi Luanda ; intermédiaire auprès de Ta Mualu ; liée à Mutinu et Kinuani. Aliases: Ma Tusikila ; ancien nom de travail : Ma Ndala Clans:  Période: 1638-1641'),
+(@project_id, 'ta-ndala', 'Ta Ndala', '[NOUVEAU_A_VERIFIER / secondaire] Parent/allié qui revient de voyage et soutient les démarches sociales en coulisses, notamment auprès de Ta Mualu. L’opportunité sociale et économique de l’alliance l’intéresse. Relations: Soutien des démarches autour de Mutinu, Kinuani, Maa Tusikila et Ta Mualu. Aliases:  Clans:  Période: 1638-1641'),
+(@project_id, 'ta-mualu', 'Ta Mualu', '[NOUVEAU / famille_mutinu] Père de Mutinu. Commerçant malin et respectable, engagé dans l’aide aux associations locales. Personnage stratégique dans les négociations de dot et l’alliance avec Kinuani. Relations: Époux de Ma Yudisa ; père de Mutinu et de ses sœurs ; interlocuteur de Maa Tusikila et Ta Ndala. Aliases:  Clans:  Période: 1638-1641'),
+(@project_id, 'ma-yudisa', 'Ma Yudisa', '[NOUVEAU / famille_mutinu] Mère de Mutinu et épouse de Ta Mualu. Point d’ancrage familial et maternel de Mutinu dans les apprentissages domestiques et la préparation au longo. Relations: Épouse de Ta Mualu ; mère de Mutinu. Aliases:  Clans:  Période: 1638-1641'),
+(@project_id, 'lufauandi', 'Lufauandi', '[NOUVEAU / famille_mutinu] Sœur de Mutinu et personne de confiance. Dans les règles alimentaires imposées pour protéger Kinuani, elle est l’une des seules autorisées à préparer les repas si Mutinu ne le fait pas elle-même. Relations: Sœur de Mutinu ; relais de confiance auprès de Kinuani. Aliases: Lufuandi dans certaines notes Clans:  Période: 1648-1650'),
+(@project_id, 'mandangi', 'Mandangi', '[NOUVEAU / soldat_specialiste] Soldat-cuisinier incorruptible. Troisième niveau de confiance dans le dispositif alimentaire de Mutinu pour empêcher un nouvel empoisonnement de Kinuani au Mayombe. Relations: Protège Kinuani sous l’autorité domestique et sécuritaire de Mutinu. Aliases:  Clans:  Période: 1648-1650'),
+(@project_id, 'kisita', 'Kisita', '[EXISTANT_DB_CANON / alliee_majeure] Gardienne de savoirs et soigneuse liée aux secrets de Nzongo. Après la mort de Nzongo, elle est accusée autour du sceptre et des manuscrits, condamnée au nkasa puis sauvée in extremis par un juge pro-Kongo. Elle soigne Kinuani avec Mutinu après le poignard empoisonné. Relations: Confidente de Nzongo ; alliée Mutinu et Kinuani ; liée au sceptre, aux manuscrits et au procès. Aliases:  Clans: muisi Kuimba Période: 1649-1656'),
+(@project_id, 'nzungani', 'Nzungani', '[EXISTANT_DB_CANON / allie_militaire] Chef d’une unité d’élite/renseignement après la mort de Nzongo. Il intervient lorsque Kinuani est poignardé, puis aide à réactiver le réseau d’espionnage et à établir la vérité sur Ndebeka. Dans la dernière partie, il porte le POV de l’aveu du sbire. Relations: Allié de Kinuani ; travaille avec Dikesa ; opposé aux réseaux de Ndebeka. Aliases:  Clans: muisi Nsembo ; muana Kahunga Période: 1649-1665'),
+(@project_id, 'dikesa', 'Dikesa', '[NOUVEAU / renseignement] Agent/compagnon de Nzungani dans l’unité d’élite et de renseignement mise en place après la consécration de Kinuani. Sert à l’enquête, aux surveillances et à la purge des traîtres. Relations: Bras de Nzungani ; loyal à Kinuani. Aliases:  Clans:  Période: 1649-1665'),
+(@project_id, 'matondo', 'Matondo', '[EXISTANT_DB_CANON / secondaire_ambigu] Personnage de cour et d’action, lié au dossier Nganga Mungua puis à la vérité sur Ndebeka. Il se sent manipulé/trahi par Ndebeka et le dépouille sur la route de l’exil. Il porte aussi un POV lors de la chute du roi à Mbuila. Relations: Croise Kinuani, Ndebeka et Nganga Mungua ; acteur d’embuscade et témoin de Mbuila. Aliases:  Clans:  Période: 1648-1665'),
+(@project_id, 'nganga-mungua', 'Tata Nganga Mungua', '[EXISTANT_DB_CANON / victime_declencheur] Ambassadeur/nganga dont l’assassinat provoque la crise majeure. Ndebeka le fait tuer et fait accuser Kinuani, ouvrant l’arc du coup monté et de l’exil au Mayombe. Relations: Victime de Ndebeka ; déclencheur de l’exil de Kinuani et Mutinu. Aliases: Nganga Mungua Clans:  Période: 1648'),
+(@project_id, 'maa-miakubuku-mia-mualu', 'Maa Miakubuku mia Mualu', '[NOUVEAU / matriarche_doyenne] Doyenne à Yanga, frontière de Kuimba, autorité morale majeure. Elle reçoit les confidences finales de Nzongo, révèle avec les anciens la volonté du patriarche, consacre Kinuani chef de Kuimba après l’attentat, puis demande son retour en 1656 pour tenir le pays. Relations: Confidente de Nzongo ; consacre Kinuani ; alliée des anciens et de Mutinu. Aliases: Miakubuku Clans:  Période: 1649-1656'),
+(@project_id, 'ta-matayi', 'Ta Matayi', '[NOUVEAU / ancien_modele] Aîné de Nzongo de six ans et modèle de vertus. Il sert de repère moral dans la présentation de Kuimba avant les crises. Relations: Frère/aîné de Nzongo ; associé au conseil des anciens de Kuimba. Aliases:  Clans:  Période: avant 1638'),
+(@project_id, 'ta-nkibaluengele', 'Ta Nkibaluengele', '[NOUVEAU_TOME_LONG / ancetre] Père de Nzongo. Prêtre kongo, justicier et combattant. Sa période ouvre l’arrière-plan long de l’épopée, à partir du règne d’Afonso Ier et de la naissance de Nkibaluengele autour de 1509. Relations: Père de Nzongo ; ancêtre symbolique de la lignée résistante. Aliases: Nkibaluengele Clans:  Période: vers 1509+'),
+(@project_id, 'ta-miantudila', 'Ta Miantudila', '[NOUVEAU / maitre_forge] Forgeron-maître de Kuimba après Nzongo. Il assure la continuité technique, rituelle et symbolique de la forge dans le pays Kuimba. Relations: Successeur de Nzongo dans la forge ; gardien d’un savoir matériel et rituel. Aliases:  Clans:  Période: apres mort de Nzongo'),
+(@project_id, 'suru', 'Suru', '[NOUVEAU / allie_etranger] Étranger/ngoyi très proche de Kinuani mais non crédible comme chef officiel. Il agit dans l’ombre, parle peu sauf avec Kinuani, débat pendant les courses et entraînements, recrute et forme des makesa sans commander publiquement. Il a un grand chien et une épouse stérile marquée par des fausses couches. Sa devise : tout le monde est coupable jusqu’à preuve d’innocence. Relations: Conseiller secret et ombre de Kinuani ; fasciné par les forgerons de Kuimba ; lié à la formation des makesa. Aliases: Sulu dans la bouche locale ; Kini kia Kinuani ; l’ombre de Kinuani Clans: ngoyi / étranger Période: 1650-1665'),
+(@project_id, 'kilala', 'Kilala', '[NOUVEAU / espion_social] Homme venu de Mfuti, marqué par un traumatisme crânien après une chute contre une pierre. Il n’est pas violent et, selon le bukongo local, on ne frappe pas les handicapés. Mutinu l’amène en secret et l’utilise comme espion discret capable d’écouter et de rapporter. Relations: Protégé et informateur de Mutinu. Aliases:  Clans: vient de Mfuti Période: 1650-1665'),
+(@project_id, 'bukono', 'Bukono', '[A_MIGRER_DEPUIS_NKUNKU_OU_A_CREER / chef_faible] Chef faible installé après Nzongo et après d’autres chefs malheureux, durant le départ de Kinuani vers la capitale. Il devient le symbole d’un affaiblissement politique : il prend une deuxième épouse mundele, Ndona/Dona Luciana Braga, et paraît ramolli, vivant son idylle tandis que les anciens soupçonnent la femme blanche d’être une espionne. Relations: Époux de Ndona Luciana Braga ; contrepoint politique de Kinuani ; surveillé par les anciens. Aliases: À vérifier avec ancien slug Nkunku Clans:  Période: apres depart de Kinuani à Mbanza Kongo'),
+(@project_id, 'ndona-luciana-braga', 'Ndona Luciana Braga', '[NOUVEAU / intrigue_politique] Deuxième épouse mundele de Bukono. Elle marque une rupture culturelle et politique dans Kuimba. Les anciens la soupçonnent d’être une espionne ou un instrument d’influence, tandis que Bukono semble s’amollir dans cette union. Relations: Deuxième épouse de Bukono ; suspecte aux yeux des anciens. Aliases: Dona Luciana Braga ; Ndona Clans: mundele / portugaise ou luso-kongo à préciser Période: apres depart de Kinuani à la capitale'),
+(@project_id, 'ta-babueta', 'Ta Babueta', '[NOUVEAU / traitre] Traître lié à l’attaque nocturne contre le pays Kuimba. Sa trahison ouvre la nécessité d’une défense plus dure, de pièges et d’une surveillance renforcée. Relations: Adversaire de Kuimba ; lié aux attaques et aux pièges maeno ma ngo. Aliases:  Clans:  Période: 1647'),
+(@project_id, 'nkodia', 'Nkodia', '[NOUVEAU / enfant_kinuani_mutinu] Premier enfant de Kinuani et Mutinu, né en 1642. Sert d’ancrage familial avant la naissance des mapasa et les crises de l’exil. Relations: Enfant de Kinuani et Mutinu ; aîné de Muanda, Mpasi et Lunungu. Aliases:  Clans:  Période: naissance 1642'),
+(@project_id, 'muanda', 'Muanda', '[NOUVEAU_ALIAS_A_HARMONISER_AVEC_NSIMBA_NZUZI / mapasa] L’un des jumeaux mapasa de Kinuani et Mutinu, né lors d’une naissance difficile en 1643. Avec Mpasi, il est au cœur de l’initiation de Mutinu comme Maa Ngudi et de la transmission secrète du bukongo après 1665. Relations: Jumeau de Mpasi ; enfant de Kinuani et Mutinu ; frère/sœur de Nkodia et Lunungu. Aliases: Mapasa ; possible harmonisation avec Nsimba/Nzuzi Clans:  Période: naissance 1643 ; résistance 1665-1702'),
+(@project_id, 'mpasi', 'Mpasi', '[NOUVEAU_ALIAS_A_HARMONISER_AVEC_NSIMBA_NZUZI / mapasa] L’un des jumeaux mapasa de Kinuani et Mutinu, né lors d’une naissance difficile en 1643. Avec Muanda, il prolonge la lignée de mémoire et la résistance secrète après Mbuila. Relations: Jumeau de Muanda ; enfant de Kinuani et Mutinu ; frère/sœur de Nkodia et Lunungu. Aliases: Mapasa ; possible harmonisation avec Nsimba/Nzuzi Clans:  Période: naissance 1643 ; résistance 1665-1702'),
+(@project_id, 'lunungu', 'Lunungu', '[NOUVEAU / enfant_kinuani_mutinu] Quatrième enfant de Kinuani et Mutinu, né au Mayombe selon la trame validée. Sa naissance dans l’épreuve renforce l’arc de l’exil, de l’initiation de Mutinu et de la survie familiale. Relations: Enfant de Kinuani et Mutinu ; cadet de Nkodia et des mapasa. Aliases:  Clans:  Période: naissance 1646/1648 à harmoniser'),
+(@project_id, 'nsimba', 'Nsimba', '[EXISTANT_DB_A_HARMONISER / enfant_ou_alias_mapasa] Personnage déjà présent en DB et utilisé comme POV dans la fuite pour protéger Mutinu/Nkusu et les enfants. À harmoniser avec la décision canonique des mapasa Muanda et Mpasi : soit Nsimba est un alias/nom rituel, soit un autre enfant/disciple. Relations: Lié à Mutinu, aux enfants et à la fuite après Mbuila. Aliases: Possible nom/alias d’un mapasa, à harmoniser avec Muanda/Mpasi Clans: muisi Kuimba Période: 1665'),
+(@project_id, 'nzuzi', 'Nzuzi', '[EXISTANT_DB_A_HARMONISER / enfant_ou_alias_mapasa] Personnage déjà présent en DB et utilisé comme POV dans l’épilogue ''La mémoire et le nom''. À harmoniser avec la décision canonique Muanda/Mpasi : Nzuzi peut devenir alias rituel, témoin de mémoire ou personnage distinct. Relations: Lié à l’épilogue, à Kuimba et à la transmission de mémoire. Aliases: Possible nom/alias d’un mapasa, à harmoniser avec Muanda/Mpasi Clans: muisi Kuimba Période: 1665-1702'),
+(@project_id, 'baleketa', 'Baleketa', '[NOUVEAU_TOME_LONG / cadre_1702] Personnage présent dans le prologue de 1702 au mbongi de mémoire à Mbanza Kongo, auprès de Kimpa Vita, Kialungu, Mutinu et les anciens. Rôle précis à développer. Relations: Lié à Kimpa Vita, Kialungu, Mutinu et aux anciens. Aliases:  Clans:  Période: 1702'),
+(@project_id, 'kialungu', 'Kialungu', '[NOUVEAU_TOME_LONG / cadre_1702] Personnage présent dans le prologue de 1702 au mbongi de mémoire à Mbanza Kongo, auprès de Kimpa Vita, Baleketa, Mutinu et les anciens. Rôle précis à développer. Relations: Lié à Kimpa Vita, Baleketa, Mutinu et aux anciens. Aliases:  Clans:  Période: 1702'),
+(@project_id, 'matadi-luanda', 'Matadi Luanda', '[NOUVEAU / famille_tusikila] Époux de Maa Tusikila, vivant en ville. Sert à ancrer Tusikila dans le monde citadin, diplomatique et social autour des négociations de Mutinu et Kinuani. Relations: Époux de Maa Tusikila ; par alliance lié à Nzongo et Kinuani. Aliases:  Clans:  Période: 1638-1641'),
+(@project_id, 'ndona-linda', 'Ndona Linda', '[EXISTANT_DB_A_COMPLETER / europeenne_ou_luso_kongo] Personnage déjà présent en DB. Rôle narratif non suffisamment fixé dans les notes disponibles ; à compléter avant insertion enrichie. Peut servir à l’arc européen/luso-kongo si distincte de Ndona Luciana Braga. Relations: À préciser ; ne pas confondre avec Ndona Luciana Braga sans décision canon. Aliases:  Clans:  Période: à préciser'),
+(@project_id, 'reverend-baumgartner', 'Reverend Baumgartner', '[EXISTANT_DB_A_COMPLETER / religieux_europeen] Religieux européen déjà présent en DB. Rôle précis à compléter selon l’arc missionnaire/religieux, la cour ou les tensions culturelles. Relations: À préciser ; potentiellement lié aux Européens, missions ou débats religieux. Aliases:  Clans:  Période: à préciser'),
+(@project_id, 'pere-lorenzo', 'Père Lorenzo', '[EXISTANT_DB_A_COMPLETER / religieux_europeen] Prêtre déjà présent en DB. Rôle précis à compléter selon l’arc missionnaire, les tensions religieuses et la cour de Mbanza Kongo. Relations: À préciser ; possible contrepoint religieux à la transmission du bukongo. Aliases:  Clans:  Période: à préciser'),
+(@project_id, 'alvaro-vi', 'Álvaro VI', '[NOUVEAU_HISTORIQUE / historique_contexte] Roi dont le début de règne sert de repère politique au retrait de Nzongo de la cour. Figure de contexte pour expliquer le durcissement des troubles, des trahisons et de la résistance anti-portugaise. Relations: Contexte politique du retrait de Nzongo. Aliases: Roi Álvaro VI Clans:  Période: début règne, contexte de retrait de Nzongo'),
+(@project_id, 'afonso-ier', 'Afonso Ier', '[NOUVEAU_HISTORIQUE_TOME_LONG / historique_contexte] Roi historique servant de repère à la période de naissance de Nkibaluengele autour de 1509 dans l’arrière-plan long de la saga. À utiliser plutôt pour les tomes/lore de fond que pour le noyau du tome 1. Relations: Repère chronologique de l’arc ancien autour de Ta Nkibaluengele. Aliases: Afonso I Clans:  Période: vers 1509, arrière-plan')
+ON DUPLICATE KEY UPDATE
+  name = VALUES(name),
+  description = VALUES(description),
+  deleted_at = NULL;
+
+COMMIT;
+
+======================================================================
+SECTION 3 — FICHES RICHES PAR PERSONNAGE
+======================================================================
+
+[01] Kinuani  (kinuani)
+status_db: EXISTANT_DB_CANON
+rang_narratif: principal
+aliases: Mbuta Makesa plus tard ; chef de Kuimba
+clans_lignee: muisi Kuimba ; muana Sundi
+periode: 1638-1665
+description: Héros central du tome 1. Formé au couvent d’élite de Ta Mukono : arts martiaux, tir, diplomatie, natikongo, cosmogonie, sciences du bukongo, forge, pièges et médiation. Époux de Mutinu, père de Nkodia, des mapasa Muanda et Mpasi, puis de Lunungu. Exilé au Mayombe après le coup monté autour de Nganga Mungua. Conseiller/ambassadeur administratif à Mbanza Kongo auprès de Mvita Kanga et Garcia II entre 1651 et 1656, puis intronisé chef de Kuimba en 1656. Meurt volontairement à Mbuila le 30 octobre 1665 avec environ cent volontaires.
+relations: Époux Mutinu ; protégé/élève de Nzongo ; rival Ndebeka ; allié Suru, Nzungani, Kisita, Maa Miakubuku ; sert Vita Kanga et Garcia II.
+
+[02] Mutinu  (mutinu)
+status_db: A_MIGRER_DEPUIS_NKUSU
+rang_narratif: principal
+aliases: Ancien nom de travail : Nkusu ; Maa Ngudi après la naissance des mapasa
+clans_lignee: muisi Ndamba ; muana Kahunga (ancien en DB sous Nkusu)
+periode: 1638-1702
+description: Héroïne majeure. Cinquième des sept filles de Ta Mualu et Ma Yudisa. Elle rencontre Kinuani au jour de Mpika, approfondit les savoirs domestiques selon sa lignée maternelle, épouse Kinuani au longo de 1641 et devient mère de Nkodia, des mapasa Muanda/Mpasi et de Lunungu. Son initiation féminine commence pendant la grossesse des jumeaux et se prolonge jusqu’au Mayombe. Au Mayombe, elle impose une discipline alimentaire stricte pour protéger Kinuani. Après 1665, elle garde la mémoire, protège les enfants et transmet le bukongo jusqu’au mbongi de mémoire de 1702.
+relations: Épouse Kinuani ; fille de Ta Mualu et Ma Yudisa ; sœur de Lufauandi ; mère de Nkodia, Muanda, Mpasi, Lunungu ; alliée Kisita, Maa Miakubuku, Kilala.
+
+[03] Nkaka Nzongo  (nzongo)
+status_db: EXISTANT_DB_CANON
+rang_narratif: principal
+aliases: Nzongo ; l’homme-léopard ; ancien notable de cour
+clans_lignee: muisi Kuimba
+periode: avant 1638-1650
+description: Patriarche de Kuimba, ancien notable de cour retiré au début du règne d’Álvaro VI pour organiser la résistance, préserver le bukongo et préparer Kinuani. Forgeron, stratège, gardien de manuscrits en natikongo, il administre Kuimba entre espace privé de consultation et grand espace public de justice. Père spirituel/politique de Kinuani, sévère mais visionnaire. Il meurt aveugle avant l’aube après avoir transmis des confidences à Kisita et Maa Miakubuku.
+relations: Fils de Ta Nkibaluengele ; frère/parent de Ta Matayi et Ma Tusikila ; oncle/formateur de Kinuani ; adversaire moral de Ndebeka ; confie des savoirs à Kisita et Maa Miakubuku.
+
+[04] Vita Kanga  (vita-kanga)
+status_db: A_MIGRER_DEPUIS_MVITA_KANGA
+rang_narratif: historique_principal
+aliases: Mvita Kanga en DB ; Antonio I ; roi du Kongo à partir de 1661
+clans_lignee: —
+periode: 1651-1665
+description: Prince puis roi du Kongo après Garcia II. Il reçoit le service administratif de Kinuani à Mbanza Kongo. Figure royale galvanisatrice avant Mbuila. Le 29 octobre 1665, les sabotages internes désorganisent les communications ; Vita Kanga est décapité et la désolation s’abat sur le Kongo.
+relations: Succède à Garcia II ; protecteur politique de Kinuani ; figure centrale de Mbuila.
+
+[05] Garcia II  (garcia-ii)
+status_db: NOUVEAU_OU_HISTORIQUE
+rang_narratif: historique
+aliases: Roi Garcia II
+clans_lignee: —
+periode: 1651-1661
+description: Roi du Kongo avant Vita Kanga. Kinuani sert comme conseiller/ambassadeur administratif auprès de lui et du prince Vita Kanga entre 1651 et 1656. Lors du retour de Kinuani à Kuimba, le roi fournit des juges, soldats et tradipraticiens sans l’accompagner physiquement.
+relations: Roi précédant Vita Kanga ; soutien institutionnel indirect de Kinuani.
+
+[06] Kimpa Vita  (kimpa-vita)
+status_db: NOUVEAU_TOME_LONG
+rang_narratif: cadre_1702
+aliases: —
+clans_lignee: —
+periode: 1702
+description: Figure du prologue/épilogue de 1702 à Mbanza Kongo. Elle s’installe avec les mampuya maa Kongo pour guérir et rebâtir la capitale. Sa présence attire Mutinu et ouvre le mbongi de mémoire qui encadre le récit.
+relations: Reçoit/attire Mutinu et sa cour ; liée à Baleketa, Kialungu, anciens et au mbongi final.
+
+[07] Ndebeka  (ndebeka)
+status_db: EXISTANT_DB_CANON
+rang_narratif: antagoniste
+aliases: —
+clans_lignee: muisi Kuimba
+periode: avant 1640-1656+
+description: Cousin rival de Kinuani et de Mabanza. Il séduit Mikembi par pactes secrets, l’amène à croire que Mabanza l’a trahie, puis devient l’un des foyers de la corruption interne. Il fait tuer l’ambassadeur/nganga Nganga Mungua et fait accuser Kinuani, provoquant l’exil au Mayombe. Plus tard, son sbire poignarde Kinuani lors du deuil ; Ndebeka finit exilé vers Niarangongo.
+relations: Rival Kinuani et Mabanza ; époux de Mikembi ; impliqué dans le meurtre de Nganga Mungua ; lié à Matondo par manipulation/trahison.
+
+[08] Mabanza  (mabanza)
+status_db: NOUVEAU
+rang_narratif: secondaire_majeur
+aliases: —
+clans_lignee: —
+periode: avant 1640
+description: Cousin de Ndebeka et amoureux de Mikembi depuis la jeunesse. Parolier, imitateur comique au mbongi, vaillant aux champs et tisserand. Humilié publiquement par Nzongo au chantier des étangs, il est envoyé chez Ta Mberi en réparation. Il revient trop tard pour empêcher l’union de Mikembi avec Ndebeka.
+relations: Aime Mikembi ; rival sentimental de Ndebeka ; envoyé chez Ta Mberi avec Fila, Ntadi et Kualu.
+
+[09] Mikembi  (mikembi)
+status_db: NOUVEAU
+rang_narratif: secondaire_majeur
+aliases: Ma Mikembi
+clans_lignee: —
+periode: avant 1640
+description: Jeune femme aimée par Mabanza mais manipulée par Ndebeka. Elle croit que Mabanza l’a trahie, cède à Ndebeka, devient enceinte et entre dans une union qui cristallise une blessure intime et politique au sein du clan.
+relations: Aimée de Mabanza ; épouse/compagne de Ndebeka ; pivot du conflit sentimental et clanique.
+
+[10] Fila  (fila)
+status_db: NOUVEAU
+rang_narratif: secondaire
+aliases: —
+clans_lignee: —
+periode: avant 1640
+description: Protégé envoyé par Nzongo chez Ta Mberi dans le cadre d’une réparation. Il accompagne Mabanza dans cette période d’apprentissage et de correction.
+relations: Compagnon de Mabanza, Ntadi et Kualu chez Ta Mberi.
+
+[11] Ntadi  (ntadi)
+status_db: NOUVEAU
+rang_narratif: secondaire
+aliases: —
+clans_lignee: —
+periode: avant 1640
+description: L’un des quatre protégés envoyés deux ans chez Ta Mberi pour réparation et apprentissages. Sert de personnage de groupe autour de la discipline, des savoirs pratiques et de la réparation sociale.
+relations: Compagnon de Mabanza, Fila et Kualu.
+
+[12] Kualu  (kualu)
+status_db: NOUVEAU
+rang_narratif: secondaire
+aliases: —
+clans_lignee: —
+periode: avant 1640
+description: L’un des quatre protégés envoyés chez Ta Mberi pour réparation. Associé aux apprentissages de terrain : apiculture, lecture des lignes, acupression et savoirs d’observation.
+relations: Compagnon de Mabanza, Fila et Ntadi.
+
+[13] Ta Mberi  (ta-mberi)
+status_db: NOUVEAU
+rang_narratif: mentor
+aliases: —
+clans_lignee: pays Bembe / Muyonzi
+periode: avant 1640
+description: Maître/ancien du pays Bembe, à Muyonzi, chez qui Nzongo envoie les protégés pour deux ans de réparation. Il transmet des savoirs pratiques et thérapeutiques : apiculture, lecture des lignes, acupression et discipline de vie.
+relations: Mentor de Mabanza, Fila, Ntadi et Kualu ; relais de Nzongo.
+
+[14] Ta Mukono  (ta-mukono)
+status_db: EXISTANT_DB_CANON
+rang_narratif: mentor
+aliases: —
+clans_lignee: —
+periode: avant 1638
+description: Maître du couvent d’élite où Kinuani reçoit sa formation complète. Incarnation de la discipline, du temple et des savoirs de combat, d’astronomie, de natikongo, de médiation, de forge et de pièges.
+relations: Formateur de Kinuani et des milongoki.
+
+[15] Maa Tusikila  (ma-tusikila)
+status_db: EXISTANT_DB_CANON_A_NORMALISER_NOM
+rang_narratif: matriarche
+aliases: Ma Tusikila ; ancien nom de travail : Ma Ndala
+clans_lignee: —
+periode: 1638-1641
+description: Figure maternelle/citadine majeure dans les négociations de dot. Après le jour de Mpika, elle reçoit Kinuani et Mutinu dans sa concession et influence les démarches auprès de Ta Mualu. Elle est aussi retenue comme sœur de Nzongo vivant en ville, mariée à Matadi Luanda.
+relations: Sœur de Nzongo ; épouse de Matadi Luanda ; intermédiaire auprès de Ta Mualu ; liée à Mutinu et Kinuani.
+
+[16] Ta Ndala  (ta-ndala)
+status_db: NOUVEAU_A_VERIFIER
+rang_narratif: secondaire
+aliases: —
+clans_lignee: —
+periode: 1638-1641
+description: Parent/allié qui revient de voyage et soutient les démarches sociales en coulisses, notamment auprès de Ta Mualu. L’opportunité sociale et économique de l’alliance l’intéresse.
+relations: Soutien des démarches autour de Mutinu, Kinuani, Maa Tusikila et Ta Mualu.
+
+[17] Ta Mualu  (ta-mualu)
+status_db: NOUVEAU
+rang_narratif: famille_mutinu
+aliases: —
+clans_lignee: —
+periode: 1638-1641
+description: Père de Mutinu. Commerçant malin et respectable, engagé dans l’aide aux associations locales. Personnage stratégique dans les négociations de dot et l’alliance avec Kinuani.
+relations: Époux de Ma Yudisa ; père de Mutinu et de ses sœurs ; interlocuteur de Maa Tusikila et Ta Ndala.
+
+[18] Ma Yudisa  (ma-yudisa)
+status_db: NOUVEAU
+rang_narratif: famille_mutinu
+aliases: —
+clans_lignee: —
+periode: 1638-1641
+description: Mère de Mutinu et épouse de Ta Mualu. Point d’ancrage familial et maternel de Mutinu dans les apprentissages domestiques et la préparation au longo.
+relations: Épouse de Ta Mualu ; mère de Mutinu.
+
+[19] Lufauandi  (lufauandi)
+status_db: NOUVEAU
+rang_narratif: famille_mutinu
+aliases: Lufuandi dans certaines notes
+clans_lignee: —
+periode: 1648-1650
+description: Sœur de Mutinu et personne de confiance. Dans les règles alimentaires imposées pour protéger Kinuani, elle est l’une des seules autorisées à préparer les repas si Mutinu ne le fait pas elle-même.
+relations: Sœur de Mutinu ; relais de confiance auprès de Kinuani.
+
+[20] Mandangi  (mandangi)
+status_db: NOUVEAU
+rang_narratif: soldat_specialiste
+aliases: —
+clans_lignee: —
+periode: 1648-1650
+description: Soldat-cuisinier incorruptible. Troisième niveau de confiance dans le dispositif alimentaire de Mutinu pour empêcher un nouvel empoisonnement de Kinuani au Mayombe.
+relations: Protège Kinuani sous l’autorité domestique et sécuritaire de Mutinu.
+
+[21] Kisita  (kisita)
+status_db: EXISTANT_DB_CANON
+rang_narratif: alliee_majeure
+aliases: —
+clans_lignee: muisi Kuimba
+periode: 1649-1656
+description: Gardienne de savoirs et soigneuse liée aux secrets de Nzongo. Après la mort de Nzongo, elle est accusée autour du sceptre et des manuscrits, condamnée au nkasa puis sauvée in extremis par un juge pro-Kongo. Elle soigne Kinuani avec Mutinu après le poignard empoisonné.
+relations: Confidente de Nzongo ; alliée Mutinu et Kinuani ; liée au sceptre, aux manuscrits et au procès.
+
+[22] Nzungani  (nzungani)
+status_db: EXISTANT_DB_CANON
+rang_narratif: allie_militaire
+aliases: —
+clans_lignee: muisi Nsembo ; muana Kahunga
+periode: 1649-1665
+description: Chef d’une unité d’élite/renseignement après la mort de Nzongo. Il intervient lorsque Kinuani est poignardé, puis aide à réactiver le réseau d’espionnage et à établir la vérité sur Ndebeka. Dans la dernière partie, il porte le POV de l’aveu du sbire.
+relations: Allié de Kinuani ; travaille avec Dikesa ; opposé aux réseaux de Ndebeka.
+
+[23] Dikesa  (dikesa)
+status_db: NOUVEAU
+rang_narratif: renseignement
+aliases: —
+clans_lignee: —
+periode: 1649-1665
+description: Agent/compagnon de Nzungani dans l’unité d’élite et de renseignement mise en place après la consécration de Kinuani. Sert à l’enquête, aux surveillances et à la purge des traîtres.
+relations: Bras de Nzungani ; loyal à Kinuani.
+
+[24] Matondo  (matondo)
+status_db: EXISTANT_DB_CANON
+rang_narratif: secondaire_ambigu
+aliases: —
+clans_lignee: —
+periode: 1648-1665
+description: Personnage de cour et d’action, lié au dossier Nganga Mungua puis à la vérité sur Ndebeka. Il se sent manipulé/trahi par Ndebeka et le dépouille sur la route de l’exil. Il porte aussi un POV lors de la chute du roi à Mbuila.
+relations: Croise Kinuani, Ndebeka et Nganga Mungua ; acteur d’embuscade et témoin de Mbuila.
+
+[25] Tata Nganga Mungua  (nganga-mungua)
+status_db: EXISTANT_DB_CANON
+rang_narratif: victime_declencheur
+aliases: Nganga Mungua
+clans_lignee: —
+periode: 1648
+description: Ambassadeur/nganga dont l’assassinat provoque la crise majeure. Ndebeka le fait tuer et fait accuser Kinuani, ouvrant l’arc du coup monté et de l’exil au Mayombe.
+relations: Victime de Ndebeka ; déclencheur de l’exil de Kinuani et Mutinu.
+
+[26] Maa Miakubuku mia Mualu  (maa-miakubuku-mia-mualu)
+status_db: NOUVEAU
+rang_narratif: matriarche_doyenne
+aliases: Miakubuku
+clans_lignee: —
+periode: 1649-1656
+description: Doyenne à Yanga, frontière de Kuimba, autorité morale majeure. Elle reçoit les confidences finales de Nzongo, révèle avec les anciens la volonté du patriarche, consacre Kinuani chef de Kuimba après l’attentat, puis demande son retour en 1656 pour tenir le pays.
+relations: Confidente de Nzongo ; consacre Kinuani ; alliée des anciens et de Mutinu.
+
+[27] Ta Matayi  (ta-matayi)
+status_db: NOUVEAU
+rang_narratif: ancien_modele
+aliases: —
+clans_lignee: —
+periode: avant 1638
+description: Aîné de Nzongo de six ans et modèle de vertus. Il sert de repère moral dans la présentation de Kuimba avant les crises.
+relations: Frère/aîné de Nzongo ; associé au conseil des anciens de Kuimba.
+
+[28] Ta Nkibaluengele  (ta-nkibaluengele)
+status_db: NOUVEAU_TOME_LONG
+rang_narratif: ancetre
+aliases: Nkibaluengele
+clans_lignee: —
+periode: vers 1509+
+description: Père de Nzongo. Prêtre kongo, justicier et combattant. Sa période ouvre l’arrière-plan long de l’épopée, à partir du règne d’Afonso Ier et de la naissance de Nkibaluengele autour de 1509.
+relations: Père de Nzongo ; ancêtre symbolique de la lignée résistante.
+
+[29] Ta Miantudila  (ta-miantudila)
+status_db: NOUVEAU
+rang_narratif: maitre_forge
+aliases: —
+clans_lignee: —
+periode: apres mort de Nzongo
+description: Forgeron-maître de Kuimba après Nzongo. Il assure la continuité technique, rituelle et symbolique de la forge dans le pays Kuimba.
+relations: Successeur de Nzongo dans la forge ; gardien d’un savoir matériel et rituel.
+
+[30] Suru  (suru)
+status_db: NOUVEAU
+rang_narratif: allie_etranger
+aliases: Sulu dans la bouche locale ; Kini kia Kinuani ; l’ombre de Kinuani
+clans_lignee: ngoyi / étranger
+periode: 1650-1665
+description: Étranger/ngoyi très proche de Kinuani mais non crédible comme chef officiel. Il agit dans l’ombre, parle peu sauf avec Kinuani, débat pendant les courses et entraînements, recrute et forme des makesa sans commander publiquement. Il a un grand chien et une épouse stérile marquée par des fausses couches. Sa devise : tout le monde est coupable jusqu’à preuve d’innocence.
+relations: Conseiller secret et ombre de Kinuani ; fasciné par les forgerons de Kuimba ; lié à la formation des makesa.
+
+[31] Kilala  (kilala)
+status_db: NOUVEAU
+rang_narratif: espion_social
+aliases: —
+clans_lignee: vient de Mfuti
+periode: 1650-1665
+description: Homme venu de Mfuti, marqué par un traumatisme crânien après une chute contre une pierre. Il n’est pas violent et, selon le bukongo local, on ne frappe pas les handicapés. Mutinu l’amène en secret et l’utilise comme espion discret capable d’écouter et de rapporter.
+relations: Protégé et informateur de Mutinu.
+
+[32] Bukono  (bukono)
+status_db: A_MIGRER_DEPUIS_NKUNKU_OU_A_CREER
+rang_narratif: chef_faible
+aliases: À vérifier avec ancien slug Nkunku
+clans_lignee: —
+periode: apres depart de Kinuani à Mbanza Kongo
+description: Chef faible installé après Nzongo et après d’autres chefs malheureux, durant le départ de Kinuani vers la capitale. Il devient le symbole d’un affaiblissement politique : il prend une deuxième épouse mundele, Ndona/Dona Luciana Braga, et paraît ramolli, vivant son idylle tandis que les anciens soupçonnent la femme blanche d’être une espionne.
+relations: Époux de Ndona Luciana Braga ; contrepoint politique de Kinuani ; surveillé par les anciens.
+
+[33] Ndona Luciana Braga  (ndona-luciana-braga)
+status_db: NOUVEAU
+rang_narratif: intrigue_politique
+aliases: Dona Luciana Braga ; Ndona
+clans_lignee: mundele / portugaise ou luso-kongo à préciser
+periode: apres depart de Kinuani à la capitale
+description: Deuxième épouse mundele de Bukono. Elle marque une rupture culturelle et politique dans Kuimba. Les anciens la soupçonnent d’être une espionne ou un instrument d’influence, tandis que Bukono semble s’amollir dans cette union.
+relations: Deuxième épouse de Bukono ; suspecte aux yeux des anciens.
+
+[34] Ta Babueta  (ta-babueta)
+status_db: NOUVEAU
+rang_narratif: traitre
+aliases: —
+clans_lignee: —
+periode: 1647
+description: Traître lié à l’attaque nocturne contre le pays Kuimba. Sa trahison ouvre la nécessité d’une défense plus dure, de pièges et d’une surveillance renforcée.
+relations: Adversaire de Kuimba ; lié aux attaques et aux pièges maeno ma ngo.
+
+[35] Nkodia  (nkodia)
+status_db: NOUVEAU
+rang_narratif: enfant_kinuani_mutinu
+aliases: —
+clans_lignee: —
+periode: naissance 1642
+description: Premier enfant de Kinuani et Mutinu, né en 1642. Sert d’ancrage familial avant la naissance des mapasa et les crises de l’exil.
+relations: Enfant de Kinuani et Mutinu ; aîné de Muanda, Mpasi et Lunungu.
+
+[36] Muanda  (muanda)
+status_db: NOUVEAU_ALIAS_A_HARMONISER_AVEC_NSIMBA_NZUZI
+rang_narratif: mapasa
+aliases: Mapasa ; possible harmonisation avec Nsimba/Nzuzi
+clans_lignee: —
+periode: naissance 1643 ; résistance 1665-1702
+description: L’un des jumeaux mapasa de Kinuani et Mutinu, né lors d’une naissance difficile en 1643. Avec Mpasi, il est au cœur de l’initiation de Mutinu comme Maa Ngudi et de la transmission secrète du bukongo après 1665.
+relations: Jumeau de Mpasi ; enfant de Kinuani et Mutinu ; frère/sœur de Nkodia et Lunungu.
+
+[37] Mpasi  (mpasi)
+status_db: NOUVEAU_ALIAS_A_HARMONISER_AVEC_NSIMBA_NZUZI
+rang_narratif: mapasa
+aliases: Mapasa ; possible harmonisation avec Nsimba/Nzuzi
+clans_lignee: —
+periode: naissance 1643 ; résistance 1665-1702
+description: L’un des jumeaux mapasa de Kinuani et Mutinu, né lors d’une naissance difficile en 1643. Avec Muanda, il prolonge la lignée de mémoire et la résistance secrète après Mbuila.
+relations: Jumeau de Muanda ; enfant de Kinuani et Mutinu ; frère/sœur de Nkodia et Lunungu.
+
+[38] Lunungu  (lunungu)
+status_db: NOUVEAU
+rang_narratif: enfant_kinuani_mutinu
+aliases: —
+clans_lignee: —
+periode: naissance 1646/1648 à harmoniser
+description: Quatrième enfant de Kinuani et Mutinu, né au Mayombe selon la trame validée. Sa naissance dans l’épreuve renforce l’arc de l’exil, de l’initiation de Mutinu et de la survie familiale.
+relations: Enfant de Kinuani et Mutinu ; cadet de Nkodia et des mapasa.
+
+[39] Nsimba  (nsimba)
+status_db: EXISTANT_DB_A_HARMONISER
+rang_narratif: enfant_ou_alias_mapasa
+aliases: Possible nom/alias d’un mapasa, à harmoniser avec Muanda/Mpasi
+clans_lignee: muisi Kuimba
+periode: 1665
+description: Personnage déjà présent en DB et utilisé comme POV dans la fuite pour protéger Mutinu/Nkusu et les enfants. À harmoniser avec la décision canonique des mapasa Muanda et Mpasi : soit Nsimba est un alias/nom rituel, soit un autre enfant/disciple.
+relations: Lié à Mutinu, aux enfants et à la fuite après Mbuila.
+
+[40] Nzuzi  (nzuzi)
+status_db: EXISTANT_DB_A_HARMONISER
+rang_narratif: enfant_ou_alias_mapasa
+aliases: Possible nom/alias d’un mapasa, à harmoniser avec Muanda/Mpasi
+clans_lignee: muisi Kuimba
+periode: 1665-1702
+description: Personnage déjà présent en DB et utilisé comme POV dans l’épilogue 'La mémoire et le nom'. À harmoniser avec la décision canonique Muanda/Mpasi : Nzuzi peut devenir alias rituel, témoin de mémoire ou personnage distinct.
+relations: Lié à l’épilogue, à Kuimba et à la transmission de mémoire.
+
+[41] Baleketa  (baleketa)
+status_db: NOUVEAU_TOME_LONG
+rang_narratif: cadre_1702
+aliases: —
+clans_lignee: —
+periode: 1702
+description: Personnage présent dans le prologue de 1702 au mbongi de mémoire à Mbanza Kongo, auprès de Kimpa Vita, Kialungu, Mutinu et les anciens. Rôle précis à développer.
+relations: Lié à Kimpa Vita, Kialungu, Mutinu et aux anciens.
+
+[42] Kialungu  (kialungu)
+status_db: NOUVEAU_TOME_LONG
+rang_narratif: cadre_1702
+aliases: —
+clans_lignee: —
+periode: 1702
+description: Personnage présent dans le prologue de 1702 au mbongi de mémoire à Mbanza Kongo, auprès de Kimpa Vita, Baleketa, Mutinu et les anciens. Rôle précis à développer.
+relations: Lié à Kimpa Vita, Baleketa, Mutinu et aux anciens.
+
+[43] Matadi Luanda  (matadi-luanda)
+status_db: NOUVEAU
+rang_narratif: famille_tusikila
+aliases: —
+clans_lignee: —
+periode: 1638-1641
+description: Époux de Maa Tusikila, vivant en ville. Sert à ancrer Tusikila dans le monde citadin, diplomatique et social autour des négociations de Mutinu et Kinuani.
+relations: Époux de Maa Tusikila ; par alliance lié à Nzongo et Kinuani.
+
+[44] Ndona Linda  (ndona-linda)
+status_db: EXISTANT_DB_A_COMPLETER
+rang_narratif: europeenne_ou_luso_kongo
+aliases: —
+clans_lignee: —
+periode: à préciser
+description: Personnage déjà présent en DB. Rôle narratif non suffisamment fixé dans les notes disponibles ; à compléter avant insertion enrichie. Peut servir à l’arc européen/luso-kongo si distincte de Ndona Luciana Braga.
+relations: À préciser ; ne pas confondre avec Ndona Luciana Braga sans décision canon.
+
+[45] Reverend Baumgartner  (reverend-baumgartner)
+status_db: EXISTANT_DB_A_COMPLETER
+rang_narratif: religieux_europeen
+aliases: —
+clans_lignee: —
+periode: à préciser
+description: Religieux européen déjà présent en DB. Rôle précis à compléter selon l’arc missionnaire/religieux, la cour ou les tensions culturelles.
+relations: À préciser ; potentiellement lié aux Européens, missions ou débats religieux.
+
+[46] Père Lorenzo  (pere-lorenzo)
+status_db: EXISTANT_DB_A_COMPLETER
+rang_narratif: religieux_europeen
+aliases: —
+clans_lignee: —
+periode: à préciser
+description: Prêtre déjà présent en DB. Rôle précis à compléter selon l’arc missionnaire, les tensions religieuses et la cour de Mbanza Kongo.
+relations: À préciser ; possible contrepoint religieux à la transmission du bukongo.
+
+[47] Álvaro VI  (alvaro-vi)
+status_db: NOUVEAU_HISTORIQUE
+rang_narratif: historique_contexte
+aliases: Roi Álvaro VI
+clans_lignee: —
+periode: début règne, contexte de retrait de Nzongo
+description: Roi dont le début de règne sert de repère politique au retrait de Nzongo de la cour. Figure de contexte pour expliquer le durcissement des troubles, des trahisons et de la résistance anti-portugaise.
+relations: Contexte politique du retrait de Nzongo.
+
+[48] Afonso Ier  (afonso-ier)
+status_db: NOUVEAU_HISTORIQUE_TOME_LONG
+rang_narratif: historique_contexte
+aliases: Afonso I
+clans_lignee: —
+periode: vers 1509, arrière-plan
+description: Roi historique servant de repère à la période de naissance de Nkibaluengele autour de 1509 dans l’arrière-plan long de la saga. À utiliser plutôt pour les tomes/lore de fond que pour le noyau du tome 1.
+relations: Repère chronologique de l’arc ancien autour de Ta Nkibaluengele.
+
+======================================================================
+SECTION 4 — MIGRATIONS / HARMONISATIONS À FAIRE
+======================================================================
+1) nkusu -> mutinu (nkusu obsolète)
+   - Mettre à jour mutinu ; nkusu → alias historique dans character_aliases si conservé.
+   - Migrer POV/scènes/chapitres mpika-nkusu vers mutinu.
+
+2) mvita-kanga = canon (Mvita Kanga)
+   - Ne pas renommer en vita-kanga. Slug DB : mvita-kanga.
+
+3) nkunku -> bukono
+   - Si Nkunku était le placeholder du chef faible, le remplacer par Bukono.
+
+4) mapasa — prénoms et noms génériques
+   - Mpasi = premier-né (nzuzi) ; Muanda = dernier-né (nsimba).
+   - Garder nsimba/nzuzi en DB comme noms mapasa + lier aux prénoms muanda/mpasi (aliases).
+
+5) ma-tusikila / Maa Tusikila
+   - Normaliser l’affichage Maa Tusikila, garder ma-tusikila comme slug si déjà en DB.
