@@ -1,0 +1,685 @@
+{
+  "version": 3,
+  "overrides": {},
+  "routes": [
+    {
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "src": "/_nuxt/builds/meta/(.*)"
+    },
+    {
+      "headers": {
+        "cache-control": "public, max-age=1, immutable"
+      },
+      "src": "/_nuxt/builds/(.*)"
+    },
+    {
+      "status": 307,
+      "headers": {
+        "Location": "/sitemap_index.xml"
+      },
+      "src": "/sitemap.xml"
+    },
+    {
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "src": "/_fonts/(.*)"
+    },
+    {
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "src": "/_scripts/(.*)"
+    },
+    {
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "src": "/_nuxt/(.*)"
+    },
+    {
+      "src": "/_nuxt/builds/meta(.*)",
+      "headers": {
+        "cache-control": "public,max-age=31536000,immutable"
+      },
+      "continue": true
+    },
+    {
+      "src": "/_nuxt/builds(.*)",
+      "headers": {
+        "cache-control": "public,max-age=31536000,immutable"
+      },
+      "continue": true
+    },
+    {
+      "src": "/_fonts(.*)",
+      "headers": {
+        "cache-control": "public,max-age=31536000,immutable"
+      },
+      "continue": true
+    },
+    {
+      "src": "/_scripts(.*)",
+      "headers": {
+        "cache-control": "public,max-age=31536000,immutable"
+      },
+      "continue": true
+    },
+    {
+      "src": "/_nuxt(.*)",
+      "headers": {
+        "cache-control": "public,max-age=31536000,immutable"
+      },
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "(?<__isr_route>/__nuxt_error)",
+      "dest": "/__fallback"
+    },
+    {
+      "src": "/workspace",
+      "dest": "/workspace"
+    },
+    {
+      "src": "/verify-email/success",
+      "dest": "/verify-email/success"
+    },
+    {
+      "src": "/verify-email",
+      "dest": "/verify-email"
+    },
+    {
+      "src": "/timeline",
+      "dest": "/timeline"
+    },
+    {
+      "src": "/studios",
+      "dest": "/studios"
+    },
+    {
+      "src": "/studio/projects",
+      "dest": "/studio/projects"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    },
+    {
+      "src": "/sitemap_index.xml",
+      "dest": "/sitemap_index.xml"
+    },
+    {
+      "src": "/scenes",
+      "dest": "/scenes"
+    },
+    {
+      "src": "/register/success",
+      "dest": "/register/success"
+    },
+    {
+      "src": "/register",
+      "dest": "/register"
+    },
+    {
+      "src": "/pt/workspace",
+      "dest": "/pt/workspace"
+    },
+    {
+      "src": "/pt/verify-email/success",
+      "dest": "/pt/verify-email/success"
+    },
+    {
+      "src": "/pt/verify-email",
+      "dest": "/pt/verify-email"
+    },
+    {
+      "src": "/pt/timeline",
+      "dest": "/pt/timeline"
+    },
+    {
+      "src": "/pt/studios",
+      "dest": "/pt/studios"
+    },
+    {
+      "src": "/pt/studio/projects",
+      "dest": "/pt/studio/projects"
+    },
+    {
+      "src": "/pt/sitemap.xml",
+      "dest": "/pt/sitemap.xml"
+    },
+    {
+      "src": "/pt/scenes",
+      "dest": "/pt/scenes"
+    },
+    {
+      "src": "/pt/register/success",
+      "dest": "/pt/register/success"
+    },
+    {
+      "src": "/pt/register",
+      "dest": "/pt/register"
+    },
+    {
+      "src": "/pt/login",
+      "dest": "/pt/login"
+    },
+    {
+      "src": "/pt/glossary",
+      "dest": "/pt/glossary"
+    },
+    {
+      "src": "/pt/forgot-password",
+      "dest": "/pt/forgot-password"
+    },
+    {
+      "src": "/pt/explore/writing",
+      "dest": "/pt/explore/writing"
+    },
+    {
+      "src": "/pt/explore/workflow",
+      "dest": "/pt/explore/workflow"
+    },
+    {
+      "src": "/pt/explore/timeline",
+      "dest": "/pt/explore/timeline"
+    },
+    {
+      "src": "/pt/explore/studio",
+      "dest": "/pt/explore/studio"
+    },
+    {
+      "src": "/pt/explore/structuring",
+      "dest": "/pt/explore/structuring"
+    },
+    {
+      "src": "/pt/explore/scenes",
+      "dest": "/pt/explore/scenes"
+    },
+    {
+      "src": "/pt/explore/pricing",
+      "dest": "/pt/explore/pricing"
+    },
+    {
+      "src": "/pt/explore/glossary",
+      "dest": "/pt/explore/glossary"
+    },
+    {
+      "src": "/pt/explore/features",
+      "dest": "/pt/explore/features"
+    },
+    {
+      "src": "/pt/explore/editors",
+      "dest": "/pt/explore/editors"
+    },
+    {
+      "src": "/pt/explore/creators",
+      "dest": "/pt/explore/creators"
+    },
+    {
+      "src": "/pt/explore/characters",
+      "dest": "/pt/explore/characters"
+    },
+    {
+      "src": "/pt/explore/access",
+      "dest": "/pt/explore/access"
+    },
+    {
+      "src": "/pt/explore/about",
+      "dest": "/pt/explore/about"
+    },
+    {
+      "src": "/pt/explore",
+      "dest": "/pt/explore"
+    },
+    {
+      "src": "/pt/characters",
+      "dest": "/pt/characters"
+    },
+    {
+      "src": "/pt",
+      "dest": "/pt"
+    },
+    {
+      "src": "/login",
+      "dest": "/login"
+    },
+    {
+      "src": "/glossary",
+      "dest": "/glossary"
+    },
+    {
+      "src": "/forgot-password",
+      "dest": "/forgot-password"
+    },
+    {
+      "src": "/explore/writing",
+      "dest": "/explore/writing"
+    },
+    {
+      "src": "/explore/workflow",
+      "dest": "/explore/workflow"
+    },
+    {
+      "src": "/explore/timeline",
+      "dest": "/explore/timeline"
+    },
+    {
+      "src": "/explore/studio",
+      "dest": "/explore/studio"
+    },
+    {
+      "src": "/explore/structuring",
+      "dest": "/explore/structuring"
+    },
+    {
+      "src": "/explore/scenes",
+      "dest": "/explore/scenes"
+    },
+    {
+      "src": "/explore/pricing",
+      "dest": "/explore/pricing"
+    },
+    {
+      "src": "/explore/glossary",
+      "dest": "/explore/glossary"
+    },
+    {
+      "src": "/explore/features",
+      "dest": "/explore/features"
+    },
+    {
+      "src": "/explore/editors",
+      "dest": "/explore/editors"
+    },
+    {
+      "src": "/explore/creators",
+      "dest": "/explore/creators"
+    },
+    {
+      "src": "/explore/characters",
+      "dest": "/explore/characters"
+    },
+    {
+      "src": "/explore/access",
+      "dest": "/explore/access"
+    },
+    {
+      "src": "/explore/about",
+      "dest": "/explore/about"
+    },
+    {
+      "src": "/explore",
+      "dest": "/explore"
+    },
+    {
+      "src": "/en/workspace",
+      "dest": "/en/workspace"
+    },
+    {
+      "src": "/en/verify-email/success",
+      "dest": "/en/verify-email/success"
+    },
+    {
+      "src": "/en/verify-email",
+      "dest": "/en/verify-email"
+    },
+    {
+      "src": "/en/timeline",
+      "dest": "/en/timeline"
+    },
+    {
+      "src": "/en/studios",
+      "dest": "/en/studios"
+    },
+    {
+      "src": "/en/studio/projects",
+      "dest": "/en/studio/projects"
+    },
+    {
+      "src": "/en/sitemap.xml",
+      "dest": "/en/sitemap.xml"
+    },
+    {
+      "src": "/en/scenes",
+      "dest": "/en/scenes"
+    },
+    {
+      "src": "/en/register/success",
+      "dest": "/en/register/success"
+    },
+    {
+      "src": "/en/register",
+      "dest": "/en/register"
+    },
+    {
+      "src": "/en/login",
+      "dest": "/en/login"
+    },
+    {
+      "src": "/en/glossary",
+      "dest": "/en/glossary"
+    },
+    {
+      "src": "/en/forgot-password",
+      "dest": "/en/forgot-password"
+    },
+    {
+      "src": "/en/explore/writing",
+      "dest": "/en/explore/writing"
+    },
+    {
+      "src": "/en/explore/workflow",
+      "dest": "/en/explore/workflow"
+    },
+    {
+      "src": "/en/explore/timeline",
+      "dest": "/en/explore/timeline"
+    },
+    {
+      "src": "/en/explore/studio",
+      "dest": "/en/explore/studio"
+    },
+    {
+      "src": "/en/explore/structuring",
+      "dest": "/en/explore/structuring"
+    },
+    {
+      "src": "/en/explore/scenes",
+      "dest": "/en/explore/scenes"
+    },
+    {
+      "src": "/en/explore/pricing",
+      "dest": "/en/explore/pricing"
+    },
+    {
+      "src": "/en/explore/glossary",
+      "dest": "/en/explore/glossary"
+    },
+    {
+      "src": "/en/explore/features",
+      "dest": "/en/explore/features"
+    },
+    {
+      "src": "/en/explore/editors",
+      "dest": "/en/explore/editors"
+    },
+    {
+      "src": "/en/explore/creators",
+      "dest": "/en/explore/creators"
+    },
+    {
+      "src": "/en/explore/characters",
+      "dest": "/en/explore/characters"
+    },
+    {
+      "src": "/en/explore/access",
+      "dest": "/en/explore/access"
+    },
+    {
+      "src": "/en/explore/about",
+      "dest": "/en/explore/about"
+    },
+    {
+      "src": "/en/explore",
+      "dest": "/en/explore"
+    },
+    {
+      "src": "/en/characters",
+      "dest": "/en/characters"
+    },
+    {
+      "src": "/en",
+      "dest": "/en"
+    },
+    {
+      "src": "/characters",
+      "dest": "/characters"
+    },
+    {
+      "src": "/api/projects",
+      "dest": "/api/projects"
+    },
+    {
+      "src": "/api/auth/verify-email",
+      "dest": "/api/auth/verify-email"
+    },
+    {
+      "src": "/api/auth/reset-password",
+      "dest": "/api/auth/reset-password"
+    },
+    {
+      "src": "/api/auth/resend-verify",
+      "dest": "/api/auth/resend-verify"
+    },
+    {
+      "src": "/api/auth/register",
+      "dest": "/api/auth/register"
+    },
+    {
+      "src": "/api/auth/refresh",
+      "dest": "/api/auth/refresh"
+    },
+    {
+      "src": "/api/auth/me",
+      "dest": "/api/auth/me"
+    },
+    {
+      "src": "/api/auth/logout",
+      "dest": "/api/auth/logout"
+    },
+    {
+      "src": "/api/auth/login",
+      "dest": "/api/auth/login"
+    },
+    {
+      "src": "/api/auth/forgot-password",
+      "dest": "/api/auth/forgot-password"
+    },
+    {
+      "src": "/__nuxt_error",
+      "dest": "/__nuxt_error"
+    },
+    {
+      "src": "/",
+      "dest": "/index"
+    },
+    {
+      "src": "/studio/projects/(?<slug>[^/]+)/books/(?<bookSlug>[^/]+)",
+      "dest": "/studio/projects/[slug]/books/[bookSlug]"
+    },
+    {
+      "src": "/studio/projects/(?<slug>[^/]+)/books",
+      "dest": "/studio/projects/[slug]/books"
+    },
+    {
+      "src": "/studio/projects/(?<slug>[^/]+)",
+      "dest": "/studio/projects/[slug]"
+    },
+    {
+      "src": "/pt/studio/projects/(?<slug>[^/]+)/books/(?<bookSlug>[^/]+)",
+      "dest": "/pt/studio/projects/[slug]/books/[bookSlug]"
+    },
+    {
+      "src": "/pt/studio/projects/(?<slug>[^/]+)/books",
+      "dest": "/pt/studio/projects/[slug]/books"
+    },
+    {
+      "src": "/pt/studio/projects/(?<slug>[^/]+)",
+      "dest": "/pt/studio/projects/[slug]"
+    },
+    {
+      "src": "/pt/projects/(?<slug>[^/]+)/timeline",
+      "dest": "/pt/projects/[slug]/timeline"
+    },
+    {
+      "src": "/pt/projects/(?<slug>[^/]+)/scenes/(?<sceneSlug>[^/]+)",
+      "dest": "/pt/projects/[slug]/scenes/[sceneSlug]"
+    },
+    {
+      "src": "/pt/projects/(?<slug>[^/]+)/scenes",
+      "dest": "/pt/projects/[slug]/scenes"
+    },
+    {
+      "src": "/pt/projects/(?<slug>[^/]+)/glossary",
+      "dest": "/pt/projects/[slug]/glossary"
+    },
+    {
+      "src": "/pt/projects/(?<slug>[^/]+)/characters/(?<characterSlug>[^/]+)",
+      "dest": "/pt/projects/[slug]/characters/[characterSlug]"
+    },
+    {
+      "src": "/pt/projects/(?<slug>[^/]+)/characters",
+      "dest": "/pt/projects/[slug]/characters"
+    },
+    {
+      "src": "/projects/(?<slug>[^/]+)/timeline",
+      "dest": "/projects/[slug]/timeline"
+    },
+    {
+      "src": "/projects/(?<slug>[^/]+)/scenes/(?<sceneSlug>[^/]+)",
+      "dest": "/projects/[slug]/scenes/[sceneSlug]"
+    },
+    {
+      "src": "/projects/(?<slug>[^/]+)/scenes",
+      "dest": "/projects/[slug]/scenes"
+    },
+    {
+      "src": "/projects/(?<slug>[^/]+)/glossary",
+      "dest": "/projects/[slug]/glossary"
+    },
+    {
+      "src": "/projects/(?<slug>[^/]+)/characters/(?<characterSlug>[^/]+)",
+      "dest": "/projects/[slug]/characters/[characterSlug]"
+    },
+    {
+      "src": "/projects/(?<slug>[^/]+)/characters",
+      "dest": "/projects/[slug]/characters"
+    },
+    {
+      "src": "/en/studio/projects/(?<slug>[^/]+)/books/(?<bookSlug>[^/]+)",
+      "dest": "/en/studio/projects/[slug]/books/[bookSlug]"
+    },
+    {
+      "src": "/en/studio/projects/(?<slug>[^/]+)/books",
+      "dest": "/en/studio/projects/[slug]/books"
+    },
+    {
+      "src": "/en/studio/projects/(?<slug>[^/]+)",
+      "dest": "/en/studio/projects/[slug]"
+    },
+    {
+      "src": "/en/projects/(?<slug>[^/]+)/timeline",
+      "dest": "/en/projects/[slug]/timeline"
+    },
+    {
+      "src": "/en/projects/(?<slug>[^/]+)/scenes/(?<sceneSlug>[^/]+)",
+      "dest": "/en/projects/[slug]/scenes/[sceneSlug]"
+    },
+    {
+      "src": "/en/projects/(?<slug>[^/]+)/scenes",
+      "dest": "/en/projects/[slug]/scenes"
+    },
+    {
+      "src": "/en/projects/(?<slug>[^/]+)/glossary",
+      "dest": "/en/projects/[slug]/glossary"
+    },
+    {
+      "src": "/en/projects/(?<slug>[^/]+)/characters/(?<characterSlug>[^/]+)",
+      "dest": "/en/projects/[slug]/characters/[characterSlug]"
+    },
+    {
+      "src": "/en/projects/(?<slug>[^/]+)/characters",
+      "dest": "/en/projects/[slug]/characters"
+    },
+    {
+      "src": "/api/projects/(?<slug>[^/]+)/restore",
+      "dest": "/api/projects/[slug]/restore"
+    },
+    {
+      "src": "/api/projects/(?<slug>[^/]+)",
+      "dest": "/api/projects/[slug]"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/scenes/restore",
+      "dest": "/api/projects/[projectSlug]/scenes/restore"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/scenes/(?<sceneSlug>[^/]+)/restore",
+      "dest": "/api/projects/[projectSlug]/scenes/[sceneSlug]/restore"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/scenes/(?<sceneSlug>[^/]+)",
+      "dest": "/api/projects/[projectSlug]/scenes/[sceneSlug]"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/scenes",
+      "dest": "/api/projects/[projectSlug]/scenes"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/characters/restore",
+      "dest": "/api/projects/[projectSlug]/characters/restore"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/characters/(?<characterSlug>[^/]+)/restore",
+      "dest": "/api/projects/[projectSlug]/characters/[characterSlug]/restore"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/characters/(?<characterSlug>[^/]+)",
+      "dest": "/api/projects/[projectSlug]/characters/[characterSlug]"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/characters",
+      "dest": "/api/projects/[projectSlug]/characters"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/chapters",
+      "dest": "/api/projects/[projectSlug]/chapters"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/books/(?<bookSlug>[^/]+)/restore",
+      "dest": "/api/projects/[projectSlug]/books/[bookSlug]/restore"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/books/(?<bookSlug>[^/]+)",
+      "dest": "/api/projects/[projectSlug]/books/[bookSlug]"
+    },
+    {
+      "src": "/api/projects/(?<projectSlug>[^/]+)/books",
+      "dest": "/api/projects/[projectSlug]/books"
+    },
+    {
+      "src": "/api/projects/(?<id>[^/]+)",
+      "dest": "/api/projects/[id]"
+    },
+    {
+      "src": "/api/_nuxt_icon/(?<collection>[^/]+)",
+      "dest": "/api/_nuxt_icon/[collection]"
+    },
+    {
+      "src": "/_i18n/(?<hash>[^/]+)/(?<locale>[^/]+)/messages.json",
+      "dest": "/_i18n/[hash]/[locale]/messages.json"
+    },
+    {
+      "src": "/_ipx/(?:.*)",
+      "dest": "/_ipx/[...]"
+    },
+    {
+      "src": "/__sitemap__/?(?<sitemap>.+)",
+      "dest": "/__sitemap__/[...sitemap]"
+    },
+    {
+      "src": "/__nuxt_island/(?:.*)",
+      "dest": "/__nuxt_island/[...]"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/__fallback"
+    }
+  ]
+}
