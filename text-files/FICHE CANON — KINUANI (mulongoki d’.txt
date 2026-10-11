@@ -9,7 +9,7 @@ Trait dominant : esprit stratégique + discipline + sens du consensus (chef “q
 
 2) Origines & formation
 
-Mère morte tôt ; élevé chez une tante pro-chrétienne.
+Mère morte onze jours après un accouchement difficile. Dans l'enfance de Kinuani et de sa sœur, ils sont d'abord élevés par l'épouse de Ne Nzongo ; après son décès, la sœur est prise en charge par Mama Kisita, qu'elle considère comme sa grand-mère, et Kinuani est envoyé au couvent. Une ancienne fiche évoquait une tante prochrétienne : identité et période non établies, à vérifier en DB, sans attribuer automatiquement ce rôle à Dobadola.
 
 Envoyé au couvent à 10 ans, structuré par tranches d’âge et disciplines :
 
@@ -352,3 +352,14 @@ pris dans un devoir,
 incapable de promettre sans mentir.
 
 Mais Mutinu ne peut pas le savoir à ce moment-là → d’où le tragique.
+ 
+## Compléments Founder du 11 octobre 2026 — lecture à rapprocher de la DB
+
+- **Couvent** : formation masculine d'élite dont le **nom institutionnel reste à retrouver** ; son dirigeant suprême est **Ne Mawungu** (et non l'ancien personnage appelé Ta Mukono). Ne pas renommer mécaniquement le couvent ou les slugs existants à partir de son nom.
+- **Corps et esprit** : Kinuani, mulongoki/milongoki en cours de formation, pratique l'arc, le bâton, les armes courtes, les acrobaties, la précision martiale et la stratégie, en plus de la culture, de l'histoire, des langues et de la médiation. Kimbembe domine l'éloquence, Bikuta la force brute ; Kinuani se distingue par l'agilité et la technique.
+- **Projet personnel initial** : être nzonzi, voyager et s'établir au bord du fleuve vers Boko/Kimpanzo ou Mayindombe, non devenir chef à Kuimba ; la crise institutionnelle précipite sa sortie du couvent.
+- **Ne Nzongo** : ancien militaire d'élite ayant servi à Mbanza Kongo, veut d'abord que Kinuani serve Kuimba avant de contribuer à la restauration du royaume sous un roi digne. Il évoque Kimbaluengele comme modèle personnel ; le rapport éventuel au personnage Ta Nkibaluengele doit être vérifié.
+- **Nianzi** : ancienne amie de Kinuani et prétendante préparée depuis plusieurs années par Kisita ; **elle reste vivante**. Kisita comptait également sur une **autre protégée**, prétendante possible de Kinuani, **décédée** ; nom et circonstances à retrouver/définir. Ne jamais présenter la mort de Nianzi comme acquise.
+- **Mariage** : le conflit Mutinu / Nianzi est aussi un conflit d'engagements familiaux. Kisita cède mais réclame au moins une année de formation féminine d'élite de Mutinu avant le mariage. La sœur de Kinuani soutient initialement Nianzi, ce qui explique son opposition durable à Mutinu.
+
+**Source et questions ouvertes** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md`. Aucune migration de DB ou de chronologie n'est implicite.
