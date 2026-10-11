@@ -78,3 +78,21 @@ Après : elle reste une gardienne des limites : justice vs vengeance.
 Kisita n’est pas une “guérisseuse magique”.
 C’est une médecin du clan, et le clan est malade : trahisons, poisons, rumeurs.
 Elle guérit, donc elle menace les menteurs.
+
+## Compléments Founder du 11 octobre 2026 — continuité affective et politique
+
+**Fonctions cumulées** : Mama Kisita demeure guérisseuse, confidente de Ne Nzongo, gardienne de savoirs et participante au sauvetage de Kinuani. Elle est aussi **initiatrice dans une institution féminine d'élite**, influence le conseil des femmes et pèse sur le choix des alliances matrimoniales.
+
+**Faute et culpabilité anciennes** : la mère de Kinuani meurt onze jours après un accouchement difficile. Kisita n'a pas porté secours à temps et a refusé aux soignants l'accès à son savoir de pharmacopée. Mama Tusikila connaît la faute ; Kinuani et sa sœur l'ignorent initialement. Kisita change avec les années et ressent une vraie culpabilité, sans que la faute soit effacée.
+
+**Transmission familiale** : Kinuani et sa sœur avaient été élevés par l'épouse de Ne Nzongo avant son décès. Kisita élève ensuite **la sœur de Kinuani**, qui la tient pour une **grand-mère**, et non une descendante de cette sœur. Lors des négociations matrimoniales, Tusikila menace de révéler le secret ; la sœur enquête, rompt affectivement avec Kisita, puis une réconciliation se construit autour du mariage de Kinuani.
+
+**Deux prétendantes distinctes** :
+- **Nianzi : vivante, décision explicite Founder du 11 octobre 2026**. Amie de Kinuani dans leur enfance, formée dans un couvent féminin, elle se croyait destinée à l'épouser. Le refus du mariage entraîne une forte déception et une tension envers sa famille. Son avenir littéraire reste ouvert.
+- **Seconde protégée, nom à déterminer : décédée**. Kisita comptait également sur elle dans le projet matrimonial de Kinuani. Sa disparition est la tragédie à conserver dans l'arc de Kisita ; aucune cause, culpabilité imputée à Kisita, date ni filiation ne sont encore fixées.
+
+**Double déception de Kisita** : son alliance espérée avec Nianzi n'aboutit pas, et une autre protégée est morte. Kisita finit par accepter Mutinu, tout en lui imposant au moins **un an de formation initiatique féminine** avant le mariage. La peur des manœuvres de Dobadola participe à son projet de protéger Kinuani et de peser sur son accession à de hautes responsabilités.
+
+**Attention aux deux réconciliations** : Kisita ↔ sœur de Kinuani autour du mariage ; Mutinu ↔ sœur de Kinuani seulement bien plus tard, après l'attentat contre Kinuani survenant après la mort de Nzongo.
+
+**Référence** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md`. Ces ajouts n'attestent pas une migration de la DB.
