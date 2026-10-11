@@ -56,7 +56,7 @@ Masque : raison, respect des traditions, “je fais pour le bien”.
 
 Arme : influence domestique et rituelle, conseil, réseaux, gestion des réputations.
 
-Point de rupture : mort de Nianzi → soupçon fulgurant puis honte ; elle s’endurcit… avant de basculer en soutien (grossesse difficile / initiation).
+Point de rupture (rectifié Founder 11/10/2026) : renoncement au mariage Nianzi–Kinuani ET mort d'une autre protégée de Kisita, prétendante également envisagée (nom, cause et date à déterminer). Nianzi reste vivante. Kisita connaît par ailleurs une profonde culpabilité ancienne au sujet de la mort de la mère de Kinuani. Elle évolue, intervient comme initiatrice féminine et sauve plus tard Kinuani avec Mutinu.
 
 NDEBEKA
 
@@ -372,3 +372,25 @@ Niveau 3 : confirmé tumbué → Mutinu avertit Kinuani ou fait bloquer immédia
 En public, Nzungani ne “rapporte” jamais.
 Il demande conseil sur un détail domestique (sel, eau, jarre, bois).
 Mutinu répond comme maîtresse de maison — et tout le monde croit que c’est banal. 
+
+---
+
+## COMPLÉMENTS FOUNDER — 11 octobre 2026 (résumés d'arcs à rapprocher de la DB)
+
+**NIANZI** — Vivante (décision Founder). Ancienne amie d'enfance de Kinuani, promise par Kisita ; formation féminine d'élite pour se préparer au mariage, espérance enthousiaste à son retour à Kuimba, désillusion lorsque le mariage est abandonné. Sa trajectoire dans les autres tomes reste ouverte.
+
+**AUTRE PROTÉGÉE DE KISITA — PERSONNAGE À NOMMER** — Autre jeune femme sur laquelle Kisita comptait pour une union avec Kinuani ; elle est morte. L'auteur garde cette tragédie sans identifier la victime à Nianzi ; date, cause, famille et circonstances à définir. Ne pas inventer de nom ou de responsabilité de Kisita.
+
+**KISITA** — Guérisseuse et initiatrice, politique matrimoniale, tutrice de la sœur de Kinuani (qui la considère comme une grand-mère). Sa faute ancienne pendant les suites de l'accouchement de la mère de Kinuani est connue de Mama Tusikila, ignorée des enfants, et source de culpabilité. Double déception liée à l'union manquée de Nianzi et au décès de son autre protégée.
+
+**KINUANI** — Enfance initiale avec sa sœur chez l'épouse de Ne Nzongo avant son décès ; formation d'élite sous l'autorité de **Ne Mawungu** (nom institutionnel du couvent à retrouver, ancien Ta Mukono à contrôler). Vise initialement le grade de nzonzi et un établissement près du fleuve ; excellence technique, martiale et diplomatique. Son destin politique contrarie ses projets.
+
+**MUTINU** — Fiancée de cœur de Kinuani ; ressent la désillusion lors de son rappel à Kuimba pour un mariage envisagé avec Nianzi. Doit suivre au moins un an de formation féminine avant son mariage avec Kinuani. Longue hostilité avec la sœur de Kinuani, apaisée seulement après l'attentat survenu après la mort de Nzongo.
+
+**TUSIKILA** — Aubergiste influente à Mfuti, alliée des mabembe de Nzongo, organisatrice du banquet à la **fin des compétitions**. Soutient la possibilité matrimoniale Mutinu–Kinuani et affronte Kisita dans les négociations.
+
+**NE NZONGO** — Ancien militaire d'élite ayant servi à Mbanza Kongo ; veut que Kinuani serve d'abord Kuimba, puis le Kongo sous un roi digne. Se réfère à Kimbaluengele, ancien qu'il a connu (ne pas le fusionner sans preuve avec Ta Nkibaluengele de certaines fiches).
+
+**DOBADOLA** — Ennemi politique de l'ordre de Nzongo. Son éventuelle orientation prochrétienne par calcul est **une hypothèse** du Founder, pas un fait canonique ni une identification prouvée de la tante prochrétienne du vieux résumé.
+
+**Document de consolidation des sources, erreurs corrigées et champs ouverts** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md`.
