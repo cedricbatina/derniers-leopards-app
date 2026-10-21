@@ -310,3 +310,34 @@ Dans cette même grande période précédant la dot, **un notable meurt dans un 
 7. Datation civile et répartition **tomes / points de vue** restent à rapprocher de la DB Sonekeno avant toute réécriture de scène.
 
 **Source historique consultée pour le seul terme de transport** : étude sur les formes de portage `kipoyi / tipoye` dans les sociétés kongo, *Kanian Tere* (2019), et travaux de lexicographie relatifs à « tipoye » ; **la représentation à quatre porteurs est l'intention romanesque du Founder et non une attestation exclusive**.
+
+
+## L. Complément Founder — arbitrage du domicile conjugal Kuimba/Mfuti/autre rive (22 octobre 2026)
+
+**Décision narrative** : ce complément reprend l'arbitrage de résidence lors des **négociations matrimoniales Kinuani–Mutinu**. À conserver comme événement transversal à la saga, **sans attribution automatique au tome 1** ni modification directe de Sonekeno.
+
+### Trois options de résidence, trois intérêts distincts
+
+1. **Projet personnel de Kinuani : vivre ailleurs, sur l'autre rive du fleuve.** Jeune mulongoki attiré par les voyages et la carrière de nzonzi, il souhaite s'établir vers **Boko, Kimpanzu/Kimpanzo, ou les environs faisant face au Mayindombe**, sur une rive que le Founder situe aujourd'hui dans la **République du Congo**. **Toponymes, orthographes et localisation relative non définitifs**, à confronter aux fiches et à une carte historique avant localisation précise. Son projet n'est pas de prendre immédiatement la tête de Kuimba ; il veut voyager et pourra peut-être déménager plus tard.
+2. **Exigence de Ne Nzongo : maintenir Kinuani à Kuimba.** Le patriarche lui exprime **sans ambiguïté** qu'il a besoin de lui sur place pour la formation finale, l'administration, les projets de succession et la défense du pays. La **primauté du clan et l'obéissance aux anciens**, telles que Kinuani les comprend, font qu'il se soumet à cette décision, malgré une réelle déception. Ce n'est pas un changement spontané de son rêve d'établissement de l'autre côté du fleuve.
+3. **Demande initiale de la famille de Mutinu : que le couple s'installe à Mfuti.** Ce souhait fait partie **des conditions discutées entre lignages**. Il n'a pas été retenu ; il n'annule ni les intérêts ni la capacité de négociation de la parenté de Mutinu.
+
+**Compromis arrêté** : le futur foyer de **Kinuani et Mutinu est établi à Kuimba**. Kinuani y développe donc **ses champs** et ses moyens de subsistance (et non des « chants ») en attendant le mariage. La joie d'épouser **Mutinu, plutôt que Nianzi**, l'aide à accepter ce renoncement géographique : pour lui, vivre avec Mutinu est finalement plus important que résider à l'endroit imaginé. **Nianzi reste vivante** et la rupture du projet la concernant demeure un véritable conflit familial. L'obligation initiale de rester à Kuimba n'interdit pas les voyages professionnels de Kinuani, ni un déménagement éventuel dans un tome ultérieur.
+
+### Installation de Mutinu et accompagnement familial
+
+À la suite des négociations, **Mutinu quitte Mfuti pour rejoindre son mari à Kuimba** au moment prévu pour leur installation conjugale. **Sa famille décide de l'y faire accompagner par plusieurs proches** afin qu'elle bénéficie d'un **soutien affectif, pratique et familial** dans un pays et un entourage nouveau. Parmi eux, **la sœur aînée de Mutinu, divorcée**. Leurs noms, le nombre d'accompagnants, les rôles spécifiques, les liens de dépendance et la durée de leur séjour à Kuimba **ne sont pas fixés**. Ne pas présenter ces personnes automatiquement comme domestiques ou servantes.
+
+**Contrôle d'identité** : les notes de Mfuti mentionnent déjà **une sœur de Mutinu à la boutique** (scène du marché, note BATINA OS §§16–17 et 40–41). La présente décision ajoute une **sœur aînée divorcée qui accompagne Mutinu après le mariage**. **Ne pas fusionner automatiquement les deux mentions** avant vérification dans les personnages et les relations Sonekeno, et ne pas inventer un nom.
+
+**Trois personnages féminins à maintenir distincts** : (a) **sœur aînée divorcée de Mutinu** (accompagnatrice, identité à retrouver) ; (b) **sœur de Kinuani** (d'abord opposée à Mutinu, prénom non retrouvé) ; (c) **Nianzi** (ancienne promise, **vivante**, et non sœur de Kinuani).
+
+### Placement et continuité
+
+- **Pendant les négociations** : Kinuani expose son projet de départ ; Nzongo impose son maintien à Kuimba ; la parenté de Mutinu tente de faire valoir Mfuti ; la résidence à Kuimba est retenue.
+- **Entre négociations et mariage** : Kinuani prépare ses champs à **Kuimba** avec l'aide de ses compagnons ; Mutinu accomplit la formation initiatique prénuptiale d'au moins un an, **sans déménager prématurément à Kuimba** du seul fait que la résidence est convenue.
+- **Au mariage / à l'installation du foyer** : Mutinu rejoint **Kuimba**, accompagnée d'une petite délégation familiale où figure sa sœur aînée divorcée. L'ordre exact entre cérémonies, départ, arrivée et installation doit être rapproché des scènes existantes.
+- **Après l'installation** : formation du couple, tensions avec Nianzi et la sœur de Kinuani ; présence de la parenté de Mutinu susceptible de soutenir le couple, **sans interactions inventées**.
+- **Statut** : décisions d'auteur sur les positions et le résultat matrimonial ; itinéraires et identité de l'accompagnatrice encore à documenter. Répartir entre tomes par POV, notamment perspectives de Mutinu envisageables dans **`Mama i Mama` (tome 3)**.
+
+**Sources existantes à rapprocher** : `text-files/FICHE CANON — KINUANI (mulongoki d’.txt`, `text-files/fiches personnages resume.txt`, `text-files/LES DERNIERS LÉOPARDS — Chronologie.txt` et `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md`. Pas de migration de la DB par ce seul complément.
