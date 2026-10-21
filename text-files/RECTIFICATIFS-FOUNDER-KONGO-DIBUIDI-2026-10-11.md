@@ -160,3 +160,43 @@ Cette tension intérieure doit rester visible **avant** sa maturation comme méd
 **Scène du retour à Kuimba** : au matin du retour de Kinuani rappelé du couvent, **Ne Nzongo balaie longuement sa concession**, debout, réalisant parfois des **mouvements d'arts martiaux avec le balai comme bâton**. Le patriarche a auparavant couru, nagé et pratiqué d'autres exercices physiques matinaux ; sa routine a évolué. Kinuani l'a connu **jusqu'à ses sept ans environ** comme un homme inflexible sur la morale et les principes, exigeant sur la discipline, détestant l'imprudence, la sottise et la négligence. Ne pas inventer le dialogue de leurs retrouvailles.
 
 **Liens de preuve / suite** : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` §47 et chronologie du dépôt. Le **tome de rattachement** reste NON AFFECTÉ par scène. Vérification des dates/âges/identifiants dans Sonekeno toujours nécessaire.
+
+
+## I. Complément Founder — départ organisé de Mawungu et veille de Nzongo (22 octobre 2026)
+
+**Statut** : directives d'auteur sur la saga, à rapprocher des dossiers de couvent et de Ne Nzongo, des scènes et de la DB Sonekeno. **Nouveau complément prioritaire**, sans arbitrage chronologique du décès de Mawungu.
+
+### 1. Ne Mawungu ne part pas seul
+
+À la suite de la crise de l'institution, **Ne Mawungu quitte le couvent avec une importante suite organisée de fidèles**, décrite oralement comme une « armée de fidèles ». Ne pas en déduire **une armée militaire en campagne**, des effectifs ou un combat : la composition martiale éventuelle n'est pas arrêtée.
+
+Parmi les départs ou démissions, l'auteur cite des **tumwa / touma**, des **milongi (enseignants)** et des **mfumu**, ainsi que d'autres responsables attachés à la discipline antérieure. **Préciser leur place dans la hiérarchie réelle avant d'attribuer des grades uniformes ou des fonctions figées.** Leur départ fragilise le corps enseignant et la chaîne de commandement, et explique que **de nombreux élèves quittent aussi l'établissement**, dont Kimbembe et Kiesa kia Bikuta, déjà cités.
+
+**Transmission protégée** : les fidèles **ferment / réservent l'accès à certains enseignements et savoirs** précédemment dispensés afin de les **conserver pour une réouverture et une transmission ultérieures**. Ne pas confondre cette **mise en réserve délibérée** avec la **destruction ou dispersion d'artefacts** constatée après la mort de Mawungu : ces événements ont des intentions et temporalités différentes.
+
+**Continuité des liens** : la hiérarchie et les obligations de l'institution demeurent reconnues **par ceux qui en sont sortis** ; leur départ n'efface pas la discipline, la loyauté ni la structure relationnelle forgées pendant la formation. La forme opérationnelle de l'organisation en dehors du couvent reste à élaborer ; ne pas inventer une organisation secrète nouvelle sans accord Founder.
+
+### 2. Ne Nzongo attend le retour de Kinuani et des fils du clan
+
+**Scène à l'aube à Kuimba, avant l'arrivée espérée des jeunes** : Ne Nzongo balaie longuement sa concession, parfois avec des mouvements de bâton. Il sait que **les jeunes qu'il a fait rappeler devraient bientôt arriver** et réfléchit aux nouvelles reçues au sujet de Kinuani, considéré comme prometteur. **Il ne faut pas raconter d'office que Kinuani se trouve déjà devant lui pendant cette scène** : l'image se déroule dans son attente.
+
+**Dernière visite / dernière rencontre** : l'auteur se souvient **avec incertitude** que **Kinuani serait revenu à Kuimba vers ses treize ans**, et que **Nzongo ne l'aurait pas revu depuis environ quatre ans**, ce qui s'accorde avec les 17 ans de Kinuani lors des fêtes de Mfuti, sous réserve du placement exact du rappel. **Statut : hypothèse mémorielle à vérifier**, pas nouvelle date canonique. **Différencier** le souvenir d'enfance de Kinuani « jusqu'à ses sept ans » de la **dernière rencontre possible à treize ans** ; ce ne sont pas nécessairement des récits exclusifs.
+
+Ne Nzongo prévoit de **poursuivre à Kuimba la formation interrompue**, sur place et sous l'autorité des anciens, pour en faire des **responsables, gestionnaires et défenseurs** du pays, en anticipation de la guerre qu'il croit inévitable. Il redoute particulièrement les doctrines déjà assimilées par ces jeunes : **selon sa propre conviction**, une idée installée durablement dans un esprit est difficile à déraciner, et une adhésion forte au christianisme ou aux orientations du couvent remanié serait, pour lui, l'échec de longues années d'investissement dans l'avenir du clan. Ceci **n'implique pas** que Kinuani et ses cousins ont effectivement été « contaminés » ; le terme décrit la **peur subjective** et le vocabulaire partisan de Nzongo, pas le point de vue de l'auteur ni une propriété de la religion.
+
+Nzongo perçoit **l'effacement progressif de son monde** : les anciens disparaissent avec l'âge, les héritiers lui semblent moins formés, plus souples, et il s'estime personnellement comptable de la bonne tenue de Kuimba et, plus largement, du Kongo.
+
+### 3. Aube, réveil des dormeurs et contraste entre hommes et femmes
+
+Les **premiers rayons du soleil** commencent à paraître. Ne Nzongo constate que trop d'hommes du clan **dorment encore**. Il appelle quelques personnes **déjà réveillées et présentes près de sa concession**, se munit d'un **seau d'eau** et va **asperger les dormeurs**. La séquence doit montrer son exigence pratique, sa sévérité face à l'indiscipline, et le lien entre son inquiétude collective et les gestes ordinaires du matin. Les réactions individuelles, paroles et personnes aspergées restent à inventer lors de la mise en scène validée.
+
+**Contraste voulu par l'auteur** : Ne Nzongo se montre très exigeant, parfois sévère, envers les **hommes** de son clan, mais **attentionné avec les femmes** de Kuimba, également **par calcul spirituel**. Dans sa conception de la filiation et des renaissances, sa **future réincarnation** passerait par des **femmes de la lignée maternelle** qui transmettent l'héritage biologique maternel ; l'auteur fait explicitement référence à **l'ADN mitochondrial**. **Distinction stricte** : la transmission de l'ADN mitochondrial par la mère est un mécanisme biologique ; **aucun mécanisme scientifique ne démontre qu'il conditionne la réincarnation**. Lier ces idées **dans la pensée, le système de croyances et les motivations de Nzongo**, pas comme un fait objectif ou une validation biologique de la réincarnation. Éviter de généraliser ce calcul à toutes les traditions kongo sans recherche ethnographique.
+
+### 4. Statuts de continuité et tâches
+
+- **Confirmé comme intention d'auteur** : Mawungu part avec un groupe important de fidèles et de responsables ; mise en réserve de certains savoirs pour les transmettre plus tard ; hiérarchie toujours respectée ; projet de finir la formation à Kuimba ; scène de l'attente, du balai et du seau d'eau ; différence d'attitude de Nzongo envers hommes/femmes avec motif spirituel.
+- **À vérifier** : intitulés/prérogatives des tumwa, milongi et mfumu, degré d'organisation extérieure des fidèles, Kinuani de retour à Kuimba vers treize ans, quatre ans sans revoir Nzongo, noms des dormeurs, vocabulaire rituel et historique lié aux croyances.
+- **À ne pas confondre** : savoirs volontairement réservés au départ et objets profanés après la mort ; attente des jeunes et arrivée effective ; conviction de Nzongo et réalité de l'adhésion religieuse des jeunes ; mère biologique/ADN mitochondrial et théorie de réincarnation.
+- **Placement en tomes** : NON AFFECTÉ en attendant matrice événements × POV × tome, dont `Mama i Mama`.
+
+**Référence créative approfondie** : `cedricbatina/batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` §48.
