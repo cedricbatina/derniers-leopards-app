@@ -1,13 +1,13 @@
-LES DERNIERS LÉOPARDS — Chronologie scénique (version stable)
+LES DERNIERS LÉOPARDS — Chronologie scénique (repères de travail ; rectificatifs Founder du 22 octobre 2026 prévalent sur les dates anciennes)
 Repères d’âge (cohérence)
 
-Kinuani : né ~1620
+Kinuani : année de naissance **à recalculer** d'après les âges Founder. Le jalon ancien « ~1620 » ne peut plus être repris sans vérification.
 
-Mutinu : née ~1622 (≈ 80 ans en 1702)
+Mutinu : année de naissance **à recalculer** d'après les âges Founder. Ancien « ~1622 / ~80 ans en 1702 » conservé comme repère documentaire, non harmonisé.
 
-Rencontre Mpika : 1638 (Kinuani 18, Mutinu 16)
+Festivités de Mfuti / première rencontre : **Kinuani 17 ans, Mutinu 15 ans** (nouvelle décision Founder) ; **1638 est l'année de l'ancienne trame, à revalider**.
 
-Longo (mariage) : 1641 (Kinuani 21, Mutinu 19)
+Longo (mariage) : **Kinuani 19 ans, Mutinu 17 ans**, exactement **deux ans après les fêtes de Mfuti**. **1641 est un ancien millésime à réconcilier** avec les âges ; ne pas conserver simultanément 1638/1641 comme dates validées.
 
 ÉPOQUE 0 — 1702 (CADRE DU ROMAN) — Mbanza Kongo renaît
 
@@ -82,7 +82,7 @@ techniques rares (dont certains pièges réservés à l’élite).
 
 Sorties sélectionnées : escortes, missions, maintien de l’ordre, ou délégation commerciale au Mpika.
 
-ÉPOQUE 3 — 1638 (jour de Mpika) — Rencontre Kinuani ↔ Mutinu
+ÉPOQUE 3 — Jour de Mpika / festivités de Mfuti — Kinuani 17 ans, Mutinu 15 ans (année civile 1638 à vérifier)
 
 Lieu : marché, jour de Mpika (jour du marché, pas “nom du marché”)
 
@@ -104,7 +104,7 @@ Elle lui parle et le conduit chez Maa Tusikila (qui était appelée “Ma Ndala�
 
 ➡️ Tusikila comprend tout de suite l’enjeu et ouvre en secret la voie des négociations de dot (sans exposer Kinuani frontalement : c’est le clan qui gère).
 
-ÉPOQUE 4 — 1638 → 1640 — Fréquentations + dot en coulisses (≈ 2 ans)
+ÉPOQUE 4 — Les deux années qui suivent Mfuti : fréquentations + dot en coulisses (anciens millésimes à contrôler)
 
 Lieux : zones de marché / réseaux familiaux / concessions (pas Kuimba pour Mutinu à cette époque)
 
@@ -130,13 +130,13 @@ influence indirecte pour rendre Ta Mualu plus favorable.
 
 Mutinu reçoit une éducation “normale” de fille dans sa lignée, puis accélération quand on sait que le mariage devient probable (apprendre à tenir maison/homme selon normes sociales).
 
-ÉPOQUE 5 — vers 1640 (datation ancienne à contrôler) — Défaite institutionnelle de Ne Mawungu → rappel des jeunes du clan
+ÉPOQUE 5 — Environ un an après Mfuti : retrait de Ne Mawungu ; 2 à 3 mois après : rappel des jeunes du clan (dates absolues anciennes à vérifier)
 
 Lieu : Kuimba + routes
 
-Ne Mawungu, chef suprême du couvent, est défait dans une lutte institutionnelle. Il se retire dans son fief/village natal ; une réorganisation de l'institution reste un objectif pour les anciens.
+Ne Mawungu, chef suprême du couvent, est défait ou contraint de démissionner dans la lutte institutionnelle **environ un an après Mfuti**. Il se retire dans son fief/village natal. Après son départ, le couvent se vide : beaucoup de milongoki le quittent, **dont Kimbembe et Kiesa kia Bikuta**. Une réorganisation de l'institution demeure l'objectif de certains anciens.
 
-Ne Nzongo fait rappeler par ses messagers Kinuani et les autres jeunes « fils » du clan Kuimba, dont ses cousins, avant la fin de leur formation. La liste nominative ancienne (Matondo, Nsimba, Nzuzi) doit être vérifiée en DB. Les jeunes ignorent d'abord pourquoi ils doivent partir.
+**Deux à trois mois après le retrait de Ne Mawungu**, Ne Nzongo fait rappeler par ses messagers Kinuani et les autres jeunes « fils » du clan Kuimba, dont ses cousins, **avant la fin de leur formation**. La liste nominative ancienne (Matondo, Nsimba, Nzuzi) doit être vérifiée en DB. Les jeunes ignorent d'abord pourquoi ils doivent partir ; le couvent perd une part considérable de ses effectifs.
 
 Retour :
 
@@ -144,9 +144,9 @@ jamais seuls, escortes par 12 hommes, relais de village en village, parfois bivo
 
 la nouvelle circule vite partout.
 
-Scène Kuimba (1640, pivot d’ouverture “passé”)
+Scène Kuimba — matin du retour de Kinuani rappelé par Ne Nzongo (année civile à harmoniser)
 
-Nzongo à l’aube : routine complète (et surtout : Kuimba est déjà en tension, paix seulement “en apparence”)
+À l'aube, **Ne Nzongo balaie longuement une grande partie de sa concession**, debout, se servant parfois du **balai comme d'un bâton d'arts martiaux** pour exécuter des mouvements. Cette discipline matinale a évolué : autrefois il faisait aussi des exercices physiques, du footing et de la nage ; **ne pas affirmer qu'il a pratiqué exactement la même routine toute sa vie**. Kinuani se souvient de Nzongo tel qu'il l'avait connu jusqu'à ses sept ans : rigoureux, sévère sur les principes et la morale, intolérant à la bêtise et à la négligence. Kuimba est déjà sous tension.
 
 jugements (lusanga/zinsanga),
 
@@ -158,7 +158,7 @@ contes/rewards vers 16h sous manguier (ta nawa),
 
 assistants (≈18), présence d’alliés (dont Ta Matayi), conseils (structure matriarcale : mamans décideuses, hommes incarnent publiquement).
 
-ÉPOQUE 6 — 1641 — Longo (mariage) en deux cérémonies
+ÉPOQUE 6 — Longo (mariage) DEUX ANS APRÈS MFUTI, Kinuani 19 ans / Mutinu 17 ans (ancien repère « 1641 » non harmonisé)
 
 Lieu : territoires des familles de Mutinu
 
@@ -210,15 +210,15 @@ Effet : renforce la réputation du pays, et durcit les lignes.
 
 Lieu : village natal / fief de Ne Mawungu (Luwozi dans les notes anciennes : à confirmer)
 
-Ne Mawungu meurt peu après sa défaite institutionnelle et son retrait dans son village natal. La date relative à l'union Kinuani–Mutinu reste à fixer par l'auteur.
+Ne Mawungu meurt après sa défaite institutionnelle et son retrait dans son village natal, dans une période relativement proche, mais **l'intervalle exact et sa position par rapport au mariage de Kinuani et Mutinu restent ouverts**.
 
-Ne Nzongo participe aux funérailles / à l'événement suivant le décès. Kinuani et les siens découvrent une perte culturelle concrète :
+Ne Nzongo participe aux funérailles / à l'événement suivant le décès, avec Kinuani et son entourage. **À l'approche, ils aperçoivent des fumées de loin : des objets de Ne Mawungu brûlent.** La perte culturelle devient concrète :
 
-anciens récits de savoirs brûlés par une branche familiale anti-traditionnaliste : **donnée d'archive à vérifier**, non reconfirmée dans la dictée récente ;
+**objets et insignes**, notamment des sceptres et des pièces de pouvoir/commandement, brûlés ; le nom entendu « mvoala » doit être vérifié dans le vocabulaire canonique, de même que l'identité des destructeurs ;
 
-artefacts de Ne Mawungu dispersés et proposés à des marchands ; certains objets sont déjà chez des commerçants blancs/étrangers. Les interventions de Ne Nzongo et des siens sont à préciser, sans inventer d'arrestations.
+d'autres objets **vendus ou emportés** ; des marchands **noirs et blancs** sont croisés avec des instruments que les élèves considèrent comme matériellement, moralement et spirituellement précieux. Insignes, symboles de commandement et savoirs consignés par Mawungu se trouvent dispersés et appropriés par des personnes **non initiées**. Les modalités des interventions pour s'y opposer restent à préciser.
 
-Impact : Kinuani commence à comprendre les inquiétudes de Ne Nzongo et Ne Mawungu, qu'il jugeait jadis trop radicaux. La perte tangible de l'héritage déclenche un infléchissement progressif, non une conversion immédiate.
+Impact : Kinuani, dont l'éducation inculque le respect de la science et de l'érudition, constate que le travail d'une vie de Ne Mawungu — savoirs utiles aux futurs élèves et soldats d'élite ainsi qu'au Kongo — est détruit ou livré aux non-initiés. Il commence à comprendre les inquiétudes de Ne Nzongo et Ne Mawungu, qu'il jugeait auparavant excessives. Infléchissement progressif, non conversion immédiate.
 
 ÉPOQUE 9 — 1648 → 1650 — Mort de Nganga Mungua → Exil au Mayombe (2 ans)
 
@@ -540,3 +540,10 @@ Pers. : Kinuani, Mutinu, Prince Vita Kanga, Roi Garcia II
 - **Ne Nzongo** rappelle avant la fin de formation les fils de Kuimba (sens clanique). Il assiste à l'événement consécutif à la mort de Mawungu ; le groupe découvre des artefacts disséminés auprès de commerçants, dont des Blancs. Kinuani revoit son jugement sur l'inquiétude des anciens.
 - **Toponymie et datation** : Luwozi et 1644/1645 figuraient dans une version antérieure ; contrôles requis. Ne pas fixer l'épisode à un livre/tome sans inventaire des POV.
 - Source développée : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` §46.
+
+
+## Rectificatif des âges, de la démission et de la scène du balai — Founder 22 octobre 2026
+
+**Priorité** : Mfuti **17/15 ans**, mariage **19/17 ans**, soit **deux années**, et non les anciennes combinaisons 18/16 puis 21/19 sur trois ans. Les années civiles 1638 et 1641 ne peuvent **pas** rester conjointement validées ; conserver les repères d'archives jusqu'à réconciliation avec Sonekeno. **Environ un an après Mfuti**, défaite/retrait de Ne Mawungu ; **deux à trois mois après**, rappel de Kinuani et des cousins de Kuimba. Kimbembe, Bikuta et beaucoup d'étudiants quittent aussi une institution qui se vide. **Funérailles** : fumée visible au loin, insignes/sceptres et autres objets brûlés, d'autres vendus à des marchands noirs ou blancs ; atteinte à un patrimoine de savoirs réservé aux initiés. **Ordre du décès de Mawungu par rapport au mariage** : non établi. **Au retour matinal à Kuimba**, Ne Nzongo balaie sa concession et pratique avec le balai quelques mouvements de bâton ; Kinuani retrouve un aîné qu'il a toujours connu jusqu'à sept ans pour sa rigueur, sa discipline et sa sévérité morale. L'ancienne scène chronologique de 1640 doit être rattachée à ce souvenir, pas figée par la seule date ancienne.
+
+Source : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` (nouvelle section 47) ; `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` (section H).
