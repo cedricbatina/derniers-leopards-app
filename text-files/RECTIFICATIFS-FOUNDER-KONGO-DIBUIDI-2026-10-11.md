@@ -66,3 +66,48 @@
 - Lieu, calendrier et suites des affrontements après le mariage : **à structurer à partir des scènes existantes**, non à inventer.
 
 **Note d'autorité** : ce complément confirme des intentions d'auteur et complète les fiches existantes ; il n'atteste aucune écriture directe en DB Sonekeno.
+
+
+## E. Complément Founder — portée inter-tomes et crise des idées (22 octobre 2026)
+
+### 1. Périmètre **saga**, pas seulement tome 1
+
+Décision expresse : les inspirations consignées dans ce registre **n'appartiennent pas toutes automatiquement à `Kongo Dibuidi` (tome 1)**. Une même période de la vie des personnages peut être racontée, reprise sous un autre point de vue ou développée dans un autre volume. **Avant toute création de scène, renseigner `événement historique interne`, `point de vue`, `tome candidat`, `position chronologique` et `source` ; laisser le tome `NON AFFECTÉ` quand ce n'est pas décidé.**
+
+**Tomes mentionnés dans `text-files/journal de dev 04-02-2026.txt`** :
+- tome 1 : `Kongo Dibuidi / La Désolation` ;
+- tome 2 : `Kongo dia Mpa` ;
+- tome 3 : `Mama i Mama — La culture d’une reine`. Le Founder l'évoque également oralement comme « comment devenir une reine » ; **ne pas changer le titre archivé sans arbitrage**. Ce volume est centré sur la vie de **Mutinu**.
+
+**Affectation éditoriale à examiner, NON validée scène par scène** : le vécu intime de Mutinu, sa formation initiatique, sa relation conjugale avec Kinuani, les rivalités avec Nianzi et la sœur de Kinuani, sa conduite du foyer et ses responsabilités pourraient être amplifiés ou portés par le tome 3. Les événements collectifs et politiques du tome 1 peuvent constituer les mêmes repères chronologiques sous d'autres perspectives. Éviter de dupliquer mécaniquement les scènes ou de faire du tome 1 un réceptacle de toutes les notes récentes.
+
+### 2. Contexte politique et religieux **tel que voulu par l'auteur**
+
+Le Kongo représenté dans cette phase de la saga est profondément divisé entre **défenseurs des traditions / du bukongo**, groupes **prochrétiens**, et acteurs ou familles traversés par des intérêts et convictions concurrents. Cette polarisation déchire villages, écoles, clans et familles. Les affrontements peuvent opposer des militants de l'un ou l'autre camp, sans que **tout chrétien ou tout traditionnaliste** soit narrativement assimilé à un agresseur.
+
+L'auteur décrit **débats publics et controverses** : aux couvents, les étudiants et les longi/enseignants disputent vivement de l'avenir du royaume, de l'éducation et des modèles religieux ; dans les villages, au cœur de la communauté et autour de feux, habitants, voyageurs, nzonzi/griots et orateurs viennent transmettre des nouvelles, débattre et persuader. Manifestations, hostilités entre communautés, familles divisées, attaques et **déplacements de réfugiés** font partie de la toile de fond à répartir dans la saga.
+
+**Précaution documentaire** : ce qui précède est **un cadre de fiction historique posé par l'auteur**, et non un constat historiographique déjà sourcé. Vérifier séparément les périodes, les pratiques de débat, les formes de christianisme kongo, la violence interne et les migrations forcées auprès de sources historiques adéquates avant toute note prétendant attester les faits réels.
+
+### 3. Vision de **Ne Nzongo** (parole/pensée du personnage, pas vérité objective)
+
+Ne Nzongo se représente une **érosion générationnelle** des valeurs qu'il souhaite préserver. Il estime **être lui-même déjà plus « souple » que Kibaluengele**, ancien qu'il a connu et qu'il prend en modèle ; il juge les jeunes de son temps encore plus éloignés de l'exigence ancestrale et redoute une disparition progressive des usages et des savoirs. Cette inquiétude explique sa discipline, sa politique de transmission et son projet pour Kinuani.
+
+Il **est convaincu qu'une guerre est inévitable**, qu'elle sera décisive pour chasser l'influence de ce qu'il appelle « la philosophie des nouveaux » et restaurer le Kongo. C'est **la conviction personnelle de Nzongo**, non un diagnostic neutre du récit ni une justification générale des violences confessionnelles. Le sens exact de cette expression et les forces politiques visées devront être précisés en scène.
+
+**Compatibilité documentaire à contrôler** : une ancienne fiche (`FICHE CANON — TA MFUILA (ex-makesa.txt`) contient plusieurs hypothèses puis une correction sur `Ta Nkibaluengele` comme Ancien unique. Le prénom rapporté oralement `Kibaluengele` peut viser cette figure, **mais le rapprochement exact et la généalogie doivent être confirmés en consultant les données personnage/parenté** ; ne pas créer arbitrairement deux anciens ni les fusionner sans preuve.
+
+### 4. **Kinuani** face aux idéologies contradictoires
+
+Au début de son parcours, Kinuani **n'a pas encore choisi une doctrine politique définitive**. Les disputes au couvent, entre étudiants mais aussi maîtres et enseignants, les nouvelles venues du territoire, les fractures entre clans, les attaques et la souffrance des déplacés nourrissent ses interrogations. Il est partagé entre plusieurs conceptions de l'avenir du Kongo et plusieurs stratégies pour y parvenir.
+
+Cette tension intérieure doit rester visible **avant** sa maturation comme médiateur et responsable. Il peut écouter, discuter, reconnaître la valeur d'arguments opposés et éprouver les conséquences humaines de la radicalisation. **Ne pas écrire rétrospectivement le jeune Kinuani comme simple porte-parole déjà convaincu de Nzongo.**
+
+### 5. Éléments à placer plus tard / arbitrages limités
+
+- Les scènes de conseils, feux de village, controverses de couvent, manifestations, attaques réciproques et arrivées de réfugiés : **matière scénique à indexer**, pas scènes créées ni attribuées à un volume.
+- Les perspectives de Mutinu pendant ces crises, son apprentissage d'autorité et ses relations avec Nianzi et la sœur de Kinuani : **tome 3 candidat**, pas assignation automatique.
+- Établir une liste de **points de vue contradictoires** (Nzongo, jeune Kinuani, maîtres divergents, femmes, voyageurs, familles déplacées, factions chrétiennes et traditionnelles) à partir du corpus existant ; éviter les personnages-manifestes unidimensionnels.
+- Dates, territoires précis, interlocuteurs, débats et événements historiques réels : à vérifier ; ne pas inventer de manifestations ponctuelles ou de massacres datés pour combler le canevas.
+
+**Action documentaire demandée** : rapprocher ce complément des fiches Kinuani/Nzongo, de la chronologie de saga et des livres réellement présents dans la DB Sonekeno ; conserver `NON AFFECTÉ` sur les scènes sans volume confirmé.
