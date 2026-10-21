@@ -111,3 +111,18 @@ Cette tension intérieure doit rester visible **avant** sa maturation comme méd
 - Dates, territoires précis, interlocuteurs, débats et événements historiques réels : à vérifier ; ne pas inventer de manifestations ponctuelles ou de massacres datés pour combler le canevas.
 
 **Action documentaire demandée** : rapprocher ce complément des fiches Kinuani/Nzongo, de la chronologie de saga et des livres réellement présents dans la DB Sonekeno ; conserver `NON AFFECTÉ` sur les scènes sans volume confirmé.
+
+
+## F. Séjour à Mfuti — festivités et délégation politique (Founder, octobre 2026)
+
+**Portée** : matériau inter-tomes, scènes à rattacher au corpus et à la DB existants, tome candidat **NON AFFECTÉ**. Détail dans `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` § 45.
+
+**Participation inédite** : le couvent d'élite dirigé par **Ne Mawungu** participe **pour la première fois** à ces rencontres publiques. Des **émissaires de Mbanza Kongo**, par pression et tractations politiques, ont exigé une délégation ; Mawungu hésitait à exposer publiquement des connaissances et pratiques réservées à son institution. Le **nom du couvent** ne se confond pas avec celui de son chef. Kinuani est retenu au dernier moment pour remplacer un candidat blessé.
+
+**Vie des festivités** : Mfuti et ses alentours connaissent une forte affluence durant les jeux, tournois, spectacles musicaux et narratifs, récits de nzonzi/griots/historiens, luttes, boxe et démonstrations martiales. « Boxe kongo » et « boxe pharaon » sont des **termes d'inspiration de l'auteur à vérifier**, non une attestation ethnographique.
+
+**Rapprochement** : première rencontre Kinuani–Mutinu au premier jour ; seconde rencontre au **quatrième jour** ; puis nouvelles retrouvailles pendant les temps libres, souvent le soir lors des manifestations. Ils parlent, rient, s'attachent peu à peu et restent socialement « frère » et « sœur ». **Okobo** le remarque et s'interroge mais hésite à provoquer Kinuani, jeune soldat d'élite accompagné. Le banquet familial du début du séjour **n'est pas** la grande réception de **fin des compétitions** préparée par Tusikila.
+
+**Kiesa kia Bikuta** : fort, fidèle, réfléchi mais moins diplomate que Kinuani, qui tente de temporiser avant l'affrontement. **Illustrer leur contraste plus tard**, dans les missions d'escorte judiciaire et de pacification, **pas par une bagarre inventée à Mfuti**.
+
+**À rapprocher** : ancien récit de Ta Mukono, cause politique de la convocation, détails des émissaires, personnages et calendrier des spectacles, positionnement en tome 1 ou tome 3 Mutinu. Ne pas effectuer d'import SQL sur ces seules notes.
