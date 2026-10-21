@@ -514,3 +514,19 @@ Pers. : Kinuani, Mutinu, Prince Vita Kanga, Roi Garcia II
 📍 1643 — Mapasa (jumeaux Nsimba & Nzuzi)
 📍 1648 — Lunungu (Victoire)
 //
+
+## Annexes éditoriales — contexte transversal et attribution des scènes (Founder, 22 octobre 2026)
+
+**Statut** : repères transversaux non datés précisément ; ce complément ne modifie aucun des événements chronologiques déjà numérotés. **Ne pas confondre date diégétique et tome de publication**.
+
+**Découpage provisoire déjà connu** : tome 1 `Kongo Dibuidi`, tome 2 `Kongo dia Mpa`, tome 3 `Mama i Mama — La culture d’une reine` (Mutinu), selon `text-files/journal de dev 04-02-2026.txt`. « Comment devenir une reine » est une description orale du thème du tome 3, non un renommage confirmé.
+
+**Toile de fond récurrente** : divisions des familles et des clans entre traditions du bukongo et courants prochrétiens, débats d'étudiants et de maîtres dans les couvents, rassemblements et disputations autour des feux ou au centre des villages avec voyageurs/nzonzi, manifestations, violences réciproques entre factions, attaques de villages et réfugiés. **À traiter comme propositions du monde narratif de l'auteur, pas comme faits historiques validés en bloc**.
+
+**Nzongo (point de vue)** : se trouve déjà « plus souple » que Kibaluengele, qu'il connut ; perçoit les générations suivantes comme encore moins rigoureuses, redoute l'effacement culturel et croit une guerre nécessaire/inévitable pour écarter les influences nouvelles. **Croyance et justification politiques propres à Nzongo**, non jugement objectif du narrateur.
+
+**Kinuani (point de vue)** : au début, il demeure tiraillé entre les doctrines et stratégies politiques/réligieuses ; sa pratique de la discussion, l'enseignement d'élite et le spectacle des divisions l'obligent à élaborer son propre jugement. Ne pas figer le jeune Kinuani en idéologue précoce.
+
+**Geste éditorial à effectuer avant insertion de scènes** : relever une ligne pour chaque scène candidate, avec `date_de_l'histoire`, `POV`, `personnages`, `lieu`, `source`, `tome_candidat`, `statut_validation`. **Tome candidat = NON AFFECTÉ tant que l'auteur n'a pas décidé** ; plusieurs tomes peuvent présenter une même période sous des focalisations distinctes. Une partie des scènes familiales et initiatiques de Mutinu relève potentiellement du tome 3, plutôt que systématiquement du tome 1.
+
+**Vigilance de source** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` § E ; références sur Nkibaluengele et les modèles de Nzongo dans `text-files/FICHE CANON — TA MFUILA (ex-makesa.txt`. Les institutions, pratiques et chronologies des événements historiques doivent être confrontées à une recherche historique séparée avant affirmation documentaire.
