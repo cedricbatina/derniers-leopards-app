@@ -9,8 +9,8 @@ Présentation des structures sociales et des sources de savoir qui fondent le r�
 Chapitre 1 — Kuimba : le souffle immémorial
 Présentation de Kuimba, des anciens, des pratiques rituelles.
 
-Chapitre 2 — Le couvent de Mukono
-Le jeune Kinuani au couvent, l’éducation élitiste, les savoirs transmis.
+Chapitre 2 — Le couvent d'élite des milongoki
+Le jeune Kinuani au couvent d'élite dirigé par Ne Mawungu (nom institutionnel à retrouver) : éducation exigeante, disciplines, savoirs transmis. Ancien intitulé « couvent de Mukono » abandonné ; ne pas renommer les identifiants DB sans audit.
 
 Chapitre 3 — Autres territoires du savoir
 Cartographie des différents couvents et savoirs au Kongo.
@@ -233,3 +233,6 @@ La chronologie narrative que nous avons définie peut parfaitement faire l’obj
 🧩 1) Ajouter une colonne description à la table tags
 
 Actuellement, ta table tags n’a pas de description — d’où l’erreur “Unknown column ‘description’”.
+
+---
+NOTE FOUNDER — 22 octobre 2026 : le banquet d'accueil du premier jour à Mfuti a été abandonné, déplacé à la FIN des festivités (UN seul grand banquet de Mama Tusikila). Ne Mawungu, directeur du couvent, est défait dans une lutte institutionnelle, se retire dans son fief et meurt peu après ; le placement avant/après le mariage de Kinuani et Mutinu est encore à arbitrer. Kinuani et les jeunes fils du clan sont rappelés à Kuimba par Ne Nzongo avant la fin de la formation. Plan des chapitres à adapter après comparaison à la DB et aux tomes de la saga, dont « Mama i Mama » centré sur Mutinu.
