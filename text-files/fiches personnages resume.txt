@@ -435,7 +435,7 @@ Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §G. Ne 
 
 ## COMPLÉMENT FOUNDER — âges et mémoire du maître déchu (22 octobre 2026)
 
-**KINUANI** : **17 ans à Mfuti** auprès de **Mutinu, 15 ans** ; mariage **deux ans plus tard** (19 et 17 ans). Un an environ après le marché, son maître **Ne Mawungu** se retire du couvent en crise ; **2 à 3 mois plus tard**, Ne Nzongo le rappelle avec ses cousins au pays Kuimba avant son diplôme. Kinuani retrouve son parent âgé balayant longuement sa concession et maniement son balai comme un bâton. Il le connaît sévère depuis son enfance, jusqu'à ses sept ans. Aux funérailles ultérieures de Mawungu, la vue de sceaux/insignes, sceptres et savoirs brûlés ou vendus lui fait comprendre les alertes des anciens sur la fragilité de la transmission. **La date de ces funérailles avant/après mariage demeure ouverte.**
+**KINUANI** : **17 ans à Mfuti** auprès de **Mutinu, 15 ans** ; mariage **deux ans plus tard** (19 et 17 ans). Quatre à cinq mois après les festivités, son maître **Ne Mawungu** se retire du couvent en crise ; **vers le septième mois après Mfuti**, Ne Nzongo le rappelle avec ses cousins au pays Kuimba avant son diplôme. Kinuani retrouve son parent âgé balayant longuement sa concession et maniement son balai comme un bâton. Il le connaît sévère depuis son enfance, jusqu'à ses sept ans. Aux funérailles ultérieures de Mawungu, la vue de sceaux/insignes, sceptres et savoirs brûlés ou vendus lui fait comprendre les alertes des anciens sur la fragilité de la transmission. **Ces funérailles sont désormais placées avant le mariage : Mawungu meurt environ 3–4 mois après l'entrée de Mutinu au couvent féminin.**
 
 **MUTINU** : **15 ans lors de leur rencontre à Mfuti**, **17 ans lors de son mariage** avec Kinuani. Les anciennes années calendaires ne sont pas encore corrigées dans toutes les sources DB.
 
@@ -469,4 +469,17 @@ Voir le registre des décisions Founder §I et `batina-os/audits/creative/KONGO-
 
 **CERCLE FÉMININ** — « Nkurumbi/Kingumbi » prononcés ou notés antérieurement ; **nom non stabilisé**, rapprocher les sources Kumbi/Kikumbi sans confondre les populations ou les époques. Enseignements proposés : fidélité et engagements, maîtrise de soi, arbitrage, liens de clan, gestion économique, soins, transmission culturelle, hospitalité, conseil et autorité féminine. **Programme romanesque proposé**, sans équivalent historique intégral démontré.
 
-**Qualité temporelle** — Mfuti 17/15 ans, mariage 19/17 ans et deux ans d'intervalle ; début exact de l'année initiatique encore à réconcilier avec le rappel environ 14–15 mois après Mfuti. Source : rectificatifs Founder §J.
+**Qualité temporelle (rectifiée)** — Mfuti 17/15 ans, mariage 19/17 ans et deux ans d'intervalle ; Mawungu se retire à 4–5 mois, Kinuani revient vers 7 mois et Mutinu commence son année initiatique ensuite ; Mawungu meurt 3–4 mois après ce début et avant le mariage. Source : rectificatifs Founder §J.
+
+
+## COMPLÉMENT FOUNDER — solidarité agricole, portage et animaux (22 octobre 2026)
+
+**KINUANI** — Après son retour vers le **7e mois depuis Mfuti**, il prépare ses **champs**, sa subsistance et son foyer avant le mariage. Il sait **former et fédérer des groupes** : anciens compagnons du couvent, élèves d'autres institutions, soldats et futurs maris coopèrent aux travaux agricoles, à l'apprentissage du combat et aux entraînements. Il ne possède pas nécessairement le titre formel de **mulongi** malgré ces activités. Environ **12 km de course** et **trois heures d'exercice** chaque matin entre la nuit et l'aube ; parfois des aînés contemplent le soleil levant depuis les collines. Ce même sens de l'encadrement demeure actif **au Mayombe plus tard**, avec rondes, acrobaties et apprentissages.
+
+**NE MAWUNGU** — Départ du couvent **4–5 mois après Mfuti**, décès **environ 3–4 mois après l'entrée de Mutinu au couvent féminin**, **avant le mariage**. Départ de Nzongo et des siens en urgence pour les funérailles, mais **inhumation déjà effectuée** après conservation du corps trois jours selon le récit. Ils restent dans les parages jusqu'au **45e jour du deuil de Mawungu**, distinct de celui de Nzongo.
+
+**NE NZONGO** — Voyage avec le **kipoui / kipoyi** (quatre porteurs se relayant selon la scène). Aime un **perroquet jaloux**, souvent sur son épaule, des **singes** (nombre environ trois), dont l'un peut lui tenir la main, et des **chats**. Son entourage animalier complète sa stature de patriarche et le contraste avec sa discipline envers les humains.
+
+**AUTRE NOTABLE VOISIN** — Décès dans une région proche de Kuimba, possiblement **Bamba** ; nom **Ne Mwanda / Nadi / Ne Mwanda Nadi** entièrement provisoire. Nzongo, Kinuani et leurs gens s'y rendent ; la présence de Mutinu, mentionnée par l'auteur, doit être rapprochée de son année d'initiation. **Aucune nouvelle fiche DB de personnage validée.**
+
+**DOT** — Vers la fin de la première année relative à Mfuti, préparatifs d'une visite aux **familles paternelle et maternelle de Mutinu**, tandis que le mariage reste fixé deux ans après Mfuti. Source : rectificatifs Founder §K.
