@@ -444,3 +444,14 @@ Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §G. Ne 
 **NE NZONGO** : rappel du clan, pas de ses enfants biologiques. Au lever du jour, il balaie une grande concession, exercice d'entretien et de discipline qu'il mêle parfois à des gestes de bâton martial. Autrefois il avait aussi pour rituel course et nage. Il reste dans le souvenir de Kinuani un homme sévère, exigeant et rigoureux sur les principes.
 
 Source : rectificatifs Founder § H, chronologie de la saga. Les dates civiles 1638/1641 et les lieux funéraires doivent être vérifiés avant import DB.
+
+
+## COMPLÉMENT FOUNDER — le couvent au-delà de ses murs et Nzongo à l'aube (22 octobre 2026)
+
+**NE MAWUNGU** — Quitte l'institution avec une importante suite de fidèles, parmi lesquels des tumwa, milongi et mfumu démissionnaires. Ils conservent certains enseignements à l'écart pour une transmission ultérieure. La hiérarchie et la loyauté propres au couvent persistent même chez les anciens membres. Le départ des responsables entraîne celui de nombreux élèves. Ne pas confondre cette protection volontaire du savoir avec les objets détruits aux funérailles ultérieures.
+
+**NE NZONGO — FORMATEUR** — Attend les jeunes de Kuimba, dont Kinuani et ses cousins, qu'il a fait rappeler. Il veut achever lui-même leur formation, développer leurs capacités de gouvernance et de défense, et se préparer au conflit futur. Il craint que des idées extérieures soient devenues impossibles à défaire dans leurs esprits : **c'est sa crainte subjective**, non une conversion religieuse confirmée. Il se sent responsable de la pérennité culturelle tandis que meurent les anciens. Le souvenir d'une dernière visite de Kinuani à **13 ans est incertain**. S'il revient à environ 18 ans, la durée d'absence serait plutôt de **cinq ans** ; quatre ans renverraient à environ 17 ans. À vérifier.
+
+**NE NZONGO — LE SEAU D'EAU** — Au premier soleil, tout en attendant les étudiants, il balaie la concession, fait quelques exercices de bâton avec son balai, remarque les hommes encore endormis, appelle des personnes déjà levées et va les arroser pour les réveiller. Son attitude sévère envers les hommes contraste avec ses égards envers les femmes de son clan. Il imagine sa renaissance future à travers la lignée maternelle et rattache cette conception à l'hérédité maternelle : **croyance du personnage**, aucun mécanisme scientifique de réincarnation.
+
+Voir le registre des décisions Founder §I et `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` §48.
