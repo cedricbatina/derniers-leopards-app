@@ -418,3 +418,16 @@ Détails et questions ouvertes : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI
 **ENVIRONNEMENT DRAMATIQUE COMMUN** — Débats au feu du village et sur les places, nouvelles venues d'ailleurs, orateurs itinérants, controverses de couvent, manifestations, hostilités entre camps, villages attaqués et communautés déplacées. Ce sont des **motifs de scène issus du récit de l'auteur**, non des événements individuels inventés ou historiquement démontrés.
 
 **PORTÉE MULTI-TOMES** — Le tome 3 `Mama i Mama — La culture d’une reine` (titre de la documentation ancienne), centré sur Mutinu, est un **tome candidat** pour ses expériences intimes, initiatiques et son apprentissage du pouvoir. Ne pas attribuer automatiquement tous les arcs et les scènes à `Kongo Dibuidi`, tome 1. Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` § E.
+
+
+## COMPLÉMENT FOUNDER — un banquet, le rappel des fils et la mort de Mawungu (22 octobre 2026)
+
+**KINUANI** — À Mfuti, il éprouve un attachement croissant pour Mutinu, mais sa morale de mulongoki lui interdit les écarts avant mariage ; il la traite encore comme une sœur. Le mariage est pour lui en grande partie une affaire des **tantes et du clan**, et il n'a pas assez d'affinité avec Mama Tusikila pour lui confier son attirance. Il sait que Nianzi, amie d'enfance promise, l'attend quelque part à Kuimba mais n'y pense guère sur le moment. Uniquement **un banquet à la fin des compétitions**, la réception familiale du premier jour ayant été annulée.
+
+**NE MAWUNGU** — Dirigeant suprême du couvent d'élite dont le nom exact reste à trouver (ancien nom personnel : Ta Mukono). Avait accepté la formation en latin et portugais comme concession stratégique pour comprendre les ennemis ; constate une perte de rigueur et d'autonomie institutionnelle. Défait dans une crise de pouvoir, retourne dans son fief natal et y meurt peu après. Des artefacts liés à son savoir se retrouvent dispersés ou chez des marchands, dont certains étrangers/blancs. **Sa date de décès par rapport au mariage Kinuani–Mutinu reste ouverte.**
+
+**NE NZONGO** — Avec Mawungu et d'autres anciens traditionnalistes, cherche à réorganiser l'institution et fait **rappeler les fils du clan Kuimba**, dont Kinuani et des cousins, avant le terme de leur formation. Il doit participer aux funérailles/à l'événement lié à Mawungu ; la dilapidation des artefacts prouve aux yeux de Kinuani que sa mise en garde sur la disparition des savoirs n'était pas théorique.
+
+**INVITÉS DU SEUL BANQUET FINAL DE MAMA TUSIKILA** — Kiesa kia Bikuta, Kimbembe, mère de Kimbembe, fiancée de Kimbembe et une autre mère **dont l'identité est à vérifier**. L'ancienne liste de convives du premier soir n'est plus une scène validée.
+
+Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §G. Ne pas déplacer les scènes/les tomes ni modifier la DB sans rapprochement documentaire.
