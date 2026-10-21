@@ -397,7 +397,20 @@ Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §G et n
 
 - **Mfuti** : Kinuani **17 ans**, Mutinu **15 ans** ; **mariage deux ans plus tard** lorsque Kinuani a **19 ans** et Mutinu **17 ans**. Les années civiles 1638/1641 des anciennes notes sont à harmoniser, pas à valider simultanément avec cet intervalle.
 - **Couvent** : **environ un an après Mfuti**, son chef suprême Ne Mawungu démissionne/perd l'autorité, se replie dans son village natal ; le couvent se vide. Kimbembe et Kiesa kia Bikuta figurent parmi les nombreux élèves partis. **Deux à trois mois après**, Ne Nzongo fait rappeler Kinuani et ses cousins, fils du **clan Kuimba**, avant la fin du cursus. Kinuani est surpris et ne comprend pas encore cette décision.
-- **Retour à Kuimba** : au matin de son retour, Kinuani voit Ne Nzongo **balayer sa concession**, longtemps et debout, parfois en faisant des mouvements de bâton avec le balai. L'aîné avait auparavant pratiqué course, nage et autres exercices ; son entraînement a évolué avec l'âge. Kinuani retrouve le Nzongo de son enfance jusqu'à sept ans : discipline, exigences morales, sévérité face à la négligence.
+- **Veille de son arrivée à Kuimba** : **Ne Nzongo attend le retour de Kinuani** en balayant sa concession au matin, avec des mouvements de bâton exécutés à l'aide du balai ; **la présence de Kinuani au moment précis du balayage n'est pas établie**. L'aîné avait auparavant pratiqué course, nage et autres exercices ; son entraînement a évolué avec l'âge. Kinuani retrouve le Nzongo de son enfance jusqu'à sept ans : discipline, exigences morales, sévérité face à la négligence.
 - **Funérailles de Mawungu (plus tard, position par rapport au mariage non fixée)** : fumée et objets/insignes brûlés en approche, d'autres dispersés chez des marchands noirs ou blancs, avec des savoirs et symboles d'autorité hérités du maître livrés à des non-initiés. Terme entendu « mvoala » à vérifier lexicalement. Ce gaspillage d'un héritage savant bouscule Kinuani, élève respectueux de l'érudition, et lui fait réévaluer les positions de Mawungu et de Ne Nzongo. Pas de conversion idéologique instantanée.
 
 **Rapprochement nécessaire** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` § H ; `LES DERNIERS LÉOPARDS — Chronologie.txt`. Ne pas inférer une date précise de décès, de mariage, ni un tome pour chacune de ces scènes.
+
+
+## Complément Founder — la formation survit au départ de Ne Mawungu (22 octobre 2026)
+
+**L'ancienne communauté des milongoki demeure structurée** même après le départ collectif : Ne Mawungu part avec des fidèles, dont de nombreux tumwa, milongi et mfumu, qui **mettent en réserve certains savoirs pour les protéger et les transmettre ultérieurement**, tout en conservant le respect de la hiérarchie des anciens membres. Kimbembe, Kiesa kia Bikuta et d'autres quittent aussi l'établissement. Cette conservation des savoirs n'est pas identique à leur dispersion ultérieure après le décès du maître.
+
+**Ce que Kinuani ignore à son rappel** : Ne Nzongo entend terminer leur formation à Kuimba pour en faire de futurs responsables et défenseurs, craignant que des conceptions récentes ne soient déjà durablement implantées chez les jeunes. Cette peur ne constitue aucune preuve de conversion de Kinuani.
+
+**Âge de la dernière rencontre avec Ne Nzongo** : l'auteur envisage un passage de Kinuani à Kuimba **vers 13 ans** et quatre années sans revoir l'aîné, mais **l'information est encore à vérifier**. Les souvenirs d'enfance de Kinuani « jusqu'à sept ans » et ce possible dernier séjour ne se contredisent pas nécessairement.
+
+**La scène de Nzongo à l'aube se déroule alors qu'il attend Kinuani**, non pendant une rencontre déjà confirmée : balayage, exercices de bâton, puis asperger d'eau les hommes encore endormis au lever du soleil. Son contraste de rigueur envers les hommes et de faveur envers les femmes appartient à une conviction de réincarnation par la lignée maternelle (référence personnelle à l'ADN mitochondrial, sans preuve biologique de réincarnation).
+
+Voir le rectificatif Founder §I. Aucun changement automatique des dates, parents ou tomes en DB.
