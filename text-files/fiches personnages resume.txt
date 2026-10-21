@@ -431,3 +431,16 @@ Détails et questions ouvertes : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI
 **INVITÉS DU SEUL BANQUET FINAL DE MAMA TUSIKILA** — Kiesa kia Bikuta, Kimbembe, mère de Kimbembe, fiancée de Kimbembe et une autre mère **dont l'identité est à vérifier**. L'ancienne liste de convives du premier soir n'est plus une scène validée.
 
 Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §G. Ne pas déplacer les scènes/les tomes ni modifier la DB sans rapprochement documentaire.
+
+
+## COMPLÉMENT FOUNDER — âges et mémoire du maître déchu (22 octobre 2026)
+
+**KINUANI** : **17 ans à Mfuti** auprès de **Mutinu, 15 ans** ; mariage **deux ans plus tard** (19 et 17 ans). Un an environ après le marché, son maître **Ne Mawungu** se retire du couvent en crise ; **2 à 3 mois plus tard**, Ne Nzongo le rappelle avec ses cousins au pays Kuimba avant son diplôme. Kinuani retrouve son parent âgé balayant longuement sa concession et maniement son balai comme un bâton. Il le connaît sévère depuis son enfance, jusqu'à ses sept ans. Aux funérailles ultérieures de Mawungu, la vue de sceaux/insignes, sceptres et savoirs brûlés ou vendus lui fait comprendre les alertes des anciens sur la fragilité de la transmission. **La date de ces funérailles avant/après mariage demeure ouverte.**
+
+**MUTINU** : **15 ans lors de leur rencontre à Mfuti**, **17 ans lors de son mariage** avec Kinuani. Les anciennes années calendaires ne sont pas encore corrigées dans toutes les sources DB.
+
+**NE MAWUNGU** : après avoir ouvert certains enseignements pour comprendre le monde adversaire, il est écarté politiquement, part dans son fief et meurt plus tard. Son départ accélère l'hémorragie des élèves : Kimbembe, Kiesa kia Bikuta et beaucoup d'autres quittent l'établissement. À ses funérailles, une partie du patrimoine matériel, spirituel et scientifique est brûlée ou dispersée chez des marchands, ce qui heurte l'enseignement qu'il avait transmis.
+
+**NE NZONGO** : rappel du clan, pas de ses enfants biologiques. Au lever du jour, il balaie une grande concession, exercice d'entretien et de discipline qu'il mêle parfois à des gestes de bâton martial. Autrefois il avait aussi pour rituel course et nage. Il reste dans le souvenir de Kinuani un homme sévère, exigeant et rigoureux sur les principes.
+
+Source : rectificatifs Founder § H, chronologie de la saga. Les dates civiles 1638/1641 et les lieux funéraires doivent être vérifiés avant import DB.
