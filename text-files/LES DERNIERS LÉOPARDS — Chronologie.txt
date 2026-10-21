@@ -134,7 +134,7 @@ Mutinu reçoit une éducation “normale” de fille dans sa lignée, puis accé
 
 Lieu : Kuimba + routes
 
-Ne Mawungu, chef suprême du couvent, est défait ou contraint de démissionner dans la lutte institutionnelle **environ un an après Mfuti**. Il se retire dans son fief/village natal. Après son départ, le couvent se vide : beaucoup de milongoki le quittent, **dont Kimbembe et Kiesa kia Bikuta**. Une réorganisation de l'institution demeure l'objectif de certains anciens.
+Environ un an après Mfuti, **Ne Mawungu se retire à la suite d'une crise institutionnelle avec un important groupe organisé de fidèles** : de nombreux **tumwa, milongi et mfumu** démissionnent ou le suivent. Des **enseignements et savoirs sont volontairement réservés** pour mieux les transmettre dans l'avenir, sans que cesse la reconnaissance de la **hiérarchie du couvent par ses anciens membres**. Cette rupture des cadres pousse une grande partie des élèves à partir, notamment **Kimbembe et Kiesa kia Bikuta**. Mawungu se retire dans son fief natal ; une éventuelle réorganisation demeure un enjeu.
 
 **Deux à trois mois après le retrait de Ne Mawungu**, Ne Nzongo fait rappeler par ses messagers Kinuani et les autres jeunes « fils » du clan Kuimba, dont ses cousins, **avant la fin de leur formation**. La liste nominative ancienne (Matondo, Nsimba, Nzuzi) doit être vérifiée en DB. Les jeunes ignorent d'abord pourquoi ils doivent partir ; le couvent perd une part considérable de ses effectifs.
 
@@ -144,9 +144,9 @@ jamais seuls, escortes par 12 hommes, relais de village en village, parfois bivo
 
 la nouvelle circule vite partout.
 
-Scène Kuimba — matin du retour de Kinuani rappelé par Ne Nzongo (année civile à harmoniser)
+Scène Kuimba — aube où Ne Nzongo **attend l'arrivée** des fils du clan rappelés (année civile à harmoniser ; leur arrivée effective est distincte)
 
-À l'aube, **Ne Nzongo balaie longuement une grande partie de sa concession**, debout, se servant parfois du **balai comme d'un bâton d'arts martiaux** pour exécuter des mouvements. Cette discipline matinale a évolué : autrefois il faisait aussi des exercices physiques, du footing et de la nage ; **ne pas affirmer qu'il a pratiqué exactement la même routine toute sa vie**. Kinuani se souvient de Nzongo tel qu'il l'avait connu jusqu'à ses sept ans : rigoureux, sévère sur les principes et la morale, intolérant à la bêtise et à la négligence. Kuimba est déjà sous tension.
+À l'aube, **Ne Nzongo balaie longuement une grande partie de sa concession**, debout, détournant parfois **le balai en bâton martial**. Il **attend le retour prochain** des fils de Kuimba qu'il a fait rappeler, en particulier du prometteur Kinuani, et réfléchit aux risques politiques et religieux. Sa routine avait auparavant inclus course, nage et exercices ; elle a changé avec l'âge. Il observe les **premiers rayons du soleil** et constate que de nombreux **hommes dorment encore** : il appelle quelques personnes déjà réveillées près de sa concession, prend un **seau d'eau** et part **asperger les dormeurs**. Sa discipline est inflexible envers les hommes du clan, mais il traite plus favorablement les femmes en raison d'une **conviction personnelle de réincarnation par la lignée maternelle**, qu'il associe à la transmission biologique maternelle (ADN mitochondrial). **Croyance du personnage, non fait scientifique sur la réincarnation.** Sa mémoire familiale inclut un Kinuani connu dès l'enfance ; **une dernière rencontre à l'âge de 13 ans est seulement un souvenir incertain du Founder**, à confronter aux sources. Kuimba est déjà sous tension.
 
 jugements (lusanga/zinsanga),
 
@@ -547,3 +547,13 @@ Pers. : Kinuani, Mutinu, Prince Vita Kanga, Roi Garcia II
 **Priorité** : Mfuti **17/15 ans**, mariage **19/17 ans**, soit **deux années**, et non les anciennes combinaisons 18/16 puis 21/19 sur trois ans. Les années civiles 1638 et 1641 ne peuvent **pas** rester conjointement validées ; conserver les repères d'archives jusqu'à réconciliation avec Sonekeno. **Environ un an après Mfuti**, défaite/retrait de Ne Mawungu ; **deux à trois mois après**, rappel de Kinuani et des cousins de Kuimba. Kimbembe, Bikuta et beaucoup d'étudiants quittent aussi une institution qui se vide. **Funérailles** : fumée visible au loin, insignes/sceptres et autres objets brûlés, d'autres vendus à des marchands noirs ou blancs ; atteinte à un patrimoine de savoirs réservé aux initiés. **Ordre du décès de Mawungu par rapport au mariage** : non établi. **Au retour matinal à Kuimba**, Ne Nzongo balaie sa concession et pratique avec le balai quelques mouvements de bâton ; Kinuani retrouve un aîné qu'il a toujours connu jusqu'à sept ans pour sa rigueur, sa discipline et sa sévérité morale. L'ancienne scène chronologique de 1640 doit être rattachée à ce souvenir, pas figée par la seule date ancienne.
 
 Source : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` (nouvelle section 47) ; `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` (section H).
+
+
+## Complément institutionnel et scène d'aube — 22 octobre 2026
+
+- **Mawungu** : importante suite de fidèles (tumwa, milongi, mfumu), démissions, savoirs volontairement mis en réserve pour une transmission future ; hiérarchie toujours reconnue par les élèves et cadres partis. **Ne pas confondre** cette réserve avec les objets brûlés/vendus ultérieurement.
+- **Ne Nzongo à l'aube** : **attente** du retour des jeunes, avant leur arrivée effective ; il pense à achever leur formation à Kuimba, à préparer des responsables et à éviter, de son point de vue, que des doctrines contraires aux usages du clan ne s'enracinent. Il craint le décès des anciens et l'érosion des savoirs entre générations.
+- **Scène d'action** : balai utilisé comme bâton, premiers rayons du soleil, réveil des hommes encore couchés au **seau d'eau**, avec l'aide de quelques personnes déjà debout.
+- **Rapports hommes/femmes** : sévérité envers les hommes, égards calculés pour les femmes par croyance en une réincarnation passant par la lignée maternelle. La transmission de l'ADN mitochondrial ne confirme **aucune** réincarnation ; lien seulement dans les convictions de Nzongo.
+- **Dernière visite Kinuani** : « vers ses 13 ans ; Nzongo ne l'aurait pas revu depuis environ 4 ans » = **hypothèse orale du Founder**, non établie. Ne pas gommer ses souvenirs jusqu'à sept ans ; vérifier la dernière visite et les dates.
+- Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §I. Aucun rattachement automatique de ces scènes à un tome.
