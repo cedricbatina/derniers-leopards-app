@@ -200,3 +200,62 @@ Les **premiers rayons du soleil** commencent à paraître. Ne Nzongo constate qu
 - **Placement en tomes** : NON AFFECTÉ en attendant matrice événements × POV × tome, dont `Mama i Mama`.
 
 **Référence créative approfondie** : `cedricbatina/batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` §48.
+
+
+## J. Complément Founder — mariage, gouvernement de Kuimba et entrée de Mutinu en initiation (22 octobre 2026)
+
+**Périmètre** : intentions narratives à distribuer entre les tomes après comparaison aux scènes existantes. Ne pas inférer d'office une scène du tome 1, une migration SQL ou de nouveaux personnages.
+
+### Projet politique de Ne Nzongo
+
+Après avoir rappelé Kinuani et plusieurs jeunes de Kuimba, **Ne Nzongo veut associer l'achèvement de leur formation à l'établissement de foyers et à l'exercice progressif de responsabilités civiques**. Certains jeunes de 17 à 19 ans sont déjà en âge d'être mariés ou commencent à l'être, **selon les usages du milieu de Kuimba représenté dans la saga** ; la constitution d'une famille et éventuellement la naissance d'enfants sont des signes de maturité aux yeux du patriarche. Il ne faut pas transformer cette vision personnelle/sociale en condition juridique démontrée de toute charge kongo, ni assurer que chaque élève a des enfants.
+
+**Conseil de Nzongo** : environ **18 personnes ou assistants**, chiffre **provisoire**, intervenant dans l'administration, les conseils et les jugements. **Vérifier si l'ancien chiffre d'environ 18 assistants désigne précisément les conseillers**, avant de fusionner les deux catégories. Nzongo projette d'élargir le cercle et d'y attirer des jeunes formés et d'autres adultes fiables pour consolider Kuimba. Il possède déjà des combattants, des responsables et des relais, mais redoute les influences et jeux politiques de Dobadola et d'autres adversaires. **Mfuila** est un exemple de militaire évoqué oralement avec réserve ; ses loyautés et trahisons déjà documentées doivent être vérifiées avant de le présenter comme un homme de confiance. L'appartenance ou l'influence prochrétienne de **Dobadola** reste une question de stratégie politique à rapprocher des fiches.
+
+Le rappel dépasse le seul couvent de Ne Mawungu : **des jeunes d'autres couvents sont également convoqués**. L'objectif est la succession, la gouvernance, la justice et la défense de Kuimba, non seulement les cérémonies nuptiales.
+
+### Ce que sait Kinuani : cinq jours d'interrogations
+
+La route **du couvent vers Kuimba dure cinq jours** selon ce nouveau repère narratif (étapes et itinéraire à vérifier en topographie). Durant le voyage, **Kinuani ignore pourquoi il a été appelé**. Il envisage plusieurs hypothèses : retour bref, transfert dans un autre couvent, formation au pays ou **mariage avec Nianzi**, son amie d'enfance et promise, sans certitude. Ne pas lui attribuer d'avance le projet précis de Ne Nzongo ou une connaissance du mariage conclu.
+
+**Dans les deux ou trois premiers jours après son arrivée**, il apprend que **son mariage est pratiquement arrêté** dans les intentions familiales, avec **Nianzi**. Les formes exactes d'accords entre familles et la date du mariage ne sont pas encore fixées. Laisser distinctes **rumeur**, **projet d'alliance quasi scellé** et **mariage légal/rituellement célébré**.
+
+### Le départ de Mfuti et la visite d'adieu à Mutinu : scène à caler
+
+Un matin, **avant un départ de Kinuani**, alors qu'il est parti courir avec son groupe, il **bifurque** et parcourt, selon l'estimation orale du Founder, **25 à 30 km** pour saluer **Mutinu** et lui dire au revoir. Ils éprouvent déjà un amour réciproque mais se retiennent conformément à leur morale, sans transgression ni promesse matrimoniale formalisée directement entre eux. **Mutinu est triste de la séparation, mais croit qu'il se rend préparer leur future union** et espère le revoir.
+
+**Point d'articulation encore ouvert** : comparer les scènes préexistantes de fin de festivités, les séjours ultérieurs de Kinuani près de Mfuti et les **cinq jours de voyage du couvent à Kuimba**. Ne pas situer par invention cette course de 25–30 km pendant le trajet à Kuimba ou lui assigner une date unique sans source. Distance et durée de course restent des estimations de l'auteur à contrôler en géographie.
+
+### La nouvelle de Nianzi circule et frappe Mutinu
+
+La rumeur du **projet Kinuani–Nianzi** se répand par les **mabembe**, réseau d'informations et de messagers placé sous Ne Nzongo ; **certains relais travaillent aussi avec Mama Tusikila**. Les messages et conversations atteignent les familles **avant même que Tusikila en reçoive personnellement connaissance**, puis arrivent dans la famille de Mutinu. Ne pas présumer que les agents partagent tous les mêmes motivations ni que le canal « pigeons » exclut les relais humains.
+
+Mutinu, qui attendait des préparatifs en sa faveur, découvre que l'épouse pressentie **n'est pas elle**. Cette nouvelle la plonge dans une **grande détresse**, un retrait de ses activités et une peine profonde ; **ne pas lui attribuer automatiquement un diagnostic clinique de dépression**. Ses **tantes et oncles** se mobilisent auprès de Mama Tusikila. Tusikila **rassure** la famille, se rend à Kuimba et affronte la question matrimoniale avec Kisita. Le déroulement des négociations, les titulaires d'autorité et les conditions exactes doivent être rapprochés des fiches existantes.
+
+### Arbitrage de Kisita et réponse de Mutinu
+
+**Kisita accepte finalement l'union projetée avec Mutinu sous condition** d'au moins **une année complète de formation initiatique féminine** avant le mariage. L'exigence participe à la préparation sociale et morale d'une future épouse, mais aussi au **dédommagement symbolique dû à Nianzi** pour sa préparation et ses sacrifices. **Les oncles de Mutinu sont réticents**. Mutinu, encore blessée et craintive, **accepte néanmoins avec détermination et même enthousiasme** : elle veut être à la hauteur de Kinuani. Elle craint que la formation ne permette entre-temps aux familles de lui préférer une autre épouse.
+
+**Mama Tusikila la rassure** : selon elle, Mutinu est bien la future femme de Kinuani, et cette année ne doit pas être l'occasion de lui substituer Nianzi. **Ce sont les engagements et l'assurance de Tusikila**, non une preuve que toutes les factions familiales ont renoncé à leur opposition. Nianzi reste **vivante** ; sa souffrance et son destin demeurent distincts.
+
+### Enseignements candidats — inspiration Kumbi / Kikumbi, vérification indispensable
+
+Le terme oral **« Nkurumbi » / « Kingumbi »** doit être vérifié. L'initiation **Kumbi** est documentée chez les **Woyo**, notamment l'étude de **Ndjimbi-Tshiende (1978)** ; l'appellation **Kikumbi** est attestée dans une synthèse comparative pour certains groupes kongo. **Ne pas assimiler automatiquement ces rites, populations, époques et orthographes**, ni présenter le programme suivant comme une reconstruction historique validée.
+
+**Programme romanesque proposé, pas canon des rites** :
+- parole donnée, loyauté, fidélité, honnêteté et obligations réciproques ;
+- maîtrise des émotions, patience, discernement, refus des humiliations gratuites ;
+- gestion des différends, paix du foyer, relations de belle-famille et d'alliance ;
+- économie de la maison, réserves, commerces, marchés et prévoyance ;
+- soins, accueil des enfants, parenté, transmission des langues et des savoirs ;
+- hospitalité, dignité publique, discrétion sur les affaires confiées ;
+- jugement, conseil, négociation et responsabilités féminines dans la cité.
+
+**Évolution de Mutinu** : au départ blessée et inquiète, elle découvre des connaissances dont l'utilité dépasse la préparation matrimoniale : sa formation contribue à devenir une **future dirigeante** dans l'arc de **tome 3 `Mama i Mama`**, sans affecter automatiquement toutes les scènes de ce parcours au même tome. **La maternité apporte reconnaissance et fierté dans les normes sociales présentées par l'auteur**, mais la valeur morale d'une femme ne doit pas être déduite exclusivement de sa fécondité dans le discours neutre du narrateur.
+
+**Références historiques de recherche** :
+- Ndjimbi-Tshiende, « L'initiation Kumbi chez les Woyo du Zaïre », 1978 : https://www.africabib.org/rec.php?RID=192703560
+- Jean Félix Yekoka, « Le statut de la femme kongo saisi à travers le contrat juridique de mariage (XVIIe-XIXe siècles) », https://www.igrac.cg/index.php/igrac/article/view/34
+- John K. Thornton, « Elite Women in the Kingdom of Kongo », 2006, DOI 10.1017/S0021853706001812
+
+**Point de contrôle majeur** : l'intervalle **Mfuti → mariage = 2 ans**, avec retrait de Mawungu environ un an après Mfuti et rappel environ 2–3 mois après, reste la base. L'initiation dure **au minimum un an** : il faut vérifier l'assemblage des périodes et les anniversaires sans imposer une date civile arbitraire.
