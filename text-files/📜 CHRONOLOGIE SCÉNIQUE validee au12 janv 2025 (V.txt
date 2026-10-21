@@ -1,3 +1,19 @@
+RECTIFICATIF FOUNDER DU 22 OCTOBRE 2026 — EN-TÊTE DE CONSULTATION
+
+CE DOCUMENT EST UNE ARCHIVE HISTORIQUE « VALIDÉE AU 12 JANVIER 2025 ». SES DATES ET NOMS PROPRES NE SONT PLUS AUTOMATIQUEMENT LE CANON COURANT.
+
+- Festivités de Mfuti : Kinuani 17 ans, Mutinu 15 ans ; mariage DEUX ANS APRÈS : Kinuani 19 ans, Mutinu 17 ans. Les anciens millésimes « 1638 rencontre » et « 1641 mariage » doivent être réconciliés, pas maintenus tous deux par défaut.
+- Le maître du couvent s'appelle désormais **Ne Mawungu** ; « Ta Mukono » est une ancienne appellation du PERSONNAGE, et le couvent lui-même doit recevoir/retrouver son nom propre.
+- Environ 1 an après Mfuti, Mawungu quitte le couvent après sa défaite institutionnelle ; environ 2 à 3 mois plus tard, Ne Nzongo rappelle Kinuani et ses cousins, sans diplôme achevé. D'autres élèves, dont Kimbembe et Kiesa kia Bikuta, quittent l'institution.
+- Ne Mawungu meurt après son retrait ; sa mort AVANT OU APRÈS le mariage reste NON DÉCIDÉE. Lors de ses funérailles, la fumée d'insignes et d'objets brûlés et la dispersion de savoirs chez les marchands bouleversent Kinuani.
+- Au matin du retour à Kuimba, Ne Nzongo balaie longuement sa concession et utilise parfois le balai comme bâton martial.
+- **UN SEUL BANQUET À MFUTI**, à la fin des festivités, chez Mama Tusikila. L'ancienne réception du premier jour est SUPPRIMÉE.
+
+Source canon de contrôle : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §G–H et `text-files/LES DERNIERS LÉOPARDS — Chronologie.txt`.
+Ces annotations ne valent PAS migration MySQL ni réaffectation de scènes/tomes.
+
+================ FIN RECTIFICATIF ================
+
 📜 CHRONOLOGIE SCÉNIQUE COMPLÈTE (VERSION RÉVISÉE)
 🌀 PROLOGUE — 1702 : MBANZA KONGO, MBONGI DE MÉMOIRE
 
