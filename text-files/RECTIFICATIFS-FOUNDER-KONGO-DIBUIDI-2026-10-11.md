@@ -151,7 +151,7 @@ Cette tension intérieure doit rester visible **avant** sa maturation comme méd
 
 **Arbitrage d'âge** : lors des fêtes de Mfuti, **Kinuani a 17 ans** et **Mutinu 15 ans**. Ils se marient **deux ans après**, à respectivement **19 et 17 ans**. La trame antérieure affichait **Mfuti 1638 (18/16 ans)** puis **mariage 1641 (21/19 ans)** : ces âges et cet intervalle sont **supersédés**. Les millésimes absolus 1638 et 1641 doivent être recalés, pas maintenus conjointement comme canon.
 
-**Séquence relative** : environ **un an après Mfuti**, **Ne Mawungu** perd son autorité dans une lutte institutionnelle, démissionne ou est écarté, et se replie dans son fief natal. Le couvent se vide, nombreux élèves partis, notamment **Kimbembe** et **Kiesa kia Bikuta**. **Deux à trois mois plus tard**, Ne Nzongo rappelle par messagers **les fils du clan Kuimba**, dont Kinuani et ses cousins, **avant la fin de leur formation**. Ils ne comprennent pas la cause de cette décision. Retrait, rappel, mort et funérailles ne sont **pas un même événement**.
+**Séquence relative (ANCIENNE HYPOTHÈSE SUPPLANTÉE par §K)** : environ **un an après Mfuti**, **Ne Mawungu** perd son autorité dans une lutte institutionnelle, démissionne ou est écarté, et se replie dans son fief natal. Le couvent se vide, nombreux élèves partis, notamment **Kimbembe** et **Kiesa kia Bikuta**. **Deux à trois mois plus tard**, Ne Nzongo rappelle par messagers **les fils du clan Kuimba**, dont Kinuani et ses cousins, **avant la fin de leur formation**. Ils ne comprennent pas la cause de cette décision. Retrait, rappel, mort et funérailles ne sont **pas un même événement**.
 
 **Mort de Ne Mawungu** : après son retrait, à une date encore **non arbitrée par rapport au mariage**. Pendant le déplacement vers les funérailles, les arrivants voient de la **fumée** à distance. Des objets de Mawungu sont brûlés, dont des **sceptres/insignes de pouvoir**, et d'autres vendus. Terme oral **« mvoala »** à identifier avant normalisation. Des marchands **noirs ou blancs** circulent avec des objets d'une valeur morale, spirituelle, institutionnelle et technique considérable. Des instruments de commandement, des signes et des savoirs consignés par Mawungu sont dispersés, parfois mis entre les mains de **non-initiés**. Ne pas inventer les auteurs des destructions ou les mesures exactes prises contre les ventes.
 
@@ -258,4 +258,55 @@ Le terme oral **« Nkurumbi » / « Kingumbi »** doit être vérifié. L'initia
 - Jean Félix Yekoka, « Le statut de la femme kongo saisi à travers le contrat juridique de mariage (XVIIe-XIXe siècles) », https://www.igrac.cg/index.php/igrac/article/view/34
 - John K. Thornton, « Elite Women in the Kingdom of Kongo », 2006, DOI 10.1017/S0021853706001812
 
-**Point de contrôle majeur** : l'intervalle **Mfuti → mariage = 2 ans**, avec retrait de Mawungu environ un an après Mfuti et rappel environ 2–3 mois après, reste la base. L'initiation dure **au minimum un an** : il faut vérifier l'assemblage des périodes et les anniversaires sans imposer une date civile arbitraire.
+**Point de contrôle majeur, partie historique du dossier (SUPPLANTÉ PAR §K POUR LES DÉLAIS)** : l'intervalle **Mfuti → mariage = 2 ans** reste fixé ; l'estimation de retrait de Mawungu environ un an après Mfuti et du rappel 2–3 mois après est abandonnée. L'initiation dure **au minimum un an** : il faut vérifier l'assemblage des périodes et les anniversaires sans imposer une date civile arbitraire.
+
+
+## K. Chronologie recalée : Mawungu, champs, deuil et déplacements (Founder, 22 octobre 2026)
+
+**Précision prioritaire, qui REMPLACE les anciennes estimations temporelles** des sections G–J, de la chronologie et des notes §47/§49. Les scènes évoquées concernent la **saga entière**, pas nécessairement le tome 1.
+
+### 1. Repères relatifs depuis les festivités de Mfuti
+
+- **T0 = Mfuti** : Kinuani **17 ans**, Mutinu **15 ans** ; unique banquet **à la clôture**, pas le premier jour.
+- **T0 + 4 à 5 mois** : Ne Mawungu **se retire avec les nombreux fidèles, cadres et enseignants** restés loyaux ; savoirs partiellement mis en réserve ; anciens membres respectent toujours la hiérarchie.
+- **T0 + environ 7 mois** : **rappel et retour des élèves à Kuimba**, dont Kinuani et ses cousins. Cinq jours de voyage depuis le couvent selon la dernière indication ; éviter de donner au départ, à l'envoi des messages et à l'arrivée exactement le même jour.
+- **Après l'arrivée** : mariage avec **Nianzi** en passe d'être conclu dans le projet familial, puis **annulé** ; rapprochement des familles de **Mutinu**, intervention de Mama Tusikila, condition d'**au moins un an** de formation féminine et **entrée de Mutinu au couvent**. L'ordre est fixé, les semaines exactes non.
+- **Environ 3 à 4 mois après l'entrée de Mutinu dans l'institution féminine** : **mort rapide de Ne Mawungu**, peu de temps après son retrait à l'échelle de sa vie, sans avoir vécu longtemps dans son fief. Cette nouvelle **situe sa mort avant le mariage** dans la version actuelle, contrairement à l'ancienne question laissée ouverte ; ne pas figer de millésime civil avant harmonisation.
+- **À l'arrivée aux funérailles** : Mawungu est **déjà enterré** ; selon l'auteur, sa dépouille a été conservée **trois jours seulement** avant l'inhumation. Nzongo et le groupe ont tenté de voyager rapidement mais n'arrivent pas à temps. Objets et savoirs déjà brûlés ou vendus ; fumée, destruction et dispersion déjà documentées. **Trois jours est une règle de ce récit / de ce milieu**, pas une affirmation universelle sur tous les rites kongo.
+- **Sur place** : séjour dans la région du maître **jusqu'aux environs du quarante-cinquième jour du deuil**, soit environ un mois et demi dans le calendrier narratif ; **ne pas additionner mécaniquement 45 jours pleins sur place à un voyage commencé après le décès**.
+- **Retour à Kuimba** : l'auteur décrit **la fin de la première année après Mfuti ou une période qui s'en approche**, à préciser avec la durée des routes, l'initiation et le séjour. Cette appréciation reste approximative, pas une équation de mois déjà verrouillée.
+- **T0 + 2 ans** : **mariage avec Mutinu** à respectivement **19 et 17 ans**. Entre-temps : préparation des **dotations aux deux familles, paternelle et maternelle**, tout en respectant l'année initiatique.
+
+### 2. Kinuani : construire ses champs et ses hommes
+
+Dans les mois qui suivent le rappel, **Kinuani prépare des champs**, des travaux agricoles, des moyens de subsistance et une maisonnée capable de nourrir sa future famille. **Interprétation d'une transcription orale « chants » → « champs »**, confirmée par la suite de la description sur la terre et l'entretien du foyer. Dans le cadre social décrit par l'auteur, la capacité de se nourrir et de nourrir les siens **rend un jeune homme apte au mariage**.
+
+Kinuani a retenu de son ancien couvent **la force du groupe, l'utilité de l'entraide et la permanence de la hiérarchie** : ses camarades, milongoki anciens ou venus d'autres couvents, soldats, jeunes et futurs maris **l'aident aux travaux agricoles**. Il forme lui-même des jeunes et des personnes déjà compétentes **aux arts de combat** et organise des exercices. **Ne pas lui attribuer automatiquement le grade institutionnel de mulongi diplômé**, son cursus ayant été interrompu, bien qu'il enseigne des techniques dans la pratique.
+
+**Rythme matinal proposé par le Founder** : entraînement collectif d'**environ trois heures**, commençant **avant l'aube** et se poursuivant **jusqu'au lever du soleil**, avec **environ douze kilomètres de course à pied** parmi d'autres exercices. Chronométrage et rythme exacts à ajuster sans transformer ces valeurs narratives approximatives en record sportif obligatoire. Sur certaines collines, Kinuani et ses compagnons croisent **des groupes de personnes âgées** qui montent contempler l'aurore depuis des points remarquables. C'est une **image du monde fictionnel**, pas une coutume historiquement attestée pour tout le royaume.
+
+La méthode collective de Kinuani **persiste plus tard**, notamment **au Mayombe** : entraînement, acrobaties, rondes et formation de jeunes soldats. Conserver les scènes de Mayombe **dans leur période ultérieure** et ne pas les ramener au séjour précédant son mariage.
+
+### 3. Funérailles de Ne Mawungu : le voyage de Ne Nzongo
+
+Au décès du maître, **Ne Nzongo part précipitamment** avec Kinuani et ses gens. En raison de son âge et de son rang, Nzongo voyage dans un **kipoui / kipoyi**, siège ou dispositif porté à hauteur d'épaules par **quatre porteurs dans la représentation de l'auteur**, avec **relais de jeunes** pour soutenir l'allure rapide. La forme précise (siège ou hamac) et la graphie doivent être documentées : une étude historique sur les transports kongo atteste le terme **kipoyi / tipoye** pour des portages de dignitaires, de formes variables selon l'époque. Ne pas figer les détails de construction avant vérification du XVIIe siècle.
+
+Malgré la hâte, le groupe arrive **après l'inhumation**. La perte des emblèmes, insignes et savoirs de Mawungu est douloureuse pendant le **deuil qui se poursuit jusqu'au quarante-cinquième jour**. C'est bien **le décès de Mawungu** ici : ne pas confondre avec le **deuil de 45 jours de Ne Nzongo**, survenant plus tard dans l'histoire.
+
+### 4. Autre décès notable, déplacement voisin, et animaux de Nzongo
+
+Dans cette même grande période précédant la dot, **un notable meurt dans un territoire voisin de Kuimba**. L'auteur propose temporairement **« Ne Mwanda », « Nadi » ou « Ne Mwanda Nadi »**, avec un lieu possible **Bamba**. **NOM, RANG EXACT, IDENTITÉ ET LOCALISATION NON CANONISÉS** : créer une entrée de personnage candidat, non une personne validée en DB. Ne Nzongo se déplace de nouveau, accompagné de ses proches, notamment **Kinuani** ; le Founder mentionne également **Mutinu**, mais les conditions de sa présence doivent être articulées avec **son année de formation initiatique**. Ne pas inventer sa disponibilité ou une permission de sortie du couvent.
+
+**Animaux du patriarche** : Ne Nzongo aime vivre entouré d'animaux, dont **un perroquet** très jaloux quand quelqu'un s'approche de lui, **des singes** (nombre **trois, approximatif**) et des **chats**, plus d'autres animaux à préciser. Le perroquet peut se tenir **sur son épaule** ; un singe peut **l'accompagner de très près ou lui tenir la main**. Ne pas imposer un nom, une espèce ou un comportement surnaturel ; ces détails servent sa caractérisation et la vie quotidienne.
+
+### 5. Points encore à vérifier
+
+1. **Fenêtre exacte** de l'entrée de Mutinu au couvent, du décès de Mawungu et du retour à Kuimba, tout en conservant le mariage **T0 + 24 mois** et l'initiation **au moins douze mois**.
+2. Portage **kipoui / kipoyi / tipoye** : différences historiques entre siège et hamac, nombre et statut des porteurs selon rang et période.
+3. Titres exacts de Kinuani au départ du couvent et durant les formations informelles ; pratiques agricoles et capacité économique à nourrir une famille.
+4. Cérémonies de dot des lignées paternelle et maternelle ; nom du notable voisin et localisation « Bamba » **hypothétiques**.
+5. Ordre des voyages et **présence possible de Mutinu** pendant sa formation.
+6. Effectifs et identité des singes ; perroquet et chats, animaux proposés par le Founder.
+7. Datation civile et répartition **tomes / points de vue** restent à rapprocher de la DB Sonekeno avant toute réécriture de scène.
+
+**Source historique consultée pour le seul terme de transport** : étude sur les formes de portage `kipoyi / tipoye` dans les sociétés kongo, *Kanian Tere* (2019), et travaux de lexicographie relatifs à « tipoye » ; **la représentation à quatre porteurs est l'intention romanesque du Founder et non une attestation exclusive**.
