@@ -53,9 +53,9 @@ Pendant l’absence : Ndebeka manœuvre → Mikembi finit enceinte de Ndebeka (M
 
 Quand Kinuani sortira du couvent, Ndebeka est déjà marié, et Mabanza est déjà de retour, présent plus tard aux grandes cérémonies.
 
-ÉPOQUE 2 — 1638 — Le couvent de Ta Mukono (avant Mpika)
+ÉPOQUE 2 — 1638 — Couvent d'élite dirigé par Ne Mawungu (nom institutionnel à retrouver)
 
-Lieu : grand couvent d’élite (celui de Ta Mukono), hors Kuimba
+Lieu : grand couvent d'élite sous l'autorité de Ne Mawungu, hors Kuimba
 ➡️ Important : le couvent est à ~5 jours de marche de Kuimba, pas “dans Kuimba”.
 
 Vie des milongoki :
@@ -130,13 +130,13 @@ influence indirecte pour rendre Ta Mualu plus favorable.
 
 Mutinu reçoit une éducation “normale” de fille dans sa lignée, puis accélération quand on sait que le mariage devient probable (apprendre à tenir maison/homme selon normes sociales).
 
-ÉPOQUE 5 — 1640 — Éviction de Ta Mukono → rappel des “enfants”
+ÉPOQUE 5 — vers 1640 (datation ancienne à contrôler) — Défaite institutionnelle de Ne Mawungu → rappel des jeunes du clan
 
 Lieu : Kuimba + routes
 
-Ta Mukono est évincé de son couvent.
+Ne Mawungu, chef suprême du couvent, est défait dans une lutte institutionnelle. Il se retire dans son fief/village natal ; une réorganisation de l'institution reste un objectif pour les anciens.
 
-Nzongo rappelle Kinuani (et les autres sortis de ce couvent, dont Matondo, et les jumeaux narrateurs Nsimba & Nzuzi du clan Kuimba).
+Ne Nzongo fait rappeler par ses messagers Kinuani et les autres jeunes « fils » du clan Kuimba, dont ses cousins, avant la fin de leur formation. La liste nominative ancienne (Matondo, Nsimba, Nzuzi) doit être vérifiée en DB. Les jeunes ignorent d'abord pourquoi ils doivent partir.
 
 Retour :
 
@@ -206,19 +206,19 @@ Les défenses anciennes fonctionnent : l’attaque échoue.
 
 Effet : renforce la réputation du pays, et durcit les lignes.
 
-ÉPOQUE 8 — 1644/1645 — Mort de Ta Mukono à Luwozi : profanation des savoirs
+ÉPOQUE 8 — Mort de Ne Mawungu et dispersion des artefacts (date et position avant/après mariage NON arbitrées ; 1644/1645 est une datation ancienne)
 
-Lieu : Luwozi
+Lieu : village natal / fief de Ne Mawungu (Luwozi dans les notes anciennes : à confirmer)
 
-Ta Mukono meurt quelques années après son éviction.
+Ne Mawungu meurt peu après sa défaite institutionnelle et son retrait dans son village natal. La date relative à l'union Kinuani–Mutinu reste à fixer par l'auteur.
 
-Aux funérailles, Kinuani arrive et découvre le désastre :
+Ne Nzongo participe aux funérailles / à l'événement suivant le décès. Kinuani et les siens découvrent une perte culturelle concrète :
 
-savoirs brûlés par une branche familiale anti-tradi,
+anciens récits de savoirs brûlés par une branche familiale anti-traditionnaliste : **donnée d'archive à vérifier**, non reconfirmée dans la dictée récente ;
 
-d’autres objets bradés à des marchands étrangers.
+artefacts de Ne Mawungu dispersés et proposés à des marchands ; certains objets sont déjà chez des commerçants blancs/étrangers. Les interventions de Ne Nzongo et des siens sont à préciser, sans inventer d'arrestations.
 
-Impact : choc majeur pour Kinuani (et rage froide). Nzongo “savait déjà” la guerre totale, mais là c’est une perte intime et symbolique.
+Impact : Kinuani commence à comprendre les inquiétudes de Ne Nzongo et Ne Mawungu, qu'il jugeait jadis trop radicaux. La perte tangible de l'héritage déclenche un infléchissement progressif, non une conversion immédiate.
 
 ÉPOQUE 9 — 1648 → 1650 — Mort de Nganga Mungua → Exil au Mayombe (2 ans)
 
@@ -530,3 +530,13 @@ Pers. : Kinuani, Mutinu, Prince Vita Kanga, Roi Garcia II
 **Geste éditorial à effectuer avant insertion de scènes** : relever une ligne pour chaque scène candidate, avec `date_de_l'histoire`, `POV`, `personnages`, `lieu`, `source`, `tome_candidat`, `statut_validation`. **Tome candidat = NON AFFECTÉ tant que l'auteur n'a pas décidé** ; plusieurs tomes peuvent présenter une même période sous des focalisations distinctes. Une partie des scènes familiales et initiatiques de Mutinu relève potentiellement du tome 3, plutôt que systématiquement du tome 1.
 
 **Vigilance de source** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` § E ; références sur Nkibaluengele et les modèles de Nzongo dans `text-files/FICHE CANON — TA MFUILA (ex-makesa.txt`. Les institutions, pratiques et chronologies des événements historiques doivent être confrontées à une recherche historique séparée avant affirmation documentaire.
+
+
+## Rectificatif de cohérence — Mfuti, unique banquet final et défaite de Ne Mawungu (22 octobre 2026)
+
+- **Pas de banquet familial dès le premier jour** : l'idée a été **abandonnée** et Mama Tusikila a **déplacé toute la réception à la fin des festivités** pour accroître sa notoriété. L'unique grand banquet comprend notamment Kiesa kia Bikuta, Kimbembe, sa mère et sa fiancée, plus une autre « mère » à identifier. Les passages anciens impliquant deux banquets sont obsolètes.
+- **Kinuani** : attiré par Mutinu mais discipliné, sans écart avant mariage, il la traite encore comme sa sœur et respecte le choix matrimonial des tantes et des siens ; il n'a pas assez de familiarité avec Tusikila pour lui confier directement sa préférence. Nianzi, ancienne amie et promise, reste un souvenir lointain à ce moment.
+- **Mawungu** : premier maître à accepter une ouverture pédagogique tactique (latin/portugais) puis inquiet de l'assouplissement de l'institution ; défait dans une crise interne, il quitte le couvent, se retire, meurt peu après. **Ordre chronologique de cette mort par rapport au mariage non fixé**.
+- **Ne Nzongo** rappelle avant la fin de formation les fils de Kuimba (sens clanique). Il assiste à l'événement consécutif à la mort de Mawungu ; le groupe découvre des artefacts disséminés auprès de commerçants, dont des Blancs. Kinuani revoit son jugement sur l'inquiétude des anciens.
+- **Toponymie et datation** : Luwozi et 1644/1645 figuraient dans une version antérieure ; contrôles requis. Ne pas fixer l'épisode à un livre/tome sans inventaire des POV.
+- Source développée : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` §46.
