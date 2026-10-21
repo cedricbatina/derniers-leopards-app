@@ -138,9 +138,9 @@ Environ un an après Mfuti, **Ne Mawungu se retire à la suite d'une crise insti
 
 **Deux à trois mois après le retrait de Ne Mawungu**, Ne Nzongo fait rappeler par ses messagers Kinuani et les autres jeunes « fils » du clan Kuimba, dont ses cousins, **avant la fin de leur formation**. La liste nominative ancienne (Matondo, Nsimba, Nzuzi) doit être vérifiée en DB. Les jeunes ignorent d'abord pourquoi ils doivent partir ; le couvent perd une part considérable de ses effectifs.
 
-Retour :
+Retour vers Kuimba : **cinq jours de voyage depuis le couvent**, où Kinuani s'interroge sans connaître le motif du rappel (nouveau couvent ? retour temporaire ? projet de mariage avec Nianzi ?). Nzongo a aussi rappelé des élèves d'**autres couvents**.
 
-jamais seuls, escortes par 12 hommes, relais de village en village, parfois bivouac hors village.
+Sur la route, déplacements en groupe, escortes par 12 hommes selon l'ancienne trame à vérifier, relais de village en village et parfois bivouac. **Dans les deux ou trois premiers jours suivant l'arrivée**, Kinuani apprend qu'un mariage avec **Nianzi** est presque convenu par les familles.
 
 la nouvelle circule vite partout.
 
@@ -156,7 +156,7 @@ forge rituelle (incantations, gestes, sonorités),
 
 contes/rewards vers 16h sous manguier (ta nawa),
 
-assistants (≈18), présence d’alliés (dont Ta Matayi), conseils (structure matriarcale : mamans décideuses, hommes incarnent publiquement).
+assistants (≈18 dans l'ancienne documentation), présence d'alliés (dont Ta Matayi), conseils (structure matriarcale selon le monde du roman). **Nzongo veut élargir son entourage de justice et de gouvernement** avec les jeunes du clan et d'autres profils ; le Founder évoque un **conseil d'environ 18**, sans avoir encore établi si le chiffre de 18 assistants est celui de ses conseillers.
 
 ÉPOQUE 6 — Longo (mariage) DEUX ANS APRÈS MFUTI, Kinuani 19 ans / Mutinu 17 ans (ancien repère « 1641 » non harmonisé)
 
@@ -557,3 +557,20 @@ Source : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026
 - **Rapports hommes/femmes** : sévérité envers les hommes, égards calculés pour les femmes par croyance en une réincarnation passant par la lignée maternelle. La transmission de l'ADN mitochondrial ne confirme **aucune** réincarnation ; lien seulement dans les convictions de Nzongo.
 - **Dernière visite Kinuani** : « vers ses 13 ans ; Nzongo ne l'aurait pas revu depuis environ 4 ans » = **hypothèse orale du Founder**, non établie. Ne pas gommer ses souvenirs jusqu'à sept ans ; vérifier la dernière visite et les dates.
 - Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §I. Aucun rattachement automatique de ces scènes à un tome.
+
+
+## Articulation matrimoniale et politique — cinq jours de voyage, mabembe et initiation (Founder, 22 octobre 2026)
+
+**But de Ne Nzongo** : préparer la relève de Kuimba par la formation à domicile, le mariage des jeunes qui y sont prêts, la constitution de foyers et la transmission progressive des charges judiciaires, politiques et militaires. La parenté et les tantes participent aux choix matrimoniaux. Il veut **agrandir son conseil et son réseau de justice** ; **18** reste un ordre de grandeur à confronter aux anciens « 18 assistants », sans fusion hâtive. Des élèves d'**autres couvents** sont également rappelés. L'emploi possible de soldats comme Mfuila et les influences de Dobadola doivent rester soumis à la lecture de leurs fiches (loyautés non garanties).
+
+**Pendant les cinq jours entre le couvent et Kuimba**, Kinuani envisage un passage provisoire, une réaffectation ou un mariage avec Nianzi sans connaître l'ordre de Nzongo. **Deux à trois jours après l'arrivée**, il découvre le projet presque arrêté de l'union avec Nianzi. Cette **annonce n'est pas la célébration**.
+
+**Adieu de Kinuani à Mutinu** : un matin, au cours du footing collectif, Kinuani bifurque pour aller lui dire au revoir (distance envisagée **25 à 30 km**, à vérifier). Ils s'aiment dans la retenue ; Mutinu le laisse partir en pensant qu'il prépare **leur** mariage. **Placement exact de cet adieu avant le départ de Mfuti ou lors d'un déplacement ultérieur à déterminer** sans inventer une escale dans le trajet couvent–Kuimba.
+
+**Mabembe** : plusieurs relais humains et/ou pigeons portent le projet Kinuani–Nianzi de Kuimba vers Mfuti ; certains sont liés à Mama Tusikila et la nouvelle circule aussi dans la famille de Mutinu avant ou en même temps qu'elle parvient à Tusikila. Mutinu, croyant Kinuani destiné à l'épouser, vit une peine profonde en découvrant l'autre prétendante. Ses oncles et tantes interpellent Tusikila, qui repart négocier à Kuimba et rassure le clan de Mutinu.
+
+**Kisita** accepte finalement l'union Kinuani–Mutinu avec une **condition d'au moins un an de formation féminine d'élite** (nom du cercle non fixé ; Kumbi/Kikumbi comme pistes historiques à vérifier). Les oncles de Mutinu expriment des réticences. Mutinu accepte avec courage malgré sa crainte d'être remplacée : elle veut se préparer à la vie d'épouse d'un futur responsable et découvre des compétences de gestion, d'alliance, de médiation et d'autorité. Tusikila lui assure que Kinuani sera son époux ; **c'est son engagement, non un fait déjà officiellement acquis auprès de tous**. **Nianzi reste vivante**.
+
+**Point de cohérence chronologique prioritaire** : Mfuti et mariage sont séparés de **deux ans**. Retrait du couvent **environ un an après Mfuti**, rappel **2 à 3 mois après**, annonce **2 à 3 jours après retour**, initiation d'**au moins 12 mois** après négociation : ces intervalles risquent de déborder légèrement des deux ans s'ils sont tous pris comme durées exactes. **Ne pas modifier les jalons fixes ni réduire l'initiation ; arbitrer le moment approximatif du retrait et la date réelle d'entrée en formation.**
+
+**Source** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §J. À répartir entre volumes avec statut `NON AFFECTÉ`, en particulier les séquences focalisées sur Mutinu éventuellement développées dans le tome 3 `Mama i Mama`.
