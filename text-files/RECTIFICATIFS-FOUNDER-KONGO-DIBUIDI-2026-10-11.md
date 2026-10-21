@@ -145,3 +145,18 @@ Cette tension intérieure doit rester visible **avant** sa maturation comme méd
 **Basculement de Kinuani** : confronté à cette dilapidation culturelle, il commence à comprendre le danger que dénonçaient Mawungu et Nzongo, pourtant considérés jusque-là comme trop radicaux. Ce cheminement intellectuel reste progressif et ne lui retire ni son esprit critique, ni la compréhension de l'intérêt stratégique des langues étrangères.
 
 **Portée transversale** : archiver cette séquence comme ensemble d'événements à distribuer entre tomes par POV après comparaison aux scènes existantes. Pointage complet dans `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` §§31, 33, 45–46.
+
+
+## H. Repères d'âge, retrait de Mawungu et retour à Kuimba (Founder, 22 octobre 2026)
+
+**Arbitrage d'âge** : lors des fêtes de Mfuti, **Kinuani a 17 ans** et **Mutinu 15 ans**. Ils se marient **deux ans après**, à respectivement **19 et 17 ans**. La trame antérieure affichait **Mfuti 1638 (18/16 ans)** puis **mariage 1641 (21/19 ans)** : ces âges et cet intervalle sont **supersédés**. Les millésimes absolus 1638 et 1641 doivent être recalés, pas maintenus conjointement comme canon.
+
+**Séquence relative** : environ **un an après Mfuti**, **Ne Mawungu** perd son autorité dans une lutte institutionnelle, démissionne ou est écarté, et se replie dans son fief natal. Le couvent se vide, nombreux élèves partis, notamment **Kimbembe** et **Kiesa kia Bikuta**. **Deux à trois mois plus tard**, Ne Nzongo rappelle par messagers **les fils du clan Kuimba**, dont Kinuani et ses cousins, **avant la fin de leur formation**. Ils ne comprennent pas la cause de cette décision. Retrait, rappel, mort et funérailles ne sont **pas un même événement**.
+
+**Mort de Ne Mawungu** : après son retrait, à une date encore **non arbitrée par rapport au mariage**. Pendant le déplacement vers les funérailles, les arrivants voient de la **fumée** à distance. Des objets de Mawungu sont brûlés, dont des **sceptres/insignes de pouvoir**, et d'autres vendus. Terme oral **« mvoala »** à identifier avant normalisation. Des marchands **noirs ou blancs** circulent avec des objets d'une valeur morale, spirituelle, institutionnelle et technique considérable. Des instruments de commandement, des signes et des savoirs consignés par Mawungu sont dispersés, parfois mis entre les mains de **non-initiés**. Ne pas inventer les auteurs des destructions ou les mesures exactes prises contre les ventes.
+
+**Kinuani** voit une perte faite à un héritage de savoirs qui aurait dû contribuer à l'instruction, aux soldats d'élite et à la défense du Kongo. Cette dilapidation transforme progressivement son jugement sur les avertissements de **Ne Nzongo et Ne Mawungu**, auparavant jugés excessivement rigoristes.
+
+**Scène du retour à Kuimba** : au matin du retour de Kinuani rappelé du couvent, **Ne Nzongo balaie longuement sa concession**, debout, réalisant parfois des **mouvements d'arts martiaux avec le balai comme bâton**. Le patriarche a auparavant couru, nagé et pratiqué d'autres exercices physiques matinaux ; sa routine a évolué. Kinuani l'a connu **jusqu'à ses sept ans environ** comme un homme inflexible sur la morale et les principes, exigeant sur la discipline, détestant l'imprudence, la sottise et la négligence. Ne pas inventer le dialogue de leurs retrouvailles.
+
+**Liens de preuve / suite** : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` §47 et chronologie du dépôt. Le **tome de rattachement** reste NON AFFECTÉ par scène. Vérification des dates/âges/identifiants dans Sonekeno toujours nécessaire.
