@@ -341,3 +341,36 @@ Dans cette même grande période précédant la dot, **un notable meurt dans un 
 - **Statut** : décisions d'auteur sur les positions et le résultat matrimonial ; itinéraires et identité de l'accompagnatrice encore à documenter. Répartir entre tomes par POV, notamment perspectives de Mutinu envisageables dans **`Mama i Mama` (tome 3)**.
 
 **Sources existantes à rapprocher** : `text-files/FICHE CANON — KINUANI (mulongoki d’.txt`, `text-files/fiches personnages resume.txt`, `text-files/LES DERNIERS LÉOPARDS — Chronologie.txt` et `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md`. Pas de migration de la DB par ce seul complément.
+
+
+## M. Mutinu — affirmation de soi, reproche initial et intuition de Tusikila (Founder, 22 octobre 2026)
+
+**Arbitrage narratif sur les caractères, en complément des sections J à L**. Ne pas attribuer automatiquement toutes ces scènes à `Kongo Dibuidi` : l'intériorité de Mutinu est aussi une matière majeure pour le tome 3 `Mama i Mama`.
+
+### Le tempérament de Mutinu, avant et après la rencontre
+
+**Mutinu** est une jeune femme **affirmée, sûre d'elle, vive d'esprit, directe et argumentative**. Elle n'a « pas la langue dans sa poche » : elle contredit ses parents, tantes ou oncles lorsque leurs propositions lui déplaisent et défend ses décisions **par des arguments solides**. Elle parvient souvent à obtenir satisfaction. Sa devise / règle personnelle se formule : **« On ne me choisit pas. C'est moi qui choisis. »** Cette autonomie existe **avant** la rencontre avec Kinuani et ne doit pas être présentée comme un tempérament qu'elle aurait acquis uniquement par l'initiation.
+
+### La première journée de Mfuti : ce que Tusikila remarque
+
+**Dès le premier jour**, Mama Tusikila, qui connaît depuis longtemps le caractère habituellement ferme de Mutinu, la surprend **intimidée, hésitante ou momentanément déconcertée** par la présence du jeune **Kinuani**, qu'elle vient de rencontrer. Il ne s'agit pas d'une humiliation, ni d'une jeune fille soudainement passive : **ce contraste exceptionnel** révèle à Tusikila une attirance que Mutinu elle-même ne maîtrise pas encore.
+
+C'est ce signe inhabituel qui déclenche **l'intuition de Tusikila**, puis **une conversation et une complicité confidentielles entre Tusikila et Mutinu** sur la possibilité d'un lien matrimonial. La note déjà écrite `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` §§25–27 fait proposer par Tusikila « Kuela kuaku muana wua mono » : il s'agit à ce stade d'une **proposition confidentielle personnelle, non d'une union conclue**. Les anciennes phrases laissant entendre qu'une **négociation de dot serait déjà engagée le premier jour** sont à nuancer. **Kinuani ignore** cette proposition, les clans n'ont pas encore tranché et **aucun banquet du premier jour n'est réintroduit**.
+
+### À l'entrée du couvent féminin : amour, colère et croissance
+
+Après l'annonce du mariage projeté avec **Nianzi**, la mobilisation de sa famille et la négociation conduite par Tusikila, Mutinu accepte **au moins un an d'initiation prénuptiale**. Elle entre dans cette formation **encore blessée et contrariée contre Kinuani**. Dans **son propre jugement**, puisqu'elle-même combat les décisions familiales pour obtenir ce qu'elle désire, elle lui reproche de **ne pas avoir imposé son premier choix : elle**. Elle imagine que, **sans sa propre résistance et sans l'intervention de sa famille et de Tusikila**, ils auraient pu être définitivement séparés.
+
+**C'est le ressentiment subjectif de Mutinu**, pas la preuve objective d'un manque d'amour ou de courage de Kinuani : celui-ci se soumet aux règles claniques, au choix des tantes et à l'autorité des anciens, selon son éducation. Le récit doit respecter **les deux systèmes de valeurs** et leur conflit intérieur.
+
+Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette rancœur. **Peu à peu ensuite**, elle prend du recul, se forme, mûrit et commence à comprendre la force des obligations qui pesaient sur Kinuani. Cette évolution **ne doit pas effacer sa personnalité combative** : son apprentissage affine son jugement et transforme son énergie en capacité de décision, de conseil et de direction. **Ne pas inventer d'excuses, de confrontation ou de réconciliation datées** si aucune scène ne les établit.
+
+### Continuité et repères
+
+- **Mfuti T0** : Mutinu 15 ans, Kinuani 17 ans ; intuition de Tusikila **dès le premier jour**, puis plusieurs rencontres pendant les festivités ; banquet **unique et final**.
+- **Vers T0+7 mois et après les négociations** : Mutinu entre dans son couvent féminin ; **mois 1 environ** = colère persistante ; puis apprentissage du recul.
+- **Vers T0+24 mois** : mariage à 17 ans / 19 ans, après **au moins douze mois d'initiation**.
+- **Tome 3** : l'arc psychologique et la voix de Mutinu sont des **candidats forts**, mais l'affectation précise des scènes exige la matrice chronologie × POV × volume.
+- **Personnages** : Nianzi reste **vivante** ; ne pas confondre la sœur aînée divorcée de Mutinu, la sœur de Kinuani et Nianzi.
+
+**Contrôle editorial** : placer l'observation de Tusikila avant la proposition secrète, la proposition avant les négociations familiales réelles, l'entrée au couvent avant l'apaisement intérieur de Mutinu. Distinguer sa rancœur contre Kinuani de sa peine à l'annonce de Nianzi, qui la précède.
