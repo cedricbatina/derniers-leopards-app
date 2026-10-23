@@ -1,5 +1,5 @@
 import { dbQuery } from '../../../../../../utils/db.js'
-import { getBookByAccess } from '../../../../../../utils/projects.js'
+import { getBookForNarrativeApi } from '../../../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
   }
 
-  const book = await getBookByAccess(user, bookSlug)
+  const book = await getBookForNarrativeApi(user, bookSlug)
   if (!book) {
     throw createError({ statusCode: 404, statusMessage: 'Book not found' })
   }

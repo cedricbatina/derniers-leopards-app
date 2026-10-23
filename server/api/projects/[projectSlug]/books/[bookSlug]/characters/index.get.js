@@ -1,17 +1,19 @@
 import { dbQuery } from '../../../../../../utils/db.js'
+import { getBookForNarrativeApi, canManageBook } from '../../../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
+  const user = event.context.user
+
   const bookSlug = String(event.context.params.bookSlug || '').trim()
   if (!bookSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid bookSlug' })
 
-  // Récupère le livre
-  const bookRows = await dbQuery('SELECT * FROM books WHERE slug = ?', [bookSlug])
-  const book = bookRows[0]
+  const book = await getBookForNarrativeApi(user, bookSlug)
   if (!book) throw createError({ statusCode: 404, statusMessage: 'Book not found' })
 
   const { q, trashed } = getQuery(event)
   const query = (q ? String(q).trim() : '') || null
-  const trashedFlag = String(trashed || '') === '1' ? 1 : 0
+  const trashedFlag =
+    canManageBook(book, user) && String(trashed || '') === '1' ? 1 : 0
 
   const rows = await dbQuery(
     `

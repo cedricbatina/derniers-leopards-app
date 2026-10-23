@@ -1,20 +1,20 @@
 // server/api/projects/[projectSlug]/characters/index.get.js
 import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByAccess } from '../../../../utils/projects.js'
+import { getProjectForNarrativeApi, canManageProject } from '../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
-  if (!user?.id) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
   const projectSlug = String(event.context.params.projectSlug || '').trim()
   if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
 
-  const project = await getProjectByAccess(user, projectSlug)
+  const project = await getProjectForNarrativeApi(user, projectSlug)
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const { q, trashed } = getQuery(event)
   const query = (q ? String(q).trim() : '') || null
-  const trashedFlag = String(trashed || '') === '1' ? 1 : 0
+  const trashedFlag =
+    canManageProject(project, user) && String(trashed || '') === '1' ? 1 : 0
 
   const rows = await dbQuery(
     `

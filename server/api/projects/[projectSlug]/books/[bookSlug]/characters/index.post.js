@@ -1,5 +1,5 @@
 import { dbQuery } from '../../../../../../utils/db.js'
-import { getBookByAccess } from '../../../../../../utils/projects.js'
+import { getBookForNarrativeApi } from '../../../../../../utils/projects.js'
 
 function toSlug(input) {
   return String(input || '')
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
   const bookSlug = String(event.context.params.bookSlug || '').trim()
   if (!bookSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid bookSlug' })
 
-  const book = await getBookByAccess(user, bookSlug)
+  const book = await getBookForNarrativeApi(user, bookSlug)
   if (!book) throw createError({ statusCode: 404, statusMessage: 'Book not found' })
 
   const body = await readBody(event)

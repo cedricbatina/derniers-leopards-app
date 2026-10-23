@@ -1,28 +1,22 @@
 // server/api/projects/[projectSlug]/scenes/index.get.js
 import { dbQuery } from '../../../../utils/db.js'
+import { getProjectForNarrativeApi, canManageProject } from '../../../../utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
-  const userId = Number(user?.id || user?.sub)
-  if (!userId) throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
 
   const projectSlug = String(event.context.params.projectSlug || '').trim()
   if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
 
-  // Récupère le projet
-  const projectRows = await dbQuery(
-    'SELECT id, slug, title FROM projects WHERE owner_id = ? AND slug = ? AND deleted_at IS NULL LIMIT 1',
-    [userId, projectSlug]
-  )
-  const project = projectRows[0]
+  const project = await getProjectForNarrativeApi(user, projectSlug)
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const { q, chapter_id, trashed } = getQuery(event)
   const query = (q ? String(q).trim() : '') || null
   const chapterId = chapter_id ? Number(chapter_id) : null
-  const trashedFlag = String(trashed || '') === '1' ? 1 : 0
+  const trashedFlag =
+    canManageProject(project, user) && String(trashed || '') === '1' ? 1 : 0
 
-  // Récupère les scènes avec les personnages POV
   const rows = await dbQuery(
     `
     SELECT 
@@ -33,9 +27,11 @@ export default defineEventHandler(async (event) => {
       s.indesign_style,
       s.created_at, s.updated_at, s.deleted_at,
       c.name as pov_character_name,
+      ch.title as chapter_title,
       (SELECT COUNT(*) FROM scene_characters WHERE scene_id = s.id) as character_count
     FROM scenes s
     LEFT JOIN characters c ON s.pov_character_id = c.id
+    LEFT JOIN chapters ch ON ch.id = s.chapter_id
     WHERE s.project_id = ?
       AND (? IS NULL OR s.chapter_id = ?)
       AND (

@@ -24,6 +24,9 @@ const PUBLIC_PREFIXES = [
   // me/logout publics (me: pratique pour front, logout: efface cookies)
   '/api/auth/me',
   '/api/auth/logout',
+
+  // Bundles d’icônes Nuxt Icon (sinon 401 sans cookie)
+  '/api/_nuxt_icon',
 ]
 
 function cookieShouldBeSecure(event) {
