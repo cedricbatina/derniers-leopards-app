@@ -21,7 +21,7 @@ const canonicalUrl = computed(() => (
 const seoTitle = computed(() => t('seo.explore.timeline.title'))
 const seoDescription = computed(() => t('seo.explore.timeline.description'))
 const ogImage = computed(() => (
-  baseUrl.value ? new URL('/images/og-explore.png', baseUrl.value).toString() : '/images/og-explore.png'
+  baseUrl.value ? new URL('/images/logo-sonekeno.png', baseUrl.value).toString() : '/images/logo-sonekeno.png'
 ))
 
 useSeoMeta({

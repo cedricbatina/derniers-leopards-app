@@ -101,7 +101,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { useI18n } from '#imports'
 import { useDateUtils } from '~/composables/useDateUtils'
 
 const props = defineProps({

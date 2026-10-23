@@ -244,27 +244,58 @@ strong { color: rgb(var(--text)); }
   font-weight: 700;
   border: 1px solid rgb(var(--border));
   background: rgb(var(--surface));
+  color: rgb(var(--text));
   transition: background-color .15s ease, transform .08s ease, opacity .15s ease;
 }
-.btn:hover { background: rgb(var(--surface2)); }
+.btn:not(.btn-primary):not(.btn-ghost):not(.btn-danger):hover:not(:disabled):not([aria-disabled="true"]) {
+  background: rgb(var(--surface2));
+}
 .btn:active { transform: scale(0.99); }
 
 .btn-primary {
   border-color: transparent;
-  color: white;
+  color: rgb(255 255 255);
   background: linear-gradient(135deg, rgb(var(--brand)), rgb(var(--brand2)));
+}
+.btn-primary:hover:not(:disabled):not([aria-disabled="true"]) {
+  color: rgb(255 255 255);
+  border-color: transparent;
+  background: linear-gradient(135deg, rgb(var(--brand)), rgb(var(--brand2)));
+  box-shadow: 0 10px 28px rgb(var(--brand) / 0.38);
+}
+.btn-primary:active:not(:disabled):not([aria-disabled="true"]) {
+  box-shadow: 0 6px 18px rgb(var(--brand) / 0.28);
 }
 
 .btn-ghost {
   border-color: transparent;
   background: transparent;
+  color: rgb(var(--text));
 }
-.btn-ghost:hover { background: rgb(var(--surface2)); }
+.btn-ghost:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: rgb(var(--surface2));
+  color: rgb(var(--text));
+}
 
 .btn-sm {
   padding: .375rem .75rem;
   font-size: .75rem;
   border-radius: .6rem;
+}
+
+.btn-danger {
+  border-color: transparent;
+  color: rgb(255 255 255);
+  background: linear-gradient(135deg, rgb(var(--danger)), rgb(var(--danger) / 0.88));
+}
+.btn-danger:hover:not(:disabled):not([aria-disabled="true"]) {
+  color: rgb(255 255 255);
+  border-color: transparent;
+  background: linear-gradient(135deg, rgb(var(--danger)), rgb(var(--danger) / 0.88));
+  box-shadow: 0 10px 28px rgb(var(--danger) / 0.42);
+}
+.btn-danger:active:not(:disabled):not([aria-disabled="true"]) {
+  box-shadow: 0 6px 18px rgb(var(--danger) / 0.3);
 }
 
 .input, .select, .textarea {
@@ -340,13 +371,22 @@ strong { color: rgb(var(--text)); }
   font-size: .875rem;
   border: 1px solid rgb(var(--border));
   background: rgb(var(--surface));
+  color: rgb(var(--text));
   transition: background-color .15s ease, opacity .15s ease;
 }
-.pill:hover { background: rgb(var(--surface2)); }
+.pill:not(.pill-active):hover {
+  background: rgb(var(--surface2));
+}
 .pill-active {
   border-color: transparent;
-  color: white;
+  color: rgb(255 255 255);
   background: linear-gradient(135deg, rgb(var(--brand)), rgb(var(--brand2)));
+}
+.pill-active:hover {
+  color: rgb(255 255 255);
+  border-color: transparent;
+  background: linear-gradient(135deg, rgb(var(--brand)), rgb(var(--brand2)));
+  box-shadow: 0 8px 24px rgb(var(--brand) / 0.35);
 }
 
 .divider {

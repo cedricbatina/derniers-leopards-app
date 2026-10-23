@@ -27,7 +27,7 @@ const learnMore = computed(() =>
 const title = computed(() => t('seo.home.title', { app: siteName }))
 const description = computed(() => t('seo.home.description', { app: siteName }))
 const ogImage = computed(() => (
-  baseUrl ? new URL('/images/og-home.png', baseUrl).toString() : '/images/og-home.png'
+  baseUrl ? new URL('/images/logo-sonekeno.png', baseUrl).toString() : '/images/logo-sonekeno.png'
 ))
 
 useSeoMeta({

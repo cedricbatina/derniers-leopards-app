@@ -1,17 +1,39 @@
 <script setup>
-import { onMounted, onBeforeUnmount } from 'vue'
-import { useI18n, useLocalePath, useSeoMeta } from '#imports'
+import { computed, onMounted, onBeforeUnmount } from 'vue'
+import { useI18n, useLocalePath, useRuntimeConfig, useSeoMeta, useHead } from '#imports'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
+const config = useRuntimeConfig()
+
+const canonicalPath = computed(() => localePath('/explore'))
+const baseUrl = computed(() => config.public?.SITE_URL || '')
+const canonicalUrl = computed(() => (
+  baseUrl.value ? new URL(canonicalPath.value, baseUrl.value).toString() : canonicalPath.value
+))
+const seoTitle = computed(() => t('seo.explore.index.title'))
+const seoDescription = computed(() => t('seo.explore.index.description'))
+const ogImage = computed(() => (
+  baseUrl.value ? new URL('/images/logo-sonekeno.png', baseUrl.value).toString() : '/images/logo-sonekeno.png'
+))
 
 useSeoMeta({
-  title: () => t('seo.explore.index.title'),
-  description: () => t('seo.explore.index.description'),
-  ogTitle: () => t('seo.explore.index.title'),
-  ogDescription: () => t('seo.explore.index.description'),
+  title: () => seoTitle.value,
+  description: () => seoDescription.value,
+  ogTitle: () => seoTitle.value,
+  ogDescription: () => seoDescription.value,
   ogType: 'website',
+  ogUrl: () => canonicalUrl.value,
+  ogImage: () => ogImage.value,
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => seoTitle.value,
+  twitterDescription: () => seoDescription.value,
+  twitterImage: () => ogImage.value,
 })
+
+useHead(() => ({
+  link: [{ rel: 'canonical', href: canonicalUrl.value }],
+}))
 
 /**
  * Reveal on scroll (opt-in via .js-reveal)

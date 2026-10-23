@@ -17,5 +17,8 @@ export default defineNuxtRouteMiddleware(async (to) => {
     loginPath = localePath('/login')
   } catch {}
 
-  return navigateTo({ path: loginPath, query: { redirect } })
+  return navigateTo({
+    path: loginPath,
+    query: { redirect: String(redirect), reason: 'auth_required' },
+  })
 })

@@ -8,7 +8,7 @@ const route = useRoute()
 const { isOpen, title, message, icon, danger, loading, confirmLabel, cancelLabel, confirm, close } = useConfirm()
 
 const appName = computed(() => config.public.APP_NAME || 'Les derniers léopards')
-const siteUrl = computed(() => (config.public.APP_URL || 'http://localhost:3010').replace(/\/$/, ''))
+const siteUrl = computed(() => (config.public.APP_URL || 'http://localhost:3009').replace(/\/$/, ''))
 
 /**
  * Canonical URL SSR-safe (sans query/hash)
@@ -61,7 +61,7 @@ useHead(() => ({
   link: [
     { rel: 'canonical', href: canonicalUrl.value },
 
-    // favicons (à mettre dans /public)
+    { rel: 'icon', href: '/favicon.ico', sizes: '48x48' },
     { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' },
     { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' },
     { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
@@ -76,13 +76,13 @@ useHead(() => ({
     { property: 'og:url', content: canonicalUrl.value },
     { property: 'og:title', content: appName.value },
     { property: 'og:description', content: 'Bible & app de production du roman Les derniers léopards.' },
-    { property: 'og:image', content: `${siteUrl.value}/og-cover.png` },
+    { property: 'og:image', content: `${siteUrl.value}/images/logo-sonekeno.png` },
 
     // Twitter
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: appName.value },
     { name: 'twitter:description', content: 'Bible & app de production du roman Les derniers léopards.' },
-    { name: 'twitter:image', content: `${siteUrl.value}/og-cover.png` },
+    { name: 'twitter:image', content: `${siteUrl.value}/images/logo-sonekeno.png` },
   ],
   script: [
     {

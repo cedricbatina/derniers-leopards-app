@@ -11,6 +11,24 @@
           </p>
         </div>
 
+        <div
+          v-if="route.query.reason === 'auth_required'"
+          class="rounded-2xl border border-amber-500/35 bg-amber-500/10 p-4 text-sm"
+          role="status"
+        >
+          <div class="font-semibold text-foreground">
+            {{ tr('auth.studioAccess.loginBannerTitle', 'Connexion nécessaire') }}
+          </div>
+          <p class="mt-1 text-muted">
+            {{
+              tr(
+                'auth.studioAccess.loginBannerText',
+                'L’atelier (personnages, scènes, etc.) n’est disponible qu’après connexion avec un compte autorisé sur ce projet.',
+              )
+            }}
+          </p>
+        </div>
+
         <!-- Error -->
         <div
           v-if="errorMsg"

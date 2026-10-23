@@ -1,5 +1,5 @@
 // composables/useDateUtils.js
-import { useI18n } from "vue-i18n";
+import { useI18n } from '#imports'
 
 export function useDateUtils() {
   // ✅ locale dynamique (en/fr/...)

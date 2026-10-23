@@ -19,13 +19,13 @@
             </p>
 
             <div class="flex flex-wrap gap-2 pt-2">
-              <NuxtLink :to="localePath('/characters')" class="btn btn-primary focus-ring">
-                <Icon name="mdi:account-group" aria-hidden="true" />
+              <NuxtLink :to="localePath('/studio/projects')" class="btn btn-primary focus-ring">
+                <Icon name="mdi:folder-multiple-outline" aria-hidden="true" />
                 {{ t("home.hero.ctaPrimary") }}
               </NuxtLink>
 
-              <NuxtLink :to="localePath('/timeline')" class="btn btn-ghost focus-ring">
-                <Icon name="mdi:timeline" aria-hidden="true" />
+              <NuxtLink :to="localePath('/explore')" class="btn btn-ghost focus-ring">
+                <Icon name="mdi:compass-outline" aria-hidden="true" />
                 {{ t("home.hero.ctaSecondary") }}
               </NuxtLink>
             </div>
@@ -133,8 +133,8 @@
         <div class="text-sm text-muted">
           {{ t("home.trust.text") }}
         </div>
-        <NuxtLink :to="localePath('/login')" class="btn btn-sm focus-ring">
-          <Icon name="mdi:login" aria-hidden="true" />
+        <NuxtLink :to="localePath('/studio')" class="btn btn-sm focus-ring">
+          <Icon name="mdi:brush-outline" aria-hidden="true" />
           {{ t("home.trust.cta") }}
         </NuxtLink>
       </div>
@@ -177,7 +177,7 @@ const alternatePt = computed(() => new URL(switchLocalePath("en") || "/pt", site
 /**
  * Images OG (mets un vrai fichier dans /public/og/og.png par exemple)
  */
-const ogImage = computed(() => new URL("/og/og.png", siteUrl.value).toString())
+const ogImage = computed(() => new URL('/images/logo-sonekeno.png', siteUrl.value).toString())
 
 /**
  * Locale OG
