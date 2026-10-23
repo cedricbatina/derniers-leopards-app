@@ -1,5 +1,7 @@
--- SQL schema for todos table
--- Execute this in your MySQL database
+-- Table `todos` (tâches utilisateur / projet)
+-- Appliquer sur la base configurée (ex. derniers_leopards) :
+--   npm run db:create-todos
+--   (ou : mysql -u USER -p DB_NAME < server/database/todos-schema.sql)
 
 CREATE TABLE IF NOT EXISTS `todos` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
