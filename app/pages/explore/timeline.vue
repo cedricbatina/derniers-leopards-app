@@ -6,6 +6,19 @@ const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
 
+const timelineRelated = computed(() => [
+  {
+    to: localePath('/explore/structuring'),
+    label: t('explore.crossLinks.structuringLabel'),
+    hint: t('explore.crossLinks.fromTimeline.structuringHint'),
+  },
+  {
+    to: localePath('/explore/workflow'),
+    label: t('explore.crossLinks.workflowLabel'),
+    hint: t('explore.crossLinks.fromTimeline.workflowHint'),
+  },
+])
+
 /**
  * Canonical + base URL
  */
@@ -21,7 +34,7 @@ const canonicalUrl = computed(() => (
 const seoTitle = computed(() => t('seo.explore.timeline.title'))
 const seoDescription = computed(() => t('seo.explore.timeline.description'))
 const ogImage = computed(() => (
-  baseUrl.value ? new URL('/images/og-explore.png', baseUrl.value).toString() : '/images/og-explore.png'
+  baseUrl.value ? new URL('/images/logo-sonekeno.png', baseUrl.value).toString() : '/images/logo-sonekeno.png'
 ))
 
 useSeoMeta({
@@ -302,6 +315,12 @@ onBeforeUnmount(() => {
         </div>
       </div>
     </div>
+
+    <ExploreRelated
+      class="js-reveal"
+      :title="t('explore.crossLinks.title')"
+      :links="timelineRelated"
+    />
 
     <!-- CTA NEXT -->
     <div class="card card-hover card-accent accent-leopard overflow-hidden js-reveal">

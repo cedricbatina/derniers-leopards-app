@@ -136,6 +136,7 @@
     "aria": "Navigation principale",
     "home": "Accueil",
     "dashboard": "Tableau de bord",
+    "guide": "Guide",
     "characters": "Personnages",
     "scenes": "Scènes",
     "timeline": "Chronologie",
@@ -173,6 +174,11 @@
     "noAccount": "Pas encore de compte ?",
     "haveAccount": "Déjà un compte ?",
 
+    "studioAccess": {
+      "loginBannerTitle": "Connexion nécessaire",
+      "loginBannerText": "L’atelier (personnages, scènes, etc.) n’est disponible qu’après connexion avec un compte autorisé sur ce projet."
+    },
+
     "verify": {
       "sent": "Un email de confirmation a été envoyé.",
       "success": "Email confirmé. Tu peux te connecter.",
@@ -202,13 +208,84 @@
     "network": "Erreur réseau. Réessayez."
   },
 
+  "accessDenied": {
+    "forbidden": {
+      "title": "Accès réservé à l’atelier",
+      "description": "Les personnages et les scènes ne sont visibles que pour le propriétaire du projet (ou un administrateur). Si vous pensez qu’il s’agit d’une erreur, ouvrez un autre compte ou contactez l’équipe."
+    },
+    "generic": {
+      "title": "Contenu indisponible",
+      "description": "Cette page n’est pas accessible avec votre compte."
+    },
+    "home": "Accueil",
+    "openStudio": "Ouvrir le Studio",
+    "note": "L’exploration publique du site ne donne pas accès au travail en cours : utilisez le Studio après connexion."
+  },
+
+  "pagination": {
+    "ariaLabel": "Pagination",
+    "summaryOne": "Élément {start}–{end} sur {total}",
+    "summaryMany": "Éléments {start}–{end} sur {total}",
+    "prev": "Page précédente",
+    "next": "Page suivante",
+    "gotoLabel": "Aller à la page",
+    "gotoAria": "Numéro de page (1 à {totalPages})",
+    "gotoTotal": "sur {totalPages}"
+  },
+
+  "pages": {
+    "comingSoon": "Cette vue publique sera complétée. Connectez-vous et utilisez le Studio pour travailler sur vos projets.",
+    "glossary": {
+      "title": "Glossaire",
+      "subtitle": "Entrée publique vers votre lexique narratif.",
+      "public": {
+        "lead": "Cette page présente le glossaire côté site. Le guide détaillé et les données de projet vivent ailleurs.",
+        "b1": "Le lexique complet est édité dans le Studio, rattaché à vos projets.",
+        "b2": "Le guide public explique la démarche : termes, canon, variantes, liens avec le récit.",
+        "b3": "Les entrées partagées peuvent compléter cette vue au fil des versions.",
+        "ctaGuide": "Guide glossaire",
+        "ctaStructuring": "Structuration (guide)",
+        "ctaStudio": "Ouvrir le Studio",
+        "ctaProjects": "Mes projets",
+        "studioHint": "Connectez-vous pour créer ou modifier les entrées de votre univers."
+      },
+      "meta": {
+        "title": "{name} — Glossaire",
+        "description": "Présentation du glossaire narratif et accès au guide Sonekeno.",
+        "ogTitle": "{name} — Glossaire",
+        "ogDescription": "Lexique, cohérence et liens vers la structuration de votre univers."
+      }
+    },
+    "scenes": {
+      "title": "Scènes",
+      "subtitle": "Entrée publique vers la structuration des scènes.",
+      "public": {
+        "lead": "Cette page situe le module Scènes dans l’écosystème Sonekeno. Le casting et la liste détaillée sont dans vos projets.",
+        "b1": "Objectifs, lieux, temps et liens au canon : une scène devient un bloc stable et révisable.",
+        "b2": "Le guide public détaille casting, versions et exports possibles.",
+        "b3": "Le Studio relie scènes, personnages et chronologie sur un même squelette.",
+        "ctaGuide": "Guide scènes",
+        "ctaTimeline": "Chronologie (guide)",
+        "ctaStudio": "Ouvrir le Studio",
+        "ctaProjects": "Mes projets",
+        "studioHint": "Après connexion, éditez les scènes dans le contexte d’un projet."
+      },
+      "meta": {
+        "title": "{name} — Scènes",
+        "description": "Structure des scènes : objectifs, lieux, canon, et accès au Studio.",
+        "ogTitle": "{name} — Scènes",
+        "ogDescription": "Présentation du module Scènes et lien vers le guide Sonekeno."
+      }
+    }
+  },
+
   "home": {
     "hero": {
       "kicker": "Atelier d’écriture",
       "title": "Un espace clair pour structurer votre univers",
       "subtitle": "Centralisez vos personnages, scènes, chronologie et glossaire pour garder une continuité solide et retrouver l’information en quelques secondes.",
-      "ctaPrimary": "Explorer les personnages",
-      "ctaSecondary": "Voir la chronologie"
+      "ctaPrimary": "Voir mes projets",
+      "ctaSecondary": "Guide public (démo)"
     },
 
     "tiles": {
@@ -259,7 +336,7 @@
 
     "trust": {
       "text": "Pensée pour rester rapide, lisible et fiable, même quand le projet grossit.",
-      "cta": "Se connecter"
+      "cta": "Accéder au studio"
     }
   },
 
@@ -343,7 +420,20 @@
   },
 
   "footer": {
-    "rights": "© {year} {name}",
+    "rights": "© {year} — {name}",
+    "colLegal": "Légal",
+    "colResources": "Ressources",
+    "colSocial": "Réseaux",
+    "links": {
+      "legalNotice": "Mentions légales",
+      "terms": "CGU",
+      "privacy": "Confidentialité",
+      "contact": "Contact",
+      "docs": "Documentation",
+      "services": "Services & API",
+      "github": "GitHub",
+      "twitter": "Twitter"
+    },
     "tags": {
       "mobile": "Mobile-first",
       "multilang": "Multilingue",
@@ -459,6 +549,10 @@
         "title": "Sonekeno — Scènes",
         "description": "Structurer les scènes : objectifs, lieux, temps, liens au canon, versions et révisions."
       },
+      "scenesPage": {
+        "title": "Sonekeno — Scènes",
+        "description": "Structurer les scènes : objectifs, lieux, temps, liens au canon, versions et révisions."
+      },
       "glossary": {
         "title": "Sonekeno — Glossaire",
         "description": "Glossaire de l’univers : termes, définitions, notes de canon, variantes et traductions."
@@ -467,7 +561,134 @@
     }
   },
 
+  "breadcrumb": {
+    "aria": "Fil d’Ariane",
+    "current": "Détails"
+  },
+
+  "studio": {
+    "breadcrumbs": {
+      "projects": "Projets"
+    },
+    "workspaceNav": {
+      "aria": "Navigation de l’espace studio privé",
+      "kicker": "Espace de production",
+      "lead": "Passe vite de ton tableau de bord aux projets, aux tâches, ou retrouve le guide public sans te perdre dans les sous-pages.",
+      "dashboard": "Accueil studio",
+      "projects": "Tous les projets",
+      "guide": "Guide public"
+    }
+  },
+
   "explore": {
+    "sectionNav": {
+      "aria": "Sommaire du guide Sonekeno",
+      "kicker": "Carte du guide",
+      "lead": "Toutes les pages d’explication sur la saga, les livres, les rôles (auteur / studio…) et les modules sont regroupées ici. Utilise-la comme plan de lecture.",
+      "overviewCta": "Vue d’ensemble du guide",
+      "footerHint": "L’écriture en privé : projets, livres, arcs et chapitres se gèrent dans le Studio après connexion.",
+      "openStudio": "Ouvrir le Studio",
+      "groups": {
+        "start": "Découverte",
+        "roles": "Métiers & usages",
+        "architecture": "Livres, saga & accès",
+        "universe": "Modules démo · univers narratif"
+      },
+      "links": {
+        "about": "Projet · vision",
+        "workflow": "Parcours créateur",
+        "features": "Fonctions",
+        "pricing": "Offres · tarifs",
+        "writing": "Écriture",
+        "editors": "Relecture & livrables",
+        "studio": "Studios & adaptations",
+        "creators": "Créateurs & médias",
+        "structuring": "Structuration (livres / tomes)",
+        "access": "Accès sécurité"
+      },
+      "segments": {
+        "about": "Présentation",
+        "access": "Accès & sécurité",
+        "characters": "Personnages (démo)",
+        "creators": "Créateurs",
+        "editors": "Édition",
+        "features": "Fonctionnalités",
+        "glossary": "Glossaire (démo)",
+        "pricing": "Tarifs",
+        "scenes": "Scènes (démo)",
+        "structuring": "Structuration",
+        "timeline": "Chronologie (démo)",
+        "workflow": "Parcours créateur",
+        "writing": "Écriture",
+        "studio": "Studios (guide)"
+      }
+    },
+    "crossLinks": {
+      "title": "Voir aussi",
+      "timelineLabel": "Chronologie",
+      "scenesLabel": "Scènes",
+      "structuringLabel": "Structuration",
+      "workflowLabel": "Parcours créateur",
+      "fromStructuring": {
+        "timelineHint": "Dates, arcs et versions : la suite naturelle d’une structure à tomes.",
+        "scenesHint": "Découper le récit en blocs jouables une fois les volumes posés."
+      },
+      "fromTimeline": {
+        "structuringHint": "Lier le temps long aux livres, parties et chapitres.",
+        "workflowHint": "Remonter au parcours global avant d’ouvrir le Studio."
+      }
+    },
+    "structuring": {
+      "hero": {
+        "badge": "Structuration",
+        "title": "Une ossature lisible avant d’écrire",
+        "lead": "Projet, entités et liens : pose la colonne vertébrale de ton univers (livres, parties, concepts) pour limiter les incohérences quand tout grossit.",
+        "ctaWorkflow": "Voir le parcours créateur"
+      },
+      "pillars": {
+        "project": {
+          "badge": "Projet",
+          "title": "Conteneur clair",
+          "desc": "Un titre, une intention, une structure minimale avant d’ouvrir le texte : tu sais quel univers tu construis."
+        },
+        "entities": {
+          "badge": "Entités",
+          "title": "Ce qui doit exister dans le monde",
+          "desc": "Personnages, lieux, objets, règles, notes : tout devient retrouvable, pas seulement dispersé dans des fichiers isolés."
+        },
+        "links": {
+          "badge": "Liens",
+          "title": "Relations explicites",
+          "desc": "Les dépendances se documentent : utile pour la chronologie, les scènes et les réécritures sans casser la cohérence."
+        }
+      },
+      "outputs": {
+        "title": "Ce que tu gagnes",
+        "subtitle": "Une base stable pour écrire, réécrire, et collaborer.",
+        "badge": "Résultat",
+        "one": {
+          "kicker": "Vision",
+          "title": "Une carte lisible",
+          "desc": "Tu vois l’organisation sans relire mille notes."
+        },
+        "two": {
+          "kicker": "Écriture",
+          "title": "Moins de dérives involontaires",
+          "desc": "Quand la structure précède les digressions, les contradictions sautent aux yeux."
+        },
+        "three": {
+          "kicker": "Production",
+          "title": "Prêt pour l’adaptation",
+          "desc": "Studios et partenaires comprennent plus vite quel univers ils reçoivent."
+        }
+      },
+      "bottom": {
+        "badge": "Suite logique",
+        "title": "Relie la structure au temps",
+        "desc": "Les volumes ou modules posés ont besoin de dates et d’arcs : la chronologie ancre tout le monde sur la même grille.",
+        "ctaTimeline": "Aller à la chronologie"
+      }
+    },
      "index": {
       "hero": {
         "badge": "Explorer",
@@ -601,7 +822,8 @@
       "badge": "Scènes",
       "title": "Structurer les scènes sans perdre le fil",
       "lead": "Objectifs, conflit, issue, lieux, temps, liens au canon : une scène devient un bloc clair, révisable, partageable.",
-      "ctaOpen": "Ouvrir le module"
+      "ctaOpen": "Ouvrir le module",
+      "ctaNext": "Découvrir la chronologie"
     },
     "pillars": {
       "card": { "badge": "Structure", "title": "Une scène lisible", "desc": "Objectif, tension, issue : ce qui se passe, pourquoi, et ce qui change." },
@@ -655,7 +877,8 @@
       "badge": "Glossaire",
       "title": "Un lexique qui protège la cohérence",
       "lead": "Termes, définitions, canon, variantes : ton univers garde le même vocabulaire, même en équipe et en révision.",
-      "ctaOpen": "Ouvrir le module"
+      "ctaOpen": "Ouvrir le module",
+      "ctaNext": "Découvrir la structuration"
     },
     "pillars": {
       "terms": { "badge": "Termes", "title": "Définitions claires", "desc": "Un terme = une définition, des exemples, et des notes de canon." },
@@ -667,8 +890,8 @@
       "subtitle": "Moins d’ambiguïtés, plus de continuité.",
       "badge": "Résultat",
       "one": { "badge": "Cohérence", "title": "Terminologie solide", "desc": "Le même mot, le même sens, partout." },
-      "two": { "badge": "Équipe", "title": "Transmission immédiate", "desc": "Les collaborateurs comprennent vite les termes du monde." },
-      "three": { "badge": "Production", "title": "Sorties clean", "desc": "Bibles, annexes, dossiers : le glossaire alimente les livrables." }
+      "two": { "badge": "Récit", "title": "Scènes reliées", "desc": "Une scène cite un terme : son sens reste verrouillé par le lexique." },
+      "three": { "badge": "Fiches", "title": "Personnages alignés", "desc": "Noms, alliances et langage prolongent le glossaire sans contradictions." }
     },
     "bottom": {
       "badge": "Suite logique",

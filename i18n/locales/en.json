@@ -49,6 +49,7 @@
     "edit": "Edit",
     "close": "Close",
     "back": "Back",
+    "backHome": "Home",
     "continue": "Continue",
     "search": "Search",
     "filter": "Filter",
@@ -126,6 +127,7 @@
     "aria": "Main navigation",
     "home": "Home",
     "dashboard": "Dashboard",
+    "guide": "Guide",
     "characters": "Characters",
     "scenes": "Scenes",
     "timeline": "Timeline",
@@ -136,6 +138,177 @@
     "login": "Sign in",
     "register": "Sign up",
     "logout": "Sign out"
+  },
+
+  "breadcrumb": {
+    "aria": "Breadcrumb",
+    "current": "Details"
+  },
+
+  "studio": {
+    "breadcrumbs": {
+      "projects": "Projects"
+    },
+    "workspaceNav": {
+      "aria": "Private studio workspace navigation",
+      "kicker": "Production space",
+      "lead": "Move quickly between your dashboard, projects, tasks, or jump back to the public guide without losing context.",
+      "dashboard": "Studio home",
+      "projects": "All projects",
+      "guide": "Public guide"
+    }
+  },
+
+  "seo": {
+    "home": {
+      "title": "{app} — Writing studio & creativity workspace",
+      "description": "Centralize characters, scenes, timelines, and glossaries to keep worlds consistent."
+    },
+    "explore": {
+      "index": {
+        "title": "Sonekeno — Explore",
+        "description": "Discover writing, editing, adaptations, structure, timeline, access, and workflow."
+      },
+      "workflow": {
+        "title": "Sonekeno — Workflow",
+        "description": "Create → structure → publish/share: a simple approach ready for production."
+      },
+      "access": {
+        "title": "Sonekeno — Access & roles",
+        "description": "Protect a story world: accounts, permissions, roles, and collaboration."
+      },
+      "structuring": {
+        "title": "Sonekeno — Structure",
+        "description": "Organize a narrative universe: project, entities, links, and coherence."
+      },
+      "timeline": {
+        "title": "Sonekeno — Timeline",
+        "description": "Steer time in a world: events, spans, arcs, versions, and revisions."
+      },
+      "characters": {
+        "title": "Sonekeno — Characters",
+        "description": "Profiles, relationships, roles, narrators: stabilize canon and consistency."
+      },
+      "scenesPage": {
+        "title": "Sonekeno — Scenes",
+        "description": "Structure scenes: goals, places, time, canon links, versions."
+      },
+      "glossary": {
+        "title": "Sonekeno — Glossary",
+        "description": "Terms, definitions, canon notes, variants, and translations."
+      }
+    }
+  },
+
+  "explore": {
+    "sectionNav": {
+      "aria": "Sonekeno guide overview",
+      "kicker": "Guide map",
+      "lead": "All explanatory pages (saga, books, roles, demos) live under this umbrella. Treat this block as your reading order.",
+      "overviewCta": "Guide overview",
+      "footerHint": "Private drafting (projects, books, arcs, chapters) lives in the Studio once you are signed in.",
+      "openStudio": "Open Studio",
+      "groups": {
+        "start": "First steps",
+        "roles": "Roles & workflows",
+        "architecture": "Books, saga & access",
+        "universe": "Demo modules · story world"
+      },
+      "links": {
+        "about": "Project · vision",
+        "workflow": "Creator journey",
+        "features": "Features",
+        "pricing": "Offers · pricing",
+        "writing": "Writing",
+        "editors": "Editing & deliveries",
+        "studio": "Studios & adaptations",
+        "creators": "Creators & media",
+        "structuring": "Structuring (books / volumes)",
+        "access": "Security & access"
+      },
+      "segments": {
+        "about": "Overview",
+        "access": "Access & security",
+        "characters": "Characters (demo)",
+        "creators": "Creators",
+        "editors": "Editing",
+        "features": "Features",
+        "glossary": "Glossary (demo)",
+        "pricing": "Pricing",
+        "scenes": "Scenes (demo)",
+        "structuring": "Structuring",
+        "timeline": "Timeline (demo)",
+        "workflow": "Creator journey",
+        "writing": "Writing",
+        "studio": "Studios (guide)"
+      }
+    },
+    "crossLinks": {
+      "title": "See also",
+      "timelineLabel": "Timeline",
+      "scenesLabel": "Scenes",
+      "structuringLabel": "Structuring",
+      "workflowLabel": "Creator journey",
+      "fromStructuring": {
+        "timelineHint": "Dates, arcs and versions: the natural next step after volumes.",
+        "scenesHint": "Turn the story into playable blocks once the spine exists."
+      },
+      "fromTimeline": {
+        "structuringHint": "Connect long time spans to books, parts and chapters.",
+        "workflowHint": "Step back to the full journey before opening the Studio."
+      }
+    },
+    "structuring": {
+      "hero": {
+        "badge": "Structure",
+        "title": "A readable spine before you draft",
+        "lead": "Projects, entities, links: define your world’s backbone early to avoid contradictions as it grows.",
+        "ctaWorkflow": "See creator journey"
+      },
+      "pillars": {
+        "project": {
+          "badge": "Project",
+          "title": "A clear container",
+          "desc": "Name, intent, and a minimal shape before opening the manuscript — you know what world you build."
+        },
+        "entities": {
+          "badge": "Entities",
+          "title": "What must exist in-world",
+          "desc": "Characters, places, props, rules, notes: everything stays findable, not lost in random files."
+        },
+        "links": {
+          "badge": "Links",
+          "title": "Explicit relationships",
+          "desc": "Dependencies are documented: timelines, scenes, and rewrites stay aligned."
+        }
+      },
+      "outputs": {
+        "title": "What you gain",
+        "subtitle": "A stable foundation to write, rewrite, and collaborate.",
+        "badge": "Outcome",
+        "one": {
+          "kicker": "Clarity",
+          "title": "A readable map",
+          "desc": "See the architecture without rereading thousands of notes."
+        },
+        "two": {
+          "kicker": "Drafting",
+          "title": "Fewer accidental drifts",
+          "desc": "When structure comes first, inconsistencies surface earlier."
+        },
+        "three": {
+          "kicker": "Production",
+          "title": "Ready for adaptation",
+          "desc": "Partners understand faster what universe they receive."
+        }
+      },
+      "bottom": {
+        "badge": "Next step",
+        "title": "Connect structure to time",
+        "desc": "Volumes and modules need dates and arcs — the timeline anchors everything on the same grid.",
+        "ctaTimeline": "Go to timeline"
+      }
+    }
   },
 
   "auth": {
@@ -162,6 +335,11 @@
     "forgotLink": "Forgot your password?",
     "noAccount": "Don’t have an account?",
     "haveAccount": "Already have an account?",
+
+    "studioAccess": {
+      "loginBannerTitle": "Sign in required",
+      "loginBannerText": "The studio (characters, scenes, etc.) is only available after signing in with an account that is allowed on this project."
+    },
 
     "verify": {
       "sent": "A confirmation email has been sent.",
@@ -192,13 +370,84 @@
     "network": "Network error. Please try again."
   },
 
+  "accessDenied": {
+    "forbidden": {
+      "title": "Studio access only",
+      "description": "Characters and scenes are only visible to the project owner (or an administrator). If you think this is a mistake, sign in with the right account or contact the team."
+    },
+    "generic": {
+      "title": "Content unavailable",
+      "description": "This page is not available for your account."
+    },
+    "home": "Home",
+    "openStudio": "Open Studio",
+    "note": "The public guide does not expose work-in-progress: use the Studio after signing in."
+  },
+
+  "pagination": {
+    "ariaLabel": "Pagination",
+    "summaryOne": "Item {start}–{end} of {total}",
+    "summaryMany": "Items {start}–{end} of {total}",
+    "prev": "Previous page",
+    "next": "Next page",
+    "gotoLabel": "Go to page",
+    "gotoAria": "Page number (1 to {totalPages})",
+    "gotoTotal": "of {totalPages}"
+  },
+
+  "pages": {
+    "comingSoon": "This public page is a placeholder. Sign in and use the Studio to work on your projects.",
+    "glossary": {
+      "title": "Glossary",
+      "subtitle": "Public entry point for your narrative lexicon.",
+      "public": {
+        "lead": "This page introduces the glossary on the public site. Detailed guidance and project data live elsewhere.",
+        "b1": "The full lexicon is edited in the Studio, scoped to your projects.",
+        "b2": "The public guide explains the approach: terms, canon, variants, and ties to the narrative.",
+        "b3": "Shared entries can flesh out this view as you ship new versions.",
+        "ctaGuide": "Glossary guide",
+        "ctaStructuring": "Structuring (guide)",
+        "ctaStudio": "Open Studio",
+        "ctaProjects": "My projects",
+        "studioHint": "Sign in to create or edit entries for your universe."
+      },
+      "meta": {
+        "title": "{name} — Glossary",
+        "description": "Narrative glossary overview and links to the Sonekeno guide.",
+        "ogTitle": "{name} — Glossary",
+        "ogDescription": "Lexicon, consistency, and structuring your story world."
+      }
+    },
+    "scenes": {
+      "title": "Scenes",
+      "subtitle": "Public entry point for structuring scenes.",
+      "public": {
+        "lead": "This page explains the Scenes module. Casting and detailed lists live inside your projects.",
+        "b1": "Goals, place, time, and canon links — a scene becomes a stable, revisable unit.",
+        "b2": "The public guide covers casting, versioning, and sensible exports.",
+        "b3": "The Studio connects scenes, characters, and timeline on one spine.",
+        "ctaGuide": "Scenes guide",
+        "ctaTimeline": "Timeline (guide)",
+        "ctaStudio": "Open Studio",
+        "ctaProjects": "My projects",
+        "studioHint": "After sign-in, edit scenes in the context of a project."
+      },
+      "meta": {
+        "title": "{name} — Scenes",
+        "description": "Scene structure: intent, places, canon links, and Studio access.",
+        "ogTitle": "{name} — Scenes",
+        "ogDescription": "Scenes module overview and link to the Sonekeno guide."
+      }
+    }
+  },
+
   "home": {
     "hero": {
       "kicker": "Writing Studio",
       "title": "A clear workspace to structure your story world",
       "subtitle": "Centralize your characters, scenes, timeline, and glossary to keep continuity solid and find information in seconds.",
-      "ctaPrimary": "Explore characters",
-      "ctaSecondary": "View timeline"
+      "ctaPrimary": "My projects",
+      "ctaSecondary": "Public guide (demo)"
     },
 
     "tiles": {
@@ -249,7 +498,7 @@
 
     "trust": {
       "text": "Designed to stay fast, readable, and reliable as your project grows.",
-      "cta": "Sign in"
+      "cta": "Open studio"
     }
   },
 
@@ -333,7 +582,20 @@
   },
 
   "footer": {
-    "rights": "© {year} {name}",
+    "rights": "© {year} — {name}",
+    "colLegal": "Legal",
+    "colResources": "Resources",
+    "colSocial": "Social",
+    "links": {
+      "legalNotice": "Legal notice",
+      "terms": "Terms of use",
+      "privacy": "Privacy",
+      "contact": "Contact",
+      "docs": "Documentation",
+      "services": "Services & API",
+      "github": "GitHub",
+      "twitter": "Twitter"
+    },
     "tags": {
       "mobile": "Mobile-first",
       "multilang": "Multilingual",

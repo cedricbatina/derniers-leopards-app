@@ -6,6 +6,19 @@ const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
 
+const structuringRelated = computed(() => [
+  {
+    to: localePath('/explore/timeline'),
+    label: t('explore.crossLinks.timelineLabel'),
+    hint: t('explore.crossLinks.fromStructuring.timelineHint'),
+  },
+  {
+    to: localePath('/explore/scenes'),
+    label: t('explore.crossLinks.scenesLabel'),
+    hint: t('explore.crossLinks.fromStructuring.scenesHint'),
+  },
+])
+
 /**
  * SEO
  */
@@ -268,6 +281,12 @@ onBeforeUnmount(() => {
         </div>
       </div>
     </div>
+
+    <ExploreRelated
+      class="js-reveal"
+      :title="t('explore.crossLinks.title')"
+      :links="structuringRelated"
+    />
   </section>
 </template>
 

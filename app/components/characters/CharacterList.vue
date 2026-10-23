@@ -1,6 +1,7 @@
 <script setup>
 import { computed, reactive, ref, watch } from 'vue'
 import { useLocalePath, useRequestHeaders, useI18n } from '#imports'
+import { isNarrativeAccessDenied } from '~/utils/narrativeAccess'
 
 const props = defineProps({
   apiBase: { type: String, required: true }, // ex: /api/projects/slug/characters ou /api/projects/slug/books/bookSlug/characters
@@ -43,6 +44,18 @@ const paginatedCharacters = computed(() => {
 watch([q, trashed], () => {
   currentPage.value = 1
 })
+
+watch(
+  () => error.value,
+  async (err) => {
+    if (!import.meta.client || !err || !isNarrativeAccessDenied(err)) return
+    await navigateTo(
+      { path: localePath({ name: 'access-denied' }), query: { reason: 'forbidden' } },
+      { replace: true },
+    )
+  },
+  { immediate: true },
+)
 
 async function createCharacter() {
   if (!form.name.trim()) return
@@ -148,7 +161,11 @@ function characterTo(c) {
           </div>
           <div>
             <label class="text-xs font-medium text-muted mb-1.5 block">{{ t('characters.description', 'Description') }}</label>
-            <input v-model="form.description" class="input w-full" :placeholder="t('characters.descPlaceholder', 'Short description...')" />
+            <textarea
+              v-model="form.description"
+              class="input w-full min-h-24"
+              :placeholder="t('characters.descPlaceholder', 'Short description...')"
+            />
           </div>
         </div>
         <div class="mt-4 flex gap-2">
@@ -171,7 +188,10 @@ function characterTo(c) {
       </div>
     </div>
 
-    <div v-if="error" class="alert alert-error">
+    <div
+      v-if="error && !isNarrativeAccessDenied(error)"
+      class="alert alert-error"
+    >
       {{ t('common.error', 'Error') }}: {{ error?.statusMessage || error }}
     </div>
 

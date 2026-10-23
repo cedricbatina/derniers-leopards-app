@@ -48,6 +48,7 @@
     "edit": "Editar",
     "close": "Fechar",
     "back": "Voltar",
+    "backHome": "Início",
     "continue": "Continuar",
     "search": "Pesquisar",
     "filter": "Filtrar",
@@ -125,6 +126,7 @@
     "aria": "Navegação principal",
     "home": "Início",
     "dashboard": "Painel",
+    "guide": "Guia",
     "characters": "Personagens",
     "scenes": "Cenas",
     "timeline": "Cronologia",
@@ -135,6 +137,177 @@
     "login": "Iniciar sessão",
     "register": "Criar conta",
     "logout": "Terminar sessão"
+  },
+
+  "breadcrumb": {
+    "aria": "Navegação estrutural",
+    "current": "Detalhes"
+  },
+
+  "studio": {
+    "breadcrumbs": {
+      "projects": "Projetos"
+    },
+    "workspaceNav": {
+      "aria": "Navegação do espaço de estúdio privado",
+      "kicker": "Espaço de produção",
+      "lead": "Alterne rapidamente entre o painel, os projetos e as tarefas, ou volte ao guia público.",
+      "dashboard": "Início do estúdio",
+      "projects": "Todos os projetos",
+      "guide": "Guia público"
+    }
+  },
+
+  "seo": {
+    "home": {
+      "title": "{app} — Estúdio de escrita",
+      "description": "Centralize personagens, cenas, cronologia e glossário num só sítio para manter a coerência."
+    },
+    "explore": {
+      "index": {
+        "title": "Sonekeno — Explorar",
+        "description": "Descobre escrita, revisão, adaptações, estrutura, cronologia, acesso e fluxo de trabalho."
+      },
+      "workflow": {
+        "title": "Sonekeno — Fluxo de trabalho",
+        "description": "Criar → estruturar → publicar/partilhar: uma abordagem simples e pronta para produção."
+      },
+      "access": {
+        "title": "Sonekeno — Acesso e papéis",
+        "description": "Proteger um universo narrativo: contas, permissões, papéis e colaboração."
+      },
+      "structuring": {
+        "title": "Sonekeno — Estruturação",
+        "description": "Organizar um universo: projeto, entidades, ligações e coerência."
+      },
+      "timeline": {
+        "title": "Sonekeno — Cronologia",
+        "description": "Gerir o tempo: eventos, períodos, arcos, versões e revisões."
+      },
+      "characters": {
+        "title": "Sonekeno — Personagens",
+        "description": "Fichas, relações, papéis, narradores: estabilizar o cânone."
+      },
+      "scenesPage": {
+        "title": "Sonekeno — Cenas",
+        "description": "Estruturar cenas: objectivos, locais, tempo, ligações ao cânone, versões."
+      },
+      "glossary": {
+        "title": "Sonekeno — Glossário",
+        "description": "Termos, definições, notas de cânone, variantes e traduções."
+      }
+    }
+  },
+
+  "explore": {
+    "sectionNav": {
+      "aria": "Índice do guia Sonekeno",
+      "kicker": "Mapa do guia",
+      "lead": "Todas as páginas explicativas (saga, livros, papéis…) estão agrupadas aqui. Use como ordem de leitura.",
+      "overviewCta": "Visão geral do guia",
+      "footerHint": "A escrita privada (projetos, livros, capítulos) fica no Estúdio depois de iniciar sessão.",
+      "openStudio": "Abrir o Estúdio",
+      "groups": {
+        "start": "Primeiros passos",
+        "roles": "Papéis e fluxos",
+        "architecture": "Livros, saga e acesso",
+        "universe": "Módulos demo · universo narrativo"
+      },
+      "links": {
+        "about": "Projeto · visão",
+        "workflow": "Percurso do criador",
+        "features": "Funcionalidades",
+        "pricing": "Ofertas · preços",
+        "writing": "Escrita",
+        "editors": "Revisão e entregas",
+        "studio": "Estúdios e adaptações",
+        "creators": "Criadores e media",
+        "structuring": "Estruturação (livros / tomos)",
+        "access": "Segurança e acesso"
+      },
+      "segments": {
+        "about": "Apresentação",
+        "access": "Acesso e segurança",
+        "characters": "Personagens (demo)",
+        "creators": "Criadores",
+        "editors": "Edição",
+        "features": "Funcionalidades",
+        "glossary": "Glossário (demo)",
+        "pricing": "Preços",
+        "scenes": "Cenas (demo)",
+        "structuring": "Estruturação",
+        "timeline": "Cronologia (demo)",
+        "workflow": "Percurso do criador",
+        "writing": "Escrita",
+        "studio": "Estúdios (guia)"
+      }
+    },
+    "crossLinks": {
+      "title": "Ver também",
+      "timelineLabel": "Cronologia",
+      "scenesLabel": "Cenas",
+      "structuringLabel": "Estruturação",
+      "workflowLabel": "Percurso do criador",
+      "fromStructuring": {
+        "timelineHint": "Datas, arcos e versões: o passo seguinte depois dos tomos.",
+        "scenesHint": "Dividir a narrativa em blocos quando a espinha dorsal estiver definida."
+      },
+      "fromTimeline": {
+        "structuringHint": "Ligar o tempo longo a livros, partes e capítulos.",
+        "workflowHint": "Voltar ao percurso global antes de abrir o Estúdio."
+      }
+    },
+    "structuring": {
+      "hero": {
+        "badge": "Estruturação",
+        "title": "Um eixo legível antes de escrever",
+        "lead": "Projecto, entidades e ligações: define cedo o alicerce para evitar contradições quando o universo cresce.",
+        "ctaWorkflow": "Ver percurso do criador"
+      },
+      "pillars": {
+        "project": {
+          "badge": "Projecto",
+          "title": "Contentor claro",
+          "desc": "Título, intenção e forma mínima antes do texto — sabes qual mundo constróis."
+        },
+        "entities": {
+          "badge": "Entidades",
+          "title": "O que tem de existir no mundo",
+          "desc": "Personagens, locais, objectos, regras e notas: tudo ficando encontrável."
+        },
+        "links": {
+          "badge": "Ligações",
+          "title": "Relações explícitas",
+          "desc": "Dependências documentadas: cronologia, cenas e reescrita mantêm alinhamento."
+        }
+      },
+      "outputs": {
+        "title": "O que ganhas",
+        "subtitle": "Uma base estável para escrever, reescrever e colaborar.",
+        "badge": "Resultado",
+        "one": {
+          "kicker": "Clareza",
+          "title": "Um mapa legível",
+          "desc": "Vês a arquitectura sem reler mil notas."
+        },
+        "two": {
+          "kicker": "Redacção",
+          "title": "Menos fugas ao deus-dará",
+          "desc": "Com estrutura primeiro, as incoerências aparecem mais cedo."
+        },
+        "three": {
+          "kicker": "Produção",
+          "title": "Pronto para adaptar",
+          "desc": "Parceiros percebem mais rápido o universo recebido."
+        }
+      },
+      "bottom": {
+        "badge": "Passo seguinte",
+        "title": "Ligar estrutura ao tempo",
+        "desc": "Tomos ou módulos precisam de datas e arcos — a cronologia ancora todos na mesma grelha.",
+        "ctaTimeline": "Ir à cronologia"
+      }
+    }
   },
 
   "auth": {
@@ -162,6 +335,16 @@
     "noAccount": "Ainda não tem conta?",
     "haveAccount": "Já tem conta?",
 
+    "studioAccess": {
+      "loginBannerTitle": "Início de sessão necessário",
+      "loginBannerText": "O estúdio (personagens, cenas, etc.) só está disponível após iniciar sessão com uma conta autorizada neste projeto."
+    },
+
+    "studioAccess": {
+      "loginBannerTitle": "É necessário iniciar sessão",
+      "loginBannerText": "O estúdio (personagens, cenas, etc.) só está disponível após iniciar sessão com uma conta autorizada neste projeto."
+    },
+
     "verify": {
       "sent": "Foi enviado um email de confirmação.",
       "success": "Email confirmado. Pode iniciar sessão.",
@@ -182,6 +365,20 @@
     "passwordMismatch": "As palavras-passe não coincidem."
   },
 
+  "accessDenied": {
+    "forbidden": {
+      "title": "Acesso reservado ao estúdio",
+      "description": "As personagens e as cenas só são visíveis para o dono do projeto (ou um administrador). Se acha que isto é um erro, inicie sessão com a conta correta ou contacte a equipa."
+    },
+    "generic": {
+      "title": "Conteúdo indisponível",
+      "description": "Esta página não está disponível com a sua conta."
+    },
+    "home": "Início",
+    "openStudio": "Abrir o estúdio",
+    "note": "O site público não expõe o trabalho em curso: utilize o estúdio após iniciar sessão."
+  },
+
   "errors": {
     "generic": "Ocorreu um erro.",
     "unauthorized": "Acesso não autorizado.",
@@ -191,13 +388,70 @@
     "network": "Erro de rede. Tente novamente."
   },
 
+  "pagination": {
+    "ariaLabel": "Paginação",
+    "summaryOne": "Elemento {start}–{end} de {total}",
+    "summaryMany": "Elementos {start}–{end} de {total}",
+    "prev": "Página anterior",
+    "next": "Página seguinte",
+    "gotoLabel": "Ir para a página",
+    "gotoAria": "Número da página (1 a {totalPages})",
+    "gotoTotal": "de {totalPages}"
+  },
+
+  "pages": {
+    "comingSoon": "Esta página pública ainda está resumida. Inicie sessão e use o Estúdio para editar projetos.",
+    "glossary": {
+      "title": "Glossário",
+      "subtitle": "Ponto de entrada público para o léxico narrativo.",
+      "public": {
+        "lead": "Esta página apresenta o glossário no site público. O guia completo e os dados do projeto estão noutros sítios.",
+        "b1": "O léxico completo edita-se no Estúdio, ligado aos seus projetos.",
+        "b2": "O guia público explica o método: termos, cânone, variantes e vínculos com a narrativa.",
+        "b3": "Entradas partilhadas podem complementar esta vista ao longo das versões.",
+        "ctaGuide": "Guia do glossário",
+        "ctaStructuring": "Estruturação (guia)",
+        "ctaStudio": "Abrir o Estúdio",
+        "ctaProjects": "Os meus projetos",
+        "studioHint": "Inicie sessão para criar ou editar entradas do seu universo."
+      },
+      "meta": {
+        "title": "{name} — Glossário",
+        "description": "Apresentação do glossário narrativo e acesso ao guia Sonekeno.",
+        "ogTitle": "{name} — Glossário",
+        "ogDescription": "Léxico, coerência e ligações à estruturação do universo."
+      }
+    },
+    "scenes": {
+      "title": "Cenas",
+      "subtitle": "Entrada pública para a estruturação de cenas.",
+      "public": {
+        "lead": "Esta página situa o módulo Cenas. O elenco e listas detalhadas ficam nos projetos.",
+        "b1": "Objectivos, locais, tempo e ligações ao cânone: uma cena torna-se um bloco estável e revisável.",
+        "b2": "O guia público detalha elenco, versões e exports possíveis.",
+        "b3": "O Estúdio liga cenas, personagens e cronologia num mesmo eixo.",
+        "ctaGuide": "Guia de cenas",
+        "ctaTimeline": "Cronologia (guia)",
+        "ctaStudio": "Abrir o Estúdio",
+        "ctaProjects": "Os meus projetos",
+        "studioHint": "Após iniciar sessão, edite cenas no contexto de um projeto."
+      },
+      "meta": {
+        "title": "{name} — Cenas",
+        "description": "Estrutura de cenas: intenções, lugares, cânone e acesso ao Estúdio.",
+        "ogTitle": "{name} — Cenas",
+        "ogDescription": "Visão do módulo Cenas e ligação ao guia Sonekeno."
+      }
+    }
+  },
+
   "home": {
     "hero": {
       "kicker": "Estúdio de Escrita",
       "title": "Um espaço claro para estruturar o seu universo",
       "subtitle": "Centralize personagens, cenas, cronologia e glossário para manter a continuidade sólida e encontrar informação em segundos.",
-      "ctaPrimary": "Explorar personagens",
-      "ctaSecondary": "Ver cronologia"
+      "ctaPrimary": "Os meus projetos",
+      "ctaSecondary": "Guia público (demo)"
     },
 
     "tiles": {
@@ -248,7 +502,7 @@
 
     "trust": {
       "text": "Pensada para se manter rápida, legível e fiável à medida que o projeto cresce.",
-      "cta": "Iniciar sessão"
+      "cta": "Abrir o estúdio"
     }
   },
 
@@ -330,7 +584,20 @@
   },
 
   "footer": {
-    "rights": "© {year} {name}",
+    "rights": "© {year} — {name}",
+    "colLegal": "Jurídico",
+    "colResources": "Recursos",
+    "colSocial": "Redes",
+    "links": {
+      "legalNotice": "Menções legais",
+      "terms": "Termos de uso",
+      "privacy": "Privacidade",
+      "contact": "Contacto",
+      "docs": "Documentação",
+      "services": "Serviços e API",
+      "github": "GitHub",
+      "twitter": "Twitter"
+    },
     "tags": {
       "mobile": "Mobile-first",
       "multilang": "Multilíngue",

@@ -1,8 +1,9 @@
 <script setup>
 definePageMeta({ middleware: ['auth'] })
 
-import { computed, reactive, ref } from 'vue'
+import { computed, reactive, ref, watch } from 'vue'
 import { useLocalePath, useRequestHeaders } from '#imports'
+import { isNarrativeAccessDenied } from '~/utils/narrativeAccess'
 
 const localePath = useLocalePath()
 const route = useRoute()
@@ -30,6 +31,18 @@ const queryObj = computed(() => ({
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/scenes`,
   { $fetch: apiFetch, query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
+)
+
+watch(
+  () => error.value,
+  async (err) => {
+    if (!import.meta.client || !err || !isNarrativeAccessDenied(err)) return
+    await navigateTo(
+      { path: localePath({ name: 'access-denied' }), query: { reason: 'forbidden' } },
+      { replace: true },
+    )
+  },
+  { immediate: true },
 )
 
 const form = reactive({
@@ -170,7 +183,7 @@ function chapterLabel(id, chapterNo, title, partNo) {
       </div>
     </div>
 
-    <div v-if="error" class="card">
+    <div v-if="error && !isNarrativeAccessDenied(error)" class="card">
       <div class="card-body text-sm">Error: {{ error?.statusMessage || error }}</div>
     </div>
 

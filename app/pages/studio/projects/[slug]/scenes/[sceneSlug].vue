@@ -1,8 +1,9 @@
 <script setup>
 definePageMeta({ middleware: ['auth'] })
 
-import { computed, reactive, ref, watchEffect } from 'vue'
+import { computed, reactive, ref, watch, watchEffect } from 'vue'
 import { useLocalePath } from '#imports'
+import { isNarrativeAccessDenied } from '~/utils/narrativeAccess'
 
 const localePath = useLocalePath()
 const route = useRoute()
@@ -16,6 +17,18 @@ const sceneQuery = computed(() => ({ trashed: allowTrashed.value ? 1 : undefined
 const { data, pending, refresh, error } = await useFetch(
   () => `/api/projects/${projectSlug.value}/scenes/${sceneSlug.value}`,
   { $fetch: apiFetch, query: sceneQuery, credentials: 'include' }
+)
+
+watch(
+  () => error.value,
+  async (err) => {
+    if (!import.meta.client || !err || !isNarrativeAccessDenied(err)) return
+    await navigateTo(
+      { path: localePath({ name: 'access-denied' }), query: { reason: 'forbidden' } },
+      { replace: true },
+    )
+  },
+  { immediate: true },
 )
 
 const { data: chaptersData } = await useFetch(
@@ -191,7 +204,7 @@ async function restoreScene() {
       </div>
     </div>
 
-    <div v-if="error" class="card">
+    <div v-if="error && !isNarrativeAccessDenied(error)" class="card">
       <div class="card-body text-sm">Error: {{ error?.statusMessage || error }}</div>
     </div>
 
