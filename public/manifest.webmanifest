@@ -1,21 +1,24 @@
 {
-  "name": "Madizi",
-  "short_name": "Madizi",
-  "description": "Plateforme d'annonces de décès – familles et professionnels.",
+  "name": "Sonekeno",
+  "short_name": "Sonekeno",
+  "description": "Espace pour structurer univers, romans et séries — scènes, personnages, chronologie.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0b0d1a",
-  "theme_color": "#0b0d1a",
+  "background_color": "#FBF8F1",
+  "theme_color": "#FBF8F1",
+  "lang": "fr",
   "icons": [
     {
-      "src": "/icon-192x192.png",
+      "src": "/pwa-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/pwa-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/maskable-icon-192x192.png",
