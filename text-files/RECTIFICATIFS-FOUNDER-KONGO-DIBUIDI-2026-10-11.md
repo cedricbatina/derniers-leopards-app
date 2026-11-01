@@ -591,3 +591,32 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - Le domaine de Kinuani et Mutinu doit être un lieu où les compétences et les personnes forment une société : artisans identifiables, savoirs transmis, cour et ateliers ordonnés, esthétique kongo de haute qualité, hospitalité et activités de Mutinu. L'ambition s'étend aux films, séries et autres romans de la saga.
 
 **Statut :** orientation canonique d'auteur et pistes de scènes/personnages consignées ; aucune scène achevée, reconstitution architecturale validée ou validation Quality revendiquée.
+
+
+## Rectification Founder — 1 novembre 2026 — polarité, sécurité discrète et codes du domaine
+
+**Portée :** enrichissement canonique de la conception du domaine de Kinuani et Mutinu et de la philosophie esthétique de la saga. Ce complément **rectifie toute représentation antérieure de quatre murailles, d'une caserne ostensible ou d'une forteresse de type européen**. Il ne constitue ni une scène rédigée ni un plan architectural définitivement approuvé.
+
+### Double fonction, polarité et ingéniosité
+- Dans l'univers romanesque, les êtres, lieux, outils et objets peuvent posséder **une fonction apparente et une autre fonction discrète**. Un bâton de marche peut, par exemple, cacher un élément transformant son usage ; une pièce de bois, un accessoire ou un équipement quotidien peut aussi avoir une fonction protectrice. Il s'agit d'une **intention de fiction et de conception**, non d'une affirmation que chaque dispositif a été historiquement attesté au XVIIe siècle.
+- Une habitation d'apparence ordinaire peut servir à l'observation ou au commandement ; un jardinier, artisan ou résident sans tenue militaire peut aussi être un soldat d'élite. Ne pas confondre apparence sociale et compétence effective.
+- Les alertes peuvent passer par des **signaux convenus** : sifflets, sons, clochettes et autres codes. Les haies, arbres, plantations, limites paysagères et parcours participent à la discrétion et à la protection, sans exiger des murs massifs ou des enceintes de béton.
+- L'ingéniosité doit être **simple, crédible avec les ressources, savoir-faire et contraintes de l'époque**, et présentée sans béatitude ni misérabilisme. Les comparaisons de l'auteur avec des traditions techniques ou spirituelles asiatiques nourrissent la démarche créative, sans impliquer une filiation historique démontrée.
+
+### Quatre ceintures : logique fonctionnelle, non spectacle militaire
+- Le domaine demeure avant tout **une concession habitée, élégante, accueillante et productive**, avec familles, visiteurs, artisans, jardins, ateliers, lieux de réception, source et activités de Mutinu.
+- Les **quatre ceintures de protection** correspondent à des niveaux de vigilance, de confiance, d'accès et de réponse, **pas obligatoirement à quatre enceintes physiques**. La sécurité est distribuée dans la vie civile et le paysage ; les soldats d'élite ne sont pas tous identifiables à leur apparence.
+- Maintenir la chaîne de proposition canonique : **soldat originaire de Ndamba → Mutinu (première esquisse) → Nzungani (examen) → Kinuani → Suru → conseil militaire restreint → validation et travaux**. Nzungani intervient comme enquêteur et conseiller, **non comme initiateur militaire** du dispositif.
+- Kinuani peut rester plusieurs jours à travailler, recevoir et s'entraîner dans sa vaste concession, ce qui réduit ses expositions tout en préservant la vie sociale et les fonctions du domaine.
+
+### Rang, fonction, circonstance et tenue
+- Les vêtements, accessoires et comportements suivent des **codes adaptés à l'activité et au statut** : un agriculteur au champ, une personne au culte familial, un participant au mbongi ou un veilleur nocturne ne s'habillent pas nécessairement de la même façon.
+- Les tenues d'apparat marquent certains rangs ou cérémonies, mais ne doivent pas devenir des uniformes permanents. La protection peut être présente sans armement ostensible.
+- Le domaine doit montrer la qualité des métiers, la précision des artisans, l'ordre, la propreté, les jardins et la beauté du **beau Kongo** selon l'idéal du Founder.
+
+### Orientation du monde et horizon politique
+- Le Founder fixe pour la **vision cosmographique des personnages** une orientation inversée par rapport aux conventions cartographiques actuelles : le « nord » renvoie vers l'Afrique australe et le « sud » vers l'Afrique du Nord. Pour toute carte de travail, **signaler explicitement la convention utilisée** afin d'éviter de fausser les itinéraires.
+- Les discussions stratégiques de Kinuani et Suru peuvent envisager, après une restauration du Kongo, un horizon plus vaste de libération des territoires bantous. Cela appartient à **leurs ambitions et débats narratifs**, non à une campagne déjà exécutée.
+- Le Founder cite **Mvumuzi Kimbangu / Jantounguna** comme référence intellectuelle et spirituelle personnelle ; ne pas substituer mécaniquement ce référent réel au **Kimbango** de l'univers fictionnel ni insérer une affirmation contemporaine comme fait établi du XVIIe siècle.
+
+**Statut :** consigné au référentiel narratif ; ni architecture finalisée, ni scène écrite, ni validation historique ou Quality implicite.
