@@ -549,3 +549,26 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - **Ne pas situer arbitrairement cette annonce au Mayombe** : le Founder a hésité puis retiré cette précision pendant sa dictée. Raccorder la date à la chronologie existante avant de fixer le lieu.
 
 **Statut :** consigné comme directives de continuité et matériau de scènes ; aucune scène rédigée, aucune donnée DB modifiée, aucun verdict Quality affirmé.
+
+
+## Complément Founder — 1 novembre 2026 — esthétique du « beau Kongo » et échelle du domaine
+
+**Directive de conception narrative et visuelle de l'auteur, à distinguer des attestations historiques.** Ne pas prendre comme modèles des photographies de cases contemporaines délabrées, de concessions dégradées ou des architectures coloniales tardives. L'auteur veut représenter un Kongo du XVIIe siècle puissant, organisé, riche de savoir-faire et doté d'une aristocratie dont l'excellence se traduit par l'ordre, la propreté, la précision des artisans, l'hospitalité, l'élégance et les valeurs morales et spirituelles. Son idéal esthétique est le **« beau Kongo »** ; la richesse y est d'abord le **réseau de relations, d'alliances et de solidarités**, avant les biens matériels. Référence intellectuelle et spirituelle citée par le Founder : **Jean Tumba / Vrousiki Mango** (graphies à rapprocher des références déjà consignées, sans substitution arbitraire).
+
+### Échelle et organisation
+- **Décision Founder : plusieurs bâtiments autour de cours et d'espaces collectifs, et non une maison unique.** Le domaine de Kinuani et Mutinu forme presque un **quartier**, vaste concession habitée par les époux, les enfants, des proches des deux familles, des collaborateurs, des protégés et des visiteurs de passage. La population et les usages évoluent.
+- L'analogie avec **Malartic, Gradignan et le bois de Mandavit** sert à transmettre une **impression d'étendue**, pas une mesure de superficie à recopier.
+- Architecture kongo aristocratique imaginée : composition **circulaire, carrée et mixte**, géométrie signifiante, charpenterie de haute précision, artisans et maîtres d'œuvre qualifiés, jardins, fleurs, arbres, plantes, cours et allées entretenues. La référence au **léopard** traverse les arts, motifs, couleurs et éventuellement les pierres rougeâtres taillées ou les dallages évoquant son pelage. **Ne pas assimiler ce programme à un château européen.**
+
+### Eau, source et hospitalité
+- La **rivière** et la **source naturelle d'eau potable** de la concession sont distinctes ; la source devient un lieu remarquablement aménagé, accessible et accueillant, fréquenté par voyageurs, familles, dignitaires et personnes venues chercher son eau. Prévoir des zones de repos et des usages compatibles avec le rang et les besoins des visiteurs.
+- Étudier des systèmes **ingénieux et plausibles** de captage, acheminement, protection et rafraîchissement de l'eau à partir de matériaux naturels ; les conduites végétales évoquées par le Founder sont des **pistes de conception**, non des techniques attestées à affirmer sans preuve.
+- Offrir de l'eau aux visiteurs est un **geste d'hospitalité et de paix** dans le cadre culturel défini par l'auteur. Cette source accroît le rôle social et le réseau d'alliances de Mutinu ; elle prépare également l'épisode ultérieur de la dépossession et de la négociation autour de l'accès à l'eau.
+
+### Mutinu, maîtresse du domaine
+- Mutinu dirige la vie de la concession, l'accueil, les activités des femmes et de nombreux collaborateurs, les échanges et la transmission de savoir-faire. Elle travaille ou supervise **tissus, teinture, broderie, couleurs, décors géométriques sur les parois, symboles, plantes et pharmacopée**.
+- Ses savoirs viennent de sa grand-mère, de son initiation et d'autres transmissions ; ils comportent une dimension spirituelle et symbolique dans l'univers du roman. Ne pas la réduire à une simple gestionnaire domestique : elle est une personnalité prospère, influente et créatrice de réseaux.
+- Kinuani assure ses fonctions judiciaires, politiques et militaires, appartient à la confrérie des **hommes léopards** et participe à des opérations contre les razzias et pour la libération de captifs ; Nzongo, ancien homme léopard, a commencé à le former, puis Ne Mawungu a approfondi son enseignement.
+- Le domaine doit donc être conçu comme un **écosystème social, artisanal, politique, spirituel, agricole et défensif**, transformé au fil des années. La sécurité à quatre ceintures intervient après le retour de Mbanza-Kongo et ne doit pas être projetée rétroactivement sur la première maison de 1639.
+
+**Méthode approuvée :** soumettre au Founder des propositions visuelles lisibles sans plan d'architecte, avec parcours de visite, organisation fonctionnelle et variantes, puis intégrer ses rectifications. Aucune proposition architecturale non validée ne devient automatiquement canon.
