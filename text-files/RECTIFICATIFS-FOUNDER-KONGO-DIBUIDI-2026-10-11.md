@@ -439,3 +439,35 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - **Cohérence des scènes de Mfuti :** distinguer explicitement le Kinuani officiel (tenue de mulongoki), le combattant (équipement adapté), et l'ami des habitants (vêtements populaires). Ne pas attribuer systématiquement les mêmes accessoires à toutes les situations.
 
 **À vérifier :** terminologie exacte des grades et de leurs vêtements, usages des sonnailles, sifflets et dispositifs de cuivre ; hiérarchie et spécialisations des couvents. **Statut :** consigné, non intégré au manuscrit ni validé par Quality.
+
+
+## Complément Founder — jeux de Mfuti, kuela et itinéraire matrimonial (dictée du 1er novembre 2026)
+
+**Source :** dictée orale du Founder, à réconcilier avec les scènes, fiches et chronologies existantes avant toute intégration narrative ou DB. **Orthographe éditoriale :** *kuela*, pas *kwela* ; *Mai Ndombe* ; *Lwozi* (graphie épelée oralement, à confronter au référentiel) ; *Kinuani*, *Mutinu*, *Kuimba*. Ne pas substituer automatiquement d'anciennes graphies avec w/y intrusifs.
+
+### Mfuti — jeux et veillées
+- Lors des festivités de **juin 1636**, Kinuani et Bikuta disposent parfois d'une heure à une heure et demie de liberté, souvent avant la tombée de la nuit, pour observer les jeux populaires avec Mutinu, ses sœurs ou cousins, et des enfants. Ils rient ensemble et commentent les épreuves.
+- Jeux **candidats**, à contextualiser plutôt qu'à présenter comme sports modernes attestés : courses courtes ou longues, relais, parcours sur surface glissante pour les enfants, tir à la corde, sauts, nzango ; pour les milongoki, acrobaties, tir à l'arc sur cible fixe ou mobile, bâton et épée. Les étudiants s'entraînent intensément et subissent parfois de petites blessures.
+- Pendant les **vacances d'août 1636**, trois ou quatre décès de patriarches dans les environs entraînent des veillées auxquelles Kinuani et sa délégation participent. Kinuani et Mutinu conversent parfois longuement un peu à l'écart ; **Okobo** remarque leur proximité et devient jaloux.
+
+### Familles et parcours de Nzongo
+- **Rectification ferme :** la famille maternelle de **Mutinu**, par **Mama Yodissad** et les grand-mères, est originaire de **Boko**, de l'autre côté du fleuve. Mutinu n'y a jamais été ; sa grand-mère, connaisseuse de pharmacopée, lui en racontait de magnifiques histoires. Son décès survient lorsque Mutinu est enfant (âge non fixé). Le désir de Kinuani de vivre un jour près du fleuve réveille chez Mutinu le rêve de découvrir Boko.
+- **Kinuani**, quant à lui, est **né à Mbanza Kongo**, sa famille étant originaire du **pays de Kuimba**, à l'est de Mbanza Kongo. Son père servait l'administration comme **assistant d'un régent**, chargé, selon l'organisation interne racontée, de repérer discrètement des personnes méritantes pour des charges publiques.
+- Après la mort de Ne Mawungu, Nzongo séjourne successivement chez **plusieurs anciens frères d'armes déjà notables**, dont des **mfumu mbanza**, plutôt que chez Tusikila. Chaque étape dure moins d'un mois ; il se rapproche de Mfuti, rassemble alliés, parents, bœufs et présents, rend publique la préparation matrimoniale et mène des négociations politiques. La coutume d'hébergement décrite est une **règle sociale de cet univers**, non une généralisation à tous les peuples bantu.
+- Les nouvelles circulent à Mfuti bien avant les cérémonies. Mutinu reste en formation et ignore l'ampleur de l'organisation. Nzongo prévoit aussi le mariage de l'un des cousins jumeaux de Kinuani et celui d'une jeune femme de Kuimba.
+- **Repères géographiques à vérifier :** Mai Ndombe, Boko, Lwozi, passages fluviaux et distances (dont une estimation orale de 50 km) ; élevages et bœufs près de Lwozi ; voyageurs venant de localités diverses, dont Mbé, Mfoa, Mayombe, Cabinda et Mossendjo. Ne pas figer les provenances très lointaines ou les durées sans contrôle.
+
+### Kuela — première cérémonie auprès de la famille paternelle de Mutinu
+- **Fin juillet 1639 : repère proposé**, en attente de réconciliation avec la sortie du Kikumbi et les étapes du voyage. Mutinu, devenue plus posée et humble, découvre l'ampleur politique d'une cérémonie qu'elle aurait souhaitée plus discrète. Nzongo, chef du pays de Kuimba, se déplace personnellement.
+- Les **nzonzi** des deux familles prennent la parole devant les patriarches. Le nzonzi de la famille de la future épouse entonne un chant **comme s'il parlait au nom de Mutinu**, demandant qui elle choisira ; la foule répond notamment **« sola kwaku ana ozoluelue »**, transcription phonétique provisoire signifiant « choisis qui tu veux ». Autres couplets évoquant les *biata* (gerçures sous les talons) et une bosse/bossu : texte original à redemander, sans reconstruction arbitraire.
+- Mutinu cherche **son futur époux Kinuani dans la foule**, puis le conduit devant les patriarches. Vin de palme, **makazu** (noix de cola dans la dictée) et **nzon(z)anongo** (graines pimentées dans une coque, terme exact à confirmer) sont présentés.
+- Le patriarche paternel de Mutinu lui demande **trois fois** si elle est sûre qu'il peut boire ; elle répond **trois fois oui**. Les deux patriarches boivent. Le nzonzi conclut que le **longo** unit **deux familles**, dans l'assistance mutuelle et la paix, au-delà des deux époux. Répartition de la dot entre parents et branches familiales à détailler.
+- **Après cette étape, les époux ne passent pas encore leur première nuit ensemble** : la cérémonie maternelle à Boko doit être accomplie et leur propre maison de Kuimba rejointe. Ne pas écrire de chambre nuptiale utilisée chez Tusikila.
+
+### Boko puis Kuimba
+- Dès le lendemain, au lever du soleil, la délégation des **Bisi Kuimba** part vers Boko, avec Mutinu. Certains présents, bêtes et moutons sont envoyés directement à Kuimba par d'autres groupes. Traversées en pirogue et marches combinées en saison sèche ; **environ cinq jours** pour atteindre la famille maternelle, estimation narrative.
+- À Boko, autre accueil et cérémonie familiale avec nourriture apportée aussi par les délégations. Nzongo y rencontre des notables et prend le pouls politique du pays, dans le prolongement de la crise des savoirs de Ne Mawungu.
+- Voyage ensuite éprouvant vers Kuimba, à pied, par voie d'eau ou avec porteurs et moyens de transport à préciser ; **environ dix jours**, estimation narrative. Arrivée et installation dans la maison préparée à Kuimba **fin août ou début septembre 1639** ; première nuit conjugale seulement dans cette maison.
+- **Conflit de calendrier à résoudre** : première cérémonie fin juillet, sortie du Kikumbi, cinq jours vers Boko, dix jours vers Kuimba et arrivée fin août ; distinguer dates arrêtées et propositions de rythme narratif.
+
+**Statut :** décisions et propositions de scènes consignées ; ni manuscrit intégré, ni DB synchronisée, ni validation Quality.
