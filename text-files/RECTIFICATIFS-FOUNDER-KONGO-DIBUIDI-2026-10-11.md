@@ -620,3 +620,11 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - Le Founder cite **Mvumuzi Kimbangu / Jantounguna** comme référence intellectuelle et spirituelle personnelle ; ne pas substituer mécaniquement ce référent réel au **Kimbango** de l'univers fictionnel ni insérer une affirmation contemporaine comme fait établi du XVIIe siècle.
 
 **Statut :** consigné au référentiel narratif ; ni architecture finalisée, ni scène écrite, ni validation historique ou Quality implicite.
+
+
+## Rectification Founder — 1 novembre 2026 — termes et date de décès déjà canonique
+
+- **Ngolo**, et non « mbolo », est le terme donné par le Founder dans son rapprochement conceptuel avec **longo**. Ne pas inverser ni substituer les termes.
+- **Mawungu**, et non « Mawuongo », est la forme retenue par le Founder pour la notion d'être androgyne. Distinguer cette notion de l'usage de **Ne Mawungu** comme nom de personnage.
+- **Kinuani meurt le 30 octobre 1665, avant midi** : information **déjà consignée** dans les chronologies et plans antérieurs (notamment « 📜 CHRONOLOGIE DU ROMAN —v1 Les derni.txt » et « 📖 PLAN DES PARTIES et CHAPITRES — Les derniers léopards.txt »). Il ne faut ni la présenter comme indécise ni proposer 1675. Si naissance en 1620, âge à la mort : environ **45 ans**.
+- Méthode : consulter les chronologies, fiches et scènes existantes avant de poser au Founder une question prétendument ouverte ; les nouvelles rectifications prévalent sur les formulations anciennes contradictoires.
