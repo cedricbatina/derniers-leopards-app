@@ -572,3 +572,22 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - Le domaine doit donc être conçu comme un **écosystème social, artisanal, politique, spirituel, agricole et défensif**, transformé au fil des années. La sécurité à quatre ceintures intervient après le retour de Mbanza-Kongo et ne doit pas être projetée rétroactivement sur la première maison de 1639.
 
 **Méthode approuvée :** soumettre au Founder des propositions visuelles lisibles sans plan d'architecte, avec parcours de visite, organisation fonctionnelle et variantes, puis intégrer ses rectifications. Aucune proposition architecturale non validée ne devient automatiquement canon.
+
+
+## Complément Founder — 1 novembre 2026 — philosophie BuKongo et représentation du « beau Kongo »
+
+**Décision d'auteur sur l'univers et ses adaptations, non exposé historique à insérer tel quel dans la narration.** Le Founder précise que la documentation matérielle conservée après des siècles de destructions, d'abandons et de transformations ne constitue **pas le baromètre ni le plafond esthétique** du Kongo aristocratique qu'il veut représenter. Éviter d'inférer le niveau de l'architecture ancienne à partir de constructions contemporaines dégradées. Conserver cependant une distinction éditoriale entre **faits attestés**, **traditions et enseignements transmis**, **hypothèses**, et **créations romanesques** ; ne pas convertir automatiquement les affirmations générales de l'auteur en certitudes historiographiques.
+
+### Philosophie et esthétique
+- Le **BuKongo**, tel que conçu et transmis par le Founder, vise l'accord avec l'**ordre de l'univers** ; le « beau Kongo » traduit ordre, propreté, élégance, précision, compétence et haute tenue morale et spirituelle. Éviter aussi bien l'imagerie misérabiliste que l'idéalisation naïve : le roman comporte des conflits, des trahisons, des violences et une dégradation politique.
+- **La richesse est d'abord la qualité et l'étendue des relations, des alliances et de la solidarité**, le matériel venant ensuite. Les artisans spécialisés (maîtres charpentiers, forgerons, tailleurs de pierre, spécialistes des teintures et pigments, jardiniers, etc.) sont des maîtres de leur art ; les nommer, leur donner une personnalité, des élèves et des trajectoires croisées pouvant nourrir d'autres volumes ou adaptations.
+- La compétence technique, la géométrie, les métiers du métal, les pratiques spirituelles et scientifiques doivent être traités avec dignité et ambition. Les références intellectuelles personnelles du Founder, dont **Cheikh Anta Diop**, ne deviennent pas automatiquement des personnages ou des démonstrations scientifiques du roman.
+- Le Founder affirme, pour son idéal du Kongo traditionnel, l'existence de protections sociales fortes et de formes de justice autres que l'emprisonnement, notamment exil et **nkasa**. Ce sont des **principes et propositions de représentation à travailler** ; éviter les assertions historiques absolues (« aucun pauvre », « aucune prison ») sans sources spécifiques.
+- Le déclin et les destructions de **Mbanza-Kongo**, puis la place de **Kimpa Vita** dans la mémoire de sa restauration, constituent un arrière-plan important. Les dates et la nature exacte des destructions et restaurations devront être articulées avec la chronologie historique, sans présenter les formulations orales comme vérifiées d'office.
+
+### Mise en scène
+- Montrer cette civilisation **par les gestes, métiers, espaces, règles d'hospitalité, scènes d'enseignement, jardins, objets et relations sociales**, plutôt que par un discours explicatif de l'auteur.
+- Le Founder précise que ses propres enseignements et convictions contemporains **ne sont pas destinés à être reproduits comme tels dans le roman**. Dans la fiction, certaines idées seront portées par les enseignements de **Kimbango** (nom de personnage indiqué par le Founder ; à raccorder aux fiches existantes).
+- Le domaine de Kinuani et Mutinu doit être un lieu où les compétences et les personnes forment une société : artisans identifiables, savoirs transmis, cour et ateliers ordonnés, esthétique kongo de haute qualité, hospitalité et activités de Mutinu. L'ambition s'étend aux films, séries et autres romans de la saga.
+
+**Statut :** orientation canonique d'auteur et pistes de scènes/personnages consignées ; aucune scène achevée, reconstitution architecturale validée ou validation Quality revendiquée.
