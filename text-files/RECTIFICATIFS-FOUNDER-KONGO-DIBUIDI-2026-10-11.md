@@ -528,3 +528,22 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - La grande concession est un lieu collectif organisé par Mutinu, avec personnel, familles et activités ; ne pas réduire son autorité à la simple préparation des repas.
 
 **État :** consignation des décisions d'auteur ; scènes et dialogue exact à rechercher dans l'existant ; aucun déploiement, import DB ni Quality PASS affirmé.
+
+
+## Complément Founder — 1 novembre 2026 — état des scènes, fortification et mort de Bikuta
+
+**État réel du manuscrit selon le Founder :** ne pas prétendre que les arcs résumés sont déjà écrits en scènes. Seules l'ouverture à Mbanza-Kongo en 1704, la promotion de Kinuani et la scène qui suit à la rivière / au bain semblent partiellement rédigées ; **la grande majorité des scènes reste à écrire**. Les fiches, plans et rectificatifs constituent une préparation narrative, non un manuscrit achevé.
+
+### Domaine sécurisé de Kinuani après le retour de Mbanza-Kongo
+- Après son retour et sa prise de fonctions à **Kuimba**, **Nzungani** propose à **Mutinu** une réorganisation de la concession en un domaine défensif à **quatre niveaux ou ceintures de protection**. Kinuani, le **mfumu**, se trouve au centre ; autour de lui, des soldats d'élite et des proches fidèles, notamment un secteur des responsables militaires/généraux de confiance, puis d'autres protections périphériques. **Le détail spatial exact de chaque anneau reste à élaborer** : ne pas inventer un plan définitif.
+- Mutinu défend le projet auprès de Kinuani ; ils en discutent. **Suru** examine et approuve le principe. La concession est progressivement aménagée en **domaine fortifié**, en réponse aux trahisons, tensions politiques et risques d'attaque.
+- La protection des dignitaires varie selon les régions : Kimbembe, installé de l'autre côté du fleuve, bénéficie d'un environnement naturellement plus défendable et n'a pas nécessairement besoin d'un dispositif identique. L'idée de défense s'inscrit dans une période d'alliances fragiles, de razzias, d'expéditions pour libérer des captifs et de débats sur la nécessité de réformer les méthodes politiques et militaires.
+
+### Mort de Bikuta : rectification et nouvelle précision décisive
+- **Bikuta est tué par arme à feu lors d'une intervention destinée à libérer des captifs**, victimes d'une razzia dans **un village de son clan maternel**, alors qu'ils sont convoyés vers la côte / l'océan. Il participe à l'opération avec des compagnons.
+- **Son corps disparaît dans un cours d'eau lié au bassin du fleuve Congo et n'est jamais retrouvé.** Les circonstances exactes de sa mort, l'identité du tireur et le déroulement de l'affrontement demeurent **incertains dans l'univers du récit** ; des témoignages contradictoires et des rumeurs circulent. Ne pas transformer l'hypothèse des témoins en certitude judiciaire.
+- **Kinuani apprend la nouvelle avec environ trois mois de retard**, au fil de récits indirects, sans preuve immédiate claire. Il rend visite aux parents de Bikuta, qui lui transmettent leurs propres informations, elles aussi incohérentes. L'enquête se poursuit auprès d'anciens compagnons / milongoki. Le Founder a explicitement rectifié une première évocation de six mois : retenir **trois mois environ**.
+- Cette perte est un choc affectif et idéologique majeur. Elle renforce chez Kinuani la conviction qu'une confrontation plus vaste devient inévitable et réactive l'héritage politique de Nzongo, **sans préjuger de la chronologie exacte ni des conclusions de l'enquête**.
+- **Ne pas situer arbitrairement cette annonce au Mayombe** : le Founder a hésité puis retiré cette précision pendant sa dictée. Raccorder la date à la chronologie existante avant de fixer le lieu.
+
+**Statut :** consigné comme directives de continuité et matériau de scènes ; aucune scène rédigée, aucune donnée DB modifiée, aucun verdict Quality affirmé.
