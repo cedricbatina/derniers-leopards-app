@@ -132,7 +132,7 @@ m25-gouvernance-kuimba|Gouvernance de Kuimba|1656-1665|Kuimba|Kinuani, Mutinu, a
 m26-sabotages-mbuila|Sabotages du 29 octobre 1665|1665-10-29|Mbuila / foret-savane|Kinuani, Mvita Kanga, traitres|Trahisons internes sabotent les communications ; Kinuani attend un signal qui ne vient pas ; Vita Kanga tombe.
 m27-sacrifice-30-octobre|Bataille / sacrifice du 30 octobre|1665-10-30|Mbuila|Kinuani, cent volontaires|Kinuani choisit de mourir debout et attaque avec environ cent volontaires ; mort avant midi.
 m28-desolation|Desolation|1665-1704|Kongo|Survivants, deportes, persecuteurs|Deportations, persecutions, villages detruits.
-m29-resistance-secrete|Resistance secrete|1665-1702|Kuimba / reseaux caches|Mutinu, mapasa, disciples|Mutinu, les mapasa et les disciples transmettent le bukongo en secret.
+m29-resistance-secrete|Resistance secrete|1665-1704|Kuimba / reseaux caches|Mutinu, mapasa, disciples|Mutinu, les mapasa et les disciples transmettent le bukongo en secret.
 m30-mbongi-final|Mbongi final|1704|Mbanza Kongo|Mutinu, Kimpa Vita, anciens|Retour narratif au mbongi de memoire.
 
 ======================================================================================
