@@ -680,7 +680,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 
 ### Anticipation des jalousies et formation au Kinkumbi
 - Le même jour, Mutinu pressent qu'elle sera enviée par d'autres femmes. La considération que Kinuani lui témoigne contribuera à l'hostilité de **la sœur de Kinuani**, de **certaines femmes du clan de Kuimba** et d'autres femmes envers elle. Ne pas généraliser à toutes les femmes, ni uniformiser les motivations individuelles ; articuler avec les conflits et la réconciliation ultérieure déjà consignés.
-- Mutinu se souvient des enseignements reçus pendant son **Kinkumbi** sur la jalousie, la compétition malsaine et particulièrement les tensions entre belles-sœurs. Le Founder rapporte une représentation pédagogique : **deux femmes peuvent rivaliser ; à trois, deux peuvent faire alliance contre une ; à quatre, deux camps de deux peuvent se former**. Cette représentation est à traiter comme **un enseignement situé, tel que Mutinu l'a reçu ou interprété**, non comme une loi universelle sur les femmes ou une vérité sociologique du narrateur. Les personnages peuvent la nuancer ou la contredire.
+- Mutinu se souvient des **conseils personnels de Mama Tusikila, sa confidente depuis le début**, sur la jalousie, la compétition malsaine et particulièrement les tensions entre belles-sœurs. **Correction Founder du 5 novembre : ne pas attribuer ces propos au Kinkumbi.** Le Founder rapporte une représentation pédagogique : **deux femmes peuvent rivaliser ; à trois, deux peuvent faire alliance contre une ; à quatre, deux camps de deux peuvent se former**. Cette représentation est à traiter comme **un enseignement situé, tel que Mutinu l'a reçu ou interprété**, non comme une loi universelle sur les femmes ou une vérité sociologique du narrateur. Les personnages peuvent la nuancer ou la contredire.
 - La formation prénuptiale d'au moins un an exigée par Kisita demeure distincte des initiations ultérieures. Préserver la continuité des personnages et des événements existants.
 
 ### Répartition entre les tomes
@@ -689,3 +689,38 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - Ne pas présumer que tout ce matériau doit être écrit dans le tome 1, ni qu'une scène ou une mise à jour MySQL a déjà été produite.
 
 **Statut :** décisions Founder consignées dans le référentiel GitHub existant ; propositions d'organisation littéraire explicitement distinguées des décisions. Aucun changement DB, aucune livraison de scènes, aucun déploiement ni verdict Quality revendiqué.
+
+
+## Complément Founder — 5 novembre 2026 — Tusikila, Nzongo et famille de Mutinu
+
+**Correction et complément directs du Founder ; à réconcilier avec les fiches, scènes, chronologies et données Sonekeno déjà existantes.** Ce complément ne crée pas de scène achevée et ne fixe pas les points encore incertains.
+
+### Origine des conseils sur les rivalités
+- **Correction expresse :** la représentation des rivalités et alliances entre deux, trois ou quatre femmes, notamment entre belles-sœurs, provient des **conseils de Mama Tusikila**, confidente de Mutinu depuis le début, **et non du couvent/Kinkumbi**. Il s'agit de conseils situés, non d'une vérité générale du narrateur. Le Kinkumbi conserve ses enseignements propres.
+- Mutinu prévoit de répondre par des actes et des attentions à la considération de Kinuani. Elle se sent appelée à être à la hauteur de son époux, en réunissant les compétences transmises par sa grand-mère, l'exemple et les conseils de Tusikila, ses apprentissages au Kinkumbi et ses qualités personnelles.
+- **Direction narrative approuvée pour le tome 3, Mama Imama :** Mutinu transforme progressivement la maison reçue en centre d'hospitalité, de création, de soins, d'influence et de vie collective ; elle imprime au domaine une identité qui lui est propre. Répartir les scènes selon leur point de vue et leur fonction, sans dupliquer mécaniquement le tome 1.
+
+### Retour à Kuimba en 1639 : mariages, alliances et réflexion de Ne Nzongo
+- Le mariage de Kinuani et Mutinu **n'est pas le seul mariage célébré au cours du voyage hors de Kuimba**. Après les cérémonies et le long retour, Ne Nzongo rentre globalement satisfait : des alliances importantes et stratégiques ont été scellées.
+- Depuis le mariage et sur le trajet de retour, **Nzongo se montre attentionné envers Mutinu**. Il la considère sincèrement comme une femme vertueuse, conformément à ce que Mama Tusikila lui avait indiqué, et comme une épouse bien assortie à Kinuani.
+- Les événements autour de la mort de **Ne Mawungu** continuent néanmoins de le faire réfléchir : il doit modifier sa stratégie et faire davantage de place à la nouvelle génération, dont Kinuani.
+- À leur arrivée à Kuimba, **Nzongo entend promouvoir Kinuani comme assistant mukiongoudidi**, et l'intégrer parmi ses assistants et gardes. **Vérifier le titre et son articulation avec les autres charges déjà consignées avant toute normalisation** ; ne pas avancer arbitrairement la nomination si une scène antérieure en précise la date.
+
+### Nzongo, maître artisan, et Kinuani, érudit aux compétences différenciées
+- **Ne Nzongo est maître forgeron et architecte hors pair**, également compétent dans les domaines techniques qu'il observe chez ses protégés.
+- Il a confié à Kinuani **un terrain en pente bordé d'eau**, notamment pour éprouver ses capacités d'ingénierie et d'organisation. Dès les premiers mois, la direction des travaux le surprend favorablement. Il vient parfois observer le chantier et partage à l'occasion ses appréciations avec **Mama Kisita** ; certaines informations passent ensuite, selon les circonstances et les silences de Kisita, par **la sœur de Kinuani** jusqu'à Kinuani.
+- Kinuani n'est **pas un artisan universel** : érudit de haut niveau, ingénieur, soldat justicier, historien, artiste, poète, doté de compétences d'élite pour servir Mbanza Kongo et le Mani Kongo. Respecter ses talents et limites déjà consignés. Nzongo regrette intérieurement que Kinuani ne maîtrise pas davantage **le feu et la forge**, tout en espérant qu'il s'y intéressera plus tard. Sa bonne maîtrise des armes provient notamment de sa formation d'élite, et non d'une expertise présumée de forgeron.
+
+### Installation de la parenté de Mutinu et cuisine de la concession
+- Mutinu arrive à Kuimba avec **plusieurs membres de sa famille**, qui s'y établissent également ; **deux membres de cette parenté** se sont mariés avec des personnes de Kuimba. Identifier précisément les personnes et les unions dans les fiches avant de les nommer.
+- Sa **grande sœur divorcée**, cuisinière particulièrement talentueuse, participe fortement à la vie de la concession. Nom oral évoqué par le Founder : **« Ma Ndialu »**, **INCERTAIN — retrouver la graphie et l'identité canoniques**, ne pas normaliser sans vérification. Kinuani apprécie beaucoup ses plats.
+- La sœur cuisine le plus souvent pour la concession ; Mutinu lui fait préparer les mets préférés de son **mbuala** et elles cuisinent parfois ensemble. Prévoir dans l'architecture une cuisine collective bien organisée, des réserves et les espaces de travail associés, sans inventer leur implantation définitive.
+- **Plus tard**, la sécurité alimentaire de Kinuani conduit à l'interdiction de manger hors des cuisines de confiance de Mutinu et de sa sœur. Lorsque Mutinu ne peut accompagner Kinuani, notamment dans la période de l'exil, elle mandate **un soldat cuisinier** pour lui. **Nom déjà réputé consigné selon le Founder mais non retrouvé dans ce registre : rechercher dans les fiches/scènes/DB avant toute rédaction, ne pas inventer.** Ne pas rétroprojeter cette restriction de sécurité sur les premiers jours du mariage.
+
+### Points à raccorder sans invention
+- Chronologie exacte des autres mariages du voyage de 1639, familles alliées et retour à Kuimba.
+- Nom/titre exact de l'assistant mukiongoudidi et date de la promotion ; distinction entre assistants, gardes et fonctions judiciaires.
+- Nom canonique de la grande sœur divorcée de Mutinu et du soldat cuisinier ; identification des deux parents mariés à Kuimba.
+- Répartition précise entre Kongo Dibuidi et Mama Imama : événements publics et vie conjugale au tome 1, approfondissement de l'intériorité et de la construction sociale de Mutinu au tome 3, sous réserve des scènes existantes.
+
+**Statut :** instructions Founder consignées sur GitHub main, sans revendication de modification MySQL, de scène intégrée, de déploiement ni de validation Quality.
