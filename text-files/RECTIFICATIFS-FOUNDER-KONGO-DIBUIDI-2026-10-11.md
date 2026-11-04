@@ -660,3 +660,32 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - Découpage en scènes et articulation avec les scènes déjà enregistrées en MySQL quand l'accès reviendra.
 
 **Traçabilité :** rectification orale Founder du 4 novembre 2026. Consignée sur GitHub uniquement ; aucune exécution sur MySQL, aucun déploiement, aucune validation Quality revendiqués.
+
+
+## Complément Founder — 4 novembre 2026 — Beau Kongo, découverte de la concession et intériorité de Mutinu
+
+**Autorité : instructions directes du Founder à intégrer aux décisions antérieures sur le domaine de Kuimba, la chronologie 1636–1639, le Kinkumbi, les personnages et la saga.** Ne pas remplacer les passages précédents ni considérer ces éléments comme des scènes déjà rédigées en base. Les choix de dialogue et de focalisation restent ouverts.
+
+### Esthétique du Beau Kongo et BuKongo
+- La concession exprime l'ordre, la beauté, l'entretien, l'ingéniosité et le naturel : végétation vivante, jardins biologiques/nourriciers, fleurs, arbres, biodiversité, eau, géométrie, symétrie, perspectives et effets optiques, précision des assemblages, artisanat d'excellence, matériaux naturels et motifs/symbolique du léopard.
+- La symbolique des polarités positive et négative (+/−), de l'équilibre et de la complémentarité doit être perceptible dans l'organisation spatiale, sans exposition doctrinale systématique. Les modalités symboliques précises restent à approfondir avec le Founder. Ne pas confondre « naturel/bio » dans l'intention esthétique avec une certification moderne ni attribuer sans preuve historique des techniques précises au XVIIe siècle.
+- Les deux résidences personnelles auraient, selon la polarité évoquée par l'auteur, dû être de proportions identiques ou similaires et complémentaires. **Kinuani choisit délibérément une asymétrie : la résidence de Mutinu est sensiblement plus grande que sa propre maison, petite et simple mais soignée.** Les deux demeurent très proches et communicantes, avec un troisième espace conjugal commun, conformément au canon antérieur. Cette asymétrie n'est ni une erreur de plan ni un manque de moyens.
+
+### Le souvenir de 1636 et la découverte en 1639
+- En **1636**, Mutinu avait parlé à Kinuani de la maison qu'elle souhaitait un jour. Il a conservé ses paroles en mémoire et fait réaliser pour elle cette maison avant son arrivée dans leur concession en **1639**.
+- Lors de la découverte du domaine, Mutinu est frappée par la différence de taille des habitations. Elle reconnaît dans la simplicité volontaire de la maison de Kinuani son humilité persistante, et dans la réalisation de ses propres souhaits une immense considération, une déclaration d'intérêt et d'amour : ses paroles et ses goûts comptent réellement pour lui.
+- Mutinu se dit qu'elle a de la chance d'avoir épousé l'homme qu'elle avait choisi. Elle remercie **Nzambi a Mpungu** (le Divin) ainsi que les **bibas ou bankulu** (ancêtres méritants) ; préciser ultérieurement les nuances et emplois de ces termes sans les fusionner arbitrairement.
+- **Ce jour-là, elle commence à appeler Kinuani « mbuala » (époux), « mbuala ami » (mon époux) ; « diabonda » exprime le bien-aimé, celui du cœur.** Conserver les graphies et gloses transmises par le Founder, sous réserve d'un travail linguistique ultérieur autorisé.
+- **NON ARBITRÉ :** Mutinu évoque-t-elle immédiatement avec Kinuani l'asymétrie et les polarités, ou garde-t-elle d'abord cette réflexion intérieure ? Ne pas trancher ni écrire un dialogue définitif. **Orientation décidée : elle lui répondra aussi et surtout par des actes, des attentions particulières et renouvelées.**
+
+### Anticipation des jalousies et formation au Kinkumbi
+- Le même jour, Mutinu pressent qu'elle sera enviée par d'autres femmes. La considération que Kinuani lui témoigne contribuera à l'hostilité de **la sœur de Kinuani**, de **certaines femmes du clan de Kuimba** et d'autres femmes envers elle. Ne pas généraliser à toutes les femmes, ni uniformiser les motivations individuelles ; articuler avec les conflits et la réconciliation ultérieure déjà consignés.
+- Mutinu se souvient des enseignements reçus pendant son **Kinkumbi** sur la jalousie, la compétition malsaine et particulièrement les tensions entre belles-sœurs. Le Founder rapporte une représentation pédagogique : **deux femmes peuvent rivaliser ; à trois, deux peuvent faire alliance contre une ; à quatre, deux camps de deux peuvent se former**. Cette représentation est à traiter comme **un enseignement situé, tel que Mutinu l'a reçu ou interprété**, non comme une loi universelle sur les femmes ou une vérité sociologique du narrateur. Les personnages peuvent la nuancer ou la contredire.
+- La formation prénuptiale d'au moins un an exigée par Kisita demeure distincte des initiations ultérieures. Préserver la continuité des personnages et des événements existants.
+
+### Répartition entre les tomes
+- **Tome 1 — Kongo Dibuidi :** la découverte de la concession, la différence des résidences, la reconnaissance de l'amour de Kinuani et le premier usage de « mbuala ami » constituent des événements à positionner dans la chronologie 1639, sous réserve de leur présence et découpage déjà existants.
+- **Tome 3 — Mama Imama (vie de Mutinu) :** candidat particulièrement pertinent pour approfondir le souvenir de 1636, son expérience du Kinkumbi, ses pensées spirituelles, ses observations des rivalités féminines, les gestes par lesquels elle répond à Kinuani et sa propre perspective sur le domaine. **Affectation détaillée NON ARBITRÉE** : un même événement peut être repris sous une focalisation différente, sans duplication mécanique des scènes.
+- Ne pas présumer que tout ce matériau doit être écrit dans le tome 1, ni qu'une scène ou une mise à jour MySQL a déjà été produite.
+
+**Statut :** décisions Founder consignées dans le référentiel GitHub existant ; propositions d'organisation littéraire explicitement distinguées des décisions. Aucun changement DB, aucune livraison de scènes, aucun déploiement ni verdict Quality revendiqué.
