@@ -11,3 +11,11 @@ Au septième mois de grossesse, la mère de Mutinu loge dans la concession des �
 Kinuani a aménagé la concession pour l'épanouissement de Mutinu et respecte leurs règles conjugales. Une ou deux fois, il rentre après la tombée de la nuit. Mutinu lui manifeste son mécontentement, notamment par un plat trop salé, et une autre fois par trois jours d'absence aux rendez-vous matinaux qu'elle avait fixés. Kinuani comprend, évite tout scandale, attend l'apaisement et renouvelle ses engagements. Leur intimité demeure privée.
 
 Statut : consignation GitHub uniquement ; scènes, base de données et Quality non vérifiées.
+
+## Répartition éditoriale entre les tomes 1 et 3
+
+**Tome 1 — Kongo Dibuidi :** faire vivre les événements essentiels dans la trajectoire de Kinuani et du couple : installation en 1639, fonctionnement de la concession, grossesse, départ cinq mois après installation, mission de deux mois et demi, retour et grossesse visible, accueil familial au septième mois, soutien discret de Kinuani, relation avec Nzongo et Tusikila. Sélectionner les scènes nécessaires à l'intrigue principale.
+
+**Tome 3 — Mama Imama :** raconter la même période depuis l'expérience propre de Mutinu, sans recopier les scènes du tome 1 : construction de son autorité, rivalités féminines, soutien politique de Tusikila, regard de sa mère, relation avec Ndialu, règles et intimité conjugales, apprentissages, pratiques et évolution de ses compétences. Les événements partagés peuvent être évoqués ou revisités seulement avec un nouvel enjeu et un nouvel éclairage.
+
+**Méthode :** rechercher les scènes déjà écrites, identifier leur tome et leur point de vue, puis répartir et réconcilier avant de rédiger ou déplacer. Aucune scène MySQL ni validation Quality n'est revendiquée ici.
