@@ -39,3 +39,14 @@ Le bain est une habitude du couple : Kinuani revient généralement vers 17 h se
 La complicité des époux remonte à 1636 et s'approfondit après leur mariage. Kinuani sait faire rire Mutinu aux éclats ; peu connaissent cette facette de son caractère. Mama Yudisa l'entend parfois et sourit ; Ma Ndialu dit : « C'est Mutinu, ça ! » Kinuani est également ouvert avec sa belle-sœur, qui le respecte davantage en découvrant sa personnalité. Il apprécie les soins de Mutinu et la paix de son foyer, notamment lorsqu'il les compare à des ménages conflictuels qu'il connaît.
 
 Statut : consignation des décisions Founder seulement ; aucune scène en base, aucun déploiement et aucune validation Quality revendiqués.
+
+
+## Décisions Founder — naissance et accueil des rescapés (5 novembre 2026)
+
+La première grossesse de Mutinu aboutit à la naissance de **Nkodia** (« alliance »), en 1640 selon la chronologie désormais établie (mariage août 1639, installation début septembre, début de grossesse environ deux mois après). Les **mapasa** naissent lors d'une grossesse ultérieure, en deuxième position dans la descendance. À la naissance des jumeaux, Mutinu prend le titre particulier **Mama Ngudi** (« mère de jumeaux ») et Kinuani **Tata Ngudi** (« père de jumeaux »), selon la tradition kongo rapportée par le Founder. Ne pas attribuer ces titres à la naissance de Nkodia.
+
+Pour les captifs libérés lors de la mission de Kinuani avec **Kimbembe et Bikuta**, la décision d'accueil et d'intégration relève du **conseil des femmes et des anciens**. Dans l'ordre institutionnel précisé par le Founder : **Miakubuku décide, Nzongo exécute**. Kinuani et ses compagnons assurent la libération et apportent les informations utiles, sans se substituer à l'autorité de décision. Les modalités pratiques détaillées d'intégration restent à élaborer ; ne pas les présenter comme déjà fixées.
+
+La mission ponctuelle dure trois semaines ; au retour, Mutinu est enceinte de **huit mois et quelques**, ce qui place l'épisode en **1640**, et non en 1639. Ne pas confondre avec la mission plus longue déjà documentée.
+
+Statut : décisions consignées dans le document existant ; scènes et base de données non modifiées, validation Quality non revendiquée.
