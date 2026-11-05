@@ -19,3 +19,8 @@ Statut : consignation GitHub uniquement ; scènes, base de données et Quality n
 **Tome 3 — Mama Imama :** raconter la même période depuis l'expérience propre de Mutinu, sans recopier les scènes du tome 1 : construction de son autorité, rivalités féminines, soutien politique de Tusikila, regard de sa mère, relation avec Ndialu, règles et intimité conjugales, apprentissages, pratiques et évolution de ses compétences. Les événements partagés peuvent être évoqués ou revisités seulement avec un nouvel enjeu et un nouvel éclairage.
 
 **Méthode :** rechercher les scènes déjà écrites, identifier leur tome et leur point de vue, puis répartir et réconcilier avant de rédiger ou déplacer. Aucune scène MySQL ni validation Quality n'est revendiquée ici.
+
+
+## Précision Founder — présence croisée des personnages et réalisations
+
+Les tomes 1 (*Kongo Dibuidi*) et 3 (*Mama Imama*) ne se répartissent pas exclusivement les personnages, leurs traits de caractère ou leurs réalisations. Dans **les deux tomes**, les qualités, faiblesses, actions et réalisations de Kinuani, Mutinu, Nzongo, Tusikila et des autres personnages doivent apparaître quand la narration le requiert. Un même élément peut être **évoqué brièvement dans l'un et développé dans l'autre, ou inversement**. La profondeur dépend de l'enjeu, du point de vue et du rythme de chaque passage, non d'une attribution rigide des sujets à un tome. Préserver la cohérence factuelle, chronologique, psychologique et matérielle ; éviter seulement la répétition sans apport narratif. Réconcilier avec les scènes existantes avant toute redistribution.
