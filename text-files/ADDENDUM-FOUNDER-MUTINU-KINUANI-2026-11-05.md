@@ -50,3 +50,16 @@ Pour les captifs libérés lors de la mission de Kinuani avec **Kimbembe et Biku
 La mission ponctuelle dure trois semaines ; au retour, Mutinu est enceinte de **huit mois et quelques**, ce qui place l'épisode en **1640**, et non en 1639. Ne pas confondre avec la mission plus longue déjà documentée.
 
 Statut : décisions consignées dans le document existant ; scènes et base de données non modifiées, validation Quality non revendiquée.
+
+
+## Précisions Founder — kia, nkokela et soins familiaux
+
+**Kia** est la « bonne heure », vers 4 h–5 h du matin. Champ lexical donné par le Founder : éclat, lueur, lumière, luminosité, éclairage ; **ku kia** : éclairer, mettre en lumière. Pour Mutinu, cette période favorise la méditation commune, la proximité conjugale, le renouvellement de l'amour et de la confiance, la bénédiction des journées et la consolidation consciente des projets du *longo*. Elle relie l'énergie de création de la vie à celle des autres créations : « Qui peut le plus peut le moins. » Présenter cette conception comme son enseignement spirituel, non comme une loi scientifique.
+
+**Nkokela** désigne la descente ou chute solaire vers le crépuscule. Selon la tradition transmise à Mutinu, cette période comporte des influences spirituelles dont il convient de protéger le foyer. Bains, plantes, parfums, encens, prières et méditation participent à cette protection. La règle de retour de Kinuani vers 17 h relève donc, pour elle, d'une responsabilité envers le *longo* ; elle considère les retards comme des risques évitables.
+
+Mutinu **ne sort généralement pas la nuit**. Exceptions : veillées mortuaires et autres occasions où le nkokela la trouve déjà sur place, ou réceptions auxquelles elle assiste accompagnée de son époux. Habituellement, elle est chez elle avant le nkokela ; elle brûle des encens et prie dans sa demeure, notamment avant le retour de Kinuani lorsqu'il est dehors. Après la naissance des enfants, **l'ordre des bains est : enfants, Kinuani, Mutinu en dernier**. Ne pas projeter les bains des enfants sur la période précédant la naissance de Nkodia.
+
+En cas de retard, Mutinu exprime parfois sa désapprobation par un repas trop salé ; elle réserve toujours les remontrances à l'intimité. Kinuani comprend le signal et peut revenir dès avant 15 h pour montrer sans paroles qu'il prend la règle au sérieux, notamment devant les visiteurs. Mutinu en sourit intérieurement ; une fois apaisée, elle lui avoue son amusement : « Tu es terrible, mbuala ! » Les deux époux et quelques proches avertis comprennent ces échanges discrets.
+
+Statut : précisions de l'auteur consignées dans ce référentiel ; scènes, base de données et Quality non validées par cette mise à jour.
