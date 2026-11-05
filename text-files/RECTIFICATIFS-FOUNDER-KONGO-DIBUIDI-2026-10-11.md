@@ -750,3 +750,14 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - **Identité visuelle de Mutinu :** l'auteur apprécie le portrait illustré de Mutinu ; le conserver comme référence visuelle provisoire de travail, avec tresses africaines aux géométries changeantes et foulard couvrant les cheveux en public selon la convention vestimentaire de ce monde fictionnel. Ne pas revendiquer une preuve historique générale pour toutes les femmes kongo.
 
 **Traçabilité :** rectifications Founder consignées sur GitHub ; aucune scène MySQL, aucun déploiement et aucune validation Quality revendiqués.
+
+
+## Complément Founder — 5 novembre 2026 — rivalités et autorité domestique de Mutinu
+
+- Malgré la sagacité de Mutinu et sa gestion réussie de la concession, **la sœur de Kinuani, Kisita et certaines femmes de Kuimba** la critiquent ou jugent ses réalisations insuffisantes. Conserver les motivations distinctes de chaque personnage, particulièrement la complexité de Kisita.
+- **Point de vue hostile, non vérité du narrateur :** Kinuani serait manipulé par cette femme venue d'ailleurs, que ses détractrices désignent comme **« muisi Nsembo » ou « muisi Ndamba »** (appellation exacte à retrouver, sans trancher arbitrairement) ; il satisferait tous ses caprices, aurait moins d'attentions pour sa sœur, et Mutinu serait une usurpatrice ayant pris la place qu'elles imaginaient destinée à **Nianzi**. Elles insinuent qu'elle se croit trop bienvenue à Kuimba et qu'elle ne sait même pas cuisiner. Ne pas confondre les accusations de ces personnages avec les faits : la cuisine est généralement assurée par la grande sœur de Mutinu, ce qui relève de l'organisation du domaine.
+- Mutinu se plaint parfois de ces comportements à Kinuani. **Kinuani affirme publiquement son autorité de maîtresse de la maison**, sans faire dépendre cette autorité des faveurs ou de l'approbation des autres femmes.
+- Mutinu demeure sûre d'elle, parfois fière, capable de répondre par des regards et de discrets sourires qui irritent ses adversaires et amplifient leurs médisances. **Dépit**, jalousie et ressentiment sont des nuances possibles pour qualifier leurs réactions, sans attribuer mécaniquement le même sentiment à toutes.
+- Préserver la souffrance affective potentiellement sincère de la sœur de Kinuani, son histoire avec Kisita, la place de Nianzi et les réconciliations ultérieures. La tension doit être intégrée aux scènes existantes et à la perspective de **Mama Imama**, sans création de dialogue définitif ni caricature collective.
+
+**Statut :** instructions Founder consignées dans le référentiel existant ; appellation d'origine de Mutinu non résolue ; pas de modification de scènes ou de DB ni de validation Quality revendiquée.
