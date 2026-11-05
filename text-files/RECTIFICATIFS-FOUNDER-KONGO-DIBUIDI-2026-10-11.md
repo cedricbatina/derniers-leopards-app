@@ -724,3 +724,13 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - Répartition précise entre Kongo Dibuidi et Mama Imama : événements publics et vie conjugale au tome 1, approfondissement de l'intériorité et de la construction sociale de Mutinu au tome 3, sous réserve des scènes existantes.
 
 **Statut :** instructions Founder consignées sur GitHub main, sans revendication de modification MySQL, de scène intégrée, de déploiement ni de validation Quality.
+
+
+## Rectification Founder du 5 novembre 2026 — continuité de la concession et des missions
+
+- **Cuisine et sécurité :** la cuisine de Mutinu et de sa grande sœur est déjà le circuit de confiance. Après un empoisonnement de Kinuani au Mayombe par une jeune femme de son clan qui avoue, Mutinu renforce strictement la règle de ne pas manger ou boire ailleurs. En mission sans Mutinu, un soldat cuisinier de confiance, dont le nom existe dans les sources à retrouver, prépare exclusivement ses repas et lui sert personnellement nourriture et boisson. L'épisode du Mayombe est ultérieur à l'installation de 1639.
+- **Parenté :** plusieurs proches de Mutinu s'établissent à Kuimba, dont deux mariés à des membres de Kuimba, mais ils ne résident pas tous dans la concession. Parmi eux, seule sa grande sœur divorcée, excellente cuisinière, y habite. Nom oral « Ma Ndialu » à vérifier.
+- **Chantier :** retrouver et conserver la scène déjà consignée où Ne Nzongo humilie un ouvrier de la concession au moyen d'une clé de doigt ; ne pas réinventer les circonstances.
+- **Premiers mois :** Mutinu tombe enceinte deux mois après l'installation à Kuimba ; Ne Nzongo s'en réjouit. Au troisième mois, Kinuani part en mission comme mukongudidi, avec notamment Kimbembe et Bikuta et des soldats répartis selon les nécessités logistiques. Préciser ultérieurement si « troisième mois » est compté depuis l'installation ou la grossesse.
+- **Nature des missions :** protection contre les razzias, libération de captifs, pacification de conflits, soutien aux représentants du Mani Kongo, justice et rétablissement de l'ordre. Certaines missions politiques commandées par des dignitaires visent aussi leurs adversaires considérés comme corrompus ou excessivement favorables aux puissances occidentales ; conserver cette ambiguïté narrative sans présumer la légitimité des accusations.
+- **Réconciliation :** vérifier les personnages, les épisodes et les dates dans les scènes existantes avant toute rédaction nouvelle. Aucun changement de base narrative ni verdict Quality revendiqué.
