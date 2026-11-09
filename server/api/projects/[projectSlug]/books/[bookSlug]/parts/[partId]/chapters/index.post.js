@@ -1,6 +1,6 @@
-import { dbQuery } from '../../../../../../../../utils/db.js'
-import { getProjectByAccess } from '../../../../../../../../utils/projects.js'
-import { getBookByProjectIdSlug } from '../../../../../../../../utils/books.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { getProjectByAccess } from '~~/server/utils/projects.js'
+import { getBookByProjectIdSlug } from '~~/server/utils/books.js'
 
 function toSlug(input) {
   return String(input || '')

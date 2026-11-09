@@ -1,5 +1,5 @@
-import { dbQuery } from '../../../../../utils/db.js'
-import { getProjectByAccess } from '../../../../../utils/projects.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { getProjectByAccess } from '~~/server/utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user

@@ -1,9 +1,9 @@
 // server/api/auth/login.post.js
 import { defineEventHandler, readBody, createError, getHeader } from 'h3'
-import { dbQuery } from '../../utils/db.js'
-import { normalizeEmail, setAuthCookies, createSession } from '../../utils/auth.js'
-import { verifyPassword } from '../../utils/password.js'
-import { signAccessToken, signRefreshToken } from '../../utils/jwt.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { normalizeEmail, setAuthCookies, createSession } from '~~/server/utils/auth.js'
+import { verifyPassword } from '~~/server/utils/password.js'
+import { signAccessToken, signRefreshToken } from '~~/server/utils/jwt.js'
 
 function pickPrimaryRole(slugs = [], fallback = 'user') {
   if (slugs.includes('admin')) return 'admin'

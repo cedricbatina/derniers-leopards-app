@@ -1,5 +1,5 @@
-import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByAccess } from '../../../../utils/projects.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { getProjectByAccess } from '~~/server/utils/projects.js'
 
 async function syncNarrators({ projectId, bookId, narratorIds }) {
   if (narratorIds === null) return

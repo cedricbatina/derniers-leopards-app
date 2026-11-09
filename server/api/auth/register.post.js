@@ -1,10 +1,10 @@
 // server/api/auth/register.post.js
 import { defineEventHandler, readBody, createError } from 'h3'
-import { dbQuery } from '../../utils/db.js'
-import { normalizeEmail } from '../../utils/auth.js'
-import { hashPassword } from '../../utils/password.js'
-import { randomTokenHex, sha256Hex } from '../../utils/tokens.js'
-import { sendVerifyEmail } from '../../utils/mailer.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { normalizeEmail } from '~~/server/utils/auth.js'
+import { hashPassword } from '~~/server/utils/password.js'
+import { randomTokenHex, sha256Hex } from '~~/server/utils/tokens.js'
+import { sendVerifyEmail } from '~~/server/utils/mailer.js'
 
 function badRequest(statusMessage) {
   return createError({ statusCode: 400, statusMessage })

@@ -1,4 +1,4 @@
-import { dbQuery } from '../../../utils/db.js'
+import { dbQuery } from '~~/server/utils/db.js'
 
 export default defineEventHandler(async (event) => {
   const { q } = getQuery(event)

@@ -1,9 +1,9 @@
 // server/middleware/auth.global.js
 import { defineEventHandler, createError, setCookie } from 'h3'
-import { dbQuery } from '../utils/db.js'
-import { readAccessCookie, readRefreshCookie, clearAuthCookies } from '../utils/auth.js'
-import { sha256Hex } from '../utils/tokens.js'
-import { verifyAccessToken, verifyRefreshToken, signAccessToken } from '../utils/jwt.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { readAccessCookie, readRefreshCookie, clearAuthCookies } from '~~/server/utils/auth.js'
+import { sha256Hex } from '~~/server/utils/tokens.js'
+import { verifyAccessToken, verifyRefreshToken, signAccessToken } from '~~/server/utils/jwt.js'
 
 // Endpoints API publics
 const PUBLIC_PREFIXES = [

@@ -1,5 +1,5 @@
 // server/api/projects/index.get.js
-import { dbQuery } from '../../utils/db.js'
+import { dbQuery } from '~~/server/utils/db.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user

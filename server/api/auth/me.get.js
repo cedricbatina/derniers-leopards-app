@@ -1,8 +1,8 @@
 // server/api/auth/me.get.js
 import { defineEventHandler } from 'h3'
-import { dbQuery } from '../../utils/db.js'
-import { readAccessCookie, clearAuthCookies } from '../../utils/auth.js'
-import { verifyAccessToken } from '../../utils/jwt.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { readAccessCookie, clearAuthCookies } from '~~/server/utils/auth.js'
+import { verifyAccessToken } from '~~/server/utils/jwt.js'
 
 export default defineEventHandler(async (event) => {
   const token = readAccessCookie(event)

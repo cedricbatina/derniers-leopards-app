@@ -1,4 +1,4 @@
-import { dbQuery } from '../../utils/db.js'
+import { dbQuery } from '~~/server/utils/db.js'
 
 function slugify(input) {
   return String(input || '')

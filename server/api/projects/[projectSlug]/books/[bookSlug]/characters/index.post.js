@@ -1,5 +1,5 @@
-import { dbQuery } from '../../../../../../utils/db.js'
-import { getBookForNarrativeApi } from '../../../../../../utils/projects.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { getBookForNarrativeApi } from '~~/server/utils/projects.js'
 
 function toSlug(input) {
   return String(input || '')

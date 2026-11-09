@@ -1,6 +1,6 @@
 // server/api/projects/[projectSlug]/characters/index.post.js
-import { dbQuery } from '../../../../utils/db.js'
-import { getProjectForNarrativeApi } from '../../../../utils/projects.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { getProjectForNarrativeApi } from '~~/server/utils/projects.js'
 
 function toSlug(input) {
   return String(input || '')

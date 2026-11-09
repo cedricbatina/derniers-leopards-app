@@ -1,6 +1,6 @@
-import { dbQuery } from '../../../../utils/db.js'
-import { getProjectByAccess } from '../../../../utils/projects.js'
-import { getTableColumns } from '../../../../utils/schema.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { getProjectByAccess } from '~~/server/utils/projects.js'
+import { getTableColumns } from '~~/server/utils/schema.js'
 
 function pickColumn(cols, candidates) {
   return candidates.find((c) => cols.has(c)) || null

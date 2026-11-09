@@ -1,6 +1,6 @@
 import { defineEventHandler, getQuery, createError, getHeader, sendRedirect } from 'h3'
-import { dbQuery } from '../../utils/db.js'
-import { sha256Hex } from '../../utils/tokens.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { sha256Hex } from '~~/server/utils/tokens.js'
 
 export default defineEventHandler(async (event) => {
   const { token } = getQuery(event)

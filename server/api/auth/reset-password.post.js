@@ -1,8 +1,8 @@
 // server/api/auth/reset-password.post.js
 import { defineEventHandler, readBody, createError } from 'h3'
-import { dbQuery } from '../../utils/db.js'
-import { hashPassword } from '../../utils/password.js'
-import { sha256Hex } from '../../utils/tokens.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { hashPassword } from '~~/server/utils/password.js'
+import { sha256Hex } from '~~/server/utils/tokens.js'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)

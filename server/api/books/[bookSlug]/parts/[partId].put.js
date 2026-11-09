@@ -1,4 +1,4 @@
-import { dbQuery } from '../../../../utils/db.js'
+import { dbQuery } from '~~/server/utils/db.js'
 
 export default defineEventHandler(async (event) => {
   const bookSlug = String(event.context.params.bookSlug || '').trim()

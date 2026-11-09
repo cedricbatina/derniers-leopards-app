@@ -1,9 +1,9 @@
 // server/api/auth/forgot-password.post.js
 import { defineEventHandler, readBody } from 'h3'
-import { dbQuery } from '../../utils/db.js'
-import { normalizeEmail } from '../../utils/auth.js'
-import { randomTokenHex, sha256Hex } from '../../utils/tokens.js'
-import { sendResetPasswordEmail } from '../../utils/mailer.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { normalizeEmail } from '~~/server/utils/auth.js'
+import { randomTokenHex, sha256Hex } from '~~/server/utils/tokens.js'
+import { sendResetPasswordEmail } from '~~/server/utils/mailer.js'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)

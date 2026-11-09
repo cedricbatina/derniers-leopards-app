@@ -1,8 +1,8 @@
 // server/api/auth/logout.post.js
 import { defineEventHandler } from 'h3'
-import { dbQuery } from '../../utils/db.js'
-import { readRefreshCookie, clearAuthCookies } from '../../utils/auth.js'
-import { sha256Hex } from '../../utils/tokens.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { readRefreshCookie, clearAuthCookies } from '~~/server/utils/auth.js'
+import { sha256Hex } from '~~/server/utils/tokens.js'
 
 export default defineEventHandler(async (event) => {
   const refreshToken = readRefreshCookie(event)

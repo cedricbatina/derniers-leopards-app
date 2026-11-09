@@ -4,10 +4,10 @@
  * Auth: session cookie + admin (see assertAdmin).
  */
 import { defineEventHandler, readBody, createError } from 'h3'
-import { assertAdmin } from '../../../utils/admin.js'
-import { dbQuery } from '../../../utils/db.js'
-import { assertValidProjectSlugForCanon } from '../../../utils/canonSyncRequest.js'
-import { syncCanonCharactersFromFiles } from '../../../utils/canonCharacterSync.js'
+import { assertAdmin } from '~~/server/utils/admin.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { assertValidProjectSlugForCanon } from '~~/server/utils/canonSyncRequest.js'
+import { syncCanonCharactersFromFiles } from '~~/server/utils/canonCharacterSync.js'
 
 const ALLOWED_TARGETS = Object.freeze(['characters', 'scenes'])
 

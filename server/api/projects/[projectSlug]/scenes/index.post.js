@@ -1,6 +1,6 @@
-import { dbQuery } from '../../../../utils/db.js'
-import { getProjectForNarrativeApi } from '../../../../utils/projects.js'
-import { tableHasColumn } from '../../../../utils/schema.js'
+import { dbQuery } from '~~/server/utils/db.js'
+import { getProjectForNarrativeApi } from '~~/server/utils/projects.js'
+import { tableHasColumn } from '~~/server/utils/schema.js'
 
 function toSlug(input) {
   return String(input || '')
