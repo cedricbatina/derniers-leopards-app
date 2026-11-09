@@ -114,8 +114,8 @@ m07-retour-ta-ndala|Retour de Ta Ndala|1636|Concession familiale|Ta Ndala, Maa T
 m08-negociations-domestiques|Negotiations et apprentissages domestiques|1638-1639|Famille de Mutinu|Mutinu, femmes de lignee, Ta Mualu|Mutinu approfondit les savoirs domestiques selon sa lignee maternelle.
 m09-retour-kinuani-kuimba|Retour de Kinuani a Kuimba|1638|Kuimba|Kinuani, oncles, Nzongo|Kinuani revient ; transmission des devoirs d epoux et de pere selon le bukongo.
 m10-longo|Longo - mariage|1639|Maison paternelle et maternelle de Mutinu|Mutinu, Kinuani, Tusikila, Ta Ndala, Ta Mualu, anciens|Alliance en deux ceremonies, chez le pere puis chez la mere de Mutinu.
-m11-naissance-nkodia|Naissance de Nkodia|1642|Kuimba|Mutinu, Kinuani, Nkodia|Premier enfant de Mutinu et Kinuani.
-m12-naissance-mapasa|Naissance des mapasa|1643|Kuimba|Mutinu, Kinuani, Muanda, Mpasi, doyennes|Naissance difficile des jumeaux ; debut de l initiation de Mutinu comme Maa Ngudi.
+m11-naissance-nkodia|Naissance de Nkodia|1640|Kuimba|Mutinu, Kinuani, Nkodia|Premier enfant de Mutinu et Kinuani.
+m12-naissance-mapasa|Naissance des mapasa|1643|Kuimba|Mutinu, Kinuani, Muanda, Mpasi, doyennes|Naissance difficile des jumeaux ; debut de l initiation de Mutinu comme Mama Ngudi.
 m13-initiation-prolongee|Initiation prolongee|1644-1648|Kuimba / Mayombe|Mutinu, doyennes|Mutinu poursuit l initiation feminine jusqu a l exil.
 m14-naissance-lunungu|Naissance de Lunungu|1646 / a harmoniser|Mayombe|Mutinu, Kinuani, Lunungu|Naissance du quatrieme enfant, liee a l arc de l epreuve.
 m15-attaque-leopards|Attaque des Leopards|1647|Frontieres de Kuimba|Kinuani, assaillants, makesa|Attaque exterieure ; assaillants pris dans les pieges traditionnels.
@@ -234,3 +234,4 @@ SECTION 5 — CHECKLIST D HARMONISATION AVANT INSERTION
 - Ajouter/normaliser les lieux : Couvent de Ta Mukono, Marche Mpika, Concession de Tusikila, Mayi Ndombe, Massif du Mayombe, Mbuila, Luwozi, Pays Kuimba, Mbanza Kongo.
 - Ajouter les tags sans colonne description, ou migrer tags pour accueillir une description si besoin.
 - Une fois les scenes importees, remplir scene_characters pour les personnages presents mais non POV.
+

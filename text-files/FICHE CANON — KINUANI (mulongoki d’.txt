@@ -5,7 +5,7 @@ Nom : Kinuani
 
 Statut : milongoki d’élite formé au couvent, puis chef de Kuimba.
 
-Trait dominant : esprit stratégique + discipline + sens du consensus (chef “qui écoute”, mais tranche).
+Trait dominant : esprit stratégique, discipline, érudition et sens du consensus. Prêtre-justicier et juge, passionné de philosophie, de Bukongo, d’histoire, de kimayala et de transmission ; il aime les missions, les arts martiaux, sa solitude et le retour auprès des siens.
 
 2) Origines & formation
 
@@ -25,6 +25,12 @@ haute moralité.
 
 Il lui reste encore des années à finir quand la politique le rattrape (ce qui le rend tragique : il est “pas fini”, mais déjà aspiré).
 
+Techniques et maîtrise du feu
+
+Les dents de léopard combinent dispositifs fixes et mobiles ; elles ne sont l'invention ni de Nzongo ni de Mawungu. Dès la première moitié du XVIe siècle, Ne Nkilibaluengele avait participé adolescent à leur rénovation. Kinuani en apprend certains principes au couvent, puis se perfectionne auprès de Nzongo. Sa maîtrise des armes ne vaut pas maîtrise de leur conception.
+
+La forge l'attire peu au départ. Nzongo passe parfois par Mutinu, qui argumente avec persévérance ; Kinuani reconnaît la démarche et s'en agace parfois : chacun a ses compétences, les captifs et les affaires du royaume réclament son temps. Vers 1642, troisième année de son installation, Nzongo lui présente cinq fusils récupérés au cours de plusieurs missions. Les forgerons étudient déjà leurs parties de bois et de fer. L'espoir de comprendre et éventuellement reproduire ces armes pour la guerre à venir éveille son intérêt pour la fabrication d'armes, davantage que pour les objets d'art ou de culte. Aucune réussite de reproduction n'est fixée.
+
 3) Entrée dans la mécanique Kuimba
 
 Kinuani revient dans le système de Nzongo :
@@ -37,7 +43,7 @@ apprend la “gouvernance réelle” (gens, récoltes, justice, réputation).
 
 4) Relation avec Mutinu (axe intime & politique)
 
-Rencontre à Mpika / zone Mfuti.
+Rencontre à Mpika / Mfuti en juin 1636 ; mariage en août 1639, installation à Kuimba début septembre. Nkodia, premier enfant, naît en 1640 ; les mapasa viennent ensuite, lors de la deuxième grossesse, avec les titres Mama Ngudi et Tata Ngudi.
 
 Mutinu choisit Kinuani ; Kinuani préférerait Mutinu, mais il sait que le mariage est une affaire d’État.
 
@@ -46,6 +52,12 @@ Mutinu devient son pilier :
 soins, discipline du corps du chef, paix du cœur.
 
 Après initiation, Mutinu prend une dimension “cheftaine” (protectrice/rituelle).
+
+Parole et complicité
+
+Érudit du Bukongo, Kinuani répond par principe à qui demande une explication. Mutinu apprend avec enthousiasme et aime le voir argumenter, gesticuler, marquer des pauses ; une question philosophique peut rouvrir le dialogue quand il est contrarié. Sa démonstration associe proverbes, paraboles, compléments de l'assemblée, chants repris par les disciples puis l'audience, rires et « Ibobo ! ». Kimbembe excelle aussi dans cette oralité. Ces qualités se montrent dans Kongo Dibuidi comme dans Mama I Mama.
+
+En public, Kinuani renvoie selon l'affaire vers « Ma Mutinu », reconnaissant son autorité propre. Il renouvelle son amour plus librement en privé. Les soins de kia et d'avant nkokela, les rires, les attentions et la paix du longo soutiennent leur vie au fil des ans ; leur complicité remonte à 1636.
 
 5) Antagonismes structurants
 
@@ -81,7 +93,7 @@ Kilala : antenne involontaire ; tumbué recoupent, avertissent Mutinu.
 
 9) Consécration & objets de pouvoir
 
-Après la mort de Nzongo et les luttes, Kinuani est consacré chef par Miakubuku + anciens.
+Après la mort de Ne Nzongo, puis son séjour à Mbanza Kongo, Kinuani revient à Kuimba avec des émissaires du Mani Kongo et est consacré chef par Miakubuku et les anciens (1656 dans la chronologie existante).
 
 Canne de chefferie (canon) :
 
@@ -395,7 +407,7 @@ Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §G et n
 
 ## Complément Founder — âges fixés, départ des élèves et matin du retour (22 octobre 2026)
 
-- **Mfuti** : Kinuani **17 ans**, Mutinu **15 ans** ; **mariage deux ans plus tard** lorsque Kinuani a **19 ans** et Mutinu **17 ans**. Les années civiles 1638/1641 des anciennes notes sont à harmoniser, pas à valider simultanément avec cet intervalle.
+- **Dates arbitrées** : Mfuti en juin 1636 ; mariage en août 1639. L’ancien intervalle de deux ans et les âges matrimoniaux qui en découlaient ne doivent plus servir au recalage ; ne pas inventer d’âges de remplacement.
 - **Couvent** : **quatre à cinq mois après Mfuti (rectificatif §K)**, son chef suprême Ne Mawungu démissionne/perd l'autorité, se replie dans son village natal ; le couvent se vide. Kimbembe et Kiesa kia Bikuta figurent parmi les nombreux élèves partis. **Vers le septième mois après Mfuti**, Ne Nzongo fait rappeler Kinuani et ses cousins, fils du **clan Kuimba**, avant la fin du cursus. Kinuani est surpris et ne comprend pas encore cette décision.
 - **Veille de son arrivée à Kuimba** : **Ne Nzongo attend le retour de Kinuani** en balayant sa concession au matin, avec des mouvements de bâton exécutés à l'aide du balai ; **la présence de Kinuani au moment précis du balayage n'est pas établie**. L'aîné avait auparavant pratiqué course, nage et autres exercices ; son entraînement a évolué avec l'âge. Kinuani retrouve le Nzongo de son enfance jusqu'à sept ans : discipline, exigences morales, sévérité face à la négligence.
 - **Funérailles de Mawungu (avant le mariage, environ 3–4 mois après l'entrée de Mutinu au couvent féminin)** : fumée et objets/insignes brûlés en approche, d'autres dispersés chez des marchands noirs ou blancs, avec des savoirs et symboles d'autorité hérités du maître livrés à des non-initiés. Terme entendu « mvoala » à vérifier lexicalement. Ce gaspillage d'un héritage savant bouscule Kinuani, élève respectueux de l'érudition, et lui fait réévaluer les positions de Mawungu et de Ne Nzongo. Pas de conversion idéologique instantanée.
@@ -418,7 +430,7 @@ Voir le rectificatif Founder §I. Aucun changement automatique des dates, parent
 
 ## Complément Founder — septième mois, champs et solidarité des milongoki (22 octobre 2026)
 
-**Repères désormais fixés en temps relatif** : Mfuti T0 (Kinuani 17 ans, Mutinu 15 ans), retrait de Ne Mawungu **T0 + 4–5 mois**, rappel et retour de Kinuani à Kuimba **vers T0 + 7 mois**, entrée de Mutinu en initiation après l'annulation du projet Nianzi, décès de Ne Mawungu **environ 3–4 mois plus tard et AVANT le mariage**, mariage **T0 + 24 mois** (19/17 ans). Les hypothèses antérieures d'un retrait vers T0 + 12 mois et d'un décès avant ou après mariage sont **supplantées**.
+**Repères relatifs anciens — supplantés là où le calendrier du 29 octobre diffère** : Mfuti T0 (juin 1636 ; Kinuani 16 ans, Mutinu 15 ans selon le registre du 29 octobre), retrait de Ne Mawungu **T0 + 4–5 mois**, rappel et retour de Kinuani à Kuimba **vers T0 + 7 mois**, entrée de Mutinu en initiation après l'annulation du projet Nianzi, décès de Ne Mawungu **environ 3–4 mois plus tard et AVANT le mariage**, mariage **août 1639** (le repère antérieur T0 + 24 mois et les âges associés sont supplantés ; ne pas recalculer les âges sans source). La mort avant le mariage est établie ; les approximations relatives ne doivent pas remplacer les jalons civils du registre Founder.
 
 **Travaux agricoles et avenir matrimonial** : Kinuani met en culture **ses champs** et organise son futur foyer pour assurer sa subsistance et celle de sa famille. Il mobilise amis, anciens du couvent et étudiants d'autres institutions autour de l'**entraide, de l'organisation collective et d'une hiérarchie respectée**. Il enseigne de manière pratique des techniques de combat à des jeunes et s'exerce avec des pairs, sans déduire du fait qu'il entraîne autrui un **grade de mulongi déjà acquis**.
 
@@ -439,10 +451,11 @@ Mutinu est une jeune femme **volontaire, affirmée, argumentatrice**, attachée 
 
 Après le rappel de Kinuani et la proposition de mariage avec Nianzi, puis le revirement négocié en faveur de Mutinu, **Mutinu reproche intérieurement à Kinuani de ne pas avoir plus fermement imposé leur amour**. Elle estime qu'elle-même a dû se battre et que sans sa famille et Tusikila ils auraient été séparés. **Ne pas qualifier automatiquement Kinuani de faible** : son comportement découle du respect de la hiérarchie familiale, des tantes et des anciens. C'est un **désaccord de valeurs** entre deux tempéraments et deux éducations.
 
-À son entrée au couvent initiatique féminin, **Mutinu lui en veut encore pendant environ le premier mois** ; la formation lui permet ensuite de comprendre plus finement la situation et de mûrir, sans perdre sa personnalité affirmée. Durée totale **au moins un an**, mariage deux ans après les fêtes de Mfuti. Aucun dialogue précis d'excuses ou de réconciliation n'est encore établi.
+À son entrée au couvent initiatique féminin, **Mutinu lui en veut encore pendant environ le premier mois** ; la formation lui permet ensuite de comprendre plus finement la situation et de mûrir, sans perdre sa personnalité affirmée. Durée totale **au moins un an**, mariage en août 1639 après Mfuti en juin 1636. Aucun dialogue précis d'excuses ou de réconciliation n'est encore établi.
 
 Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §M.
 
 
 ## Complément canon Founder — 9 novembre 2026 : 1643–1644 et transmission
-Kinuani, environ 23 ans à la fin de 1643, propose à Mutinu de l'accompagner avec leur famille et la logistique jusqu'au pays Boko, terre de sa grand-mère où se déroula la seconde partie de son longo. Elle demeure à Boko, reliée à lui par les messagers de sa logistique, tandis qu'il rejoint Mayama. Le mfumu de Mayama réorganise la mission contre une vendetta de trois familles ; un ntumua conduit Kinuani, Kimbembe, Bikuta et leurs compagnons dans le Mayombe. Ils présentent leur mandat à Ne Mberi, homme de la Trompe de Ne Nzongo, que Kinuani avait aperçu lors de la mort de Ne Mawungu sans entretien direct. Ne Mberi exige qu'aucune goutte de sang ne coule, même lors de l'usage de la force ; certains complices doivent lui être déférés. Kinuani admire sa sagesse, son humilité, son charisme et son attachement aux traditions. Le Mayombe lui est peu familier ; les pisteurs locaux, surtout Mukueke, sont décisifs. Après environ un mois et demi, la mission revient honorée et bénie par Ne Mberi. Mukueke, environ 30 ans, forme notamment Nzungani, environ 15 ans, futur responsable des renseignements de Kinuani. Préserver le rôle autonome de Kimbembe, Bikuta et des autres compagnons ; retrouvailles, débats de Bukongo, philosophie et échanges parfois en latin et portugais. La chefferie de Kinuani survient plus tard après la mort de Nzongo et son retour de Mbanza Kongo avec des émissaires du Mani Kongo ; ne pas déplacer cette succession en 1643. Source complémentaire : ADDENDUM-FOUNDER-MUTINU-KINUANI-2026-11-05.md. Statut : fiche GitHub, pas une scène DB validée.
+Kinuani, environ 23 ans à la fin de 1643, propose à Mutinu de l'accompagner avec leur famille et la logistique jusqu'au pays Boko, terre de sa grand-mère où se déroula la seconde partie de son longo. Elle demeure à Boko, reliée à lui par les messagers de sa logistique, tandis qu'il rejoint Mayama. Le mfumu de Mayama réorganise la mission contre une vendetta de trois familles ; un ntumua conduit Kinuani, Kimbembe, Bikuta et leurs compagnons dans le Mayombe. Ils présentent leur mandat à Ne Mberi, homme de la trempe de Ne Nzongo, que Kinuani avait aperçu lors de la mort de Ne Mawungu sans entretien direct. Ne Mberi interdit les effusions de sang : préserver le sang ancestral, éviter la mort et les blessures graves. Les justiciers peuvent user de coups et de neutralisations non létales selon leur mandat, sans torture ; des blessures mineures accidentelles peuvent survenir. L'ordre n'exige pas une absence absolue de toute égratignure. Par ailleurs, certains complices doivent lui être déférés. Kinuani admire sa sagesse, son humilité, son charisme et son attachement aux traditions. Le Mayombe lui est peu familier ; les pisteurs locaux, surtout Mukueke, sont décisifs. Après environ un mois et demi, la mission revient honorée et bénie par Ne Mberi. Mukueke, environ 30 ans, forme notamment Nzungani, environ 15 ans, futur responsable des renseignements de Kinuani. Préserver le rôle autonome de Kimbembe, Bikuta et des autres compagnons ; retrouvailles, débats de Bukongo, philosophie et échanges parfois en latin et portugais. La chefferie de Kinuani survient plus tard après la mort de Nzongo et son retour de Mbanza Kongo avec des émissaires du Mani Kongo ; ne pas déplacer cette succession en 1643. Source complémentaire : ADDENDUM-FOUNDER-MUTINU-KINUANI-2026-11-05.md. Statut : fiche GitHub, pas une scène DB validée.
+

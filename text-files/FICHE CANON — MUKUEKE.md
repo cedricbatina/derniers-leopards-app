@@ -1,6 +1,6 @@
 # FICHE CANON — MUKUEKE
 
-Source : décisions orales Founder du 9 novembre 2026, à articuler avec les fiches et scènes déjà en DB. **Personnage distinct des justiciers combattants.**
+Source : rappels et développements du Founder, à articuler avec les fiches et scènes existantes ; la date de consignation ne date pas la création du personnage. **Personnage distinct des justiciers combattants.**
 
 ## Identité et statut
 Mukueke, environ 30 ans en 1643–1644, fidèle de **Ne Mberi**, autorité du Mayombe. Pisteur, enquêteur, observateur et spécialiste du renseignement local. **Il n'est pas soldat, ni un ancien combattant de la bande de Kinuani.** Origines familiales : milieu maternel de chasseurs ; compétences développées par l'expérience et sa passion.
@@ -16,9 +16,10 @@ Mukueke, environ 30 ans en 1643–1644, fidèle de **Ne Mberi**, autorité du Ma
 - **Autres disciples** : Mukueke forme plusieurs élèves, dont les parcours restent ouverts.
 
 ## Arc Mayombe 1643–1644
-Mis à disposition avec d'autres pisteurs par Ne Mberi après présentation des mandats. Contribue à localiser des suspects et campements dans un environnement dangereux, que Kinuani maîtrise mal. L'équipe estime qu'elle aurait pu passer huit mois dans le Mayombe sans son expertise, contre un mandat envisagé de quatre mois. Résolution de l'affaire en environ un mois à un mois et demi selon les étapes, à harmoniser : certaines personnes jugées localement, d'autres conduites devant Ne Mberi. Retour honoré et béni ; Nzungani assiste aux honneurs. Les interventions doivent respecter l'interdit de verser le sang fixé par Ne Mberi.
+Mis à disposition avec d'autres pisteurs par Ne Mberi après présentation des mandats. Contribue à localiser des suspects et campements dans un environnement dangereux, que Kinuani maîtrise mal. L'équipe estime qu'elle aurait pu passer huit mois dans le Mayombe sans son expertise, contre un mandat envisagé de quatre mois. Principales difficultés réglées en un mois (« mu ngonda mosi »), ensemble de l'opération en environ un mois et demi, vers janvier–février 1644 : certaines personnes jugées localement, d'autres conduites devant Ne Mberi. Retour honoré et béni. Devant leurs disciples, Mukueke reçoit aussi les honneurs ; Nzungani voit Kinuani sans que celui-ci le remarque. Plus tard, il le confie à Mutinu, avec laquelle il coopérera pour la sécurité de Kinuani. Ne Mberi interdit les effusions de sang : préserver le sang ancestral, éviter la mort et les blessures graves. Les justiciers peuvent user de coups et de neutralisations non létales selon leur mandat, sans torture ; des blessures mineures accidentelles peuvent survenir. L'ordre n'exige pas une absence absolue de toute égratignure.
 
 ## Réutilisation narrative
 Fiche individuelle destinée à la continuité de *Kongo Dibuidi* et *Mama I Mama*, ainsi qu'à d'éventuelles adaptations en série, BD ou animation. Préserver les compétences, relations, scènes d'apparition et évolution indépendamment de Kinuani.
 
 **Statut :** fiche canonique GitHub ; pas insertion DB ni validation Quality.
+

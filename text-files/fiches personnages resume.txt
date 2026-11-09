@@ -1,6 +1,6 @@
 MUTINU
 
-Désir : choisir sa vie et “tenir” Kinuani (amour + destin).
+Désir : choisir sa vie et construire son longo avec Kinuani. Affirmative et persuasive avant leur rencontre, dès 1636 ; muisi Nsembo, muana Ndamba, fille de Mama Yudisa. Nkodia naît en 1640 ; les mapasa viennent en deuxième position, avec le titre Mama Ngudi (Tata Ngudi pour Kinuani).
 
 Peur : être remplacée par la politique (honte publique, abandon).
 
@@ -8,7 +8,7 @@ Masque : calme, digne, parfois hautaine (pour ne pas montrer la blessure).
 
 Arme : soins + intuition sociale + réseau féminin + capacité à agir vite sans scandale.
 
-Point de rupture : 1640, elle apprend qu’il rentre à Kuimba sans elle → trahison intérieure, elle durcit sa volonté.
+Point de rupture : avant le mariage d’août 1639, elle apprend qu’il rentre à Kuimba sans elle → trahison intérieure, elle durcit sa volonté.
 
 KINUANI
 
@@ -435,7 +435,7 @@ Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §G. Ne 
 
 ## COMPLÉMENT FOUNDER — âges et mémoire du maître déchu (22 octobre 2026)
 
-**KINUANI** : **17 ans à Mfuti** auprès de **Mutinu, 15 ans** ; mariage **deux ans plus tard** (19 et 17 ans). Quatre à cinq mois après les festivités, son maître **Ne Mawungu** se retire du couvent en crise ; **vers le septième mois après Mfuti**, Ne Nzongo le rappelle avec ses cousins au pays Kuimba avant son diplôme. Kinuani retrouve son parent âgé balayant longuement sa concession et maniement son balai comme un bâton. Il le connaît sévère depuis son enfance, jusqu'à ses sept ans. Aux funérailles ultérieures de Mawungu, la vue de sceaux/insignes, sceptres et savoirs brûlés ou vendus lui fait comprendre les alertes des anciens sur la fragilité de la transmission. **Ces funérailles sont désormais placées avant le mariage : Mawungu meurt environ 3–4 mois après l'entrée de Mutinu au couvent féminin.**
+**KINUANI** : Mfuti en juin 1636 (16 ans, Mutinu 15 ans dans le registre du 29 octobre), mariage en août 1639 ; l’ancien intervalle de deux ans est supplanté. Quatre à cinq mois après les festivités, son maître **Ne Mawungu** se retire du couvent en crise ; **vers le septième mois après Mfuti**, Ne Nzongo le rappelle avec ses cousins au pays Kuimba avant son diplôme. Kinuani retrouve son parent âgé balayant longuement sa concession et maniement son balai comme un bâton. Il le connaît sévère depuis son enfance, jusqu'à ses sept ans. Aux funérailles ultérieures de Mawungu, la vue de sceaux/insignes, sceptres et savoirs brûlés ou vendus lui fait comprendre les alertes des anciens sur la fragilité de la transmission. **Ces funérailles sont désormais placées avant le mariage : Mawungu meurt environ 3–4 mois après l'entrée de Mutinu au couvent féminin.**
 
 **MUTINU** : **15 ans lors de leur rencontre à Mfuti**, **17 ans lors de son mariage** avec Kinuani. Les anciennes années calendaires ne sont pas encore corrigées dans toutes les sources DB.
 
@@ -469,7 +469,7 @@ Voir le registre des décisions Founder §I et `batina-os/audits/creative/KONGO-
 
 **CERCLE FÉMININ** — « Nkurumbi/Kingumbi » prononcés ou notés antérieurement ; **nom non stabilisé**, rapprocher les sources Kumbi/Kikumbi sans confondre les populations ou les époques. Enseignements proposés : fidélité et engagements, maîtrise de soi, arbitrage, liens de clan, gestion économique, soins, transmission culturelle, hospitalité, conseil et autorité féminine. **Programme romanesque proposé**, sans équivalent historique intégral démontré.
 
-**Qualité temporelle (rectifiée)** — Mfuti 17/15 ans, mariage 19/17 ans et deux ans d'intervalle ; Mawungu se retire à 4–5 mois, Kinuani revient vers 7 mois et Mutinu commence son année initiatique ensuite ; Mawungu meurt 3–4 mois après ce début et avant le mariage. Source : rectificatifs Founder §J.
+**Qualité temporelle** — Mfuti en juin 1636, mariage en août 1639 ; les anciens âges et l’intervalle de deux ans sont supplantés. Les repères relatifs suivants sont des archives à lire avec le calendrier ultérieur du registre, et non une autre chronologie active : Mawungu se retire à 4–5 mois, Kinuani revient vers 7 mois et Mutinu commence son année initiatique ensuite ; Mawungu meurt 3–4 mois après ce début et avant le mariage. Source : rectificatifs Founder §J.
 
 
 ## COMPLÉMENT FOUNDER — solidarité agricole, portage et animaux (22 octobre 2026)
@@ -482,7 +482,7 @@ Voir le registre des décisions Founder §I et `batina-os/audits/creative/KONGO-
 
 **AUTRE NOTABLE VOISIN** — Décès dans une région proche de Kuimba, possiblement **Bamba** ; nom **Ne Mwanda / Nadi / Ne Mwanda Nadi** entièrement provisoire. Nzongo, Kinuani et leurs gens s'y rendent ; la présence de Mutinu, mentionnée par l'auteur, doit être rapprochée de son année d'initiation. **Aucune nouvelle fiche DB de personnage validée.**
 
-**DOT** — Vers la fin de la première année relative à Mfuti, préparatifs d'une visite aux **familles paternelle et maternelle de Mutinu**, tandis que le mariage reste fixé deux ans après Mfuti. Source : rectificatifs Founder §K.
+**DOT** — Vers la fin de la première année relative à Mfuti, préparatifs d'une visite aux **familles paternelle et maternelle de Mutinu**, tandis que le mariage est fixé en août 1639, après Mfuti en juin 1636. Source : rectificatifs Founder §K.
 
 
 ## COMPLÉMENT FOUNDER — Mutinu choisit et apprend à comprendre Kinuani (22 octobre 2026)
@@ -505,40 +505,38 @@ Voir le registre des décisions Founder §I et `batina-os/audits/creative/KONGO-
 Source : registre Founder §L. Le tempérament indépendant de Mutinu et ses reproches initiaux à Kinuani sont consignés dans §M.
 
 
-## Index de continuité personnages — décisions Founder du 9 novembre 2026
-**Mutinu :** épouse de Kinuani ; forte argumentation, intercession sélective et autorité propre à Kuimba. Kinuani renvoie certains solliciteurs vers « Ma Mutinu » sans la réduire à une déléguée. Lors de la mission de fin 1643, elle voyage avec sa famille jusqu'au pays Boko, région de sa grand-mère et de la seconde partie de son longo, et y demeure pendant que Kinuani gagne Mayama/Mayombe ; possibilité de messages via la logistique militaire.
-**Kinuani :** environ 23 ans en 1643 ; ancien du couvent, orateur et amateur de solitude, attaché au Bukongo, à sa famille et à ses anciens compagnons. Lors de la mission Mayombe, il ne maîtrise pas la forêt et dépend de l'expertise de pisteurs locaux. Il connaît Ne Mberi de vue depuis les obsèques de Ne Mawungu ; entretien direct seulement lors de la présentation des mandats. Succession à Kuimba après décès de Ne Nzongo et retour de Mbanza Kongo avec émissaires du Mani Kongo, non en 1643.
-**Kimbembe :** compagnon de couvent et mentor de Kinuani, notamment en oralité et rapports humains ; maîtrise chants, proverbes et parole persuasive ; pendant la traque Mayombe, fait parfois parler des témoins.
+## Continuité des personnages — mission 1643–1644 et vie à Kuimba
+
+**Mutinu :** épouse de Kinuani ; forte argumentation, intercession sélective et autorité propre à Kuimba. Kinuani renvoie certains solliciteurs vers « Ma Mutinu » sans la réduire à une déléguée. Lors de la mission de fin 1643, elle voyage avec sa famille jusqu'au pays Boko, région de sa grand-mère et de la seconde partie de son longo, et y demeure pendant que Kinuani gagne Mayama/Mayombe ; possibilité de messages via la logistique militaire. Elle s’appuie sur des fidèles de son époux, dont certains travaillent avec elle, et lui envoie des missives personnelles et des fruits secs, dont des safous malgré leur abondance au Mayombe. Elle prie et médite sur ces présents pour leur donner, selon sa conviction, une vitalité particulière.
+
+**Kinuani :** environ 23 ans en 1643 ; ancien du couvent, orateur et amateur de solitude, attaché au Bukongo, à sa famille et à ses anciens compagnons. Lors de la mission Mayombe, il maîtrise mal le milieu forestier du Mayombe et dépend de l'expertise de pisteurs locaux. Il connaît Ne Mberi de vue depuis les obsèques de Ne Mawungu ; entretien direct seulement lors de la présentation des mandats. Succession à Kuimba après décès de Ne Nzongo et retour de Mbanza Kongo avec émissaires du Mani Kongo, non en 1643. Il est amusé et touché par les messages personnels de Mutinu, distincts des nouvelles militaires. Bikuta est son binôme de combat ancien : quand Bikuta s’engage, il le rejoint immédiatement. Chacun possède ses disciples et ses hommes.
+
+**Kimbembe :** compagnon de couvent et mentor de Kinuani, notamment en oralité et rapports humains ; maîtrise chants, proverbes et parole persuasive ; pendant la traque Mayombe, fait parfois parler des témoins. Sa parole résout souvent les difficultés avant le combat (environ trois quarts selon l’estimation orale du Founder) ; si nécessaire, les justiciers combattent ensemble, par binômes.
+
 **Bikuta :** ancien compagnon ; force sélective utile lors de la traque ; relation de confiance avec Kinuani, notamment voyage auprès de son oncle maternel herboriste après le mariage.
-**Ne Mberi :** mfumu mbanza du Mayombe, homme de la Trompe de Ne Nzongo ; sage, humble, charismatique, traditionaliste ; reçoit le mandat de la sous-mission, impose « pas une goutte de sang », fournit des pisteurs, réserve certains jugements, honore et bénit l'équipe au retour.
-**Mukueke :** fidèle de Ne Mberi, pisteur et « relieur mental », environ 30 ans en 1643–1644 ; connaît la forêt et la psychologie humaine, relie les indices et permet l'aboutissement de la traque en environ un mois et demi ; enseigne à des disciples dont Nzungani.
-**Nzungani :** environ 15 ans en 1643–1644 ; disciple de Mukueke, présent lors des honneurs au retour de la mission ; futur chef des renseignements de Kinuani. Ne pas lui attribuer ce poste dès l'adolescence.
+
+**Ne Mberi :** mfumu mbanza du Mayombe, homme de la trempe de Ne Nzongo ; sage, humble, charismatique, traditionaliste ; reçoit le mandat de la sous-mission, interdit les effusions de sang, dans les limites exposées ci-dessous, fournit des pisteurs, réserve certains jugements, honore et bénit l'équipe au retour. Il préside les honneurs et décide selon les fautes des affectations de coupables, services temporaires dans des fiefs ou exils limités avec sceau d’exil. Chaque prêtre-justicier s’avance et se prosterne pour recevoir sa bénédiction.
+
+**Mukueke :** fidèle de Ne Mberi, pisteur et « relieur mental », environ 30 ans en 1643–1644 ; connaît la forêt et la psychologie humaine, relie les indices et permet l'aboutissement de la traque en environ un mois et demi ; enseigne à des disciples dont Nzungani. Pisteur et enquêteur, il n’est ni soldat ni ancien combattant de la bande. Il connaît les cris d’oiseaux, les dangers de la forêt, les campements, hamacs, feux, traces, pièges et filets de capture. Issu d’un milieu maternel de chasseurs, il relie indices et psychologie humaine. Sans lui, les compagnons estiment qu’ils auraient pu passer huit mois sur place pour un mandat de quatre mois. Voir sa fiche individuelle.
+
+**Nzungani :** environ 15 ans en 1643–1644 ; disciple de Mukueke, présent lors des honneurs au retour de la mission ; futur chef des renseignements de Kinuani. Ne pas lui attribuer ce poste dès l'adolescence. À la cérémonie, il voit Kinuani sans être remarqué de lui ; plus tard, il confie ce souvenir à Mutinu. Sa coopération ultérieure avec Mutinu pour la sécurité de Kinuani est déjà établie, notamment dans les protocoles présents plus haut et dans sa fiche individuelle.
+
 **Mfumu de Mayama :** ancien ntumua du couvent, devenu mfumu ; convoque les anciens disciples pour la pacification, réorganise les affectations, dont sous-mission Mayombe sous un ntumua. Nom personnel non fixé ici.
+
 **Compagnons :** ne pas les traiter comme escorte anonyme ; retrouvailles d'anciens élèves, discussions de philosophie et Bukongo, langues latin/portugais et autres, motivations individuelles.
-**Repère de scène :** fin 1643 / début 1644, Kuimba → traversée → Boko (Mutinu) → Mayama (réorganisation) → Mayombe (Ne Mberi, Mukueke, traque) → retour et bénédictions. Ne pas confondre avec d'autres expéditions ou l'exil ultérieur. Les formulations kikongo du Founder sont canoniques telles que dictées. Détails narratifs et proverbes : ADDENDUM-FOUNDER-MUTINU-KINUANI-2026-11-05.md.
-**Statut :** fiches GitHub actualisées ; insertion DB, scènes rédigées et Quality non revendiquées.
 
-
-### Complément Founder — Boko et nouvelles du Mayombe (9 novembre 2026)
-**Mutinu :** pendant son séjour à Boko, elle a identifié parmi les fidèles de Kinuani des personnes avec lesquelles elle travaille directement pour ses activités. Elle lui envoie parfois des missives personnelles, comme convenu, pour le rassurer, donner des nouvelles ou manifester son affection, bien qu'il reçoive déjà des informations par sa logistique. Elle lui fait aussi parvenir des fruits secs, dont des safous, même si le Mayombe en regorge. **Kinuani :** il est amusé et touché par les messages et présents venant directement de Mutinu ; distinguer ces échanges de ses rapports militaires. **Kimbembe, Bikuta, compagnons, Mukueke :** leur succès dans le Mayombe suscite nouvelles et chants d'honneur. Les difficultés principales sont réglées « mu ngonda mosi » (en un mois) ; durée globale de la sous-mission précédemment indiquée environ un mois et demi, à articuler sans inventer les étapes intermédiaires. Acclamation « Ah baana baa ngo ! ». Le Founder explique la polysémie de « ngo » : masse ou forme matérielle/immatérielle ; par analogie taches du pelage du léopard, puis léopard. Conserver les expressions exactement, sans normalisation. Statut : référentiel de personnages GitHub, pas insertion DB ni validation Quality.
-
-
-## Décisions Founder — justiciers, Mayombe, retour Boko et hydraulique (9 novembre 2026)
 **Mandat et éthique :** Kinuani, Bikuta, Kimbembe et leurs compagnons sont des juges/prêtres-justiciers formés à enseigner et persuader par la parole, enquêter, juger selon mandat et exercer au besoin une contrainte physique. Sens de l'honneur ; en milieu kongo décrit par l'auteur, éviter au maximum de verser le sang, considéré comme sacré car lié aux ancêtres. Ne Mberi interdit les effusions de sang : coups et neutralisation non létale possibles dans les limites de l'ordre, sans torture ni blessures graves voulues ; des accidents mineurs peuvent néanmoins survenir. Distinguer mandat, usage de force et juridiction. L'habit, les armes et insignes permettent de reconnaître leur fonction ; leurs pouvoirs s'inscrivent dans la chaîne des mfumu, régents et du Mani Kongo, sans prétendre à une commission personnelle directe du roi pour chaque mission. En route, ils peuvent régler certaines affaires mineures et neutraliser des menaces selon leurs compétences.
-**Kimbembe :** persuasion initiale souvent décisive (estimation orale du Founder : environ trois quarts des difficultés), puis intervention collective si nécessaire.
-**Bikuta et Kinuani :** binôme de combat ancien et réactif ; disciples et soldats propres à chacun ; ne pas attribuer ce binôme à Mukueke.
-**Mukueke :** pisteur/enquêteur, NON soldat ni combattant de la bande. Connaissance des traces, cris d'oiseaux, dangers omnidirectionnels, campements, hamacs en hauteur, feux, comportements humains et camps reculés ; chasseur issu d'un milieu maternel de chasseurs, maîtrise du pistage et des pièges utiles à la capture. Sa contribution réduit fortement la durée de la traque ; les compagnons estiment qu'ils auraient pu y passer huit mois sans lui, au-delà d'un mandat de quatre mois. Voir fiche individuelle.
+
 **Mission Mayombe :** départ fin 1643 ; épisode de résolution et de justice en janvier-février 1644, à la fin de la saison sèche selon le Founder (chronologie précise à réconcilier). Durée globale évoquée : environ un mois et demi ; principaux problèmes réglés en un mois, « mu ngonda mosi ». Certains jugés sur place, d'autres traduits devant Ne Mberi et sa cour ; coordination avec chefs de familles et territoires, compétitions sportives de règlement, présents d'honneur et chants. Certains compagnons restent apprendre l'apiculture, le pistage ou d'autres savoirs auprès de maîtres locaux. Ne pas déduire que Mukueke a personnellement exercé la violence.
+
 **Retour et Boko :** Kinuani souhaite retrouver Mutinu et leur famille dans le pays de sa grand-mère, dont l'ancrage est précisé vers Kimpanzu ; Bikuta l'accompagne, avec leurs disciples et hommes. Ils demandent les autorisations locales avant de camper dans le pays Boko, près de Manzandunga/Kimpanzu et des chutes que le Founder nomme oralement « Louflakaré » (toponymie exacte à confirmer auprès de l'auteur, sans substitution). Distinguer pays Boko et localité du camp.
+
 **Concession de Kuimba :** avant cette mission, Kinuani a déjà découvert une source d'eau et commencé à concevoir/aménager son système hydraulique, sans l'avoir entièrement achevé. Les observations au Mayombe (gestion de l'eau, jardins, milieu forestier productif) nourrissent ses idées pour améliorer source, distribution, zones humides, petite cascade et autonomie de la concession au retour. Ne pas attribuer au voyage l'invention initiale du projet.
+
 **Philosophie kikongo transmise par le Founder :** « Ki » énergie reliant, « Ko » énergie orientée en mouvement spiralé/cyclique, « Ngo » masse ou forme matérielle ou immatérielle, y compris groupe humain ; interprétation de « Ki-Kongo » comme énergie reliant et mettant en mouvement une masse vers un but. Kinuani maîtrise cette lecture dans ses enseignements. Conserver comme canon philosophique du récit, sans altérer les mots.
-**Mutinu :** certains présents envoyés au Mayombe ont, dans sa conviction, été accompagnés de prières et méditations pour apporter vitalité à son époux ; leur valeur n'est pas équivalente à des fruits ordinaires.
-**Statut :** mise à jour documentaire GitHub ; pas preuve d'insertion DB, de rédaction de scènes ni de Quality.
 
+Les chants d’honneur accompagnent les nouvelles du succès : « mu ngonda mosi », un mois pour les difficultés principales, environ un mois et demi pour l’ensemble de l’opération. « Ah baana baa ngo ! » conserve la polysémie de ngo, masse ou forme matérielle/immatérielle, groupe et analogie avec le léopard.
 
-### Complément Founder — cérémonie de Ne Mberi et premier regard de Nzungani (9 novembre 2026)
-Après l'achèvement de l'enquête du Mayombe, les suspects sont traduits devant les autorités compétentes et justice est rendue. **Ne Mberi** préside une réunion solennelle ; il décide notamment de l'affectation de certains coupables selon leurs fautes : service temporaire dans d'autres contrées ou fiefs, et parfois exil pour une durée déterminée, avec marque/sceau d'exil. Ne pas attribuer ces décisions finales indistinctement aux justiciers de terrain. Pendant les honneurs, chaque prêtre-justicier s'avance, se prosterne ou manifeste solennellement son respect devant Ne Mberi, qui le bénit et reconnaît ses mérites. Des chants célèbrent les justiciers.
+**Repère de scène :** fin 1643 / début 1644, Kuimba → traversée → Boko (Mutinu) → Mayama (réorganisation) → Mayombe (Ne Mberi, Mukueke, traque) → retour et bénédictions. Ne pas confondre avec d'autres expéditions ou l'exil ultérieur. Les formulations kikongo du Founder sont canoniques telles que dictées. Détails narratifs et proverbes : ADDENDUM-FOUNDER-MUTINU-KINUANI-2026-11-05.md.
 
-**Nzungani**, jeune disciple de Mukueke, assiste à la cérémonie depuis le groupe des disciples et voit **Kinuani**, mais **Kinuani ne le remarque pas et ne le rencontre pas personnellement à cette occasion**. Bien plus tard, Nzungani confiera avoir été témoin de cette cérémonie **à Mutinu**, et non directement à Kinuani. Ce décalage de perception est un jalon de leur relation future, à préserver. La coopération ultérieure de Mutinu et de sa sécurité avec Nzungani est déjà établie dans le canon : la retrouver dans la DB avant de la réécrire. Les passages dictés oralement comportaient des répétitions de noms ; cette interprétation relationnelle devra rester révisable par le Founder sans inventer de dialogue ni de date.
-
-**Statut :** précision narrative intégrée au référentiel GitHub, pas preuve d'insertion DB ou de validation Quality.
+Statut : référentiel documentaire réconcilié ; aucune mise à jour DB, aucun déploiement ni validation Quality établis par cette modification.

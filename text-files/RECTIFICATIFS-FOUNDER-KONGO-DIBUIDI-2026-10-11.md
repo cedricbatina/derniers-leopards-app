@@ -149,7 +149,7 @@ Cette tension intérieure doit rester visible **avant** sa maturation comme méd
 
 ## H. Repères d'âge, retrait de Mawungu et retour à Kuimba (Founder, 22 octobre 2026)
 
-**Arbitrage d'âge** : lors des fêtes de Mfuti, **Kinuani a 17 ans** et **Mutinu 15 ans**. Ils se marient **deux ans après**, à respectivement **19 et 17 ans**. La trame antérieure affichait **Mfuti 1638 (18/16 ans)** puis **mariage 1641 (21/19 ans)** : ces âges et cet intervalle sont **supersédés**. Les millésimes absolus 1638 et 1641 doivent être recalés, pas maintenus conjointement comme canon.
+**Recalage selon les décisions ultérieures** : Mfuti en juin 1636 (Kinuani 16 ans, Mutinu 15 ans dans le carnet du 29 octobre), mariage en août 1639. Les anciens millésimes 1638/1641, l’intervalle de deux ans et les âges matrimoniaux associés sont supplantés. Ne pas rouvrir les dates civiles arbitrées.
 
 **Séquence relative (ANCIENNE HYPOTHÈSE SUPPLANTÉE par §K)** : environ **un an après Mfuti**, **Ne Mawungu** perd son autorité dans une lutte institutionnelle, démissionne ou est écarté, et se replie dans son fief natal. Le couvent se vide, nombreux élèves partis, notamment **Kimbembe** et **Kiesa kia Bikuta**. **Deux à trois mois plus tard**, Ne Nzongo rappelle par messagers **les fils du clan Kuimba**, dont Kinuani et ses cousins, **avant la fin de leur formation**. Ils ne comprennent pas la cause de cette décision. Retrait, rappel, mort et funérailles ne sont **pas un même événement**.
 
@@ -265,9 +265,9 @@ Le terme oral **« Nkurumbi » / « Kingumbi »** doit être vérifié. L'initia
 
 **Précision prioritaire, qui REMPLACE les anciennes estimations temporelles** des sections G–J, de la chronologie et des notes §47/§49. Les scènes évoquées concernent la **saga entière**, pas nécessairement le tome 1.
 
-### 1. Repères relatifs depuis les festivités de Mfuti
+### 1. Repères relatifs archivés — lire avec le calendrier civil du 29 octobre (juin 1636–août 1639)
 
-- **T0 = Mfuti** : Kinuani **17 ans**, Mutinu **15 ans** ; unique banquet **à la clôture**, pas le premier jour.
+- **T0 = Mfuti** : juin 1636, Kinuani **16 ans**, Mutinu **15 ans** selon le registre du 29 octobre ; unique banquet **à la clôture**, pas le premier jour.
 - **T0 + 4 à 5 mois** : Ne Mawungu **se retire avec les nombreux fidèles, cadres et enseignants** restés loyaux ; savoirs partiellement mis en réserve ; anciens membres respectent toujours la hiérarchie.
 - **T0 + environ 7 mois** : **rappel et retour des élèves à Kuimba**, dont Kinuani et ses cousins. Cinq jours de voyage depuis le couvent selon la dernière indication ; éviter de donner au départ, à l'envoi des messages et à l'arrivée exactement le même jour.
 - **Après l'arrivée** : mariage avec **Nianzi** en passe d'être conclu dans le projet familial, puis **annulé** ; rapprochement des familles de **Mutinu**, intervention de Mama Tusikila, condition d'**au moins un an** de formation féminine et **entrée de Mutinu au couvent**. L'ordre est fixé, les semaines exactes non.
@@ -275,7 +275,7 @@ Le terme oral **« Nkurumbi » / « Kingumbi »** doit être vérifié. L'initia
 - **À l'arrivée aux funérailles** : Mawungu est **déjà enterré** ; selon l'auteur, sa dépouille a été conservée **trois jours seulement** avant l'inhumation. Nzongo et le groupe ont tenté de voyager rapidement mais n'arrivent pas à temps. Objets et savoirs déjà brûlés ou vendus ; fumée, destruction et dispersion déjà documentées. **Trois jours est une règle de ce récit / de ce milieu**, pas une affirmation universelle sur tous les rites kongo.
 - **Sur place** : séjour dans la région du maître **jusqu'aux environs du quarante-cinquième jour du deuil**, soit environ un mois et demi dans le calendrier narratif ; **ne pas additionner mécaniquement 45 jours pleins sur place à un voyage commencé après le décès**.
 - **Retour à Kuimba** : l'auteur décrit **la fin de la première année après Mfuti ou une période qui s'en approche**, à préciser avec la durée des routes, l'initiation et le séjour. Cette appréciation reste approximative, pas une équation de mois déjà verrouillée.
-- **T0 + 2 ans** : **mariage avec Mutinu** à respectivement **19 et 17 ans**. Entre-temps : préparation des **dotations aux deux familles, paternelle et maternelle**, tout en respectant l'année initiatique.
+- **Août 1639** : **mariage avec Mutinu**, après Mfuti en juin 1636 ; l’ancien intervalle T0 + 2 ans est supplanté. Entre-temps : préparation des **dotations aux deux familles, paternelle et maternelle**, tout en respectant l'année initiatique.
 
 ### 2. Kinuani : construire ses champs et ses hommes
 
@@ -301,7 +301,7 @@ Dans cette même grande période précédant la dot, **un notable meurt dans un 
 
 ### 5. Points encore à vérifier
 
-1. **Fenêtre exacte** de l'entrée de Mutinu au couvent, du décès de Mawungu et du retour à Kuimba, tout en conservant le mariage **T0 + 24 mois** et l'initiation **au moins douze mois**.
+1. **Fenêtre exacte** de l'entrée de Mutinu au couvent, du décès de Mawungu et du retour à Kuimba, en conservant le mariage **en août 1639 après Mfuti en juin 1636** et l'initiation **au moins douze mois**.
 2. Portage **kipoui / kipoyi / tipoye** : différences historiques entre siège et hamac, nombre et statut des porteurs selon rang et période.
 3. Titres exacts de Kinuani au départ du couvent et durant les formations informelles ; pratiques agricoles et capacité économique à nourrir une famille.
 4. Cérémonies de dot des lignées paternelle et maternelle ; nom du notable voisin et localisation « Bamba » **hypothétiques**.
@@ -369,7 +369,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 
 - **Mfuti T0** : Mutinu 15 ans, Kinuani 17 ans ; intuition de Tusikila **dès le premier jour**, puis plusieurs rencontres pendant les festivités ; banquet **unique et final**.
 - **Vers T0+7 mois et après les négociations** : Mutinu entre dans son couvent féminin ; **mois 1 environ** = colère persistante ; puis apprentissage du recul.
-- **Vers T0+24 mois** : mariage à 17 ans / 19 ans, après **au moins douze mois d'initiation**.
+- **Août 1639** : mariage, après **au moins douze mois d’initiation**. Le repère T0+24 mois et les âges associés sont supplantés par les dates civiles arbitrées.
 - **Tome 3** : l'arc psychologique et la voix de Mutinu sont des **candidats forts**, mais l'affectation précise des scènes exige la matrice chronologie × POV × volume.
 - **Personnages** : Nianzi reste **vivante** ; ne pas confondre la sœur aînée divorcée de Mutinu, la sœur de Kinuani et Nianzi.
 
@@ -675,7 +675,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - En **1636**, Mutinu avait parlé à Kinuani de la maison qu'elle souhaitait un jour. Il a conservé ses paroles en mémoire et fait réaliser pour elle cette maison avant son arrivée dans leur concession en **1639**.
 - Lors de la découverte du domaine, Mutinu est frappée par la différence de taille des habitations. Elle reconnaît dans la simplicité volontaire de la maison de Kinuani son humilité persistante, et dans la réalisation de ses propres souhaits une immense considération, une déclaration d'intérêt et d'amour : ses paroles et ses goûts comptent réellement pour lui.
 - Mutinu se dit qu'elle a de la chance d'avoir épousé l'homme qu'elle avait choisi. Elle remercie **Nzambi a Mpungu** (le Divin) ainsi que les **bibas ou bankulu** (ancêtres méritants) ; préciser ultérieurement les nuances et emplois de ces termes sans les fusionner arbitrairement.
-- **Ce jour-là, elle commence à appeler Kinuani « mbuala » (époux), « mbuala ami » (mon époux) ; « diabonda » exprime le bien-aimé, celui du cœur.** Conserver les graphies et gloses transmises par le Founder, sous réserve d'un travail linguistique ultérieur autorisé.
+- **Ce jour-là, elle commence à appeler Kinuani « mbuala » (époux), « mbuala ami » (mon époux) ; « diabonda » exprime le bien-aimé, celui du cœur.** Conserver les graphies et gloses transmises par le Founder, sans normalisation orthographique externe.
 - **NON ARBITRÉ :** Mutinu évoque-t-elle immédiatement avec Kinuani l'asymétrie et les polarités, ou garde-t-elle d'abord cette réflexion intérieure ? Ne pas trancher ni écrire un dialogue définitif. **Orientation décidée : elle lui répondra aussi et surtout par des actes, des attentions particulières et renouvelées.**
 
 ### Anticipation des jalousies et formation au Kinkumbi
@@ -685,7 +685,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 
 ### Répartition entre les tomes
 - **Tome 1 — Kongo Dibuidi :** la découverte de la concession, la différence des résidences, la reconnaissance de l'amour de Kinuani et le premier usage de « mbuala ami » constituent des événements à positionner dans la chronologie 1639, sous réserve de leur présence et découpage déjà existants.
-- **Tome 3 — Mama Imama (vie de Mutinu) :** candidat particulièrement pertinent pour approfondir le souvenir de 1636, son expérience du Kinkumbi, ses pensées spirituelles, ses observations des rivalités féminines, les gestes par lesquels elle répond à Kinuani et sa propre perspective sur le domaine. **Affectation détaillée NON ARBITRÉE** : un même événement peut être repris sous une focalisation différente, sans duplication mécanique des scènes.
+- **Tome 3 — Mama I Mama (vie de Mutinu) :** candidat particulièrement pertinent pour approfondir le souvenir de 1636, son expérience du Kinkumbi, ses pensées spirituelles, ses observations des rivalités féminines, les gestes par lesquels elle répond à Kinuani et sa propre perspective sur le domaine. **Affectation détaillée NON ARBITRÉE** : un même événement peut être repris sous une focalisation différente, sans duplication mécanique des scènes.
 - Ne pas présumer que tout ce matériau doit être écrit dans le tome 1, ni qu'une scène ou une mise à jour MySQL a déjà été produite.
 
 **Statut :** décisions Founder consignées dans le référentiel GitHub existant ; propositions d'organisation littéraire explicitement distinguées des décisions. Aucun changement DB, aucune livraison de scènes, aucun déploiement ni verdict Quality revendiqué.
@@ -698,7 +698,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 ### Origine des conseils sur les rivalités
 - **Correction expresse :** la représentation des rivalités et alliances entre deux, trois ou quatre femmes, notamment entre belles-sœurs, provient des **conseils de Mama Tusikila**, confidente de Mutinu depuis le début, **et non du couvent/Kinkumbi**. Il s'agit de conseils situés, non d'une vérité générale du narrateur. Le Kinkumbi conserve ses enseignements propres.
 - Mutinu prévoit de répondre par des actes et des attentions à la considération de Kinuani. Elle se sent appelée à être à la hauteur de son époux, en réunissant les compétences transmises par sa grand-mère, l'exemple et les conseils de Tusikila, ses apprentissages au Kinkumbi et ses qualités personnelles.
-- **Direction narrative approuvée pour le tome 3, Mama Imama :** Mutinu transforme progressivement la maison reçue en centre d'hospitalité, de création, de soins, d'influence et de vie collective ; elle imprime au domaine une identité qui lui est propre. Répartir les scènes selon leur point de vue et leur fonction, sans dupliquer mécaniquement le tome 1.
+- **Direction narrative approuvée pour le tome 3, Mama I Mama :** Mutinu transforme progressivement la maison reçue en centre d'hospitalité, de création, de soins, d'influence et de vie collective ; elle imprime au domaine une identité qui lui est propre. Répartir les scènes selon leur point de vue et leur fonction, sans dupliquer mécaniquement le tome 1.
 
 ### Retour à Kuimba en 1639 : mariages, alliances et réflexion de Ne Nzongo
 - Le mariage de Kinuani et Mutinu **n'est pas le seul mariage célébré au cours du voyage hors de Kuimba**. Après les cérémonies et le long retour, Ne Nzongo rentre globalement satisfait : des alliances importantes et stratégiques ont été scellées.
@@ -713,25 +713,25 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 
 ### Installation de la parenté de Mutinu et cuisine de la concession
 - Mutinu arrive à Kuimba avec **plusieurs membres de sa famille**, qui s'y établissent également ; **deux membres de cette parenté** se sont mariés avec des personnes de Kuimba. Identifier précisément les personnes et les unions dans les fiches avant de les nommer.
-- Sa **grande sœur divorcée**, cuisinière particulièrement talentueuse, participe fortement à la vie de la concession. Nom oral évoqué par le Founder : **« Ma Ndialu »**, **INCERTAIN — retrouver la graphie et l'identité canoniques**, ne pas normaliser sans vérification. Kinuani apprécie beaucoup ses plats.
+- Sa **grande sœur divorcée**, cuisinière particulièrement talentueuse, participe fortement à la vie de la concession. Nom confirmé par le Founder : **Ma Ndialu**. Ne pas fusionner automatiquement avec un ancien nom de fiche. Kinuani apprécie beaucoup ses plats.
 - La sœur cuisine le plus souvent pour la concession ; Mutinu lui fait préparer les mets préférés de son **mbuala** et elles cuisinent parfois ensemble. Prévoir dans l'architecture une cuisine collective bien organisée, des réserves et les espaces de travail associés, sans inventer leur implantation définitive.
-- **Plus tard**, la sécurité alimentaire de Kinuani conduit à l'interdiction de manger hors des cuisines de confiance de Mutinu et de sa sœur. Lorsque Mutinu ne peut accompagner Kinuani, notamment dans la période de l'exil, elle mandate **un soldat cuisinier** pour lui. **Nom déjà réputé consigné selon le Founder mais non retrouvé dans ce registre : rechercher dans les fiches/scènes/DB avant toute rédaction, ne pas inventer.** Ne pas rétroprojeter cette restriction de sécurité sur les premiers jours du mariage.
+- **Plus tard**, la sécurité alimentaire de Kinuani conduit à l'interdiction de manger hors des cuisines de confiance de Mutinu et de sa sœur. Lorsque Mutinu ne peut accompagner Kinuani, notamment dans la période de l'exil, elle mandate **un soldat cuisinier** pour lui. **Mandangi**, identifié dans les trois formats de `personnages_les_derniers_leopards_pour_insertion_db.txt` ; ne pas créer un second soldat cuisinier. Ne pas rétroprojeter cette restriction de sécurité sur les premiers jours du mariage.
 
 ### Points à raccorder sans invention
 - Chronologie exacte des autres mariages du voyage de 1639, familles alliées et retour à Kuimba.
 - Nom/titre exact de l'assistant mukiongoudidi et date de la promotion ; distinction entre assistants, gardes et fonctions judiciaires.
-- Nom canonique de la grande sœur divorcée de Mutinu et du soldat cuisinier ; identification des deux parents mariés à Kuimba.
-- Répartition précise entre Kongo Dibuidi et Mama Imama : événements publics et vie conjugale au tome 1, approfondissement de l'intériorité et de la construction sociale de Mutinu au tome 3, sous réserve des scènes existantes.
+- Ma Ndialu, grande sœur divorcée confirmée par le Founder ; Mandangi, soldat cuisinier retrouvé dans les fiches. L’identification des deux autres parents mariés à Kuimba reste à raccorder.
+- Présence croisée dans Kongo Dibuidi et Mama I Mama : caractères, réalisations, vie publique et conjugale apparaissent dans les deux tomes, brièvement ou en profondeur selon le point de vue et l’enjeu.
 
 **Statut :** instructions Founder consignées sur GitHub main, sans revendication de modification MySQL, de scène intégrée, de déploiement ni de validation Quality.
 
 
 ## Rectification Founder du 5 novembre 2026 — continuité de la concession et des missions
 
-- **Cuisine et sécurité :** la cuisine de Mutinu et de sa grande sœur est déjà le circuit de confiance. Après un empoisonnement de Kinuani au Mayombe par une jeune femme de son clan qui avoue, Mutinu renforce strictement la règle de ne pas manger ou boire ailleurs. En mission sans Mutinu, un soldat cuisinier de confiance, dont le nom existe dans les sources à retrouver, prépare exclusivement ses repas et lui sert personnellement nourriture et boisson. L'épisode du Mayombe est ultérieur à l'installation de 1639.
-- **Parenté :** plusieurs proches de Mutinu s'établissent à Kuimba, dont deux mariés à des membres de Kuimba, mais ils ne résident pas tous dans la concession. Parmi eux, seule sa grande sœur divorcée, excellente cuisinière, y habite. Nom oral « Ma Ndialu » à vérifier.
+- **Cuisine et sécurité :** la cuisine de Mutinu et de sa grande sœur est déjà le circuit de confiance. Après un empoisonnement de Kinuani au Mayombe par une jeune femme de son clan qui avoue, Mutinu renforce strictement la règle de ne pas manger ou boire ailleurs. En mission sans Mutinu, Mandangi, soldat cuisinier de confiance identifié dans `personnages_les_derniers_leopards_pour_insertion_db.txt`, prépare exclusivement ses repas et lui sert personnellement nourriture et boisson. L'épisode du Mayombe est ultérieur à l'installation de 1639.
+- **Parenté :** plusieurs proches de Mutinu s'établissent à Kuimba, dont deux mariés à des membres de Kuimba, mais ils ne résident pas tous dans la concession. Parmi eux, seule sa grande sœur divorcée, excellente cuisinière, y habite. Ma Ndialu, confirmée par le Founder ; ne pas fusionner automatiquement avec les anciens noms sans contrôler les identités.
 - **Chantier :** retrouver et conserver la scène déjà consignée où Ne Nzongo humilie un ouvrier de la concession au moyen d'une clé de doigt ; ne pas réinventer les circonstances.
-- **Premiers mois :** Mutinu tombe enceinte deux mois après l'installation à Kuimba ; Ne Nzongo s'en réjouit. Au troisième mois, Kinuani part en mission comme mukongudidi, avec notamment Kimbembe et Bikuta et des soldats répartis selon les nécessités logistiques. Préciser ultérieurement si « troisième mois » est compté depuis l'installation ou la grossesse.
+- **Premiers mois :** Mutinu tombe enceinte deux mois après l'installation à Kuimba ; Ne Nzongo s'en réjouit. Trois mois après le début de la grossesse, soit cinq mois après l’installation, Kinuani part en mission comme mukongudidi, avec notamment Kimbembe et Bikuta et des soldats répartis selon les nécessités logistiques. Cette mission dure environ deux mois et demi et reste distincte de la mission rapide de trois semaines à l’approche du terme en 1640.
 - **Nature des missions :** protection contre les razzias, libération de captifs, pacification de conflits, soutien aux représentants du Mani Kongo, justice et rétablissement de l'ordre. Certaines missions politiques commandées par des dignitaires visent aussi leurs adversaires considérés comme corrompus ou excessivement favorables aux puissances occidentales ; conserver cette ambiguïté narrative sans présumer la légitimité des accusations.
 - **Réconciliation :** vérifier les personnages, les épisodes et les dates dans les scènes existantes avant toute rédaction nouvelle. Aucun changement de base narrative ni verdict Quality revendiqué.
 
@@ -755,9 +755,10 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 ## Complément Founder — 5 novembre 2026 — rivalités et autorité domestique de Mutinu
 
 - Malgré la sagacité de Mutinu et sa gestion réussie de la concession, **la sœur de Kinuani, Kisita et certaines femmes de Kuimba** la critiquent ou jugent ses réalisations insuffisantes. Conserver les motivations distinctes de chaque personnage, particulièrement la complexité de Kisita.
-- **Point de vue hostile, non vérité du narrateur :** Kinuani serait manipulé par cette femme venue d'ailleurs, que ses détractrices désignent comme **« muisi Nsembo » ou « muisi Ndamba »** (appellation exacte à retrouver, sans trancher arbitrairement) ; il satisferait tous ses caprices, aurait moins d'attentions pour sa sœur, et Mutinu serait une usurpatrice ayant pris la place qu'elles imaginaient destinée à **Nianzi**. Elles insinuent qu'elle se croit trop bienvenue à Kuimba et qu'elle ne sait même pas cuisiner. Ne pas confondre les accusations de ces personnages avec les faits : la cuisine est généralement assurée par la grande sœur de Mutinu, ce qui relève de l'organisation du domaine.
+- **Point de vue hostile, non vérité du narrateur :** Kinuani serait manipulé par cette femme venue d'ailleurs, que ses détractrices désignent comme **« muisi Nsembo »** ; sa désignation complémentaire est **« muana Ndamba »**, conformément à la précision du Founder ; il satisferait tous ses caprices, aurait moins d'attentions pour sa sœur, et Mutinu serait une usurpatrice ayant pris la place qu'elles imaginaient destinée à **Nianzi**. Elles insinuent qu'elle se croit trop bienvenue à Kuimba et qu'elle ne sait même pas cuisiner. Ne pas confondre les accusations de ces personnages avec les faits : la cuisine est généralement assurée par la grande sœur de Mutinu, ce qui relève de l'organisation du domaine.
 - Mutinu se plaint parfois de ces comportements à Kinuani. **Kinuani affirme publiquement son autorité de maîtresse de la maison**, sans faire dépendre cette autorité des faveurs ou de l'approbation des autres femmes.
 - Mutinu demeure sûre d'elle, parfois fière, capable de répondre par des regards et de discrets sourires qui irritent ses adversaires et amplifient leurs médisances. **Dépit**, jalousie et ressentiment sont des nuances possibles pour qualifier leurs réactions, sans attribuer mécaniquement le même sentiment à toutes.
-- Préserver la souffrance affective potentiellement sincère de la sœur de Kinuani, son histoire avec Kisita, la place de Nianzi et les réconciliations ultérieures. La tension doit être intégrée aux scènes existantes et à la perspective de **Mama Imama**, sans création de dialogue définitif ni caricature collective.
+- Préserver la souffrance affective potentiellement sincère de la sœur de Kinuani, son histoire avec Kisita, la place de Nianzi et les réconciliations ultérieures. La tension doit être intégrée aux scènes existantes et à la perspective de **Mama I Mama**, sans création de dialogue définitif ni caricature collective.
 
 **Statut :** instructions Founder consignées dans le référentiel existant ; appellation d'origine de Mutinu non résolue ; pas de modification de scènes ou de DB ni de validation Quality revendiquée.
+

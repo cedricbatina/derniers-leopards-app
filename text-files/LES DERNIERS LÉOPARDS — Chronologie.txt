@@ -5,9 +5,9 @@ Kinuani : année de naissance **à recalculer** d'après les âges Founder. Le j
 
 Mutinu : année de naissance **à recalculer** d'après les âges Founder. Ancien « ~1622 / ~80 ans en 1702 » conservé comme repère documentaire, non harmonisé.
 
-Festivités de Mfuti / première rencontre : **Kinuani 17 ans, Mutinu 15 ans** (nouvelle décision Founder) ; **1638 est l'année de l'ancienne trame, à revalider**.
+Festivités de Mfuti / première rencontre : **juin 1636**, date arbitrée par le Founder. Les anciens millésimes ne sont plus à arbitrer.
 
-Longo (mariage) : **Kinuani 19 ans, Mutinu 17 ans**, exactement **deux ans après les fêtes de Mfuti**. **1641 est un ancien millésime à réconcilier** avec les âges ; ne pas conserver simultanément 1638/1641 comme dates validées.
+Longo (mariage) : **août 1639** ; installation à Kuimba **début septembre 1639** ; grossesse environ deux mois plus tard. L’ancien intervalle de deux ans est supplanté ; ne pas en déduire de nouveaux âges.
 
 ÉPOQUE 0 — 1702 (CADRE DU ROMAN) — Mbanza Kongo renaît
 
@@ -82,7 +82,7 @@ techniques rares (dont certains pièges réservés à l’élite).
 
 Sorties sélectionnées : escortes, missions, maintien de l’ordre, ou délégation commerciale au Mpika.
 
-ÉPOQUE 3 — Jour de Mpika / festivités de Mfuti — Kinuani 17 ans, Mutinu 15 ans (année civile 1638 à vérifier)
+ÉPOQUE 3 — Juin 1636 — Jour de Mpika / festivités de Mfuti
 
 Lieu : marché, jour de Mpika (jour du marché, pas “nom du marché”)
 
@@ -104,7 +104,7 @@ Elle lui parle et le conduit chez Maa Tusikila (qui était appelée “Ma Ndala�
 
 ➡️ **Dès ce premier jour, Tusikila surprend Mutinu — habituellement affirmée, incisive et sûre de ses choix — troublée et presque intimidée par Kinuani.** Elle comprend que ce jeune homme ne lui est pas indifférent. **Une complicité confidentielle commence entre Tusikila et Mutinu** sur la possibilité de l'union ; **aucune négociation de dot n'est encore engagée par les clans** et Kinuani n'est pas informé de la proposition.
 
-ÉPOQUE 4 — Les deux années qui suivent Mfuti : fréquentations + dot en coulisses (anciens millésimes à contrôler)
+ÉPOQUE 4 — Entre Mfuti (juin 1636) et le mariage (août 1639) : fréquentations et dot
 
 Lieux : zones de marché / réseaux familiaux / concessions (pas Kuimba pour Mutinu à cette époque)
 
@@ -130,7 +130,7 @@ influence indirecte pour rendre Ta Mualu plus favorable.
 
 Mutinu reçoit une éducation “normale” de fille dans sa lignée, puis accélération quand on sait que le mariage devient probable (apprendre à tenir maison/homme selon normes sociales).
 
-ÉPOQUE 5 — 4 à 5 mois après Mfuti : retrait de Ne Mawungu ; vers le 7e mois : rappel des jeunes de Kuimba (dates civiles à harmoniser)
+ÉPOQUE 5 — Retrait de Ne Mawungu et rappel des jeunes : les anciens mois relatifs sont à lire avec le rappel de janvier 1638 du registre Founder
 
 Lieu : Kuimba + routes
 
@@ -178,7 +178,7 @@ Impact : Kinuani, dont l'éducation inculque le respect de la science et de l'é
 
 **À l'entrée au couvent féminin**, après le projet de mariage avec Nianzi et les tractations, Mutinu aime Kinuani mais lui **en veut toujours** : à ses yeux, il aurait dû défendre davantage **son propre choix** face aux anciens. Elle estime que sans la mobilisation de sa famille et de Mama Tusikila, ils auraient pu être séparés définitivement. C'est **son ressenti**, pas une condamnation objective de Kinuani : celui-ci se conforme à son éducation et aux décisions de ses tantes et de son clan.
 
-**Durant environ le premier mois d'initiation**, elle demeure contrariée ; ensuite, sa formation lui permet progressivement de **prendre du recul**, d'évaluer les obligations des autres et de devenir plus mûre, sans perdre sa volonté. Ne pas inventer une scène de pardon datée. **Durée totale d'initiation : au moins un an**, puis mariage deux ans après Mfuti.
+**Durant environ le premier mois d'initiation**, elle demeure contrariée ; ensuite, sa formation lui permet progressivement de **prendre du recul**, d'évaluer les obligations des autres et de devenir plus mûre, sans perdre sa volonté. Ne pas inventer une scène de pardon datée. **Durée totale d'initiation : au moins un an**, puis mariage en août 1639 après Mfuti en juin 1636.
 
 ÉPOQUE 5E — Résidence conjugale négociée et accompagnement de Mutinu
 
@@ -186,7 +186,7 @@ Lors des négociations, **Kinuani souhaite s'établir sur l'autre rive**, dans u
 
 **Après le mariage et pour son installation**, Mutinu rejoint Kuimba avec **des proches désignés par sa famille pour l'aider**, dont **sa sœur aînée divorcée** (nom à retrouver). Ne pas confondre sans preuve cette accompagnatrice avec la sœur déjà présente à la boutique de Mfuti ; ne pas la confondre non plus avec la **sœur de Kinuani** ou Nianzi, vivante.
 
-ÉPOQUE 6 — Longo (mariage) DEUX ANS APRÈS MFUTI, Kinuani 19 ans / Mutinu 17 ans (ancien repère « 1641 » non harmonisé)
+ÉPOQUE 6 — Août 1639 — Longo (mariage)
 
 Lieu : territoires des familles de Mutinu
 
@@ -198,11 +198,11 @@ Nzongo est présent (alliances, “prendre le pouls”).
 
 Des notables s’invitent (dont Nvita Kanga à cette époque : noble / prince, pas roi).
 
-ÉPOQUE 7 — 1642 → 1647 — Vie à Kuimba : enfants, initiation, attaques
+ÉPOQUE 7 — 1639 → 1647 — Vie à Kuimba : enfants, initiation, attaques
 
 Lieu : Kuimba
 
-1642 — Naissance 1
+1640 — Naissance 1
 
 Enfant 1 : Nkodia (“Alliance”).
 
@@ -210,7 +210,7 @@ Enfant 1 : Nkodia (“Alliance”).
 
 Fin de grossesse : inquiétudes → les doyennes commencent à encadrer.
 
-Accouchement difficile : naissance des jumeaux → Mutinu devient Maa Ngudi / Kinuani Ta Ngudi.
+Accouchement difficile : naissance des jumeaux → Mutinu devient Mama Ngudi / Kinuani Ta Ngudi.
 
 Jumeaux (enfants) :
 
@@ -426,7 +426,7 @@ Pers. : Kinuani, Ndebeka, Nzungani, Mutinu
 /// 🔹 la scène d’humiliation de Mabanza qui se passe avant le Mpika,
 🔹 Mabanza et Fila envoyés chez Ta Mberi,
 🔹 la dynamique sociale autour de Ta Ndala, Tusikila, Ta Mualu,
-🔹 le moment où Mutinu devient Maa Ngudi (à l’accouchement des jumeaux),
+🔹 le moment où Mutinu devient Mama Ngudi (à l’accouchement des jumeaux),
 🔹 ce qu’il se passe au Mayombe (justice, entraînement, kappucement des jeunes, rôle des mabembe),
 🔹 la structure politique et l’application à Mbanza Kongo auprès de Vita Kanga (prince) et Garcia II (roi),
 🔹 correctif pour le rôle de Kinuani en tant que Mbuta Makesa (général),
@@ -526,7 +526,7 @@ Pers. : Kinuani, Mutinu, Prince Vita Kanga, Roi Garcia II
 
 📌 RÉSUMÉ DES ENFANTS
 
-📍 1642 — Nkodia (Alliance)
+📍 1640 — Nkodia (Alliance)
 📍 1643 — Mapasa (jumeaux Nsimba & Nzuzi)
 📍 1648 — Lunungu (Victoire)
 //
@@ -558,9 +558,9 @@ Pers. : Kinuani, Mutinu, Prince Vita Kanga, Roi Garcia II
 - Source développée : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` §46.
 
 
-## Rectificatif des âges, de la démission et de la scène du balai — Founder 22 octobre 2026
+## Archive du 22 octobre 2026 — âges et intervalle supplantés par juin 1636 / août 1639
 
-**Priorité** : Mfuti **17/15 ans**, mariage **19/17 ans**, soit **deux années**, et non les anciennes combinaisons 18/16 puis 21/19 sur trois ans. **Le retrait un an après Mfuti écrit dans les précédentes versions est annulé** : voir §K pour le **mois 4–5** et le **rappel vers le mois 7**. Les années civiles 1638 et 1641 ne peuvent **pas** rester conjointement validées ; conserver les repères d'archives jusqu'à réconciliation avec Sonekeno. **Environ un an après Mfuti**, défaite/retrait de Ne Mawungu ; **deux à trois mois après**, rappel de Kinuani et des cousins de Kuimba. Kimbembe, Bikuta et beaucoup d'étudiants quittent aussi une institution qui se vide. **Funérailles** : fumée visible au loin, insignes/sceptres et autres objets brûlés, d'autres vendus à des marchands noirs ou blancs ; atteinte à un patrimoine de savoirs réservé aux initiés. **Ordre du décès de Mawungu par rapport au mariage** : non établi. **Au retour matinal à Kuimba**, Ne Nzongo balaie sa concession et pratique avec le balai quelques mouvements de bâton ; Kinuani retrouve un aîné qu'il a toujours connu jusqu'à sept ans pour sa rigueur, sa discipline et sa sévérité morale. L'ancienne scène chronologique de 1640 doit être rattachée à ce souvenir, pas figée par la seule date ancienne.
+**Archive supplantée pour les dates et les âges** : les dates actives sont juin 1636 (Mfuti) et août 1639 (mariage). Le calendrier ultérieur du registre Founder prévaut sur les anciennes approximations de retrait, rappel et deuil. Mawungu meurt avant le mariage. **Au retour matinal à Kuimba**, Ne Nzongo balaie sa concession et pratique avec le balai quelques mouvements de bâton ; Kinuani retrouve un aîné qu'il a toujours connu jusqu'à sept ans pour sa rigueur, sa discipline et sa sévérité morale. L'ancienne scène chronologique de 1640 doit être rattachée à ce souvenir, pas figée par la seule date ancienne.
 
 Source : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` (nouvelle section 47) ; `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` (section H).
 
@@ -587,7 +587,7 @@ Source : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026
 
 **Kisita** accepte finalement l'union Kinuani–Mutinu avec une **condition d'au moins un an de formation féminine d'élite** (nom du cercle non fixé ; Kumbi/Kikumbi comme pistes historiques à vérifier). Les oncles de Mutinu expriment des réticences. Mutinu accepte avec courage malgré sa crainte d'être remplacée : elle veut se préparer à la vie d'épouse d'un futur responsable et découvre des compétences de gestion, d'alliance, de médiation et d'autorité. Tusikila lui assure que Kinuani sera son époux ; **c'est son engagement, non un fait déjà officiellement acquis auprès de tous**. **Nianzi reste vivante**.
 
-**Point de cohérence chronologique prioritaire (rectifié §K)** : Mfuti et mariage sont séparés de **deux ans**. Retrait du couvent **quatre à cinq mois après Mfuti**, rappel vers **sept mois**, annonce **2 à 3 jours après retour**, initiation d'**au moins 12 mois** après négociation. Cette nouvelle fenêtre rend le parcours compatible en principe ; dates mensuelles et années civiles à arbitrer seulement après comparaison des scènes. **Ne pas modifier les jalons fixes ni réduire l'initiation ; arbitrer le moment approximatif du retrait et la date réelle d'entrée en formation.**
+**Recalage actif : juin 1636 pour Mfuti, août 1639 pour le mariage.** L’ancien intervalle de deux ans ne s’applique plus. Retrait du couvent **quatre à cinq mois après Mfuti**, rappel vers **sept mois**, annonce **2 à 3 jours après retour**, initiation d'**au moins 12 mois** après négociation. Cette nouvelle fenêtre rend le parcours compatible en principe ; dates mensuelles et années civiles à arbitrer seulement après comparaison des scènes. **Ne pas modifier les jalons fixes ni réduire l'initiation ; arbitrer le moment approximatif du retrait et la date réelle d'entrée en formation.**
 
 **Source** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §J. À répartir entre volumes avec statut `NON AFFECTÉ`, en particulier les séquences focalisées sur Mutinu éventuellement développées dans le tome 3 `Mama i Mama`.
 
@@ -598,7 +598,8 @@ Source : `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026
 - **Vie de Kinuani au pays** : préparer **ses champs** et les vivres nécessaires pour entretenir un foyer, avec l'entraide de compagnons d'élite du couvent et d'autres institutions. Sens du collectif et maintien de la hiérarchie au-delà du couvent ; enseignement pratique du combat aux jeunes, **sans diplôme officiel de mulongi attesté**. Entraînement matinal collectif de **trois heures environ**, souvent **12 km de footing** parmi les exercices, de la nuit à l'aube. Des groupes d'anciens montent parfois admirer le lever du soleil depuis les collines.
 - **À ne pas déplacer** : Kinuani entraîne également des groupes, pratique acrobaties et rondes au **Mayombe**, **bien plus tard**.
 - **Funérailles du maître** : au décès, Ne Nzongo, Kinuani et leur suite partent rapidement. Nzongo, âgé et dignitaire, est porté dans le **kipoui / kipoyi** par **quatre porteurs relayés**. Ils arrivent **après l'inhumation** (corps gardé environ **trois jours**), aperçoivent les objets brûlés et constatent les ventes ; ils restent dans la région jusqu'au **45e jour du deuil** environ. **Ne pas confondre** avec les quarante-cinq jours de deuil qui suivront la mort de Nzongo, autre événement.
-- **Retour à Kuimba** : l'auteur le place près de **la première année écoulée depuis Mfuti**, ordre de grandeur à contrôler. Les démarches de **dot vers la famille paternelle puis maternelle de Mutinu** se préparent. Les deux ans **Mfuti → mariage** restent invariants.
+- **Retour à Kuimba** : l'auteur le place près de **la première année écoulée depuis Mfuti**, ordre de grandeur à contrôler. Les démarches de **dot vers la famille paternelle puis maternelle de Mutinu** se préparent. Les dates civiles **juin 1636 → août 1639** priment sur l’ancien intervalle de deux ans.
 - **Autre deuil** : déplacement de Nzongo avec une suite, Kinuani et **Mutinu mentionnée** à l'occasion de la mort d'un notable du territoire voisin. **Bamba** possible, nom **Ne Mwanda / Nadi / Ne Mwanda Nadi** seulement envisagé, **ni identité ni pays définitivement arrêtés**. Il faut vérifier comment Mutinu peut se joindre au voyage durant son initiation.
 - **Animaux de Nzongo** : perroquet souvent sur l'épaule, susceptible de jalousie lorsque des personnes s'approchent ; singes (environ **trois**, à confirmer), dont l'un peut lui tenir la main ou se trouver tout près ; chats et autres animaux familiers. Pas de noms ou d'espèces inventés.
 - **Statut** : matériau narratif de **saga**, répartir ensuite par tome / POV ; pas de modification des scènes ou des données Sonekeno sans revue. Source : registre Founder §K.
+
