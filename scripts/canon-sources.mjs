@@ -2,8 +2,9 @@
  * Charge les entrées « personnage » depuis les .txt narratifs (sans dupliquer le texte dans le JS).
  *
  * Sources :
- * 1. text-files/FICHE CANON — *.txt — fiches détaillées (prioritaires si même slug ; un fichier peut en contenir plusieurs)
- * 2. text-files/fiches personnages resume.txt — blocs type Désir/Peur/Masque/… (+ suite NZUNGANI / FICHE CANON intégrée)
+ * 1. Import personnages existant : identifiants conservés.
+ * 2. Fiches détaillées .txt/.md et fiche individuelle NZUNGANI.
+ * 3. Résumés et notices nominatives ; jamais les annexes globales comme un personnage.
  */
 import { readFileSync, readdirSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
@@ -85,9 +86,9 @@ export function splitFicheCanonBlocks(content) {
   }
 
   for (const line of lines) {
-    if (/^\s*FICHE CANON —\s+.+/i.test(line.trim())) {
+    if (/^(?:#\s+)?FICHE CANON —\s+.+/i.test(line.trim())) {
       flush()
-      titleLine = line.trim()
+      titleLine = line.trim().replace(/^#\s+/, '')
       continue
     }
     if (!titleLine) continue
@@ -98,9 +99,18 @@ export function splitFicheCanonBlocks(content) {
 }
 
 function truncateDesc(s, hint) {
-  if (s.length <= MAX_DESC_CHARS) return s
+  if (Buffer.byteLength(s, 'utf8') <= MAX_DESC_CHARS) return s
   const ell = `\n… [truncated, ${hint}]`
-  return s.slice(0, MAX_DESC_CHARS - ell.length) + ell
+  const limit = MAX_DESC_CHARS - Buffer.byteLength(ell, 'utf8')
+  let bytes = 0
+  let out = ''
+  for (const char of s) {
+    const size = Buffer.byteLength(char, 'utf8')
+    if (bytes + size > limit) break
+    bytes += size
+    out += char
+  }
+  return out + ell
 }
 
 /** @param {string} dir */
@@ -110,8 +120,8 @@ export function loadFicheCanonFromDir(dir) {
 
   if (!existsSync(dir)) return bySlug
 
-  const names = readdirSync(dir).filter(
-    (f) => /\.txt$/i.test(f) && /FICHE CANON/i.test(f),
+  const names = readdirSync(dir).sort().filter(
+    (f) => /\.(?:txt|md)$/i.test(f) && /FICHE CANON/i.test(f),
   )
 
   for (const fname of names) {
@@ -128,6 +138,8 @@ export function loadFicheCanonFromDir(dir) {
       const dn = displayName(block.titleLine)
       const slug = toSlug(dn)
       if (!slug) return
+      // Ce bloc décrit un comptoir, pas une personne.
+      if (slug === 'buma') return
 
       const description = truncateDesc(
         [block.titleLine, block.body].filter(Boolean).join('\n\n'),
@@ -141,6 +153,16 @@ export function loadFicheCanonFromDir(dir) {
         source: blocks.length > 1 ? `${fname} · ${slug}` : fname,
       })
     })
+    // Une fiche peut contenir un encart de lieu avant les compléments de son
+    // personnage principal. Ne pas attribuer ces compléments au lieu.
+    const appendixStart = text.search(/^## Compl[eé]ment/m)
+    if (appendixStart >= 0 && blocks.length) {
+      const owner = bySlug.get(toSlug(displayName(blocks[0].titleLine)))
+      const appendix = text.slice(appendixStart).trim()
+      if (owner && !owner.description.includes(appendix)) {
+        owner.description = truncateDesc(`${owner.description}\n\n${appendix}`, fname)
+      }
+    }
   }
 
   return bySlug
@@ -187,6 +209,8 @@ export function loadResumeCharacters(resumePath) {
 
   for (const line of raw.split(/\r?\n/)) {
     const t = line.trim()
+    // Les annexes multi-personnages ne sont pas la suite de la dernière fiche.
+    if (/^##\s/.test(t)) break
     if (t.startsWith('FICHE CANON')) {
       const dn = displayName(t)
       const slug = toSlug(dn)
@@ -221,7 +245,7 @@ export function loadResumeCharacters(resumePath) {
 }
 
 /**
- * Ordre : fiches fichier d’abord (dominent), puis résumés seulement pour les slugs manquants (ex. personnages sans fichier dédié).
+ * Conserve les identités de l'import existant et rassemble leurs enrichissements.
  * @param {string} [textDir]
  */
 export function loadAllCanonCharacters(textDir = process.env.SEED_TEXT_DIR || DEFAULT_TEXT_DIR) {
@@ -229,9 +253,53 @@ export function loadAllCanonCharacters(textDir = process.env.SEED_TEXT_DIR || DE
   const fromFiles = loadFicheCanonFromDir(textDir)
   const fromResume = loadResumeCharacters(resumePath)
 
-  const merged = new Map(fromFiles)
-  for (const [slug, row] of fromResume) {
-    if (!merged.has(slug)) merged.set(slug, row)
+  // Les slugs d'import existants sont conservés ; un titre honorifique ne crée
+  // pas un second personnage (ex. NKAKA NZONGO -> nzongo).
+  const merged = new Map()
+  const identity = new Map()
+  const aliases = { 'nkaka-nzongo': 'nzongo', 'maa-miakubuku': 'maa-miakubuku-mia-mualu', 'tusikila': 'ma-tusikila', 'mama-tusikila': 'ma-tusikila', 'mama-dobadola': 'maa-dobadola' }
+  const identityKey = (name) => aliases[toSlug(name)] || toSlug(name)
+  const importPath = join(textDir, 'personnages_les_derniers_leopards_pour_insertion_db.txt')
+  if (existsSync(importPath)) {
+    for (const line of readFileSync(importPath, 'utf8').split(/\r?\n/)) {
+      const cols = line.split('|')
+      if (cols.length !== 9 || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(cols[0])) continue
+      const [slug, name, , , aliases, clans, period, description, relations] = cols
+      merged.set(slug, { slug, name, description: [description, clans && `Lignée : ${clans}`, period && `Période : ${period}`, relations && `Relations : ${relations}`].filter(Boolean).join('\n\n'), source: 'personnages_les_derniers_leopards_pour_insertion_db.txt' })
+      identity.set(identityKey(name), slug)
+      identity.set(identityKey(slug), slug)
+    }
+  }
+  const add = (row) => {
+    const slug = identity.get(identityKey(row.name)) || row.slug
+    const prev = merged.get(slug)
+    const description = prev && !prev.description.includes(row.description)
+      ? `${prev.description}\n\n${row.description}` : (prev?.description || row.description)
+    merged.set(slug, { ...row, slug, name: prev?.name || row.name, description: truncateDesc(description, row.source) })
+    identity.set(identityKey(row.name), slug)
+  }
+  for (const row of fromResume.values()) add(row)
+  for (const row of fromFiles.values()) add(row)
+  // Fiche individuelle historique, sans préfixe FICHE CANON dans son nom.
+  const nzunganiPath = readdirSync(textDir).find((f) => /^NZUNGANI .*\.txt$/i.test(f))
+  if (nzunganiPath) add({ slug: 'nzungani', name: 'Nzungani', description: readFileSync(join(textDir, nzunganiPath), 'utf8'), source: nzunganiPath })
+  // Les notices de continuité sont rattachées à leur personnage explicite.
+  const notices = existsSync(resumePath) ? readFileSync(resumePath, 'utf8').split(/\r?\n/) : []
+  for (const line of notices) {
+    const match = line.match(/^\*\*([^*:]+)(?:\s*:[^*]*)?\*\*\s*(.*)$/)
+    if (!match) continue
+    const label = match[1].trim().replace(/,.*$/, '')
+    let slug = identity.get(identityKey(label))
+    // Ces deux compagnons sont nommés explicitement dans les notices Founder,
+    // sans fiche individuelle dans le corpus historique d'import.
+    if (!slug && ['kimbembe', 'bikuta'].includes(toSlug(label))) {
+      slug = toSlug(label)
+      identity.set(identityKey(label), slug)
+      merged.set(slug, { slug, name: label, description: '', source: 'fiches personnages resume.txt' })
+    }
+    if (!slug) continue
+    const row = merged.get(slug)
+    if (row && !row.description.includes(line)) row.description = truncateDesc(`${row.description}\n\n${line}`, 'notices de continuité')
   }
 
   const characters = [...merged.values()].sort((a, b) => {
@@ -243,3 +311,4 @@ export function loadAllCanonCharacters(textDir = process.env.SEED_TEXT_DIR || DE
   const shortDir = textDir.includes('text-files') ? 'text-files' : textDir
   return { textDir: shortDir, characters }
 }
+
