@@ -109,3 +109,8 @@ Kinuani propose à Mutinu d'accompagner la famille, les compagnons et la logisti
 **Réception ambivalente de Kinuani.** Certains le prennent d'abord pour un protecteur du pouvoir de **Mbanza Kongo**. D'autres, connaissant les insignes de maisons prestigieuses, dont celle de **Ne Mberi**, reconnaissent son réseau de protecteurs et son attachement profond aux traditions. Sa maîtrise du **verbe Kongo**, ses échanges avec les habitants et la réputation de sa formation auprès de **Ne Mawungu**, sous la protection de **Ne Nzongo**, font progressivement évoluer les plus méfiants vers l'estime. Sa reconnaissance par de hautes personnalités ne signifie pas qu'il représente officiellement tous ces chefs ou qu'il a reçu une autorité militaire sur ces pays.
 
 **Statut :** rectificatif et développement narratif du Founder, consigné dans l'addendum existant ; pas de scène DB, pas de validation historique indépendante, pas de déploiement ni Quality revendiqués.
+
+
+### Précision lexicale et oratoire Founder — Bukongo et kikongo (11 novembre 2026)
+
+**Bukongo = art de vivre et philosophie Kongo.** Le **verbe** auquel le Founder fait référence est le **kikongo**, non le Bukongo. Les **Bakongo Banseke** s'expriment en variantes du kikongo ; ils apprécient les discours de Kinuani en **kikongo littéraire**, enrichis d'une **dimension scientifique qu'il maîtrise**. Cette maîtrise contribue, aux côtés des insignes des maisons respectées et de ses protecteurs, à dissiper progressivement les soupçons de ceux qui le croyaient favorable au pouvoir christianisé de Mbanza Kongo. Préserver cette distinction terminologique dans les scènes et fiches futures.
