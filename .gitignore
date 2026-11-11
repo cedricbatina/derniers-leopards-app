@@ -22,3 +22,6 @@ logs
 .env
 .env.*
 !.env.example
+
+# Brouillons machine. Le canon (fiches, chrono, scènes) reste versionné.
+text-files/_local/
