@@ -8,7 +8,7 @@ Titres des parents de mapasa : **Mama Ngudi** ou **Ma Ngudi** (Mutinu) ; **Tata 
 
 **Nianzi est vivante.** Celle qui meurt est **une autre protégée** de Kisita, non nommée.
 
-La sœur de Mutinu, déjà en base, est **Lufuandi** (`lufauandi`). L’ancienne graphie Lufauandi est **écartée**. Le slug reste `lufauandi`. **Ma Ndialu** n’est pas cette sœur : en parenté, Ma Ndialu est sœur de Kisita.
+La sœur de Mutinu, déjà en base, est **Lufuandi** (`lufuandi`). L’ancienne graphie Lufauandi et l’ancien slug `lufauandi` sont **écartés**. **Ma Ndialu** n’est pas cette sœur : en parenté, Ma Ndialu est sœur de Kisita.
 
 
 ## Parenté — ne plus écrire « nom à retrouver »
@@ -1207,7 +1207,7 @@ Le terme oral **« Nkurumbi » / « Kingumbi »** doit être vérifié. L'initia
 
 **Contrôle d'identité** : les notes de Mfuti mentionnent déjà **une sœur de Mutinu à la boutique** (scène du marché, note BATINA OS §§16–17 et 40–41). La présente décision ajoute une **sœur aînée divorcée qui accompagne Mutinu après le mariage**. **Ne pas fusionner automatiquement les deux mentions** avant vérification dans les personnages et les relations Sonekeno, et ne pas inventer un nom.
 
-**Trois personnages féminins à maintenir distincts** : (a) **Lufuandi**, sœur de Mutinu déjà en base (`lufauandi` ; graphie Lufauandi écartée) ; la dictée du 5 novembre l’avait nommée à tort Ma Ndialu ; (b) **Ma Ntombo**, sœur de Kinuani (d'abord opposée à Mutinu ; **pas Ma Lukula**) ; (c) **Nianzi** (ancienne promise, **vivante**, et non sœur de Kinuani).
+**Trois personnages féminins à maintenir distincts** : (a) **Lufuandi**, sœur de Mutinu déjà en base (`lufuandi` ; graphie Lufauandi écartée) ; la dictée du 5 novembre l’avait nommée à tort Ma Ndialu ; (b) **Ma Ntombo**, sœur de Kinuani (d'abord opposée à Mutinu ; **pas Ma Lukula**) ; (c) **Nianzi** (ancienne promise, **vivante**, et non sœur de Kinuani).
 
 ### Placement et continuité
 

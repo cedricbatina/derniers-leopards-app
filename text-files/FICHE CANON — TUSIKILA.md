@@ -75,7 +75,7 @@ Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §G. Ne 
 
 **Contrôle d'identité** : les notes de Mfuti mentionnent déjà **une sœur de Mutinu à la boutique** (scène du marché, note BATINA OS §§16–17 et 40–41). La présente décision ajoute une **sœur aînée divorcée qui accompagne Mutinu après le mariage**. **Ne pas fusionner automatiquement les deux mentions** avant vérification dans les personnages et les relations Sonekeno, et ne pas inventer un nom.
 
-**Trois personnages féminins à maintenir distincts** : (a) **Lufuandi**, sœur de Mutinu déjà en base (`lufauandi` ; graphie Lufauandi écartée) ; la dictée du 5 novembre l’avait nommée à tort Ma Ndialu ; (b) **Ma Ntombo**, sœur de Kinuani (d'abord opposée à Mutinu ; **pas Ma Lukula**) ; (c) **Nianzi** (ancienne promise, **vivante**, et non sœur de Kinuani).
+**Trois personnages féminins à maintenir distincts** : (a) **Lufuandi**, sœur de Mutinu déjà en base (`lufuandi` ; graphie Lufauandi écartée) ; la dictée du 5 novembre l’avait nommée à tort Ma Ndialu ; (b) **Ma Ntombo**, sœur de Kinuani (d'abord opposée à Mutinu ; **pas Ma Lukula**) ; (c) **Nianzi** (ancienne promise, **vivante**, et non sœur de Kinuani).
 
 ### Placement et continuité
 

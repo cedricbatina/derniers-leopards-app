@@ -2,7 +2,7 @@
 
 ## Identité — sœur de Mutinu
 
-Nom : **Lufuandi**. Identifiant existant : `lufauandi`. L’ancienne graphie **Lufauandi** est écartée. Pas de second personnage. Pas de changement de slug.
+Nom : **Lufuandi**. Identifiant : `lufuandi` (anciennement `lufauandi`). L’ancienne graphie **Lufauandi** est écartée. Pas de second personnage.
 
 **C’est elle**, la sœur de **Mutinu** déjà connue en Studio. Relais de confiance. Dans les règles alimentaires pour protéger Kinuani, elle est l’une des seules autorisées à préparer les repas si Mutinu ne le fait pas elle-même.
 

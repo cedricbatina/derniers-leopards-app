@@ -8,7 +8,7 @@ Titres des parents de mapasa : **Mama Ngudi** ou **Ma Ngudi** (Mutinu) ; **Tata 
 
 **Nianzi est vivante.** Celle qui meurt est **une autre protégée** de Kisita, non nommée.
 
-La sœur de Mutinu, déjà en base, est **Lufuandi** (`lufauandi`). L’ancienne graphie Lufauandi est **écartée**. Le slug reste `lufauandi`. **Ma Ndialu** n’est pas cette sœur : en parenté, Ma Ndialu est sœur de Kisita.
+La sœur de Mutinu, déjà en base, est **Lufuandi** (`lufuandi`). L’ancienne graphie Lufauandi et l’ancien slug `lufauandi` sont **écartés**. **Ma Ndialu** n’est pas cette sœur : en parenté, Ma Ndialu est sœur de Kisita.
 
 
 **Correction 2026-11-11** : la sœur de Kinuani, encore « à retrouver » dans ce document du 11 octobre, est **Ma Ntombo** (`ma-ntombo`). Parenté Sonekeno, `sibling` / `certain`, même mère Ma Musakanda. **Ma Lukula** est la grand-mère maternelle (mère de Kisita et de Ma Musakanda), pas cette sœur.
