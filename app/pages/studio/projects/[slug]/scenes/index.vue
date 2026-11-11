@@ -6,6 +6,7 @@ import { useLocalePath, useRequestHeaders } from '#imports'
 import { isNarrativeAccessDenied } from '~/utils/narrativeAccess'
 
 const localePath = useLocalePath()
+const { t } = useI18n()
 const route = useRoute()
 
 const projectSlug = computed(() => String(route.params.slug || ''))
@@ -81,7 +82,7 @@ async function createScene() {
 }
 
 async function softDelete(s) {
-  if (!confirm(`Delete scene "${s.title || s.slug}"?`)) return
+  if (!confirm(t('studio.scenes.deleteConfirm', { title: s.title || s.slug }))) return
   await apiFetch(`/api/projects/${projectSlug.value}/scenes/${s.slug}`, {
     method: 'DELETE',
   })
@@ -114,32 +115,32 @@ function chapterLabel(id, chapterNo, title, partNo) {
       class="text-sm text-muted hover:opacity-100"
       :to="localePath(`/studio/projects/${projectSlug}`)"
     >
-      ← Back to project
+      ← {{ t('studio.scenes.backToProject') }}
     </NuxtLink>
 
     <div class="flex items-start justify-between gap-3">
       <div>
-        <h1 class="text-xl font-semibold">Scenes</h1>
-        <p class="text-sm text-muted">Scènes du projet (CRUD + corbeille).</p>
+        <h1 class="text-xl font-semibold">{{ t('domain.scene.plural') }}</h1>
+        <p class="text-sm text-muted">{{ t('studio.scenes.subtitle') }}</p>
       </div>
 
       <label class="text-sm text-muted flex items-center gap-2 select-none">
         <input type="checkbox" v-model="trashed" />
-        Trashed
+        {{ t('common.trashed') }}
       </label>
     </div>
 
     <div v-if="canManage" class="card">
       <div class="card-body grid gap-3 md:grid-cols-6">
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Search</label>
-          <input v-model="q" class="input w-full" placeholder="title / slug / summary…" />
+          <label class="text-xs text-muted">{{ t('common.search') }}</label>
+          <input v-model="q" class="input w-full" :placeholder="t('studio.scenes.searchPlaceholder')" />
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Filter by chapter</label>
+          <label class="text-xs text-muted">{{ t('studio.scenes.filterByChapter') }}</label>
           <select v-model="chapterFilter" class="input w-full">
-            <option value="">All</option>
+            <option value="">{{ t('studio.scenes.all') }}</option>
             <option v-for="c in chapterOptions" :key="c.id" :value="String(c.id)">
               {{ chapterLabel(c.id, c.chapter_no, c.title, c.part_no) }}
             </option>
@@ -147,9 +148,9 @@ function chapterLabel(id, chapterNo, title, partNo) {
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">New scene: chapter</label>
+          <label class="text-xs text-muted">{{ t('studio.scenes.newSceneChapter') }}</label>
           <select v-model="form.chapter_id" class="input w-full">
-            <option value="">Select…</option>
+            <option value="">{{ t('studio.scenes.select') }}</option>
             <option v-for="c in chapterOptions" :key="c.id" :value="String(c.id)">
               {{ chapterLabel(c.id, c.chapter_no, c.title, c.part_no) }}
             </option>
@@ -157,43 +158,43 @@ function chapterLabel(id, chapterNo, title, partNo) {
         </div>
 
         <div class="md:col-span-1">
-          <label class="text-xs text-muted">Scene #</label>
+          <label class="text-xs text-muted">{{ t('studio.scenes.number') }}</label>
           <input v-model="form.scene_no" class="input w-full" placeholder="1" />
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Title</label>
-          <input v-model="form.title" class="input w-full" placeholder="e.g. Désolation de Mbuila" />
+          <label class="text-xs text-muted">{{ t('studio.scenes.title') }}</label>
+          <input v-model="form.title" class="input w-full" :placeholder="t('studio.scenes.titlePlaceholder')" />
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Slug (optional)</label>
+          <label class="text-xs text-muted">{{ t('studio.scenes.slugOptional') }}</label>
           <input v-model="form.slug" class="input w-full" placeholder="mbuila-desolation" />
         </div>
 
         <div class="md:col-span-6">
-          <label class="text-xs text-muted">Summary</label>
-          <textarea v-model="form.summary" class="input w-full min-h-24" placeholder="Résumé (optionnel)" />
+          <label class="text-xs text-muted">{{ t('studio.scenes.summary') }}</label>
+          <textarea v-model="form.summary" class="input w-full min-h-24" :placeholder="t('studio.scenes.summaryPlaceholder')" />
         </div>
 
         <div class="md:col-span-6">
           <button class="btn btn-primary w-full focus-ring" :disabled="creating" @click="createScene">
             <Icon name="mdi:plus" aria-hidden="true" />
-            Create
+            {{ t('common.create') }}
           </button>
         </div>
       </div>
     </div>
 
     <div v-if="error && !isNarrativeAccessDenied(error)" class="card">
-      <div class="card-body text-sm">Error: {{ error?.statusMessage || error }}</div>
+      <div class="card-body text-sm">{{ t('common.error') }}: {{ error?.statusMessage || error }}</div>
     </div>
 
     <div class="card overflow-hidden">
       <div class="card-body flex items-center justify-between">
         <div class="text-sm text-muted">
-          <span v-if="pending">Loading…</span>
-          <span v-else>{{ data?.scenes?.length || 0 }} scene(s)</span>
+          <span v-if="pending">{{ t('common.loading') }}</span>
+          <span v-else>{{ t('studio.scenes.count', { count: data?.scenes?.length || 0 }) }}</span>
         </div>
       </div>
 
@@ -217,7 +218,7 @@ function chapterLabel(id, chapterNo, title, partNo) {
             </div>
 
             <div v-if="canManage" class="flex items-center gap-2">
-              <span v-if="s.deleted_at" class="badge">trashed</span>
+              <span v-if="s.deleted_at" class="badge">{{ t('common.trashed') }}</span>
 
               <button
                 v-if="!s.deleted_at"

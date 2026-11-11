@@ -5,6 +5,7 @@ import { computed, reactive, ref } from 'vue'
 import { useLocalePath, useRequestHeaders } from '#imports'
 
 const localePath = useLocalePath()
+const { t } = useI18n()
 const route = useRoute()
 const projectSlug = computed(() => String(route.params.slug || ''))
 
@@ -35,7 +36,7 @@ function eventKey(e) {
 }
 
 function eventTitle(e) {
-  return e?.title || e?.name || e?.label || e?.event || e?.slug || `Event ${eventKey(e)}`
+  return e?.title || e?.name || e?.label || e?.event || e?.slug || t('studio.timeline.untitled', { id: eventKey(e) })
 }
 
 function eventDesc(e) {
@@ -119,7 +120,7 @@ async function saveEdit() {
 }
 
 async function deleteEvent(e) {
-  if (!confirm(`Delete event "${eventTitle(e)}"?`)) return
+  if (!confirm(t('studio.timeline.deleteConfirm', { title: eventTitle(e) }))) return
   await apiFetch(`/api/projects/${projectSlug.value}/timeline/${eventKey(e)}`, {
     method: 'DELETE',
   })
@@ -130,21 +131,21 @@ async function deleteEvent(e) {
 <template>
   <div class="page space-y-4">
     <NuxtLink class="text-sm text-muted hover:opacity-100" :to="localePath(`/studio/projects/${projectSlug}`)">
-      ← Back to project
+      ← {{ t('studio.timeline.backToProject') }}
     </NuxtLink>
 
     <div class="flex items-start justify-between gap-3">
       <div>
-        <h1 class="text-xl font-semibold">Timeline</h1>
-        <p class="text-sm text-muted">Événements clés et dates.</p>
+        <h1 class="text-xl font-semibold">{{ t('domain.timeline.plural') }}</h1>
+        <p class="text-sm text-muted">{{ t('studio.timeline.subtitle') }}</p>
       </div>
     </div>
 
     <div class="card">
       <div class="card-body grid gap-3 md:grid-cols-6">
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Search</label>
-          <input v-model="q" class="input w-full" placeholder="title / slug / description…" />
+          <label class="text-xs text-muted">{{ t('common.search') }}</label>
+          <input v-model="q" class="input w-full" :placeholder="t('studio.timeline.searchPlaceholder')" />
         </div>
       </div>
     </div>
@@ -152,48 +153,48 @@ async function deleteEvent(e) {
     <div v-if="canManage" class="card">
       <div class="card-body grid gap-3 md:grid-cols-6">
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Title</label>
+          <label class="text-xs text-muted">{{ t('studio.timeline.title') }}</label>
           <input v-model="form.title" class="input w-full" placeholder="Ex: Bataille de Mbuila" />
         </div>
 
         <div class="md:col-span-1">
-          <label class="text-xs text-muted">Start date</label>
+          <label class="text-xs text-muted">{{ t('studio.timeline.startDate') }}</label>
           <input v-model="form.date_start" type="date" class="input w-full" />
         </div>
 
         <div class="md:col-span-1">
-          <label class="text-xs text-muted">End date</label>
+          <label class="text-xs text-muted">{{ t('studio.timeline.endDate') }}</label>
           <input v-model="form.date_end" type="date" class="input w-full" />
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Slug (optional)</label>
+          <label class="text-xs text-muted">{{ t('studio.timeline.slugOptional') }}</label>
           <input v-model="form.slug" class="input w-full" placeholder="mbuila-1665" />
         </div>
 
         <div class="md:col-span-6">
-          <label class="text-xs text-muted">Description</label>
+          <label class="text-xs text-muted">{{ t('domain.scene.description') }}</label>
           <textarea v-model="form.description" class="input w-full min-h-24" />
         </div>
 
         <div class="md:col-span-6">
           <button class="btn btn-primary w-full focus-ring" :disabled="creating" @click="createEvent">
             <Icon name="mdi:plus" aria-hidden="true" />
-            Create
+            {{ t('common.create') }}
           </button>
         </div>
       </div>
     </div>
 
     <div v-if="error" class="card">
-      <div class="card-body text-sm">Error: {{ error?.statusMessage || error }}</div>
+      <div class="card-body text-sm">{{ t('common.error') }}: {{ error?.statusMessage || error }}</div>
     </div>
 
     <div class="card overflow-hidden">
       <div class="card-body flex items-center justify-between">
         <div class="text-sm text-muted">
-          <span v-if="pending">Loading…</span>
-          <span v-else>{{ data?.events?.length || 0 }} event(s)</span>
+          <span v-if="pending">{{ t('common.loading') }}</span>
+          <span v-else>{{ t('studio.timeline.count', { count: data?.events?.length || 0 }) }}</span>
         </div>
       </div>
 
@@ -228,32 +229,32 @@ async function deleteEvent(e) {
     <div v-if="canManage && editingId" class="card bg-surface2">
       <div class="card-body grid gap-3 md:grid-cols-6">
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Title</label>
+          <label class="text-xs text-muted">{{ t('studio.timeline.title') }}</label>
           <input v-model="editForm.title" class="input w-full" />
         </div>
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Slug</label>
+          <label class="text-xs text-muted">{{ t('characters.slug') }}</label>
           <input v-model="editForm.slug" class="input w-full" />
         </div>
         <div class="md:col-span-1">
-          <label class="text-xs text-muted">Start date</label>
+          <label class="text-xs text-muted">{{ t('studio.timeline.startDate') }}</label>
           <input v-model="editForm.date_start" type="date" class="input w-full" />
         </div>
         <div class="md:col-span-1">
-          <label class="text-xs text-muted">End date</label>
+          <label class="text-xs text-muted">{{ t('studio.timeline.endDate') }}</label>
           <input v-model="editForm.date_end" type="date" class="input w-full" />
         </div>
         <div class="md:col-span-6">
-          <label class="text-xs text-muted">Description</label>
+          <label class="text-xs text-muted">{{ t('domain.scene.description') }}</label>
           <textarea v-model="editForm.description" class="input w-full min-h-24" />
         </div>
         <div class="md:col-span-6 flex gap-2">
           <button class="btn btn-primary focus-ring" @click="saveEdit">
             <Icon name="mdi:content-save-outline" aria-hidden="true" />
-            Save
+            {{ t('common.save') }}
           </button>
           <button class="btn btn-ghost focus-ring" @click="cancelEdit">
-            Cancel
+            {{ t('common.cancel') }}
           </button>
         </div>
       </div>

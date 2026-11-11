@@ -5,6 +5,7 @@ import { useRoute } from '#imports'
 
 const config = useRuntimeConfig()
 const route = useRoute()
+const { locale, t } = useI18n()
 const { isOpen, title, message, icon, danger, loading, confirmLabel, cancelLabel, confirm, close } = useConfirm()
 
 const appName = computed(() => config.public.APP_NAME || 'Les derniers léopards')
@@ -55,7 +56,7 @@ onMounted(() => {
  */
 useHead(() => ({
   htmlAttrs: {
-    lang: 'fr',
+    lang: locale.value,
   },
   titleTemplate: (titleChunk) => (titleChunk ? `${titleChunk} · ${appName.value}` : appName.value),
   link: [
@@ -75,13 +76,13 @@ useHead(() => ({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: canonicalUrl.value },
     { property: 'og:title', content: appName.value },
-    { property: 'og:description', content: 'Bible & app de production du roman Les derniers léopards.' },
+    { property: 'og:description', content: t('app.meta.description') },
     { property: 'og:image', content: `${siteUrl.value}/images/logo-sonekeno.png` },
 
     // Twitter
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: appName.value },
-    { name: 'twitter:description', content: 'Bible & app de production du roman Les derniers léopards.' },
+    { name: 'twitter:description', content: t('app.meta.description') },
     { name: 'twitter:image', content: `${siteUrl.value}/images/logo-sonekeno.png` },
   ],
   script: [
@@ -92,7 +93,7 @@ useHead(() => ({
         '@type': 'WebSite',
         name: appName.value,
         url: siteUrl.value,
-        inLanguage: 'fr',
+        inLanguage: locale.value,
       }),
     },
   ],

@@ -80,7 +80,28 @@
     "noCharacters": "Nenhum personagem encontrado",
     "createFirst": "Crie seu primeiro personagem",
     "noDescription": "Sem descrição ainda",
-    "viewDetails": "Ver detalhes"
+    "viewDetails": "Ver detalhes",
+    "detail": {
+      "canonProfile": "Perfil canónico",
+      "dramaticMarkers": "Marcos dramáticos",
+      "aliases": "Alcunhas",
+      "kinships": "Laços familiares",
+      "roleInStory": "Papel na narrativa",
+      "oneLiner": "Frase-guia",
+      "occupation": "Ocupação",
+      "personality": "Personalidade",
+      "strengths": "Forças",
+      "flaws": "Falhas",
+      "externalGoal": "Objetivo externo",
+      "internalGoal": "Objetivo interno",
+      "fears": "Medos",
+      "desire": "Desejo",
+      "fear": "Medo",
+      "mask": "Máscara",
+      "weapon": "Arma",
+      "rupture": "Ponto de rutura",
+      "contradiction": "Contradição"
+    }
   },
 
   "dashboard": {
@@ -126,6 +147,7 @@
     "aria": "Navegação principal",
     "home": "Início",
     "dashboard": "Painel",
+    "studio": "Estúdio",
     "guide": "Guia",
     "characters": "Personagens",
     "scenes": "Cenas",
@@ -155,6 +177,46 @@
       "dashboard": "Início do estúdio",
       "projects": "Todos os projetos",
       "guide": "Guia público"
+    },
+    "project": {
+      "title": "Projeto",
+      "backToProjects": "Voltar aos projetos",
+      "slugImmutable": "O slug não pode ser alterado:",
+      "readOnly": "Só de leitura: pode consultar esta saga, mas não a pode modificar.",
+      "deleteConfirm": "Eliminar este projeto?",
+      "defaultTitle": "Título (predefinido)",
+      "status": "Estado",
+      "englishTitle": "Título em inglês",
+      "portugueseTitle": "Título em português",
+      "logline": "Frase-guia",
+      "pitch": "Apresentação",
+      "books": "Livros",
+      "booksHint": "Partes e capítulos.",
+      "charactersHint": "Arcos e relações.",
+      "scenesHint": "Escrever e estruturar.",
+      "timelineHint": "Cronologia.",
+      "glossary": "Glossário",
+      "glossaryHint": "Termos e vocabulário."
+    },
+    "scenes": {
+      "backToProject": "Voltar ao projeto",
+      "subtitle": "Cenas do projeto (CRUD e lixeira).",
+      "deleteConfirm": "Eliminar a cena “{title}”?",
+      "searchPlaceholder": "título / slug / resumo…",
+      "filterByChapter": "Filtrar por capítulo",
+      "all": "Todas",
+      "newSceneChapter": "Nova cena: capítulo",
+      "select": "Selecionar…",
+      "number": "N.º da cena",
+      "title": "Título",
+      "titlePlaceholder": "ex. Desolação de Mbuila",
+      "slugOptional": "Slug (opcional)",
+      "summary": "Resumo",
+      "summaryPlaceholder": "Resumo (opcional)",
+      "count": "{count} cena(s)"
+    },
+    "timeline": {
+      "backToProject": "Voltar ao projeto", "subtitle": "Eventos-chave e datas.", "untitled": "Evento {id}", "deleteConfirm": "Eliminar o evento “{title}”?", "searchPlaceholder": "título / slug / descrição…", "title": "Título", "startDate": "Data de início", "endDate": "Data de fim", "slugOptional": "Slug (opcional)", "count": "{count} evento(s)"
     }
   },
 

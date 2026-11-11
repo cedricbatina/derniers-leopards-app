@@ -90,7 +90,28 @@
     "noCharacters": "Aucun personnage trouvé",
     "createFirst": "Créer votre premier personnage",
     "noDescription": "Pas de description",
-    "viewDetails": "Voir les détails"
+    "viewDetails": "Voir les détails",
+    "detail": {
+      "canonProfile": "Profil canon",
+      "dramaticMarkers": "Marqueurs dramatiques",
+      "aliases": "Alias",
+      "kinships": "Parentés",
+      "roleInStory": "Rôle dans l’histoire",
+      "oneLiner": "Logline",
+      "occupation": "Occupation",
+      "personality": "Personnalité",
+      "strengths": "Forces",
+      "flaws": "Failles",
+      "externalGoal": "But externe",
+      "internalGoal": "But interne",
+      "fears": "Peurs",
+      "desire": "Désir",
+      "fear": "Peur",
+      "mask": "Masque",
+      "weapon": "Arme",
+      "rupture": "Rupture",
+      "contradiction": "Contradiction"
+    }
   },
 
   "dashboard": {
@@ -136,6 +157,7 @@
     "aria": "Navigation principale",
     "home": "Accueil",
     "dashboard": "Tableau de bord",
+    "studio": "Studio",
     "guide": "Guide",
     "characters": "Personnages",
     "scenes": "Scènes",
@@ -577,6 +599,55 @@
       "dashboard": "Accueil studio",
       "projects": "Tous les projets",
       "guide": "Guide public"
+    },
+    "project": {
+      "title": "Projet",
+      "backToProjects": "Retour aux projets",
+      "slugImmutable": "Le slug est immuable :",
+      "readOnly": "Lecture seule : tu consultes cette saga, tu ne la modifies pas.",
+      "deleteConfirm": "Supprimer ce projet ?",
+      "defaultTitle": "Titre (défaut)",
+      "status": "Statut",
+      "englishTitle": "Titre EN",
+      "portugueseTitle": "Titre PT",
+      "logline": "Logline",
+      "pitch": "Pitch",
+      "books": "Livres",
+      "booksHint": "Parties et chapitres.",
+      "charactersHint": "Arcs et relations.",
+      "scenesHint": "Écrire et structurer.",
+      "timelineHint": "Chronologie.",
+      "glossary": "Glossaire",
+      "glossaryHint": "Termes et vocabulaire."
+    },
+    "scenes": {
+      "backToProject": "Retour au projet",
+      "subtitle": "Scènes du projet (CRUD et corbeille).",
+      "deleteConfirm": "Supprimer la scène « {title} » ?",
+      "searchPlaceholder": "titre / slug / résumé…",
+      "filterByChapter": "Filtrer par chapitre",
+      "all": "Toutes",
+      "newSceneChapter": "Nouvelle scène : chapitre",
+      "select": "Choisir…",
+      "number": "Scène n°",
+      "title": "Titre",
+      "titlePlaceholder": "ex. Désolation de Mbuila",
+      "slugOptional": "Slug (optionnel)",
+      "summary": "Résumé",
+      "summaryPlaceholder": "Résumé (optionnel)",
+      "count": "{count} scène(s)"
+    },
+    "timeline": {
+      "backToProject": "Retour au projet",
+      "subtitle": "Événements et dates.",
+      "untitled": "Événement {id}",
+      "deleteConfirm": "Supprimer l’événement « {title} » ?",
+      "searchPlaceholder": "titre / slug / description…",
+      "title": "Titre",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "slugOptional": "Slug (optionnel)",
+      "count": "{count} événement(s)"
     }
   },
 

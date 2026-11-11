@@ -111,9 +111,9 @@
             <span>{{ t('nav.glossary') }}</span>
           </NuxtLink>
 
-          <NuxtLink v-if="isAuthed" :to="localePath('/studio')" class="pill pill-primary" active-class="pill-active">
+          <NuxtLink :to="localePath('/studio/projects')" class="pill pill-primary" active-class="pill-active">
             <Icon name="mdi:briefcase" aria-hidden="true" />
-            <span>Studio</span>
+            <span>{{ t('nav.studio') }}</span>
           </NuxtLink>
 
           <NuxtLink v-if="isAuthed" :to="localePath('/studio/todos')" class="pill" active-class="pill-active">
