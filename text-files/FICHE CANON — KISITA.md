@@ -1,65 +1,149 @@
-# FICHE CANON — Kisita
+FICHE CANON — KISITA
+1) Identité
 
-## Identité et place dans la saga
+Nom : Kisita
 
-Nom : **Kisita** (Mama Kisita). Identifiant existant : `kisita`. Pas de second personnage.
+Statut : guérisseuse / soignante (nganga de soins), gardienne d’un savoir discret
 
-Guérisseuse / nganga de soins, gardienne d’un savoir discret, confidente de **Ne Nzongo**, initiatrice d’une institution féminine d’élite. Elle pèse sur le conseil des femmes et sur les alliances. Fille de **Ma Lukula** et **Ta Mukuba** selon le registre. Tante maternelle du côté de Kinuani.
+Camp : Kuimba (cercle Nzongo → puis Kinuani/Mutinu)
 
-Elle n’est pas une « guérisseuse magique ». Elle lit les corps comme on lit les mensonges. Elle soigne, donc elle menace les menteurs.
+2) Fonction dans l’histoire
 
-## Caractère
+Kisita est la main qui empêche la mort d’être définitive.
 
-Désir : protéger la continuité du clan et la vérité, sans devenir une arme de faction. Peur : être instrumentalisée, ou que son savoir serve une justice truquée.
+Elle maintient le fil entre corps (blessures, poisons) et politique (succession, preuves, manipulations).
 
-Masque : humble, calme, « juste une soignante ». Voix basse, pédagogique. Elle observe d’abord les mains, la bouche, la sueur, les tremblements. Un silence avant de conclure.
+Elle sert de boussole quand le clan bascule : elle voit les causes, pas seulement les symptômes.
 
-Objets : calebasses, poudres, onguents, feuilles, épines, bandelettes, mortier. Lieux : maison de soins, bord d’eau, feu discret.
+3) Place exacte dans la saga (canon actuel)
 
-## Faute ancienne
+Confidente de Nzongo : Nzongo lui parle avant de mourir (fin mai 1650), avec Maa Miakubuku comme témoin/autorité morale.
 
-La mère de Kinuani meurt **onze jours** après un accouchement difficile. Kisita n’a pas porté secours à temps et a refusé aux soignants l’accès à sa pharmacopée. **Mama Tusikila** connaît la faute ; Kinuani et sa sœur l’ignorent d’abord. Kisita change avec les années et ressent une vraie culpabilité. La faute n’est pas effacée.
+Après la mort : elle est mêlée au nœud “sceptre / manuscrits / héritage” (ce qui déclenche le procès).
 
-## Maison et prétendantes
+Sauvetage : elle soigne Kinuani après l’attentat au poignard (poison), en coordination avec Mutinu.
 
-Après le décès de l’épouse de Ne Nzongo, qui avait d’abord élevé les orphelins, Kisita élève **la sœur de Kinuani**. Celle-ci la tient pour une **grand-mère**, non pour une descendante.
+Pivot rituel : elle sait ce qui est “médecine” et ce qui est “épreuve” (nkasa / vérité / justice).
 
-Deux prétendantes distinctes pour Kinuani :
+4) Psychologie
 
-- **Nianzi** (dictée « Nyandi ») : **vivante**. Amie d’enfance, formée au couvent féminin, se croyait destinée à l’épouser. Déception, tension familiale. Avenir ouvert. Ne jamais présenter sa mort comme acquise.
-- **Seconde protégée** : **décédée**. Nom, cause, date, filiation **non fixés**. C’est la tragédie de Kisita, pas une culpabilité automatique.
+Désir : protéger la continuité du clan (et la vérité) sans devenir une arme de faction.
 
-Lors des négociations Mutinu, Tusikila menace de révéler le secret de la mère. La sœur enquête, rompt, puis se réconcilie avec Kisita **autour du mariage** de Kinuani. Autre réconciliation, plus tard : Mutinu ↔ sœur de Kinuani, **après** l’attentat et la mort de Nzongo. Ne pas les fusionner. Pas de réconciliation automatique de Nianzi.
+Peur : être instrumentalisée, ou que son savoir devienne un prétexte à tuer (justice truquée).
 
-## Condition imposée à Mutinu
+Masque : humble, calme, “juste une soignante”.
 
-Kisita cède sur Mutinu à condition d’**au moins un an** d’initiation féminine. Compensation symbolique pour Nianzi. Épreuve de conduite. Les oncles de Mutinu contestent.
+Force : précision, patience, capacité à lire les corps comme on lit les mensonges.
 
-Nianzi et la sœur rendent ensuite la vie difficile à Mutinu pendant des années. Même Nianzi reconnaît pourtant la complicité réelle du couple.
+Contradiction : elle soigne… mais elle sait aussi quand un poison est une preuve (et pas seulement un mal).
 
-Pistes de cursus non définitives : loyauté, serments, maîtrise de soi, médiation, économie du foyer, parenté, soins, hospitalité, conseil. Nom oral Nkurumbi / Kingumbi : à vérifier, sans calque historique.
+5) Voix & présence
 
-Mutinu n’entre pas comme élève passive : « On ne me choisit pas. C’est moi qui choisis. »
+Voix : basse, posée, presque pédagogique. Peu de théâtre.
 
-## Soins majeurs
+Regard : elle observe d’abord les mains, la bouche, la sueur, les tremblements.
 
-**Vers août 1644.** Accouchement des mapasa Muanda et Mpasi. Kisita, hantée par la faute ancienne, fait venir des guérisseuses d’autres contrées et organise le déplacement de Mutinu. Mutinu et les jumeaux survivent. Ce rôle dépasse largement l’opposition initiale au mariage.
+Position de scène : souvent légèrement en retrait, mais tout le monde se tourne vers elle au moment critique.
 
-**Après mai 1650.** Nzongo lui parle avant de mourir, avec Miakubuku. Nœud sceptre / manuscrits / héritage. Accusée, condamnée au **nkasa**, sauvée in extremis par un juge pro-Kongo.
+6) Signatures (scènes / objets / gestes)
 
-**Après l’attentat au poignard** (poison), elle soigne Kinuani **avec Mutinu**. Maison de Kisita = sanctuaire de survie.
+Objets : calebasses, poudres, onguents, feuilles sèches, aiguilles/épines, bandelettes, mortier.
 
-## Relations
+Gestes : goûter, sentir, écouter la respiration, regarder la langue/yeux, palper le point d’entrée du poison.
 
-- **Ne Nzongo** : confiance, dernières paroles.
-- **Mutinu** : d’abord condition, puis coordination intime des soins.
-- **Kinuani** : neveu ; elle ignore d’abord s’il sait la faute ; elle le sauve.
-- **Mama Tusikila** : connaît la faute ; adversaire diplomatique aux négociations.
-- **Nianzi** : protégée vivante.
-- **Maa Miakubuku** : autorité morale.
-- **Dobadola** : tension ; Kisita veut protéger Kinuani des manœuvres.
-- **Nzungani** : parfois, quand il enquête.
+Signature visuelle : mains propres, gestes lents ; un “petit silence” avant de conclure.
 
-## Ce qui reste ouvert
+Lieux signature : “maison de soins” / pièce calme ; bord d’eau / feu discret pour infusions.
 
-Nom de la sœur. Nom et mort de la seconde protégée. Rites du cercle. Dates civiles du nkasa. Ne pas recoller les compléments Founder en dump.
+7) Alliés / ennemis
+
+Alliés : Mutinu (coordination intime), Maa Miakubuku (autorité morale), anciens, parfois Nzungani (quand il enquête).
+
+Tensions : toute faction qui veut transformer le soin en arme (ex : Dobadola, ennemis internes, faux témoins).
+
+8) Arc (Tome 1 – tel qu’on le tient)
+
+Avant la mort de Nzongo : elle fait partie des rares “portes de confiance”.
+
+Mort de Nzongo : elle reçoit/confirme des confidences (héritage/volonté).
+
+Procès (après) : elle devient un enjeu : la vérité qu’elle porte dérange.
+
+Attentat au poignard : elle sauve Kinuani (poison) → elle rend possible sa consécration.
+
+Après : elle reste une gardienne des limites : justice vs vengeance.
+
+9) Ce qui la rend unique (pitch)
+
+Kisita n’est pas une “guérisseuse magique”.
+C’est une médecin du clan, et le clan est malade : trahisons, poisons, rumeurs.
+Elle guérit, donc elle menace les menteurs.
+
+## Compléments Founder du 11 octobre 2026 — continuité affective et politique
+
+**Fonctions cumulées** : Mama Kisita demeure guérisseuse, confidente de Ne Nzongo, gardienne de savoirs et participante au sauvetage de Kinuani. Elle est aussi **initiatrice dans une institution féminine d'élite**, influence le conseil des femmes et pèse sur le choix des alliances matrimoniales.
+
+**Faute et culpabilité anciennes** : la mère de Kinuani meurt onze jours après un accouchement difficile. Kisita n'a pas porté secours à temps et a refusé aux soignants l'accès à son savoir de pharmacopée. Mama Tusikila connaît la faute ; Kinuani et sa sœur l'ignorent initialement. Kisita change avec les années et ressent une vraie culpabilité, sans que la faute soit effacée.
+
+**Transmission familiale** : Kinuani et sa sœur avaient été élevés par l'épouse de Ne Nzongo avant son décès. Kisita élève ensuite **la sœur de Kinuani**, qui la tient pour une **grand-mère**, et non une descendante de cette sœur. Lors des négociations matrimoniales, Tusikila menace de révéler le secret ; la sœur enquête, rompt affectivement avec Kisita, puis une réconciliation se construit autour du mariage de Kinuani.
+
+**Deux prétendantes distinctes** :
+- **Nianzi : vivante, décision explicite Founder du 11 octobre 2026**. Amie de Kinuani dans leur enfance, formée dans un couvent féminin, elle se croyait destinée à l'épouser. Le refus du mariage entraîne une forte déception et une tension envers sa famille. Son avenir littéraire reste ouvert.
+- **Seconde protégée, nom à déterminer : décédée**. Kisita comptait également sur elle dans le projet matrimonial de Kinuani. Sa disparition est la tragédie à conserver dans l'arc de Kisita ; aucune cause, culpabilité imputée à Kisita, date ni filiation ne sont encore fixées.
+
+**Double déception de Kisita** : son alliance espérée avec Nianzi n'aboutit pas, et une autre protégée est morte. Kisita finit par accepter Mutinu, tout en lui imposant au moins **un an de formation initiatique féminine** avant le mariage. La peur des manœuvres de Dobadola participe à son projet de protéger Kinuani et de peser sur son accession à de hautes responsabilités.
+
+**Attention aux deux réconciliations** : Kisita ↔ sœur de Kinuani autour du mariage ; Mutinu ↔ sœur de Kinuani seulement bien plus tard, après l'attentat contre Kinuani survenant après la mort de Nzongo.
+
+**Référence** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md`. Ces ajouts n'attestent pas une migration de la DB.
+
+
+## Complément Founder — rivalités après le mariage et initiation de Mutinu
+
+Après que le mariage Nianzi–Kinuani ne s'est pas réalisé, **Nianzi et la sœur de Kinuani (nom à retrouver)** restent **deux femmes distinctes** qui, pendant une période durable de la vie conjugale de Kinuani et Mutinu, contestent Mutinu et lui rendent la vie difficile. Leur hostilité ne prouve ni la mort de Nianzi ni un affrontement armé.
+
+**Condition imposée par Mama Kisita avant le mariage** : Mutinu doit accomplir au moins un an d'enseignement dans un cercle initiatique féminin d'élite. Kisita veut éprouver la conduite et la solidité morale de la future épouse et ménager un **dédommagement symbolique** aux années de préparation et aux sacrifices de Nianzi, son ancienne protégée et candidate au mariage.
+
+L'initiation comporte serments, alliances et normes de conduite dont la transgression est réputée entraîner, dans les croyances du cercle, des malheurs ou des conséquences rituelles. **Ni le nom définitif du cercle, ni ses rituels détaillés, ni le fonctionnement exact de ces conséquences ne sont arrêtés.** Ne pas confondre la phase prénuptiale avec la formation/les initiations ultérieures de Mutinu liées aux maternités et à l'exil.
+
+Même Nianzi reconnaît la sollicitude et la complicité réelles dans le couple de Mutinu et Kinuani. **Après l'attentat au poignard contre Kinuani, après la mort de Nzongo**, la sœur de Kinuani découvre pleinement l'intensité du dévouement de Mutinu, revenue précipitamment pour le protéger : leur réconciliation commence alors. **Ne pas déduire automatiquement une réconciliation simultanée de Nianzi.**
+
+Pour la source de décision et les champs à vérifier, consulter `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md`.
+
+
+## Complément Founder — année initiatique de Mutinu et opposition des lignages (22 octobre 2026)
+
+Le rappel des jeunes à Kuimba permet à Ne Nzongo d'avancer les projets de mariages et d'alliances de son clan. **Dans les deux à trois jours après l'arrivée de Kinuani**, la nouvelle d'une union presque conclue avec **Nianzi** se diffuse par les **mabembe** jusqu'aux proches de Mutinu à Mfuti. **Nianzi demeure vivante.** Mutinu en souffre fortement ; ses tantes et ses oncles sollicitent Mama Tusikila, qui vient à Kuimba négocier.
+
+**Kisita donne un accord conditionnel** au projet d'union avec **Mutinu** : une **année complète au minimum** dans une institution initiatique féminine. Elle recherche une conduite digne de la future épouse et une forme de compensation symbolique pour le renoncement à Nianzi. Les **oncles de Mutinu** expriment leur désaccord avec cette condition. Mutinu accepte cependant avec conviction, même si elle craint d'être remplacée pendant son apprentissage ; Tusikila la rassure de son soutien, sans transformer la promesse en certitude juridique.
+
+**Pistes de formation, non définitivement canoniques** : loyauté, serments, maîtrise de soi, médiation conjugale/familiale, économie du foyer, parenté, soins, transmission culturelle, dignité/hospitalité, conseil et responsabilité publique. Nom oral du cercle « Nkurumbi » / ancien « Kingumbi » : vérifier avec l'étude Woyo du **Kumbi** et les mentions comparatives du **Kikumbi**, sans prétendre reproduire un rituel historique spécifique.
+
+**Chronologie à résoudre** : année minimale de formation, rappel après départ de Mawungu et mariage seulement **deux ans après Mfuti** doivent être rapprochés. Les dates civiles anciennes et le tome attribué à la séquence ne sont pas automatiquement confirmés.
+
+Référence : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §J.
+
+
+## Complément Founder — initiation engagée avant les funérailles de Mawungu (22 octobre 2026)
+
+**Corrections des repères relatifs** : Ne Mawungu quitte le couvent d'élite **quatre à cinq mois après Mfuti**, et Ne Nzongo rappelle Kinuani **vers le septième mois**. La négociation pour annuler le projet Nianzi et envisager l'union avec Mutinu se déroule ensuite. **Mutinu entre pour au moins un an dans le couvent initiatique féminin exigé par Kisita**.
+
+**Environ trois à quatre mois après le début de cette formation**, Ne Mawungu meurt après son retrait dans son fief ; **cette mort intervient donc AVANT le mariage Kinuani–Mutinu**, fixé deux ans après Mfuti. Le voyage du groupe de Nzongo aux funérailles, l'inhumation déjà accomplie et le séjour jusqu'au 45e jour sont des événements distincts de cette formation féminine.
+
+**Trajectoire ultérieure** : l'auteur mentionne Mutinu lors d'un voyage lié à un second décès notable dans un territoire voisin (Bamba hypothétique). Vérifier les permissions, l'interruption ou la continuité de sa formation avant toute scène de déplacement. Le nom et l'identité du notable ne sont pas fixés.
+
+**Continuité essentielle** : **Nianzi est vivante**, le mariage avec elle **n'aboutit pas**, la formation exigée par Kisita dure au moins **douze mois**, et le mariage Kinuani–Mutinu demeure **T0 + deux ans**. Voir registre Founder §K.
+
+
+## Complément Founder — le tempérament de Mutinu durant l'initiation (22 octobre 2026)
+
+Mutinu entre dans l'institution féminine exigée par Kisita **avec une rancœur encore vive contre Kinuani**, à qui elle reproche de ne pas s'être imposé face à sa famille dans la question matrimoniale. Elle est naturellement **franche, sûre d'elle et portée à défendre son propre choix**, même contre son clan : « On ne me choisit pas. C'est moi qui choisis. » Kisita ne reçoit donc pas une élève passive mais une jeune femme qui **a déjà une forte volonté**.
+
+Cette colère dure **environ le premier mois** ; ensuite, la formation l'aide à relativiser sa déception, comprendre les contraintes de Kinuani et grandir en discernement. **Ce n'est pas une conversion à l'obéissance aveugle** : son caractère affirmé et sa capacité future à diriger demeurent centraux.
+
+Mama Tusikila avait perçu la naissance de son sentiment **dès la première journée de Mfuti**, lorsqu'elle avait vu cette même Mutinu soudain intimidée par Kinuani. La confidence Tusikila–Mutinu précède **les tractations entre lignages** ; Kinuani n'était pas alors informé. Conserver les rôles de Nianzi (vivante) et de la sœur de Kinuani distincts.
+
+Source : registre Founder §M.
+## Accouchement des mapasa, vers août 1644
+
+Kisita, hantée par la faute ancienne, fait venir des guérisseuses réputées d’autres contrées kongo et organise le déplacement de Mutinu. Mutinu et les jumeaux Muanda et Mpasi survivent. Ce rôle dépasse l’opposition initiale au mariage. Ne pas confondre avec le Kikumbi prénuptial.
