@@ -75,7 +75,7 @@ Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §G. Ne 
 
 **Contrôle d'identité** : les notes de Mfuti mentionnent déjà **une sœur de Mutinu à la boutique** (scène du marché, note BATINA OS §§16–17 et 40–41). La présente décision ajoute une **sœur aînée divorcée qui accompagne Mutinu après le mariage**. **Ne pas fusionner automatiquement les deux mentions** avant vérification dans les personnages et les relations Sonekeno, et ne pas inventer un nom.
 
-**Trois personnages féminins à maintenir distincts** : (a) **sœur aînée divorcée de Mutinu** (accompagnatrice ; dictée Founder 5 nov. : Ma Ndialu — à ne pas fusionner avec Ma Ndialu sœur de Kisita en parenté) ; (b) **Ma Ntombo**, sœur de Kinuani (d'abord opposée à Mutinu ; **pas Ma Lukula**) ; (c) **Nianzi** (ancienne promise, **vivante**, et non sœur de Kinuani).
+**Trois personnages féminins à maintenir distincts** : (a) **Lufuandi**, sœur de Mutinu déjà en base (`lufauandi` ; graphie Lufauandi écartée) ; la dictée du 5 novembre l’avait nommée à tort Ma Ndialu ; (b) **Ma Ntombo**, sœur de Kinuani (d'abord opposée à Mutinu ; **pas Ma Lukula**) ; (c) **Nianzi** (ancienne promise, **vivante**, et non sœur de Kinuani).
 
 ### Placement et continuité
 
@@ -203,14 +203,14 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 
 ### Installation de la parenté de Mutinu et cuisine de la concession
 - Mutinu arrive à Kuimba avec **plusieurs membres de sa famille**, qui s'y établissent également ; **deux membres de cette parenté** se sont mariés avec des personnes de Kuimba. Identifier précisément les personnes et les unions dans les fiches avant de les nommer.
-- Sa **grande sœur divorcée**, cuisinière particulièrement talentueuse, participe fortement à la vie de la concession. Nom confirmé par le Founder : **Ma Ndialu**. Ne pas fusionner automatiquement avec un ancien nom de fiche. Kinuani apprécie beaucoup ses plats.
+- Sa sœur **Lufuandi**, cuisinière particulièrement talentueuse, participe fortement à la vie de la concession. Nom en base : **Lufuandi**. La dictée du 5 novembre disait Ma Ndialu : **erreur Founder, retirée le 11 novembre**. Ma Ndialu est sœur de Kisita. Kinuani apprécie beaucoup ses plats.
 - La sœur cuisine le plus souvent pour la concession ; Mutinu lui fait préparer les mets préférés de son **mbuala** et elles cuisinent parfois ensemble. Prévoir dans l'architecture une cuisine collective bien organisée, des réserves et les espaces de travail associés, sans inventer leur implantation définitive.
 - **Plus tard**, la sécurité alimentaire de Kinuani conduit à l'interdiction de manger hors des cuisines de confiance de Mutinu et de sa sœur. Lorsque Mutinu ne peut accompagner Kinuani, notamment dans la période de l'exil, elle mandate **un soldat cuisinier** pour lui. **Mandangi**, identifié dans les trois formats de `personnages_les_derniers_leopards_pour_insertion_db.txt` ; ne pas créer un second soldat cuisinier. Ne pas rétroprojeter cette restriction de sécurité sur les premiers jours du mariage.
 
 ### Points à raccorder sans invention
 - Chronologie exacte des autres mariages du voyage de 1639, familles alliées et retour à Kuimba.
 - Nom/titre exact de l'assistant mukiongoudidi et date de la promotion ; distinction entre assistants, gardes et fonctions judiciaires.
-- Ma Ndialu, grande sœur divorcée confirmée par le Founder ; Mandangi, soldat cuisinier retrouvé dans les fiches. L’identification des deux autres parents mariés à Kuimba reste à raccorder.
+- Lufuandi, sœur de Mutinu déjà en base ; Mandangi, soldat cuisinier retrouvé dans les fiches. L’identification des deux autres parents mariés à Kuimba reste à raccorder.
 - Présence croisée dans Kongo Dibuidi et Mama I Mama : caractères, réalisations, vie publique et conjugale apparaissent dans les deux tomes, brièvement ou en profondeur selon le point de vue et l’enjeu.
 
 **Statut :** instructions Founder consignées sur GitHub main, sans revendication de modification MySQL, de scène intégrée, de déploiement ni de validation Quality.

@@ -6,7 +6,7 @@ Nom : **Ma Ntombo**. Identifiant existant : `ma-ntombo`. Pas de second personnag
 
 **C’est elle**, dans la parenté Sonekeno (`character_kinships_v2`, `certainty: certain`), la sœur de **Kinuani**. Même mère : **Ma Musakanda**. Même père : **Ta Mukuba**.
 
-Ce n’est **pas** Ma Lukula. Ce n’est **pas** Nianzi. Ce n’est **pas** Ma Ndialu (sœur aînée de Mutinu selon la dictée Founder du 5 novembre ; en parenté, Ma Ndialu est sœur de Kisita — contradiction à ne pas fusionner).
+Ce n’est **pas** Ma Lukula. Ce n’est **pas** Nianzi. Ce n’est **pas** Lufuandi (sœur de Mutinu). Ce n’est **pas** Ma Ndialu (sœur de Kisita).
 
 Née le **18/10/1622**. Ma Musakanda meurt le **29/10/1622**, onze jours après cet accouchement difficile. Cela recoupe la mort de la mère de Kinuani « onze jours après ». Kinuani est l’aîné (1620).
 

@@ -1,5 +1,16 @@
 # FICHE CANON — Kinuani
 
+## Corrections Founder 2026-11-11 — toponymes, titres, sœurs
+
+Les chutes des retrouvailles 1643–1644 s’appellent **Lufulankadi**, aux chutes de **Kimpanzu** (à côté). Les anciennes graphies Lufirakari / Lufilakari sont **supplantées**.
+
+Titres des parents de mapasa : **Mama Ngudi** ou **Ma Ngudi** (Mutinu) ; **Tata Ngudi** ou **Ta Ngudi** (Kinuani). Pas Mangudi ni Tatangudi en un mot.
+
+**Nianzi est vivante.** Celle qui meurt est **une autre protégée** de Kisita, non nommée.
+
+La sœur de Mutinu, déjà en base, est **Lufuandi** (`lufauandi`). L’ancienne graphie Lufauandi est **écartée**. Le slug reste `lufauandi`. **Ma Ndialu** n’est pas cette sœur : en parenté, Ma Ndialu est sœur de Kisita.
+
+
 Fiche **ordonnée**, pas un résumé. Le corpus déjà écrit est ici. Pas de second personnage. L’archive d’une séparation en 1640 est **supplantée**. Les conseils d’atelier sur copier 500 fusils ou les chevaux/tsé-tsé ne sont pas du Founder.
 
 ## Parenté — ne plus écrire « nom à retrouver »
@@ -50,7 +61,7 @@ Kinuani a intériorisé une organisation quotidienne stricte, héritée de Nzong
 
 ## Couple avec Mutinu
 
-Rencontre **Mpika / Mfuti, juin 1636** (lui 16 ans, elle 15, registre du 29 octobre). Mariage **août 1639**. Installation Kuimba **fin août ou début septembre 1639**. **Nkodia** naît en **1640**. Mapasa **Muanda et Mpasi** vers **août 1644**, titres Mama Ngudi / Tata Ngudi (graphies à confronter). **Lunungu** déjà inscrit.
+Rencontre **Mpika / Mfuti, juin 1636** (lui 16 ans, elle 15, registre du 29 octobre). Mariage **août 1639**. Installation Kuimba **fin août ou début septembre 1639**. **Nkodia** naît en **1640**. Mapasa **Muanda et Mpasi** vers **août 1644**, titres Mama / Ma Ngudi et Tata / Ta Ngudi. **Lunungu** déjà inscrit.
 
 Mutinu le **choisit**. Il la préférerait, tout en sachant que le mariage est une affaire d’État. Dans le clan Kuimba, tantes et familles ont grande autorité. Pendant les jeux, il se contient, l’appelle sa sœur, ne commet pas d’écart, ne formule pas encore de proposition. Il ne connaît pas assez Mama Tusikila pour lui demander de plaider. Nianzi lui est destinée au pays ; elle ne préoccupe pas fortement son esprit à Mfuti. Ne pas le qualifier automatiquement de faible : désaccord de valeurs avec Mutinu (« On ne me choisit pas. C’est moi qui choisis. »).
 
@@ -147,7 +158,7 @@ Adieu à Mutinu : quitte le groupe pendant une course, **25–30 km** pour la sa
 
 Certains hommes restent apprendre auprès de Mukueke. Rassemblement à Boko avant les grandes pluies. Il proscrit fornication et dépravation dans ses rangs.
 
-**Lufirakari** (aussi Lufilakari). Retrouvailles, un mois et demi à deux mois et demi (à arbitrer). Plantes pour Mutinu. Autre rive du **Nzadi a Kongo** : communautés Kuimba déjà là, traditionalistes, parfois prêts à la guerre. Accueil d’abord : « protecteur de Mbanza Kongo ». Puis confiance : insignes de Ne Mberi, Mawungu, Nzongo, kikongo littéraire. Bakongo Banseke / Nsaku. Il comprend mieux Nzongo. Mbongi, hospitalité, « Matondo ».
+**Lufulankadi** (chutes à Kimpanzu, à côté). Retrouvailles, un mois et demi à deux mois et demi. Plantes pour Mutinu. Autre rive du **Nzadi a Kongo** : communautés Kuimba déjà là, traditionalistes, parfois prêts à la guerre. Accueil d’abord : « protecteur de Mbanza Kongo ». Puis confiance : insignes de Ne Mberi, Mawungu, Nzongo, kikongo littéraire. Bakongo Banseke / Nsaku. Il comprend mieux Nzongo. Mbongi, hospitalité, « Matondo ».
 
 **Silu.** Affront devant Mutinu, tentative de coup. Kinuani esquive, clé au poignet puis aux doigts, interdit à ses hommes de corriger. « Mono i Wuango Kinuani kia Nzongo ». Quatre kilomètres. Mutinu supplie, marche devant, estime ensuite que Silu l’a cherché. Chanson des badauds : « Sakana na Mbuta Kinuani, nkuba nuini » — ne pas inventer d’autres paroles. Apaisement : « Mama Mutinu, mukento ame ». Elle pose la paume sur sa joue droite. Bikuta, selon Mutinu, aurait déjà envoyé Silu aux soignants ; Kinuani cherche une force proportionnelle. Annonce de grossesse des mapasa ce soir-là. Retour anticipé avant Ndolo.
 
@@ -167,4 +178,4 @@ Retour **de nuit**, foulées de Mukueke. **Mbanza Ndunga**, début mars 1644, ca
 
 ## Ce qui reste ouvert
 
-La sœur est **Ma Ntombo**, pas Ma Lukula. Reste ouvert : nom de la protégée décédée ; position de Nianzi ; graphies Lufirakari, Mukangu, mvoala, Mangudi ; âge exact du séjour vers 13 ans ; durée Lufirakari ; nom du couvent ; identité du notable Bamba. Ne pas antédater la chefferie à 1643.
+La sœur de Kinuani est **Ma Ntombo**. La sœur de Mutinu est **Lufuandi**. **Nianzi est vivante** ; celle qui meurt est une autre protégée, non nommée. Titres mapasa : Ma / Mama Ngudi, Ta / Tata Ngudi. Chutes : **Lufulankadi** à Kimpanzu. Reste ouvert : nom de la protégée décédée ; parcours ultérieur de Nianzi ; Mukangu, mvoala ; âge exact du séjour vers 13 ans ; nom du couvent ; identité du notable Bamba. Ne pas antédater la chefferie à 1643.

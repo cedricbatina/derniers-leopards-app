@@ -1,5 +1,16 @@
 # Kongo Dibuidi — Rectificatifs et compléments d'auteur
 
+## Corrections Founder 2026-11-11 — toponymes, titres, sœurs
+
+Les chutes des retrouvailles 1643–1644 s’appellent **Lufulankadi**, aux chutes de **Kimpanzu** (à côté). Les anciennes graphies Lufirakari / Lufilakari sont **supplantées**.
+
+Titres des parents de mapasa : **Mama Ngudi** ou **Ma Ngudi** (Mutinu) ; **Tata Ngudi** ou **Ta Ngudi** (Kinuani). Pas Mangudi ni Tatangudi en un mot.
+
+**Nianzi est vivante.** Celle qui meurt est **une autre protégée** de Kisita, non nommée.
+
+La sœur de Mutinu, déjà en base, est **Lufuandi** (`lufauandi`). L’ancienne graphie Lufauandi est **écartée**. Le slug reste `lufauandi`. **Ma Ndialu** n’est pas cette sœur : en parenté, Ma Ndialu est sœur de Kisita.
+
+
 **Correction 2026-11-11** : la sœur de Kinuani, encore « à retrouver » dans ce document du 11 octobre, est **Ma Ntombo** (`ma-ntombo`). Parenté Sonekeno, `sibling` / `certain`, même mère Ma Musakanda. **Ma Lukula** est la grand-mère maternelle (mère de Kisita et de Ma Musakanda), pas cette sœur.
 
 **Auteur / autorité** : Founder. **Consignation** : 11 octobre 2026. **Périmètre** : Les Derniers Léopards, tome I, et continuité des volumes suivants.
@@ -715,14 +726,14 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 
 ### Installation de la parenté de Mutinu et cuisine de la concession
 - Mutinu arrive à Kuimba avec **plusieurs membres de sa famille**, qui s'y établissent également ; **deux membres de cette parenté** se sont mariés avec des personnes de Kuimba. Identifier précisément les personnes et les unions dans les fiches avant de les nommer.
-- Sa **grande sœur divorcée**, cuisinière particulièrement talentueuse, participe fortement à la vie de la concession. Nom confirmé par le Founder : **Ma Ndialu**. Ne pas fusionner automatiquement avec un ancien nom de fiche. Kinuani apprécie beaucoup ses plats.
+- Sa **grande sœur divorcée**, cuisinière particulièrement talentueuse, participe fortement à la vie de la concession. Nom en base : **Lufuandi**. La dictée du 5 novembre disait Ma Ndialu : **erreur Founder, retirée le 11 novembre**. Ma Ndialu est sœur de Kisita. Kinuani apprécie beaucoup ses plats.
 - La sœur cuisine le plus souvent pour la concession ; Mutinu lui fait préparer les mets préférés de son **mbuala** et elles cuisinent parfois ensemble. Prévoir dans l'architecture une cuisine collective bien organisée, des réserves et les espaces de travail associés, sans inventer leur implantation définitive.
 - **Plus tard**, la sécurité alimentaire de Kinuani conduit à l'interdiction de manger hors des cuisines de confiance de Mutinu et de sa sœur. Lorsque Mutinu ne peut accompagner Kinuani, notamment dans la période de l'exil, elle mandate **un soldat cuisinier** pour lui. **Mandangi**, identifié dans les trois formats de `personnages_les_derniers_leopards_pour_insertion_db.txt` ; ne pas créer un second soldat cuisinier. Ne pas rétroprojeter cette restriction de sécurité sur les premiers jours du mariage.
 
 ### Points à raccorder sans invention
 - Chronologie exacte des autres mariages du voyage de 1639, familles alliées et retour à Kuimba.
 - Nom/titre exact de l'assistant mukiongoudidi et date de la promotion ; distinction entre assistants, gardes et fonctions judiciaires.
-- Ma Ndialu, grande sœur divorcée confirmée par le Founder ; Mandangi, soldat cuisinier retrouvé dans les fiches. L’identification des deux autres parents mariés à Kuimba reste à raccorder.
+- Lufuandi, sœur de Mutinu déjà en base ; Mandangi, soldat cuisinier retrouvé dans les fiches. L’identification des deux autres parents mariés à Kuimba reste à raccorder.
 - Présence croisée dans Kongo Dibuidi et Mama I Mama : caractères, réalisations, vie publique et conjugale apparaissent dans les deux tomes, brièvement ou en profondeur selon le point de vue et l’enjeu.
 
 **Statut :** instructions Founder consignées sur GitHub main, sans revendication de modification MySQL, de scène intégrée, de déploiement ni de validation Quality.
@@ -731,7 +742,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 ## Rectification Founder du 5 novembre 2026 — continuité de la concession et des missions
 
 - **Cuisine et sécurité :** la cuisine de Mutinu et de sa grande sœur est déjà le circuit de confiance. Après un empoisonnement de Kinuani au Mayombe par une jeune femme de son clan qui avoue, Mutinu renforce strictement la règle de ne pas manger ou boire ailleurs. En mission sans Mutinu, Mandangi, soldat cuisinier de confiance identifié dans `personnages_les_derniers_leopards_pour_insertion_db.txt`, prépare exclusivement ses repas et lui sert personnellement nourriture et boisson. L'épisode du Mayombe est ultérieur à l'installation de 1639.
-- **Parenté :** plusieurs proches de Mutinu s'établissent à Kuimba, dont deux mariés à des membres de Kuimba, mais ils ne résident pas tous dans la concession. Parmi eux, seule sa grande sœur divorcée, excellente cuisinière, y habite. Ma Ndialu, confirmée par le Founder ; ne pas fusionner automatiquement avec les anciens noms sans contrôler les identités.
+- **Parenté :** plusieurs proches de Mutinu s'établissent à Kuimba, dont deux mariés à des membres de Kuimba, mais ils ne résident pas tous dans la concession. Parmi eux, seule sa grande sœur divorcée, excellente cuisinière, y habite. Lufuandi, sœur de Mutinu ; Ma Ndialu n’est pas cette sœur.
 - **Chantier :** retrouver et conserver la scène déjà consignée où Ne Nzongo humilie un ouvrier de la concession au moyen d'une clé de doigt ; ne pas réinventer les circonstances.
 - **Premiers mois :** Mutinu tombe enceinte deux mois après l'installation à Kuimba ; Ne Nzongo s'en réjouit. Trois mois après le début de la grossesse, soit cinq mois après l’installation, Kinuani part en mission comme mukongudidi, avec notamment Kimbembe et Bikuta et des soldats répartis selon les nécessités logistiques. Cette mission dure environ deux mois et demi et reste distincte de la mission rapide de trois semaines à l’approche du terme en 1640.
 - **Nature des missions :** protection contre les razzias, libération de captifs, pacification de conflits, soutien aux représentants du Mani Kongo, justice et rétablissement de l'ordre. Certaines missions politiques commandées par des dignitaires visent aussi leurs adversaires considérés comme corrompus ou excessivement favorables aux puissances occidentales ; conserver cette ambiguïté narrative sans présumer la légitimité des accusations.
