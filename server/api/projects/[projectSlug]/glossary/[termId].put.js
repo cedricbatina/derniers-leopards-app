@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
   const termIdRaw = String(event.context.params.termId || '').trim()
   if (!projectSlug || !termIdRaw) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
 
-  const project = await getProjectByAccess(user, projectSlug)
+  const project = await getProjectByAccess(user, projectSlug, { write: true })
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const cols = await getTableColumns('glossary_terms')

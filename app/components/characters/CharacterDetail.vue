@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, watch } from 'vue'
+import { computed, ref, reactive, watch } from 'vue'
 import { useLocalePath, useRequestHeaders } from '#imports'
 import { isNarrativeAccessDenied } from '~/utils/narrativeAccess'
 
@@ -20,6 +20,7 @@ const { data, pending, refresh, error: loadError } = await useFetch(
   () => `${props.apiBase}/${props.characterSlug}`,
   { $fetch: apiFetch, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
+const canManage = computed(() => data.value?.can_manage !== false)
 
 watch(
   () => loadError.value,
@@ -77,7 +78,7 @@ async function save() {
         <Icon name="mdi:account" aria-hidden="true" />
         <span>Character: {{ data?.character?.name || '...' }}</span>
       </h1>
-      <button v-if="!editing" class="btn btn-ghost focus-ring" @click="editing = true">
+      <button v-if="canManage && !editing" class="btn btn-ghost focus-ring" @click="editing = true">
         <Icon name="mdi:pencil" aria-hidden="true" /> Edit
       </button>
     </div>

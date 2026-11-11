@@ -91,6 +91,7 @@ watchEffect(() => {
 })
 
 const isTrashed = computed(() => !!data.value?.scene?.deleted_at)
+const canManage = computed(() => data.value?.can_manage !== false)
 
 function chapterLabel(id, chapterNo, title, partNo) {
   const partPrefix = partNo ? `P${partNo} ` : ''
@@ -179,7 +180,7 @@ async function restoreScene() {
         <p class="text-sm text-muted">{{ sceneSlug }}</p>
       </div>
 
-      <div class="flex items-center gap-2">
+      <div v-if="canManage" class="flex items-center gap-2">
         <span v-if="isTrashed" class="badge">trashed</span>
 
         <button
@@ -301,7 +302,7 @@ async function restoreScene() {
           </div>
         </div>
 
-        <button class="btn btn-primary w-full focus-ring" :disabled="saving || isTrashed" @click="save">
+        <button v-if="canManage" class="btn btn-primary w-full focus-ring" :disabled="saving || isTrashed" @click="save">
           <Icon name="mdi:content-save" aria-hidden="true" />
           {{ saving ? 'Saving…' : 'Save' }}
         </button>

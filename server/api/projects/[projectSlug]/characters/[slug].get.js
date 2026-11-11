@@ -53,14 +53,17 @@ export default defineEventHandler(async (event) => {
     [character.id]
   )
 
-  return { 
-    project: { 
-      id: project.id, 
-      slug: project.slug, 
+  const canManage = canManageProject(project, user)
+  return {
+    project: {
+      id: project.id,
+      slug: project.slug,
       title: project.title,
-      owner_id: project.owner_id
-    }, 
+      owner_id: project.owner_id,
+      can_manage: canManage,
+    },
     character,
-    scenes
+    scenes,
+    can_manage: canManage,
   }
 })

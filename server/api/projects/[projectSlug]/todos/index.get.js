@@ -1,5 +1,6 @@
 // server/api/projects/[projectSlug]/todos/index.get.js
 import { dbQuery } from '~~/server/utils/db.js'
+import { getProjectForNarrativeApi } from '~~/server/utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -13,17 +14,10 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
   }
 
-  // Get project
-  const projectRows = await dbQuery(
-    'SELECT id, slug, title FROM projects WHERE owner_id = ? AND slug = ? AND deleted_at IS NULL LIMIT 1',
-    [userId, projectSlug]
-  )
-
-  if (!projectRows?.length) {
+  const project = await getProjectForNarrativeApi(user, projectSlug)
+  if (!project) {
     throw createError({ statusCode: 404, statusMessage: 'Project not found' })
   }
-
-  const project = projectRows[0]
 
   const { q, status, completed } = getQuery(event)
   const query = (q ? String(q).trim() : '') || null

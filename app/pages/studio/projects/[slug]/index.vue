@@ -21,6 +21,7 @@ const { data: booksData } = await useFetch(() => `/api/projects/${slug.value}/bo
 })
 
 const booksCount = computed(() => booksData.value?.books?.length || 0)
+const canManage = computed(() => data.value?.project?.can_manage !== false)
 
 const saving = ref(false)
 const deleting = ref(false)
@@ -87,9 +88,10 @@ async function removeProject () {
       <div>
         <h1 class="text-xl font-semibold">Project</h1>
         <p class="text-sm text-muted">Slug is immutable: <span class="font-mono">{{ slug }}</span></p>
+        <p v-if="!canManage" class="text-sm text-muted mt-1">Lecture seule : tu consultes cette saga, tu ne la modifies pas.</p>
       </div>
 
-      <div class="flex gap-2">
+      <div v-if="canManage" class="flex gap-2">
         <button class="btn btn-primary focus-ring" :disabled="saving || pending" @click="save">
           <Icon name="mdi:content-save-outline" aria-hidden="true" />
           Save

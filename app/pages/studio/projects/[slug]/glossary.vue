@@ -22,6 +22,8 @@ const { data, pending, refresh, error } = await useFetch(
   { $fetch: apiFetch, query: queryObj, credentials: 'include' }
 )
 
+const canManage = computed(() => data.value?.can_manage !== false)
+
 const form = reactive({
   term: '',
   slug: '',
@@ -146,12 +148,15 @@ async function deleteTerm(t) {
           <label class="text-xs text-muted">Search</label>
           <input v-model="q" class="input w-full" placeholder="term / slug / definition…" />
         </div>
-
         <div class="md:col-span-1">
           <label class="text-xs text-muted">Language</label>
           <input v-model="lang" class="input w-full" placeholder="fr / en / kg…" />
         </div>
+      </div>
+    </div>
 
+    <div v-if="canManage" class="card">
+      <div class="card-body grid gap-3 md:grid-cols-6">
         <div class="md:col-span-2">
           <label class="text-xs text-muted">Term</label>
           <input v-model="form.term" class="input w-full" placeholder="Ex: Mbanda" />
@@ -213,7 +218,7 @@ async function deleteTerm(t) {
             <div v-if="termDefinition(t)" class="text-sm text-muted mt-1">{{ termDefinition(t) }}</div>
             <div v-if="termUsage(t)" class="text-xs text-muted mt-1">{{ termUsage(t) }}</div>
           </div>
-          <div class="flex items-center gap-2">
+          <div v-if="canManage" class="flex items-center gap-2">
             <button class="btn btn-ghost focus-ring" @click="startEdit(t)">
               <Icon name="mdi:pencil-outline" aria-hidden="true" />
             </button>
@@ -225,7 +230,7 @@ async function deleteTerm(t) {
       </div>
     </div>
 
-    <div v-if="editingId" class="card bg-surface2">
+    <div v-if="canManage && editingId" class="card bg-surface2">
       <div class="card-body grid gap-3 md:grid-cols-6">
         <div class="md:col-span-2">
           <label class="text-xs text-muted">Term</label>

@@ -31,6 +31,7 @@ const { data, pending, refresh, error } = await useFetch(
   { $fetch: apiFetch, query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
+const canManage = computed(() => data.value?.can_manage !== false)
 const allCharacters = computed(() => data.value?.characters || [])
 const totalItems = computed(() => allCharacters.value.length)
 const totalPages = computed(() => Math.max(1, Math.ceil(totalItems.value / pageSize)))
@@ -133,7 +134,7 @@ function characterTo(c) {
               <span class="text-sm">{{ t('characters.showTrashed', 'Show trashed') }}</span>
             </label>
           </div>
-          <div class="flex items-end justify-end">
+          <div v-if="canManage" class="flex items-end justify-end">
             <button 
               class="btn btn-primary focus-ring gap-2" 
               @click="showCreateForm = !showCreateForm"
@@ -147,7 +148,7 @@ function characterTo(c) {
     </div>
 
     <!-- Create Form Card (collapsible) -->
-    <div v-if="showCreateForm" class="card border-2 border-primary">
+    <div v-if="canManage && showCreateForm" class="card border-2 border-primary">
       <div class="card-body">
         <h3 class="font-semibold mb-4">{{ t('characters.createNew', 'Create New Character') }}</h3>
         <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -205,7 +206,8 @@ function characterTo(c) {
       <div class="card-body text-center py-12">
         <Icon name="mdi:account-question" class="text-4xl text-muted mb-3" aria-hidden="true" />
         <p class="text-muted">{{ t('characters.noCharacters', 'No characters found') }}</p>
-        <button 
+        <button
+          v-if="canManage"
           class="btn btn-primary mt-4 focus-ring" 
           @click="showCreateForm = true"
         >
@@ -236,7 +238,7 @@ function characterTo(c) {
                   {{ t('common.trashed', 'Trashed') }}
                 </span>
                 <button
-                  v-if="!c.deleted_at"
+                  v-if="canManage && !c.deleted_at"
                   class="btn btn-ghost btn-sm focus-ring opacity-0 group-hover:opacity-100 transition-opacity"
                   @click.prevent.stop="softDelete(c)"
                   :title="t('common.delete', 'Delete')"
@@ -244,7 +246,7 @@ function characterTo(c) {
                   <Icon name="mdi:trash-can-outline" aria-hidden="true" />
                 </button>
                 <button
-                  v-else
+                  v-else-if="canManage"
                   class="btn btn-ghost btn-sm focus-ring"
                   @click.prevent.stop="restore(c)"
                   :title="t('common.restore', 'Restore')"

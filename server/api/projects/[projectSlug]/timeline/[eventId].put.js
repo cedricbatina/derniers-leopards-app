@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
   const eventIdRaw = String(event.context.params.eventId || '').trim()
   if (!projectSlug || !eventIdRaw) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
 
-  const project = await getProjectByAccess(user, projectSlug)
+  const project = await getProjectByAccess(user, projectSlug, { write: true })
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const cols = await getTableColumns('timeline_events')

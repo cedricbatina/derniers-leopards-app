@@ -328,6 +328,7 @@ watch([q, statusFilter, trashed], () => {
                 <div class="flex items-center gap-2 flex-wrap mb-3">
                   <span class="badge badge-primary">{{ p.type || 'Projet' }}</span>
                   <span :class="statusBadgeClass(p.status)">{{ statusLabel(p.status) }}</span>
+                  <span v-if="p.access_role === 'viewer'" class="badge">Partagé · lecture</span>
                   <span v-if="p.deleted_at" class="badge">Corbeille</span>
                 </div>
 

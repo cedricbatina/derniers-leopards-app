@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
   const projectSlug = String(event.context.params.projectSlug || '').trim()
   const sceneSlug = String(event.context.params.sceneSlug || '').trim()
   const characterSlug = String(event.context.params.characterSlug || '').trim()
-  const project = await getProjectForNarrativeApi(user, projectSlug)
+  const project = await getProjectForNarrativeApi(user, projectSlug, { write: true })
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const rows = await dbQuery(

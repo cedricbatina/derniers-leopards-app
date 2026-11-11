@@ -1,5 +1,5 @@
 import { dbQuery } from '~~/server/utils/db.js'
-import { getProjectByAccess } from '~~/server/utils/projects.js'
+import { canManageProject, getProjectByAccess } from '~~/server/utils/projects.js'
 import { getTableColumns } from '~~/server/utils/schema.js'
 
 function pickColumn(cols, candidates) {
@@ -68,5 +68,6 @@ export default defineEventHandler(async (event) => {
     params
   )
 
-  return { terms: rows }
+  const canManage = canManageProject(project, user)
+  return { terms: rows, can_manage: canManage }
 })

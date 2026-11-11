@@ -33,6 +33,8 @@ const { data, pending, refresh, error } = await useFetch(
   { $fetch: apiFetch, query: queryObj, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 
+const canManage = computed(() => data.value?.can_manage !== false)
+
 watch(
   () => error.value,
   async (err) => {
@@ -127,7 +129,7 @@ function chapterLabel(id, chapterNo, title, partNo) {
       </label>
     </div>
 
-    <div class="card">
+    <div v-if="canManage" class="card">
       <div class="card-body grid gap-3 md:grid-cols-6">
         <div class="md:col-span-2">
           <label class="text-xs text-muted">Search</label>
@@ -214,7 +216,7 @@ function chapterLabel(id, chapterNo, title, partNo) {
               <div v-if="s.summary" class="text-sm text-muted mt-1 line-clamp-2">{{ s.summary }}</div>
             </div>
 
-            <div class="flex items-center gap-2">
+            <div v-if="canManage" class="flex items-center gap-2">
               <span v-if="s.deleted_at" class="badge">trashed</span>
 
               <button

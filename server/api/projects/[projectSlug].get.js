@@ -1,5 +1,6 @@
 // server/api/projects/[slug].get.js
 import { dbQuery } from '~~/server/utils/db.js'
+import { canManageProject, getProjectForNarrativeApi } from '~~/server/utils/projects.js'
 
 export default defineEventHandler(async (event) => {
   const user = event.context.user
@@ -13,6 +14,9 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
   }
 
+  const access = await getProjectForNarrativeApi(user, projectSlug)
+  if (!access) throw createError({ statusCode: 404, statusMessage: 'Not found' })
+
   const rows = await dbQuery(
     `
     SELECT
@@ -25,12 +29,20 @@ export default defineEventHandler(async (event) => {
       created_at, updated_at, deleted_at,
       parent_id, type
     FROM projects
-    WHERE owner_id=? AND slug=? AND deleted_at IS NULL
+    WHERE id = ? AND deleted_at IS NULL
     LIMIT 1
     `,
-    [userId, projectSlug]
+    [access.id],
   )
 
   if (!rows?.length) throw createError({ statusCode: 404, statusMessage: 'Not found' })
-  return { project: rows[0] }
+  const project = rows[0]
+  const manage = canManageProject(project, user)
+  return {
+    project: {
+      ...project,
+      can_manage: manage,
+      access_role: manage ? 'owner' : 'viewer',
+    },
+  }
 })

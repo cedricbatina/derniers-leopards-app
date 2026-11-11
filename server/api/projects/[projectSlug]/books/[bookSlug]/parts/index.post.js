@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
   const bookSlug = String(event.context.params.bookSlug || '').trim()
   if (!projectSlug || !bookSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid params' })
 
-  const project = await getProjectByAccess(user, projectSlug)
+  const project = await getProjectByAccess(user, projectSlug, { write: true })
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const book = await getBookByProjectIdSlug(project.id, bookSlug)

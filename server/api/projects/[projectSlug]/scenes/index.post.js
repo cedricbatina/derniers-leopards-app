@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
   const projectSlug = String(event.context.params.projectSlug || '').trim()
   if (!projectSlug) throw createError({ statusCode: 400, statusMessage: 'Invalid projectSlug' })
 
-  const project = await getProjectForNarrativeApi(user, projectSlug)
+  const project = await getProjectForNarrativeApi(user, projectSlug, { write: true })
   if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 
   const body = await readBody(event)
