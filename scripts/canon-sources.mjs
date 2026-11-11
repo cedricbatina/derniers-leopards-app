@@ -257,7 +257,8 @@ export function loadAllCanonCharacters(textDir = process.env.SEED_TEXT_DIR || DE
   // pas un second personnage (ex. NKAKA NZONGO -> nzongo).
   const merged = new Map()
   const identity = new Map()
-  const aliases = { 'nkaka-nzongo': 'nzongo', 'maa-miakubuku': 'maa-miakubuku-mia-mualu', 'tusikila': 'ma-tusikila', 'mama-tusikila': 'ma-tusikila', 'mama-dobadola': 'maa-dobadola' }
+  const aliases = { 'nkaka-nzongo': 'nzongo', 'maa-miakubuku': 'maa-miakubuku-mia-mualu', 'tusikila': 'ma-tusikila', 'mama-tusikila': 'ma-tusikila', 'mama-dobadola': 'maa-dobadola', 'kimbembe-kia-toko': 'kimbembe', 'kimbembe-dia-toko': 'kimbembe', 'kiesa-kia-bikuta': 'bikuta' }
+  const fullNames = { kimbembe: 'Kimbembe kia Toko', bikuta: 'Kiesa kia Bikuta' }
   const identityKey = (name) => aliases[toSlug(name)] || toSlug(name)
   const importPath = join(textDir, 'personnages_les_derniers_leopards_pour_insertion_db.txt')
   if (existsSync(importPath)) {
@@ -271,11 +272,11 @@ export function loadAllCanonCharacters(textDir = process.env.SEED_TEXT_DIR || DE
     }
   }
   const add = (row) => {
-    const slug = identity.get(identityKey(row.name)) || row.slug
+    const slug = identity.get(identityKey(row.name)) || identityKey(row.name)
     const prev = merged.get(slug)
     const description = prev && !prev.description.includes(row.description)
       ? `${prev.description}\n\n${row.description}` : (prev?.description || row.description)
-    merged.set(slug, { ...row, slug, name: prev?.name || row.name, description: truncateDesc(description, row.source) })
+    merged.set(slug, { ...row, slug, name: fullNames[slug] || prev?.name || row.name, description: truncateDesc(description, row.source) })
     identity.set(identityKey(row.name), slug)
   }
   for (const row of fromResume.values()) add(row)
