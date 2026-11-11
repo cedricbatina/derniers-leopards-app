@@ -147,3 +147,14 @@ Kinuani propose à Mutinu d'accompagner la famille, les compagnons et la logisti
 ### Raccord canon — grossesse des mapasa et initiation de Mutinu
 
 **Raccord à l'existant, non nouvelle intrigue :** l'annonce de grossesse pendant la mission de fin 1643–début 1644 concerne **Muanda et Mpasi**. Le retour anticipé précède leur naissance difficile, placée en **1644** dans la chronologie principale actualisée. L'initiation de Mutinu commence à la fin de cette grossesse auprès des doyennes, puis se poursuit sur plusieurs années. Voir la chronologie principale et le plan des chapitres « Mapasa » / « Maa Ngudi » ; ne pas dupliquer leurs scènes. L'ancienne chronologie scénique portant une naissance en 1643 conserve aussi un mariage en 1641 et Nkodia en 1642, dates supplantées par les décisions Founder de 1639 et 1640. La datation 1644 est ici le raccord cohérent avec la mission de fin 1643 et la chronologie principale ; ne pas créer une nouvelle naissance ou une nouvelle initiation.
+
+
+### Retour de mission — Mbanza Ndunga, mars 1644
+
+**Rassemblement et transmission.** Les soldats doivent se retrouver à **Mbanza Ndunga**. Kinuani et Bikuta s'entretiennent avec eux, organisent les rencontres à venir, notamment autour des **mariages envisagés**, et renforcent les méthodes de communication propres à leur **maillage territorial**. Le camp est levé **début mars 1644**. Mutinu est alors **enceinte de trois à quatre mois** des jumeaux Muanda et Mpasi. Le voyage de retour dure **trois semaines** ; les grandes pluies de **Ndolo** commencent quelque temps après leur arrivée à Kuimba. Les époux et leurs compagnons sont heureux de rentrer.
+
+**Continuité de la concession.** Pendant l'absence de Kinuani, **Ma Ndialu** et des éléments de confiance ont poursuivi la gestion de sa concession. L'intérim a fonctionné. Kinuani revient avec de nouvelles idées **politiques et techniques** à appliquer à sa concession et avec un réseau croissant de partisans.
+
+**Neuf hommes en expiation.** Certains hommes originaires de **Mayama et du Mayombe**, condamnés pour des **fautes relativement mineures**, avaient été affectés au service de **Ne Nzongo** pour expier leurs fautes. Ils ont voyagé avec Kinuani. À leur arrivée, Nzongo les laisse aux soins de Kinuani. Ils sont **neuf au total**. Ne pas inventer leurs noms, les fautes exactes, la durée des peines ou leur statut ultérieur : le Founder poursuit la dictée.
+
+**Raccord chronologique** : début mars 1644 + trois semaines de voyage = arrivée vers la fin mars 1644 ; il s'agit d'un calcul de calendrier, non d'une date de jour fixée par l'auteur. Les trois à quatre mois de grossesse à ce moment situent la naissance des mapasa plus tard en 1644, sans fixer ici un jour ni un mois d'accouchement.
