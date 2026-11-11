@@ -142,3 +142,8 @@ Kinuani propose à Mutinu d'accompagner la famille, les compagnons et la logisti
 **Retour et compétences de Mukueke.** Les soldats voyagent **de nuit** pour mettre en pratique les compétences apprises auprès de **Mukueke**, sous le mandat de **Ta Mberi**. Ils couvrent de longues distances en courant, à foulées harmonisées, avec une cadence collective rythmée. Conserver le lien entre l'entraînement, le rassemblement et le retour, sans inventer la durée ni la route exacte.
 
 **Statut** : contribution canonique Founder intégrée au document GitHub existant ; aucune insertion de scène DB, aucun déploiement ni verdict Quality affirmés.
+
+
+### Rectificatif Founder — grossesse des jumeaux et initiation de Mutinu
+
+La grossesse annoncée par Mutinu à Kinuani pendant leur séjour, qui déclenche le projet de retour anticipé à Kuimba avant les grandes pluies de Ndolo, est **la grossesse de leurs jumeaux**. Il ne s'agit pas d'une grossesse indéterminée : cette identification est fixée par le Founder. **L'accouchement des jumeaux est difficile et aboutit à une autre initiation de Mutinu.** Ne pas inventer à ce stade les circonstances médicales, le déroulement ni le contenu de cette initiation. Réconcilier la chronologie des naissances et les scènes existantes avant toute insertion en base ; ne pas substituer une hypothèse à la décision du Founder.
