@@ -1,5 +1,7 @@
 # Kongo Dibuidi — Rectificatifs et compléments d'auteur
 
+**Correction 2026-11-11** : la sœur de Kinuani, encore « à retrouver » dans ce document du 11 octobre, est **Ma Ntombo** (`ma-ntombo`). Parenté Sonekeno, `sibling` / `certain`, même mère Ma Musakanda. **Ma Lukula** est la grand-mère maternelle (mère de Kisita et de Ma Musakanda), pas cette sœur.
+
 **Auteur / autorité** : Founder. **Consignation** : 11 octobre 2026. **Périmètre** : Les Derniers Léopards, tome I, et continuité des volumes suivants.
 **Nature** : décisions explicites de l'auteur, compléments narratifs, et questions expressément laissées ouvertes. Aucun import DB, aucune réécriture de chapitre, aucune migration d'identifiants par ce document.
 **Sources à rapprocher avant exécution** : `text-files/FICHE CANON — KINUANI (mulongoki d’.txt`, `text-files/FICHE CANON — KISITA.txt`, `text-files/fiches personnages resume.txt`, `text-files/personnages_les_derniers_leopards_pour_insertion_db.txt`, `text-files/scenes_les_derniers_leopards_pour_insertion_db.txt`, chronologies de `text-files/`, et `batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md`.
@@ -60,7 +62,7 @@
 - **Important pour la continuité** : distinguer cette **formation prénuptiale** exigée par Kisita des **initiations et apprentissages ultérieurs de Mutinu**, notamment ceux associés à la grossesse, aux jumeaux et au Mayombe, décrits dans d'anciennes chronologies. Vérifier leur articulation chronologique en DB au lieu de supprimer l'une des étapes.
 
 ### Points à retrouver / non arbitrés
-- Nom de la sœur de Kinuani à retrouver parmi les fiches, généalogies et tables `characters` / parenté de Sonekeno.
+- La sœur de Kinuani est **Ma Ntombo**. **Ma Lukula** est la grand-mère maternelle. Ne plus laisser cette ligne ouverte.
 - Position personnelle et destin de Nianzi à long terme, y compris si et quand elle se rapproche de Mutinu : **non décidés**.
 - Nom exact de l'institution et du cercle féminin, nature des engagements rituels et détails des épreuves : **à retrouver ou à définir par le Founder**.
 - Lieu, calendrier et suites des affrontements après le mariage : **à structurer à partir des scènes existantes**, non à inventer.

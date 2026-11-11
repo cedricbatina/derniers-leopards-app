@@ -2,6 +2,12 @@
 
 Fiche **ordonnée**, pas un résumé. Le corpus déjà écrit est ici. Pas de second personnage. L’archive d’une séparation en 1640 est **supplantée**. Les conseils d’atelier sur copier 500 fusils ou les chevaux/tsé-tsé ne sont pas du Founder.
 
+## Parenté — ne plus écrire « nom à retrouver »
+
+La sœur de Kinuani est **Ma Ntombo** (`ma-ntombo`). Parenté Sonekeno, `sibling` / `certain`, même mère **Ma Musakanda**, même père **Ta Mukuba**. Née le 18/10/1622. Épouse de Ta Vuidibio.
+
+**Ma Lukula** (`ma-lukula`) est autre : sœur de Ne Nzongo, mère de Kisita et de Ma Musakanda, donc **grand-mère maternelle** de Kinuani et de Ma Ntombo. Ce n’est pas la belle-sœur de Mutinu.
+
 ## Identité
 
 Nom : **Kinuani**. Identifiant : `kinuani`. Forme publique retenue dans une scène : **Wuango Kinuani kia Nzongo**, originaire de Kuimba, enfant musundi (N’sundi).
@@ -18,7 +24,7 @@ Projet personnel initial : devenir nzonzi, voyager, s’établir au bord du fleu
 
 ## Origines et formation
 
-Sa mère meurt onze jours après un accouchement difficile. Kinuani et sa sœur sont d’abord élevés par l’épouse de Ne Nzongo ; après le décès de celle-ci, la sœur est confiée à Mama Kisita (qu’elle tient pour grand-mère) et Kinuani part au couvent. Une ancienne mention de tante prochrétienne n’est pas établie : ne pas l’attribuer à Dobadola.
+Sa mère meurt onze jours après un accouchement difficile. Kinuani et **Ma Ntombo** sont d’abord élevés par l’épouse de Ne Nzongo ; après le décès de celle-ci, Ma Ntombo est confiée à Mama Kisita (qu’elle tient pour grand-mère) et Kinuani part au couvent. Une ancienne mention de tante prochrétienne n’est pas établie : ne pas l’attribuer à Dobadola.
 
 Envoyé au couvent vers **dix ans**, par tranches d’âge et disciplines : combat, astronomie, natikongo, cosmogonie, haute moralité. Il lui reste des années à finir quand la politique le rattrape : « pas fini », déjà aspiré.
 
@@ -75,7 +81,7 @@ Avec les Bakongo Banseke : variantes du kikongo, appréciation du kikongo litté
 - **Mutinu** : voir couple. Séjour Boko, missives, safous, Mukelo Mutinu, Silu, jumeaux.
 - **Mama Kisita** : impose l’année initiatique, cède sur Nianzi, soigne après le poignard, accouchement 1644.
 - **Nianzi** (Nyandi) : amie, prétendante, **vivante**. Autre protégée de Kisita **décédée**, nom à retrouver. Ne jamais tuer Nianzi par confusion.
-- **Sœur de Kinuani** : autre que Nianzi ; nom à retrouver. Opposition durable à Mutinu ; réconciliation **après** l’attentat, Mutinu « comme une lionne ». Position de Nianzi non fixée.
+- **Ma Ntombo** : sœur de Kinuani, autre que Nianzi. Opposition durable à Mutinu ; réconciliation **après** l’attentat, Mutinu « comme une lionne ». Position de Nianzi non fixée. **Ma Lukula** n’est pas cette sœur : c’est la grand-mère maternelle.
 - **Ne Nzongo** : aîné, discipline d’enfance jusqu’à sept ans. Attribue le terrain. Perroquet jaloux à l’épaule, environ trois singes, chats : sur **sa** fiche, pas des personnages. Kipoui, quatre porteurs. À l’aube, en attendant Kinuani : balayage, bâton, puis asperger d’eau les hommes encore endormis. Faveur envers les femmes liée à une conviction de réincarnation par la lignée maternelle (ADN mitochondrial comme image d’auteur, pas preuve). Présence de Kinuani **au moment précis** du balayage : non établie.
 - **Ne Mawungu** : maître. Funérailles : déjà enterré (trois jours), 45e jour = deuil de Mawungu, pas de Nzongo. Réévaluation sans conversion soudaine. Terme « mvoala » à vérifier.
 - **Kimbembe kia Toko** et **Kiesa kia Bikuta** : camarades, missions, oralité / binôme de combat. Retrouvailles 1643 : débats Bukongo, parfois latin et portugais. Invités du banquet de Tusikila : Bikuta, Kimbembe, mère et fiancée de Kimbembe, une autre mère à identifier. Unique banquet : **fin** des compétitions, pas le premier jour.
@@ -161,4 +167,4 @@ Retour **de nuit**, foulées de Mukueke. **Mbanza Ndunga**, début mars 1644, ca
 
 ## Ce qui reste ouvert
 
-Nom de la sœur. Nom de la protégée décédée. Position de Nianzi. Graphies Lufirakari, Mukangu, mvoala, Mangudi. Âge exact du séjour vers 13 ans. Durée Lufirakari. Nom du couvent. Identité du notable Bamba. Ne pas antédater la chefferie à 1643.
+La sœur est **Ma Ntombo**, pas Ma Lukula. Reste ouvert : nom de la protégée décédée ; position de Nianzi ; graphies Lufirakari, Mukangu, mvoala, Mangudi ; âge exact du séjour vers 13 ans ; durée Lufirakari ; nom du couvent ; identité du notable Bamba. Ne pas antédater la chefferie à 1643.

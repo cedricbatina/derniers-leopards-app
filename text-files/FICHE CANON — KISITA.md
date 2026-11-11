@@ -1,4 +1,9 @@
 FICHE CANON — KISITA
+
+## Parenté — ne plus écrire « nom à retrouver »
+
+La sœur de Kinuani est **Ma Ntombo** (`ma-ntombo`). **Ma Lukula** est la mère de Kisita, donc grand-mère de Kinuani et de Ma Ntombo. Ce n’est pas la belle-sœur de Mutinu.
+
 1) Identité
 
 Nom : Kisita
@@ -85,7 +90,7 @@ Elle guérit, donc elle menace les menteurs.
 
 **Faute et culpabilité anciennes** : la mère de Kinuani meurt onze jours après un accouchement difficile. Kisita n'a pas porté secours à temps et a refusé aux soignants l'accès à son savoir de pharmacopée. Mama Tusikila connaît la faute ; Kinuani et sa sœur l'ignorent initialement. Kisita change avec les années et ressent une vraie culpabilité, sans que la faute soit effacée.
 
-**Transmission familiale** : Kinuani et sa sœur avaient été élevés par l'épouse de Ne Nzongo avant son décès. Kisita élève ensuite **la sœur de Kinuani**, qui la tient pour une **grand-mère**, et non une descendante de cette sœur. Lors des négociations matrimoniales, Tusikila menace de révéler le secret ; la sœur enquête, rompt affectivement avec Kisita, puis une réconciliation se construit autour du mariage de Kinuani.
+**Transmission familiale** : Kinuani et **Ma Ntombo** avaient été élevés par l'épouse de Ne Nzongo avant son décès. Kisita élève ensuite **Ma Ntombo**, qui la tient pour une **grand-mère**, et non une descendante de cette sœur. Lors des négociations matrimoniales, Tusikila menace de révéler le secret ; Ma Ntombo enquête, rompt affectivement avec Kisita, puis une réconciliation se construit autour du mariage de Kinuani. **Ma Lukula** est la mère de Kisita, pas la sœur de Kinuani.
 
 **Deux prétendantes distinctes** :
 - **Nianzi : vivante, décision explicite Founder du 11 octobre 2026**. Amie de Kinuani dans leur enfance, formée dans un couvent féminin, elle se croyait destinée à l'épouser. Le refus du mariage entraîne une forte déception et une tension envers sa famille. Son avenir littéraire reste ouvert.
@@ -93,14 +98,14 @@ Elle guérit, donc elle menace les menteurs.
 
 **Double déception de Kisita** : son alliance espérée avec Nianzi n'aboutit pas, et une autre protégée est morte. Kisita finit par accepter Mutinu, tout en lui imposant au moins **un an de formation initiatique féminine** avant le mariage. La peur des manœuvres de Dobadola participe à son projet de protéger Kinuani et de peser sur son accession à de hautes responsabilités.
 
-**Attention aux deux réconciliations** : Kisita ↔ sœur de Kinuani autour du mariage ; Mutinu ↔ sœur de Kinuani seulement bien plus tard, après l'attentat contre Kinuani survenant après la mort de Nzongo.
+**Attention aux deux réconciliations** : Kisita ↔ **Ma Ntombo** autour du mariage ; Mutinu ↔ Ma Ntombo seulement bien plus tard, après l'attentat contre Kinuani survenant après la mort de Nzongo.
 
 **Référence** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md`. Ces ajouts n'attestent pas une migration de la DB.
 
 
 ## Complément Founder — rivalités après le mariage et initiation de Mutinu
 
-Après que le mariage Nianzi–Kinuani ne s'est pas réalisé, **Nianzi et la sœur de Kinuani (nom à retrouver)** restent **deux femmes distinctes** qui, pendant une période durable de la vie conjugale de Kinuani et Mutinu, contestent Mutinu et lui rendent la vie difficile. Leur hostilité ne prouve ni la mort de Nianzi ni un affrontement armé.
+Après que le mariage Nianzi–Kinuani ne s'est pas réalisé, **Nianzi et Ma Ntombo** restent **deux femmes distinctes** qui, pendant une période durable de la vie conjugale de Kinuani et Mutinu, contestent Mutinu et lui rendent la vie difficile. Leur hostilité ne prouve ni la mort de Nianzi ni un affrontement armé.
 
 **Condition imposée par Mama Kisita avant le mariage** : Mutinu doit accomplir au moins un an d'enseignement dans un cercle initiatique féminin d'élite. Kisita veut éprouver la conduite et la solidité morale de la future épouse et ménager un **dédommagement symbolique** aux années de préparation et aux sacrifices de Nianzi, son ancienne protégée et candidate au mariage.
 

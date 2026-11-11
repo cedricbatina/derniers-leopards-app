@@ -1,5 +1,9 @@
 # FICHE CANON — Nianzi
 
+## Parenté — ne plus écrire « nom à retrouver »
+
+La sœur de Kinuani est **Ma Ntombo** (`ma-ntombo`). Nianzi n’est pas cette sœur. **Ma Lukula** est la grand-mère maternelle de Kinuani, pas la sœur.
+
 ## Identité — vivante
 
 Nom : **Nianzi** (dictée Founder aussi « Nyandi »). Identifiant existant : `nianzi`. Pas de second personnage.
@@ -12,7 +16,7 @@ Amie d’enfance de Kinuani. Formée dans un couvent féminin. Protégée de **M
 
 Elle se croyait destinée à épouser Kinuani. Deux ou trois jours après le rappel de celui-ci à Kuimba, la rumeur d’une union presque conclue circule par les mabembe jusqu’à Mfuti. **Le mariage n’aboutit pas.** Déception forte, tension envers sa famille. Avenir littéraire **ouvert**.
 
-Après le longo Kinuani–Mutinu, Nianzi et **la sœur de Kinuani** (nom encore à retrouver ; ne pas inventer) contestent Mutinu pendant des années. Hostilité durable, **pas** un affrontement armé, **pas** une preuve de mort.
+Après le longo Kinuani–Mutinu, Nianzi et **Ma Ntombo**, sœur de Kinuani, contestent Mutinu pendant des années. Hostilité durable, **pas** un affrontement armé, **pas** une preuve de mort.
 
 Même Nianzi reconnaît la sollicitude réelle du couple. **Ne pas déduire** une réconciliation après l’attentat : celle qui commence alors est **sœur ↔ Mutinu**. Nianzi n’est pas automatiquement dans le même geste.
 
@@ -23,7 +27,7 @@ Kisita impose à Mutinu au moins un an d’initiation, aussi comme **compensatio
 - **Kinuani** : ami d’enfance, projet d’union familial, puis autre mariage. À Mfuti, il sait qu’elle l’attend à Kuimba, sans y penser beaucoup sur le moment.
 - **Mama Kisita** : initiatrice et alliée matrimoniale déçue.
 - **Mutinu** : rivale après 1639 ; reconnaissance partielle du couple, sans paix canonique.
-- **Sœur de Kinuani** : alliée dans l’opposition à Mutinu ; personne distincte.
+- **Ma Ntombo** : sœur de Kinuani, alliée dans l’opposition à Mutinu ; personne distincte. Pas Ma Lukula.
 - **L’autre protégée décédée** : autre femme. Ne pas coller ce deuil sur Nianzi.
 
 ## Ce qui reste ouvert
@@ -33,7 +37,7 @@ Graphie Nyandi / Nianzi. Parcours après les années Kuimba. Réconciliation év
 ## D. Complément Founder — vie conjugale de Kinuani et Mutinu (11 octobre 2026)
 
 ### Personnes et alliances
-- **Nianzi** et **la sœur de Kinuani (nom ancien à retrouver dans la DB)** sont **deux personnes distinctes**, initialement unies dans leur hostilité envers **Mutinu**. L'expression orale « Nianzi et la sœur » ne doit pas être transformée en lien de parenté entre Nianzi et Kinuani.
+- **Nianzi** et **Ma Ntombo** (sœur de Kinuani, identifiant `ma-ntombo`) sont **deux personnes distinctes**, initialement unies dans leur hostilité envers **Mutinu**. L'expression orale « Nianzi et la sœur » ne doit pas être transformée en lien de parenté entre Nianzi et Kinuani. **Ma Lukula** n’est pas cette sœur.
 - **Nianzi reste vivante**. Amie de Kinuani avant le couvent et longtemps promise à lui, elle avait consacré sa préparation initiatique au mariage espéré. Son ressentiment envers Mutinu ne signifie pas qu'elle ignore la qualité du couple : elle sait que Kinuani respecte son épouse, la fait rire, l'entraîne dans ses récits de voyage et la fait parfois voyager avec lui.
 - Après le **mariage**, lorsque Mutinu et Kinuani s'installent pour vivre ensemble, Nianzi et la sœur de Kinuani mènent contre Mutinu une opposition tenace (« la guerre » dans les termes de l'auteur). Les modalités concrètes des affrontements domestiques/sociaux et leur intensité restent à écrire ; **ne pas inventer de violences physiques**.
 
@@ -48,7 +52,7 @@ Graphie Nyandi / Nianzi. Parcours après les années Kuimba. Réconciliation év
 - **Important pour la continuité** : distinguer cette **formation prénuptiale** exigée par Kisita des **initiations et apprentissages ultérieurs de Mutinu**, notamment ceux associés à la grossesse, aux jumeaux et au Mayombe, décrits dans d'anciennes chronologies. Vérifier leur articulation chronologique en DB au lieu de supprimer l'une des étapes.
 
 ### Points à retrouver / non arbitrés
-- Nom de la sœur de Kinuani à retrouver parmi les fiches, généalogies et tables `characters` / parenté de Sonekeno.
+- La sœur de Kinuani est **Ma Ntombo**. **Ma Lukula** est la grand-mère maternelle. Ne plus laisser cette ligne ouverte.
 - Position personnelle et destin de Nianzi à long terme, y compris si et quand elle se rapproche de Mutinu : **non décidés**.
 - Nom exact de l'institution et du cercle féminin, nature des engagements rituels et détails des épreuves : **à retrouver ou à définir par le Founder**.
 - Lieu, calendrier et suites des affrontements après le mariage : **à structurer à partir des scènes existantes**, non à inventer.
