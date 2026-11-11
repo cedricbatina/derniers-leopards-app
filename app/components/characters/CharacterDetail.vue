@@ -11,6 +11,7 @@ const props = defineProps({
 })
 
 const localePath = useLocalePath()
+const { t } = useI18n()
 const editing = ref(false)
 const saving = ref(false)
 const saveError = ref(null)
@@ -21,6 +22,25 @@ const { data, pending, refresh, error: loadError } = await useFetch(
   { $fetch: apiFetch, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 const canManage = computed(() => data.value?.can_manage !== false)
+const profileFields = computed(() => [
+  [t('characters.detail.roleInStory'), data.value?.canon?.profile?.role_in_story],
+  [t('characters.detail.oneLiner'), data.value?.canon?.profile?.one_liner],
+  [t('characters.detail.occupation'), data.value?.canon?.profile?.occupation],
+  [t('characters.detail.personality'), data.value?.canon?.profile?.personality],
+  [t('characters.detail.strengths'), data.value?.canon?.profile?.strengths],
+  [t('characters.detail.flaws'), data.value?.canon?.profile?.flaws],
+  [t('characters.detail.externalGoal'), data.value?.canon?.profile?.goals_external],
+  [t('characters.detail.internalGoal'), data.value?.canon?.profile?.goals_internal],
+  [t('characters.detail.fears'), data.value?.canon?.profile?.fears],
+].filter(([, value]) => value))
+const dossierFields = computed(() => [
+  [t('characters.detail.desire'), data.value?.canon?.dossier?.desire],
+  [t('characters.detail.fear'), data.value?.canon?.dossier?.fear],
+  [t('characters.detail.mask'), data.value?.canon?.dossier?.mask],
+  [t('characters.detail.weapon'), data.value?.canon?.dossier?.weapon],
+  [t('characters.detail.rupture'), data.value?.canon?.dossier?.rupture],
+  [t('characters.detail.contradiction'), data.value?.canon?.dossier?.contradiction],
+].filter(([, value]) => value))
 
 watch(
   () => loadError.value,
@@ -130,5 +150,45 @@ async function save() {
         </div>
       </div>
     </div>
+    <section v-if="profileFields.length || dossierFields.length || data?.canon?.aliases?.length || data?.canon?.kinships?.length" class="grid gap-4 lg:grid-cols-2">
+      <article v-if="profileFields.length" class="card">
+        <div class="card-body space-y-3">
+          <h2 class="font-semibold">{{ t('characters.detail.canonProfile') }}</h2>
+          <dl class="space-y-2 text-sm">
+            <template v-for="([label, value]) in profileFields" :key="label">
+              <dt class="font-medium">{{ label }}</dt>
+              <dd class="whitespace-pre-wrap text-muted">{{ value }}</dd>
+            </template>
+          </dl>
+        </div>
+      </article>
+      <article v-if="dossierFields.length" class="card">
+        <div class="card-body space-y-3">
+          <h2 class="font-semibold">{{ t('characters.detail.dramaticMarkers') }}</h2>
+          <dl class="space-y-2 text-sm">
+            <template v-for="([label, value]) in dossierFields" :key="label">
+              <dt class="font-medium">{{ label }}</dt>
+              <dd class="whitespace-pre-wrap text-muted">{{ value }}</dd>
+            </template>
+          </dl>
+        </div>
+      </article>
+      <article v-if="data?.canon?.aliases?.length" class="card">
+        <div class="card-body space-y-2">
+          <h2 class="font-semibold">{{ t('characters.detail.aliases') }}</h2>
+          <ul class="text-sm text-muted space-y-1">
+            <li v-for="alias in data.canon.aliases" :key="`${alias.alias}-${alias.alias_type}`">{{ alias.alias }} <span class="text-xs">({{ alias.alias_type }})</span></li>
+          </ul>
+        </div>
+      </article>
+      <article v-if="data?.canon?.kinships?.length" class="card">
+        <div class="card-body space-y-2">
+          <h2 class="font-semibold">{{ t('characters.detail.kinships') }}</h2>
+          <ul class="text-sm text-muted space-y-1">
+            <li v-for="link in data.canon.kinships" :key="`${link.slug}-${link.relation}-${link.line}`">{{ link.name }} — {{ link.relation }}</li>
+          </ul>
+        </div>
+      </article>
+    </section>
   </div>
 </template>

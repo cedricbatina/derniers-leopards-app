@@ -5,6 +5,7 @@ import { computed, reactive, ref, watchEffect } from 'vue'
 import { useLocalePath, useRequestHeaders } from '#imports'
 
 const localePath = useLocalePath()
+const { t } = useI18n()
 const route = useRoute()
 const slug = computed(() => String(route.params.slug || ''))
 
@@ -67,7 +68,7 @@ async function save () {
 }
 
 async function removeProject () {
-  if (!confirm('Delete this project?')) return
+  if (!confirm(t('studio.project.deleteConfirm'))) return
   deleting.value = true
   try {
     await apiFetch(`/api/projects/${slug.value}`, { method: 'DELETE' })
@@ -81,44 +82,44 @@ async function removeProject () {
 <template>
   <div class="page space-y-4">
     <NuxtLink class="text-sm text-muted hover:opacity-100" :to="localePath('/studio/projects')">
-      ← Back to projects
+      ← {{ t('studio.project.backToProjects') }}
     </NuxtLink>
 
     <div class="flex items-start justify-between gap-3">
       <div>
-        <h1 class="text-xl font-semibold">Project</h1>
-        <p class="text-sm text-muted">Slug is immutable: <span class="font-mono">{{ slug }}</span></p>
-        <p v-if="!canManage" class="text-sm text-muted mt-1">Lecture seule : tu consultes cette saga, tu ne la modifies pas.</p>
+        <h1 class="text-xl font-semibold">{{ t('studio.project.title') }}</h1>
+        <p class="text-sm text-muted">{{ t('studio.project.slugImmutable') }} <span class="font-mono">{{ slug }}</span></p>
+        <p v-if="!canManage" class="text-sm text-muted mt-1">{{ t('studio.project.readOnly') }}</p>
       </div>
 
       <div v-if="canManage" class="flex gap-2">
         <button class="btn btn-primary focus-ring" :disabled="saving || pending" @click="save">
           <Icon name="mdi:content-save-outline" aria-hidden="true" />
-          Save
+          {{ t('common.save') }}
         </button>
 
         <button class="btn btn-ghost focus-ring" :disabled="deleting" @click="removeProject">
           <Icon name="mdi:trash-can-outline" aria-hidden="true" />
-          Delete
+          {{ t('common.delete') }}
         </button>
       </div>
     </div>
 
     <div v-if="error" class="card">
       <div class="card-body text-sm">
-        Error: {{ error?.statusMessage || error }}
+        {{ t('common.error') }}: {{ error?.statusMessage || error }}
       </div>
     </div>
 
     <div v-else class="card">
       <div class="card-body grid gap-3 md:grid-cols-2">
         <div>
-          <label class="text-xs text-muted">Title (default)</label>
+          <label class="text-xs text-muted">{{ t('studio.project.defaultTitle') }}</label>
           <input v-model="form.title" class="input w-full" />
         </div>
 
         <div>
-          <label class="text-xs text-muted">Status</label>
+          <label class="text-xs text-muted">{{ t('studio.project.status') }}</label>
           <select v-model="form.status" class="input w-full">
             <option value="draft">draft</option>
             <option value="active">active</option>
@@ -127,22 +128,22 @@ async function removeProject () {
         </div>
 
         <div>
-          <label class="text-xs text-muted">Title EN</label>
+          <label class="text-xs text-muted">{{ t('studio.project.englishTitle') }}</label>
           <input v-model="form.title_en" class="input w-full" />
         </div>
 
         <div>
-          <label class="text-xs text-muted">Title PT</label>
+          <label class="text-xs text-muted">{{ t('studio.project.portugueseTitle') }}</label>
           <input v-model="form.title_pt" class="input w-full" />
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Logline</label>
+          <label class="text-xs text-muted">{{ t('studio.project.logline') }}</label>
           <input v-model="form.logline" class="input w-full" />
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">Pitch</label>
+          <label class="text-xs text-muted">{{ t('studio.project.pitch') }}</label>
           <textarea v-model="form.pitch" class="input w-full min-h-28" />
         </div>
       </div>
@@ -153,37 +154,37 @@ async function removeProject () {
       <template v-if="booksCount > 0">
         <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/books`)">
           <div class="card-body">
-            <div class="font-extrabold">Books</div>
-            <div class="text-xs text-muted mt-1">Parts & chapters.</div>
+            <div class="font-extrabold">{{ t('studio.project.books') }}</div>
+            <div class="text-xs text-muted mt-1">{{ t('studio.project.booksHint') }}</div>
           </div>
         </NuxtLink>
       </template>
 
       <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/characters`)">
         <div class="card-body">
-          <div class="font-extrabold">Characters</div>
-          <div class="text-xs text-muted mt-1">Arcs & relations.</div>
+          <div class="font-extrabold">{{ t('domain.character.plural') }}</div>
+          <div class="text-xs text-muted mt-1">{{ t('studio.project.charactersHint') }}</div>
         </div>
       </NuxtLink>
 
       <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/scenes`)">
         <div class="card-body">
-          <div class="font-extrabold">Scenes</div>
-          <div class="text-xs text-muted mt-1">Write & structure.</div>
+          <div class="font-extrabold">{{ t('domain.scene.plural') }}</div>
+          <div class="text-xs text-muted mt-1">{{ t('studio.project.scenesHint') }}</div>
         </div>
       </NuxtLink>
 
       <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/timeline`)">
         <div class="card-body">
-          <div class="font-extrabold">Timeline</div>
-          <div class="text-xs text-muted mt-1">Chronology.</div>
+          <div class="font-extrabold">{{ t('domain.timeline.plural') }}</div>
+          <div class="text-xs text-muted mt-1">{{ t('studio.project.timelineHint') }}</div>
         </div>
       </NuxtLink>
 
       <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/glossary`)">
         <div class="card-body">
-          <div class="font-extrabold">Glossary</div>
-          <div class="text-xs text-muted mt-1">Terms & vocabulary.</div>
+          <div class="font-extrabold">{{ t('studio.project.glossary') }}</div>
+          <div class="text-xs text-muted mt-1">{{ t('studio.project.glossaryHint') }}</div>
         </div>
       </NuxtLink>
 
