@@ -1,35 +1,27 @@
-# FICHE CANON — Mukueke
+FICHE CANON — MUKUEKE
 
-## Identité et place dans la saga
 
-Nom : **Mukueke**. Identifiant existant : `mukueke`. Pas de second personnage.
+Source : rappels et développements du Founder, à articuler avec les fiches et scènes existantes ; la date de consignation ne date pas la création du personnage. **Personnage distinct des justiciers combattants.**
 
-Environ **30 ans** en 1643–1644. Fidèle de **Ne Mberi** (slug `ta-mberi`). Pisteur, enquêteur, observateur, renseignement local. **Pas soldat**, pas ancien combattant de la bande de Kinuani, pas le binôme de combat (celui-ci reste Kinuani–Bikuta).
+## Identité et statut
+Mukueke, environ 30 ans en 1643–1644, fidèle de **Ne Mberi**, autorité du Mayombe. Pisteur, enquêteur, observateur et spécialiste du renseignement local. **Il n'est pas soldat, ni un ancien combattant de la bande de Kinuani.** Origines familiales : milieu maternel de chasseurs ; compétences développées par l'expérience et sa passion.
 
-Milieu maternel de chasseurs. Compétences d’expérience et de passion, pas d’un grade militaire.
-
-## Compétences
-
-« Relieur mental » : détails, indices, psychologie, comportements. Cris d’oiseaux de danger, traces, campements dissimulés, menaces de toutes directions. Itinéraires, hamacs en hauteur, feu, pièges, filets. Les justiciers mandatés portent la contrainte ; lui localise et relie.
-
-Sans lui, l’équipe estime **huit mois** de forêt pour un mandat de **quatre**. Les principales difficultés : **un mois** (« mu ngonda mosi ») ; l’ensemble : environ **un mois et demi**, janvier–février 1644.
-
-Retour de mission : les soldats voyagent **de nuit** pour pratiquer ce qu’il a transmis : foulées harmonisées, cadence collective.
+## Compétences et tempérament
+« Relieur mental » : observe les détails, relie les indices, analyse la psychologie humaine et les comportements. Lit les traces et les signaux de la forêt, notamment certains cris d'oiseaux annonçant un danger, sait détecter des campements dissimulés et anticiper des menaces venant de toutes directions. Connaît les itinéraires, la sécurité des campements, les hamacs en hauteur, la gestion du feu, le pistage, les pièges et filets de capture. Ses savoirs ne font pas de lui un soldat ; les opérations de contrainte relèvent des justiciers mandatés.
 
 ## Relations
-
-- **Ne Mberi / Ta Mberi** : autorité, protecteur.
-- **Kinuani** (environ 23 ans alors) : impressionné ; relation future à développer sans l’inventer.
-- **Kimbembe** et **Bikuta** : reconnaissent sa valeur.
-- **Nzungani** (environ 15 ans) : disciple ; plus tard renseignement de Kinuani. Chaîne « du plus petit au plus grand et du plus grand au plus petit ». Nzungani voit Kinuani aux honneurs ; Kinuani ne le remarque pas. Plus tard, Nzungani le confie à Mutinu pour la sécurité de Kinuani.
-- Autres élèves : parcours ouverts.
+- **Ne Mberi** : autorité et protecteur ; Mukueke lui est fidèle.
+- **Kinuani**, environ 23 ans à cette époque : justicier impressionné par ses compétences forestières ; future relation à développer sans inventer ses modalités.
+- **Kimbembe et Bikuta** : compagnons de l'expédition, reconnaissent sa valeur ; Kinuani et Bikuta forment le binôme de combat, **pas Mukueke**.
+- **Nzungani**, environ 15 ans : disciple de Mukueke ; futur responsable des renseignements de Kinuani. Transmission selon la chaîne « du plus petit au plus grand et du plus grand au plus petit ».
+- **Autres disciples** : Mukueke forme plusieurs élèves, dont les parcours restent ouverts.
 
 ## Arc Mayombe 1643–1644
+Mis à disposition avec d'autres pisteurs par Ne Mberi après présentation des mandats. Contribue à localiser des suspects et campements dans un environnement dangereux, que Kinuani maîtrise mal. L'équipe estime qu'elle aurait pu passer huit mois dans le Mayombe sans son expertise, contre un mandat envisagé de quatre mois. Principales difficultés réglées en un mois (« mu ngonda mosi »), ensemble de l'opération en environ un mois et demi, vers janvier–février 1644 : certaines personnes jugées localement, d'autres conduites devant Ne Mberi. Retour honoré et béni. Devant leurs disciples, Mukueke reçoit aussi les honneurs ; Nzungani voit Kinuani sans que celui-ci le remarque. Plus tard, il le confie à Mutinu, avec laquelle il coopérera pour la sécurité de Kinuani. Ne Mberi interdit les effusions de sang : préserver le sang ancestral, éviter la mort et les blessures graves. Les justiciers peuvent user de coups et de neutralisations non létales selon leur mandat, sans torture ; des blessures mineures accidentelles peuvent survenir. L'ordre n'exige pas une absence absolue de toute égratignure.
 
-Mis à disposition après les mandats. Localise suspects et campements. Certains jugés sur place, d’autres devant Ne Mberi. Honneurs et bénédiction. Mukueke honoré devant ses disciples. Il n’exerce pas personnellement la violence des justiciers.
+## Réutilisation narrative
+Fiche individuelle destinée à la continuité de *Kongo Dibuidi* et *Mama I Mama*, ainsi qu'à d'éventuelles adaptations en série, BD ou animation. Préserver les compétences, relations, scènes d'apparition et évolution indépendamment de Kinuani.
 
-Certains compagnons restent apprendre pistage ou apiculture auprès de maîtres locaux, **sous son mandat** et celui de Mberi. Ne pas lui attribuer chaque recrue.
+**Statut :** fiche canonique GitHub ; pas insertion DB ni validation Quality.
 
-## Ce qui reste ouvert
-
-Modalités exactes de sa relation ultérieure avec Kinuani. Noms des autres disciples. Ne pas le promouvoir soldat.
+**Mukueke :** fidèle de Ne Mberi, pisteur et « relieur mental », environ 30 ans en 1643–1644 ; connaît la forêt et la psychologie humaine, relie les indices et permet l'aboutissement de la traque en environ un mois et demi ; enseigne à des disciples dont Nzungani. Pisteur et enquêteur, il n’est ni soldat ni ancien combattant de la bande. Il connaît les cris d’oiseaux, les dangers de la forêt, les campements, hamacs, feux, traces, pièges et filets de capture. Issu d’un milieu maternel de chasseurs, il relie indices et psychologie humaine. Sans lui, les compagnons estiment qu’ils auraient pu passer huit mois sur place pour un mandat de quatre mois. Voir sa fiche individuelle.
