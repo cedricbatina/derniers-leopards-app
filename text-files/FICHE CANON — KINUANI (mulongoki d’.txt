@@ -317,7 +317,7 @@ et la tristesse donne le droit au silence (donc on peut parler sans parler).
 
 “On se voit vraiment quand un mort ouvre la route.”
 
-ARC ÉMOTIONNEL — 1640 : la blessure Mutinu
+ARC ÉMOTIONNEL — ARCHIVE ANTÉRIEURE (CHRONOLOGIE SUPPLANTÉE)
 
 Très fort, et très vrai.
 
@@ -459,3 +459,12 @@ Source : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` §M.
 ## Complément canon Founder — 9 novembre 2026 : 1643–1644 et transmission
 Kinuani, environ 23 ans à la fin de 1643, propose à Mutinu de l'accompagner avec leur famille et la logistique jusqu'au pays Boko, terre de sa grand-mère où se déroula la seconde partie de son longo. Elle demeure à Boko, reliée à lui par les messagers de sa logistique, tandis qu'il rejoint Mayama. Le mfumu de Mayama réorganise la mission contre une vendetta de trois familles ; un ntumua conduit Kinuani, Kimbembe, Bikuta et leurs compagnons dans le Mayombe. Ils présentent leur mandat à Ne Mberi, homme de la trempe de Ne Nzongo, que Kinuani avait aperçu lors de la mort de Ne Mawungu sans entretien direct. Ne Mberi interdit les effusions de sang : préserver le sang ancestral, éviter la mort et les blessures graves. Les justiciers peuvent user de coups et de neutralisations non létales selon leur mandat, sans torture ; des blessures mineures accidentelles peuvent survenir. L'ordre n'exige pas une absence absolue de toute égratignure. Par ailleurs, certains complices doivent lui être déférés. Kinuani admire sa sagesse, son humilité, son charisme et son attachement aux traditions. Le Mayombe lui est peu familier ; les pisteurs locaux, surtout Mukueke, sont décisifs. Après environ un mois et demi, la mission revient honorée et bénie par Ne Mberi. Mukueke, environ 30 ans, forme notamment Nzungani, environ 15 ans, futur responsable des renseignements de Kinuani. Préserver le rôle autonome de Kimbembe, Bikuta et des autres compagnons ; retrouvailles, débats de Bukongo, philosophie et échanges parfois en latin et portugais. La chefferie de Kinuani survient plus tard après la mort de Nzongo et son retour de Mbanza Kongo avec des émissaires du Mani Kongo ; ne pas déplacer cette succession en 1643. Source complémentaire : ADDENDUM-FOUNDER-MUTINU-KINUANI-2026-11-05.md. Statut : fiche GitHub, pas une scène DB validée.
 
+
+
+## Rectificatif Founder — continuité de 1639 et concession de Kuimba (11 novembre 2026)
+
+La séquence des obsèques de Ne Mawungu, des négociations matrimoniales et du mariage constitue **un seul déplacement continu**, sans second voyage autonome : départ de Kuimba pour les obsèques, poursuite du périple jusqu'au mariage de Kinuani et Mutinu en août 1639, puis retour ensemble à Kuimba fin août ou début septembre 1639, après environ six mois d'absence. La date du mariage est décidée pendant le déplacement funéraire et transmise par missives. Mutinu, alors au Kikumbi, ignore initialement ces négociations ; Kisita a exigé au moins une année de formation avant l'union, condition accomplie. Avant les noces, ne pas lui attribuer le titre de Mama Mutinu : employer Yaya Mutinu selon le contexte.
+
+Le terrain de la concession de Kinuani lui est **attribué par Ne Nzongo**, non choisi par lui. Pendant le voyage, cousins et artisans de confiance poursuivent les travaux de la maison et de la concession ; ne pas attribuer leur achèvement à la sœur de Kinuani. Kinuani intègre au projet domestique les souhaits de Mutinu sans lui dévoiler le plan : étang, porcherie, chèvres, chien et aménagements hydrauliques et vivriers. La découverte d'une nouvelle source d'eau potable intervient **environ dix-huit mois après l'installation**, distinctement des aménagements initiaux.
+
+La section d'archive ci-dessus évoquant une séparation en 1640 est **supplantée** : en 1640, les époux sont déjà mariés et installés à Kuimba, et leur premier enfant Nkodia naît cette année-là. Ne pas scénariser l'ancien départ de 1640 comme un événement canonique. Ce rectificatif complète la chronologie déjà intégrée à `text-files/LES DERNIERS LÉOPARDS — Chronologie.txt` ; il ne prouve aucune migration de scènes en DB ni validation Quality indépendante.
