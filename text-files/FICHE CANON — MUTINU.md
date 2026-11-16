@@ -1,5 +1,9 @@
 # FICHE CANON — Mutinu
 
+## Rectificatif Founder — âge de Kinuani en 1636 (17 novembre 2026)
+
+À Mfuti en juin 1636, **Kinuani a 17 ans**, et non 16. Mutinu a **15 ans** selon le canon maintenu. Kinuani est entré au couvent **vers 7 ans, peut-être dès 5 ans** ; **Mama Tusikila, sa tutrice, l'a vu pour la dernière fois à 7 ans**. Ce rectificatif supplante les mentions historiques « Kinuani 16 ans » dans les notes de cette fiche. Aucun changement de la date du mariage (août 1639).
+
 ## Corrections Founder 2026-11-11 — toponymes, titres, sœurs
 
 Les chutes des retrouvailles 1643–1644 s’appellent **Lufulankadi**, aux chutes de **Kimpanzu** (à côté). Les anciennes graphies Lufirakari / Lufilakari sont **supplantées**.
@@ -1256,7 +1260,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 **Statut :** consignation des paroles de l'auteur ; aucune migration DB, réécriture de scènes, attribution définitive de tome ni validation Quality. Ce complément actualise les repères précédents là où le Founder a expressément rectifié les dates ou les événements. Les scènes d'intériorité de Mutinu restent susceptibles d'appartenir au tome 3 *Mama i Mama* ; tome non affecté tant que le placement n'est pas arbitré.
 
 ### Mfuti, juin–août 1636
-- Juin 1636 : Kinuani, **16 ans**, remplace un étudiant blessé aux compétitions de Mfuti ; Mutinu a **15 ans**. Les compétitions durent **douze jours**, non trois semaines, et se terminent par le banquet déjà retenu. Kinuani impressionne Kimbembe et ses pairs, puis retourne au couvent.
+- Juin 1636 : Kinuani, **17 ans** (rectificatif Founder 17/11/2026), remplace un étudiant blessé aux compétitions de Mfuti ; Mutinu a **15 ans**. Les compétitions durent **douze jours**, non trois semaines, et se terminent par le banquet déjà retenu. Kinuani impressionne Kimbembe et ses pairs, puis retourne au couvent.
 - Juillet : intervalle d'attente. Mutinu sait qu'il a promis de revenir, s'impatiente et se confie à Mama Tusikila. Kinuani ignore encore leur entente matrimoniale et conserve une attitude fraternelle.
 - **Août 1636, non juillet** : trois semaines de vacances de Kinuani à Mfuti. Il maintient sa discipline de mulongoki, court tôt le matin, attire l'admiration des enfants, leur raconte des histoires et aide spontanément les habitants et les femmes du marché.
 - **Scène à préserver :** durant le **Siwu**, grande saison sèche et période d'abondance de légumes dans le récit, Kinuani revêt parfois des habits populaires et travaille aux champs à Mfuti ou dans les localités voisines. Aux louanges insistantes, parfois agaçantes, il répond : **« Je n'ai aucun talent particulier, je suis juste un peu curieux et intrépide. »** Souvent en fin d'après-midi, il passe saluer Mutinu, qui veille à être bien présentée et attend ses visites avec joie. Son amour grandit ; elle songe en souriant que ce mulongoki, fils clanique de Tusikila, **a un cœur en or**.
