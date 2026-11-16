@@ -379,4 +379,16 @@ Ces précisions prolongent la même matière canonique : ne pas créer de scène
 
 **La fierté et le sourire de Mutinu.** Elle se considère désormais comme une **femme exceptionnelle, une femme noble** grâce à ce nouvel apprentissage. Kinuani est ravi de la voir si heureuse de sa réussite. **Le sourire de Mutinu est l'une de ses faiblesses émotionnelles** : sa joie le touche profondément, et la joie de la voir s'épanouir compte autant, pour lui, que le savoir transmis.
 
+## Complément Founder — les sourires et le rire de Mutinu, regard de Kinuani (17 novembre 2026)
+
+**Une palette d'expressions que Kinuani sait lire.** Le sourire de Mutinu n'est pas unique ni toujours joyeux. Heureuse, elle s'illumine du visage et **ses yeux brillent** ; déçue ou triste, son sourire devient **fuyant, à peine esquissé, chargé d'amertume**. Entre ces extrêmes, ses expressions varient selon ce qu'elle ressent. À force de vivre avec elle, **Kinuani sait décoder ces nuances** : un sourire ne le trompe pas sur son état intérieur, et il y est particulièrement sensible.
+
+**Son rire contagieux.** Mutinu possède un rire au timbre et au rythme si entraînants que ceux qui l'entendent finissent par rire avec elle, **même de loin**. Le Founder donne l'image : on l'entend rire deux fois et, **la troisième, on rit avec elle**. Ses quintes de rire charmantes emportent l'assistance, **y compris son époux**. Cette contagion joyeuse est l'une des choses que Kinuani aime profondément chez elle, sans réduire son caractère à la gaieté.
+
+**« Retrouver le Kongo » en sa femme.** Aux yeux de Kinuani, Mutinu peut se montrer tour à tour grave, vive, tendre, amère, espiègle, ferme, lumineuse : **de toutes les couleurs et de toutes les saveurs**, lorsqu'elle le veut ou lorsque les circonstances l'y conduisent. Il a parfois l'impression de retrouver **le Kongo lui-même** dans cette richesse humaine. Il aime sa femme pour cette diversité, son esprit, son éducation et sa présence, pas pour un seul trait de caractère.
+
+**Comparaison intime avec d'autres unions.** Kinuani songe que **sa sœur** ne pourrait pas parler de son mari avec le même bonheur ; **Bikuta** ne connaît pas, à ses yeux, une maîtrise comparable de cette vie conjugale. Il estime en revanche que **Kimbembe**, dans sa grande maîtrise, pourrait comprendre ce qu'il éprouve, et il en est convaincu. Conserver ces rapprochements comme **les réflexions personnelles de Kinuani**, sans inventer de scènes conjugales précises chez sa sœur, Bikuta ou Kimbembe ni prétendre à une évaluation omnisciente de leurs foyers.
+
+**Le premier regard à Mfuti.** Par moments, Kinuani revient en pensée au **premier regard échangé avec Mutinu à Mfuti en juin 1636**. Lorsqu'il lui en parle, **le visage de Mutinu s'illumine**. Ce retour partagé à l'origine de leur attachement nourrit leur intimité après des années de vie commune. La chronologie canonique reste celle de sa naissance fin juillet 1620 : **Kinuani a quinze ans révolus lors des festivités de juin 1636**, presque seize ; ne pas reprendre les âges anciens incompatibles.
+
 **État :** décision narrative Founder consignée dans le référentiel GitHub. Fiches Studio, scènes en base, déploiement et Quality **non vérifiés** par cette consignation.
