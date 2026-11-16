@@ -1,5 +1,9 @@
 # Addendum canonique — Mutinu et Kinuani — 5 novembre 2026
 
+## Rectificatif Founder prioritaire — naissance de Kinuani (17 novembre 2026)
+
+**Kinuani est né en 1620.** Cette année de naissance est explicitement confirmée par l'auteur et prévaut sur toute année reconstruite à partir d'un âge. **En juin 1636, il a donc 15 ou 16 ans en âge révolu, selon son jour et son mois de naissance encore non précisés.** L'indication orale « 17 ans en 1636 », récemment consignée, est **en attente d'harmonisation** (éventuel mode de décompte à préciser) et ne doit pas être utilisée pour déplacer sa naissance en 1619. Restent établis : la dernière rencontre avec Mama Tusikila à 7 ans ; l'entrée au couvent vers 7 ans, peut-être dès 5 ans ; le mariage en août 1639. Ne pas fixer de date de naissance complète sans parole de l'auteur.
+
 ## Corrections Founder 2026-11-11 — toponymes, titres, sœurs
 
 Les chutes des retrouvailles 1643–1644 s’appellent **Lufulankadi**, aux chutes de **Kimpanzu** (à côté). Les anciennes graphies Lufirakari / Lufilakari sont **supplantées**.
