@@ -1,5 +1,26 @@
 # FICHE CANON — Mutinu
 
+## Canon chronologique prioritaire — Kinuani né fin juillet 1620 (Founder, 17 novembre 2026)
+
+**Naissance : fin juillet 1620**, jour exact non donné. Les âges ci-dessous sont calculés en années révolues ; ils **supplantent les anciennes mentions « 16 ans en juin 1636 » et « 17 ans en juin 1636 »**, qui sont incompatibles avec cette naissance. Les événements datés ne sont pas déplacés.
+
+| Jalon | Âge de Kinuani calculé |
+|---|---|
+| Entrée au couvent, vers 5–7 ans (âge exact incertain) | Vers fin juillet 1625 à juillet 1628 ; ne pas dater davantage |
+| Dernière rencontre avec sa tutrice Mama Tusikila, à 7 ans | Entre fin juillet 1627 et fin juillet 1628 |
+| Mfuti, juin 1636, rencontre Mutinu | **15 ans**, presque 16 ; il atteint 16 ans fin juillet 1636 |
+| Vacances, août 1636 | **16 ans** |
+| Retrait de Ne Mawungu, octobre 1637 | **17 ans** |
+| Rappel, janvier 1638 | **17 ans** |
+| Mariage, août 1639 | **19 ans** |
+| Naissance de Nkodia, 1640 | **19 ou 20 ans**, selon le mois de naissance de Nkodia |
+| Jumeaux, vers août 1644 | **24 ans** |
+| Chefferie située en 1656 dans la chronologie ancienne | **35 ou 36 ans**, selon le mois d'intronisation ; le jalon de gouvernance reste à vérifier contre les rectificatifs ultérieurs |
+| Mbwila, 29–30 octobre 1665 | **45 ans** |
+
+La formation philosophique « près de douze ans avant mariage » reste une **approximation narrative** de la durée d'apprentissage commencée jeune, sans prétendre fixer l'entrée exacte au couvent ni ajouter une date d'initiation non fournie. Les âges de Mutinu, les naissances des enfants et les autres événements conservent leurs statuts canoniques propres, indépendamment de ce calcul.
+
+
 ## Rectificatif Founder prioritaire — naissance de Kinuani (17 novembre 2026)
 
 **Kinuani est né en 1620.** Cette année de naissance est explicitement confirmée par l'auteur et prévaut sur toute année reconstruite à partir d'un âge. **En juin 1636, il a donc 15 ou 16 ans en âge révolu, selon son jour et son mois de naissance encore non précisés.** L'indication orale « 17 ans en 1636 », récemment consignée, est **en attente d'harmonisation** (éventuel mode de décompte à préciser) et ne doit pas être utilisée pour déplacer sa naissance en 1619. Restent établis : la dernière rencontre avec Mama Tusikila à 7 ans ; l'entrée au couvent vers 7 ans, peut-être dès 5 ans ; le mariage en août 1639. Ne pas fixer de date de naissance complète sans parole de l'auteur.
