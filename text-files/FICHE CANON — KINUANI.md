@@ -1,5 +1,9 @@
 # FICHE CANON — Kinuani
 
+## Rectificatif Founder — enfance, couvent et âge à Mfuti (17 novembre 2026)
+
+**Kinuani a 17 ans en 1636**, et non 16. Il est entré au couvent **vers 7 ans, peut-être dès 5 ans** : l'âge exact reste à trancher entre ces deux repères, sans revenir à l'ancienne entrée « vers dix ans ». **Mama Tusikila, sa tutrice, l'a vu pour la dernière fois quand il avait 7 ans.** Ce dernier repère est certain dans le propos de l'auteur et ne prouve pas à lui seul la date précise d'entrée au couvent. Réconcilier avec les passages antérieurs de cette fiche et les autres fiches sans changer le mariage d'août 1639.
+
 ## Corrections Founder 2026-11-11 — toponymes, titres, sœurs
 
 Les chutes des retrouvailles 1643–1644 s’appellent **Lufulankadi**, aux chutes de **Kimpanzu** (à côté). Les anciennes graphies Lufirakari / Lufilakari sont **supplantées**.
@@ -37,7 +41,7 @@ Projet personnel initial : devenir nzonzi, voyager, s’établir au bord du fleu
 
 Sa mère meurt onze jours après un accouchement difficile. Kinuani et **Ma Ntombo** sont d’abord élevés par l’épouse de Ne Nzongo ; après le décès de celle-ci, Ma Ntombo est confiée à Mama Kisita (qu’elle tient pour grand-mère) et Kinuani part au couvent. Une ancienne mention de tante prochrétienne n’est pas établie : ne pas l’attribuer à Dobadola.
 
-Envoyé au couvent vers **dix ans**, par tranches d’âge et disciplines : combat, astronomie, natikongo, cosmogonie, haute moralité. Il lui reste des années à finir quand la politique le rattrape : « pas fini », déjà aspiré.
+Entré au couvent vers **sept ans** (possiblement dès **cinq ans** : âge exact encore à fixer), par tranches d’âge et disciplines : combat, astronomie, natikongo, cosmogonie, haute moralité. Il lui reste des années à finir quand la politique le rattrape : « pas fini », déjà aspiré.
 
 Au couvent il se distingue par l’agilité et la technique : arc, bâton, armes courtes, acrobaties, précision martiale et stratégie, plus la culture, l’histoire, les langues et la médiation. **Kimbembe kia Toko** domine l’éloquence ; **Kiesa kia Bikuta**, la force. Kinuani n’est pas un mulongi diplômé du seul fait qu’il entraîne des jeunes.
 
@@ -61,7 +65,7 @@ Kinuani a intériorisé une organisation quotidienne stricte, héritée de Nzong
 
 ## Couple avec Mutinu
 
-Rencontre **Mpika / Mfuti, juin 1636** (lui 16 ans, elle 15, registre du 29 octobre). Mariage **août 1639**. Installation Kuimba **fin août ou début septembre 1639**. **Nkodia** naît en **1640**. Mapasa **Muanda et Mpasi** vers **août 1644**, titres Mama / Ma Ngudi et Tata / Ta Ngudi. **Lunungu** déjà inscrit.
+Rencontre **Mpika / Mfuti, juin 1636** (**Kinuani 17 ans**, Mutinu 15 ans ; rectificatif Founder du 17 novembre qui supplante le registre du 29 octobre). Mariage **août 1639**. Installation Kuimba **fin août ou début septembre 1639**. **Nkodia** naît en **1640**. Mapasa **Muanda et Mpasi** vers **août 1644**, titres Mama / Ma Ngudi et Tata / Ta Ngudi. **Lunungu** déjà inscrit.
 
 Mutinu le **choisit**. Il la préférerait, tout en sachant que le mariage est une affaire d’État. Dans le clan Kuimba, tantes et familles ont grande autorité. Pendant les jeux, il se contient, l’appelle sa sœur, ne commet pas d’écart, ne formule pas encore de proposition. Il ne connaît pas assez Mama Tusikila pour lui demander de plaider. Nianzi lui est destinée au pays ; elle ne préoccupe pas fortement son esprit à Mfuti. Ne pas le qualifier automatiquement de faible : désaccord de valeurs avec Mutinu (« On ne me choisit pas. C’est moi qui choisis. »).
 
