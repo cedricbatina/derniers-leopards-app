@@ -1,5 +1,9 @@
 # FICHE CANON — Mutinu
 
+## Rectificatif Founder prioritaire — naissance de Kinuani (17 novembre 2026)
+
+**Kinuani est né en 1620.** Cette année de naissance est explicitement confirmée par l'auteur et prévaut sur toute année reconstruite à partir d'un âge. **En juin 1636, il a donc 15 ou 16 ans en âge révolu, selon son jour et son mois de naissance encore non précisés.** L'indication orale « 17 ans en 1636 », récemment consignée, est **en attente d'harmonisation** (éventuel mode de décompte à préciser) et ne doit pas être utilisée pour déplacer sa naissance en 1619. Restent établis : la dernière rencontre avec Mama Tusikila à 7 ans ; l'entrée au couvent vers 7 ans, peut-être dès 5 ans ; le mariage en août 1639. Ne pas fixer de date de naissance complète sans parole de l'auteur.
+
 ## Rectificatif Founder — âge de Kinuani en 1636 (17 novembre 2026)
 
 À Mfuti en juin 1636, **Kinuani a 17 ans**, et non 16. Mutinu a **15 ans** selon le canon maintenu. Kinuani est entré au couvent **vers 7 ans, peut-être dès 5 ans** ; **Mama Tusikila, sa tutrice, l'a vu pour la dernière fois à 7 ans**. Ce rectificatif supplante les mentions historiques « Kinuani 16 ans » dans les notes de cette fiche. Aucun changement de la date du mariage (août 1639).
