@@ -23,11 +23,11 @@ La formation philosophique « près de douze ans avant mariage » reste une **ap
 
 ## Rectificatif Founder prioritaire — naissance de Kinuani (17 novembre 2026)
 
-**Kinuani est né en 1620.** Cette année de naissance est explicitement confirmée par l'auteur et prévaut sur toute année reconstruite à partir d'un âge. **En juin 1636, il a donc 15 ou 16 ans en âge révolu, selon son jour et son mois de naissance encore non précisés.** L'indication orale « 17 ans en 1636 », récemment consignée, est **en attente d'harmonisation** (éventuel mode de décompte à préciser) et ne doit pas être utilisée pour déplacer sa naissance en 1619. Restent établis : la dernière rencontre avec Mama Tusikila à 7 ans ; l'entrée au couvent vers 7 ans, peut-être dès 5 ans ; le mariage en août 1639. Ne pas fixer de date de naissance complète sans parole de l'auteur.
+**Kinuani est né en 1620.** Cette année de naissance est explicitement confirmée par l'auteur et prévaut sur toute année reconstruite à partir d'un âge. **En juin 1636, il a donc 15 ans révolus**, puisqu'il est né **fin juillet 1620**. Les anciennes indications « 16 ans en juin 1636 » et « 17 ans en juin 1636 » sont supplantées ; elles ne doivent déplacer ni sa naissance ni les événements. Restent établis : la dernière rencontre avec Mama Tusikila à 7 ans ; l'entrée au couvent vers 7 ans, peut-être dès 5 ans ; le mariage en août 1639. Ne pas inventer de jour de naissance précis sans parole de l'auteur.
 
 ## Rectificatif Founder — âge de Kinuani en 1636 (17 novembre 2026)
 
-À Mfuti en juin 1636, **Kinuani a 17 ans**, et non 16. Mutinu a **15 ans** selon le canon maintenu. Kinuani est entré au couvent **vers 7 ans, peut-être dès 5 ans** ; **Mama Tusikila, sa tutrice, l'a vu pour la dernière fois à 7 ans**. Ce rectificatif supplante les mentions historiques « Kinuani 16 ans » dans les notes de cette fiche. Aucun changement de la date du mariage (août 1639).
+À Mfuti en juin 1636, **Kinuani a 15 ans révolus**, avant ses 16 ans à la fin de juillet. Mutinu a **15 ans** selon le canon maintenu. Kinuani est entré au couvent **vers 7 ans, peut-être dès 5 ans** ; **Mama Tusikila, sa tutrice, l'a vu pour la dernière fois à 7 ans**. Ce rectificatif supplante les mentions historiques « Kinuani 16 ans » dans les notes de cette fiche. Aucun changement de la date du mariage (août 1639).
 
 ## Corrections Founder 2026-11-11 — toponymes, titres, sœurs
 
@@ -1272,7 +1272,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 
 ### Continuité et repères
 
-- **Mfuti T0** : Mutinu 15 ans, Kinuani 17 ans ; intuition de Tusikila **dès le premier jour**, puis plusieurs rencontres pendant les festivités ; banquet **unique et final**.
+- **Mfuti T0** : Mutinu 15 ans, Kinuani 15 ans ; intuition de Tusikila **dès le premier jour**, puis plusieurs rencontres pendant les festivités ; banquet **unique et final**.
 - **Vers T0+7 mois et après les négociations** : Mutinu entre dans son couvent féminin ; **mois 1 environ** = colère persistante ; puis apprentissage du recul.
 - **Août 1639** : mariage, après **au moins douze mois d’initiation**. Le repère T0+24 mois et les âges associés sont supplantés par les dates civiles arbitrées.
 - **Tome 3** : l'arc psychologique et la voix de Mutinu sont des **candidats forts**, mais l'affectation précise des scènes exige la matrice chronologie × POV × volume.
@@ -1285,7 +1285,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 **Statut :** consignation des paroles de l'auteur ; aucune migration DB, réécriture de scènes, attribution définitive de tome ni validation Quality. Ce complément actualise les repères précédents là où le Founder a expressément rectifié les dates ou les événements. Les scènes d'intériorité de Mutinu restent susceptibles d'appartenir au tome 3 *Mama i Mama* ; tome non affecté tant que le placement n'est pas arbitré.
 
 ### Mfuti, juin–août 1636
-- Juin 1636 : Kinuani, **17 ans** (rectificatif Founder 17/11/2026), remplace un étudiant blessé aux compétitions de Mfuti ; Mutinu a **15 ans**. Les compétitions durent **douze jours**, non trois semaines, et se terminent par le banquet déjà retenu. Kinuani impressionne Kimbembe et ses pairs, puis retourne au couvent.
+- Juin 1636 : Kinuani, **15 ans** (naissance fin juillet 1620), remplace un étudiant blessé aux compétitions de Mfuti ; Mutinu a **15 ans**. Les compétitions durent **douze jours**, non trois semaines, et se terminent par le banquet déjà retenu. Kinuani impressionne Kimbembe et ses pairs, puis retourne au couvent.
 - Juillet : intervalle d'attente. Mutinu sait qu'il a promis de revenir, s'impatiente et se confie à Mama Tusikila. Kinuani ignore encore leur entente matrimoniale et conserve une attitude fraternelle.
 - **Août 1636, non juillet** : trois semaines de vacances de Kinuani à Mfuti. Il maintient sa discipline de mulongoki, court tôt le matin, attire l'admiration des enfants, leur raconte des histoires et aide spontanément les habitants et les femmes du marché.
 - **Scène à préserver :** durant le **Siwu**, grande saison sèche et période d'abondance de légumes dans le récit, Kinuani revêt parfois des habits populaires et travaille aux champs à Mfuti ou dans les localités voisines. Aux louanges insistantes, parfois agaçantes, il répond : **« Je n'ai aucun talent particulier, je suis juste un peu curieux et intrépide. »** Souvent en fin d'après-midi, il passe saluer Mutinu, qui veille à être bien présentée et attend ses visites avec joie. Son amour grandit ; elle songe en souriant que ce mulongoki, fils clanique de Tusikila, **a un cœur en or**.
