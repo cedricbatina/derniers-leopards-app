@@ -23,11 +23,11 @@ La formation philosophique « près de douze ans avant mariage » reste une **ap
 
 ## Rectificatif Founder prioritaire — naissance de Kinuani (17 novembre 2026)
 
-**Kinuani est né en 1620.** Cette année de naissance est explicitement confirmée par l'auteur et prévaut sur toute année reconstruite à partir d'un âge. **En juin 1636, il a donc 15 ou 16 ans en âge révolu, selon son jour et son mois de naissance encore non précisés.** L'indication orale « 17 ans en 1636 », récemment consignée, est **en attente d'harmonisation** (éventuel mode de décompte à préciser) et ne doit pas être utilisée pour déplacer sa naissance en 1619. Restent établis : la dernière rencontre avec Mama Tusikila à 7 ans ; l'entrée au couvent vers 7 ans, peut-être dès 5 ans ; le mariage en août 1639. Ne pas fixer de date de naissance complète sans parole de l'auteur.
+**Kinuani est né en 1620.** Cette année de naissance est explicitement confirmée par l'auteur et prévaut sur toute année reconstruite à partir d'un âge. **En juin 1636, il a donc 15 ans révolus**, puisqu'il est né **fin juillet 1620**. Les anciennes indications « 16 ans en juin 1636 » et « 17 ans en juin 1636 » sont supplantées ; elles ne doivent déplacer ni sa naissance ni les événements. Restent établis : la dernière rencontre avec Mama Tusikila à 7 ans ; l'entrée au couvent vers 7 ans, peut-être dès 5 ans ; le mariage en août 1639. Ne pas inventer de jour de naissance précis sans parole de l'auteur.
 
 ## Rectificatif Founder — enfance, couvent et âge à Mfuti (17 novembre 2026)
 
-**Kinuani a 17 ans en 1636**, et non 16. Il est entré au couvent **vers 7 ans, peut-être dès 5 ans** : l'âge exact reste à trancher entre ces deux repères, sans revenir à l'ancienne entrée « vers dix ans ». **Mama Tusikila, sa tutrice, l'a vu pour la dernière fois quand il avait 7 ans.** Ce dernier repère est certain dans le propos de l'auteur et ne prouve pas à lui seul la date précise d'entrée au couvent. Réconcilier avec les passages antérieurs de cette fiche et les autres fiches sans changer le mariage d'août 1639.
+**Kinuani a 15 ans en juin 1636, puis 16 ans après son anniversaire de fin juillet 1636**. Il est entré au couvent **vers 7 ans, peut-être dès 5 ans** : l'âge exact reste à trancher entre ces deux repères, sans revenir à l'ancienne entrée « vers dix ans ». **Mama Tusikila, sa tutrice, l'a vu pour la dernière fois quand il avait 7 ans.** Ce dernier repère est certain dans le propos de l'auteur et ne prouve pas à lui seul la date précise d'entrée au couvent. Réconcilier avec les passages antérieurs de cette fiche et les autres fiches sans changer le mariage d'août 1639.
 
 ## Corrections Founder 2026-11-11 — toponymes, titres, sœurs
 
@@ -90,7 +90,7 @@ Kinuani a intériorisé une organisation quotidienne stricte, héritée de Nzong
 
 ## Couple avec Mutinu
 
-Rencontre **Mpika / Mfuti, juin 1636** (**Kinuani 17 ans**, Mutinu 15 ans ; rectificatif Founder du 17 novembre qui supplante le registre du 29 octobre). Mariage **août 1639**. Installation Kuimba **fin août ou début septembre 1639**. **Nkodia** naît en **1640**. Mapasa **Muanda et Mpasi** vers **août 1644**, titres Mama / Ma Ngudi et Tata / Ta Ngudi. **Lunungu** déjà inscrit.
+Rencontre **Mpika / Mfuti, juin 1636** (**Kinuani 15 ans**, Mutinu 15 ans ; âge calculé depuis la naissance de Kinuani fin juillet 1620). Mariage **août 1639**. Installation Kuimba **fin août ou début septembre 1639**. **Nkodia** naît en **1640**. Mapasa **Muanda et Mpasi** vers **août 1644**, titres Mama / Ma Ngudi et Tata / Ta Ngudi. **Lunungu** déjà inscrit.
 
 Mutinu le **choisit**. Il la préférerait, tout en sachant que le mariage est une affaire d’État. Dans le clan Kuimba, tantes et familles ont grande autorité. Pendant les jeux, il se contient, l’appelle sa sœur, ne commet pas d’écart, ne formule pas encore de proposition. Il ne connaît pas assez Mama Tusikila pour lui demander de plaider. Nianzi lui est destinée au pays ; elle ne préoccupe pas fortement son esprit à Mfuti. Ne pas le qualifier automatiquement de faible : désaccord de valeurs avec Mutinu (« On ne me choisit pas. C’est moi qui choisis. »).
 
