@@ -214,3 +214,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 - Présence croisée dans Kongo Dibuidi et Mama I Mama : caractères, réalisations, vie publique et conjugale apparaissent dans les deux tomes, brièvement ou en profondeur selon le point de vue et l’enjeu.
 
 **Statut :** instructions Founder consignées sur GitHub main, sans revendication de modification MySQL, de scène intégrée, de déploiement ni de validation Quality.
+
+## Complément Founder — 21 novembre 2026 : intercession et formation de Mutinu
+
+**Ordre des événements** : la préparation prénuptiale de **Mutinu** auprès de ses tantes précède son entrée au couvent, à une époque où les tractations de **Mama Tusikila** lui font espérer son mariage avec Kinuani. Tusikila intercède ensuite à **Kuimba** et se confronte à **Kisita**, qui impose une initiation exigeante au **Kikumbi** dans un couvent féminin d'élite. Kisita espère ainsi décourager Mutinu, sans y parvenir. **Nzongo** accélère plus tard les démarches du mariage sans que Mutinu en soit informée pendant son initiation ; elle sort après environ un an, bien qu'elle eût souhaité continuer. Kikumbi est la discipline, pas le couvent. Référence : registre Founder, complément du 21 novembre 2026.
