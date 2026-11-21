@@ -49,3 +49,8 @@ Il conseille également Kinuani dans la manière de traiter son épouse et d’e
 Personnage à suivre dans plusieurs tomes, avec sa famille, son établissement, ses responsabilités, ses élèves et ses relations ; ne pas le réduire à une escorte de Kinuani ni réserver ses qualités à Mama I Mama.
 
 Sources rapprochées : notes Founder des 6–22 octobre dans `cedricbatina/batina-os/audits/creative/KONGO-DIBUIDI-NOTE-KINUANI-MFUTI-MUTINU-2026-10-06.md` (§§3, 33, 45–48) ; `RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md` (Mfuti, juillet 1637, discipline collective, embuscade et missions) ; carnet du 29 octobre 2026 ; notes du 1er novembre ; `ADDENDUM-FOUNDER-MUTINU-KINUANI-2026-11-05.md` (oralité, foyer, mission 1643–1644) ; rappels directs de l’auteur et nom complet confirmé le 11 novembre. Cette fiche rassemble l’existant ; sa consignation ne date pas la création de ces éléments.
+
+
+## Complément Founder — 21 novembre 2026 : modèle de parole de Kinuani
+
+**Kimbembe** est pour **Kinuani** un maître de parole et un modèle de subtilité, de finesse analytique et de tact dans les relations humaines, notamment avec les femmes. Déjà fiancé avant la rencontre Kinuani–Mutinu, il lui apporte des conseils pratiques sur la manière de parler et de se comporter avec une femme, en complément des enseignements des Ntumu et autres maîtres du Bukongo. Kinuani peut surpasser Kimbembe dans certaines disciplines martiales tout en admirant sa supériorité d'expérience et d'éloquence. Ne pas transformer cette influence en enseignement institutionnel formel ni inventer de scène. Référence : registre Founder, complément du 21 novembre 2026.
