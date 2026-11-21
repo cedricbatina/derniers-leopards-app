@@ -790,3 +790,46 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 **Longueur décidée.** Le Founder fixe désormais pour le **tome I** une **cible indicative de 320 à 400 pages en format roman courant/poche, non A4** ; les 230 pages évoquées auparavant ne sont **ni une cible ni un plafond**. Publishing convertira cette plage en mots après choix de maquette et étude du conducteur réel. Ne pas étirer les scènes pour atteindre 400 pages ni sacrifier l'arc pour atteindre 320 ; réserver les missions et scènes secondaires aux développements futurs ou audiovisuels (épisodes potentiels de 15–20 minutes). Ne pas assimiler les développements de Mutinu dans le tome III à des scènes obligatoires du tome I.
 
 **Destination opérationnelle.** Ce texte constitue la matière littéraire **fournie par le Strategic Council** à Editorial/Publishing dans le dossier existant #3 ; **la recherche des références antérieures n'est pas déléguée aux bureaux**. Leur travail est d'appliquer ces critères au conducteur et aux scènes déjà disponibles, de contrôler les rares raccords dates/noms, et de rendre les arbitrages nécessaires. Statuts : consigné sur main ≠ synchronisé en DB ≠ validé Quality.
+
+
+## Complément Founder — 21 novembre 2026 — Bukongo, Kikumbi, Mutinu et Mama I Mama
+
+**Autorité : décisions et informations transmises par l'auteur.** Ce complément précise les éléments antérieurs sans réécrire les scènes, changer les identifiants ni attribuer des événements à un tome par déduction. Les anciennes mentions de « Kingumbi » comme nom du couvent ou de « formation prénuptiale d'un an » sont à lire à la lumière de la distinction ci-dessous.
+
+### Philosophie et terminologie
+- Le **Bukongo** est la philosophie globale, l'art et la manière de vivre kongo ; il régit notamment droit, spiritualité, organisation, administration, relations humaines, savoirs et disciplines scientifiques et techniques.
+- Le **Kikumbi** (également Cikumbi selon les graphies régionales) est **un compartiment philosophique et initiatique du Bukongo**, non un couvent. Selon le Founder, le Cikumbi du Loango et le Kikumbi du Kongo sont **la même philosophie** ; ne pas les opposer dans la construction du roman.
+- Le Kikumbi forme des **femmes kongo vertueuses** ; cette expression et l'exemple ci-dessous sont rapportés par l'auteur à partir d'une intervention vidéo du reporter congolais **Lascony Nsymb**, notamment sur la chaîne *Les Funérailles des Tabous*. L'auteur ne demande pas de retrouver la séquence pour accepter son témoignage.
+- **Kimpumbulu** : un insensé ; **bimpumbulu** : des insensés (ki- → bi-), notamment pour désigner dans ce cadre des personnes qui s'écartent des principes du Bukongo.
+
+### Formation et chronologie de Mutinu
+1. **Avant son entrée au couvent**, alors qu'elle est convaincue de pouvoir épouser Kinuani grâce aux tractations de Tusikila, Mutinu suit auprès de ses tantes et de sa lignée maternelle une **préparation prénuptiale** orientée vers le mariage. Elle ne doit pas être confondue avec l'initiation approfondie ultérieure.
+2. Tusikila intercède à Kuimba ; Kisita exige alors que Mutinu entre dans un **couvent féminin d'élite** pour une initiation exigeante au Kikumbi. Kisita espère que les difficultés et serments la décourageront de son projet matrimonial ; l'effet est inverse.
+3. Au début, Mutinu garde des reproches envers Kinuani, qui n'avait pas su s'opposer à sa famille lorsqu'elle voulait lui imposer une autre épouse. Une **autre initiée, son binôme** (nom non décidé), la console et l'aide à s'adapter. Après environ **un mois**, Mutinu comprend la valeur du Kikumbi et s'y consacre pleinement.
+4. Son binôme quitte le couvent **trois ou quatre mois avant elle**. Mutinu aurait voulu poursuivre sa formation **au-delà d'un an**, sans savoir que Nzongo a accéléré les tractations du mariage ; elle sort après environ un an.
+5. Le Kikumbi transforme sa vision, sa discipline et sa force intérieure. Les serments et obligations initiatiques sont pris très au sérieux. Exemple transmis par l'auteur : selon l'enseignement rapporté, une initiée qui viole son serment de fidélité conjugale peut être poursuivie d'une **odeur nauséabonde**, entraînant son rejet social. C'est une conséquence mystique/traditionnelle annoncée dans cet univers ; ne pas inventer d'autres sanctions comme si elles étaient historiquement attestées.
+
+### Kinuani, Kimbembe et la rencontre des savoirs
+- Kinuani a étudié presque toute sa vie au couvent et continue d'étudier. Sa maîtrise du Bukongo embrasse philosophie, spiritualité, organisation et administration du Kongo, disciplines martiales et militaires, responsabilités futures du foyer et enseignements limités sur la psychologie féminine et les relations conjugales.
+- Les Ntumu et autres maîtres le forment ; **Kimbembe** est un modèle supplémentaire d'éloquence, de subtilité, d'analyse et de comportement envers les femmes. Déjà fiancé avant la rencontre de Kinuani avec Mutinu, Kimbembe lui transmet une expérience pratique que Kinuani admire, même si ce dernier le surpasse dans certains combats.
+- Kinuani **n'a pas prêté le même serment matrimonial initiatique** que Mutinu. Les femmes ont un rôle central dans la gestion du foyer, la transmission et la constitution de la société.
+- Mutinu aime profondément Kinuani ; elle admire sa rectitude, sa posture et sa profondeur. Elle imagine après son initiation pouvoir l'égaler intellectuellement, mais sous-estime la durée et la continuité de son étude.
+- Les conversations du couple font se rejoindre des **compartiments complémentaires du Bukongo**. Mutinu rapproche intérieurement ses enseignements maternels, prénuptiaux et initiatiques des explications de Kinuani ; il ignore parfois ces rapprochements, car il ne connaît pas toute la formation féminine. Elle n'est pas une simple répétitrice de ses paroles : elle synthétise, observe et applique ses propres principes.
+- Mutinu protège farouchement la **confidentialité de son foyer** ; elle veut qu'il soit exemplaire dans les faits. Elle conseille les autres à partir de sa formation, de l'exemple de Kinuani, de son expérience et de ses observations, sans exposer sa vie conjugale. Une réflexion sur les tentations ou la fidélité peut apparaître dans une confidence à sa sœur ou un conseil à une femme/un couple, pas comme maxime moderne plaquée sur le personnage.
+
+### Sept domaines du Kikumbi — à approfondir, non considérés comme rédigés
+1. **Serments et vertus** : fidélité, maîtrise de soi, parole, devoirs, conséquences des transgressions.
+2. **Philosophie et spiritualité** : ordre moral, visible/invisible, ancêtres, responsabilité.
+3. **Famille et lignage** : kanda, filiation maternelle, alliances, obligations entre familles.
+4. **Conduite du foyer** : ressources, hospitalité, vie conjugale, intimité, transmission.
+5. **Psychologie et relations humaines** : écoute, discernement, parole, médiation et gestion des tensions.
+6. **Transmission des savoirs** : oralité, mémoire, symboles et signes graphiques.
+7. **Responsabilités sociales** : solidarité, conseil, influence, organisation communautaire.
+Ces sept axes **doivent être approfondis substantiellement**, à partir du canon et de la culture kongo, sans confondre matériau transmis, reconstruction littéraire et texte effectivement rédigé.
+
+### Architecture des tomes et intention d'auteur
+- **Les Derniers Léopards, tome 1 : Kongo Dibuidi**, centré sur **Kinuani**. Mutinu y est déjà un personnage à part entière : caractère, décisions, orientations, amour, contradictions et influence sont visibles dans l'action.
+- **Tome 3 : Mama I Mama** (**trois mots séparés**), consacré à la vie de **Mutinu** et à la « culture d'une reine » ; approfondissement de son éducation, du Kikumbi et des sept domaines, sans retirer au tome 1 la profondeur du personnage.
+- L'auteur situe sa filiation culturelle et familiale à **Kuimba par sa mère et chez les Sundi par son père** ; Kinwani et Mutinu sont ses **ancêtres imaginaires** dans la construction littéraire. Cette vision et les décisions de l'auteur guident l'œuvre.
+- Ambition : transmettre aux lectrices et lecteurs, notamment aux femmes congolaises contemporaines, des conceptions ancestrales de la place des femmes, du foyer et de la société ; ne pas dénigrer le masculin, ne pas projeter une idéologie contemporaine sur les personnages.
+- **Aucune scène, aucun nom du binôme, aucune nouvelle sanction initiatique ni modification de base de données n'est autorisée par ce seul complément.** Réutiliser les fiches, scènes, chronologies et décisions existantes avant toute intégration narrative.
