@@ -152,3 +152,8 @@ Source : registre Founder §M.
 ## Accouchement des mapasa, vers août 1644
 
 Kisita, hantée par la faute ancienne, fait venir des guérisseuses réputées d’autres contrées kongo et organise le déplacement de Mutinu. Mutinu et les jumeaux Muanda et Mpasi survivent. Ce rôle dépasse l’opposition initiale au mariage. Ne pas confondre avec le Kikumbi prénuptial.
+
+
+## Complément Founder — 21 novembre 2026 : sens de la condition initiatique
+
+**Kisita**, lors de l'intercession de **Mama Tusikila** à Kuimba, exige le passage de **Mutinu** par un couvent féminin d'élite et son initiation approfondie au **Kikumbi**. Elle espère que les difficultés, obligations et serments décourageront Mutinu d'épouser Kinuani. L'effet est inverse : Mutinu s'investit pleinement après environ un mois et aurait voulu prolonger sa formation au-delà d'un an. **Kikumbi désigne une philosophie/discipline du Bukongo, non le nom de l'institution.** La préparation prénuptiale auprès des tantes de Mutinu a déjà eu lieu **avant** son entrée au couvent. Ne pas confondre l'intention de Kisita avec l'effet réel de sa décision. Référence : registre Founder, complément du 21 novembre 2026.
