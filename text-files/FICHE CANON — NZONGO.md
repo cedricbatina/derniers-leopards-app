@@ -226,3 +226,7 @@ Les **premiers rayons du soleil** commencent à paraître. Ne Nzongo constate qu
 - **Identité visuelle de Mutinu :** l'auteur apprécie le portrait illustré de Mutinu ; le conserver comme référence visuelle provisoire de travail, avec tresses africaines aux géométries changeantes et foulard couvrant les cheveux en public selon la convention vestimentaire de ce monde fictionnel. Ne pas revendiquer une preuve historique générale pour toutes les femmes kongo.
 
 **Traçabilité :** rectifications Founder consignées sur GitHub ; aucune scène MySQL, aucun déploiement et aucune validation Quality revendiqués.
+
+## Complément Founder — 21 novembre 2026 : accélération du mariage
+
+**Ne Nzongo** accélère les démarches matrimoniales de Kinuani et Mutinu **pendant que Mutinu est au couvent féminin d'élite**, sans qu'elle en soit informée. Après environ un an d'initiation au **Kikumbi** (discipline du Bukongo, non nom du couvent), Mutinu sort pour se marier, bien qu'elle aurait souhaité prolonger sa formation. Cette accélération est à attribuer à **Nzongo**, non à Kisita ou Tusikila ; Kisita avait imposé l'initiation pour décourager l'union, tandis que Tusikila avait intercédé pour elle. Voir registre Founder du 21 novembre 2026.
