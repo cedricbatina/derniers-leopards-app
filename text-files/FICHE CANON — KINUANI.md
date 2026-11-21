@@ -208,3 +208,14 @@ Retour **de nuit**, foulées de Mukueke. **Mbanza Ndunga**, début mars 1644, ca
 ## Ce qui reste ouvert
 
 La sœur de Kinuani est **Ma Ntombo**. La sœur de Mutinu est **Lufuandi**. **Nianzi est vivante** ; celle qui meurt est une autre protégée, non nommée. Titres mapasa : Ma / Mama Ngudi, Ta / Tata Ngudi. Chutes : **Lufulankadi** à Kimpanzu. Reste ouvert : nom de la protégée décédée ; parcours ultérieur de Nianzi ; Mukangu, mvoala ; âge exact du séjour vers 13 ans ; nom du couvent ; identité du notable Bamba. Ne pas antédater la chefferie à 1643.
+
+
+## Complément Founder — 21 novembre 2026 : Bukongo, formation et influence sur Mutinu
+
+**Kinuani** maîtrise le Bukongo dans ses dimensions philosophiques, spirituelles, organisationnelles et administratives ; son long cursus au couvent d'élite comprend disciplines martiales/militaires, préparation à la gestion future du foyer et enseignements sur la psychologie féminine et les relations conjugales. Il poursuit ses études après sa sortie. Il n'a **pas prêté le serment matrimonial propre au Kikumbi de Mutinu**.
+
+**Maîtres et transmission** : les **Ntumu** et autres maîtres du Bukongo transmettent les disciplines formelles ; **Kimbembe**, fiancé avant la rencontre Kinuani–Mutinu, est un modèle supplémentaire de parole subtile, analyse, tact et conduite envers les femmes. Kinuani peut le surpasser dans le combat sans cesser d'apprendre de lui.
+
+**Relation avec Mutinu** : ses conversations éclairent des enseignements que Mutinu a reçus dans sa lignée maternelle et lors du Kikumbi. Il ne connaît pas toutes les dimensions de l'initiation féminine ni tous les rapprochements qu'elle fait en silence. Mutinu admire sa rectitude et sa profondeur, et croit pouvoir l'égaler après son année d'initiation ; sa formation plus courte ne diminue pas sa propre intelligence.
+
+**Événements à ne pas déplacer** : reproches de Mutinu après la pression familiale visant une autre épouse ; intercession de Tusikila ; condition imposée par Kisita ; accélération du mariage par Nzongo à l'insu de Mutinu ; mariage après l'initiation. Référence : registre Founder, complément du 21 novembre 2026.
