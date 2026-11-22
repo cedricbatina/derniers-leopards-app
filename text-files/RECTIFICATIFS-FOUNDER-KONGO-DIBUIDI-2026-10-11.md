@@ -833,3 +833,14 @@ Ces sept axes **doivent être approfondis substantiellement**, à partir du cano
 - L'auteur situe sa filiation culturelle et familiale à **Kuimba par sa mère et chez les Sundi par son père** ; Kinwani et Mutinu sont ses **ancêtres imaginaires** dans la construction littéraire. Cette vision et les décisions de l'auteur guident l'œuvre.
 - Ambition : transmettre aux lectrices et lecteurs, notamment aux femmes congolaises contemporaines, des conceptions ancestrales de la place des femmes, du foyer et de la société ; ne pas dénigrer le masculin, ne pas projeter une idéologie contemporaine sur les personnages.
 - **Aucune scène, aucun nom du binôme, aucune nouvelle sanction initiatique ni modification de base de données n'est autorisée par ce seul complément.** Réutiliser les fiches, scènes, chronologies et décisions existantes avant toute intégration narrative.
+
+
+## Rectification Founder — 22 novembre 2026 — Mutinu, Ya Babote et portée de Mama I Mama
+
+**Supplante les formulations incompatibles du complément du 21 novembre** :
+- Orthographe **Tusikila**, et non « Toussikila ».
+- La protectrice de Mutinu au couvent n'est **pas un binôme** : c'est une **sœur aînée d'initiation**, **Ya/Yaya Babote** (B-A-B-O-T-E), qui la prend sous son aile. Après son accession au statut de dame : **Mama Babote**, deux mots. Mutinu jeune fille : **Ya/Yaya Mutinu** ; après accession au statut de dame : **Mama/ Ma Mutinu** selon contexte. **Babote** est le nom ; « Mama » est un titre distinct.
+- Avant Mfuti, Mutinu est une jeune fille franche, persuasive, mais **pas une pratiquante particulièrement assidue du Bukongo** ; celui-ci imprègne la société. Elle apprend au sein de sa famille, travaille avec ses parents et **les représente parfois dans les tontines/associations d'entraide**. Son caractère est déjà connu des partenaires de ses parents. Ne pas lui attribuer une supériorité ou une singularité initiatique précoce.
+- Les projets de mariage prennent en compte la **réputation morale des parents et grands-parents**. Cette pratique éclaire l'intérêt porté à Kinuani par certaines familles au **banquet de clôture des compétitions de Mfuti**, pas au début.
+- **Mama I Mama**, tome 3, montre la vie et la transformation de Mutinu, **sans livrer les enseignements réservés du Kikumbi**. L'auteur n'est pas initié ; les sept domaines servent à analyser les effets de sa formation, non à publier un programme secret. Mobiliser les **travaux publics de chercheurs déjà cités**, en évitant de présenter une reconstruction romanesque comme un rite vécu.
+- **Ne pas redoubler les scènes et événements déjà enregistrés dans Sonekeno** : réconcilier par identifiants avec les données existantes sous la responsabilité des agents ayant accès à la DB. La présente rectification est documentaire ; elle ne prouve ni import, ni modification en base, ni validation Quality.
