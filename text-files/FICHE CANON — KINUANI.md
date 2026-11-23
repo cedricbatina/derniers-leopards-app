@@ -108,7 +108,7 @@ Le cercle initiatique féminin d’au moins un an exigé par Kisita n’est pas 
 
 ## Oralité
 
-Érudit du Bukongo, il répond par principe à qui demande une explication. Démonstration : proverbes, paraboles, l’assemblée complète, chants repris par les disciples puis l’audience, rires, « Ibobo ! ». Il peut suspendre une fin de phrase. Kimbembe appelle parfois « Ngoma ! Ngoma ! ». Chant dicté, à conserver :
+Érudit du Bukongo, il répond par principe à qui demande une explication. Démonstration : proverbes, paraboles, l’assemblée complète, chants repris par les disciples puis l’audience, rires, « Ibobo ! ». Il peut suspendre une fin de phrase. **Précision Founder — articulation des savoirs et de la vie humaine :** ses connaissances en cosmogonie, astronomie et philosophie ne restent pas abstraites : il les met en relation avec l'existence des hommes et la vie quotidienne. Il éclaire notamment les notions de **polarité** et de **rythme** à l'aide de métaphores, d'analogies et de proverbes tirés des réalités ordinaires, ce qui donne à sa parole une puissance persuasive et une grande intelligibilité. Cette méthode traverse ses discours et ses échanges, y compris avec Mutinu, sans enfermer son enseignement dans un sujet unique ni inventer de proverbes kikongo non attestés par le Founder. Kimbembe appelle parfois « Ngoma ! Ngoma ! ». Chant dicté, à conserver :
 
 Tata fioti kua ka zibudi eee , e mama ee bu i Kongo dieka ningana ee e mama
 
