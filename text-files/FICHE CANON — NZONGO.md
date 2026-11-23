@@ -1,5 +1,8 @@
 # FICHE CANON — Ne Nzongo
 
+**Consultations de Mutinu à l'aube — consolidation Founder (novembre 2026).** À plusieurs reprises, lorsque Mutinu a besoin de son appui, notamment après certaines contrariétés avec Kinuani ou pour défendre des affaires de Kuimba, **elle vient seule avant le lever du jour** à la concession de Ne Nzongo. Elle le rejoint dans son **balayage matinal habituel**, l'aide à balayer une partie de la cour et discute avec lui pendant ce travail. Ils peuvent ensuite s'asseoir et prendre ensemble du thé ou une infusion. Mutinu expose ses demandes avec persuasion ; **Nzongo donne souvent suite concrètement, parfois dès le jour même**, sans en déduire qu'il obéit mécaniquement à chacune de ses demandes ni qu'il contourne les compétences du conseil des femmes. Au lever du soleil, **deux à quatre gardes de Nzongo** la raccompagnent. **Ne pas réduire ces visites à une unique consultation sur la polygamie.**
+
+
 Patriarche de Kuimba, ancien notable de cour retiré au début du règne d’Álvaro VI pour organiser la résistance, préserver le bukongo et préparer Kinuani. Forgeron, stratège, gardien de manuscrits en natikongo, il administre Kuimba entre espace privé de consultation et grand espace public de justice. Père spirituel/politique de Kinuani, sévère mais visionnaire. Il meurt aveugle avant l’aube après avoir transmis des confidences à Kisita et Maa Miakubuku.
 
 Lignée : muisi Kuimba
