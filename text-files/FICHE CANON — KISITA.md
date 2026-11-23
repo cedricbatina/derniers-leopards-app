@@ -98,6 +98,8 @@ Elle guérit, donc elle menace les menteurs.
 
 **Double déception de Kisita** : son alliance espérée avec Nianzi n'aboutit pas, et une autre protégée est morte. Kisita finit par accepter Mutinu, tout en lui imposant au moins **un an de formation initiatique féminine** avant le mariage. La peur des manœuvres de Dobadola participe à son projet de protéger Kinuani et de peser sur son accession à de hautes responsabilités.
 
+**Mécanisme du rapprochement Kisita–Ma Ntombo — précision Founder.** Kinuani, ayant compris des circonstances atténuantes de la faute ancienne de Kisita, **entreprend une médiation auprès de sa sœur** afin qu'elle puisse se rapprocher de Kisita. Il lui demande aussi de respecter **Mutinu, la femme qu'il a librement choisie et aime**, et non Nianzi. **La réconciliation avec Kisita n'implique pas que Ntombo accepte Mutinu** : elle continue de la considérer comme une usurpatrice, tout en admirant davantage les qualités de son frère retrouvé. Le détail des circonstances atténuantes et de la conversation demeure à développer sans invention.
+
 **Attention aux deux réconciliations** : Kisita ↔ **Ma Ntombo** autour du mariage ; Mutinu ↔ Ma Ntombo seulement bien plus tard, après l'attentat contre Kinuani survenant après la mort de Nzongo.
 
 **Référence** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md`. Ces ajouts n'attestent pas une migration de la DB.
