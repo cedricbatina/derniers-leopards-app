@@ -100,6 +100,8 @@ Elle guérit, donc elle menace les menteurs.
 
 **Mécanisme du rapprochement Kisita–Ma Ntombo — précision Founder.** Kinuani, ayant compris des circonstances atténuantes de la faute ancienne de Kisita, **entreprend une médiation auprès de sa sœur** afin qu'elle puisse se rapprocher de Kisita. Il lui demande aussi de respecter **Mutinu, la femme qu'il a librement choisie et aime**, et non Nianzi. **La réconciliation avec Kisita n'implique pas que Ntombo accepte Mutinu** : elle continue de la considérer comme une usurpatrice, tout en admirant davantage les qualités de son frère retrouvé. Le détail des circonstances atténuantes et de la conversation demeure à développer sans invention.
 
+**Appréciation de Ne Nzongo — précision Founder.** Nzongo, qui a accéléré le mariage de Kinuani et Mutinu, confie un jour à **Kisita** qu'il considère leur union comme exemplaire et qu'il aurait aimé avoir, dans sa jeunesse, une épouse comme Mutinu. Il admire la manière dont Mutinu tient son foyer et gagne en importance sociale. **Cette confidence contribue au respect grandissant de Kisita pour Mutinu**, aux côtés des autres éléments déjà établis (formation initiatique, engagement envers Kinuani). Lorsque l'éloge parvient à Ma Ntombo, il nourrit son irritation.
+
 **Attention aux deux réconciliations** : Kisita ↔ **Ma Ntombo** autour du mariage ; Mutinu ↔ Ma Ntombo seulement bien plus tard, après l'attentat contre Kinuani survenant après la mort de Nzongo.
 
 **Référence** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md`. Ces ajouts n'attestent pas une migration de la DB.
