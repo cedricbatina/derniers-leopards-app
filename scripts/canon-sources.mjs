@@ -124,12 +124,7 @@ export function loadFicheCanonFromDir(dir) {
     (f) => /\.(?:txt|md)$/i.test(f) && /FICHE CANON/i.test(f),
   )
 
-  // Une fiche .md consolidée prime sur son ancien homonyme .txt.
-  // Ne jamais importer deux fois un personnage ni laisser un .txt historique
-  // écraser les décisions Founder consignées dans la fiche canonique .md.
-  const canonicalNames = new Set(names.filter((f) => /\.md$/i.test(f)).map((f) => toSlug(displayName(f.replace(/\.(?:txt|md)$/i, '')))))
   for (const fname of names) {
-    if (/\.txt$/i.test(fname) && canonicalNames.has(toSlug(displayName(fname.replace(/\.txt$/i, ''))))) continue
     const full = join(dir, fname)
     let text
     try {
