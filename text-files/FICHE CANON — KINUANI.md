@@ -1,5 +1,9 @@
 # FICHE CANON — Kinuani
 
+## Réconciliation des sources historiques de Kinuani (25 novembre 2026)
+
+La fiche unique présente **consolide** l'ancienne `FICHE CANON — KINUANI (mulongoki d’.txt` : les décisions Founder plus récentes de cette fiche `.md` prévalent sur les propositions ou dates obsolètes du texte ancien. **Éléments de conception anciens conservés comme pistes de mise en scène, non comme décisions Founder nouvelles :** contraste entre la parole publique de Kinuani (consensus, justice, débats) et le cloisonnement de ses défenses, caches et transmissions ; importance de la forge comme lieu politique ; objets de mémoire et de pouvoir (canne aux visages des chefs de Kuimba, Nzongo compris, et sa conservation secrète ultérieure) ; mobilier *kiti/biti*, *mesa*, *ta nawa*, matières locales (bois, raphia, argile, kaolin), motifs géométriques et léopard. **Ne pas transformer les anciennes suggestions sur 500 fusils, une production de plusieurs dizaines d'armes ou les chevaux en faits acquis** : les capacités de réparation et d'étude des armes restent soumises au canon récent. Les éléments historiques antérieurs demeurent récupérables dans l'historique Git de la fiche supprimée après réconciliation, sans seconde fiche active.
+
 ## Canon chronologique prioritaire — Kinuani né fin juillet 1620 (Founder, 17 novembre 2026)
 
 **Naissance : fin juillet 1620**, jour exact non donné. Les âges ci-dessous sont calculés en années révolues ; ils **supplantent les anciennes mentions « 16 ans en juin 1636 » et « 17 ans en juin 1636 »**, qui sont incompatibles avec cette naissance. Les événements datés ne sont pas déplacés.
