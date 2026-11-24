@@ -18,6 +18,8 @@ Deux strates figurent déjà dans le canon. Elles ne sont **pas fusionnées** ic
 
 Maître / ancien à **Muyonzi**. Nzongo y envoie des protégés **deux ans** en réparation : **Mabanza, Fila, Ntadi, Kualu**. Savoirs : apiculture, lecture des lignes, acupression, discipline de vie. Mabanza revient trop tard pour empêcher l’union Mikembi–Ndebeka.
 
+**Crise de 1648 et enquête Nzungani — précision Founder.** Ta Mberi revient au Mayombe avec **Kinuani, Mutinu, leurs enfants et quelques fidèles** en exil provisoire ; il **laisse des soldats renforcer la protection de Nzongo** à Kuimba. La famille de Kinuani est autorisée à faire un **détour par Boko**, avec une limite de temps pour rejoindre le Mayombe. Ta Mberi se fie à l'intégrité de Kinuani et promet une enquête sous **six mois**, qui ne s'achève **qu'après huit mois**. Après la **mort de Mukueke** au Mayombe, il mandate **Nzungani**, jeune disciple du pisteur, pour enquêter à Kuimba ; ses renseignements et ceux des mabembe conduisent à identifier des **exécutants**, **pas les commanditaires**. Ne pas attribuer de condamnation prouvée à Dobadola à ce stade. Le terme **agene** désigne une boisson alcoolisée et **non un nom de soldat**.
+
 ### Couche 2 — Mayombe, 1643–1644 (dictée Founder récente)
 
 **Ne Mberi**, mfumu mbanza du Mayombe, de la trempe de Ne Nzongo. Sage, humble, charismatique, traditionaliste. Kinuani l’avait **aperçu** aux funérailles de Ne Mawungu, **sans** entretien. Le ntumua présente les mandats. Il interdit les **effusions de sang** : préserver le sang ancestral, éviter mort et blessures graves. Coups et neutralisations non létales selon mandat, **sans torture**. Des égratignures accidentelles restent possibles.
