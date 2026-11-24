@@ -22,6 +22,8 @@ Elle sert de boussole quand le clan bascule : elle voit les causes, pas seulemen
 
 3) Place exacte dans la saga (canon actuel)
 
+**Conviction successorale de Nzongo vers 1645–1646 — précision Founder (datation indicative).** À ce stade, Nzongo est **personnellement convaincu** que **Kinuani devrait lui succéder comme mfumu de Kuimba** ; il ne s'agit plus seulement d'une possibilité vague, **mais ni d'une désignation officielle ni d'une consécration**. Il confie cette conviction à **Mama Kisita**, déjà persuadée que Kinuani est l'un des meilleurs atouts de Kuimba, et lui demande de **préparer discrètement le terrain auprès des réseaux féminins** en vue de l'autorité de **Ma/Maa Miakubuku**, figure suprême à Kuimba chargée de la consécration du mfumu. **« Makoboko » était une erreur de dictée : ne pas créer d'autre personnage.** Nzongo confie également à Kisita des **informations et savoirs à transmettre** s'il ne peut le faire lui-même, sans inventer leur contenu. Un **maître forgeron fidèle, responsable quotidien de la forge principale de Kuimba** lorsque Nzongo n'y est pas, connaît lui aussi des secrets et le souhait de Nzongo pour l'avenir du pays. **Son nom n'est pas encore retrouvé : ne pas le fabriquer ni le confondre d'office avec un autre forgeron.** Préserver la différence entre préparation vers 1645–1646 et consécration ultérieure de Kinuani déjà située dans le canon après son retour de Mbanza Kongo.
+
 Confidente de Nzongo : Nzongo lui parle avant de mourir (fin mai 1650), avec Maa Miakubuku comme témoin/autorité morale.
 
 Après la mort : elle est mêlée au nœud “sceptre / manuscrits / héritage” (ce qui déclenche le procès).
