@@ -20,7 +20,9 @@
 
 **Allusions à la succession dans les conversations avec Mutinu — précision Founder (novembre 2026).** Nzongo encourage parfois Mutinu en évoquant **indirectement** l'avenir de Kuimba et du Kongo : par proverbes, qualités requises d'un futur **mfumu mbanza**, maîtrise et pratique du **Bukongo**, sagesse et aptitude à gouverner. Il **pense à Kinuani**, qu'il envisage comme possible successeur, et espère que **Mutinu restera à ses côtés**, leur longo constituant à ses yeux une force commune. Il peut lui laisser entendre qu'elle participera un jour à la conduite du pays, **sans la désigner explicitement comme cheffe ni annoncer une succession décidée**. Mutinu reconnaît dans les qualités décrites celles de son époux. La pudeur, le sous-entendu et la prudence politique priment sur toute proclamation. **Ne pas confondre espoir de Nzongo, nomination effective et succession future déjà établie.**
 
-**Sécurité et chronologie 1645–1648 — précision Founder.** Vers **1645**, **trois soldats européens capturés**, auparavant engagés dans l'appui aux razzias, sont détenus sous surveillance à Kuimba ; les événements les concernant se déroulent entre **1645 et 1647**. Les **tentatives d'empoisonnement visant Nzongo** et les **attaques contre Kinuani** se multiplient dans le contexte de sa représentation orale croissante, sans attribuer ici des auteurs ou dates non confirmés. Kinuani participe aussi à des **gardes nocturnes**. **1647** : attaque de Kuimba déjà documentée, avec **Mfuila** comme traître intérieur et **Babueta** parmi les acteurs de l'offensive ; défenses par dents/griffes de léopard et alertes sonores déjà consignées. **1648** : exil de Kinuani après l'affaire **Nganga Mungua**, décision de Nzongo ; ne pas confondre avec la mission au Mayombe de **1643–1644**. Le captif européen soumis au zikou et **Mfuila**, également soumis au zikou dans une autre affaire, sont **deux personnages et épisodes distincts**.
+**Rectificatif Founder — crise de 1648 et rôle exact de Nzongo.** Après plusieurs tentatives d'empoisonnement et d'assassinat entre **1645 et 1647** (dont une flèche reçue par **Kinuani près du bras droit en protégeant Nzongo**), Kinuani propose de soumettre au conseil des anciens une action contre les infiltrations et conspirations ; **aucune purge exécutée à ce stade**. En **1648**, pendant la mission de Kinuani liée à **Nganga Mungua**, des conspirateurs font utiliser à Nzongo une **eau pour la toilette du visage**, suivie d'une perte de vision très rapide (presque totale en **deux jours**). Un proche non identifié a dérobé une ancienne flèche reconnaissable de Kinuani, datant d'après sa mission de 1644 au Mayombe ; les adversaires s'en servent pour assassiner Nganga Mungua et l'incriminer. Dobadola et d'autres réclament le **nkasa**. Informé par un émissaire, **Ta Mberi/Tambire** arrive de la région voisine ; Kinuani l'intercepte avant Kuimba, armé et paré de ses distinctions de guerre, réclame réparation et affirme son innocence ; **Mukueke** le reconnaît. Ta Mberi visite Nzongo et **recommande l'éloignement provisoire de Kinuani pendant l'enquête**, plutôt qu'un jugement hâtif. **Nzongo ne décide pas seul de l'exil : il conseille le départ avec la famille**, et accepte de différer les mesures contre les conspirateurs pour ne pas punir d'innocents. Kinuani perd provisoirement ses titres et dignités, non ses armes. Distinguer cet épisode de la mission Mayombe de **1643–1644** et de la mort de Nzongo en **1650**. Les responsabilités exactes et le mécanisme de l'atteinte oculaire restent ouverts.
+
+**Sécurité et chronologie 1645–1648 — précision Founder.** Vers **1645**, **trois soldats européens capturés**, auparavant engagés dans l'appui aux razzias, sont détenus sous surveillance à Kuimba ; les événements les concernant se déroulent entre **1645 et 1647**. Les **tentatives d'empoisonnement visant Nzongo** et les **attaques contre Kinuani** se multiplient dans le contexte de sa représentation orale croissante, sans attribuer ici des auteurs ou dates non confirmés. Kinuani participe aussi à des **gardes nocturnes**. **1647** : attaque de Kuimba déjà documentée, avec **Mfuila** comme traître intérieur et **Babueta** parmi les acteurs de l'offensive ; défenses par dents/griffes de léopard et alertes sonores déjà consignées. **1648** : exil provisoire de Kinuani après l'affaire **Nganga Mungua**, recommandé par Ta Mberi, départ familial conseillé par Nzongo ; ne pas confondre avec la mission au Mayombe de **1643–1644**. Le captif européen soumis au zikou et **Mfuila**, également soumis au zikou dans une autre affaire, sont **deux personnages et épisodes distincts**.
 
 **Attraction des maîtres artisans, captifs surveillés et incident du zikou — précision Founder (novembre 2026 ; datation interne à fixer).** L'intérêt nouveau de **Kinuani pour la forge à travers les armes à feu** réjouit **Nzongo**. Kinuani collabore étroitement avec les artisans de haut niveau déjà établis à Kuimba et, au fil de ses voyages et missions, **convainc d'autres spécialistes de venir s'y installer** : **trois nouveaux maîtres artisans** sont notamment recrutés, **en plus des artisans locaux** ; **ne pas inventer leurs noms ni leurs spécialités**, encore indéterminées. Il recherche aussi les savoirs d'intellectuels et de techniciens très expérimentés, sans leur imposer des titres académiques modernes. La compréhension, la réparation et l'éventuelle reproduction des armes à feu fascinent cette équipe, sans succès de fabrication garanti. Certains **soldats adverses capturés** sont maintenus sous surveillance étroite, relativement libres de circuler **dans des limites contrôlées à Kuimba** et tenus à l'écart de certains espaces ; leurs connaissances, notamment du tir, peuvent être sollicitées. **Épisode narratif à dater** : durant un exercice de tir, **l'un de ces captifs tente de tirer sur des participants et blesse une personne** ; il est rapidement neutralisé. Il subit le **zikou**, décrit par le Founder comme **un ensevelissement jusqu'au cou pendant trois jours et trois nuits**. Il **survit au supplice** ; sa maladie fébrile et son décès surviennent **quatre à cinq mois plus tard**, malgré les soins tentés. La référence aux **premières pluies de Ntomo, vers septembre**, reste à raccorder à la chronologie, sans situer automatiquement le décès à cette période. **Ne pas attribuer avec certitude le décès à la malaria ni aux « miasmes », ni directement au supplice** : ce sont des hypothèses ou interprétations des personnages, non un diagnostic établi. Ne pas transformer cet épisode en norme juridique générale ou en pratique historique attestée sans recherche distincte ; ne pas fixer l'année ni l'identité de la victime blessée sans précision du Founder.
 
@@ -53,7 +55,7 @@ Masque : dureté légitime, justice sans tremblement.
 
 Arme : forge + institution (jugements) + réseau d’assistants + secrets.
 
-Point de rupture : l’affaire Nganga Mungua / Kinuani accusé → il sacrifie l’homme pour sauver l’ordre (exil).
+Point de rupture : l’affaire Nganga Mungua / Kinuani accusé → il accepte l'éloignement provisoire recommandé par Ta Mberi pour éviter une condamnation précipitée.
 
 ## Identité et place dans la saga
 
@@ -77,7 +79,7 @@ Administre entre espace privé de consultation et grand espace public de justice
 
 Pour l’accueil des rescapés : **Miakubuku décide, Nzongo exécute**.
 
-Point de rupture déjà inscrit : affaire Nganga Mungua / Kinuani accusé — il sacrifie l’homme (exil) pour sauver l’ordre du clan.
+Point de rupture déjà inscrit : affaire Nganga Mungua / Kinuani accusé — il accepte l'éloignement provisoire conseillé par Ta Mberi et demande à Kinuani de partir avec sa famille.
 
 ## Animaux
 
@@ -104,7 +106,7 @@ Voyage de dignitaire : **kipoui / kipoyi**, quatre porteurs se relayant. Intenti
 
 **1644.** Reçoit neuf hommes en expiation ramenés du Mayombe, les remet à Kinuani. Autorise l’agrandissement. Mukelo Mutinu. Remarque l’autorité accrue de Mutinu après les jumeaux.
 
-**1648.** Décision d’exil de Kinuani pour apaiser Kuimba.
+**1648.** Ta Mberi préconise l'exil provisoire de Kinuani pendant l'enquête ; Nzongo lui conseille de partir avec sa famille pour apaiser Kuimba.
 
 **1649–1650.** Maladie, cécité, mort avant l’aube. Trois veillées. Sceptre / manuscrits introuvables. La succession n’est pas encore Kinuani : elle vient **après** Mbanza Kongo et les émissaires du Mani Kongo.
 
@@ -122,7 +124,7 @@ Masque : dureté légitime, justice sans tremblement.
 
 Arme : forge + institution (jugements) + réseau d’assistants + secrets.
 
-Point de rupture : l’affaire Nganga Mungua / Kinuani accusé → il sacrifie l’homme pour sauver l’ordre (exil).
+Point de rupture : l’affaire Nganga Mungua / Kinuani accusé → il accepte l'éloignement provisoire recommandé par Ta Mberi pour éviter une condamnation précipitée.
 
 **NE NZONGO** — Ancien militaire d'élite ayant servi à Mbanza Kongo ; veut que Kinuani serve d'abord Kuimba, puis le Kongo sous un roi digne. Se réfère à Kimbaluengele, ancien qu'il a connu (ne pas le fusionner sans preuve avec Ta Nkibaluengele de certaines fiches).
 
