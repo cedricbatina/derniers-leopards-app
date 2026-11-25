@@ -8,7 +8,7 @@ Nom : **Ma Ntombo**. Identifiant existant : `ma-ntombo`. Pas de second personnag
 
 Ce n’est **pas** Ma Lukula. Ce n’est **pas** Nianzi. Ce n’est **pas** Lufuandi (sœur de Mutinu). Ce n’est **pas** Ma Ndialu (sœur de Kisita).
 
-Née le **18/10/1622**. Ma Musakanda meurt le **29/10/1622**, onze jours après cet accouchement difficile. Cela recoupe la mort de la mère de Kinuani « onze jours après ». Kinuani est l’aîné (1620).
+Née le **18/10/1622**, environ six mois après Mutinu (née le **08/04/1622**, arbitrage Founder du 25 novembre 2026). Ma Musakanda meurt le **29/10/1622**, onze jours après cet accouchement difficile. Cela recoupe la mort de la mère de Kinuani « onze jours après ». Kinuani est l’aîné (1620).
 
 Élevée d’abord avec Kinuani par l’épouse de Ne Nzongo ; après le décès de celle-ci, **Mama Kisita** l’élève. Elle tient Kisita pour une **grand-mère**.
 
