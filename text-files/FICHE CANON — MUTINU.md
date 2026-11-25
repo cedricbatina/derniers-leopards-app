@@ -1917,3 +1917,11 @@ Après le retour de Kinuani de ses fonctions à Mbanza Kongo, son rappel à Kuim
 - Lors de conversations ultérieures de rapprochement, Ntombo raconte à Mutinu cet échange avec Kinuani, reconnaît ses propres erreurs, lui demande sincèrement pardon et peut pleurer devant elle. Le premier geste de compassion et les cadeaux à la naissance précèdent les excuses explicites.
 - Ntombo est d'environ deux ans la cadette de Kinuani ; sa différence d'âge exacte avec Mutinu est à vérifier. Elle a grandi essentiellement à Kuimba, avec peu de voyages et une expérience extérieure limitée. Ses anciennes rigidités et réactions doivent être rendues comme traits évolutifs, non comme absence d'intelligence.
 - Ne pas retenir ni développer la phrase abandonnée par le Founder (« Ntombo tient un… ») : idée explicitement retirée.
+
+
+## CORRECTION DE CONSIGNATION — FAUTE ÉTABLIE DE KISITA ET DATES DE NTOMBO (25 NOVEMBRE 2026)
+Ce correctif remplace les réserves infondées du complément précédent, sans effacer le texte historique :
+- **Ma Ntombo est née le 18 octobre 1622**, date déjà fixée dans `FICHE CANON — MA NTOMBO.md`. Sa mère **Ma Musakanda meurt le 29 octobre 1622**, onze jours après cet accouchement. **Kinuani est né fin juillet 1620**. Ne plus qualifier ces dates d'incertaines.
+- **La faute de Kisita est établie dans `FICHE CANON — KISITA.md`** : elle n'a pas porté secours à Ma Musakanda à temps et a refusé aux soignants l'accès à son savoir de pharmacopée. Kisita éprouve également de la culpabilité ; ce sentiment ne remplace pas les faits établis. Ne plus écrire que sa responsabilité n'est qu'une hypothèse.
+- Pour toute comparaison d'âge avec Mutinu, lire d'abord ses repères canoniques et les rectificatifs Founder ; ne pas annoncer un point « ouvert » par simple absence de recherche.
+- La réconciliation Ntombo–Mutinu commence autour de la naissance des jumeaux en 1644, conformément au rectificatif Founder récent, et non après l'attentat ultérieur.
