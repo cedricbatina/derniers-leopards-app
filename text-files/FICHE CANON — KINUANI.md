@@ -132,7 +132,7 @@ Kinuani a intériorisé une organisation quotidienne stricte, héritée de Nzong
 
 ## Couple avec Mutinu
 
-Rencontre **Mpika / Mfuti, juin 1636** (**Kinuani 15 ans**, Mutinu 15 ans ; âge calculé depuis la naissance de Kinuani fin juillet 1620). Mariage **août 1639**. Installation Kuimba **fin août ou début septembre 1639**. **Nkodia** naît en **1640**. Mapasa **Muanda et Mpasi** vers **août 1644**, titres Mama / Ma Ngudi et Tata / Ta Ngudi. **Lunungu** déjà inscrit.
+Rencontre **Mpika / Mfuti, juin 1636** (**Kinuani dans sa 16e année / 15 ans révolus**, Mutinu dans sa 15e année / 14 ans révolus ; naissances fin juillet 1620 et 8 avril 1622). Mariage **août 1639**. Installation Kuimba **fin août ou début septembre 1639**. **Nkodia** naît en **1640**. Mapasa **Muanda et Mpasi** vers **août 1644**, titres Mama / Ma Ngudi et Tata / Ta Ngudi. **Lunungu** déjà inscrit.
 
 Mutinu le **choisit**. Il la préférerait, tout en sachant que le mariage est une affaire d’État. Dans le clan Kuimba, tantes et familles ont grande autorité. Pendant les jeux, il se contient, l’appelle sa sœur, ne commet pas d’écart, ne formule pas encore de proposition. Il ne connaît pas assez Mama Tusikila pour lui demander de plaider. Nianzi lui est destinée au pays ; elle ne préoccupe pas fortement son esprit à Mfuti. Ne pas le qualifier automatiquement de faible : désaccord de valeurs avec Mutinu (« On ne me choisit pas. C’est moi qui choisis. »).
 
