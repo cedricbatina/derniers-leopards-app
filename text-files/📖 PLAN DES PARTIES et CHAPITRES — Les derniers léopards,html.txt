@@ -236,3 +236,16 @@ Actuellement, ta table tags n’a pas de description — d’où l’erreur “U
 
 ---
 NOTE FOUNDER — 22 octobre 2026 : le banquet d'accueil du premier jour à Mfuti a été abandonné, déplacé à la FIN des festivités (UN seul grand banquet de Mama Tusikila). Ne Mawungu, directeur du couvent, est défait dans une lutte institutionnelle, se retire dans son fief et meurt peu après ; le placement avant/après le mariage de Kinuani et Mutinu est encore à arbitrer. Kinuani et les jeunes fils du clan sont rappelés à Kuimba par Ne Nzongo avant la fin de la formation. Plan des chapitres à adapter après comparaison à la DB et aux tomes de la saga, dont « Mama i Mama » centré sur Mutinu.
+
+
+RECTIFICATIF FOUNDER — DÉNOUEMENT DU TOME 1 APRÈS MBWILA (25 NOVEMBRE 2026)
+Statut : décision narrative Founder ; complète les plans historiques sans supprimer leurs formulations. Ce rectificatif prévaut sur l'ordre ancien qui plaçait l'incendie de Mbanza Kongo avant la mort de Kinuani ou terminait le tome à sa mort.
+
+- 30 octobre 1665 : Kinuani meurt à Mbwila. À cet instant Mbanza Kongo N'A PAS ENCORE ÉTÉ INCENDIÉE. L'incendie survient APRÈS le 30 octobre, à la suite de la défaite totale ; ne pas dater plus précisément sans arbitrage Founder.
+- Après la défaite : désolation et débandade à l'échelle du Kongo ; Mbanza Kongo brûle, Kuimba est dévastée. Familles et survivants fuient vers différentes destinations, notamment les grandes forêts du Mayombe et Mpumbu, vers le Pool et les territoires au sud de l'actuel Brazzaville.
+- Le tome 1 NE SE TERMINE PAS à la mort de Kinuani. Son dénouement suit Mutinu, Ma Ntombo et les survivants quittant Kuimba : elles rassemblent des familles, des soldats restants, des disciples et d'autres membres de leur communauté, puis traversent le fleuve pour se réfugier sur l'autre rive.
+- Destination : une concession/ville préalablement aménagée et fortifiée par Kinuani, proche du pays du clan maternel de Mutinu, où avait eu lieu leur deuxième mariage. Ce n'est pas une installation improvisée après la bataille.
+- Origine de la concession : elle avait été accordée à Kinuani par une autorité de Mbanza Kongo de l'époque, en reconnaissance de sa loyauté et de ses services lorsqu'il était devenu général. Traditionaliste, il avait tissé des relations avec d'autres traditionalistes de l'autre rive. Ne pas inventer le nom de l'autorité, du territoire ou une date d'attribution.
+- Kinuani avait aménagé et fortifié ce refuge comme plan de secours militaire et familial, en prévision d'une éventuelle crise du Kongo, tout en croyant à la victoire. Il s'y était rendu une ou deux fois avec Mutinu et quelques disciples. Sa prévoyance permet aux survivants de poursuivre leur vie.
+- Sens du dernier mouvement narratif : perte de Kinuani, dévastation de Kuimba, catastrophe du Kongo, rassemblement des survivants par Mutinu et Ma Ntombo, traversée du fleuve et installation dans le refuge préparé ; la continuité des familles et de la mémoire clôt le tome.
+- Les dates, noms et détails non précisés demeurent ouverts. Ce complément ne vaut pas synchronisation DB, rédaction définitive de scène ni validation Quality.
