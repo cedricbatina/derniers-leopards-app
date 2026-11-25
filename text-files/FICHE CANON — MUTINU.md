@@ -1906,3 +1906,14 @@ Après le retour de Kinuani de ses fonctions à Mbanza Kongo, son rappel à Kuim
 - Plus tard, Ntombo reconnaît qu'elle est restée prisonnière d'anciennes rancœurs et n'a pas suffisamment respecté la sincérité de Mutinu, son mariage et sa place de mère de trois enfants ; elle présente alors ses excuses. Les paroles blessantes cessent dès ce rapprochement initial, avant même que leur amitié soit profonde.
 - Progression concrète : rencontres courtoises, invitations à manger chez Ntombo avec son mari, visites de Ntombo à l'atelier de Mutinu, commandes de vêtements, teintures et coiffures ; confiance et conversations se développent peu à peu. Certaines anciennes alliées de Ntombo restent hostiles à Mutinu, sans empêcher l'évolution personnelle de Ntombo.
 - Les blessures ultérieures de Kinuani, notamment après la mort de Ne Nzongo, approfondissent la solidarité déjà amorcée ; ne pas les présenter comme la première preuve de la sincérité de Mutinu ni comme le début de la réconciliation.
+
+
+## RECTIFICATIF FOUNDER — MA MUSAKANDA ET LE CHOC INTIME DE NTOMBO EN 1644 (25 NOVEMBRE 2026)
+**Complément à la réconciliation amorcée en 1644 ; ne pas substituer le poignardement ultérieur à ce déclencheur.**
+
+- Ma Musakanda, mère biologique de Kinuani et de Ma Ntombo, est morte onze jours après avoir accouché de Ntombo, des suites de complications de l'accouchement. Kisita se sent coupable en lien avec cette disparition ; le détail de sa responsabilité effective et les relations de rancœur doivent être lus dans sa fiche canonique, sans transformer automatiquement le sentiment de culpabilité en faute prouvée.
+- Lors de l'accouchement difficile des jumeaux de Mutinu en 1644, Ntombo redoute de revivre l'histoire de sa propre mère : Kinuani pourrait perdre son épouse et les enfants, notamment le jeune Nkodia, leur mère. Le souvenir familial est ravivé.
+- Le moment qui bouleverse profondément Ntombo est la détresse de son frère : dans leur intimité fraternelle, Kinuani pleure devant elle, se confie et laisse voir sa peur. Ntombo voit la souffrance de celui qui a déjà perdu sa mère dans des circonstances comparables. C'est un moteur majeur de sa transformation envers Mutinu.
+- Lors de conversations ultérieures de rapprochement, Ntombo raconte à Mutinu cet échange avec Kinuani, reconnaît ses propres erreurs, lui demande sincèrement pardon et peut pleurer devant elle. Le premier geste de compassion et les cadeaux à la naissance précèdent les excuses explicites.
+- Ntombo est d'environ deux ans la cadette de Kinuani ; sa différence d'âge exacte avec Mutinu est à vérifier. Elle a grandi essentiellement à Kuimba, avec peu de voyages et une expérience extérieure limitée. Ses anciennes rigidités et réactions doivent être rendues comme traits évolutifs, non comme absence d'intelligence.
+- Ne pas retenir ni développer la phrase abandonnée par le Founder (« Ntombo tient un… ») : idée explicitement retirée.
