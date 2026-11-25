@@ -106,7 +106,7 @@ Elle guérit, donc elle menace les menteurs.
 
 **Appréciation de Ne Nzongo — précision Founder.** Nzongo, qui a accéléré le mariage de Kinuani et Mutinu, confie un jour à **Kisita** qu'il considère leur union comme exemplaire et qu'il aurait aimé avoir, dans sa jeunesse, une épouse comme Mutinu. Il admire la manière dont Mutinu tient son foyer et gagne en importance sociale. **Cette confidence contribue au respect grandissant de Kisita pour Mutinu**, aux côtés des autres éléments déjà établis (formation initiatique, engagement envers Kinuani). Lorsque l'éloge parvient à Ma Ntombo, il nourrit son irritation.
 
-**Attention aux deux réconciliations** : Kisita ↔ **Ma Ntombo** autour du mariage ; Mutinu ↔ Ma Ntombo seulement bien plus tard, après l'attentat contre Kinuani survenant après la mort de Nzongo.
+**Attention aux deux réconciliations** : Kisita ↔ **Ma Ntombo** autour du mariage ; Mutinu ↔ Ma Ntombo : **rapprochement amorcé en 1644 pendant l'accouchement difficile des jumeaux** ; l'attentat ultérieur approfondit ce lien sans en être l'origine.
 
 **Référence** : `text-files/RECTIFICATIFS-FOUNDER-KONGO-DIBUIDI-2026-10-11.md`. Ces ajouts n'attestent pas une migration de la DB.
 
@@ -165,3 +165,6 @@ Kisita, hantée par la faute ancienne, fait venir des guérisseuses réputées d
 ## Complément Founder — 21 novembre 2026 : sens de la condition initiatique
 
 **Kisita**, lors de l'intercession de **Mama Tusikila** à Kuimba, exige le passage de **Mutinu** par un couvent féminin d'élite et son initiation approfondie au **Kikumbi**. Elle espère que les difficultés, obligations et serments décourageront Mutinu d'épouser Kinuani. L'effet est inverse : Mutinu s'investit pleinement après environ un mois et aurait voulu prolonger sa formation au-delà d'un an. **Kikumbi désigne une philosophie/discipline du Bukongo, non le nom de l'institution.** La préparation prénuptiale auprès des tantes de Mutinu a déjà eu lieu **avant** son entrée au couvent. Ne pas confondre l'intention de Kisita avec l'effet réel de sa décision. Référence : registre Founder, complément du 21 novembre 2026.
+
+
+**Founder — rôle de Kisita dans l'apaisement de Ntombo (25 novembre 2026).** Après avoir rendu visite à Kinuani dans le campement établi près du lieu de l'accouchement difficile des jumeaux en 1644, Ma Ntombo raconte à Kisita la confidence bouleversante de son frère : sa peur de perdre Mutinu comme il a perdu sa mère, ses larmes qu'il tentait de cacher, son excuse embarrassée. **Kisita est touchée** et conseille à Ntombo de faire la paix avec Mutinu pour le bien de Kinuani. Ce conseil participe à un rapprochement progressif ; ne pas situer son déclenchement après l'attentat au poignard. La faute ancienne réelle de Kisita concernant la mort de Ma Musakanda demeure canonique et distincte de cette scène.
