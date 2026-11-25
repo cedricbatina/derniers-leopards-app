@@ -32,7 +32,7 @@ Soutient d’abord **Nianzi** contre Mutinu. Hostilité durable, paroles blessan
 
 **Éloges de Nzongo et jalousie de Ma Ntombo — précision Founder.** **Ma Ntombo supporte également mal l'influence privilégiée de Mutinu sur Nzongo : elle estime que les grâces et la confiance de Nzongo auraient dû lui revenir, à elle, ou à une autre femme de Kuimba. Cette prétention est son sentiment subjectif, non une priorité institutionnelle avérée.** Ma Ntombo, qui conserve une image plus intimidante de Nzongo, apprend que celui-ci estime avoir eu raison d'accélérer le mariage de Kinuani et Mutinu, admire leur entente et la place sociale de Mutinu, et a même confié à Kisita qu'il aurait aimé une femme comme elle dans sa jeunesse. Elle ne comprend pas ce qu'on trouve à Mutinu et s'en irrite davantage. À l'inverse, Mutinu entretient avec Nzongo une relation de confiance presque filiale, sans être intimidée par son titre de **fogomba**. Ne pas confondre l'admiration de Nzongo pour Mutinu avec une décision officielle du conseil.
 
-Réconciliation **Mutinu ↔ Ma Ntombo** après l’attentat au poignard, **après** la mort de Nzongo : elle voit Mutinu défendre Kinuani « comme une lionne ». Distincte de la réconciliation Kisita ↔ Ma Ntombo autour du mariage.
+**Rapprochement Mutinu ↔ Ma Ntombo amorcé en 1644**, pendant l'accouchement difficile des jumeaux, à la suite de la confidence de Kinuani au campement ; gestes de rapprochement puis excuses progressives. L'attentat au poignard, après la mort de Nzongo, **approfondit** ce rapprochement, il ne le déclenche pas. Distincte de la réconciliation Kisita ↔ Ma Ntombo autour du mariage.
 
 Nièce de Kisita. Kisita est tante maternelle.
 
@@ -40,3 +40,6 @@ Nièce de Kisita. Kisita est tante maternelle.
 
 - **Ma Lukula** : mère de Kisita et de Ma Musakanda, sœur de Ne Nzongo. Grand-mère maternelle de Kinuani et de Ma Ntombo.
 - **Nianzi** : amie d’enfance, vivante, autre femme.
+
+
+**Founder — confidence fraternelle au campement (25 novembre 2026).** Kinuani est né le **27 juillet 1620** ; à la naissance de Ma Ntombo le 18 octobre 1622 et à la mort de Ma Musakanda le 29 octobre 1622, il avait déjà plus de deux ans. En 1644, Ntombo visite son frère dans le campement qu'il a aménagé à proximité du lieu de l'accouchement difficile de Mutinu, pour recevoir régulièrement des nouvelles. Malgré sa virulence envers Mutinu, leur affection fraternelle subsiste. Kinuani retient d'abord ses émotions ; la peur de perdre son épouse lui rappelle la mort de leur mère. Il finit par laisser couler des larmes qu'il essaie de cacher et s'excuse auprès de sa sœur, bouleversée de découvrir une vulnérabilité jamais exprimée ainsi. **Ntombo n'éprouve pas nécessairement de haine envers Mutinu** : son rejet tient surtout à la déception que son frère n'ait pas épousé **Nianzi (Nyandi)**. Elle commence à réviser son jugement, puis en parle à Kisita, émue elle aussi ; Kisita lui conseille de faire la paix avec Mutinu pour le bien de Kinuani. La confidence est le **déclencheur d'une évolution**, non une réconciliation instantanée. Les visites, cadeaux, excuses et rapprochements ultérieurs suivent leur progression canonique.
