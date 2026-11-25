@@ -111,7 +111,7 @@ Pendant **environ le premier mois** de sa vie au couvent, Mutinu garde cette ran
 
 ### Continuité et repères
 
-- **Mfuti T0** : Mutinu 15 ans, Kinuani 17 ans ; intuition de Tusikila **dès le premier jour**, puis plusieurs rencontres pendant les festivités ; banquet **unique et final**.
+- **Mfuti T0** : Mutinu dans sa 15e année (14 ans révolus), Kinuani dans sa 16e année (15 ans révolus) ; intuition de Tusikila **dès le premier jour**, puis plusieurs rencontres pendant les festivités ; banquet **unique et final**.
 - **Vers T0+7 mois et après les négociations** : Mutinu entre dans son couvent féminin ; **mois 1 environ** = colère persistante ; puis apprentissage du recul.
 - **Août 1639** : mariage, après **au moins douze mois d’initiation**. Le repère T0+24 mois et les âges associés sont supplantés par les dates civiles arbitrées.
 - **Tome 3** : l'arc psychologique et la voix de Mutinu sont des **candidats forts**, mais l'affectation précise des scènes exige la matrice chronologie × POV × volume.
