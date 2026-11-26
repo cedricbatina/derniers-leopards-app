@@ -197,7 +197,23 @@
       "scenesHint": "Write and structure.",
       "timelineHint": "Chronology.",
       "glossary": "Glossary",
-      "glossaryHint": "Terms and vocabulary."
+      "glossaryHint": "Terms and vocabulary.",
+      "overviewKicker": "Overview",
+      "overviewTitle": "The project material",
+      "overviewLead": "See the structured material at a glance, then open the area that needs your attention.",
+      "reviewScenes": "Review scenes",
+      "overview": {
+        "books": "Books",
+        "booksHint": "Volumes and project parts.",
+        "characters": "Characters",
+        "charactersHint": "Profiles and relationships to review.",
+        "scenes": "Scenes",
+        "scenesHint": "Moments to organize or revisit.",
+        "timeline": "Events",
+        "timelineHint": "Milestones that support continuity."
+      },
+      "nextKicker": "Continue working",
+      "nextTitle": "Choose a workspace"
     },
     "scenes": {
       "backToProject": "Back to project",

@@ -196,7 +196,23 @@
       "scenesHint": "Escrever e estruturar.",
       "timelineHint": "Cronologia.",
       "glossary": "Glossário",
-      "glossaryHint": "Termos e vocabulário."
+      "glossaryHint": "Termos e vocabulário.",
+      "overviewKicker": "Visão geral",
+      "overviewTitle": "A matéria do projeto",
+      "overviewLead": "Veja de relance o material já estruturado e abra o espaço que precisa da sua atenção.",
+      "reviewScenes": "Ver cenas",
+      "overview": {
+        "books": "Livros",
+        "booksHint": "Volumes e partes do projeto.",
+        "characters": "Personagens",
+        "charactersHint": "Perfis e relações a consultar.",
+        "scenes": "Cenas",
+        "scenesHint": "Momentos a organizar ou rever.",
+        "timeline": "Eventos",
+        "timelineHint": "Referências úteis para a continuidade."
+      },
+      "nextKicker": "Continuar o trabalho",
+      "nextTitle": "Escolha um espaço"
     },
     "scenes": {
       "backToProject": "Voltar ao projeto",
