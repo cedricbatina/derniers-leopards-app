@@ -179,7 +179,7 @@ try {
       if (!active && !raw) continue
       const old = current.description || ''
       const notes = current.notes || ''
-      const nextNotes = old && !notes.includes(old) && (raw || active) ? [notes,archiveMarker,old].filter(Boolean).join('\n\n') : notes
+      const nextNotes = old && old !== active?.description && !notes.includes(old) && (raw || active) ? [notes,archiveMarker,old].filter(Boolean).join('\n\n') : notes
       if (nextNotes !== notes) {
         await conn.execute('INSERT INTO character_dossiers (character_id,notes) VALUES (?,?) ON DUPLICATE KEY UPDATE notes=VALUES(notes)',[current.id,nextNotes])
         bump('dossiers','updated')
