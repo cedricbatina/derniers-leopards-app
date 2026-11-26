@@ -22,9 +22,23 @@ const { data, pending, refresh, error: loadError } = await useFetch(
   { $fetch: apiFetch, credentials: 'include', headers: useRequestHeaders(['cookie']) }
 )
 const canManage = computed(() => data.value?.can_manage !== false)
+const rawDescription = computed(() => data.value?.character?.description || '')
+const descriptionIsArchive = computed(() => /(?:FICHE CANON|Rectificatif Founder|Corrections Founder|MATIÈRE BRUTE|Source canon GitHub)/i.test(rawDescription.value))
+const archiveText = computed(() => [descriptionIsArchive.value ? rawDescription.value : '', data.value?.canon?.dossier?.notes].filter(Boolean).join('\n\n'))
+const kinships = computed(() => {
+  const unique = new Map()
+  for (const link of data.value?.canon?.kinships || []) {
+    const key = link.slug+'|'+link.relation+'|'+link.line
+    if (!unique.has(key)) unique.set(key,link)
+  }
+  return [...unique.values()]
+})
 const profileFields = computed(() => [
   [t('characters.detail.roleInStory'), data.value?.canon?.profile?.role_in_story],
   [t('characters.detail.oneLiner'), data.value?.canon?.profile?.one_liner],
+  ['Naissance / Birth', data.value?.canon?.profile?.birth_year],
+  ['Portrait physique / Physical description', data.value?.canon?.profile?.physical],
+  ['Voix / Voice', data.value?.canon?.profile?.voice],
   [t('characters.detail.occupation'), data.value?.canon?.profile?.occupation],
   [t('characters.detail.personality'), data.value?.canon?.profile?.personality],
   [t('characters.detail.strengths'), data.value?.canon?.profile?.strengths],
@@ -145,11 +159,22 @@ async function save() {
       <div class="card-body">
         <div class="font-bold text-lg">{{ data?.character?.name }}</div>
         <div class="text-xs text-muted mt-1">Slug: {{ data?.character?.slug }}</div>
-        <div v-if="data?.character?.description" class="text-sm text-muted mt-1 whitespace-pre-wrap">
-          {{ data?.character?.description }}
+        <div v-if="rawDescription && !descriptionIsArchive" class="text-sm text-muted mt-1 whitespace-pre-wrap">
+          {{ rawDescription }}
         </div>
       </div>
     </div>
+    <section v-if="data?.canon?.profile" class="card">
+      <div class="card-body space-y-3">
+        <h2 class="font-semibold">Arcs narratifs / Narrative arcs</h2>
+        <div v-for="(key,index) in ['arc_tome1','arc_tome2','arc_tome3']" :key="key">
+          <template v-if="data.canon.profile[key]">
+            <h3 class="font-medium">Tome {{ index+1 }}</h3>
+            <p class="whitespace-pre-wrap text-sm">{{ data.canon.profile[key] }}</p>
+          </template>
+        </div>
+      </div>
+    </section>
     <section v-if="profileFields.length || dossierFields.length || data?.canon?.aliases?.length || data?.canon?.kinships?.length" class="grid gap-4 lg:grid-cols-2">
       <article v-if="profileFields.length" class="card">
         <div class="card-body space-y-3">
@@ -185,10 +210,17 @@ async function save() {
         <div class="card-body space-y-2">
           <h2 class="font-semibold">{{ t('characters.detail.kinships') }}</h2>
           <ul class="text-sm text-muted space-y-1">
-            <li v-for="link in data.canon.kinships" :key="`${link.slug}-${link.relation}-${link.line}`">{{ link.name }} — {{ link.relation }}</li>
+            <li v-for="link in kinships" :key="`${link.slug}-${link.relation}-${link.line}`">{{ link.name }} — {{ link.relation }}</li>
           </ul>
         </div>
       </article>
     </section>
+    <details v-if="archiveText && canManage" class="card">
+      <summary class="cursor-pointer p-4 font-medium">Archives de travail / Working archives — non canon actif</summary>
+      <div class="card-body">
+        <p class="text-sm text-muted">Sources historiques, rectificatifs et notes non consolidées.</p>
+        <pre class="whitespace-pre-wrap break-words text-sm">{{ archiveText }}</pre>
+      </div>
+    </details>
   </div>
 </template>

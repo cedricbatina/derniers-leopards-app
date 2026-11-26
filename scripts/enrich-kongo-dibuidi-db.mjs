@@ -28,6 +28,7 @@ const db = remote ? {
   database: process.env.DB_NAME_LOCAL || process.env.DB_NAME || 'derniers_leopards',
 }
 if (remote && (db.host !== '6i695q.myd.infomaniak.com' || db.database !== '6i695q_lesDerniersLeopards')) throw new Error('Cible Infomaniak incorrecte')
+const repairCharacters = process.argv.includes('--repair-characters')
 const counts = Object.fromEntries(['characters', 'profiles', 'dossiers', 'kinships', 'locations', 'tags', 'parts', 'chapters', 'scenes', 'scene_characters', 'scene_tags', 'timeline_events'].map(k => [k, { inserted: 0, updated: 0, unchanged: 0 }]))
 const bump = (table, kind) => counts[table][kind]++
 const slug = (value) => String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
@@ -144,8 +145,75 @@ async function upsertTag(name) {
 try {
   await conn.beginTransaction()
   const ficheBySlug = canonicalDescriptions()
+  // Keep raw historical material out of the active description and profile.
+  // Founder decisions 25 Nov: curated summaries are editorial, not manuscript.
+  const curated = {
+  "mutinu": {
+    "description": "Cinquième des sept filles de Ta Mualu et Ma Yudisa, Mutinu est une commerçante, initiée et héroïne majeure de la saga. Née le 8 avril 1622, elle rencontre Kinuani à Mfuti en juin 1636 et l’épouse en août 1639. Elle est mère de Nkodia, des mapasa Muanda et Mpasi, puis de Lunungu. Son autorité à Kuimba procède de son intelligence, de son réseau et de ses compétences propres.",
+    "birth_year": 1622,
+    "personality": "Franche, affirmative, persuasive et vive d’esprit ; elle défend ses choix, sait négocier et conjugue dignité, humour et discernement.",
+    "physical": "Visage symétrique, taille fine, démarche élégante, dentition régulière, sourire et fossettes.",
+    "arc_tome1": "Rencontre à Mfuti (14 ans révolus, dans sa 15e année) ; mariage en août 1639 à 17 ans ; foyer, influence à Kuimba et solidarité progressive avec Ma Ntombo dès l’accouchement difficile des jumeaux en 1644. Après Mbuila, elle quitte Kuimba avec les survivants.",
+    "arc_tome3": "Mama I Mama approfondit son éducation familiale, sa formation prénuptiale d’élite au Kikumbi, ses apprentissages ultérieurs, son autonomie économique et sa trajectoire de transmission. Aucune scène nouvelle n’est arrêtée ici."
+  },
+  "kinuani": {
+    "description": "Héros central de Kongo Dibuidi, né le 27 juillet 1620. Formé au couvent d’élite dirigé par Ne Mawungu, il maîtrise le Bukongo et poursuit ses études après sa sortie. Époux de Mutinu depuis août 1639, père de Nkodia, Muanda, Mpasi et Lunungu. Son parcours associe justice, gouvernance, transmission et défense de Kuimba.",
+    "birth_year": 1620,
+    "personality": "Éloquent, réfléchi, discipliné, cultivé et attaché à son foyer. Il emploie proverbes, poésie et humour ; sa maîtrise de soi n’exclut pas la vulnérabilité.",
+    "arc_tome1": "Mfuti en juin 1636 (15 ans révolus), retrait de Ne Mawungu en octobre 1637, rappel en janvier 1638, mariage en août 1639 à 19 ans. La confidence à Ma Ntombo lors de l’accouchement de 1644 contribue au rapprochement des deux femmes. Il meurt le 30 octobre 1665 à 45 ans."
+  },
+  "ma-ntombo": {
+    "description": "Née le 18 octobre 1622, sœur cadette de Kinuani, fille de Ma Musakanda et Ta Mukuba. Élevée notamment par Mama Kisita après la mort de leur mère le 29 octobre 1622. Épouse de Ta Vuidibio, initiée et athlète. Son opposition initiale à Mutinu évolue vers une solidarité durable.",
+    "birth_year": 1622,
+    "personality": "Impulsive et attachée à son frère, elle mûrit progressivement au contact de ses proches et des femmes sages de Kuimba. Son rejet initial de Mutinu tient notamment à sa déception concernant Nianzi.",
+    "arc_tome1": "Rapprochement avec Kisita autour du mariage de 1639. En 1644, la confidence douloureuse de Kinuani pendant l’accouchement des jumeaux déclenche son évolution envers Mutinu : compassion, cadeaux, visites puis excuses. Les blessures ultérieures renforcent une alliance déjà amorcée."
+  }
+}
+  const archiveMarker = '=== ARCHIVES DE TRAVAIL — NON CANON ACTIF ==='
+  const isArchive = value => /(?:FICHE CANON|Rectificatif Founder|Corrections Founder|MATIÈRE BRUTE|Source canon GitHub)/i.test(value || '')
+  if (repairCharacters) {
+    const [rows] = await conn.execute('SELECT c.id,c.slug,c.description,d.notes FROM characters c LEFT JOIN character_dossiers d ON d.character_id=c.id WHERE c.project_id=? AND c.deleted_at IS NULL',[projectId])
+    for (const current of rows) {
+      const active = curated[current.slug]
+      const raw = isArchive(current.description)
+      if (!active && !raw) continue
+      const old = current.description || ''
+      const notes = current.notes || ''
+      const nextNotes = old && !notes.includes(old) && (raw || active) ? [notes,archiveMarker,old].filter(Boolean).join('\n\n') : notes
+      if (nextNotes !== notes) {
+        await conn.execute('INSERT INTO character_dossiers (character_id,notes) VALUES (?,?) ON DUPLICATE KEY UPDATE notes=VALUES(notes)',[current.id,nextNotes])
+        bump('dossiers','updated')
+      }
+      // Unreviewed historical summaries are not promoted to canon automatically.
+      const nextDescription = active?.description || 'Fiche biographique en cours de consolidation. Les sources intégrales sont conservées dans les archives du dossier.'
+      if (old !== nextDescription) {
+        await conn.execute('UPDATE characters SET description=? WHERE id=?',[nextDescription,current.id])
+        bump('characters','updated')
+      }
+      if (active) {
+        const {description,...fields} = active
+        const [profiles] = await conn.execute('SELECT * FROM character_profiles WHERE character_id=?',[current.id])
+        const profile = profiles[0] || {}
+        // Explicit canonical corrections, preserving the previous field values in notes.
+        const changed = Object.entries(fields).filter(([k,val]) => String(profile[k] ?? '') !== String(val))
+        if (changed.length) {
+          const previous = changed.filter(([k]) => profile[k] != null && profile[k] !== '').map(([k]) => k+': '+profile[k]).join('\n')
+          if (previous) {
+            const archived = [nextNotes,archiveMarker,'Profil antérieur :\n'+previous].filter(Boolean).join('\n\n')
+            await conn.execute('INSERT INTO character_dossiers (character_id,notes) VALUES (?,?) ON DUPLICATE KEY UPDATE notes=VALUES(notes)',[current.id,archived])
+          }
+          const keys = changed.map(([k])=>k)
+          await conn.execute('INSERT INTO character_profiles (character_id,'+keys.join(',')+') VALUES ('+Array(keys.length+1).fill('?').join(',')+') ON DUPLICATE KEY UPDATE '+keys.map(k=>k+'=VALUES('+k+')').join(','),[current.id,...changed.map(([,val])=>val)])
+          bump('profiles','updated')
+        }
+      }
+    }
+    if (dryRun) await conn.rollback(); else await conn.commit()
+    console.log(JSON.stringify({mode:dryRun?'dry-run (rollback)':'applied',operation:'repair-characters',database:db.database,counts},null,2))
+  } else {
   for (const row of characterRows()) {
-    row.description = ficheBySlug.get(row.slug) || row.description
+    const rawSource = ficheBySlug.get(row.slug) || row.description
+    row.description = curated[row.slug]?.description || row.description
     const existing = await one('SELECT id, name, description FROM characters WHERE project_id = ? AND slug = ? LIMIT 1', [projectId, row.slug])
     let id
     if (!existing) { const [h] = await conn.execute('INSERT INTO characters (project_id, slug, name, description) VALUES (?, ?, ?, ?)', [projectId, row.slug, row.name, row.description]); id = h.insertId; bump('characters', 'inserted') }
@@ -155,10 +223,10 @@ try {
     if (!profile) { await conn.execute('INSERT INTO character_profiles (character_id, is_pov, role_in_story, status_rank, physical) VALUES (?, ?, ?, ?, ?)', [id, /principal|héros|héroïne/i.test(row.role) ? 1 : 0, row.role.slice(0, 255), row.rank.slice(0, 128), null]); bump('profiles', 'inserted') }
     else if ((!profile.role_in_story && profileValues[0]) || (!profile.status_rank && profileValues[2])) { await conn.execute('UPDATE character_profiles SET role_in_story = COALESCE(NULLIF(role_in_story, \'\'), ?), status_rank = COALESCE(NULLIF(status_rank, \'\'), ?) WHERE character_id = ?', [profileValues[0].slice(0, 255), profileValues[2].slice(0, 128), id]); bump('profiles', 'updated') } else bump('profiles', 'unchanged')
     const dossier = await one('SELECT character_id, canon_status, ages, origin, public_role, notes FROM character_dossiers WHERE character_id = ?', [id])
-    if (!dossier) { await conn.execute('INSERT INTO character_dossiers (character_id, canon_status, logline, ages, origin, public_role, notes) VALUES (?, ?, ?, ?, ?, ?, ?)', [id, 'canon', row.description.slice(0, 255), row.ages.slice(0, 80), row.origin.slice(0, 255), row.role.slice(0, 255), `Relations documentées : ${row.relations}\n\n${row.description}`]); bump('dossiers', 'inserted') }
+    if (!dossier) { await conn.execute('INSERT INTO character_dossiers (character_id, canon_status, logline, ages, origin, public_role, notes) VALUES (?, ?, ?, ?, ?, ?, ?)', [id, 'canon', row.description.slice(0, 255), row.ages.slice(0, 80), row.origin.slice(0, 255), row.role.slice(0, 255), `Relations documentées : ${row.relations}\n\n${archiveMarker}\n\n${rawSource}`]); bump('dossiers', 'inserted') }
     else if (dossier.canon_status !== 'canon' || (!dossier.ages && row.ages) || (!dossier.origin && row.origin) || (!dossier.public_role && row.role)) { await conn.execute('UPDATE character_dossiers SET canon_status = \'canon\', ages = COALESCE(NULLIF(ages, \'\'), ?), origin = COALESCE(NULLIF(origin, \'\'), ?), public_role = COALESCE(NULLIF(public_role, \'\'), ?) WHERE character_id = ?', [row.ages.slice(0, 80), row.origin.slice(0, 255), row.role.slice(0, 255), id]); bump('dossiers', 'updated') } else bump('dossiers', 'unchanged')
-    if (dossier && row.description && !String(dossier.notes || '').includes(row.description)) {
-      await conn.execute('UPDATE character_dossiers SET notes=? WHERE character_id=?', [ [dossier.notes, 'Source canon GitHub — 2026-11-26', row.description].filter(Boolean).join('\n\n'), id ])
+    if (dossier && rawSource && !String(dossier.notes || '').includes(rawSource)) {
+      await conn.execute('UPDATE character_dossiers SET notes=? WHERE character_id=?', [ [dossier.notes, archiveMarker, rawSource].filter(Boolean).join('\n\n'), id ])
       if (dossier.canon_status === 'canon' && dossier.ages && dossier.origin && dossier.public_role) { counts.dossiers.unchanged--; bump('dossiers','updated') }
     }
   }
@@ -204,6 +272,7 @@ try {
   }
   if (dryRun) await conn.rollback(); else await conn.commit()
   console.log(JSON.stringify({ mode: dryRun ? 'dry-run (rollback)' : 'applied', project_id: projectId, book_id: bookId, source_scenes: sourceRows().length, source_characters: characterRows().length, counts }, null, 2))
+  }
 } catch (err) {
   await conn.rollback()
   throw err
