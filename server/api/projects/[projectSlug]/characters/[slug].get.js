@@ -40,14 +40,14 @@ export default defineEventHandler(async (event) => {
   // Le résumé reste la fiche lisible. Les tables riches sont jointes ici afin
   // que le Studio rende enfin les apports canoniques structurés.
   const [profiles, dossiers, aliases, kinships] = await Promise.all([
-    dbQuery('SELECT one_liner, role_in_story, occupation, physical, voice, personality, strengths, flaws, goals_external, goals_internal, fears, secrets, signature_objects, arc_tome1, arc_tome2, arc_tome3 FROM character_profiles WHERE character_id = ? LIMIT 1', [character.id]),
+    dbQuery('SELECT birth_year, one_liner, role_in_story, occupation, physical, voice, personality, strengths, flaws, goals_external, goals_internal, fears, secrets, signature_objects, arc_tome1, arc_tome2, arc_tome3 FROM character_profiles WHERE character_id = ? LIMIT 1', [character.id]),
     dbQuery('SELECT canon_status, logline, ages, origin, public_role, secret_role, desire, fear, mask, weapon, rupture, contradiction, voice, signature_lines, signature_objects, signature_places, allies, enemies, debts_secrets, arc_t1, arc_t2, arc_t3, notes FROM character_dossiers WHERE character_id = ? LIMIT 1', [character.id]),
     dbQuery('SELECT alias, alias_type, is_primary, note FROM character_aliases WHERE character_id = ? ORDER BY is_primary DESC, alias ASC', [character.id]),
-    dbQuery(`SELECT k.relation, k.line, k.certainty, k.notes, other.slug, other.name
+    dbQuery(`SELECT CASE WHEN k.from_character_id = ? AND k.relation = 'child' THEN 'child' WHEN k.from_character_id = ? AND k.relation = 'parent' THEN 'parent' WHEN k.relation = 'parent' THEN 'child' WHEN k.relation = 'child' THEN 'parent' ELSE k.relation END AS relation, k.line, k.certainty, k.notes, other.slug, other.name
       FROM character_kinships_v2 k
       JOIN characters other ON other.id = CASE WHEN k.from_character_id = ? THEN k.to_character_id ELSE k.from_character_id END
       WHERE (k.from_character_id = ? OR k.to_character_id = ?) AND other.deleted_at IS NULL
-      ORDER BY other.name ASC`, [character.id, character.id, character.id]),
+      ORDER BY other.name ASC`, [character.id, character.id, character.id, character.id, character.id]),
   ])
 
   // Récupère les scènes où le personnage apparaît
