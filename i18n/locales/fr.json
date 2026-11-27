@@ -633,6 +633,14 @@
         "timeline": "Événements",
         "timelineHint": "Repères utiles à la continuité."
       },
+      "nextActionKicker": "Prochaine étape conseillée",
+      "nextActionCta": "Ouvrir l’espace",
+      "nextAction": {
+        "books": { "title": "Commencer par le livre", "lead": "Crée le premier livre pour donner un cadre de travail clair au projet." },
+        "characters": { "title": "Ajouter le premier personnage", "lead": "Un personnage donne un point d’ancrage aux scènes et aux relations." },
+        "scenes": { "title": "Écrire la première scène", "lead": "Transforme la matière du projet en une scène à développer et à retrouver." },
+        "timeline": { "title": "Poser un premier repère temporel", "lead": "Ancre le récit avec un événement qui soutient sa cohérence." }
+      },
       "nextKicker": "Continuer le travail",
       "nextTitle": "Choisir un espace"
     },

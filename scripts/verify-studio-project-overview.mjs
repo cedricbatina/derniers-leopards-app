@@ -22,6 +22,8 @@ const requiredKeys = [
   'overviewTitle',
   'overviewLead',
   'reviewScenes',
+  'nextActionKicker',
+  'nextActionCta',
   'nextKicker',
   'nextTitle',
 ]
@@ -31,6 +33,13 @@ for (const locale of ['fr', 'en', 'pt']) {
   for (const key of requiredKeys) {
     if (!messages.studio?.project?.[key]) {
       throw new Error(`${locale} is missing studio.project.${key}`)
+    }
+  }
+  for (const area of ['books', 'characters', 'scenes', 'timeline']) {
+    for (const key of ['title', 'lead']) {
+      if (!messages.studio?.project?.nextAction?.[area]?.[key]) {
+        throw new Error(`${locale} is missing studio.project.nextAction.${area}.${key}`)
+      }
     }
   }
 }

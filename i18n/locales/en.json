@@ -212,6 +212,14 @@
         "timeline": "Events",
         "timelineHint": "Milestones that support continuity."
       },
+      "nextActionKicker": "Suggested next step",
+      "nextActionCta": "Open workspace",
+      "nextAction": {
+        "books": { "title": "Start with the book", "lead": "Create the first book to give the project a clear working frame." },
+        "characters": { "title": "Add the first character", "lead": "A character gives scenes and relationships someone to follow." },
+        "scenes": { "title": "Draft the first scene", "lead": "Turn the project material into a scene you can develop and revisit." },
+        "timeline": { "title": "Set a first time marker", "lead": "Anchor the narrative with an event that keeps the story coherent." }
+      },
       "nextKicker": "Continue working",
       "nextTitle": "Choose a workspace"
     },

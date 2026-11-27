@@ -49,6 +49,16 @@ const narrativeAreas = computed(() => [
   { key: 'timeline', count: timelineData.value?.events?.length || 0, icon: 'mdi:timeline-text-outline', to: `/studio/projects/${slug.value}/timeline` },
 ])
 
+const nextAction = computed(() => {
+  const firstEmptyArea = narrativeAreas.value.find(area => area.count === 0)
+  const area = firstEmptyArea || narrativeAreas.value.find(area => area.key === 'scenes')
+  return {
+    ...area,
+    title: t(`studio.project.nextAction.${area.key}.title`),
+    lead: t(`studio.project.nextAction.${area.key}.lead`),
+  }
+})
+
 const saving = ref(false)
 const deleting = ref(false)
 
@@ -173,6 +183,25 @@ async function removeProject () {
         </div>
       </div>
     </div>
+
+    <section class="overflow-hidden rounded-2xl border border-primary/20 bg-primary/5">
+      <div class="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div class="flex items-start gap-4">
+          <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary text-white shadow-sm">
+            <Icon :name="nextAction.icon" class="text-2xl" aria-hidden="true" />
+          </span>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-wider text-primary">{{ t('studio.project.nextActionKicker') }}</p>
+            <h2 class="mt-1 text-lg font-extrabold">{{ nextAction.title }}</h2>
+            <p class="mt-1 text-sm text-muted">{{ nextAction.lead }}</p>
+          </div>
+        </div>
+        <NuxtLink class="btn btn-primary focus-ring shrink-0" :to="localePath(nextAction.to)">
+          {{ t('studio.project.nextActionCta') }}
+          <Icon name="mdi:arrow-right" aria-hidden="true" />
+        </NuxtLink>
+      </div>
+    </section>
 
     <section class="card overflow-hidden">
       <div class="card-body flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">

@@ -211,6 +211,14 @@
         "timeline": "Eventos",
         "timelineHint": "Referências úteis para a continuidade."
       },
+      "nextActionKicker": "Próximo passo sugerido",
+      "nextActionCta": "Abrir espaço",
+      "nextAction": {
+        "books": { "title": "Começar pelo livro", "lead": "Crie o primeiro livro para dar ao projeto um enquadramento de trabalho claro." },
+        "characters": { "title": "Adicionar a primeira personagem", "lead": "Uma personagem dá às cenas e relações alguém a acompanhar." },
+        "scenes": { "title": "Escrever a primeira cena", "lead": "Transforme a matéria do projeto numa cena para desenvolver e retomar." },
+        "timeline": { "title": "Definir uma primeira referência temporal", "lead": "Ancore a narrativa com um evento que mantém a coerência da história." }
+      },
       "nextKicker": "Continuar o trabalho",
       "nextTitle": "Escolha um espaço"
     },
