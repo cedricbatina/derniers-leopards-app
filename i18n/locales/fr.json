@@ -618,7 +618,31 @@
       "scenesHint": "Écrire et structurer.",
       "timelineHint": "Chronologie.",
       "glossary": "Glossaire",
-      "glossaryHint": "Termes et vocabulaire."
+      "glossaryHint": "Termes et vocabulaire.",
+      "overviewKicker": "Vue d’ensemble",
+      "overviewTitle": "La matière du projet",
+      "overviewLead": "Retrouve en un regard les éléments déjà structurés, puis ouvre l’espace qui demande ton attention.",
+      "reviewScenes": "Voir les scènes",
+      "overview": {
+        "books": "Livres",
+        "booksHint": "Volumes et parties du projet.",
+        "characters": "Personnages",
+        "charactersHint": "Fiches et relations à consulter.",
+        "scenes": "Scènes",
+        "scenesHint": "Moments à organiser ou reprendre.",
+        "timeline": "Événements",
+        "timelineHint": "Repères utiles à la continuité."
+      },
+      "nextActionKicker": "Prochaine étape conseillée",
+      "nextActionCta": "Ouvrir l’espace",
+      "nextAction": {
+        "books": { "title": "Commencer par le livre", "lead": "Crée le premier livre pour donner un cadre de travail clair au projet." },
+        "characters": { "title": "Ajouter le premier personnage", "lead": "Un personnage donne un point d’ancrage aux scènes et aux relations." },
+        "scenes": { "title": "Écrire la première scène", "lead": "Transforme la matière du projet en une scène à développer et à retrouver." },
+        "timeline": { "title": "Poser un premier repère temporel", "lead": "Ancre le récit avec un événement qui soutient sa cohérence." }
+      },
+      "nextKicker": "Continuer le travail",
+      "nextTitle": "Choisir un espace"
     },
     "scenes": {
       "backToProject": "Retour au projet",

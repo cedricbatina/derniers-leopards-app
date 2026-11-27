@@ -21,8 +21,43 @@ const { data: booksData } = await useFetch(() => `/api/projects/${slug.value}/bo
   headers: useRequestHeaders(['cookie']),
 })
 
+const { data: charactersData } = await useFetch(() => `/api/projects/${slug.value}/characters`, {
+  $fetch: apiFetch,
+  credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
+})
+
+const { data: scenesData } = await useFetch(() => `/api/projects/${slug.value}/scenes`, {
+  $fetch: apiFetch,
+  credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
+})
+
+const { data: timelineData } = await useFetch(() => `/api/projects/${slug.value}/timeline`, {
+  $fetch: apiFetch,
+  credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
+})
+
 const booksCount = computed(() => booksData.value?.books?.length || 0)
 const canManage = computed(() => data.value?.project?.can_manage !== false)
+
+const narrativeAreas = computed(() => [
+  { key: 'books', count: booksCount.value, icon: 'mdi:book-open-page-variant-outline', to: `/studio/projects/${slug.value}/books` },
+  { key: 'characters', count: charactersData.value?.characters?.length || 0, icon: 'mdi:account-group-outline', to: `/studio/projects/${slug.value}/characters` },
+  { key: 'scenes', count: scenesData.value?.scenes?.length || 0, icon: 'mdi:script-text-outline', to: `/studio/projects/${slug.value}/scenes` },
+  { key: 'timeline', count: timelineData.value?.events?.length || 0, icon: 'mdi:timeline-text-outline', to: `/studio/projects/${slug.value}/timeline` },
+])
+
+const nextAction = computed(() => {
+  const firstEmptyArea = narrativeAreas.value.find(area => area.count === 0)
+  const area = firstEmptyArea || narrativeAreas.value.find(area => area.key === 'scenes')
+  return {
+    ...area,
+    title: t(`studio.project.nextAction.${area.key}.title`),
+    lead: t(`studio.project.nextAction.${area.key}.lead`),
+  }
+})
 
 const saving = ref(false)
 const deleting = ref(false)
@@ -149,8 +184,64 @@ async function removeProject () {
       </div>
     </div>
 
-    <!-- Next shortcuts -->
-    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <section class="overflow-hidden rounded-2xl border border-primary/20 bg-primary/5">
+      <div class="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div class="flex items-start gap-4">
+          <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary text-white shadow-sm">
+            <Icon :name="nextAction.icon" class="text-2xl" aria-hidden="true" />
+          </span>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-wider text-primary">{{ t('studio.project.nextActionKicker') }}</p>
+            <h2 class="mt-1 text-lg font-extrabold">{{ nextAction.title }}</h2>
+            <p class="mt-1 text-sm text-muted">{{ nextAction.lead }}</p>
+          </div>
+        </div>
+        <NuxtLink class="btn btn-primary focus-ring shrink-0" :to="localePath(nextAction.to)">
+          {{ t('studio.project.nextActionCta') }}
+          <Icon name="mdi:arrow-right" aria-hidden="true" />
+        </NuxtLink>
+      </div>
+    </section>
+
+    <section class="card overflow-hidden">
+      <div class="card-body flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-muted">{{ t('studio.project.overviewKicker') }}</p>
+          <h2 class="text-lg font-extrabold">{{ t('studio.project.overviewTitle') }}</h2>
+          <p class="text-sm text-muted max-w-2xl">{{ t('studio.project.overviewLead') }}</p>
+        </div>
+        <NuxtLink class="btn btn-ghost focus-ring shrink-0" :to="localePath(`/studio/projects/${slug}/scenes`)">
+          <Icon name="mdi:arrow-right" aria-hidden="true" />
+          {{ t('studio.project.reviewScenes') }}
+        </NuxtLink>
+      </div>
+
+      <div class="grid border-t border-border sm:grid-cols-2 lg:grid-cols-4">
+        <NuxtLink
+          v-for="area in narrativeAreas"
+          :key="area.key"
+          :to="localePath(area.to)"
+          class="group p-5 transition-colors hover:bg-surface2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+        >
+          <div class="flex items-start justify-between gap-3">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
+              <Icon :name="area.icon" class="text-xl" aria-hidden="true" />
+            </span>
+            <Icon name="mdi:arrow-top-right" class="text-muted transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+          </div>
+          <p class="mt-5 text-3xl font-extrabold tabular-nums">{{ area.count }}</p>
+          <p class="mt-1 font-semibold">{{ t(`studio.project.overview.${area.key}`) }}</p>
+          <p class="mt-1 text-sm text-muted">{{ t(`studio.project.overview.${area.key}Hint`) }}</p>
+        </NuxtLink>
+      </div>
+    </section>
+
+    <section>
+      <div class="mb-3">
+        <p class="text-xs font-bold uppercase tracking-wider text-muted">{{ t('studio.project.nextKicker') }}</p>
+        <h2 class="text-lg font-extrabold">{{ t('studio.project.nextTitle') }}</h2>
+      </div>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       <template v-if="booksCount > 0">
         <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/books`)">
           <div class="card-body">
@@ -194,6 +285,7 @@ async function removeProject () {
           <div class="text-xs text-muted mt-1">{{ $t('domain.todo.projectTodos') }}</div>
         </div>
       </NuxtLink>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
