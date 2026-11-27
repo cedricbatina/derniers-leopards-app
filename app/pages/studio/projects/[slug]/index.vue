@@ -15,13 +15,69 @@ const { data, pending, refresh, error } = await useFetch(() => `/api/projects/${
   headers: useRequestHeaders(['cookie']),
 })
 
-const { data: booksData } = await useFetch(() => `/api/projects/${slug.value}/books`, {
+const { data: booksData, pending: booksPending } = await useFetch(() => `/api/projects/${slug.value}/books`, {
+  $fetch: apiFetch,
+  credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
+})
+
+const { data: charactersData, pending: charactersPending } = await useFetch(() => `/api/projects/${slug.value}/characters`, {
+  $fetch: apiFetch,
+  credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
+})
+
+const { data: scenesData, pending: scenesPending } = await useFetch(() => `/api/projects/${slug.value}/scenes`, {
+  $fetch: apiFetch,
+  credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
+})
+
+const { data: timelineData, pending: timelinePending } = await useFetch(() => `/api/projects/${slug.value}/timeline`, {
   $fetch: apiFetch,
   credentials: 'include',
   headers: useRequestHeaders(['cookie']),
 })
 
 const booksCount = computed(() => booksData.value?.books?.length || 0)
+const narrativeSpaces = computed(() => [
+  {
+    key: 'books',
+    icon: 'mdi:bookshelf',
+    count: booksCount.value,
+    pending: booksPending.value,
+    to: `/studio/projects/${slug.value}/books`,
+    label: t('studio.project.books'),
+    hint: t('studio.project.booksHint'),
+  },
+  {
+    key: 'characters',
+    icon: 'mdi:account-group-outline',
+    count: charactersData.value?.characters?.length || 0,
+    pending: charactersPending.value,
+    to: `/studio/projects/${slug.value}/characters`,
+    label: t('domain.character.plural'),
+    hint: t('studio.project.charactersHint'),
+  },
+  {
+    key: 'scenes',
+    icon: 'mdi:movie-open-outline',
+    count: scenesData.value?.scenes?.length || 0,
+    pending: scenesPending.value,
+    to: `/studio/projects/${slug.value}/scenes`,
+    label: t('domain.scene.plural'),
+    hint: t('studio.project.scenesHint'),
+  },
+  {
+    key: 'timeline',
+    icon: 'mdi:timeline-text-outline',
+    count: timelineData.value?.events?.length || 0,
+    pending: timelinePending.value,
+    to: `/studio/projects/${slug.value}/timeline`,
+    label: t('domain.timeline.plural'),
+    hint: t('studio.project.timelineHint'),
+  },
+])
 const canManage = computed(() => data.value?.project?.can_manage !== false)
 
 const saving = ref(false)
@@ -149,7 +205,37 @@ async function removeProject () {
       </div>
     </div>
 
-    <!-- Next shortcuts -->
+    <section class="card overflow-hidden" aria-labelledby="narrative-spaces-heading">
+      <div class="card-body flex flex-col gap-1 border-b border-border sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 id="narrative-spaces-heading" class="font-extrabold tracking-tight">{{ t('studio.project.narrativeSpaces') }}</h2>
+          <p class="text-sm text-muted">{{ t('studio.project.narrativeSpacesHint') }}</p>
+        </div>
+      </div>
+
+      <div class="grid divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+        <NuxtLink
+          v-for="space in narrativeSpaces"
+          :key="space.key"
+          class="group p-4 focus-ring hover:bg-surface2 transition-colors"
+          :to="localePath(space.to)"
+        >
+          <div class="flex items-start justify-between gap-3">
+            <div class="rounded-lg bg-primary/10 p-2 text-primary">
+              <Icon :name="space.icon" class="text-xl" aria-hidden="true" />
+            </div>
+            <span class="text-2xl font-extrabold tabular-nums">
+              <Icon v-if="space.pending" name="mdi:loading" class="animate-spin text-base text-muted" aria-hidden="true" />
+              <template v-else>{{ space.count }}</template>
+            </span>
+          </div>
+          <div class="mt-5 font-bold group-hover:text-primary">{{ space.label }}</div>
+          <p class="mt-1 text-xs text-muted">{{ space.hint }}</p>
+        </NuxtLink>
+      </div>
+    </section>
+
+    <!-- Workspace shortcuts -->
     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       <template v-if="booksCount > 0">
         <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/books`)">

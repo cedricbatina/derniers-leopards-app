@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "icons:brand": "node scripts/build-brand-assets.mjs",
+    "verify:studio-narrative": "node scripts/verify-studio-narrative-spaces.mjs",
     "db:create-todos": "node scripts/create-todos-table.mjs",
     "db:seed-canon-characters": "node scripts/seed-canon-characters.mjs",
     "prebuild": "npm run icons:brand",

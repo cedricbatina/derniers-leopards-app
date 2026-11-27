@@ -602,6 +602,8 @@
     },
     "project": {
       "title": "Projet",
+      "narrativeSpaces": "Espaces narratifs",
+      "narrativeSpacesHint": "Repère en un regard les éléments déjà structurés dans ce projet.",
       "backToProjects": "Retour aux projets",
       "slugImmutable": "Le slug est immuable :",
       "readOnly": "Lecture seule : tu consultes cette saga, tu ne la modifies pas.",

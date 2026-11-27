@@ -180,6 +180,8 @@
     },
     "project": {
       "title": "Projeto",
+      "narrativeSpaces": "Espaços narrativos",
+      "narrativeSpacesHint": "Veja rapidamente os elementos já estruturados neste projeto.",
       "backToProjects": "Voltar aos projetos",
       "slugImmutable": "O slug não pode ser alterado:",
       "readOnly": "Só de leitura: pode consultar esta saga, mas não a pode modificar.",
