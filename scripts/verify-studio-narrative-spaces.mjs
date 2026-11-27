@@ -27,6 +27,10 @@ if (!component.includes(':aria-label="space.ariaLabel"')) {
   throw new Error('Narrative space links need descriptive accessible names')
 }
 
+if (!component.includes(':aria-busy="narrativeSpaces.some((space) => space.pending)"')) {
+  throw new Error('Narrative spaces need to expose their loading state')
+}
+
 for (const locale of ['fr', 'en', 'pt']) {
   const localePath = new URL(`../i18n/locales/${locale}.json`, import.meta.url)
   const messages = JSON.parse(await readFile(localePath, 'utf8'))

@@ -217,7 +217,10 @@ async function removeProject () {
         </div>
       </div>
 
-      <div class="grid divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+      <div
+        class="grid divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4"
+        :aria-busy="narrativeSpaces.some((space) => space.pending)"
+      >
         <NuxtLink
           v-for="space in narrativeSpaces"
           :key="space.key"
