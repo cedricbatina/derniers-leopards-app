@@ -1,706 +1,707 @@
 {
   "app": {
     "name": "Sonekeno",
-    "tagline": "A space to create and organize",
-    "logoAlt": "App logo",
+    "tagline": "Espaço de criação e organização",
+    "logoAlt": "Logótipo da aplicação",
     "meta": {
-      "title": "{name} — Writing Studio",
-      "description": "Organize your characters, scenes, timeline, and glossary in one place to keep your story consistent from start to finish.",
-      "ogTitle": "{name} — Writing Studio",
-      "ogDescription": "A clean workspace to structure your characters, scenes, timeline, and project lexicon.",
-      "ogImageAlt": "App preview",
-      "keywords": "writing studio, writing organization, characters, scenes, timeline, glossary, worldbuilding",
+      "title": "{name} — Estúdio de Escrita",
+      "description": "Organize as suas personagens, cenas, cronologia e glossário num só lugar, para manter a consistência do início ao fim.",
+      "ogTitle": "{name} — Estúdio de Escrita",
+      "ogDescription": "Um espaço de trabalho claro para estruturar personagens, cenas, cronologia e o léxico do projeto.",
+      "ogImageAlt": "Pré-visualização da aplicação",
+      "keywords": "estúdio de escrita, organização, personagens, cenas, cronologia, glossário, worldbuilding",
       "themeColorLight": "#FBF8F1",
       "themeColorDark": "#0C0C10"
     }
   },
 
   "a11y": {
-    "skipToContent": "Skip to content",
-    "mainNav": "Main navigation"
+    "skipToContent": "Saltar para o conteúdo",
+    "mainNav": "Navegação principal"
   },
 
   "lang": {
-    "label": "Language",
+    "label": "Idioma",
     "fr": "FR",
-    "pt": "PT",
-
-    "en": "EN"
+    "en": "EN",
+    "pt": "PT"
   },
 
   "theme": {
-    "aria": "Theme: {mode}. {action}",
+    "aria": "Tema: {mode}. {action}",
     "modes": {
-      "system": "System",
-      "dark": "Dark",
-      "light": "Light"
+      "system": "Sistema",
+      "dark": "Escuro",
+      "light": "Claro"
     },
-    "toDark": "Switch to dark mode",
-    "toLight": "Switch to light mode",
-    "toSystem": "Use system setting"
+    "toDark": "Mudar para modo escuro",
+    "toLight": "Mudar para modo claro",
+    "toSystem": "Usar definição do sistema"
   },
 
   "common": {
-    "loading": "Loading…",
-    "save": "Save",
-    "cancel": "Cancel",
-    "delete": "Delete",
-    "deleteForever": "Delete Permanently",
-    "edit": "Edit",
-    "close": "Close",
-    "back": "Back",
-    "backHome": "Home",
-    "continue": "Continue",
-    "search": "Search",
-    "filter": "Filter",
-    "clear": "Clear",
-    "confirm": "Confirm",
-    "deactivate": "Deactivate",
-    "login": "Sign in",
-    "manage": "Manage",
-    "backToList": "Back to list",
-    "notFound": "Not found",
-    "noData": "No data",
-    "error": "Error",
-    "create": "Create",
-    "trashed": "Trashed",
-    "restore": "Restore"
+    "loading": "A carregar…",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "deleteForever": "Eliminar Permanentemente",
+    "edit": "Editar",
+    "close": "Fechar",
+    "back": "Voltar",
+    "backHome": "Início",
+    "continue": "Continuar",
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "clear": "Limpar",
+    "confirm": "Confirmar",
+    "deactivate": "Desativar",
+    "login": "Iniciar sessão",
+    "manage": "Gerir",
+    "backToList": "Voltar à lista",
+    "notFound": "Não encontrado",
+    "noData": "Sem dados",
+    "error": "Erro",
+    "create": "Criar",
+    "trashed": "Lixeira",
+    "restore": "Restaurar"
   },
 
   "characters": {
-    "listSubtitle": "Manage your characters",
-    "search": "Search",
-    "searchPlaceholder": "Name or slug...",
-    "showTrashed": "Show trashed",
-    "newCharacter": "New Character",
-    "createNew": "Create New Character",
-    "name": "Name",
+    "listSubtitle": "Gerencie seus personagens",
+    "search": "Pesquisar",
+    "searchPlaceholder": "Nome ou slug...",
+    "showTrashed": "Mostrar lixeira",
+    "newCharacter": "Novo Personagem",
+    "createNew": "Criar Novo Personagem",
+    "name": "Nome",
     "slug": "Slug",
-    "description": "Description",
-    "descPlaceholder": "Short description...",
-    "noCharacters": "No characters found",
-    "createFirst": "Create your first character",
-    "noDescription": "No description yet",
-    "viewDetails": "View details",
+    "description": "Descrição",
+    "descPlaceholder": "Descrição curta...",
+    "noCharacters": "Nenhum personagem encontrado",
+    "createFirst": "Crie seu primeiro personagem",
+    "noDescription": "Sem descrição ainda",
+    "viewDetails": "Ver detalhes",
     "detail": {
-      "canonProfile": "Canon profile",
-      "dramaticMarkers": "Dramatic markers",
-      "aliases": "Aliases",
-      "kinships": "Family ties",
-      "roleInStory": "Role in the story",
-      "oneLiner": "Logline",
-      "occupation": "Occupation",
-      "personality": "Personality",
-      "strengths": "Strengths",
-      "flaws": "Flaws",
-      "externalGoal": "External goal",
-      "internalGoal": "Internal goal",
-      "fears": "Fears",
-      "desire": "Desire",
-      "fear": "Fear",
-      "mask": "Mask",
-      "weapon": "Weapon",
-      "rupture": "Breaking point",
-      "contradiction": "Contradiction"
+      "canonProfile": "Perfil canónico",
+      "dramaticMarkers": "Marcos dramáticos",
+      "aliases": "Alcunhas",
+      "kinships": "Laços familiares",
+      "roleInStory": "Papel na narrativa",
+      "oneLiner": "Frase-guia",
+      "occupation": "Ocupação",
+      "personality": "Personalidade",
+      "strengths": "Forças",
+      "flaws": "Falhas",
+      "externalGoal": "Objetivo externo",
+      "internalGoal": "Objetivo interno",
+      "fears": "Medos",
+      "desire": "Desejo",
+      "fear": "Medo",
+      "mask": "Máscara",
+      "weapon": "Arma",
+      "rupture": "Ponto de rutura",
+      "contradiction": "Contradição"
     }
   },
 
   "dashboard": {
-    "welcome": "Welcome, {name}",
-    "projects": "project{s}",
-    "newProject": "New project",
-    "subtitle": "Centralizes all creation and management modules."
+    "welcome": "Bem-vindo, {name}",
+    "projects": "projeto{s}",
+    "newProject": "Novo projeto",
+    "subtitle": "Centraliza todos os módulos de criação e gestão."
   },
   "profile": {
-    "avatarAlt": "Avatar of {name}",
-    "title": "Profile Settings",
-    "subtitle": "Manage your account and preferences",
-    "displayName": "Display Name",
-    "email": "Email Address",
-    "firstName": "First Name",
-    "lastName": "Last Name",
-    "bio": "Bio",
-    "website": "Website",
-    "locale": "Language",
-    "timezone": "Timezone",
-    "verified": "Email verified",
-    "unverified": "Email not verified",
-    "editProfile": "Edit Profile",
-    "accountInfo": "Account Information",
-    "accountType": "Account Type",
-    "role": "Role",
-    "organization": "Organization",
-    "profession": "Profession",
-    "memberSince": "Member Since",
-    "dangerZone": "Danger Zone",
-    "softDelete": "Deactivate Account",
-    "softDeleteDesc": "Deactivate your account temporarily. You can reactivate it anytime by logging in.",
-    "hardDelete": "Delete Account Permanently",
-    "hardDeleteDesc": "Permanently delete your account and all associated data. This action cannot be undone.",
-    "confirmSoftDelete": "Deactivate Account?",
-    "softDeleteConfirmMsg": "Your account will be deactivated. You can reactivate it by logging in again.",
-    "confirmHardDelete": "Delete Account Permanently?",
-    "hardDeleteConfirmMsg": "This will permanently delete your account and all associated data. This action cannot be undone.",
-    "noUser": "You need to be logged in to view your profile.",
-    "deleteForever": "Delete Permanently"
+    "avatarAlt": "Avatar de {name}",
+    "title": "Definições do Perfil",
+    "subtitle": "Gerencie sua conta e preferências",
+    "displayName": "Nome de Exibição",
+    "email": "Endereço de E-mail",
+    "firstName": "Primeiro Nome",
+    "lastName": "Sobrenome",
+    "bio": "Biografia",
+    "website": "Site",
+    "locale": "Idioma",
+    "timezone": "Fuso Horário",
+    "verified": "E-mail verificado",
+    "unverified": "E-mail não verificado",
+    "editProfile": "Editar Perfil",
+    "accountInfo": "Informações da Conta",
+    "accountType": "Tipo de Conta",
+    "role": "Função",
+    "organization": "Organização",
+    "profession": "Profissão",
+    "memberSince": "Membro Desde",
+    "dangerZone": "Zona de Perigo",
+    "softDelete": "Desativar Conta",
+    "softDeleteDesc": "Desative sua conta temporariamente. Você pode reativá-la fazendo login novamente.",
+    "hardDelete": "Eliminar Conta Permanentemente",
+    "hardDeleteDesc": "Elimine permanentemente sua conta e todos os dados associados. Esta ação não pode ser desfeita.",
+    "confirmSoftDelete": "Desativar Conta?",
+    "softDeleteConfirmMsg": "Sua conta será desativada. Você pode reativá-la fazendo login novamente.",
+    "confirmHardDelete": "Eliminar Conta Permanentemente?",
+    "hardDeleteConfirmMsg": "Isso eliminará permanentemente sua conta e todos os dados associados. Esta ação não pode ser desfeita.",
+    "noUser": "Você precisa estar conectado para ver seu perfil.",
+    "deleteForever": "Eliminar Permanentemente"
   },
   "nav": {
-    "aria": "Main navigation",
-    "home": "Home",
-    "dashboard": "Dashboard",
-    "studio": "Studio",
-    "guide": "Guide",
-    "characters": "Characters",
-    "scenes": "Scenes",
-    "timeline": "Timeline",
-    "glossary": "Glossary",
-    "tags": "Tags",
-    "profile": "Profile",
-    "settings": "Settings",
-    "login": "Sign in",
-    "register": "Sign up",
-    "logout": "Sign out"
+    "aria": "Navegação principal",
+    "home": "Início",
+    "dashboard": "Painel",
+    "studio": "Estúdio",
+    "guide": "Guia",
+    "characters": "Personagens",
+    "scenes": "Cenas",
+    "timeline": "Cronologia",
+    "glossary": "Glossário",
+    "tags": "Etiquetas",
+    "profile": "Perfil",
+    "settings": "Definições",
+    "login": "Iniciar sessão",
+    "register": "Criar conta",
+    "logout": "Terminar sessão"
   },
 
   "breadcrumb": {
-    "aria": "Breadcrumb",
-    "current": "Details"
+    "aria": "Navegação estrutural",
+    "current": "Detalhes"
   },
 
   "studio": {
     "breadcrumbs": {
-      "projects": "Projects"
+      "projects": "Projetos"
     },
     "workspaceNav": {
-      "aria": "Private studio workspace navigation",
-      "kicker": "Production space",
-      "lead": "Move quickly between your dashboard, projects, tasks, or jump back to the public guide without losing context.",
-      "dashboard": "Studio home",
-      "projects": "All projects",
-      "guide": "Public guide"
+      "aria": "Navegação do espaço de estúdio privado",
+      "kicker": "Espaço de produção",
+      "lead": "Alterne rapidamente entre o painel, os projetos e as tarefas, ou volte ao guia público.",
+      "dashboard": "Início do estúdio",
+      "projects": "Todos os projetos",
+      "guide": "Guia público"
     },
     "project": {
-      "title": "Project",
-      "narrativeSpaces": "Narrative spaces",
-      "narrativeSpacesHint": "See at a glance what has already been structured in this project.",
-      "narrativeSpaceAria": "Open {label}: {count} item(s). {hint}",
-      "backToProjects": "Back to projects",
-      "slugImmutable": "The slug cannot be changed:",
-      "readOnly": "Read-only: you can view this saga but cannot edit it.",
-      "deleteConfirm": "Delete this project?",
-      "defaultTitle": "Title (default)",
-      "status": "Status",
-      "englishTitle": "English title",
-      "portugueseTitle": "Portuguese title",
-      "logline": "Logline",
-      "pitch": "Pitch",
-      "books": "Books",
-      "booksHint": "Parts and chapters.",
-      "charactersHint": "Arcs and relationships.",
-      "scenesHint": "Write and structure.",
-      "timelineHint": "Chronology.",
-      "glossary": "Glossary",
-      "glossaryHint": "Terms and vocabulary."
+      "title": "Projeto",
+      "narrativeSpaces": "Espaços narrativos",
+      "narrativeSpacesHint": "Veja rapidamente os elementos já estruturados neste projeto.",
+      "narrativeSpaceAria": "Abrir {label}: {count} elemento(s). {hint}",
+      "backToProjects": "Voltar aos projetos",
+      "slugImmutable": "O slug não pode ser alterado:",
+      "readOnly": "Só de leitura: pode consultar esta saga, mas não a pode modificar.",
+      "deleteConfirm": "Eliminar este projeto?",
+      "defaultTitle": "Título (predefinido)",
+      "status": "Estado",
+      "englishTitle": "Título em inglês",
+      "portugueseTitle": "Título em português",
+      "logline": "Frase-guia",
+      "pitch": "Apresentação",
+      "books": "Livros",
+      "booksHint": "Partes e capítulos.",
+      "charactersHint": "Arcos e relações.",
+      "scenesHint": "Escrever e estruturar.",
+      "timelineHint": "Cronologia.",
+      "glossary": "Glossário",
+      "glossaryHint": "Termos e vocabulário."
     },
     "scenes": {
-      "backToProject": "Back to project",
-      "subtitle": "Project scenes (CRUD and trash).",
-      "deleteConfirm": "Delete scene “{title}”?",
-      "searchPlaceholder": "title / slug / summary…",
-      "filterByChapter": "Filter by chapter",
-      "all": "All",
-      "newSceneChapter": "New scene: chapter",
-      "select": "Select…",
-      "number": "Scene #",
-      "title": "Title",
-      "titlePlaceholder": "e.g. Desolation of Mbuila",
-      "slugOptional": "Slug (optional)",
-      "summary": "Summary",
-      "summaryPlaceholder": "Summary (optional)",
-      "count": "{count} scene(s)"
+      "backToProject": "Voltar ao projeto",
+      "subtitle": "Cenas do projeto (CRUD e lixeira).",
+      "deleteConfirm": "Eliminar a cena “{title}”?",
+      "searchPlaceholder": "título / slug / resumo…",
+      "filterByChapter": "Filtrar por capítulo",
+      "all": "Todas",
+      "newSceneChapter": "Nova cena: capítulo",
+      "select": "Selecionar…",
+      "number": "N.º da cena",
+      "title": "Título",
+      "titlePlaceholder": "ex. Desolação de Mbuila",
+      "slugOptional": "Slug (opcional)",
+      "summary": "Resumo",
+      "summaryPlaceholder": "Resumo (opcional)",
+      "count": "{count} cena(s)"
     },
     "timeline": {
-      "backToProject": "Back to project", "subtitle": "Key events and dates.", "untitled": "Event {id}", "deleteConfirm": "Delete event “{title}”?", "searchPlaceholder": "title / slug / description…", "title": "Title", "startDate": "Start date", "endDate": "End date", "slugOptional": "Slug (optional)", "count": "{count} event(s)"
+      "backToProject": "Voltar ao projeto", "subtitle": "Eventos-chave e datas.", "untitled": "Evento {id}", "deleteConfirm": "Eliminar o evento “{title}”?", "searchPlaceholder": "título / slug / descrição…", "title": "Título", "startDate": "Data de início", "endDate": "Data de fim", "slugOptional": "Slug (opcional)", "count": "{count} evento(s)"
     }
   },
 
   "seo": {
     "home": {
-      "title": "{app} — Writing studio & creativity workspace",
-      "description": "Centralize characters, scenes, timelines, and glossaries to keep worlds consistent."
+      "title": "{app} — Estúdio de escrita",
+      "description": "Centralize personagens, cenas, cronologia e glossário num só sítio para manter a coerência."
     },
     "explore": {
       "index": {
-        "title": "Sonekeno — Explore",
-        "description": "Discover writing, editing, adaptations, structure, timeline, access, and workflow."
+        "title": "Sonekeno — Explorar",
+        "description": "Descobre escrita, revisão, adaptações, estrutura, cronologia, acesso e fluxo de trabalho."
       },
       "workflow": {
-        "title": "Sonekeno — Workflow",
-        "description": "Create → structure → publish/share: a simple approach ready for production."
+        "title": "Sonekeno — Fluxo de trabalho",
+        "description": "Criar → estruturar → publicar/partilhar: uma abordagem simples e pronta para produção."
       },
       "access": {
-        "title": "Sonekeno — Access & roles",
-        "description": "Protect a story world: accounts, permissions, roles, and collaboration."
+        "title": "Sonekeno — Acesso e papéis",
+        "description": "Proteger um universo narrativo: contas, permissões, papéis e colaboração."
       },
       "structuring": {
-        "title": "Sonekeno — Structure",
-        "description": "Organize a narrative universe: project, entities, links, and coherence."
+        "title": "Sonekeno — Estruturação",
+        "description": "Organizar um universo: projeto, entidades, ligações e coerência."
       },
       "timeline": {
-        "title": "Sonekeno — Timeline",
-        "description": "Steer time in a world: events, spans, arcs, versions, and revisions."
+        "title": "Sonekeno — Cronologia",
+        "description": "Gerir o tempo: eventos, períodos, arcos, versões e revisões."
       },
       "characters": {
-        "title": "Sonekeno — Characters",
-        "description": "Profiles, relationships, roles, narrators: stabilize canon and consistency."
+        "title": "Sonekeno — Personagens",
+        "description": "Fichas, relações, papéis, narradores: estabilizar o cânone."
       },
       "scenesPage": {
-        "title": "Sonekeno — Scenes",
-        "description": "Structure scenes: goals, places, time, canon links, versions."
+        "title": "Sonekeno — Cenas",
+        "description": "Estruturar cenas: objectivos, locais, tempo, ligações ao cânone, versões."
       },
       "glossary": {
-        "title": "Sonekeno — Glossary",
-        "description": "Terms, definitions, canon notes, variants, and translations."
+        "title": "Sonekeno — Glossário",
+        "description": "Termos, definições, notas de cânone, variantes e traduções."
       }
     }
   },
 
   "explore": {
     "sectionNav": {
-      "aria": "Sonekeno guide overview",
-      "kicker": "Guide map",
-      "lead": "All explanatory pages (saga, books, roles, demos) live under this umbrella. Treat this block as your reading order.",
-      "overviewCta": "Guide overview",
-      "footerHint": "Private drafting (projects, books, arcs, chapters) lives in the Studio once you are signed in.",
-      "openStudio": "Open Studio",
+      "aria": "Índice do guia Sonekeno",
+      "kicker": "Mapa do guia",
+      "lead": "Todas as páginas explicativas (saga, livros, papéis…) estão agrupadas aqui. Use como ordem de leitura.",
+      "overviewCta": "Visão geral do guia",
+      "footerHint": "A escrita privada (projetos, livros, capítulos) fica no Estúdio depois de iniciar sessão.",
+      "openStudio": "Abrir o Estúdio",
       "groups": {
-        "start": "First steps",
-        "roles": "Roles & workflows",
-        "architecture": "Books, saga & access",
-        "universe": "Demo modules · story world"
+        "start": "Primeiros passos",
+        "roles": "Papéis e fluxos",
+        "architecture": "Livros, saga e acesso",
+        "universe": "Módulos demo · universo narrativo"
       },
       "links": {
-        "about": "Project · vision",
-        "workflow": "Creator journey",
-        "features": "Features",
-        "pricing": "Offers · pricing",
-        "writing": "Writing",
-        "editors": "Editing & deliveries",
-        "studio": "Studios & adaptations",
-        "creators": "Creators & media",
-        "structuring": "Structuring (books / volumes)",
-        "access": "Security & access"
+        "about": "Projeto · visão",
+        "workflow": "Percurso do criador",
+        "features": "Funcionalidades",
+        "pricing": "Ofertas · preços",
+        "writing": "Escrita",
+        "editors": "Revisão e entregas",
+        "studio": "Estúdios e adaptações",
+        "creators": "Criadores e media",
+        "structuring": "Estruturação (livros / tomos)",
+        "access": "Segurança e acesso"
       },
       "segments": {
-        "about": "Overview",
-        "access": "Access & security",
-        "characters": "Characters (demo)",
-        "creators": "Creators",
-        "editors": "Editing",
-        "features": "Features",
-        "glossary": "Glossary (demo)",
-        "pricing": "Pricing",
-        "scenes": "Scenes (demo)",
-        "structuring": "Structuring",
-        "timeline": "Timeline (demo)",
-        "workflow": "Creator journey",
-        "writing": "Writing",
-        "studio": "Studios (guide)"
+        "about": "Apresentação",
+        "access": "Acesso e segurança",
+        "characters": "Personagens (demo)",
+        "creators": "Criadores",
+        "editors": "Edição",
+        "features": "Funcionalidades",
+        "glossary": "Glossário (demo)",
+        "pricing": "Preços",
+        "scenes": "Cenas (demo)",
+        "structuring": "Estruturação",
+        "timeline": "Cronologia (demo)",
+        "workflow": "Percurso do criador",
+        "writing": "Escrita",
+        "studio": "Estúdios (guia)"
       }
     },
     "crossLinks": {
-      "title": "See also",
-      "timelineLabel": "Timeline",
-      "scenesLabel": "Scenes",
-      "structuringLabel": "Structuring",
-      "workflowLabel": "Creator journey",
+      "title": "Ver também",
+      "timelineLabel": "Cronologia",
+      "scenesLabel": "Cenas",
+      "structuringLabel": "Estruturação",
+      "workflowLabel": "Percurso do criador",
       "fromStructuring": {
-        "timelineHint": "Dates, arcs and versions: the natural next step after volumes.",
-        "scenesHint": "Turn the story into playable blocks once the spine exists."
+        "timelineHint": "Datas, arcos e versões: o passo seguinte depois dos tomos.",
+        "scenesHint": "Dividir a narrativa em blocos quando a espinha dorsal estiver definida."
       },
       "fromTimeline": {
-        "structuringHint": "Connect long time spans to books, parts and chapters.",
-        "workflowHint": "Step back to the full journey before opening the Studio."
+        "structuringHint": "Ligar o tempo longo a livros, partes e capítulos.",
+        "workflowHint": "Voltar ao percurso global antes de abrir o Estúdio."
       }
     },
     "structuring": {
       "hero": {
-        "badge": "Structure",
-        "title": "A readable spine before you draft",
-        "lead": "Projects, entities, links: define your world’s backbone early to avoid contradictions as it grows.",
-        "ctaWorkflow": "See creator journey"
+        "badge": "Estruturação",
+        "title": "Um eixo legível antes de escrever",
+        "lead": "Projecto, entidades e ligações: define cedo o alicerce para evitar contradições quando o universo cresce.",
+        "ctaWorkflow": "Ver percurso do criador"
       },
       "pillars": {
         "project": {
-          "badge": "Project",
-          "title": "A clear container",
-          "desc": "Name, intent, and a minimal shape before opening the manuscript — you know what world you build."
+          "badge": "Projecto",
+          "title": "Contentor claro",
+          "desc": "Título, intenção e forma mínima antes do texto — sabes qual mundo constróis."
         },
         "entities": {
-          "badge": "Entities",
-          "title": "What must exist in-world",
-          "desc": "Characters, places, props, rules, notes: everything stays findable, not lost in random files."
+          "badge": "Entidades",
+          "title": "O que tem de existir no mundo",
+          "desc": "Personagens, locais, objectos, regras e notas: tudo ficando encontrável."
         },
         "links": {
-          "badge": "Links",
-          "title": "Explicit relationships",
-          "desc": "Dependencies are documented: timelines, scenes, and rewrites stay aligned."
+          "badge": "Ligações",
+          "title": "Relações explícitas",
+          "desc": "Dependências documentadas: cronologia, cenas e reescrita mantêm alinhamento."
         }
       },
       "outputs": {
-        "title": "What you gain",
-        "subtitle": "A stable foundation to write, rewrite, and collaborate.",
-        "badge": "Outcome",
+        "title": "O que ganhas",
+        "subtitle": "Uma base estável para escrever, reescrever e colaborar.",
+        "badge": "Resultado",
         "one": {
-          "kicker": "Clarity",
-          "title": "A readable map",
-          "desc": "See the architecture without rereading thousands of notes."
+          "kicker": "Clareza",
+          "title": "Um mapa legível",
+          "desc": "Vês a arquitectura sem reler mil notas."
         },
         "two": {
-          "kicker": "Drafting",
-          "title": "Fewer accidental drifts",
-          "desc": "When structure comes first, inconsistencies surface earlier."
+          "kicker": "Redacção",
+          "title": "Menos fugas ao deus-dará",
+          "desc": "Com estrutura primeiro, as incoerências aparecem mais cedo."
         },
         "three": {
-          "kicker": "Production",
-          "title": "Ready for adaptation",
-          "desc": "Partners understand faster what universe they receive."
+          "kicker": "Produção",
+          "title": "Pronto para adaptar",
+          "desc": "Parceiros percebem mais rápido o universo recebido."
         }
       },
       "bottom": {
-        "badge": "Next step",
-        "title": "Connect structure to time",
-        "desc": "Volumes and modules need dates and arcs — the timeline anchors everything on the same grid.",
-        "ctaTimeline": "Go to timeline"
+        "badge": "Passo seguinte",
+        "title": "Ligar estrutura ao tempo",
+        "desc": "Tomos ou módulos precisam de datas e arcos — a cronologia ancora todos na mesma grelha.",
+        "ctaTimeline": "Ir à cronologia"
       }
     }
   },
 
   "auth": {
-    "login": "Sign in",
-    "register": "Sign up",
+    "login": "Iniciar sessão",
+    "register": "Criar conta",
 
     "email": "Email",
-    "password": "Password",
-    "passwordConfirm": "Confirm password",
-    "newPassword": "New password",
-    "currentPassword": "Current password",
+    "password": "Palavra-passe",
+    "passwordConfirm": "Confirmar palavra-passe",
+    "newPassword": "Nova palavra-passe",
+    "currentPassword": "Palavra-passe atual",
 
-    "loginTitle": "Sign in",
-    "registerTitle": "Create an account",
-    "forgotTitle": "Forgot password",
-    "resetTitle": "Reset password",
-    "verifyTitle": "Email verification",
+    "loginTitle": "Iniciar sessão",
+    "registerTitle": "Criar uma conta",
+    "forgotTitle": "Esqueci-me da palavra-passe",
+    "resetTitle": "Repor palavra-passe",
+    "verifyTitle": "Verificação de email",
 
-    "loginCta": "Sign in",
-    "registerCta": "Create account",
-    "forgotCta": "Send link",
-    "resetCta": "Update password",
+    "loginCta": "Entrar",
+    "registerCta": "Criar conta",
+    "forgotCta": "Enviar link",
+    "resetCta": "Atualizar palavra-passe",
 
-    "forgotLink": "Forgot your password?",
-    "noAccount": "Don’t have an account?",
-    "haveAccount": "Already have an account?",
+    "forgotLink": "Esqueceu-se da palavra-passe?",
+    "noAccount": "Ainda não tem conta?",
+    "haveAccount": "Já tem conta?",
 
     "studioAccess": {
-      "loginBannerTitle": "Sign in required",
-      "loginBannerText": "The studio (characters, scenes, etc.) is only available after signing in with an account that is allowed on this project."
+      "loginBannerTitle": "Início de sessão necessário",
+      "loginBannerText": "O estúdio (personagens, cenas, etc.) só está disponível após iniciar sessão com uma conta autorizada neste projeto."
+    },
+
+    "studioAccess": {
+      "loginBannerTitle": "É necessário iniciar sessão",
+      "loginBannerText": "O estúdio (personagens, cenas, etc.) só está disponível após iniciar sessão com uma conta autorizada neste projeto."
     },
 
     "verify": {
-      "sent": "A confirmation email has been sent.",
-      "success": "Email confirmed. You can now sign in.",
-      "invalid": "Invalid or expired link."
+      "sent": "Foi enviado um email de confirmação.",
+      "success": "Email confirmado. Pode iniciar sessão.",
+      "invalid": "Link inválido ou expirado."
     },
 
     "reset": {
-      "sent": "If the address exists, a reset email has been sent.",
-      "success": "Password updated. You can now sign in.",
-      "invalid": "Invalid or expired link."
+      "sent": "Se o endereço existir, foi enviado um email de reposição.",
+      "success": "Palavra-passe atualizada. Pode iniciar sessão.",
+      "invalid": "Link inválido ou expirado."
     }
   },
 
   "forms": {
-    "required": "This field is required.",
-    "invalidEmail": "Invalid email address.",
-    "minChars": "At least {n} characters.",
-    "passwordMismatch": "Passwords do not match."
-  },
-
-  "errors": {
-    "generic": "Something went wrong.",
-    "unauthorized": "Unauthorized access.",
-    "forbidden": "Access denied.",
-    "notFound": "Resource not found.",
-    "validation": "Invalid data.",
-    "network": "Network error. Please try again."
+    "required": "Este campo é obrigatório.",
+    "invalidEmail": "Endereço de email inválido.",
+    "minChars": "Mínimo de {n} caracteres.",
+    "passwordMismatch": "As palavras-passe não coincidem."
   },
 
   "accessDenied": {
     "forbidden": {
-      "title": "Studio access only",
-      "description": "Characters and scenes are only visible to the project owner (or an administrator). If you think this is a mistake, sign in with the right account or contact the team."
+      "title": "Acesso reservado ao estúdio",
+      "description": "As personagens e as cenas só são visíveis para o dono do projeto (ou um administrador). Se acha que isto é um erro, inicie sessão com a conta correta ou contacte a equipa."
     },
     "generic": {
-      "title": "Content unavailable",
-      "description": "This page is not available for your account."
+      "title": "Conteúdo indisponível",
+      "description": "Esta página não está disponível com a sua conta."
     },
-    "home": "Home",
-    "openStudio": "Open Studio",
-    "note": "The public guide does not expose work-in-progress: use the Studio after signing in."
+    "home": "Início",
+    "openStudio": "Abrir o estúdio",
+    "note": "O site público não expõe o trabalho em curso: utilize o estúdio após iniciar sessão."
+  },
+
+  "errors": {
+    "generic": "Ocorreu um erro.",
+    "unauthorized": "Acesso não autorizado.",
+    "forbidden": "Acesso proibido.",
+    "notFound": "Recurso não encontrado.",
+    "validation": "Dados inválidos.",
+    "network": "Erro de rede. Tente novamente."
   },
 
   "pagination": {
-    "ariaLabel": "Pagination",
-    "summaryOne": "Item {start}–{end} of {total}",
-    "summaryMany": "Items {start}–{end} of {total}",
-    "prev": "Previous page",
-    "next": "Next page",
-    "gotoLabel": "Go to page",
-    "gotoAria": "Page number (1 to {totalPages})",
-    "gotoTotal": "of {totalPages}"
+    "ariaLabel": "Paginação",
+    "summaryOne": "Elemento {start}–{end} de {total}",
+    "summaryMany": "Elementos {start}–{end} de {total}",
+    "prev": "Página anterior",
+    "next": "Página seguinte",
+    "gotoLabel": "Ir para a página",
+    "gotoAria": "Número da página (1 a {totalPages})",
+    "gotoTotal": "de {totalPages}"
   },
 
   "pages": {
-    "comingSoon": "This public page is a placeholder. Sign in and use the Studio to work on your projects.",
+    "comingSoon": "Esta página pública ainda está resumida. Inicie sessão e use o Estúdio para editar projetos.",
     "glossary": {
-      "title": "Glossary",
-      "subtitle": "Public entry point for your narrative lexicon.",
+      "title": "Glossário",
+      "subtitle": "Ponto de entrada público para o léxico narrativo.",
       "public": {
-        "lead": "This page introduces the glossary on the public site. Detailed guidance and project data live elsewhere.",
-        "b1": "The full lexicon is edited in the Studio, scoped to your projects.",
-        "b2": "The public guide explains the approach: terms, canon, variants, and ties to the narrative.",
-        "b3": "Shared entries can flesh out this view as you ship new versions.",
-        "ctaGuide": "Glossary guide",
-        "ctaStructuring": "Structuring (guide)",
-        "ctaStudio": "Open Studio",
-        "ctaProjects": "My projects",
-        "studioHint": "Sign in to create or edit entries for your universe."
+        "lead": "Esta página apresenta o glossário no site público. O guia completo e os dados do projeto estão noutros sítios.",
+        "b1": "O léxico completo edita-se no Estúdio, ligado aos seus projetos.",
+        "b2": "O guia público explica o método: termos, cânone, variantes e vínculos com a narrativa.",
+        "b3": "Entradas partilhadas podem complementar esta vista ao longo das versões.",
+        "ctaGuide": "Guia do glossário",
+        "ctaStructuring": "Estruturação (guia)",
+        "ctaStudio": "Abrir o Estúdio",
+        "ctaProjects": "Os meus projetos",
+        "studioHint": "Inicie sessão para criar ou editar entradas do seu universo."
       },
       "meta": {
-        "title": "{name} — Glossary",
-        "description": "Narrative glossary overview and links to the Sonekeno guide.",
-        "ogTitle": "{name} — Glossary",
-        "ogDescription": "Lexicon, consistency, and structuring your story world."
+        "title": "{name} — Glossário",
+        "description": "Apresentação do glossário narrativo e acesso ao guia Sonekeno.",
+        "ogTitle": "{name} — Glossário",
+        "ogDescription": "Léxico, coerência e ligações à estruturação do universo."
       }
     },
     "scenes": {
-      "title": "Scenes",
-      "subtitle": "Public entry point for structuring scenes.",
+      "title": "Cenas",
+      "subtitle": "Entrada pública para a estruturação de cenas.",
       "public": {
-        "lead": "This page explains the Scenes module. Casting and detailed lists live inside your projects.",
-        "b1": "Goals, place, time, and canon links — a scene becomes a stable, revisable unit.",
-        "b2": "The public guide covers casting, versioning, and sensible exports.",
-        "b3": "The Studio connects scenes, characters, and timeline on one spine.",
-        "ctaGuide": "Scenes guide",
-        "ctaTimeline": "Timeline (guide)",
-        "ctaStudio": "Open Studio",
-        "ctaProjects": "My projects",
-        "studioHint": "After sign-in, edit scenes in the context of a project."
+        "lead": "Esta página situa o módulo Cenas. O elenco e listas detalhadas ficam nos projetos.",
+        "b1": "Objectivos, locais, tempo e ligações ao cânone: uma cena torna-se um bloco estável e revisável.",
+        "b2": "O guia público detalha elenco, versões e exports possíveis.",
+        "b3": "O Estúdio liga cenas, personagens e cronologia num mesmo eixo.",
+        "ctaGuide": "Guia de cenas",
+        "ctaTimeline": "Cronologia (guia)",
+        "ctaStudio": "Abrir o Estúdio",
+        "ctaProjects": "Os meus projetos",
+        "studioHint": "Após iniciar sessão, edite cenas no contexto de um projeto."
       },
       "meta": {
-        "title": "{name} — Scenes",
-        "description": "Scene structure: intent, places, canon links, and Studio access.",
-        "ogTitle": "{name} — Scenes",
-        "ogDescription": "Scenes module overview and link to the Sonekeno guide."
+        "title": "{name} — Cenas",
+        "description": "Estrutura de cenas: intenções, lugares, cânone e acesso ao Estúdio.",
+        "ogTitle": "{name} — Cenas",
+        "ogDescription": "Visão do módulo Cenas e ligação ao guia Sonekeno."
       }
     }
   },
 
   "home": {
     "hero": {
-      "kicker": "Writing Studio",
-      "title": "A clear workspace to structure your story world",
-      "subtitle": "Centralize your characters, scenes, timeline, and glossary to keep continuity solid and find information in seconds.",
-      "ctaPrimary": "My projects",
-      "ctaSecondary": "Public guide (demo)"
+      "kicker": "Estúdio de Escrita",
+      "title": "Um espaço claro para estruturar o seu universo",
+      "subtitle": "Centralize personagens, cenas, cronologia e glossário para manter a continuidade sólida e encontrar informação em segundos.",
+      "ctaPrimary": "Os meus projetos",
+      "ctaSecondary": "Guia público (demo)"
     },
 
     "tiles": {
       "characters": {
-        "label": "Characters",
-        "title": "Files",
-        "desc": "Profile, arcs, relationships"
+        "label": "Personagens",
+        "title": "Dossiês",
+        "desc": "Perfil, arcos, relações"
       },
       "scenes": {
-        "label": "Scenes",
-        "title": "Casting",
-        "desc": "POV, presence, mentions"
+        "label": "Cenas",
+        "title": "Elenco",
+        "desc": "POV, presença, menções"
       },
       "timeline": {
-        "label": "Timeline",
-        "title": "Milestones",
-        "desc": "Events + tags"
+        "label": "Cronologia",
+        "title": "Marcos",
+        "desc": "Eventos + etiquetas"
       },
       "glossary": {
-        "label": "Glossary",
-        "title": "Lexicon",
-        "desc": "Terms, rules, notes"
+        "label": "Glossário",
+        "title": "Léxico",
+        "desc": "Termos, regras, notas"
       }
     },
 
     "modules": {
       "characters": {
-        "badge": "Characters",
-        "title": "Structured character files",
-        "desc": "Logline, secrets, objects, relationships, statuses."
+        "badge": "Personagens",
+        "title": "Dossiês estruturados",
+        "desc": "Logline, segredos, objetos, relações, estados."
       },
       "scenes": {
-        "badge": "Scenes",
-        "title": "Structure & casting",
-        "desc": "Chapter-based organization, scene–character links."
+        "badge": "Cenas",
+        "title": "Estrutura e elenco",
+        "desc": "Organização por capítulos, ligações cena–personagem."
       },
       "timeline": {
-        "badge": "Timeline",
-        "title": "Events",
-        "desc": "Dates, tags, and connections to scenes."
+        "badge": "Cronologia",
+        "title": "Eventos",
+        "desc": "Datas, etiquetas e ligações às cenas."
       },
       "glossary": {
-        "badge": "Glossary",
-        "title": "Project lexicon",
-        "desc": "Vocabulary, rituals, terminology consistency."
+        "badge": "Glossário",
+        "title": "Léxico do projeto",
+        "desc": "Vocabulário, ritos, consistência terminológica."
       }
     },
 
     "trust": {
-      "text": "Designed to stay fast, readable, and reliable as your project grows.",
-      "cta": "Open studio"
+      "text": "Pensada para se manter rápida, legível e fiável à medida que o projeto cresce.",
+      "cta": "Abrir o estúdio"
     }
   },
 
   "domain": {
     "project": {
-      "singular": "Project",
-      "plural": "Projects"
+      "singular": "Projeto",
+      "plural": "Projetos"
     },
     "character": {
-      "singular": "Character",
-      "plural": "Characters",
-      "create": "Create a character",
-      "edit": "Edit character",
-      "profile": "Profile",
-      "clans": "Clans",
-      "kinships": "Relationships",
-      "relations": "Relationships",
-      "name": "Name",
-      "surname": "Surname",
-      "age": "Age",
-      "birthplace": "Birthplace",
-      "role": "Role",
-      "description": "Description",
-      "personality": "Personality",
-      "background": "Background",
-      "motivations": "Motivations",
-      "conflicts": "Conflicts",
-      "empty": "No characters found for this project",
+      "singular": "Personagem",
+      "plural": "Personagens",
+      "create": "Criar personagem",
+      "edit": "Editar personagem",
+      "profile": "Perfil",
+      "clans": "Clãs",
+      "kinships": "Relações",
+      "relations": "Relações",
+      "name": "Nome",
+      "surname": "Sobrenome",
+      "age": "Idade",
+      "birthplace": "Local de nascimento",
+      "role": "Função",
+      "description": "Descrição",
+      "personality": "Personalidade",
+      "background": "Histórico",
+      "motivations": "Motivações",
+      "conflicts": "Conflitos",
+      "empty": "Nenhum personagem encontrado para este projeto",
       "roles": {
-        "pov": "Point of view",
-        "present": "Present",
-        "mentioned": "Mentioned"
+        "pov": "Ponto de vista",
+        "present": "Presente",
+        "mentioned": "Mencionado"
       }
     },
     "scene": {
-      "singular": "Scene",
-      "plural": "Scenes",
-      "create": "Create a scene",
-      "edit": "Edit scene",
-      "all": "All scenes",
-      "label": "Scene",
-      "pov": "Point of view",
-      "povCharacter": "Point of View",
-      "description": "Description",
-      "objective": "Objective",
-      "conflict": "Conflict",
-      "outcome": "Outcome",
-      "notes": "Notes",
-      "empty": "No scenes found for this project"
+      "singular": "Cena",
+      "plural": "Cenas",
+      "create": "Criar cena",
+      "edit": "Editar cena",
+      "all": "Todas as cenas",
+      "label": "Cena",
+      "pov": "Ponto de vista",
+      "povCharacter": "Ponto de vista",
+      "description": "Descrição",
+      "objective": "Objetivo",
+      "conflict": "Conflito",
+      "outcome": "Desfecho",
+      "notes": "Notas",
+      "empty": "Nenhuma cena encontrada para este projeto"
     },
     "timeline": {
-      "singular": "Event",
-      "plural": "Timeline",
-      "date": "Date",
-      "tags": "Tags"
-    },
+      "singular": "Evento",
+      "plural": "Cronologia",
+      "date": "Data",
+      "tags": "Etiquetas"    },
     "todo": {
-      "singular": "Task",
-      "plural": "Tasks",
-      "create": "Create task",
-      "edit": "Edit task",
-      "title": "Title",
-      "description": "Description",
-      "priority": "Priority",
-      "status": "Status",
-      "dueDate": "Due date",
-      "completed": "Completed",
-      "pending": "Pending",
-      "inProgress": "In progress",
-      "high": "High",
-      "medium": "Medium",
-      "low": "Low",
-      "showCompleted": "Show completed",
-      "all": "All tasks",
-      "empty": "No tasks found",
-      "complete": "Mark as complete",
-      "incomplete": "Mark as incomplete",
-      "projectTodos": "Project tasks",
-      "myTasks": "My tasks"
-    }
+      "singular": "Tarefa",
+      "plural": "Tarefas",
+      "create": "Criar tarefa",
+      "edit": "Editar tarefa",
+      "title": "Título",
+      "description": "Descrição",
+      "priority": "Prioridade",
+      "status": "Estado",
+      "dueDate": "Data de vencimento",
+      "completed": "Concluído",
+      "pending": "Pendente",
+      "inProgress": "Em andamento",
+      "high": "Alta",
+      "medium": "Média",
+      "low": "Baixa",
+      "showCompleted": "Mostrar concluídas",
+      "all": "Todas as tarefas",
+      "empty": "Nenhuma tarefa encontrada",
+      "complete": "Marcar como concluída",
+      "incomplete": "Marcar como pendente",
+      "projectTodos": "Tarefas do projeto",
+      "myTasks": "Minhas tarefas"    }
   },
 
   "footer": {
     "rights": "© {year} — {name}",
-    "colLegal": "Legal",
-    "colResources": "Resources",
-    "colSocial": "Social",
+    "colLegal": "Jurídico",
+    "colResources": "Recursos",
+    "colSocial": "Redes",
     "links": {
-      "legalNotice": "Legal notice",
-      "terms": "Terms of use",
-      "privacy": "Privacy",
-      "contact": "Contact",
-      "docs": "Documentation",
-      "services": "Services & API",
+      "legalNotice": "Menções legais",
+      "terms": "Termos de uso",
+      "privacy": "Privacidade",
+      "contact": "Contacto",
+      "docs": "Documentação",
+      "services": "Serviços e API",
       "github": "GitHub",
       "twitter": "Twitter"
     },
     "tags": {
       "mobile": "Mobile-first",
-      "multilang": "Multilingual",
+      "multilang": "Multilíngue",
       "offline": "Offline",
-      "search": "Search"
+      "search": "Pesquisa"
     }
   },
-   "emails": {
+  "emails": {
     "common": {
-      "greeting": "Hello,",
-      "ignore": "If you did not request this, you can safely ignore this message.",
-      "closing": "Sincerely,",
+      "greeting": "Olá,",
+      "ignore": "Se não solicitou este pedido, pode ignorar esta mensagem com segurança.",
+      "closing": "Com os melhores cumprimentos,",
       "signature": "Les derniers léopards"
     },
     "verify": {
-      "subject": "Please confirm your email address — Les derniers léopards",
-      "intro": "Please confirm your email address by clicking the link below:"
+      "subject": "Por favor, confirme o seu endereço de email — Les derniers léopards",
+      "intro": "Por favor, confirme o seu endereço de email clicando na ligação abaixo:"
     },
     "reset": {
-      "subject": "Password reset — Les derniers léopards",
-      "intro": "To reset your password, click the link below:"
+      "subject": "Redefinição da sua palavra-passe — Les derniers léopards",
+      "intro": "Para redefinir a sua palavra-passe, clique na ligação abaixo:"
     }
   },
-  "userInline": {
-    "guestLabel": "Guest",
-    "guestHelper": "Sign in to access your workspace.",
-    "fallbackUser": "User",
-    "dashboard": "Dashboard",
-    "logout": "Sign out",
-    "login": "Sign in",
-    "register": "Create account",
-    "todayLabel": "Today: {date}",
-    "status": { "online": "Signed in", "offline": "Signed out" },
+   "userInline": {
+    "guestLabel": "Visitante",
+    "guestHelper": "Inicie sessão para aceder ao seu espaço.",
+    "fallbackUser": "Utilizador",
+    "dashboard": "Painel",
+    "logout": "Terminar sessão",
+    "login": "Iniciar sessão",
+    "register": "Criar conta",
+    "todayLabel": "Hoje: {date}",
+    "status": { "online": "Ligado", "offline": "Desligado" },
     "role": {
-      "standard": "Standard account",
-      "admin": "Administrator",
+      "standard": "Conta padrão",
+      "admin": "Administrador",
       "editor": "Editor",
-      "moderator": "Moderator",
-      "generic": "User"
+      "moderador": "Moderador",
+      "generic": "Utilizador"
     }
   }
 }
-
