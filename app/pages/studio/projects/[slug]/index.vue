@@ -49,6 +49,7 @@ const narrativeSpaces = computed(() => [
     to: `/studio/projects/${slug.value}/books`,
     label: t('studio.project.books'),
     hint: t('studio.project.booksHint'),
+    ariaLabel: t('studio.project.narrativeSpaceAria', { label: t('studio.project.books'), count: booksCount.value, hint: t('studio.project.booksHint') }),
   },
   {
     key: 'characters',
@@ -58,6 +59,7 @@ const narrativeSpaces = computed(() => [
     to: `/studio/projects/${slug.value}/characters`,
     label: t('domain.character.plural'),
     hint: t('studio.project.charactersHint'),
+    ariaLabel: t('studio.project.narrativeSpaceAria', { label: t('domain.character.plural'), count: charactersData.value?.characters?.length || 0, hint: t('studio.project.charactersHint') }),
   },
   {
     key: 'scenes',
@@ -67,6 +69,7 @@ const narrativeSpaces = computed(() => [
     to: `/studio/projects/${slug.value}/scenes`,
     label: t('domain.scene.plural'),
     hint: t('studio.project.scenesHint'),
+    ariaLabel: t('studio.project.narrativeSpaceAria', { label: t('domain.scene.plural'), count: scenesData.value?.scenes?.length || 0, hint: t('studio.project.scenesHint') }),
   },
   {
     key: 'timeline',
@@ -76,6 +79,7 @@ const narrativeSpaces = computed(() => [
     to: `/studio/projects/${slug.value}/timeline`,
     label: t('domain.timeline.plural'),
     hint: t('studio.project.timelineHint'),
+    ariaLabel: t('studio.project.narrativeSpaceAria', { label: t('domain.timeline.plural'), count: timelineData.value?.events?.length || 0, hint: t('studio.project.timelineHint') }),
   },
 ])
 const canManage = computed(() => data.value?.project?.can_manage !== false)
@@ -218,6 +222,7 @@ async function removeProject () {
           v-for="space in narrativeSpaces"
           :key="space.key"
           class="group p-4 focus-ring hover:bg-surface2 transition-colors"
+          :aria-label="space.ariaLabel"
           :to="localePath(space.to)"
         >
           <div class="flex items-start justify-between gap-3">

@@ -23,11 +23,15 @@ if (!component.includes('aria-labelledby="narrative-spaces-heading"')) {
   throw new Error('Narrative spaces section needs an accessible label')
 }
 
+if (!component.includes(':aria-label="space.ariaLabel"')) {
+  throw new Error('Narrative space links need descriptive accessible names')
+}
+
 for (const locale of ['fr', 'en', 'pt']) {
   const localePath = new URL(`../i18n/locales/${locale}.json`, import.meta.url)
   const messages = JSON.parse(await readFile(localePath, 'utf8'))
   const project = messages?.studio?.project
-  if (!project?.narrativeSpaces || !project?.narrativeSpacesHint) {
+  if (!project?.narrativeSpaces || !project?.narrativeSpacesHint || !project?.narrativeSpaceAria) {
     throw new Error(`Missing narrative spaces copy in ${locale}`)
   }
 }
