@@ -237,7 +237,7 @@ async function removeProject () {
               <Icon :name="space.icon" class="text-xl" aria-hidden="true" />
             </div>
             <span class="text-2xl font-extrabold tabular-nums">
-              <Icon v-if="space.pending" name="mdi:loading" class="animate-spin text-base text-muted" aria-hidden="true" />
+              <Icon v-if="space.pending" name="mdi:loading" class="animate-spin motion-reduce:animate-none text-base text-muted" aria-hidden="true" />
               <template v-else>{{ space.count }}</template>
             </span>
           </div>

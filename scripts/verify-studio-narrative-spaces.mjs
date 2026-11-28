@@ -31,6 +31,10 @@ if (!component.includes(':aria-busy="narrativeSpacesLoading"')) {
   throw new Error('Narrative spaces need to expose their loading state')
 }
 
+if (!component.includes('motion-reduce:animate-none')) {
+  throw new Error('Narrative space loading indicator must respect reduced motion')
+}
+
 if (!component.includes('role="status" aria-live="polite"')) {
   throw new Error('Narrative spaces need to announce loading and resolved counts')
 }
