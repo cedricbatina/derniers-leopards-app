@@ -55,6 +55,21 @@ for (const field of readOnlyFields) {
   }
 }
 
+const labeledFields = [
+  ['project-title', 'form.title'],
+  ['project-status', 'form.status'],
+  ['project-title-en', 'form.title_en'],
+  ['project-title-pt', 'form.title_pt'],
+  ['project-logline', 'form.logline'],
+  ['project-pitch', 'form.pitch'],
+]
+
+for (const [id, model] of labeledFields) {
+  if (!component.includes(`for="${id}"`) || !component.includes(`id="${id}" v-model="${model}"`)) {
+    throw new Error(`Project field needs an explicit label association: ${model}`)
+  }
+}
+
 for (const locale of ['fr', 'en', 'pt']) {
   const localePath = new URL(`../i18n/locales/${locale}.json`, import.meta.url)
   const messages = JSON.parse(await readFile(localePath, 'utf8'))

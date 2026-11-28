@@ -178,13 +178,13 @@ async function removeProject () {
     <div v-else class="card">
       <div class="card-body grid gap-3 md:grid-cols-2">
         <div>
-          <label class="text-xs text-muted">{{ t('studio.project.defaultTitle') }}</label>
-          <input v-model="form.title" class="input w-full" :disabled="!canManage" />
+          <label class="text-xs text-muted" for="project-title">{{ t('studio.project.defaultTitle') }}</label>
+          <input id="project-title" v-model="form.title" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div>
-          <label class="text-xs text-muted">{{ t('studio.project.status') }}</label>
-          <select v-model="form.status" class="input w-full" :disabled="!canManage">
+          <label class="text-xs text-muted" for="project-status">{{ t('studio.project.status') }}</label>
+          <select id="project-status" v-model="form.status" class="input w-full" :disabled="!canManage">
             <option value="draft">draft</option>
             <option value="active">active</option>
             <option value="archived">archived</option>
@@ -192,23 +192,23 @@ async function removeProject () {
         </div>
 
         <div>
-          <label class="text-xs text-muted">{{ t('studio.project.englishTitle') }}</label>
-          <input v-model="form.title_en" class="input w-full" :disabled="!canManage" />
+          <label class="text-xs text-muted" for="project-title-en">{{ t('studio.project.englishTitle') }}</label>
+          <input id="project-title-en" v-model="form.title_en" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div>
-          <label class="text-xs text-muted">{{ t('studio.project.portugueseTitle') }}</label>
-          <input v-model="form.title_pt" class="input w-full" :disabled="!canManage" />
+          <label class="text-xs text-muted" for="project-title-pt">{{ t('studio.project.portugueseTitle') }}</label>
+          <input id="project-title-pt" v-model="form.title_pt" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">{{ t('studio.project.logline') }}</label>
-          <input v-model="form.logline" class="input w-full" :disabled="!canManage" />
+          <label class="text-xs text-muted" for="project-logline">{{ t('studio.project.logline') }}</label>
+          <input id="project-logline" v-model="form.logline" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">{{ t('studio.project.pitch') }}</label>
-          <textarea v-model="form.pitch" class="input w-full min-h-28" :disabled="!canManage" />
+          <label class="text-xs text-muted" for="project-pitch">{{ t('studio.project.pitch') }}</label>
+          <textarea id="project-pitch" v-model="form.pitch" class="input w-full min-h-28" :disabled="!canManage" />
         </div>
       </div>
     </div>
