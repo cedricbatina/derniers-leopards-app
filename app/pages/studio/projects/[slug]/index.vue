@@ -245,7 +245,7 @@ async function removeProject () {
           <p class="mt-1 text-xs text-muted">{{ space.hint }}</p>
         </NuxtLink>
       </div>
-      <p class="sr-only" role="status" aria-live="polite">
+      <p class="sr-only" role="status" aria-live="polite" aria-atomic="true">
         {{ narrativeSpacesLoading ? t('studio.project.narrativeSpacesLoading') : narrativeSpacesSummary }}
       </p>
     </section>

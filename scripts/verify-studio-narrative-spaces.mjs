@@ -35,7 +35,7 @@ if (!component.includes('motion-reduce:animate-none')) {
   throw new Error('Narrative space loading indicator must respect reduced motion')
 }
 
-if (!component.includes('role="status" aria-live="polite"')) {
+if (!component.includes('role="status" aria-live="polite" aria-atomic="true"')) {
   throw new Error('Narrative spaces need to announce loading and resolved counts')
 }
 
