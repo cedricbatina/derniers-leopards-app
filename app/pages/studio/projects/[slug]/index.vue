@@ -175,12 +175,12 @@ async function removeProject () {
       <div class="card-body grid gap-3 md:grid-cols-2">
         <div>
           <label class="text-xs text-muted">{{ t('studio.project.defaultTitle') }}</label>
-          <input v-model="form.title" class="input w-full" />
+          <input v-model="form.title" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div>
           <label class="text-xs text-muted">{{ t('studio.project.status') }}</label>
-          <select v-model="form.status" class="input w-full">
+          <select v-model="form.status" class="input w-full" :disabled="!canManage">
             <option value="draft">draft</option>
             <option value="active">active</option>
             <option value="archived">archived</option>
@@ -189,22 +189,22 @@ async function removeProject () {
 
         <div>
           <label class="text-xs text-muted">{{ t('studio.project.englishTitle') }}</label>
-          <input v-model="form.title_en" class="input w-full" />
+          <input v-model="form.title_en" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div>
           <label class="text-xs text-muted">{{ t('studio.project.portugueseTitle') }}</label>
-          <input v-model="form.title_pt" class="input w-full" />
+          <input v-model="form.title_pt" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div class="md:col-span-2">
           <label class="text-xs text-muted">{{ t('studio.project.logline') }}</label>
-          <input v-model="form.logline" class="input w-full" />
+          <input v-model="form.logline" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div class="md:col-span-2">
           <label class="text-xs text-muted">{{ t('studio.project.pitch') }}</label>
-          <textarea v-model="form.pitch" class="input w-full min-h-28" />
+          <textarea v-model="form.pitch" class="input w-full min-h-28" :disabled="!canManage" />
         </div>
       </div>
     </div>
