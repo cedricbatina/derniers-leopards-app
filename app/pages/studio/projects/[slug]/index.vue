@@ -15,13 +15,77 @@ const { data, pending, refresh, error } = await useFetch(() => `/api/projects/${
   headers: useRequestHeaders(['cookie']),
 })
 
-const { data: booksData } = await useFetch(() => `/api/projects/${slug.value}/books`, {
+const { data: booksData, pending: booksPending } = await useFetch(() => `/api/projects/${slug.value}/books`, {
+  $fetch: apiFetch,
+  credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
+})
+
+const { data: charactersData, pending: charactersPending } = await useFetch(() => `/api/projects/${slug.value}/characters`, {
+  $fetch: apiFetch,
+  credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
+})
+
+const { data: scenesData, pending: scenesPending } = await useFetch(() => `/api/projects/${slug.value}/scenes`, {
+  $fetch: apiFetch,
+  credentials: 'include',
+  headers: useRequestHeaders(['cookie']),
+})
+
+const { data: timelineData, pending: timelinePending } = await useFetch(() => `/api/projects/${slug.value}/timeline`, {
   $fetch: apiFetch,
   credentials: 'include',
   headers: useRequestHeaders(['cookie']),
 })
 
 const booksCount = computed(() => booksData.value?.books?.length || 0)
+const narrativeSpaces = computed(() => [
+  {
+    key: 'books',
+    icon: 'mdi:bookshelf',
+    count: booksCount.value,
+    pending: booksPending.value,
+    to: `/studio/projects/${slug.value}/books`,
+    label: t('studio.project.books'),
+    hint: t('studio.project.booksHint'),
+    ariaLabel: t('studio.project.narrativeSpaceAria', { label: t('studio.project.books'), count: booksCount.value, hint: t('studio.project.booksHint') }),
+  },
+  {
+    key: 'characters',
+    icon: 'mdi:account-group-outline',
+    count: charactersData.value?.characters?.length || 0,
+    pending: charactersPending.value,
+    to: `/studio/projects/${slug.value}/characters`,
+    label: t('domain.character.plural'),
+    hint: t('studio.project.charactersHint'),
+    ariaLabel: t('studio.project.narrativeSpaceAria', { label: t('domain.character.plural'), count: charactersData.value?.characters?.length || 0, hint: t('studio.project.charactersHint') }),
+  },
+  {
+    key: 'scenes',
+    icon: 'mdi:movie-open-outline',
+    count: scenesData.value?.scenes?.length || 0,
+    pending: scenesPending.value,
+    to: `/studio/projects/${slug.value}/scenes`,
+    label: t('domain.scene.plural'),
+    hint: t('studio.project.scenesHint'),
+    ariaLabel: t('studio.project.narrativeSpaceAria', { label: t('domain.scene.plural'), count: scenesData.value?.scenes?.length || 0, hint: t('studio.project.scenesHint') }),
+  },
+  {
+    key: 'timeline',
+    icon: 'mdi:timeline-text-outline',
+    count: timelineData.value?.events?.length || 0,
+    pending: timelinePending.value,
+    to: `/studio/projects/${slug.value}/timeline`,
+    label: t('domain.timeline.plural'),
+    hint: t('studio.project.timelineHint'),
+    ariaLabel: t('studio.project.narrativeSpaceAria', { label: t('domain.timeline.plural'), count: timelineData.value?.events?.length || 0, hint: t('studio.project.timelineHint') }),
+  },
+])
+const narrativeSpacesLoading = computed(() => narrativeSpaces.value.some(space => space.pending))
+const narrativeSpacesSummary = computed(() => narrativeSpaces.value
+  .map(space => `${space.label}: ${space.count}`)
+  .join(', '))
 const canManage = computed(() => data.value?.project?.can_manage !== false)
 
 const saving = ref(false)
@@ -114,13 +178,13 @@ async function removeProject () {
     <div v-else class="card">
       <div class="card-body grid gap-3 md:grid-cols-2">
         <div>
-          <label class="text-xs text-muted">{{ t('studio.project.defaultTitle') }}</label>
-          <input v-model="form.title" class="input w-full" />
+          <label class="text-xs text-muted" for="project-title">{{ t('studio.project.defaultTitle') }}</label>
+          <input id="project-title" v-model="form.title" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div>
-          <label class="text-xs text-muted">{{ t('studio.project.status') }}</label>
-          <select v-model="form.status" class="input w-full">
+          <label class="text-xs text-muted" for="project-status">{{ t('studio.project.status') }}</label>
+          <select id="project-status" v-model="form.status" class="input w-full" :disabled="!canManage">
             <option value="draft">draft</option>
             <option value="active">active</option>
             <option value="archived">archived</option>
@@ -128,28 +192,65 @@ async function removeProject () {
         </div>
 
         <div>
-          <label class="text-xs text-muted">{{ t('studio.project.englishTitle') }}</label>
-          <input v-model="form.title_en" class="input w-full" />
+          <label class="text-xs text-muted" for="project-title-en">{{ t('studio.project.englishTitle') }}</label>
+          <input id="project-title-en" v-model="form.title_en" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div>
-          <label class="text-xs text-muted">{{ t('studio.project.portugueseTitle') }}</label>
-          <input v-model="form.title_pt" class="input w-full" />
+          <label class="text-xs text-muted" for="project-title-pt">{{ t('studio.project.portugueseTitle') }}</label>
+          <input id="project-title-pt" v-model="form.title_pt" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">{{ t('studio.project.logline') }}</label>
-          <input v-model="form.logline" class="input w-full" />
+          <label class="text-xs text-muted" for="project-logline">{{ t('studio.project.logline') }}</label>
+          <input id="project-logline" v-model="form.logline" class="input w-full" :disabled="!canManage" />
         </div>
 
         <div class="md:col-span-2">
-          <label class="text-xs text-muted">{{ t('studio.project.pitch') }}</label>
-          <textarea v-model="form.pitch" class="input w-full min-h-28" />
+          <label class="text-xs text-muted" for="project-pitch">{{ t('studio.project.pitch') }}</label>
+          <textarea id="project-pitch" v-model="form.pitch" class="input w-full min-h-28" :disabled="!canManage" />
         </div>
       </div>
     </div>
 
-    <!-- Next shortcuts -->
+    <section class="card overflow-hidden" aria-labelledby="narrative-spaces-heading">
+      <div class="card-body flex flex-col gap-1 border-b border-border sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 id="narrative-spaces-heading" class="font-extrabold tracking-tight">{{ t('studio.project.narrativeSpaces') }}</h2>
+          <p class="text-sm text-muted">{{ t('studio.project.narrativeSpacesHint') }}</p>
+        </div>
+      </div>
+
+      <div
+        class="grid divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4"
+        :aria-busy="narrativeSpacesLoading"
+      >
+        <NuxtLink
+          v-for="space in narrativeSpaces"
+          :key="space.key"
+          class="group p-4 focus-ring hover:bg-surface2 transition-colors"
+          :aria-label="space.ariaLabel"
+          :to="localePath(space.to)"
+        >
+          <div class="flex items-start justify-between gap-3">
+            <div class="rounded-lg bg-primary/10 p-2 text-primary">
+              <Icon :name="space.icon" class="text-xl" aria-hidden="true" />
+            </div>
+            <span class="text-2xl font-extrabold tabular-nums">
+              <Icon v-if="space.pending" name="mdi:loading" class="animate-spin motion-reduce:animate-none text-base text-muted" aria-hidden="true" />
+              <template v-else>{{ space.count }}</template>
+            </span>
+          </div>
+          <div class="mt-5 font-bold group-hover:text-primary">{{ space.label }}</div>
+          <p class="mt-1 text-xs text-muted">{{ space.hint }}</p>
+        </NuxtLink>
+      </div>
+      <p class="sr-only" role="status" aria-live="polite" aria-atomic="true">
+        {{ narrativeSpacesLoading ? t('studio.project.narrativeSpacesLoading') : narrativeSpacesSummary }}
+      </p>
+    </section>
+
+    <!-- Workspace shortcuts -->
     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       <template v-if="booksCount > 0">
         <NuxtLink class="card hover:bg-surface2" :to="localePath(`/studio/projects/${slug}/books`)">
