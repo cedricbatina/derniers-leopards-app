@@ -183,6 +183,7 @@
       "title": "Project",
       "narrativeSpaces": "Narrative spaces",
       "narrativeSpacesHint": "See at a glance what has already been structured in this project.",
+      "narrativeSpacesLoading": "Loading narrative spaces…",
       "narrativeSpaceAria": "Open {label}: {count} item(s). {hint}",
       "backToProjects": "Back to projects",
       "slugImmutable": "The slug cannot be changed:",

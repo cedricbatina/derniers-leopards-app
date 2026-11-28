@@ -82,6 +82,10 @@ const narrativeSpaces = computed(() => [
     ariaLabel: t('studio.project.narrativeSpaceAria', { label: t('domain.timeline.plural'), count: timelineData.value?.events?.length || 0, hint: t('studio.project.timelineHint') }),
   },
 ])
+const narrativeSpacesLoading = computed(() => narrativeSpaces.value.some(space => space.pending))
+const narrativeSpacesSummary = computed(() => narrativeSpaces.value
+  .map(space => `${space.label}: ${space.count}`)
+  .join(', '))
 const canManage = computed(() => data.value?.project?.can_manage !== false)
 
 const saving = ref(false)
@@ -219,7 +223,7 @@ async function removeProject () {
 
       <div
         class="grid divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4"
-        :aria-busy="narrativeSpaces.some((space) => space.pending)"
+        :aria-busy="narrativeSpacesLoading"
       >
         <NuxtLink
           v-for="space in narrativeSpaces"
@@ -241,6 +245,9 @@ async function removeProject () {
           <p class="mt-1 text-xs text-muted">{{ space.hint }}</p>
         </NuxtLink>
       </div>
+      <p class="sr-only" role="status" aria-live="polite">
+        {{ narrativeSpacesLoading ? t('studio.project.narrativeSpacesLoading') : narrativeSpacesSummary }}
+      </p>
     </section>
 
     <!-- Workspace shortcuts -->
