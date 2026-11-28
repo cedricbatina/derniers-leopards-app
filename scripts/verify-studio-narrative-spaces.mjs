@@ -31,6 +31,22 @@ if (!component.includes(':aria-busy="narrativeSpaces.some((space) => space.pendi
   throw new Error('Narrative spaces need to expose their loading state')
 }
 
+const readOnlyFields = [
+  'form.title',
+  'form.status',
+  'form.title_en',
+  'form.title_pt',
+  'form.logline',
+  'form.pitch',
+]
+
+for (const field of readOnlyFields) {
+  const fieldPattern = new RegExp(`v-model="${field}"[^>]*:disabled="!canManage"`)
+  if (!fieldPattern.test(component)) {
+    throw new Error(`Read-only project field must be disabled: ${field}`)
+  }
+}
+
 for (const locale of ['fr', 'en', 'pt']) {
   const localePath = new URL(`../i18n/locales/${locale}.json`, import.meta.url)
   const messages = JSON.parse(await readFile(localePath, 'utf8'))
